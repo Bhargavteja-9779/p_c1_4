@@ -1,0 +1,3 @@
+## 5. Conclusion
+
+Per-night conformal intervals make the uncertainty of automatically scored sleep parameters explicit in clinical units. Scaling them by the spread of posterior hypnogram samples narrowed intervals for TST and several stage percentages at nominal coverage and, through the posterior mean, removed much of the stagers' systematic TST bias, but brought no gain for REM % and failed for WASO in long ambulatory windows. Coverage did not transfer across cohorts, and a small set of locally scored nights was needed to restore it. Reporting automatically scored parameters with locally calibrated intervals, rather than as point values qualified only by population limits of agreement, is a practical step towards safer use of automatic scoring.

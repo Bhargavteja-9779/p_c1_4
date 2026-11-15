@@ -1,0 +1,17 @@
+Stager,Parameter,SC coverage,SC width,SC IS ratio vs BA-LoA,SC IS ratio vs constant,ST coverage,ST width,ST IS ratio vs BA-LoA,ST IS ratio vs constant,HMC coverage,HMC width,HMC IS ratio vs BA-LoA,HMC IS ratio vs constant
+"YASA (pretrained, external)",TST (min),0.907,85.4,0.85*,0.73*,0.908,38.9,0.61*,0.41*,0.91,88.5,0.69*,0.55*
+"YASA (pretrained, external)",SOL (min),0.908,27.0,0.85*,0.80*,0.896,19.0,2.08,1.40,0.909,22.0,1.39*,1.15*
+"YASA (pretrained, external)",WASO (min),0.908,230.8,1.49*,1.14*,0.914,53.4,1.16,0.79,0.911,81.6,0.84*,0.66*
+"YASA (pretrained, external)",REML (min),0.91,94.4,0.66*,0.69*,0.921,148.1,0.85,0.93,0.909,183.9,0.99*,1.00
+"YASA (pretrained, external)",N1% (pp),0.907,26.9,0.93*,0.87*,0.913,17.0,1.13,1.09,0.906,21.6,0.91*,0.84*
+"YASA (pretrained, external)",N2% (pp),0.907,33.1,0.76*,0.70*,0.89,33.3,0.88,0.94,0.909,28.0,0.75*,0.55*
+"YASA (pretrained, external)",N3% (pp),0.912,16.5,0.89,0.65*,0.913,26.1,0.83,0.75*,0.908,30.2,1.06*,0.90
+"YASA (pretrained, external)",REM% (pp),0.907,25.0,0.99,1.03*,0.899,24.0,1.02,1.00,0.909,22.0,1.06*,1.07*
+LightGBM-SC (in-domain),TST (min),0.908,70.6,0.85*,0.80*,0.92,47.1,0.74*,0.71*,0.91,117.5,0.67*,0.61*
+LightGBM-SC (in-domain),SOL (min),0.906,23.0,0.88*,0.90*,0.905,21.5,0.91,0.97*,0.91,26.0,1.22*,1.16
+LightGBM-SC (in-domain),WASO (min),0.907,179.5,1.38*,1.36*,0.904,57.9,1.21,1.00,0.911,97.0,0.75*,0.61*
+LightGBM-SC (in-domain),REML (min),0.908,79.7,0.74*,0.69*,0.906,123.6,0.60,0.63,0.908,218.4,1.26,1.25*
+LightGBM-SC (in-domain),N1% (pp),0.907,26.2,0.92*,0.86*,0.912,18.3,1.09,0.88*,0.905,22.8,0.93*,0.74*
+LightGBM-SC (in-domain),N2% (pp),0.906,30.8,0.93,0.92*,0.9,31.3,0.83,0.92,0.906,36.8,0.91*,0.91*
+LightGBM-SC (in-domain),N3% (pp),0.915,12.4,0.93,0.94*,0.904,25.7,0.86,0.78,0.905,37.2,1.22*,1.19
+LightGBM-SC (in-domain),REM% (pp),0.908,22.8,1.03*,1.07*,0.899,23.2,0.97,0.79,0.91,22.0,1.05*,0.99

@@ -111,7 +111,7 @@ def main():
                         res, _, _ = evaluate(p, meth, cal, test, 0.10)
                         rows.append(dict(corruption=k, cohort=c, param=p, split=r, method=meth, **res))
     out = pd.DataFrame(rows)
-    out.to_csv(RESULTS_DIR / "raw" / "e09_robustness.csv", index=False)
+    out.to_csv(RESULTS_DIR / "raw" / "e09_robustness.csv.gz", index=False)
     print(out.groupby(["corruption", "method"])[["coverage", "mean_width"]].mean().round(3).to_string())
 
 

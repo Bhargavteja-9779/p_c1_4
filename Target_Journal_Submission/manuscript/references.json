@@ -1,0 +1,4037 @@
+[
+ {
+  "type": "journal-article",
+  "title": "The American Academy of Sleep Medicine Inter-scorer Reliability Program: Sleep Stage Scoring",
+  "author": [
+   {
+    "given": "Richard S.",
+    "family": "Rosenberg",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Steven",
+    "family": "Van Hout",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Journal of Clinical Sleep Medicine",
+  "volume": "9",
+  "issue": "1",
+  "page": "81-87",
+  "issued": {
+   "date-parts": [
+    [
+     2013,
+     1,
+     15
+    ]
+   ]
+  },
+  "DOI": "10.5664/jcsm.2350",
+  "publisher": "Springer Science and Business Media LLC",
+  "URL": "http://dx.doi.org/10.5664/jcsm.2350",
+  "id": "rosenberg2013"
+ },
+ {
+  "type": "journal-article",
+  "title": "Interrater reliability for sleep scoring according to the Rechtschaffen &amp; Kales and the new AASM standard",
+  "author": [
+   {
+    "given": "HEIDI",
+    "family": "DANKER‐HOPFE",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "PETER",
+    "family": "ANDERER",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "JOSEF",
+    "family": "ZEITLHOFER",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "MARION",
+    "family": "BOECK",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "HANS",
+    "family": "DORN",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "GEORG",
+    "family": "GRUBER",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "ESTHER",
+    "family": "HELLER",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "ERNA",
+    "family": "LORETZ",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "DORIS",
+    "family": "MOSER",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "SILVIA",
+    "family": "PARAPATICS",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "BERND",
+    "family": "SALETU",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "ANDREA",
+    "family": "SCHMIDT",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "GEORG",
+    "family": "DORFFNER",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Journal of Sleep Research",
+  "volume": "18",
+  "issue": "1",
+  "page": "74-84",
+  "issued": {
+   "date-parts": [
+    [
+     2009,
+     2,
+     24
+    ]
+   ]
+  },
+  "DOI": "10.1111/j.1365-2869.2008.00700.x",
+  "publisher": "Wiley",
+  "URL": "http://dx.doi.org/10.1111/j.1365-2869.2008.00700.x",
+  "id": "dankerhopfe2009"
+ },
+ {
+  "type": "journal-article",
+  "title": "Neural network analysis of sleep stages enables efficient diagnosis of narcolepsy",
+  "author": [
+   {
+    "given": "Jens B.",
+    "family": "Stephansen",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Alexander N.",
+    "family": "Olesen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Mads",
+    "family": "Olsen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-8462-3552",
+    "authenticated-orcid": false,
+    "given": "Aditya",
+    "family": "Ambati",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-7389-6384",
+    "authenticated-orcid": false,
+    "given": "Eileen B.",
+    "family": "Leary",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Hyatt E.",
+    "family": "Moore",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Oscar",
+    "family": "Carrillo",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ling",
+    "family": "Lin",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Fang",
+    "family": "Han",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Han",
+    "family": "Yan",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yun L.",
+    "family": "Sun",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yves",
+    "family": "Dauvilliers",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Sabine",
+    "family": "Scholz",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Lucie",
+    "family": "Barateau",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Birgit",
+    "family": "Hogl",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ambra",
+    "family": "Stefani",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Seung Chul",
+    "family": "Hong",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Tae Won",
+    "family": "Kim",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Fabio",
+    "family": "Pizza",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Giuseppe",
+    "family": "Plazzi",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Stefano",
+    "family": "Vandi",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Elena",
+    "family": "Antelmi",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Dimitri",
+    "family": "Perrin",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Samuel T.",
+    "family": "Kuna",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Paula K.",
+    "family": "Schweitzer",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Clete",
+    "family": "Kushida",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Paul E.",
+    "family": "Peppard",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Helge B. D.",
+    "family": "Sorensen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Poul",
+    "family": "Jennum",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Emmanuel",
+    "family": "Mignot",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Nature Communications",
+  "volume": "9",
+  "issue": "1",
+  "issued": {
+   "date-parts": [
+    [
+     2018,
+     12,
+     6
+    ]
+   ]
+  },
+  "DOI": "10.1038/s41467-018-07229-3",
+  "publisher": "Springer Science and Business Media LLC",
+  "URL": "http://dx.doi.org/10.1038/s41467-018-07229-3",
+  "article-number": "5229",
+  "page": "5229",
+  "id": "stephansen2018"
+ },
+ {
+  "type": "journal-article",
+  "title": "U-Sleep: resilient high-frequency sleep staging",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-0358-4692",
+    "authenticated-orcid": false,
+    "given": "Mathias",
+    "family": "Perslev",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Sune",
+    "family": "Darkner",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Lykke",
+    "family": "Kempfner",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Miki",
+    "family": "Nikolic",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Poul Jørgen",
+    "family": "Jennum",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2868-0856",
+    "authenticated-orcid": false,
+    "given": "Christian",
+    "family": "Igel",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "npj Digital Medicine",
+  "volume": "4",
+  "issue": "1",
+  "issued": {
+   "date-parts": [
+    [
+     2021,
+     4,
+     15
+    ]
+   ]
+  },
+  "DOI": "10.1038/s41746-021-00440-5",
+  "publisher": "Springer Science and Business Media LLC",
+  "URL": "http://dx.doi.org/10.1038/s41746-021-00440-5",
+  "article-number": "72",
+  "page": "72",
+  "id": "perslev2021"
+ },
+ {
+  "type": "journal-article",
+  "title": "An open-source, high-performance tool for automated sleep staging",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-1779-7653",
+    "authenticated-orcid": true,
+    "given": "Raphael",
+    "family": "Vallat",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Center for Human Sleep Science, Department of Psychology, University of California, Berkeley",
+      "place": [
+       "Berkeley, United States"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-7839-6389",
+    "authenticated-orcid": true,
+    "given": "Matthew P",
+    "family": "Walker",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Center for Human Sleep Science, Department of Psychology, University of California, Berkeley",
+      "place": [
+       "Berkeley, United States"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "eLife",
+  "volume": "10",
+  "issued": {
+   "date-parts": [
+    [
+     2021,
+     10,
+     14
+    ]
+   ]
+  },
+  "DOI": "10.7554/eLife.70092",
+  "publisher": "eLife Sciences Publications, Ltd",
+  "URL": "http://dx.doi.org/10.7554/eLife.70092",
+  "article-number": "e70092",
+  "page": "e70092",
+  "id": "vallat2021"
+ },
+ {
+  "type": "journal-article",
+  "title": "Automatic sleep staging for the young and the old – Evaluating age bias in deep learning",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-2984-2167",
+    "authenticated-orcid": false,
+    "given": "Mathias",
+    "family": "Baumert",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Simon",
+    "family": "Hartmann",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Huy",
+    "family": "Phan",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Sleep Medicine",
+  "volume": "107",
+  "page": "18-25",
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     7
+    ]
+   ]
+  },
+  "DOI": "10.1016/j.sleep.2023.04.002",
+  "publisher": "Elsevier BV",
+  "URL": "http://dx.doi.org/10.1016/j.sleep.2023.04.002",
+  "id": "baumert2023"
+ },
+ {
+  "type": "journal-article",
+  "title": "Validity and reliability of the Oura Ring Generation 3 (Gen3) with Oura sleep staging algorithm 2.0 (OSSA 2.0) when compared to multi-night ambulatory polysomnography: A validation study of 96 participants and 421,045 epochs",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-1283-358X",
+    "authenticated-orcid": false,
+    "given": "Thomas",
+    "family": "Svensson",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kaushalya",
+    "family": "Madhawa",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Hoang",
+    "family": "NT",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ung-il",
+    "family": "Chung",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Akiko Kishi",
+    "family": "Svensson",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Sleep Medicine",
+  "volume": "115",
+  "page": "251-263",
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     3
+    ]
+   ]
+  },
+  "DOI": "10.1016/j.sleep.2024.01.020",
+  "publisher": "Elsevier BV",
+  "URL": "http://dx.doi.org/10.1016/j.sleep.2024.01.020",
+  "id": "svensson2024"
+ },
+ {
+  "type": "journal-article",
+  "title": "Dreem headband performance in Insomnia Disorder: An in-lab comparison to polysomnography",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0009-0008-6143-794X",
+    "authenticated-orcid": false,
+    "given": "Qiutian A.L.",
+    "family": "Beau",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Johanna M.",
+    "family": "Boardman",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Alix",
+    "family": "Mellor",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Rowan P.",
+    "family": "Ogeil",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Sean P.A.",
+    "family": "Drummond",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Sleep Medicine",
+  "volume": "134",
+  "page": "106698",
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     10
+    ]
+   ]
+  },
+  "DOI": "10.1016/j.sleep.2025.106698",
+  "publisher": "Elsevier BV",
+  "URL": "http://dx.doi.org/10.1016/j.sleep.2025.106698",
+  "article-number": "106698",
+  "id": "beau2025"
+ },
+ {
+  "type": "journal-article",
+  "title": "Evaluation of an automated sleep apnea scoring algorithm via the Wesper Lab home sleep apnea test",
+  "author": [
+   {
+    "given": "Chelsie",
+    "family": "Rohrscheib",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Antonio Artur",
+    "family": "Moura",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Janna",
+    "family": "Raphelson",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jeremy E.",
+    "family": "Orr",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ruchir P.",
+    "family": "Patel",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Atul",
+    "family": "Malhotra",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Sleep Medicine",
+  "volume": "141",
+  "page": "108828",
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     5
+    ]
+   ]
+  },
+  "DOI": "10.1016/j.sleep.2026.108828",
+  "publisher": "Elsevier BV",
+  "URL": "http://dx.doi.org/10.1016/j.sleep.2026.108828",
+  "article-number": "108828",
+  "id": "rohrscheib2026"
+ },
+ {
+  "type": "journal-article",
+  "title": "Error Propagation from Sleep Stage Classification to Derived Sleep Parameters in Machine Learning on Data from Wearables",
+  "author": [
+   {
+    "given": "Emil",
+    "family": "Hardarson",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Anna Sigridur",
+    "family": "Islind",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Erna Sif",
+    "family": "Arnardottir",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "María",
+    "family": "Óskarsdóttir",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   }
+  ],
+  "container-title": "Current Sleep Medicine Reports",
+  "volume": "9",
+  "issue": "3",
+  "page": "140-151",
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     6,
+     30
+    ]
+   ]
+  },
+  "DOI": "10.1007/s40675-023-00253-w",
+  "publisher": "Springer Science and Business Media LLC",
+  "URL": "http://dx.doi.org/10.1007/s40675-023-00253-w",
+  "id": "hardarson2023"
+ },
+ {
+  "type": "journal-article",
+  "title": "DeepSleepNet-Lite: A Simplified Automatic Sleep Stage Scoring Model With Uncertainty Estimates",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0001-7709-2933",
+    "authenticated-orcid": false,
+    "given": "Luigi",
+    "family": "Fiorillo",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-3546-8247",
+    "authenticated-orcid": false,
+    "given": "Paolo",
+    "family": "Favaro",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-8720-1256",
+    "authenticated-orcid": false,
+    "given": "Francesca Dalia",
+    "family": "Faraci",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
+  "volume": "29",
+  "page": "2076-2085",
+  "issued": {
+   "date-parts": [
+    [
+     2021
+    ]
+   ]
+  },
+  "DOI": "10.1109/TNSRE.2021.3117970",
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "URL": "http://dx.doi.org/10.1109/TNSRE.2021.3117970",
+  "id": "fiorillo2021"
+ },
+ {
+  "type": "journal-article",
+  "title": "SleepTransformer: Automatic Sleep Staging With Interpretability and Uncertainty Quantification",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-4096-785X",
+    "authenticated-orcid": false,
+    "given": "Huy",
+    "family": "Phan",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "School of Electronic Engineering and Computer Science, Queen Mary University of London, London, U.K."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kaare",
+    "family": "Mikkelsen",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical and Computer Engineering, Aarhus University, Denmark"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Oliver Y.",
+    "family": "Chen",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "School of Economics, Finance and Management, University of Bristol, U.K."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Philipp",
+    "family": "Koch",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Institute for Signal Processing, University of L&#x00FC;beck, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Alfred",
+    "family": "Mertins",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Institute for Signal Processing, University of L&#x00FC;beck, Germany"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Maarten",
+    "family": "De Vos",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering and with the Department of Development and Regeneration, KU Leuven, Belgium"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "IEEE Transactions on Biomedical Engineering",
+  "volume": "69",
+  "issue": "8",
+  "page": "2456-2467",
+  "issued": {
+   "date-parts": [
+    [
+     2022,
+     8
+    ]
+   ]
+  },
+  "DOI": "10.1109/TBME.2022.3147187",
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "URL": "http://dx.doi.org/10.1109/TBME.2022.3147187",
+  "id": "phan2022"
+ },
+ {
+  "type": "journal-article",
+  "title": "U-PASS: An uncertainty-guided deep learning pipeline for automated sleep staging",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0001-6860-2356",
+    "authenticated-orcid": false,
+    "given": "Elisabeth R.M.",
+    "family": "Heremans",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Nabeel",
+    "family": "Seedat",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Bertien",
+    "family": "Buyse",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-7303-9799",
+    "authenticated-orcid": false,
+    "given": "Dries",
+    "family": "Testelmans",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Mihaela",
+    "family": "van der Schaar",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-3482-5145",
+    "authenticated-orcid": false,
+    "given": "Maarten",
+    "family": "De Vos",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Computers in Biology and Medicine",
+  "volume": "171",
+  "page": "108205",
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     3
+    ]
+   ]
+  },
+  "DOI": "10.1016/j.compbiomed.2024.108205",
+  "publisher": "Elsevier BV",
+  "URL": "http://dx.doi.org/10.1016/j.compbiomed.2024.108205",
+  "article-number": "108205",
+  "id": "heremans2024"
+ },
+ {
+  "type": "journal-article",
+  "title": "Bridging AI and Clinical Practice: Integrating Automated Sleep Scoring Algorithm with Uncertainty-Guided Physician Review",
+  "author": [
+   {
+    "given": "Michal",
+    "family": "Bechny",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-4434-6399",
+    "authenticated-orcid": true,
+    "given": "Giuliana",
+    "family": "Monachino",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-7709-2933",
+    "authenticated-orcid": true,
+    "given": "Luigi",
+    "family": "Fiorillo",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Julia",
+    "family": "van der Meer",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Markus",
+    "family": "Schmidt",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Claudio",
+    "family": "Bassetti",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Athina",
+    "family": "Tzovara",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-8720-1256",
+    "authenticated-orcid": true,
+    "given": "Francesca",
+    "family": "Faraci",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Nature and Science of Sleep",
+  "volume": "Volume 16",
+  "page": "555-572",
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     5
+    ]
+   ]
+  },
+  "DOI": "10.2147/NSS.S455649",
+  "publisher": "Informa UK Limited",
+  "URL": "http://dx.doi.org/10.2147/NSS.S455649",
+  "id": "bechny2024"
+ },
+ {
+  "type": "journal-article",
+  "title": "Statistical uncertainty quantification to augment clinical decision support: a first implementation in sleep medicine",
+  "author": [
+   {
+    "given": "Dae Y.",
+    "family": "Kang",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Pamela N.",
+    "family": "DeYoung",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Justin",
+    "family": "Tantiongloc",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Todd P.",
+    "family": "Coleman",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-6515-6204",
+    "authenticated-orcid": false,
+    "given": "Robert L.",
+    "family": "Owens",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "npj Digital Medicine",
+  "volume": "4",
+  "issue": "1",
+  "issued": {
+   "date-parts": [
+    [
+     2021,
+     9,
+     30
+    ]
+   ]
+  },
+  "DOI": "10.1038/s41746-021-00515-3",
+  "publisher": "Springer Science and Business Media LLC",
+  "URL": "http://dx.doi.org/10.1038/s41746-021-00515-3",
+  "article-number": "142",
+  "page": "142",
+  "id": "kang2021"
+ },
+ {
+  "type": "journal-article",
+  "title": "Certainty about uncertainty in sleep staging: a theoretical framework",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-4823-2874",
+    "authenticated-orcid": false,
+    "given": "Hans",
+    "family": "van Gorp",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering, Eindhoven University of Technology , Eindhoven , the Netherlands"
+     },
+     {
+      "name": "Personal Health, Philips Research , Eindhoven , the Netherlands"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Iris A M",
+    "family": "Huijben",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering, Eindhoven University of Technology , Eindhoven , the Netherlands"
+     },
+     {
+      "name": "Onera Health , Eindhoven , the Netherlands"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2932-6402",
+    "authenticated-orcid": false,
+    "given": "Pedro",
+    "family": "Fonseca",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering, Eindhoven University of Technology , Eindhoven , the Netherlands"
+     },
+     {
+      "name": "Personal Health, Philips Research , Eindhoven , the Netherlands"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ruud J G",
+    "family": "van Sloun",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering, Eindhoven University of Technology , Eindhoven , the Netherlands"
+     },
+     {
+      "name": "Personal Health, Philips Research , Eindhoven , the Netherlands"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Sebastiaan",
+    "family": "Overeem",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering, Eindhoven University of Technology , Eindhoven , the Netherlands"
+     },
+     {
+      "name": "Sleep Medicine Centre, Kempenhaeghe Foundation , Eindhoven , the Netherlands"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Merel M",
+    "family": "van Gilst",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering, Eindhoven University of Technology , Eindhoven , the Netherlands"
+     },
+     {
+      "name": "Sleep Medicine Centre, Kempenhaeghe Foundation , Eindhoven , the Netherlands"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Sleep",
+  "volume": "45",
+  "issue": "8",
+  "issued": {
+   "date-parts": [
+    [
+     2022,
+     6,
+     8
+    ]
+   ]
+  },
+  "DOI": "10.1093/sleep/zsac134",
+  "publisher": "Oxford University Press (OUP)",
+  "URL": "http://dx.doi.org/10.1093/sleep/zsac134",
+  "article-number": "zsac134",
+  "page": "zsac134",
+  "id": "vangorp2022"
+ },
+ {
+  "type": "journal-article",
+  "title": "Scoring sleep with artificial intelligence enables quantification of sleep stage ambiguity: hypnodensity based on multiple expert scorers and auto-scoring",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-2976-4747",
+    "authenticated-orcid": false,
+    "given": "Jessie P",
+    "family": "Bakker",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Philips Sleep and Respiratory Care , Pittsburgh, PA, USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-0603-5709",
+    "authenticated-orcid": false,
+    "given": "Marco",
+    "family": "Ross",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Philips Sleep and Respiratory Care , Vienna , Austria"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-8191-1866",
+    "authenticated-orcid": false,
+    "given": "Andreas",
+    "family": "Cerny",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Philips Sleep and Respiratory Care , Vienna , Austria"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ray",
+    "family": "Vasko",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Philips Sleep and Respiratory Care , Pittsburgh, PA, USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Edmund",
+    "family": "Shaw",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Philips Sleep and Respiratory Care , Pittsburgh, PA, USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Samuel",
+    "family": "Kuna",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Perelman School of Medicine, University of Pennsylvania , Philadelphia, PA, USA"
+     },
+     {
+      "name": "Corporal Michael J. Crescenz Veterans Affairs Medical Center , Philadelphia, PA, USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-5052-2494",
+    "authenticated-orcid": false,
+    "given": "Ulysses J",
+    "family": "Magalang",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Division of Pulmonary, Critical Care, and Sleep Medicine, Ohio State University Wexner Medical Center , Columbus, OH , USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Naresh M",
+    "family": "Punjabi",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Division of Pulmonary, Critical Care, and Sleep Medicine, University of Miami , Miami FL , USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-3869-6678",
+    "authenticated-orcid": false,
+    "given": "Peter",
+    "family": "Anderer",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Philips Sleep and Respiratory Care , Vienna , Austria"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Sleep",
+  "volume": "46",
+  "issue": "2",
+  "issued": {
+   "date-parts": [
+    [
+     2022,
+     7,
+     3
+    ]
+   ]
+  },
+  "DOI": "10.1093/sleep/zsac154",
+  "publisher": "Oxford University Press (OUP)",
+  "URL": "http://dx.doi.org/10.1093/sleep/zsac154",
+  "article-number": "zsac154",
+  "page": "zsac154",
+  "id": "bakker2023"
+ },
+ {
+  "type": "journal-article",
+  "title": "Smarter Together: Combining Large Language Models and Small Models for Physiological Signals Visual Inspection",
+  "author": [
+   {
+    "given": "Huayu",
+    "family": "Li",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Zhengxiao",
+    "family": "He",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Xiwen",
+    "family": "Chen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ci",
+    "family": "Zhang",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Stuart F.",
+    "family": "Quan",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "William D. S.",
+    "family": "Killgore",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Shu-Fen",
+    "family": "Wung",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Chen X.",
+    "family": "Chen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Geng",
+    "family": "Yuan",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jin",
+    "family": "Lu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ao",
+    "family": "Li",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Journal of Healthcare Informatics Research",
+  "volume": "9",
+  "issue": "4",
+  "page": "656-685",
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     7,
+     28
+    ]
+   ]
+  },
+  "DOI": "10.1007/s41666-025-00207-7",
+  "publisher": "Springer Science and Business Media LLC",
+  "URL": "http://dx.doi.org/10.1007/s41666-025-00207-7",
+  "id": "li2025conmil",
+  "note": "ConMIL: conformalised multiple-instance learning; arXiv:2501.16215"
+ },
+ {
+  "type": "journal-article",
+  "title": "Refining sleep staging accuracy: transfer learning coupled with scorability models",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-6029-2450",
+    "authenticated-orcid": false,
+    "given": "Wolfgang",
+    "family": "Ganglberger",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Department of Neurology, Beth Israel Deaconess Medical Center , Boston, MA ,",
+      "place": [
+       "USA"
+      ]
+     },
+     {
+      "name": "McCance Center for Brain Health, Massachusetts General Hospital , Boston, MA ,",
+      "place": [
+       "USA"
+      ]
+     },
+     {
+      "name": "Division of Sleep Medicine, Harvard Medical School , Boston, MA ,",
+      "place": [
+       "USA"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Samaneh",
+    "family": "Nasiri",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "McCance Center for Brain Health, Massachusetts General Hospital , Boston, MA ,",
+      "place": [
+       "USA"
+      ]
+     },
+     {
+      "name": "Division of Sleep Medicine, Harvard Medical School , Boston, MA ,",
+      "place": [
+       "USA"
+      ]
+     },
+     {
+      "name": "Biomedical Informatics & Neurology, Emory School of Medicine , Atlanta, GA ,",
+      "place": [
+       "USA"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Haoqi",
+    "family": "Sun",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Neurology, Beth Israel Deaconess Medical Center , Boston, MA ,",
+      "place": [
+       "USA"
+      ]
+     },
+     {
+      "name": "McCance Center for Brain Health, Massachusetts General Hospital , Boston, MA ,",
+      "place": [
+       "USA"
+      ]
+     },
+     {
+      "name": "Division of Sleep Medicine, Harvard Medical School , Boston, MA ,",
+      "place": [
+       "USA"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Soriul",
+    "family": "Kim",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Institute of Human Genomic Study, College of Medicine, Kore University , Seoul ,",
+      "place": [
+       "Republic of Korea"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Chol",
+    "family": "Shin",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Institute of Human Genomic Study, College of Medicine, Kore University , Seoul ,",
+      "place": [
+       "Republic of Korea"
+      ]
+     },
+     {
+      "name": "Biomedical Research Center, Korea University Ansan Hospital , Ansan ,",
+      "place": [
+       "Republic of Korea"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "M Brandon",
+    "family": "Westover",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Neurology, Beth Israel Deaconess Medical Center , Boston, MA ,",
+      "place": [
+       "USA"
+      ]
+     },
+     {
+      "name": "McCance Center for Brain Health, Massachusetts General Hospital , Boston, MA ,",
+      "place": [
+       "USA"
+      ]
+     },
+     {
+      "name": "Division of Sleep Medicine, Harvard Medical School , Boston, MA ,",
+      "place": [
+       "USA"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-5575-3953",
+    "authenticated-orcid": false,
+    "given": "Robert J",
+    "family": "Thomas",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Division of Sleep Medicine, Harvard Medical School , Boston, MA ,",
+      "place": [
+       "USA"
+      ]
+     },
+     {
+      "name": "Division of Pulmonary Critical Care & Sleep Medicine, Department of Medicine, Beth Israel Deaconess Medical Center , Boston, MA ,",
+      "place": [
+       "USA"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "SLEEP",
+  "volume": "47",
+  "issue": "11",
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     8,
+     31
+    ]
+   ]
+  },
+  "DOI": "10.1093/sleep/zsae202",
+  "publisher": "Oxford University Press (OUP)",
+  "URL": "http://dx.doi.org/10.1093/sleep/zsae202",
+  "article-number": "zsae202",
+  "page": "zsae202",
+  "id": "ganglberger2024"
+ },
+ {
+  "type": "proceedings-article",
+  "title": "Predicting Sleep Classification Performance without Labels",
+  "author": [
+   {
+    "given": "Kaare B.",
+    "family": "Mikkelsen",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yousef R.",
+    "family": "Tabar",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Preben",
+    "family": "Kidmose",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "2020 42nd Annual International Conference of the IEEE Engineering in Medicine &amp; Biology Society (EMBC)",
+  "page": "645-648",
+  "issued": {
+   "date-parts": [
+    [
+     2020,
+     7
+    ]
+   ]
+  },
+  "DOI": "10.1109/EMBC44109.2020.9175743",
+  "publisher": "IEEE",
+  "URL": "http://dx.doi.org/10.1109/EMBC44109.2020.9175743",
+  "id": "mikkelsen2020"
+ },
+ {
+  "type": "journal-article",
+  "title": "Analysis of a sleep-dependent neuronal feedback loop: the slow-wave microcontinuity of the EEG",
+  "author": [
+   {
+    "given": "B.",
+    "family": "Kemp",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "A.H.",
+    "family": "Zwinderman",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "B.",
+    "family": "Tuk",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "H.A.C.",
+    "family": "Kamphuisen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "J.J.L.",
+    "family": "Oberye",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "IEEE Transactions on Biomedical Engineering",
+  "volume": "47",
+  "issue": "9",
+  "page": "1185-1194",
+  "issued": {
+   "date-parts": [
+    [
+     2000
+    ]
+   ]
+  },
+  "DOI": "10.1109/10.867928",
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "URL": "http://dx.doi.org/10.1109/10.867928",
+  "id": "kemp2000"
+ },
+ {
+  "type": "dataset",
+  "title": "The Sleep-EDF Database [Expanded]",
+  "author": [
+   {
+    "family": "Kemp",
+    "given": "Bastiaan"
+   },
+   {
+    "family": "Aeilko Zwinderman"
+   },
+   {
+    "family": "Tuk",
+    "given": "Bert"
+   },
+   {
+    "family": "Kamphuisen",
+    "given": "Hilbert"
+   },
+   {
+    "family": "Oberyé",
+    "given": "Josefien"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2018
+    ]
+   ]
+  },
+  "DOI": "10.13026/C2X676",
+  "publisher": "physionet.org",
+  "URL": "https://physionet.org/content/sleep-edfx/",
+  "id": "sleepedf_data"
+ },
+ {
+  "type": "journal-article",
+  "title": "PhysioBank, PhysioToolkit, and PhysioNet",
+  "author": [
+   {
+    "given": "Ary L.",
+    "family": "Goldberger",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "From the Margret and H.A. Rey Laboratory for Nonlinear Dynamics in Medicine, Beth Israel Deaconess Medical Center/Harvard Medical School, Boston, Mass (A.L.G., J.M.H., J.E.M., C.-K.P); the Center for Polymer Studies and Department of Physics, Boston University, Boston, Mass (L.A.N.A., P.Ch.I., H.E.S.); the Division of Health Sciences and Technology, Harvard University/Massachusetts Institute of Technology, Cambridge, Mass (R.G.M., G.B.M.); and the Centre for Nonlinear Dynamics in Physiology and..."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Luis A. N.",
+    "family": "Amaral",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "From the Margret and H.A. Rey Laboratory for Nonlinear Dynamics in Medicine, Beth Israel Deaconess Medical Center/Harvard Medical School, Boston, Mass (A.L.G., J.M.H., J.E.M., C.-K.P); the Center for Polymer Studies and Department of Physics, Boston University, Boston, Mass (L.A.N.A., P.Ch.I., H.E.S.); the Division of Health Sciences and Technology, Harvard University/Massachusetts Institute of Technology, Cambridge, Mass (R.G.M., G.B.M.); and the Centre for Nonlinear Dynamics in Physiology and..."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Leon",
+    "family": "Glass",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "From the Margret and H.A. Rey Laboratory for Nonlinear Dynamics in Medicine, Beth Israel Deaconess Medical Center/Harvard Medical School, Boston, Mass (A.L.G., J.M.H., J.E.M., C.-K.P); the Center for Polymer Studies and Department of Physics, Boston University, Boston, Mass (L.A.N.A., P.Ch.I., H.E.S.); the Division of Health Sciences and Technology, Harvard University/Massachusetts Institute of Technology, Cambridge, Mass (R.G.M., G.B.M.); and the Centre for Nonlinear Dynamics in Physiology and..."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jeffrey M.",
+    "family": "Hausdorff",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "From the Margret and H.A. Rey Laboratory for Nonlinear Dynamics in Medicine, Beth Israel Deaconess Medical Center/Harvard Medical School, Boston, Mass (A.L.G., J.M.H., J.E.M., C.-K.P); the Center for Polymer Studies and Department of Physics, Boston University, Boston, Mass (L.A.N.A., P.Ch.I., H.E.S.); the Division of Health Sciences and Technology, Harvard University/Massachusetts Institute of Technology, Cambridge, Mass (R.G.M., G.B.M.); and the Centre for Nonlinear Dynamics in Physiology and..."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Plamen Ch.",
+    "family": "Ivanov",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "From the Margret and H.A. Rey Laboratory for Nonlinear Dynamics in Medicine, Beth Israel Deaconess Medical Center/Harvard Medical School, Boston, Mass (A.L.G., J.M.H., J.E.M., C.-K.P); the Center for Polymer Studies and Department of Physics, Boston University, Boston, Mass (L.A.N.A., P.Ch.I., H.E.S.); the Division of Health Sciences and Technology, Harvard University/Massachusetts Institute of Technology, Cambridge, Mass (R.G.M., G.B.M.); and the Centre for Nonlinear Dynamics in Physiology and..."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Roger G.",
+    "family": "Mark",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "From the Margret and H.A. Rey Laboratory for Nonlinear Dynamics in Medicine, Beth Israel Deaconess Medical Center/Harvard Medical School, Boston, Mass (A.L.G., J.M.H., J.E.M., C.-K.P); the Center for Polymer Studies and Department of Physics, Boston University, Boston, Mass (L.A.N.A., P.Ch.I., H.E.S.); the Division of Health Sciences and Technology, Harvard University/Massachusetts Institute of Technology, Cambridge, Mass (R.G.M., G.B.M.); and the Centre for Nonlinear Dynamics in Physiology and..."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Joseph E.",
+    "family": "Mietus",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "From the Margret and H.A. Rey Laboratory for Nonlinear Dynamics in Medicine, Beth Israel Deaconess Medical Center/Harvard Medical School, Boston, Mass (A.L.G., J.M.H., J.E.M., C.-K.P); the Center for Polymer Studies and Department of Physics, Boston University, Boston, Mass (L.A.N.A., P.Ch.I., H.E.S.); the Division of Health Sciences and Technology, Harvard University/Massachusetts Institute of Technology, Cambridge, Mass (R.G.M., G.B.M.); and the Centre for Nonlinear Dynamics in Physiology and..."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "George B.",
+    "family": "Moody",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "From the Margret and H.A. Rey Laboratory for Nonlinear Dynamics in Medicine, Beth Israel Deaconess Medical Center/Harvard Medical School, Boston, Mass (A.L.G., J.M.H., J.E.M., C.-K.P); the Center for Polymer Studies and Department of Physics, Boston University, Boston, Mass (L.A.N.A., P.Ch.I., H.E.S.); the Division of Health Sciences and Technology, Harvard University/Massachusetts Institute of Technology, Cambridge, Mass (R.G.M., G.B.M.); and the Centre for Nonlinear Dynamics in Physiology and..."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Chung-Kang",
+    "family": "Peng",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "From the Margret and H.A. Rey Laboratory for Nonlinear Dynamics in Medicine, Beth Israel Deaconess Medical Center/Harvard Medical School, Boston, Mass (A.L.G., J.M.H., J.E.M., C.-K.P); the Center for Polymer Studies and Department of Physics, Boston University, Boston, Mass (L.A.N.A., P.Ch.I., H.E.S.); the Division of Health Sciences and Technology, Harvard University/Massachusetts Institute of Technology, Cambridge, Mass (R.G.M., G.B.M.); and the Centre for Nonlinear Dynamics in Physiology and..."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "H. Eugene",
+    "family": "Stanley",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "From the Margret and H.A. Rey Laboratory for Nonlinear Dynamics in Medicine, Beth Israel Deaconess Medical Center/Harvard Medical School, Boston, Mass (A.L.G., J.M.H., J.E.M., C.-K.P); the Center for Polymer Studies and Department of Physics, Boston University, Boston, Mass (L.A.N.A., P.Ch.I., H.E.S.); the Division of Health Sciences and Technology, Harvard University/Massachusetts Institute of Technology, Cambridge, Mass (R.G.M., G.B.M.); and the Centre for Nonlinear Dynamics in Physiology and..."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Circulation",
+  "volume": "101",
+  "issue": "23",
+  "issued": {
+   "date-parts": [
+    [
+     2000,
+     6,
+     13
+    ]
+   ]
+  },
+  "DOI": "10.1161/01.CIR.101.23.e215",
+  "publisher": "Ovid Technologies (Wolters Kluwer Health)",
+  "URL": "http://dx.doi.org/10.1161/01.CIR.101.23.e215",
+  "id": "goldberger2000"
+ },
+ {
+  "type": "journal-article",
+  "title": "Inter-database validation of a deep learning approach for automatic sleep scoring",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0001-5790-0577",
+    "authenticated-orcid": true,
+    "given": "Diego",
+    "family": "Alvarez-Estevez",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Roselyne M.",
+    "family": "Rijsman",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "editor": [
+   {
+    "given": "Yuchen",
+    "family": "Qiu",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "editor"
+     }
+    ]
+   }
+  ],
+  "container-title": "PLOS ONE",
+  "volume": "16",
+  "issue": "8",
+  "page": "e0256111",
+  "issued": {
+   "date-parts": [
+    [
+     2021,
+     8,
+     16
+    ]
+   ]
+  },
+  "DOI": "10.1371/journal.pone.0256111",
+  "publisher": "Public Library of Science (PLoS)",
+  "URL": "http://dx.doi.org/10.1371/journal.pone.0256111",
+  "id": "alvarez2021"
+ },
+ {
+  "type": "dataset",
+  "title": "Haaglanden Medisch Centrum sleep staging database",
+  "author": [
+   {
+    "family": "Alvarez-Estevez",
+    "given": "Diego"
+   },
+   {
+    "family": "Rijsman",
+    "given": "Roselyne"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2022
+    ]
+   ]
+  },
+  "DOI": "10.13026/t79q-fr32",
+  "publisher": "PhysioNet",
+  "URL": "https://physionet.org/content/hmc-sleep-staging/1.1/",
+  "id": "hmc_data"
+ },
+ {
+  "type": "book",
+  "title": "Connectionist Speech Recognition",
+  "author": [
+   {
+    "given": "Hervé A.",
+    "family": "Bourlard",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Nelson",
+    "family": "Morgan",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "",
+  "issued": {
+   "date-parts": [
+    [
+     1994
+    ]
+   ]
+  },
+  "DOI": "10.1007/978-1-4615-3210-1",
+  "publisher": "Springer (Kluwer Academic Publishers)",
+  "URL": "http://dx.doi.org/10.1007/978-1-4615-3210-1",
+  "id": "bourlard1994"
+ },
+ {
+  "type": "journal-article",
+  "title": "On Gibbs sampling for state space models",
+  "author": [
+   {
+    "given": "C. K.",
+    "family": "CARTER",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "R.",
+    "family": "KOHN",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Biometrika",
+  "volume": "81",
+  "issue": "3",
+  "page": "541-553",
+  "issued": {
+   "date-parts": [
+    [
+     1994
+    ]
+   ]
+  },
+  "DOI": "10.1093/biomet/81.3.541",
+  "publisher": "Oxford University Press (OUP)",
+  "URL": "http://dx.doi.org/10.1093/biomet/81.3.541",
+  "id": "carter1994"
+ },
+ {
+  "type": "journal-article",
+  "title": "DATA AUGMENTATION AND DYNAMIC LINEAR MODELS",
+  "author": [
+   {
+    "given": "Sylvia",
+    "family": "Frühwirth‐Schnatter",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Journal of Time Series Analysis",
+  "volume": "15",
+  "issue": "2",
+  "page": "183-202",
+  "issued": {
+   "date-parts": [
+    [
+     1994,
+     3
+    ]
+   ]
+  },
+  "DOI": "10.1111/j.1467-9892.1994.tb00184.x",
+  "publisher": "Wiley",
+  "URL": "http://dx.doi.org/10.1111/j.1467-9892.1994.tb00184.x",
+  "id": "fruhwirth1994"
+ },
+ {
+  "type": "book",
+  "title": "Algorithmic Learning in a Random World",
+  "container-title": "",
+  "issued": {
+   "date-parts": [
+    [
+     2005
+    ]
+   ]
+  },
+  "DOI": "10.1007/b106715",
+  "publisher": "Springer",
+  "URL": "http://dx.doi.org/10.1007/b106715",
+  "id": "vovk2005",
+  "author": [
+   {
+    "family": "Vovk",
+    "given": "V"
+   },
+   {
+    "family": "Gammerman",
+    "given": "A"
+   },
+   {
+    "family": "Shafer",
+    "given": "G"
+   }
+  ]
+ },
+ {
+  "type": "journal-article",
+  "title": "Distribution-Free Predictive Inference for Regression",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-3104-9387",
+    "authenticated-orcid": false,
+    "given": "Jing",
+    "family": "Lei",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Department of Statistics, Carnegie Mellon University, Pittsburgh, PA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Max",
+    "family": "G’Sell",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Statistics, Carnegie Mellon University, Pittsburgh, PA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Alessandro",
+    "family": "Rinaldo",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Statistics, Carnegie Mellon University, Pittsburgh, PA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-2158-8304",
+    "authenticated-orcid": false,
+    "given": "Ryan J.",
+    "family": "Tibshirani",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Statistics, Carnegie Mellon University, Pittsburgh, PA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Larry",
+    "family": "Wasserman",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Statistics, Carnegie Mellon University, Pittsburgh, PA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Journal of the American Statistical Association",
+  "volume": "113",
+  "issue": "523",
+  "page": "1094-1111",
+  "issued": {
+   "date-parts": [
+    [
+     2018,
+     6,
+     8
+    ]
+   ]
+  },
+  "DOI": "10.1080/01621459.2017.1307116",
+  "publisher": "Informa UK Limited",
+  "URL": "http://dx.doi.org/10.1080/01621459.2017.1307116",
+  "id": "lei2018"
+ },
+ {
+  "type": "journal-article",
+  "title": "Conformal Prediction: A Gentle Introduction",
+  "author": [
+   {
+    "given": "Anastasios N.",
+    "family": "Angelopoulos",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "University of California , ,",
+      "place": [
+       "Berkeley, USA"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Stephen",
+    "family": "Bates",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "University of California , ,",
+      "place": [
+       "Berkeley, USA"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Foundations and Trends® in Machine Learning",
+  "volume": "16",
+  "issue": "4",
+  "page": "494-591",
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     3,
+     27
+    ]
+   ]
+  },
+  "DOI": "10.1561/2200000101",
+  "publisher": "Emerald",
+  "URL": "http://dx.doi.org/10.1561/2200000101",
+  "id": "angelopoulos2023"
+ },
+ {
+  "type": "journal-article",
+  "title": "Conformal prediction beyond exchangeability",
+  "author": [
+   {
+    "given": "Rina Foygel",
+    "family": "Barber",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Department of Statistics, University of Chicago"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Emmanuel J.",
+    "family": "Candès",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Departments of Statistics and Mathematics, Stanford University"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Aaditya",
+    "family": "Ramdas",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Departments of Statistics and Machine Learning, Carnegie Mellon University"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ryan J.",
+    "family": "Tibshirani",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Departments of Statistics and Machine Learning, Carnegie Mellon University"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "The Annals of Statistics",
+  "volume": "51",
+  "issue": "2",
+  "page": "816-845",
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     4,
+     1
+    ]
+   ]
+  },
+  "DOI": "10.1214/23-AOS2276",
+  "publisher": "Institute of Mathematical Statistics",
+  "URL": "http://dx.doi.org/10.1214/23-AOS2276",
+  "id": "barber2023"
+ },
+ {
+  "type": "journal-article",
+  "title": "STATISTICAL METHODS FOR ASSESSING AGREEMENT BETWEEN TWO METHODS OF CLINICAL MEASUREMENT",
+  "author": [
+   {
+    "given": "J.",
+    "family": "Martin Bland",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "DouglasG.",
+    "family": "Altman",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "The Lancet",
+  "volume": "327",
+  "issue": "8476",
+  "page": "307-310",
+  "issued": {
+   "date-parts": [
+    [
+     1986,
+     2
+    ]
+   ]
+  },
+  "DOI": "10.1016/S0140-6736(86)90837-8",
+  "publisher": "Elsevier BV",
+  "URL": "http://dx.doi.org/10.1016/S0140-6736(86)90837-8",
+  "id": "bland1986"
+ },
+ {
+  "type": "journal-article",
+  "title": "Strictly Proper Scoring Rules, Prediction, and Estimation",
+  "author": [
+   {
+    "given": "Tilmann",
+    "family": "Gneiting",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Adrian E",
+    "family": "Raftery",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Journal of the American Statistical Association",
+  "volume": "102",
+  "issue": "477",
+  "page": "359-378",
+  "issued": {
+   "date-parts": [
+    [
+     2007,
+     3
+    ]
+   ]
+  },
+  "DOI": "10.1198/016214506000001437",
+  "publisher": "Informa UK Limited",
+  "URL": "http://dx.doi.org/10.1198/016214506000001437",
+  "id": "gneiting2007"
+ },
+ {
+  "type": "journal-article",
+  "title": "Forming inferences about some intraclass correlation coefficients.",
+  "author": [
+   {
+    "given": "Kenneth O.",
+    "family": "McGraw",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "S. P.",
+    "family": "Wong",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Psychological Methods",
+  "volume": "1",
+  "issue": "1",
+  "page": "30-46",
+  "issued": {
+   "date-parts": [
+    [
+     1996,
+     3
+    ]
+   ]
+  },
+  "DOI": "10.1037/1082-989X.1.1.30",
+  "publisher": "American Psychological Association (APA)",
+  "URL": "http://dx.doi.org/10.1037/1082-989X.1.1.30",
+  "id": "mcgraw1996"
+ },
+ {
+  "type": "journal-article",
+  "title": "AASM Scoring Manual Updates for 2017 (Version 2.4)",
+  "author": [
+   {
+    "given": "Richard B.",
+    "family": "Berry",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Rita",
+    "family": "Brooks",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Charlene",
+    "family": "Gamaldo",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Susan M.",
+    "family": "Harding",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Robin M.",
+    "family": "Lloyd",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Stuart F.",
+    "family": "Quan",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Matthew T.",
+    "family": "Troester",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Bradley V.",
+    "family": "Vaughn",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Journal of Clinical Sleep Medicine",
+  "volume": "13",
+  "issue": "5",
+  "page": "665-666",
+  "issued": {
+   "date-parts": [
+    [
+     2017,
+     5,
+     15
+    ]
+   ]
+  },
+  "DOI": "10.5664/jcsm.6576",
+  "publisher": "Springer Science and Business Media LLC",
+  "URL": "http://dx.doi.org/10.5664/jcsm.6576",
+  "id": "berry2017"
+ },
+ {
+  "type": "journal-article",
+  "title": "A tutorial on hidden Markov models and selected applications in speech recognition",
+  "author": [
+   {
+    "given": "L.R.",
+    "family": "Rabiner",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Proceedings of the IEEE",
+  "volume": "77",
+  "issue": "2",
+  "page": "257-286",
+  "issued": {
+   "date-parts": [
+    [
+     1989
+    ]
+   ]
+  },
+  "DOI": "10.1109/5.18626",
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "URL": "http://dx.doi.org/10.1109/5.18626",
+  "id": "rabiner1989"
+ },
+ {
+  "type": "journal-article",
+  "title": "Automated sleep stage and event detection algorithms using quality-controlled polysomnography annotations",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-1510-7719",
+    "authenticated-orcid": false,
+    "given": "Michiru",
+    "family": "Kaneda",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "ACCELStars, Inc.,   Tokyo ,",
+      "place": [
+       "Japan"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Sho",
+    "family": "Ogaki",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "ACCELStars, Inc.,   Tokyo ,",
+      "place": [
+       "Japan"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Tomoyuki",
+    "family": "Nohara",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "ACCELStars, Inc.,   Tokyo ,",
+      "place": [
+       "Japan"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Syuhei",
+    "family": "Fujita",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "ACCELStars, Inc.,   Tokyo ,",
+      "place": [
+       "Japan"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Naoshi",
+    "family": "Osako",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "ACCELStars, Inc.,   Tokyo ,",
+      "place": [
+       "Japan"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Tomoko",
+    "family": "Yagi",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "School of Medical Technology, Kurume University , Fukuoka ,",
+      "place": [
+       "Japan"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yasuhiro",
+    "family": "Tomita",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Sleep and Respiratory Medicine, Toranomon Hospital , Tokyo ,",
+      "place": [
+       "Japan"
+      ]
+     },
+     {
+      "name": "Graduate School of Medicine, The University of Tokyo , Tokyo ,",
+      "place": [
+       "Japan"
+      ]
+     },
+     {
+      "name": "Faculty of Medicine, Juntendo University , Tokyo ,",
+      "place": [
+       "Japan"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Takanori",
+    "family": "Ogata",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "ACCELStars, Inc.,   Tokyo ,",
+      "place": [
+       "Japan"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "SLEEP Advances",
+  "volume": "7",
+  "issue": "2",
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "DOI": "10.1093/sleepadvances/zpag054",
+  "publisher": "Oxford University Press (OUP)",
+  "URL": "http://dx.doi.org/10.1093/sleepadvances/zpag054",
+  "article-number": "zpag054",
+  "page": "zpag054",
+  "id": "kaneda2026"
+ },
+ {
+  "type": "journal-article",
+  "title": "SLEEPYLAND: trust begins with fair evaluation of automatic sleep staging models",
+  "author": [
+   {
+    "given": "Alvise Dei",
+    "family": "Rossi",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Matteo",
+    "family": "Metaldi",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Michal",
+    "family": "Bechny",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Irina",
+    "family": "Filchenko",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Julia van der",
+    "family": "Meer",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Markus H.",
+    "family": "Schmidt",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Claudio L. A.",
+    "family": "Bassetti",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Athina",
+    "family": "Tzovara",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Francesca D.",
+    "family": "Faraci",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Luigi",
+    "family": "Fiorillo",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "npj Digital Medicine",
+  "volume": "9",
+  "issue": "1",
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     12,
+     16
+    ]
+   ]
+  },
+  "DOI": "10.1038/s41746-025-02237-2",
+  "publisher": "Springer Science and Business Media LLC",
+  "URL": "http://dx.doi.org/10.1038/s41746-025-02237-2",
+  "article-number": "55",
+  "page": "55",
+  "id": "deirossi2025"
+ },
+ {
+  "type": "journal-article",
+  "title": "Direct Quantification of Uncertainty in Deep Learning-Based Automatic Sleep Staging",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0009-0006-9310-8919",
+    "authenticated-orcid": false,
+    "given": "Miika",
+    "family": "Vainikka",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "University of Eastern Finland",
+      "place": [
+       "Kuopio, Finland"
+      ]
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-8290-4764",
+    "authenticated-orcid": false,
+    "given": "Riku",
+    "family": "Huttunen",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "University of Eastern Finland"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2798-2115",
+    "authenticated-orcid": false,
+    "given": "Samu",
+    "family": "Kainulainen",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "University of Eastern Finland"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-4686-6112",
+    "authenticated-orcid": false,
+    "given": "Henri",
+    "family": "Korkalainen",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "University of Eastern Finland"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0001-9633-6016",
+    "authenticated-orcid": false,
+    "given": "Matias",
+    "family": "Rusanen",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "University of Eastern Finland"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "IEEE Transactions on Biomedical Engineering",
+  "volume": "73",
+  "issue": "6",
+  "page": "2144-2154",
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     6
+    ]
+   ]
+  },
+  "DOI": "10.1109/TBME.2025.3623380",
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "URL": "http://dx.doi.org/10.1109/TBME.2025.3623380",
+  "id": "vainikka2026"
+ },
+ {
+  "id": "alexandari2020",
+  "type": "paper-conference",
+  "title": "Maximum likelihood with bias-corrected calibration is hard-to-beat at label shift adaptation",
+  "author": [
+   {
+    "family": "Alexandari",
+    "given": "A"
+   },
+   {
+    "family": "Kundaje",
+    "given": "A"
+   },
+   {
+    "family": "Shrikumar",
+    "given": "A"
+   }
+  ],
+  "container-title": "Proceedings of the 37th International Conference on Machine Learning (PMLR 119)",
+  "page": "222-232",
+  "issued": {
+   "date-parts": [
+    [
+     2020
+    ]
+   ]
+  }
+ },
+ {
+  "id": "romano2019",
+  "type": "paper-conference",
+  "title": "Conformalized quantile regression",
+  "author": [
+   {
+    "family": "Romano",
+    "given": "Y"
+   },
+   {
+    "family": "Patterson",
+    "given": "E"
+   },
+   {
+    "family": "Candès",
+    "given": "E"
+   }
+  ],
+  "container-title": "Advances in Neural Information Processing Systems 32 (NeurIPS 2019)",
+  "page": "3543-3553",
+  "issued": {
+   "date-parts": [
+    [
+     2019
+    ]
+   ]
+  }
+ },
+ {
+  "id": "tibshirani2019",
+  "type": "paper-conference",
+  "title": "Conformal prediction under covariate shift",
+  "author": [
+   {
+    "family": "Tibshirani",
+    "given": "RJ"
+   },
+   {
+    "family": "Foygel Barber",
+    "given": "R"
+   },
+   {
+    "family": "Candès",
+    "given": "E"
+   },
+   {
+    "family": "Ramdas",
+    "given": "A"
+   }
+  ],
+  "container-title": "Advances in Neural Information Processing Systems 32 (NeurIPS 2019)",
+  "page": "2530-2540",
+  "issued": {
+   "date-parts": [
+    [
+     2019
+    ]
+   ]
+  }
+ }
+]

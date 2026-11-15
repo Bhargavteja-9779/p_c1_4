@@ -68,7 +68,7 @@ def main():
                                                      method=meth, **res))
         so = pd.DataFrame(src_rows)
         so.to_csv(out / f"e06_source_only_{s}.csv", index=False)
-        pd.DataFrame(few_rows).to_csv(out / f"e06_fewshot_{s}.csv", index=False)
+        pd.DataFrame(few_rows).to_csv(out / f"e06_fewshot_{s}.csv.gz", index=False)
         print(s, "\n", so[so.alpha == 0.10].pivot_table(index=["target", "param"], columns="method",
                                                           values="coverage").round(3).to_string(), flush=True)
 

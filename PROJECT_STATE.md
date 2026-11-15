@@ -1,37 +1,35 @@
 # PROJECT_STATE (checkpoint file — update after every significant stage)
 
-_Last update: 2026-11-15, session 1_
+_Last update: 2026-11-15, session 1 (approx. 3 h into session)_
 
 ## Selected target journal
 **Sleep Medicine** (Elsevier, ISSN 1389-9457). JIF 4.1; Q1 Clinical Neurology 68/296 (secondary source, LetPub);
 median submission→acceptance 91 d (own PubMed computation, n=400). Details: `Target_Journal_Submission/journal_selection/`.
+Guidelines: ≤5000 words, structured abstract ≤300 w, ≤50 refs, ≤8 display items, highlights, GenAI declaration.
 
-## Research topic (status: being finalised — Phase 1–5)
-Night-level, distribution-free uncertainty for automated sleep scoring: per-night conformal prediction
-intervals for clinical PSG parameters (TST, SOL, WASO, REM latency, stage %), using structured posterior
-sampling of hypnograms (HMM forward-filtering backward-sampling over epoch probabilities) and external-cohort
-validation + few-night site recalibration.
+## Research topic (FINAL)
+Per-night conformal prediction intervals for automatically scored PSG parameters (TST, SOL, WASO, REML,
+N1/N2/N3/REM %) using HMM forward-filtering backward-sampling (FFBS) over stager probabilities +
+normalised split-conformal calibration; two stagers (YASA pretrained external; LightGBM in-domain on SC),
+three cohorts (Sleep-EDF SC/ST, HMC; 348 nights, 251 subjects). Protocol: `supplementary/PREREGISTERED_PROTOCOL.md`.
 
-## Abandoned direction (documented negative result)
-Subject-level label-shift adaptation (EM / empirical-Bayes Dirichlet / Markov) for inter-patient ECG.
-DS1-only development pilot: adaptation reduced macro-F1 (0.429 → 0.35) — conditional shift violates the
-label-shift assumption. See EXPERIMENT_LOG.md (E0). Code archived under `archive_abandoned_ecg/`.
+## Key results so far (see EXPERIMENT_LOG.md)
+* Within-cohort validity achieved (0.89–0.92 coverage) for all conformal methods.
+* Efficiency gains vs constant-width/BA-LoA for TST, stage %, REML (SC/ST); not for SOL, REM%, WASO-SC.
+* Cross-cohort coverage fails for N3% (bias sign flips SC vs HMC); 10 local nights restore coverage.
+* Posterior-mean TST removes plug-in bias (−38 → −4 min in HMC); WASO-SC failure (long post-awakening wake).
 
-## Data (all public, cached at Target_Journal_Submission/code/data/cache/sleep/, not committed)
-| cohort | nights | subjects | scored epochs | source |
-|---|---|---|---|---|
-| Sleep-EDF SC | 153 | 78 | 182,852 | PhysioNet sleep-edfx 1.0.0 |
-| Sleep-EDF ST | 44 | 22 | 42,643 | PhysioNet sleep-edfx 1.0.0 |
-| HMC | 151 | 151 | 136,776 | PhysioNet hmc-sleep-staging 1.1 |
-Raw EDFs were deleted after caching (disk quota); re-download with `code/scripts/download_data.sh`.
+## Code / pipeline
+`Target_Journal_Submission/code/` — run_all.py (quick/full), experiments e01–e10, scripts make_tables/make_figures,
+tests (8 passing). Manuscript sources: `Target_Journal_Submission/manuscript/sections/*.md`, builder build_manuscript.py
+(pandoc + python-docx + LibreOffice; numbers injected from tables/manuscript_numbers.json).
 
-## Environment
-4 CPU, 15 GB RAM, no GPU; Python 3.13; torch 2.15 CPU; yasa 0.8.1; lightgbm 4.7; numba 0.68.
+## In progress (background)
+* Rerun chain E03→E04→E06→E07→E04-seeds after adding calibrated plug-in comparators (CHANGELOG).
+* E09 robustness (YASA predictions on corrupted signals; 1 worker).
 
-## Completed
-- Phase 0 journal selection (files in journal_selection/)
-- Data download + caching (SC, ST, HMC)
-
-## Next exact step
-Run YASA pretrained EEG+EOG stager on all cached nights → epoch probabilities (base model 1);
-train in-domain LightGBM stager on SC with subject-wise 5-fold CV (base model 2).
+## Next exact steps
+1. After chain: run E08 (error analysis), E10 (efficiency), make_tables, make_figures.
+2. Write Results/Discussion/Conclusion/Abstract with placeholders; references; build DOCX/PDF.
+3. Ten-agent review cycles (REVIEW/), fixes, reruns.
+4. Cover letter, final audits, risk report, decision; commit + push to branch claude/tender-bohr-dljsc0.

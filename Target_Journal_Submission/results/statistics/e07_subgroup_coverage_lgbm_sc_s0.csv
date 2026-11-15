@@ -43,6 +43,10 @@ HMC,scp_abs,Q1 (worst),0.7861842105263158,304,acc_quartile
 HMC,scp_abs,Q2,0.8980263157894737,304,acc_quartile
 HMC,scp_abs,Q3,0.9457627118644067,295,acc_quartile
 HMC,scp_abs,Q4 (best),0.9769736842105263,304,acc_quartile
+HMC,scp_abs_cal,Q1 (worst),0.8519736842105263,304,acc_quartile
+HMC,scp_abs_cal,Q2,0.8980263157894737,304,acc_quartile
+HMC,scp_abs_cal,Q3,0.8915254237288136,295,acc_quartile
+HMC,scp_abs_cal,Q4 (best),0.9605263157894737,304,acc_quartile
 HMC,scp_abs_mu,Q1 (worst),0.8388157894736842,304,acc_quartile
 HMC,scp_abs_mu,Q2,0.9177631578947368,304,acc_quartile
 HMC,scp_abs_mu,Q3,0.9050847457627119,295,acc_quartile
@@ -91,6 +95,10 @@ SC,scp_abs,Q1 (worst),0.7788461538461539,312,acc_quartile
 SC,scp_abs,Q2,0.8980263157894737,304,acc_quartile
 SC,scp_abs,Q3,0.9572368421052632,304,acc_quartile
 SC,scp_abs,Q4 (best),0.9769736842105263,304,acc_quartile
+SC,scp_abs_cal,Q1 (worst),0.7852564102564102,312,acc_quartile
+SC,scp_abs_cal,Q2,0.8980263157894737,304,acc_quartile
+SC,scp_abs_cal,Q3,0.9506578947368421,304,acc_quartile
+SC,scp_abs_cal,Q4 (best),0.9769736842105263,304,acc_quartile
 SC,scp_abs_mu,Q1 (worst),0.8108974358974359,312,acc_quartile
 SC,scp_abs_mu,Q2,0.8980263157894737,304,acc_quartile
 SC,scp_abs_mu,Q3,0.930921052631579,304,acc_quartile
@@ -139,6 +147,10 @@ ST,scp_abs,Q1 (worst),0.7613636363636364,88,acc_quartile
 ST,scp_abs,Q2,0.9545454545454546,88,acc_quartile
 ST,scp_abs,Q3,0.9431818181818182,88,acc_quartile
 ST,scp_abs,Q4 (best),0.9659090909090909,88,acc_quartile
+ST,scp_abs_cal,Q1 (worst),0.8977272727272727,88,acc_quartile
+ST,scp_abs_cal,Q2,0.9204545454545454,88,acc_quartile
+ST,scp_abs_cal,Q3,0.8863636363636364,88,acc_quartile
+ST,scp_abs_cal,Q4 (best),0.9204545454545454,88,acc_quartile
 ST,scp_abs_mu,Q1 (worst),0.8181818181818182,88,acc_quartile
 ST,scp_abs_mu,Q2,0.9318181818181818,88,acc_quartile
 ST,scp_abs_mu,Q3,0.9204545454545454,88,acc_quartile
@@ -176,6 +188,9 @@ SC,norm_reg_ind,>=60,0.8802816901408451,568,age_group
 SC,scp_abs,<40,0.9391025641025641,312,age_group
 SC,scp_abs,40-59,0.9215116279069767,344,age_group
 SC,scp_abs,>=60,0.8697183098591549,568,age_group
+SC,scp_abs_cal,<40,0.9391025641025641,312,age_group
+SC,scp_abs_cal,40-59,0.9331395348837209,344,age_group
+SC,scp_abs_cal,>=60,0.8626760563380281,568,age_group
 SC,scp_abs_mu,<40,0.9326923076923077,312,age_group
 SC,scp_abs_mu,40-59,0.9331395348837209,344,age_group
 SC,scp_abs_mu,>=60,0.8644366197183099,568,age_group
@@ -212,6 +227,9 @@ ST,norm_reg_ind,>=60,0.8958333333333334,48,age_group
 ST,scp_abs,<40,0.9375,192,age_group
 ST,scp_abs,40-59,0.8571428571428571,112,age_group
 ST,scp_abs,>=60,0.8958333333333334,48,age_group
+ST,scp_abs_cal,<40,0.9270833333333334,192,age_group
+ST,scp_abs_cal,40-59,0.8839285714285714,112,age_group
+ST,scp_abs_cal,>=60,0.875,48,age_group
 ST,scp_abs_mu,<40,0.9322916666666666,192,age_group
 ST,scp_abs_mu,40-59,0.8303571428571429,112,age_group
 ST,scp_abs_mu,>=60,0.9166666666666666,48,age_group
@@ -237,6 +255,8 @@ SC,norm_reg_ind,F,0.9192073170731707,656,sex
 SC,norm_reg_ind,M,0.8820422535211268,568,sex
 SC,scp_abs,F,0.9192073170731707,656,sex
 SC,scp_abs,M,0.8820422535211268,568,sex
+SC,scp_abs_cal,F,0.926829268292683,656,sex
+SC,scp_abs_cal,M,0.8732394366197183,568,sex
 SC,scp_abs_mu,F,0.9192073170731707,656,sex
 SC,scp_abs_mu,M,0.8802816901408451,568,sex
 ST,ba_loa,F,0.8666666666666667,240,sex
@@ -261,6 +281,8 @@ ST,norm_reg_ind,F,0.9,240,sex
 ST,norm_reg_ind,M,0.9107142857142857,112,sex
 ST,scp_abs,F,0.8875,240,sex
 ST,scp_abs,M,0.9464285714285714,112,sex
+ST,scp_abs_cal,F,0.9,240,sex
+ST,scp_abs_cal,M,0.9196428571428571,112,sex
 ST,scp_abs_mu,F,0.9,240,sex
 ST,scp_abs_mu,M,0.8928571428571429,112,sex
 ST,ba_loa,placebo,0.875,176,condition
@@ -285,5 +307,7 @@ ST,norm_reg_ind,placebo,0.8863636363636364,176,condition
 ST,norm_reg_ind,temazepam,0.9204545454545454,176,condition
 ST,scp_abs,placebo,0.9034090909090909,176,condition
 ST,scp_abs,temazepam,0.9090909090909091,176,condition
+ST,scp_abs_cal,placebo,0.8920454545454546,176,condition
+ST,scp_abs_cal,temazepam,0.9204545454545454,176,condition
 ST,scp_abs_mu,placebo,0.9034090909090909,176,condition
 ST,scp_abs_mu,temazepam,0.8920454545454546,176,condition

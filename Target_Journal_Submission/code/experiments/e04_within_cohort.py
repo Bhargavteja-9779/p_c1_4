@@ -68,7 +68,7 @@ def main():
     for s in a.stagers:
         df = pd.read_csv(RESULTS_DIR / "summaries" / f"{s}_xfit.csv")
         sp = run_splits(df, s, a.R)
-        sp.to_csv(out / f"e04_splits_{s}.csv", index=False)
+        sp.to_csv(out / f"e04_splits_{s}.csv.gz", index=False)
         if not a.no_loso and s in ("yasa", "lgbm_sc_s0"):
             run_loso(df, s).to_csv(out / f"e04_loso_{s}.csv", index=False)
         g = sp[sp.alpha == 0.10].groupby(["cohort", "param", "method"])[["coverage", "mean_width"]].mean()

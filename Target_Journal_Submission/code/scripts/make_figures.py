@@ -100,7 +100,7 @@ def fig2_within(stagers=("yasa", "lgbm_sc_s0")):
     meths = ["ba_loa", "scp_abs", "cqr_qr", "cqr_ffbs", "norm_entropy_reg", PROPOSED]
     fig, axes = plt.subplots(2, 3, figsize=(7.2, 4.6), sharey="row")
     for si, st in enumerate(stagers):
-        d = pd.read_csv(RESULTS_DIR / "raw" / f"e04_splits_{st}.csv")
+        d = pd.read_csv(RESULTS_DIR / "raw" / f"e04_splits_{st}.csv.gz")
         d = d[d.alpha == 0.10]
         g = d.groupby(["cohort", "param", "method"])[["coverage", "interval_score", "mean_width"]].mean().reset_index()
         for ci, c in enumerate(["SC", "ST", "HMC"]):
@@ -174,7 +174,7 @@ def fig4_transport(stagers=("yasa", "lgbm_sc_s0")):
         ax.axhline(0.9, color="k", lw=0.6, ls=":")
         ax.set_xticks(range(8)); ax.set_xticklabels(PARAMS, rotation=45, ha="right"); ax.set_ylim(0.3, 1.02)
         ax.set_ylabel("Coverage"); ax.set_title(f"{'ad'[si]}  {STAGER_LAB[st]}: SC-calibrated (o HMC, x ST)", loc="left", fontsize=7)
-        fs = pd.read_csv(RESULTS_DIR / "raw" / f"e06_fewshot_{st}.csv")
+        fs = pd.read_csv(RESULTS_DIR / "raw" / f"e06_fewshot_{st}.csv.gz")
         for j, tgt in enumerate(["HMC", "ST"]):
             ax = axes[si, 1 + j]
             g = fs[fs.target == tgt].groupby(["strategy", "n_target", "method"])["coverage"].mean().reset_index()
@@ -193,7 +193,7 @@ def fig4_transport(stagers=("yasa", "lgbm_sc_s0")):
 
 
 def fig5_robust():
-    d = pd.read_csv(RESULTS_DIR / "raw" / "e09_robustness.csv")
+    d = pd.read_csv(RESULTS_DIR / "raw" / "e09_robustness.csv.gz")
     g = d.groupby(["corruption", "method", "param"])[["coverage", "mean_width"]].mean().reset_index()
     order = ["clean", "gauss05", "gauss10", "art10", "art25"]
     lab = ["clean", "noise 0.5 SD", "noise 1.0 SD", "artefacts 10%", "artefacts 25%"]
