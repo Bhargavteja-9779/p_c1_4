@@ -1,0 +1,17 @@
+Characteristic,SC,ST,HMC
+Nights,153,44,151
+Subjects,78,22,151
+"Age, y (mean ± SD)",59.0 ± 22.1,40.2 ± 17.9,not released
+"Female nights, n",82,30,not released
+Scored epochs,182852,42643,136776
+"W, %",31.4,10.3,17.0
+"N1, %",10.9,8.6,11.4
+"N2, %",36.7,46.6,36.6
+"N3, %",7.0,15.0,19.5
+"REM, %",14.0,19.6,15.5
+"YASA (pretrained, external): accuracy (per night)",0.794 ± 0.086,0.810 ± 0.059,0.733 ± 0.105
+"YASA (pretrained, external): kappa (per night)",0.710 ± 0.114,0.725 ± 0.089,0.632 ± 0.136
+"YASA (pretrained, external): pooled kappa",0.716,0.733,0.646
+LightGBM-SC (in-domain): accuracy (per night),0.820 ± 0.077,0.800 ± 0.062,0.619 ± 0.106
+LightGBM-SC (in-domain): kappa (per night),0.752 ± 0.102,0.715 ± 0.093,0.491 ± 0.133
+LightGBM-SC (in-domain): pooled kappa,0.757,0.723,0.505

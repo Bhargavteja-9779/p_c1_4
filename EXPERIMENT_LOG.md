@@ -33,3 +33,37 @@ All experiments are logged here, including failures and abandoned directions.
   process found no Q1 methods journal with verified ≤100-day acceptance; the topic was re-targeted to
   sleep medicine.
 * Code: `archive_abandoned_ecg/` (pilot script + modules), not part of the submission package.
+
+## E01 — YASA features + pretrained probabilities (2026-11-15)
+* 348 nights processed (SC 153, ST 44, HMC 151). Mean per-night accuracy (pretrained YASA EEG+EOG):
+  SC 0.794, ST 0.810, HMC 0.733. ~2–6 s per night on one CPU core.
+
+## E02 — In-domain LightGBM stager (SC, subject-grouped 5-fold)
+* Mean per-night accuracy (seeds 0/1/2 essentially identical): SC 0.820, ST 0.800, HMC 0.619 (montage
+  shift C4-M1/E1-M2 vs Fpz-Cz/horizontal EOG).
+
+## E03 — FFBS night summaries
+* Fitted emission temperature tau = 0.10 in almost all folds (0.15 in two HMC folds) after the grid was
+  extended (CHANGELOG). Raw posterior SDs strongly overconfident (e.g. TST SD 4–7 min vs errors 15–35 min).
+
+## E04 — Within-cohort conformal evaluation (500 splits + LOSO) — first run
+* Validity: all conformal methods 0.89–0.92 coverage (nominal 0.90) for both stagers, 3 cohorts,
+  8 parameters (meets ±3 pp criterion). BA-LoA under-covers in ST (0.83–0.86). Raw FFBS percentiles
+  0.28–0.65 for most parameters; independent-epoch percentiles much worse (0.04–0.77).
+* Efficiency (interval score vs constant-width conformal): clear gains for TST (0.41–0.80), most stage
+  percentages, REML in SC/ST; no gain or losses for SOL (HMC, ST), REM%, WASO in SC (1.14–1.36).
+  Part of the TST gain is attributable to centring on the posterior mean (constant-width around FFBS
+  mean already 0.44–0.86). CQR on FFBS quantiles better than the pre-registered symmetric score for
+  SOL and REML.
+
+## E06 — Cross-cohort (first run, YASA)
+* SC-calibrated intervals do not transfer for N3% to HMC (coverage 0.36–0.58 for most methods); TST
+  0.84–0.97; REML 0.79–0.88. Target-only recalibration with 10 nights restores ≈0.90–0.91 coverage for
+  conformal methods (BA-LoA 0.83–0.86); pooled SC+target does not fully restore HMC coverage.
+
+## E07 — Paired tests / utility / point estimates (first run)
+* Posterior-mean TST: bias −38.3 → −3.9 min (YASA HMC), −21.7 → −0.7 (SC), −22.7 → −2.2 (ST); ICC
+  0.81 → 0.93 (HMC). WASO in SC: posterior mean badly biased (+68 min) — long post-awakening wake in the
+  10-h SC window (see E08). REML/REM%/SOL: posterior mean worse than plug-in.
+* Flagging AUROC (width vs mean entropy): REML and N3% better with width; TST similar; WASO worse.
+* Led to protocol extension (calibrated plug-in comparators) — rerun scheduled.

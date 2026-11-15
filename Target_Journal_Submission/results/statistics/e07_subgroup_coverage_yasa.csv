@@ -1,0 +1,289 @@
+cohort,method,level,coverage,count,factor
+HMC,ba_loa,Q1 (worst),0.7993421052631579,304,acc_quartile
+HMC,ba_loa,Q2,0.9506578947368421,304,acc_quartile
+HMC,ba_loa,Q3,0.9527027027027027,296,acc_quartile
+HMC,ba_loa,Q4 (best),0.976897689768977,303,acc_quartile
+HMC,bayes_pct,Q1 (worst),0.5098684210526315,304,acc_quartile
+HMC,bayes_pct,Q2,0.5953947368421053,304,acc_quartile
+HMC,bayes_pct,Q3,0.6452702702702703,296,acc_quartile
+HMC,bayes_pct,Q4 (best),0.6567656765676567,303,acc_quartile
+HMC,cqr_ffbs,Q1 (worst),0.8092105263157895,304,acc_quartile
+HMC,cqr_ffbs,Q2,0.9276315789473685,304,acc_quartile
+HMC,cqr_ffbs,Q3,0.9358108108108109,296,acc_quartile
+HMC,cqr_ffbs,Q4 (best),0.9471947194719472,303,acc_quartile
+HMC,cqr_qr,Q1 (worst),0.8223684210526315,304,acc_quartile
+HMC,cqr_qr,Q2,0.930921052631579,304,acc_quartile
+HMC,cqr_qr,Q3,0.902027027027027,296,acc_quartile
+HMC,cqr_qr,Q4 (best),0.9240924092409241,303,acc_quartile
+HMC,ind_pct,Q1 (worst),0.27960526315789475,304,acc_quartile
+HMC,ind_pct,Q2,0.28289473684210525,304,acc_quartile
+HMC,ind_pct,Q3,0.34797297297297297,296,acc_quartile
+HMC,ind_pct,Q4 (best),0.31353135313531355,303,acc_quartile
+HMC,norm_entropy_reg,Q1 (worst),0.8289473684210527,304,acc_quartile
+HMC,norm_entropy_reg,Q2,0.9144736842105263,304,acc_quartile
+HMC,norm_entropy_reg,Q3,0.9290540540540541,296,acc_quartile
+HMC,norm_entropy_reg,Q4 (best),0.9306930693069307,303,acc_quartile
+HMC,norm_ffbs,Q1 (worst),0.8322368421052632,304,acc_quartile
+HMC,norm_ffbs,Q2,0.9013157894736842,304,acc_quartile
+HMC,norm_ffbs,Q3,0.9391891891891891,296,acc_quartile
+HMC,norm_ffbs,Q4 (best),0.9306930693069307,303,acc_quartile
+HMC,norm_reg_ffbs,Q1 (worst),0.8125,304,acc_quartile
+HMC,norm_reg_ffbs,Q2,0.9177631578947368,304,acc_quartile
+HMC,norm_reg_ffbs,Q3,0.9391891891891891,296,acc_quartile
+HMC,norm_reg_ffbs,Q4 (best),0.933993399339934,303,acc_quartile
+HMC,norm_reg_ffbs1,Q1 (worst),0.7993421052631579,304,acc_quartile
+HMC,norm_reg_ffbs1,Q2,0.9375,304,acc_quartile
+HMC,norm_reg_ffbs1,Q3,0.918918918918919,296,acc_quartile
+HMC,norm_reg_ffbs1,Q4 (best),0.9504950495049505,303,acc_quartile
+HMC,norm_reg_ind,Q1 (worst),0.8125,304,acc_quartile
+HMC,norm_reg_ind,Q2,0.9144736842105263,304,acc_quartile
+HMC,norm_reg_ind,Q3,0.9425675675675675,296,acc_quartile
+HMC,norm_reg_ind,Q4 (best),0.933993399339934,303,acc_quartile
+HMC,scp_abs,Q1 (worst),0.75,304,acc_quartile
+HMC,scp_abs,Q2,0.930921052631579,304,acc_quartile
+HMC,scp_abs,Q3,0.956081081081081,296,acc_quartile
+HMC,scp_abs,Q4 (best),0.966996699669967,303,acc_quartile
+HMC,scp_abs_mu,Q1 (worst),0.819078947368421,304,acc_quartile
+HMC,scp_abs_mu,Q2,0.9046052631578947,304,acc_quartile
+HMC,scp_abs_mu,Q3,0.9425675675675675,296,acc_quartile
+HMC,scp_abs_mu,Q4 (best),0.9372937293729373,303,acc_quartile
+SC,ba_loa,Q1 (worst),0.828125,320,acc_quartile
+SC,ba_loa,Q2,0.9324324324324325,296,acc_quartile
+SC,ba_loa,Q3,0.9572368421052632,304,acc_quartile
+SC,ba_loa,Q4 (best),0.9736842105263158,304,acc_quartile
+SC,bayes_pct,Q1 (worst),0.475,320,acc_quartile
+SC,bayes_pct,Q2,0.5777027027027027,296,acc_quartile
+SC,bayes_pct,Q3,0.5822368421052632,304,acc_quartile
+SC,bayes_pct,Q4 (best),0.6546052631578947,304,acc_quartile
+SC,cqr_ffbs,Q1 (worst),0.80625,320,acc_quartile
+SC,cqr_ffbs,Q2,0.9121621621621622,296,acc_quartile
+SC,cqr_ffbs,Q3,0.9506578947368421,304,acc_quartile
+SC,cqr_ffbs,Q4 (best),0.944078947368421,304,acc_quartile
+SC,cqr_qr,Q1 (worst),0.8625,320,acc_quartile
+SC,cqr_qr,Q2,0.902027027027027,296,acc_quartile
+SC,cqr_qr,Q3,0.9177631578947368,304,acc_quartile
+SC,cqr_qr,Q4 (best),0.9210526315789473,304,acc_quartile
+SC,ind_pct,Q1 (worst),0.240625,320,acc_quartile
+SC,ind_pct,Q2,0.28040540540540543,296,acc_quartile
+SC,ind_pct,Q3,0.3059210526315789,304,acc_quartile
+SC,ind_pct,Q4 (best),0.3092105263157895,304,acc_quartile
+SC,norm_entropy_reg,Q1 (worst),0.8375,320,acc_quartile
+SC,norm_entropy_reg,Q2,0.9155405405405406,296,acc_quartile
+SC,norm_entropy_reg,Q3,0.944078947368421,304,acc_quartile
+SC,norm_entropy_reg,Q4 (best),0.9078947368421053,304,acc_quartile
+SC,norm_ffbs,Q1 (worst),0.809375,320,acc_quartile
+SC,norm_ffbs,Q2,0.9087837837837838,296,acc_quartile
+SC,norm_ffbs,Q3,0.944078947368421,304,acc_quartile
+SC,norm_ffbs,Q4 (best),0.9506578947368421,304,acc_quartile
+SC,norm_reg_ffbs,Q1 (worst),0.809375,320,acc_quartile
+SC,norm_reg_ffbs,Q2,0.9121621621621622,296,acc_quartile
+SC,norm_reg_ffbs,Q3,0.9539473684210527,304,acc_quartile
+SC,norm_reg_ffbs,Q4 (best),0.9342105263157895,304,acc_quartile
+SC,norm_reg_ffbs1,Q1 (worst),0.8125,320,acc_quartile
+SC,norm_reg_ffbs1,Q2,0.8817567567567568,296,acc_quartile
+SC,norm_reg_ffbs1,Q3,0.9506578947368421,304,acc_quartile
+SC,norm_reg_ffbs1,Q4 (best),0.9671052631578947,304,acc_quartile
+SC,norm_reg_ind,Q1 (worst),0.85,320,acc_quartile
+SC,norm_reg_ind,Q2,0.8986486486486487,296,acc_quartile
+SC,norm_reg_ind,Q3,0.9473684210526315,304,acc_quartile
+SC,norm_reg_ind,Q4 (best),0.9144736842105263,304,acc_quartile
+SC,scp_abs,Q1 (worst),0.771875,320,acc_quartile
+SC,scp_abs,Q2,0.9054054054054054,296,acc_quartile
+SC,scp_abs,Q3,0.9605263157894737,304,acc_quartile
+SC,scp_abs,Q4 (best),0.9703947368421053,304,acc_quartile
+SC,scp_abs_mu,Q1 (worst),0.815625,320,acc_quartile
+SC,scp_abs_mu,Q2,0.9155405405405406,296,acc_quartile
+SC,scp_abs_mu,Q3,0.9506578947368421,304,acc_quartile
+SC,scp_abs_mu,Q4 (best),0.9243421052631579,304,acc_quartile
+ST,ba_loa,Q1 (worst),0.7727272727272727,88,acc_quartile
+ST,ba_loa,Q2,0.8636363636363636,88,acc_quartile
+ST,ba_loa,Q3,0.9431818181818182,88,acc_quartile
+ST,ba_loa,Q4 (best),0.9772727272727273,88,acc_quartile
+ST,bayes_pct,Q1 (worst),0.5568181818181818,88,acc_quartile
+ST,bayes_pct,Q2,0.6477272727272727,88,acc_quartile
+ST,bayes_pct,Q3,0.6704545454545454,88,acc_quartile
+ST,bayes_pct,Q4 (best),0.7159090909090909,88,acc_quartile
+ST,cqr_ffbs,Q1 (worst),0.8181818181818182,88,acc_quartile
+ST,cqr_ffbs,Q2,0.9431818181818182,88,acc_quartile
+ST,cqr_ffbs,Q3,0.9318181818181818,88,acc_quartile
+ST,cqr_ffbs,Q4 (best),0.9545454545454546,88,acc_quartile
+ST,cqr_qr,Q1 (worst),0.7954545454545454,88,acc_quartile
+ST,cqr_qr,Q2,0.9431818181818182,88,acc_quartile
+ST,cqr_qr,Q3,0.9090909090909091,88,acc_quartile
+ST,cqr_qr,Q4 (best),0.9318181818181818,88,acc_quartile
+ST,ind_pct,Q1 (worst),0.22727272727272727,88,acc_quartile
+ST,ind_pct,Q2,0.2840909090909091,88,acc_quartile
+ST,ind_pct,Q3,0.375,88,acc_quartile
+ST,ind_pct,Q4 (best),0.3977272727272727,88,acc_quartile
+ST,norm_entropy_reg,Q1 (worst),0.8295454545454546,88,acc_quartile
+ST,norm_entropy_reg,Q2,0.9431818181818182,88,acc_quartile
+ST,norm_entropy_reg,Q3,0.9090909090909091,88,acc_quartile
+ST,norm_entropy_reg,Q4 (best),0.9318181818181818,88,acc_quartile
+ST,norm_ffbs,Q1 (worst),0.8295454545454546,88,acc_quartile
+ST,norm_ffbs,Q2,0.9204545454545454,88,acc_quartile
+ST,norm_ffbs,Q3,0.9318181818181818,88,acc_quartile
+ST,norm_ffbs,Q4 (best),0.9431818181818182,88,acc_quartile
+ST,norm_reg_ffbs,Q1 (worst),0.8295454545454546,88,acc_quartile
+ST,norm_reg_ffbs,Q2,0.9204545454545454,88,acc_quartile
+ST,norm_reg_ffbs,Q3,0.9318181818181818,88,acc_quartile
+ST,norm_reg_ffbs,Q4 (best),0.9431818181818182,88,acc_quartile
+ST,norm_reg_ffbs1,Q1 (worst),0.7840909090909091,88,acc_quartile
+ST,norm_reg_ffbs1,Q2,0.9204545454545454,88,acc_quartile
+ST,norm_reg_ffbs1,Q3,0.9545454545454546,88,acc_quartile
+ST,norm_reg_ffbs1,Q4 (best),0.9659090909090909,88,acc_quartile
+ST,norm_reg_ind,Q1 (worst),0.8522727272727273,88,acc_quartile
+ST,norm_reg_ind,Q2,0.9090909090909091,88,acc_quartile
+ST,norm_reg_ind,Q3,0.9204545454545454,88,acc_quartile
+ST,norm_reg_ind,Q4 (best),0.9431818181818182,88,acc_quartile
+ST,scp_abs,Q1 (worst),0.7613636363636364,88,acc_quartile
+ST,scp_abs,Q2,0.9090909090909091,88,acc_quartile
+ST,scp_abs,Q3,0.9545454545454546,88,acc_quartile
+ST,scp_abs,Q4 (best),0.9886363636363636,88,acc_quartile
+ST,scp_abs_mu,Q1 (worst),0.8295454545454546,88,acc_quartile
+ST,scp_abs_mu,Q2,0.9318181818181818,88,acc_quartile
+ST,scp_abs_mu,Q3,0.9204545454545454,88,acc_quartile
+ST,scp_abs_mu,Q4 (best),0.9318181818181818,88,acc_quartile
+SC,ba_loa,<40,0.9423076923076923,312,age_group
+SC,ba_loa,40-59,0.9476744186046512,344,age_group
+SC,ba_loa,>=60,0.8943661971830986,568,age_group
+SC,bayes_pct,<40,0.5833333333333334,312,age_group
+SC,bayes_pct,40-59,0.5813953488372093,344,age_group
+SC,bayes_pct,>=60,0.5580985915492958,568,age_group
+SC,cqr_ffbs,<40,0.9262820512820513,312,age_group
+SC,cqr_ffbs,40-59,0.9302325581395349,344,age_group
+SC,cqr_ffbs,>=60,0.8714788732394366,568,age_group
+SC,cqr_qr,<40,0.9262820512820513,312,age_group
+SC,cqr_qr,40-59,0.9331395348837209,344,age_group
+SC,cqr_qr,>=60,0.8661971830985915,568,age_group
+SC,ind_pct,<40,0.28205128205128205,312,age_group
+SC,ind_pct,40-59,0.25872093023255816,344,age_group
+SC,ind_pct,>=60,0.2992957746478873,568,age_group
+SC,norm_entropy_reg,<40,0.9038461538461539,312,age_group
+SC,norm_entropy_reg,40-59,0.9273255813953488,344,age_group
+SC,norm_entropy_reg,>=60,0.8820422535211268,568,age_group
+SC,norm_ffbs,<40,0.9102564102564102,312,age_group
+SC,norm_ffbs,40-59,0.9331395348837209,344,age_group
+SC,norm_ffbs,>=60,0.8785211267605634,568,age_group
+SC,norm_reg_ffbs,<40,0.9230769230769231,312,age_group
+SC,norm_reg_ffbs,40-59,0.9302325581395349,344,age_group
+SC,norm_reg_ffbs,>=60,0.8714788732394366,568,age_group
+SC,norm_reg_ffbs1,<40,0.9262820512820513,312,age_group
+SC,norm_reg_ffbs1,40-59,0.9127906976744186,344,age_group
+SC,norm_reg_ffbs1,>=60,0.8820422535211268,568,age_group
+SC,norm_reg_ind,<40,0.9198717948717948,312,age_group
+SC,norm_reg_ind,40-59,0.9273255813953488,344,age_group
+SC,norm_reg_ind,>=60,0.8767605633802817,568,age_group
+SC,scp_abs,<40,0.9423076923076923,312,age_group
+SC,scp_abs,40-59,0.9215116279069767,344,age_group
+SC,scp_abs,>=60,0.8644366197183099,568,age_group
+SC,scp_abs_mu,<40,0.9262820512820513,312,age_group
+SC,scp_abs_mu,40-59,0.9215116279069767,344,age_group
+SC,scp_abs_mu,>=60,0.8732394366197183,568,age_group
+ST,ba_loa,<40,0.8958333333333334,192,age_group
+ST,ba_loa,40-59,0.875,112,age_group
+ST,ba_loa,>=60,0.8958333333333334,48,age_group
+ST,bayes_pct,<40,0.6666666666666666,192,age_group
+ST,bayes_pct,40-59,0.6160714285714286,112,age_group
+ST,bayes_pct,>=60,0.6458333333333334,48,age_group
+ST,cqr_ffbs,<40,0.9427083333333334,192,age_group
+ST,cqr_ffbs,40-59,0.8660714285714286,112,age_group
+ST,cqr_ffbs,>=60,0.8958333333333334,48,age_group
+ST,cqr_qr,<40,0.9166666666666666,192,age_group
+ST,cqr_qr,40-59,0.875,112,age_group
+ST,cqr_qr,>=60,0.8541666666666666,48,age_group
+ST,ind_pct,<40,0.3697916666666667,192,age_group
+ST,ind_pct,40-59,0.25,112,age_group
+ST,ind_pct,>=60,0.2916666666666667,48,age_group
+ST,norm_entropy_reg,<40,0.9322916666666666,192,age_group
+ST,norm_entropy_reg,40-59,0.875,112,age_group
+ST,norm_entropy_reg,>=60,0.8541666666666666,48,age_group
+ST,norm_ffbs,<40,0.9427083333333334,192,age_group
+ST,norm_ffbs,40-59,0.8571428571428571,112,age_group
+ST,norm_ffbs,>=60,0.875,48,age_group
+ST,norm_reg_ffbs,<40,0.9322916666666666,192,age_group
+ST,norm_reg_ffbs,40-59,0.8660714285714286,112,age_group
+ST,norm_reg_ffbs,>=60,0.8958333333333334,48,age_group
+ST,norm_reg_ffbs1,<40,0.921875,192,age_group
+ST,norm_reg_ffbs1,40-59,0.9017857142857143,112,age_group
+ST,norm_reg_ffbs1,>=60,0.8541666666666666,48,age_group
+ST,norm_reg_ind,<40,0.921875,192,age_group
+ST,norm_reg_ind,40-59,0.8482142857142857,112,age_group
+ST,norm_reg_ind,>=60,0.9791666666666666,48,age_group
+ST,scp_abs,<40,0.9270833333333334,192,age_group
+ST,scp_abs,40-59,0.8660714285714286,112,age_group
+ST,scp_abs,>=60,0.8958333333333334,48,age_group
+ST,scp_abs_mu,<40,0.9375,192,age_group
+ST,scp_abs_mu,40-59,0.8660714285714286,112,age_group
+ST,scp_abs_mu,>=60,0.8541666666666666,48,age_group
+SC,ba_loa,F,0.9329268292682927,656,sex
+SC,ba_loa,M,0.9084507042253521,568,sex
+SC,bayes_pct,F,0.5807926829268293,656,sex
+SC,bayes_pct,M,0.5598591549295775,568,sex
+SC,cqr_ffbs,F,0.9100609756097561,656,sex
+SC,cqr_ffbs,M,0.8926056338028169,568,sex
+SC,cqr_qr,F,0.9222560975609756,656,sex
+SC,cqr_qr,M,0.875,568,sex
+SC,ind_pct,F,0.2865853658536585,656,sex
+SC,ind_pct,M,0.27992957746478875,568,sex
+SC,norm_entropy_reg,F,0.9100609756097561,656,sex
+SC,norm_entropy_reg,M,0.8890845070422535,568,sex
+SC,norm_ffbs,F,0.9024390243902439,656,sex
+SC,norm_ffbs,M,0.9014084507042254,568,sex
+SC,norm_reg_ffbs,F,0.9070121951219512,656,sex
+SC,norm_reg_ffbs,M,0.8943661971830986,568,sex
+SC,norm_reg_ffbs1,F,0.9176829268292683,656,sex
+SC,norm_reg_ffbs1,M,0.8838028169014085,568,sex
+SC,norm_reg_ind,F,0.9100609756097561,656,sex
+SC,norm_reg_ind,M,0.8926056338028169,568,sex
+SC,scp_abs,F,0.9054878048780488,656,sex
+SC,scp_abs,M,0.8943661971830986,568,sex
+SC,scp_abs_mu,F,0.9085365853658537,656,sex
+SC,scp_abs_mu,M,0.8908450704225352,568,sex
+ST,ba_loa,F,0.8791666666666667,240,sex
+ST,ba_loa,M,0.9107142857142857,112,sex
+ST,bayes_pct,F,0.65,240,sex
+ST,bayes_pct,M,0.6428571428571429,112,sex
+ST,cqr_ffbs,F,0.9125,240,sex
+ST,cqr_ffbs,M,0.9107142857142857,112,sex
+ST,cqr_qr,F,0.9,240,sex
+ST,cqr_qr,M,0.8839285714285714,112,sex
+ST,ind_pct,F,0.31666666666666665,240,sex
+ST,ind_pct,M,0.33035714285714285,112,sex
+ST,norm_entropy_reg,F,0.8958333333333334,240,sex
+ST,norm_entropy_reg,M,0.9196428571428571,112,sex
+ST,norm_ffbs,F,0.8916666666666667,240,sex
+ST,norm_ffbs,M,0.9375,112,sex
+ST,norm_reg_ffbs,F,0.8958333333333334,240,sex
+ST,norm_reg_ffbs,M,0.9285714285714286,112,sex
+ST,norm_reg_ffbs1,F,0.9041666666666667,240,sex
+ST,norm_reg_ffbs1,M,0.9107142857142857,112,sex
+ST,norm_reg_ind,F,0.9041666666666667,240,sex
+ST,norm_reg_ind,M,0.9107142857142857,112,sex
+ST,scp_abs,F,0.8958333333333334,240,sex
+ST,scp_abs,M,0.9196428571428571,112,sex
+ST,scp_abs_mu,F,0.8958333333333334,240,sex
+ST,scp_abs_mu,M,0.9196428571428571,112,sex
+ST,ba_loa,placebo,0.8863636363636364,176,condition
+ST,ba_loa,temazepam,0.8920454545454546,176,condition
+ST,bayes_pct,placebo,0.6193181818181818,176,condition
+ST,bayes_pct,temazepam,0.6761363636363636,176,condition
+ST,cqr_ffbs,placebo,0.8920454545454546,176,condition
+ST,cqr_ffbs,temazepam,0.9318181818181818,176,condition
+ST,cqr_qr,placebo,0.875,176,condition
+ST,cqr_qr,temazepam,0.9147727272727273,176,condition
+ST,ind_pct,placebo,0.2897727272727273,176,condition
+ST,ind_pct,temazepam,0.3522727272727273,176,condition
+ST,norm_entropy_reg,placebo,0.8977272727272727,176,condition
+ST,norm_entropy_reg,temazepam,0.9090909090909091,176,condition
+ST,norm_ffbs,placebo,0.8977272727272727,176,condition
+ST,norm_ffbs,temazepam,0.9147727272727273,176,condition
+ST,norm_reg_ffbs,placebo,0.8920454545454546,176,condition
+ST,norm_reg_ffbs,temazepam,0.9204545454545454,176,condition
+ST,norm_reg_ffbs1,placebo,0.8920454545454546,176,condition
+ST,norm_reg_ffbs1,temazepam,0.9204545454545454,176,condition
+ST,norm_reg_ind,placebo,0.8977272727272727,176,condition
+ST,norm_reg_ind,temazepam,0.9147727272727273,176,condition
+ST,scp_abs,placebo,0.9034090909090909,176,condition
+ST,scp_abs,temazepam,0.9034090909090909,176,condition
+ST,scp_abs_mu,placebo,0.9034090909090909,176,condition
+ST,scp_abs_mu,temazepam,0.9034090909090909,176,condition

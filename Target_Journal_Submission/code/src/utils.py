@@ -15,9 +15,10 @@ import yaml
 
 CODE_DIR = Path(__file__).resolve().parents[1]          # .../code
 ROOT_DIR = CODE_DIR.parent                               # .../Target_Journal_Submission
-RESULTS_DIR = ROOT_DIR / "results"
-FIGURES_DIR = ROOT_DIR / "figures"
-TABLES_DIR = ROOT_DIR / "tables"
+RESULTS_DIR = Path(os.environ.get("LSA_RESULTS_DIR", ROOT_DIR / "results"))
+_QUICK = "LSA_RESULTS_DIR" in os.environ and RESULTS_DIR != ROOT_DIR / "results"
+FIGURES_DIR = RESULTS_DIR / "figures" if _QUICK else ROOT_DIR / "figures"
+TABLES_DIR = RESULTS_DIR / "tables" if _QUICK else ROOT_DIR / "tables"
 
 
 def load_config(path: str | os.PathLike) -> dict:

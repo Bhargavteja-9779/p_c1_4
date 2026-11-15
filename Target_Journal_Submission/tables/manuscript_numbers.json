@@ -1,0 +1,23 @@
+{
+  "acc_yasa_SC": 0.7936906356171642,
+  "kappa_yasa_SC": 0.7099995447121233,
+  "acc_lgbm_sc_s0_SC": 0.820121597860796,
+  "kappa_lgbm_sc_s0_SC": 0.7517549420997156,
+  "nights_SC": 153,
+  "subjects_SC": 78,
+  "acc_yasa_ST": 0.8100540851455723,
+  "kappa_yasa_ST": 0.7253802116049983,
+  "acc_lgbm_sc_s0_ST": 0.8003244816526188,
+  "kappa_lgbm_sc_s0_ST": 0.714756227489116,
+  "nights_ST": 44,
+  "subjects_ST": 22,
+  "acc_yasa_HMC": 0.7334550772133395,
+  "kappa_yasa_HMC": 0.6323953439264217,
+  "acc_lgbm_sc_s0_HMC": 0.6192913646724416,
+  "kappa_lgbm_sc_s0_HMC": 0.4914880830195689,
+  "nights_HMC": 151,
+  "subjects_HMC": 151,
+  "nights_total": 348,
+  "subjects_total": 251,
+  "epochs_total": 362271
+}
