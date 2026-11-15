@@ -1,0 +1,132 @@
+{
+  "Sleep (OUP)": {
+    "query": "Sleep[ta] AND (\"2025/07/01\"[edat] : \"2026/11/15\"[edat]) AND journal article[pt] NOT review[pt] NOT editorial[pt] NOT comment[pt] NOT letter[pt]",
+    "n_articles_matched": 494,
+    "n_sampled": 400,
+    "n_with_dates": 397,
+    "median_days": 110,
+    "q1_days": 8,
+    "q3_days": 161,
+    "mean_days": 108.8,
+    "frac_le_100": 0.453,
+    "frac_le_60": 0.327
+  },
+  "Sleep Medicine (Elsevier)": {
+    "query": "Sleep Med[ta] AND (\"2025/07/01\"[edat] : \"2026/11/15\"[edat]) AND journal article[pt] NOT review[pt] NOT editorial[pt] NOT comment[pt] NOT letter[pt]",
+    "n_articles_matched": 597,
+    "n_sampled": 400,
+    "n_with_dates": 400,
+    "median_days": 91.0,
+    "q1_days": 60,
+    "q3_days": 128,
+    "mean_days": 105.8,
+    "frac_le_100": 0.59,
+    "frac_le_60": 0.258
+  },
+  "Journal of Sleep Research (Wiley)": {
+    "query": "J Sleep Res[ta] AND (\"2025/07/01\"[edat] : \"2026/11/15\"[edat]) AND journal article[pt] NOT review[pt] NOT editorial[pt] NOT comment[pt] NOT letter[pt]",
+    "n_articles_matched": 298,
+    "n_sampled": 298,
+    "n_with_dates": 298,
+    "median_days": 162.0,
+    "q1_days": 116,
+    "q3_days": 206,
+    "mean_days": 169.2,
+    "frac_le_100": 0.174,
+    "frac_le_60": 0.04
+  },
+  "Journal of Clinical Sleep Medicine (AASM)": {
+    "query": "J Clin Sleep Med[ta] AND (\"2025/07/01\"[edat] : \"2026/11/15\"[edat]) AND journal article[pt] NOT review[pt] NOT editorial[pt] NOT comment[pt] NOT letter[pt]",
+    "n_articles_matched": 160,
+    "n_sampled": 160,
+    "n_with_dates": 114,
+    "median_days": 68.5,
+    "q1_days": 28,
+    "q3_days": 111,
+    "mean_days": 72.1,
+    "frac_le_100": 0.693,
+    "frac_le_60": 0.421
+  },
+  "Sleep Health (Elsevier)": {
+    "query": "Sleep Health[ta] AND (\"2025/07/01\"[edat] : \"2026/11/15\"[edat]) AND journal article[pt] NOT review[pt] NOT editorial[pt] NOT comment[pt] NOT letter[pt]",
+    "n_articles_matched": 170,
+    "n_sampled": 170,
+    "n_with_dates": 170,
+    "median_days": 179.5,
+    "q1_days": 133,
+    "q3_days": 241,
+    "mean_days": 194.1,
+    "frac_le_100": 0.129,
+    "frac_le_60": 0.065
+  },
+  "Nature and Science of Sleep (Dove)": {
+    "query": "Nat Sci Sleep[ta] AND (\"2025/07/01\"[edat] : \"2026/11/15\"[edat]) AND journal article[pt] NOT review[pt] NOT editorial[pt] NOT comment[pt] NOT letter[pt]",
+    "n_articles_matched": 223,
+    "n_sampled": 223,
+    "n_with_dates": 223,
+    "median_days": 94,
+    "q1_days": 74,
+    "q3_days": 124,
+    "mean_days": 110.4,
+    "frac_le_100": 0.556,
+    "frac_le_60": 0.117
+  },
+  "Sleep and Breathing (Springer)": {
+    "query": "Sleep Breath[ta] AND (\"2025/07/01\"[edat] : \"2026/11/15\"[edat]) AND journal article[pt] NOT review[pt] NOT editorial[pt] NOT comment[pt] NOT letter[pt]",
+    "n_articles_matched": 343,
+    "n_sampled": 343,
+    "n_with_dates": 339,
+    "median_days": 137,
+    "q1_days": 94,
+    "q3_days": 194,
+    "mean_days": 151.6,
+    "frac_le_100": 0.289,
+    "frac_le_60": 0.08
+  },
+  "SLEEP Advances (OUP)": {
+    "query": "Sleep Adv[ta] AND (\"2025/07/01\"[edat] : \"2026/11/15\"[edat]) AND journal article[pt] NOT review[pt] NOT editorial[pt] NOT comment[pt] NOT letter[pt]",
+    "n_articles_matched": 152,
+    "n_sampled": 152,
+    "n_with_dates": 147,
+    "median_days": 103,
+    "q1_days": 64,
+    "q3_days": 138,
+    "mean_days": 108.8,
+    "frac_le_100": 0.49,
+    "frac_le_60": 0.211
+  },
+  "Computers in Biology and Medicine (Elsevier)": {
+    "query": "Comput Biol Med[ta] AND (\"2025/07/01\"[edat] : \"2026/11/15\"[edat]) AND journal article[pt] NOT review[pt] NOT editorial[pt] NOT comment[pt] NOT letter[pt]",
+    "n_articles_matched": 1014,
+    "n_sampled": 400,
+    "n_with_dates": 387,
+    "median_days": 130,
+    "q1_days": 81,
+    "q3_days": 201,
+    "mean_days": 167.6,
+    "frac_le_100": 0.359,
+    "frac_le_60": 0.116
+  },
+  "IEEE J Biomed Health Inform (IEEE)": {
+    "query": "IEEE J Biomed Health Inform[ta] AND (\"2025/07/01\"[edat] : \"2026/11/15\"[edat]) AND journal article[pt] NOT review[pt] NOT editorial[pt] NOT comment[pt] NOT letter[pt]",
+    "n_articles_matched": 1341,
+    "n_with_dates": 0
+  },
+  "Physiological Measurement (IOP)": {
+    "query": "Physiol Meas[ta] AND (\"2025/07/01\"[edat] : \"2026/11/15\"[edat]) AND journal article[pt] NOT review[pt] NOT editorial[pt] NOT comment[pt] NOT letter[pt]",
+    "n_articles_matched": 232,
+    "n_sampled": 232,
+    "n_with_dates": 215,
+    "median_days": 127,
+    "q1_days": 99,
+    "q3_days": 168,
+    "mean_days": 134.9,
+    "frac_le_100": 0.279,
+    "frac_le_60": 0.056
+  },
+  "_meta": {
+    "computed_on": "2026-11-15",
+    "source": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+    "window": "Entrez date 2025-07-01..2026-11-15, most recent <=400 per journal"
+  }
+}

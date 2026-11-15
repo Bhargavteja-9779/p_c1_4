@@ -1,0 +1,5 @@
+# data and caches (public datasets; re-download with code/scripts/download_data.sh)
+Target_Journal_Submission/code/data/
+**/__pycache__/
+*.pyc
+.ipynb_checkpoints/
