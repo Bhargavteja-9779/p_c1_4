@@ -25,3 +25,10 @@
   computed from calibration AND test nights (label-free), making the score a symmetric function of all
   nights' features so that the finite-sample guarantee is exact (previously calibration-only;
   numerically negligible difference). All E04/E06/E07/E09 conformal evaluations re-run.
+* [Exploratory experiment E11, added after E07] LOSO coverage of the proposed intervals was 81–85 % in the
+  quartile of nights with the lowest plug-in accuracy (marginal coverage nominal). Added Mondrian
+  (group-conditional) conformal calibration with K=2 bins defined by label-free difficulty proxies (mean epoch
+  entropy; FFBS SD) to test whether conditional coverage of difficult nights can be improved. Reported as
+  exploratory; the pre-specified method is unchanged.
+* [Reporting] Few-night recalibration: report the probability that a site's realised coverage falls below
+  0.80 (variability across repetitions), not only mean coverage.

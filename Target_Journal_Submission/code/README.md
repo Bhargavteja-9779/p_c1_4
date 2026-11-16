@@ -51,8 +51,11 @@ Every number in the manuscript is read from machine-generated files in `../resul
 | E06 | `experiments/e06_cross_cohort.py` | SC→ST/HMC transfer; few-night target recalibration |
 | E07 | `experiments/e07_utility_and_stats.py` | Wilcoxon/Holm, cluster bootstrap, AUROC, Bland–Altman, ICC |
 | E09 | `experiments/e09_robustness.py` | robustness to EEG/EOG corruption |
+| E08 | `experiments/e08_error_analysis.py` | WASO mechanism, covered vs non-covered nights, cohort-specific bias |
+| E11 | `experiments/e11_conditional_coverage.py` | coverage by difficulty quartile; exploratory Mondrian calibration |
 | E10 | `experiments/e10_efficiency.py` | run time and memory |
-| – | `scripts/make_tables.py`, `scripts/make_figures.py` | tables (CSV/Markdown) and figures (PNG/PDF) |
+| – | `scripts/make_tables.py`, `scripts/make_figures.py`, `scripts/make_supplement.py` | tables, figures (PNG/PDF), supplementary material (DOCX) |
+| – | `../manuscript/build_manuscript.py` | manuscript DOCX/PDF and cover letter with all numbers injected from `tables/manuscript_numbers.json` |
 
 ## Using the method on your own stager
 ```python

@@ -12,8 +12,10 @@ Steps (each is an independent script in experiments/ and can be re-run on its ow
   5  E06          cross-cohort transfer and few-night recalibration
   6  E07          paired tests, clinical utility, point estimates, subgroups
   7  E09          robustness to signal corruption
-  8  E10          computational cost
-  9  tables/figures (scripts/make_tables.py, scripts/make_figures.py) + manuscript numbers
+  8  E08          error analysis (WASO mechanism, non-covered nights, cohort bias)
+  9  E11          conditional coverage by difficulty; exploratory Mondrian calibration
+  10 E10          computational cost (run on an otherwise idle machine)
+  11-13 tables, figures, supplementary material (+ manuscript numbers for build_manuscript.py)
 In quick mode results are written to results_quick/ (via LSA_RESULTS_DIR) so that the full results used
 by the manuscript are never overwritten.
 """
@@ -64,9 +66,12 @@ def main():
         (5, py + ["experiments/e06_cross_cohort.py"] + R),
         (6, py + ["experiments/e07_utility_and_stats.py"]),
         (7, py + ["experiments/e09_robustness.py"] + (["--R", "20", "--cohorts", "HMC"] if q else [])),
-        (8, py + ["experiments/e10_efficiency.py"]),
-        (9, py + ["scripts/make_tables.py"]),
-        (10, py + ["scripts/make_figures.py"]),
+        (8, py + ["experiments/e08_error_analysis.py"]),
+        (9, py + ["experiments/e11_conditional_coverage.py"]),
+        (10, py + ["experiments/e10_efficiency.py"]),
+        (11, py + ["scripts/make_tables.py"]),
+        (12, py + ["scripts/make_figures.py"]),
+        (13, py + ["scripts/make_supplement.py"]),
     ]
     for k, cmd in steps:
         if k < a.from_step or (k == 0 and a.skip_cache):

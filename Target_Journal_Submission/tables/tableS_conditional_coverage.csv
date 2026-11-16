@@ -1,0 +1,121 @@
+stager,cohort,method,subset,coverage,mean_width,interval_score,n
+yasa,HMC,dfloa,Q1 (worst),0.7566,59.6764,184.186,304
+yasa,HMC,dfloa,Q2,0.9408,60.595,82.2918,304
+yasa,HMC,dfloa,Q3,0.9426,60.1924,90.6025,296
+yasa,HMC,dfloa,Q4 (best),0.9604,59.912,83.9804,303
+yasa,HMC,mondrian_entropy,Q1 (worst),0.8355,73.1832,120.9567,304
+yasa,HMC,mondrian_entropy,Q2,0.9375,64.6467,80.9119,304
+yasa,HMC,mondrian_entropy,Q3,0.9291,56.3251,80.0568,296
+yasa,HMC,mondrian_entropy,Q4 (best),0.9274,50.4095,90.296,303
+yasa,HMC,mondrian_sd,Q1 (worst),0.8388,71.3194,118.2071,304
+yasa,HMC,mondrian_sd,Q2,0.9276,60.5736,81.3449,304
+yasa,HMC,mondrian_sd,Q3,0.9324,59.5846,77.8779,296
+yasa,HMC,mondrian_sd,Q4 (best),0.9307,57.8414,86.0555,303
+yasa,HMC,proposed,Q1 (worst),0.8125,58.9921,135.2573,304
+yasa,HMC,proposed,Q2,0.9178,55.4495,87.3525,304
+yasa,HMC,proposed,Q3,0.9392,55.5481,82.916,296
+yasa,HMC,proposed,Q4 (best),0.934,54.6646,95.2596,303
+yasa,SC,dfloa,Q1 (worst),0.7875,60.6586,130.5858,320
+yasa,SC,dfloa,Q2,0.8986,60.4101,120.1726,296
+yasa,SC,dfloa,Q3,0.9507,57.3,71.7493,304
+yasa,SC,dfloa,Q4 (best),0.9605,57.2621,90.2448,304
+yasa,SC,mondrian_entropy,Q1 (worst),0.8438,68.6452,108.0458,320
+yasa,SC,mondrian_entropy,Q2,0.9122,66.8889,103.0185,296
+yasa,SC,mondrian_entropy,Q3,0.9441,62.5457,80.3342,304
+yasa,SC,mondrian_entropy,Q4 (best),0.9375,63.9035,105.7098,304
+yasa,SC,mondrian_sd,Q1 (worst),0.8312,68.5982,107.4774,320
+yasa,SC,mondrian_sd,Q2,0.8953,68.208,104.9462,296
+yasa,SC,mondrian_sd,Q3,0.9507,64.4683,78.9137,304
+yasa,SC,mondrian_sd,Q4 (best),0.9572,66.2634,93.9602,304
+yasa,SC,proposed,Q1 (worst),0.8094,64.0181,113.78,320
+yasa,SC,proposed,Q2,0.9122,64.8963,103.7806,296
+yasa,SC,proposed,Q3,0.9539,63.5517,79.8765,304
+yasa,SC,proposed,Q4 (best),0.9342,65.4341,106.162,304
+yasa,ST,dfloa,Q1 (worst),0.7841,45.4159,89.6792,88
+yasa,ST,dfloa,Q2,0.8636,43.724,61.192,88
+yasa,ST,dfloa,Q3,0.9659,45.7034,51.6563,88
+yasa,ST,dfloa,Q4 (best),0.9886,46.5861,48.177,88
+yasa,ST,mondrian_entropy,Q1 (worst),0.8636,44.6923,61.857,88
+yasa,ST,mondrian_entropy,Q2,0.8636,40.6665,60.0363,88
+yasa,ST,mondrian_entropy,Q3,0.9205,42.7189,57.037,88
+yasa,ST,mondrian_entropy,Q4 (best),0.9318,43.2066,53.4373,88
+yasa,ST,mondrian_sd,Q1 (worst),0.8182,43.4255,66.52,88
+yasa,ST,mondrian_sd,Q2,0.9205,39.7421,55.8101,88
+yasa,ST,mondrian_sd,Q3,0.9318,41.4472,61.8528,88
+yasa,ST,mondrian_sd,Q4 (best),0.9432,42.0701,53.2486,88
+yasa,ST,proposed,Q1 (worst),0.8295,43.0439,66.1705,88
+yasa,ST,proposed,Q2,0.9205,40.0598,61.2389,88
+yasa,ST,proposed,Q3,0.9318,41.4122,61.521,88
+yasa,ST,proposed,Q4 (best),0.9432,42.5639,54.7387,88
+yasa,HMC,dfloa,all,0.8998,60.0935,110.4173,1207
+yasa,HMC,mondrian_entropy,all,0.9072,61.1819,93.1438,1207
+yasa,HMC,mondrian_sd,all,0.9072,62.3517,90.9615,1207
+yasa,HMC,proposed,all,0.9006,56.1689,100.315,1207
+yasa,SC,dfloa,all,0.8979,58.9208,103.4353,1224
+yasa,SC,mondrian_entropy,all,0.9085,65.5279,99.3672,1224
+yasa,SC,mondrian_sd,all,0.9077,66.8982,96.4138,1224
+yasa,SC,proposed,all,0.9011,64.4663,101.0493,1224
+yasa,ST,dfloa,all,0.9006,45.3573,62.6761,352
+yasa,ST,mondrian_entropy,all,0.8949,42.8211,58.0919,352
+yasa,ST,mondrian_sd,all,0.9034,41.6712,59.3579,352
+yasa,ST,proposed,all,0.9062,41.7699,60.9173,352
+lgbm_sc_s0,HMC,dfloa,Q1 (worst),0.7993,75.0553,159.5887,304
+lgbm_sc_s0,HMC,dfloa,Q2,0.9013,74.9179,117.5057,304
+lgbm_sc_s0,HMC,dfloa,Q3,0.9153,74.5273,115.8129,295
+lgbm_sc_s0,HMC,dfloa,Q4 (best),0.9803,74.6466,81.5975,304
+lgbm_sc_s0,HMC,mondrian_entropy,Q1 (worst),0.8914,83.0073,124.5156,304
+lgbm_sc_s0,HMC,mondrian_entropy,Q2,0.9145,73.3358,97.9394,304
+lgbm_sc_s0,HMC,mondrian_entropy,Q3,0.9153,65.3249,95.6617,295
+lgbm_sc_s0,HMC,mondrian_entropy,Q4 (best),0.9079,57.817,86.5857,304
+lgbm_sc_s0,HMC,mondrian_sd,Q1 (worst),0.875,72.0627,132.5464,304
+lgbm_sc_s0,HMC,mondrian_sd,Q2,0.9079,67.8524,88.1124,304
+lgbm_sc_s0,HMC,mondrian_sd,Q3,0.9119,67.4023,96.94,295
+lgbm_sc_s0,HMC,mondrian_sd,Q4 (best),0.9342,72.8761,89.6954,304
+lgbm_sc_s0,HMC,proposed,Q1 (worst),0.8355,67.6557,133.6832,304
+lgbm_sc_s0,HMC,proposed,Q2,0.9211,67.0872,110.8771,304
+lgbm_sc_s0,HMC,proposed,Q3,0.9051,66.8736,124.4892,295
+lgbm_sc_s0,HMC,proposed,Q4 (best),0.9408,69.291,95.6954,304
+lgbm_sc_s0,SC,dfloa,Q1 (worst),0.7564,47.2803,104.8641,312
+lgbm_sc_s0,SC,dfloa,Q2,0.9079,47.313,103.502,304
+lgbm_sc_s0,SC,dfloa,Q3,0.9507,45.983,57.5842,304
+lgbm_sc_s0,SC,dfloa,Q4 (best),0.9803,45.2948,85.8516,304
+lgbm_sc_s0,SC,mondrian_entropy,Q1 (worst),0.8622,60.3972,93.323,312
+lgbm_sc_s0,SC,mondrian_entropy,Q2,0.9112,57.104,94.5363,304
+lgbm_sc_s0,SC,mondrian_entropy,Q3,0.9046,52.2585,74.412,304
+lgbm_sc_s0,SC,mondrian_entropy,Q4 (best),0.9474,50.9272,80.0562,304
+lgbm_sc_s0,SC,mondrian_sd,Q1 (worst),0.8558,60.8507,90.2221,312
+lgbm_sc_s0,SC,mondrian_sd,Q2,0.8947,55.628,89.2142,304
+lgbm_sc_s0,SC,mondrian_sd,Q3,0.9276,53.916,70.5145,304
+lgbm_sc_s0,SC,mondrian_sd,Q4 (best),0.9539,50.2139,78.5396,304
+lgbm_sc_s0,SC,proposed,Q1 (worst),0.8301,55.0829,97.3846,312
+lgbm_sc_s0,SC,proposed,Q2,0.8914,53.2312,90.2065,304
+lgbm_sc_s0,SC,proposed,Q3,0.9309,53.6355,72.1528,304
+lgbm_sc_s0,SC,proposed,Q4 (best),0.9572,52.9494,83.3329,304
+lgbm_sc_s0,ST,dfloa,Q1 (worst),0.7727,47.6661,82.2825,88
+lgbm_sc_s0,ST,dfloa,Q2,0.9205,49.5198,60.283,88
+lgbm_sc_s0,ST,dfloa,Q3,0.9205,50.5429,75.6079,88
+lgbm_sc_s0,ST,dfloa,Q4 (best),0.9432,50.8479,53.6929,88
+lgbm_sc_s0,ST,mondrian_entropy,Q1 (worst),0.8409,43.8742,69.5828,88
+lgbm_sc_s0,ST,mondrian_entropy,Q2,0.9091,39.408,52.7018,88
+lgbm_sc_s0,ST,mondrian_entropy,Q3,0.9545,44.053,52.8958,88
+lgbm_sc_s0,ST,mondrian_entropy,Q4 (best),0.8864,40.8527,61.4701,88
+lgbm_sc_s0,ST,mondrian_sd,Q1 (worst),0.8523,43.6049,68.7906,88
+lgbm_sc_s0,ST,mondrian_sd,Q2,0.9318,39.2966,48.4559,88
+lgbm_sc_s0,ST,mondrian_sd,Q3,0.9432,44.2749,51.5913,88
+lgbm_sc_s0,ST,mondrian_sd,Q4 (best),0.8636,39.8684,57.1632,88
+lgbm_sc_s0,ST,proposed,Q1 (worst),0.8523,43.2267,65.6617,88
+lgbm_sc_s0,ST,proposed,Q2,0.9205,39.7165,49.802,88
+lgbm_sc_s0,ST,proposed,Q3,0.9205,42.5723,56.9936,88
+lgbm_sc_s0,ST,proposed,Q4 (best),0.9205,41.0605,56.306,88
+lgbm_sc_s0,HMC,dfloa,all,0.8989,74.7887,118.6472,1207
+lgbm_sc_s0,HMC,mondrian_entropy,all,0.9072,69.9052,101.2167,1207
+lgbm_sc_s0,HMC,mondrian_sd,all,0.9072,70.0681,101.8599,1207
+lgbm_sc_s0,HMC,proposed,all,0.9006,67.7332,116.1243,1207
+lgbm_sc_s0,SC,dfloa,all,0.8979,46.4731,88.061,1224
+lgbm_sc_s0,SC,mondrian_entropy,all,0.906,55.2059,85.6325,1224
+lgbm_sc_s0,SC,mondrian_sd,all,0.9077,55.1894,82.1755,1224
+lgbm_sc_s0,SC,proposed,all,0.902,53.7336,85.8451,1224
+lgbm_sc_s0,ST,dfloa,all,0.8892,49.6442,67.9666,352
+lgbm_sc_s0,ST,mondrian_entropy,all,0.8977,42.047,59.1626,352
+lgbm_sc_s0,ST,mondrian_sd,all,0.8977,41.7612,56.5002,352
+lgbm_sc_s0,ST,proposed,all,0.9034,41.644,57.1908,352

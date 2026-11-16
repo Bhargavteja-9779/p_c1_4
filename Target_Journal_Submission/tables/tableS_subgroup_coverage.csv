@@ -1,0 +1,193 @@
+stager,cohort,method,level,coverage,count,factor
+yasa,HMC,ba_loa,Q1 (worst),0.7993421052631579,304,acc_quartile
+yasa,HMC,ba_loa,Q2,0.950657894736842,304,acc_quartile
+yasa,HMC,ba_loa,Q3,0.9527027027027029,296,acc_quartile
+yasa,HMC,ba_loa,Q4 (best),0.976897689768977,303,acc_quartile
+yasa,HMC,norm_reg_ffbs,Q1 (worst),0.8125,304,acc_quartile
+yasa,HMC,norm_reg_ffbs,Q2,0.9177631578947368,304,acc_quartile
+yasa,HMC,norm_reg_ffbs,Q3,0.9391891891891893,296,acc_quartile
+yasa,HMC,norm_reg_ffbs,Q4 (best),0.933993399339934,303,acc_quartile
+yasa,HMC,scp_abs,Q1 (worst),0.75,304,acc_quartile
+yasa,HMC,scp_abs,Q2,0.930921052631579,304,acc_quartile
+yasa,HMC,scp_abs,Q3,0.956081081081081,296,acc_quartile
+yasa,HMC,scp_abs,Q4 (best),0.966996699669967,303,acc_quartile
+yasa,HMC,scp_abs_bc,Q1 (worst),0.756578947368421,304,acc_quartile
+yasa,HMC,scp_abs_bc,Q2,0.9407894736842104,304,acc_quartile
+yasa,HMC,scp_abs_bc,Q3,0.9425675675675677,296,acc_quartile
+yasa,HMC,scp_abs_bc,Q4 (best),0.9603960396039604,303,acc_quartile
+yasa,SC,ba_loa,Q1 (worst),0.828125,320,acc_quartile
+yasa,SC,ba_loa,Q2,0.9324324324324323,296,acc_quartile
+yasa,SC,ba_loa,Q3,0.9572368421052632,304,acc_quartile
+yasa,SC,ba_loa,Q4 (best),0.9736842105263158,304,acc_quartile
+yasa,SC,norm_reg_ffbs,Q1 (worst),0.809375,320,acc_quartile
+yasa,SC,norm_reg_ffbs,Q2,0.9121621621621622,296,acc_quartile
+yasa,SC,norm_reg_ffbs,Q3,0.9539473684210528,304,acc_quartile
+yasa,SC,norm_reg_ffbs,Q4 (best),0.9342105263157896,304,acc_quartile
+yasa,SC,scp_abs,Q1 (worst),0.771875,320,acc_quartile
+yasa,SC,scp_abs,Q2,0.9054054054054054,296,acc_quartile
+yasa,SC,scp_abs,Q3,0.9605263157894736,304,acc_quartile
+yasa,SC,scp_abs,Q4 (best),0.9703947368421052,304,acc_quartile
+yasa,SC,scp_abs_bc,Q1 (worst),0.7875,320,acc_quartile
+yasa,SC,scp_abs_bc,Q2,0.8986486486486487,296,acc_quartile
+yasa,SC,scp_abs_bc,Q3,0.950657894736842,304,acc_quartile
+yasa,SC,scp_abs_bc,Q4 (best),0.9605263157894736,304,acc_quartile
+yasa,ST,ba_loa,Q1 (worst),0.7727272727272727,88,acc_quartile
+yasa,ST,ba_loa,Q2,0.8636363636363636,88,acc_quartile
+yasa,ST,ba_loa,Q3,0.9431818181818182,88,acc_quartile
+yasa,ST,ba_loa,Q4 (best),0.9772727272727272,88,acc_quartile
+yasa,ST,norm_reg_ffbs,Q1 (worst),0.8295454545454546,88,acc_quartile
+yasa,ST,norm_reg_ffbs,Q2,0.9204545454545454,88,acc_quartile
+yasa,ST,norm_reg_ffbs,Q3,0.9318181818181818,88,acc_quartile
+yasa,ST,norm_reg_ffbs,Q4 (best),0.9431818181818182,88,acc_quartile
+yasa,ST,scp_abs,Q1 (worst),0.7613636363636364,88,acc_quartile
+yasa,ST,scp_abs,Q2,0.9090909090909092,88,acc_quartile
+yasa,ST,scp_abs,Q3,0.9545454545454546,88,acc_quartile
+yasa,ST,scp_abs,Q4 (best),0.9886363636363636,88,acc_quartile
+yasa,ST,scp_abs_bc,Q1 (worst),0.7840909090909091,88,acc_quartile
+yasa,ST,scp_abs_bc,Q2,0.8636363636363636,88,acc_quartile
+yasa,ST,scp_abs_bc,Q3,0.9659090909090908,88,acc_quartile
+yasa,ST,scp_abs_bc,Q4 (best),0.9886363636363636,88,acc_quartile
+yasa,SC,ba_loa,<40,0.9423076923076924,312,age_group
+yasa,SC,ba_loa,40-59,0.9476744186046512,344,age_group
+yasa,SC,ba_loa,>=60,0.8943661971830986,568,age_group
+yasa,SC,norm_reg_ffbs,<40,0.9230769230769232,312,age_group
+yasa,SC,norm_reg_ffbs,40-59,0.9302325581395348,344,age_group
+yasa,SC,norm_reg_ffbs,>=60,0.8714788732394366,568,age_group
+yasa,SC,scp_abs,<40,0.9423076923076924,312,age_group
+yasa,SC,scp_abs,40-59,0.9215116279069768,344,age_group
+yasa,SC,scp_abs,>=60,0.8644366197183099,568,age_group
+yasa,SC,scp_abs_bc,<40,0.9230769230769232,312,age_group
+yasa,SC,scp_abs_bc,40-59,0.9418604651162792,344,age_group
+yasa,SC,scp_abs_bc,>=60,0.8573943661971831,568,age_group
+yasa,ST,ba_loa,<40,0.8958333333333334,192,age_group
+yasa,ST,ba_loa,40-59,0.875,112,age_group
+yasa,ST,ba_loa,>=60,0.8958333333333334,48,age_group
+yasa,ST,norm_reg_ffbs,<40,0.9322916666666666,192,age_group
+yasa,ST,norm_reg_ffbs,40-59,0.8660714285714286,112,age_group
+yasa,ST,norm_reg_ffbs,>=60,0.8958333333333334,48,age_group
+yasa,ST,scp_abs,<40,0.9270833333333334,192,age_group
+yasa,ST,scp_abs,40-59,0.8660714285714286,112,age_group
+yasa,ST,scp_abs,>=60,0.8958333333333334,48,age_group
+yasa,ST,scp_abs_bc,<40,0.90625,192,age_group
+yasa,ST,scp_abs_bc,40-59,0.8928571428571429,112,age_group
+yasa,ST,scp_abs_bc,>=60,0.8958333333333334,48,age_group
+yasa,SC,ba_loa,F,0.9329268292682928,656,sex
+yasa,SC,ba_loa,M,0.908450704225352,568,sex
+yasa,SC,norm_reg_ffbs,F,0.9070121951219512,656,sex
+yasa,SC,norm_reg_ffbs,M,0.8943661971830986,568,sex
+yasa,SC,scp_abs,F,0.9054878048780488,656,sex
+yasa,SC,scp_abs,M,0.8943661971830986,568,sex
+yasa,SC,scp_abs_bc,F,0.9161585365853658,656,sex
+yasa,SC,scp_abs_bc,M,0.8767605633802817,568,sex
+yasa,ST,ba_loa,F,0.8791666666666667,240,sex
+yasa,ST,ba_loa,M,0.9107142857142856,112,sex
+yasa,ST,norm_reg_ffbs,F,0.8958333333333334,240,sex
+yasa,ST,norm_reg_ffbs,M,0.9285714285714286,112,sex
+yasa,ST,scp_abs,F,0.8958333333333334,240,sex
+yasa,ST,scp_abs,M,0.9196428571428572,112,sex
+yasa,ST,scp_abs_bc,F,0.8958333333333334,240,sex
+yasa,ST,scp_abs_bc,M,0.9107142857142856,112,sex
+yasa,ST,ba_loa,placebo,0.8863636363636364,176,condition
+yasa,ST,ba_loa,temazepam,0.8920454545454546,176,condition
+yasa,ST,norm_reg_ffbs,placebo,0.8920454545454546,176,condition
+yasa,ST,norm_reg_ffbs,temazepam,0.9204545454545454,176,condition
+yasa,ST,scp_abs,placebo,0.9034090909090908,176,condition
+yasa,ST,scp_abs,temazepam,0.9034090909090908,176,condition
+yasa,ST,scp_abs_bc,placebo,0.8920454545454546,176,condition
+yasa,ST,scp_abs_bc,temazepam,0.9090909090909092,176,condition
+lgbm_sc_s0,HMC,ba_loa,Q1 (worst),0.8157894736842105,304,acc_quartile
+lgbm_sc_s0,HMC,ba_loa,Q2,0.9111842105263158,304,acc_quartile
+lgbm_sc_s0,HMC,ba_loa,Q3,0.9254237288135592,295,acc_quartile
+lgbm_sc_s0,HMC,ba_loa,Q4 (best),0.9802631578947368,304,acc_quartile
+lgbm_sc_s0,HMC,norm_reg_ffbs,Q1 (worst),0.8355263157894737,304,acc_quartile
+lgbm_sc_s0,HMC,norm_reg_ffbs,Q2,0.9210526315789472,304,acc_quartile
+lgbm_sc_s0,HMC,norm_reg_ffbs,Q3,0.905084745762712,295,acc_quartile
+lgbm_sc_s0,HMC,norm_reg_ffbs,Q4 (best),0.9407894736842104,304,acc_quartile
+lgbm_sc_s0,HMC,scp_abs,Q1 (worst),0.7861842105263158,304,acc_quartile
+lgbm_sc_s0,HMC,scp_abs,Q2,0.8980263157894737,304,acc_quartile
+lgbm_sc_s0,HMC,scp_abs,Q3,0.9457627118644067,295,acc_quartile
+lgbm_sc_s0,HMC,scp_abs,Q4 (best),0.9769736842105264,304,acc_quartile
+lgbm_sc_s0,HMC,scp_abs_bc,Q1 (worst),0.7993421052631579,304,acc_quartile
+lgbm_sc_s0,HMC,scp_abs_bc,Q2,0.9013157894736842,304,acc_quartile
+lgbm_sc_s0,HMC,scp_abs_bc,Q3,0.9152542372881356,295,acc_quartile
+lgbm_sc_s0,HMC,scp_abs_bc,Q4 (best),0.9802631578947368,304,acc_quartile
+lgbm_sc_s0,SC,ba_loa,Q1 (worst),0.7980769230769231,312,acc_quartile
+lgbm_sc_s0,SC,ba_loa,Q2,0.930921052631579,304,acc_quartile
+lgbm_sc_s0,SC,ba_loa,Q3,0.9736842105263158,304,acc_quartile
+lgbm_sc_s0,SC,ba_loa,Q4 (best),0.9802631578947368,304,acc_quartile
+lgbm_sc_s0,SC,norm_reg_ffbs,Q1 (worst),0.8301282051282052,312,acc_quartile
+lgbm_sc_s0,SC,norm_reg_ffbs,Q2,0.8914473684210527,304,acc_quartile
+lgbm_sc_s0,SC,norm_reg_ffbs,Q3,0.930921052631579,304,acc_quartile
+lgbm_sc_s0,SC,norm_reg_ffbs,Q4 (best),0.9572368421052632,304,acc_quartile
+lgbm_sc_s0,SC,scp_abs,Q1 (worst),0.7788461538461539,312,acc_quartile
+lgbm_sc_s0,SC,scp_abs,Q2,0.8980263157894737,304,acc_quartile
+lgbm_sc_s0,SC,scp_abs,Q3,0.9572368421052632,304,acc_quartile
+lgbm_sc_s0,SC,scp_abs,Q4 (best),0.9769736842105264,304,acc_quartile
+lgbm_sc_s0,SC,scp_abs_bc,Q1 (worst),0.7564102564102564,312,acc_quartile
+lgbm_sc_s0,SC,scp_abs_bc,Q2,0.9078947368421052,304,acc_quartile
+lgbm_sc_s0,SC,scp_abs_bc,Q3,0.950657894736842,304,acc_quartile
+lgbm_sc_s0,SC,scp_abs_bc,Q4 (best),0.9802631578947368,304,acc_quartile
+lgbm_sc_s0,ST,ba_loa,Q1 (worst),0.75,88,acc_quartile
+lgbm_sc_s0,ST,ba_loa,Q2,0.9090909090909092,88,acc_quartile
+lgbm_sc_s0,ST,ba_loa,Q3,0.9090909090909092,88,acc_quartile
+lgbm_sc_s0,ST,ba_loa,Q4 (best),0.9659090909090908,88,acc_quartile
+lgbm_sc_s0,ST,norm_reg_ffbs,Q1 (worst),0.8522727272727273,88,acc_quartile
+lgbm_sc_s0,ST,norm_reg_ffbs,Q2,0.9204545454545454,88,acc_quartile
+lgbm_sc_s0,ST,norm_reg_ffbs,Q3,0.9204545454545454,88,acc_quartile
+lgbm_sc_s0,ST,norm_reg_ffbs,Q4 (best),0.9204545454545454,88,acc_quartile
+lgbm_sc_s0,ST,scp_abs,Q1 (worst),0.7613636363636364,88,acc_quartile
+lgbm_sc_s0,ST,scp_abs,Q2,0.9545454545454546,88,acc_quartile
+lgbm_sc_s0,ST,scp_abs,Q3,0.9431818181818182,88,acc_quartile
+lgbm_sc_s0,ST,scp_abs,Q4 (best),0.9659090909090908,88,acc_quartile
+lgbm_sc_s0,ST,scp_abs_bc,Q1 (worst),0.7727272727272727,88,acc_quartile
+lgbm_sc_s0,ST,scp_abs_bc,Q2,0.9204545454545454,88,acc_quartile
+lgbm_sc_s0,ST,scp_abs_bc,Q3,0.9204545454545454,88,acc_quartile
+lgbm_sc_s0,ST,scp_abs_bc,Q4 (best),0.9431818181818182,88,acc_quartile
+lgbm_sc_s0,SC,ba_loa,<40,0.9519230769230768,312,age_group
+lgbm_sc_s0,SC,ba_loa,40-59,0.9447674418604652,344,age_group
+lgbm_sc_s0,SC,ba_loa,>=60,0.8873239436619719,568,age_group
+lgbm_sc_s0,SC,norm_reg_ffbs,<40,0.9262820512820512,312,age_group
+lgbm_sc_s0,SC,norm_reg_ffbs,40-59,0.9302325581395348,344,age_group
+lgbm_sc_s0,SC,norm_reg_ffbs,>=60,0.8714788732394366,568,age_group
+lgbm_sc_s0,SC,scp_abs,<40,0.939102564102564,312,age_group
+lgbm_sc_s0,SC,scp_abs,40-59,0.9215116279069768,344,age_group
+lgbm_sc_s0,SC,scp_abs,>=60,0.8697183098591549,568,age_group
+lgbm_sc_s0,SC,scp_abs_bc,<40,0.9423076923076924,312,age_group
+lgbm_sc_s0,SC,scp_abs_bc,40-59,0.9273255813953488,344,age_group
+lgbm_sc_s0,SC,scp_abs_bc,>=60,0.8556338028169014,568,age_group
+lgbm_sc_s0,ST,ba_loa,<40,0.921875,192,age_group
+lgbm_sc_s0,ST,ba_loa,40-59,0.8482142857142857,112,age_group
+lgbm_sc_s0,ST,ba_loa,>=60,0.8125,48,age_group
+lgbm_sc_s0,ST,norm_reg_ffbs,<40,0.9375,192,age_group
+lgbm_sc_s0,ST,norm_reg_ffbs,40-59,0.8392857142857143,112,age_group
+lgbm_sc_s0,ST,norm_reg_ffbs,>=60,0.9166666666666666,48,age_group
+lgbm_sc_s0,ST,scp_abs,<40,0.9375,192,age_group
+lgbm_sc_s0,ST,scp_abs,40-59,0.8571428571428571,112,age_group
+lgbm_sc_s0,ST,scp_abs,>=60,0.8958333333333334,48,age_group
+lgbm_sc_s0,ST,scp_abs_bc,<40,0.921875,192,age_group
+lgbm_sc_s0,ST,scp_abs_bc,40-59,0.8660714285714286,112,age_group
+lgbm_sc_s0,ST,scp_abs_bc,>=60,0.8125,48,age_group
+lgbm_sc_s0,SC,ba_loa,F,0.9329268292682928,656,sex
+lgbm_sc_s0,SC,ba_loa,M,0.9049295774647887,568,sex
+lgbm_sc_s0,SC,norm_reg_ffbs,F,0.9161585365853658,656,sex
+lgbm_sc_s0,SC,norm_reg_ffbs,M,0.8855633802816901,568,sex
+lgbm_sc_s0,SC,scp_abs,F,0.9192073170731708,656,sex
+lgbm_sc_s0,SC,scp_abs,M,0.8820422535211268,568,sex
+lgbm_sc_s0,SC,scp_abs_bc,F,0.913109756097561,656,sex
+lgbm_sc_s0,SC,scp_abs_bc,M,0.8802816901408451,568,sex
+lgbm_sc_s0,ST,ba_loa,F,0.8666666666666667,240,sex
+lgbm_sc_s0,ST,ba_loa,M,0.9196428571428572,112,sex
+lgbm_sc_s0,ST,norm_reg_ffbs,F,0.9041666666666668,240,sex
+lgbm_sc_s0,ST,norm_reg_ffbs,M,0.9017857142857144,112,sex
+lgbm_sc_s0,ST,scp_abs,F,0.8875,240,sex
+lgbm_sc_s0,ST,scp_abs,M,0.9464285714285714,112,sex
+lgbm_sc_s0,ST,scp_abs_bc,F,0.8708333333333333,240,sex
+lgbm_sc_s0,ST,scp_abs_bc,M,0.9285714285714286,112,sex
+lgbm_sc_s0,ST,ba_loa,placebo,0.875,176,condition
+lgbm_sc_s0,ST,ba_loa,temazepam,0.8920454545454546,176,condition
+lgbm_sc_s0,ST,norm_reg_ffbs,placebo,0.9204545454545454,176,condition
+lgbm_sc_s0,ST,norm_reg_ffbs,temazepam,0.8863636363636364,176,condition
+lgbm_sc_s0,ST,scp_abs,placebo,0.9034090909090908,176,condition
+lgbm_sc_s0,ST,scp_abs,temazepam,0.9090909090909092,176,condition
+lgbm_sc_s0,ST,scp_abs_bc,placebo,0.8693181818181818,176,condition
+lgbm_sc_s0,ST,scp_abs_bc,temazepam,0.9090909090909092,176,condition

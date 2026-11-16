@@ -62,15 +62,16 @@ def fig1_example(night="SN050", cohort="HMC", stager="yasa"):
     L = loso[(loso.night == night) & (loso.method == PROPOSED)].set_index("param")
     Lb = loso[(loso.night == night) & (loso.method == "ba_loa")].set_index("param")
     t = np.arange(len(y)) / 120
-    fig = plt.figure(figsize=(7.2, 6.4))
-    gs = fig.add_gridspec(5, 2, height_ratios=[1.2, 1, 1, 1, 1.6], hspace=0.65, wspace=0.28)
+    fig = plt.figure(figsize=(7.2, 7.2))
+    gs = fig.add_gridspec(5, 2, height_ratios=[1.2, 1, 1, 1, 1.6], hspace=0.95, wspace=0.28)
     ax = fig.add_subplot(gs[0, :])
     cols = ["#F0E442", "#56B4E9", "#0072B2", "#000080", "#D55E00"]
     order = [0, 4, 1, 2, 3]
     ax.stackplot(t, *[Pc[:, i] for i in order], colors=[cols[i] for i in order], labels=[STAGE_LAB[i] for i in order], lw=0)
     ax.set_xlim(0, t[-1]); ax.set_ylim(0, 1); ax.set_ylabel("p(stage)")
-    ax.set_title("a  Calibrated epoch probabilities of the stager (hypnodensity)", loc="left")
-    ax.legend(ncol=5, loc="upper right", bbox_to_anchor=(1, 1.45), frameon=False)
+    ax.set_title("a  Calibrated epoch probabilities (hypnodensity)", loc="left")
+    ax.legend(ncol=5, loc="lower right", bbox_to_anchor=(1.0, 1.0), frameon=False, fontsize=6,
+              handlelength=1.2, columnspacing=0.8)
     for r, (h, lab) in enumerate([(np.where(mask, y, 0), "Reference (manual)"), (P.argmax(1), "Stager hypnogram (plug-in)")]):
         ax = fig.add_subplot(gs[1 + r, :])
         ax.step(t, _hyp_y(h), where="post", lw=0.7, color="k" if r == 0 else "#0072B2")
@@ -94,13 +95,13 @@ def fig1_example(night="SN050", cohort="HMC", stager="yasa"):
         ax.set_ylim(0, yl * 1.25); ax.set_xlabel(f"{p} (min)"); ax.set_yticks([])
         ax.set_title(("e  " if c == 0 else "f  ") + f"Posterior of {p} and intervals", loc="left")
         if c == 0:
-            ax.legend(loc="upper left", frameon=False, fontsize=6)
+            ax.legend(loc="center left", frameon=False, fontsize=6, bbox_to_anchor=(0.0, 0.45))
     save(fig, "fig1_example_night")
 
 
 def fig2_within(stagers=("yasa", "lgbm_sc_s0")):
     meths = ["ba_loa", "scp_abs_cal", "cqr_qr", "cqr_ffbs", "norm_entropy_reg", PROPOSED]
-    fig, axes = plt.subplots(2, 3, figsize=(7.2, 4.6), sharey="row")
+    fig, axes = plt.subplots(2, 3, figsize=(7.2, 5.0), sharey="row", sharex=True)
     for si, st in enumerate(stagers):
         d = pd.read_csv(RESULTS_DIR / "raw" / f"e04_splits_{st}.csv.gz")
         d = d[d.alpha == 0.10]
@@ -115,8 +116,10 @@ def fig2_within(stagers=("yasa", "lgbm_sc_s0")):
                 ax.scatter(x, gm["interval_score"] / ref.reindex(PARAMS), s=12, color=C[m], label=LAB[m], zorder=3,
                            marker="D" if m == PROPOSED else "o")
             ax.axhline(1, color="k", lw=0.6, ls=":")
-            ax.set_xticks(range(len(PARAMS))); ax.set_xticklabels(PARAMS, rotation=45, ha="right")
-            ax.set_title(f"{STAGER_LAB[st]} – {c}", loc="left")
+            ax.set_xticks(range(len(PARAMS)))
+            if si == len(stagers) - 1:
+                ax.set_xticklabels(PARAMS, rotation=45, ha="right")
+            ax.set_title(f"{STAGER_LAB[st]} – {c}", loc="left", fontsize=8)
             if ci == 0:
                 ax.set_ylabel("Interval score relative to\ndistribution-free LoA")
     axes[0, 0].legend(ncol=3, loc="lower left", bbox_to_anchor=(0, 1.15), frameon=False)
@@ -135,7 +138,8 @@ def fig3_adaptivity(stager="yasa"):
         for c, mk in zip(["SC", "ST", "HMC"], ["o", "s", "^"]):
             dd = d[d.cohort == c]
             ax.scatter(dd.hi - dd.lo, np.abs(dd.y - dd.plug), s=5, alpha=0.6, marker=mk, label=c, lw=0)
-        ax.set_xlabel(f"{p} interval width"); ax.set_ylabel(f"|plug-in error|" if i == 0 else "")
+        u = "pp" if p.endswith("%") else "min"
+        ax.set_xlabel(f"{p} interval width ({u})"); ax.set_ylabel(f"|plug-in error| ({u})")
         ax.set_title(f"{'abc'[i]}  {p}", loc="left")
         if i == 0:
             ax.legend(frameon=False, markerscale=2)
@@ -156,13 +160,14 @@ def fig3_adaptivity(stager="yasa"):
     ax.axvline(0.5, color="k", lw=0.6, ls=":")
     ax.set_yticks([a for a, _ in ylab]); ax.set_yticklabels([b for _, b in ylab])
     ax.set_xlabel("AUROC for clinically relevant error"); ax.set_title("d  Flagging nights", loc="left")
-    ax.legend(frameon=False, loc="lower right", fontsize=6)
-    fig.tight_layout()
+    h, l = ax.get_legend_handles_labels()
+    fig.tight_layout(rect=(0, 0.1, 1, 1))
+    fig.legend(h, l, loc="lower right", ncol=3, frameon=False, fontsize=6.5, bbox_to_anchor=(0.99, 0.0))
     save(fig, "fig3_adaptivity_flagging")
 
 
 def fig4_transport(stagers=("yasa", "lgbm_sc_s0")):
-    fig, axes = plt.subplots(2, 3, figsize=(7.2, 4.4))
+    fig, axes = plt.subplots(2, 3, figsize=(7.2, 5.4))
     for si, st in enumerate(stagers):
         so = pd.read_csv(RESULTS_DIR / "raw" / f"e06_source_only_{st}.csv")
         so = so[so.alpha == 0.10]
@@ -175,7 +180,7 @@ def fig4_transport(stagers=("yasa", "lgbm_sc_s0")):
                            label=f"{LAB[m]}" if ti == 1 else None)
         ax.axhline(0.9, color="k", lw=0.6, ls=":")
         ax.set_xticks(range(8)); ax.set_xticklabels(PARAMS, rotation=45, ha="right"); ax.set_ylim(0.3, 1.02)
-        ax.set_ylabel("Coverage"); ax.set_title(f"{'ad'[si]}  {STAGER_LAB[st]}: SC-calibrated (o HMC, x ST)", loc="left", fontsize=7)
+        ax.set_ylabel("Coverage"); ax.set_title(f"{'ad'[si]}  {STAGER_LAB[st].split(' ')[0]}: SC-calibrated", loc="left", fontsize=8)
         fs = pd.read_csv(RESULTS_DIR / "raw" / f"e06_fewshot_{st}.csv.gz")
         for j, tgt in enumerate(["HMC", "ST"]):
             ax = axes[si, 1 + j]
@@ -187,10 +192,16 @@ def fig4_transport(stagers=("yasa", "lgbm_sc_s0")):
                             label=f"{LAB[m]} ({strat})" if (si == 0 and j == 0) else None)
             ax.axhline(0.9, color="k", lw=0.6, ls=":")
             ax.set_xlabel("Labelled target nights"); ax.set_ylabel("Coverage (mean of 500)")
-            ax.set_title(f"{'be'[si] if j == 0 else 'cf'[si]}  Recalibration on {tgt}", loc="left")
-    axes[0, 0].legend(frameon=False, fontsize=5.5, loc="lower left")
-    axes[0, 1].legend(frameon=False, fontsize=5.5, loc="lower right")
-    fig.tight_layout()
+            ax.set_title(f"{'be'[si] if j == 0 else 'cf'[si]}  {STAGER_LAB[st].split(' ')[0]}: recalibration on {tgt}", loc="left", fontsize=8)
+    from matplotlib.lines import Line2D
+    hs = [Line2D([], [], color=C[m], marker="o", ls="", ms=4, label=LAB[m])
+          for m in ["ba_loa", "scp_abs_bc", "cqr_ffbs", PROPOSED]]
+    hs += [Line2D([], [], color="k", marker="o", ls="", ms=4, label="HMC (a, d)"),
+           Line2D([], [], color="k", marker="x", ls="", ms=4, label="ST (a, d)"),
+           Line2D([], [], color="k", ls="-", label="target-only calibration (b, c, e, f)"),
+           Line2D([], [], color="k", ls="--", label="SC + target calibration (b, c, e, f)")]
+    fig.tight_layout(rect=(0, 0.12, 1, 1))
+    fig.legend(handles=hs, loc="lower center", ncol=4, frameon=False, fontsize=6, bbox_to_anchor=(0.5, 0.0))
     save(fig, "fig4_transport_recalibration")
 
 
@@ -210,8 +221,9 @@ def fig5_robust():
         axes[1, i].set_ylabel("Mean width" if i == 0 else "")
         for ax in axes[:, i]:
             ax.set_xticks(range(5)); ax.set_xticklabels(lab, rotation=40, ha="right")
-    axes[0, 0].legend(frameon=False, fontsize=6)
-    fig.tight_layout()
+    h, l = axes[0, 0].get_legend_handles_labels()
+    fig.tight_layout(rect=(0, 0, 1, 0.92))
+    fig.legend(h, l, loc="upper center", ncol=4, frameon=False, fontsize=6.5, bbox_to_anchor=(0.5, 1.0))
     save(fig, "fig5_robustness")
 
 

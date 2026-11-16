@@ -106,6 +106,11 @@ def main():
     parts.append(tbl("tableS_efficiency", round_=4))
     parts.append("\n# S16. Datasets and data-leakage audit\n")
     parts.append((ROOT_DIR / "supplementary" / "S_data_and_leakage_audit.md").read_text().replace("# ", "## ", 1))
+    parts.append("\n# S17. Conditional coverage by difficulty and exploratory Mondrian calibration (LOSO; quartiles of plug-in accuracy used only for evaluation)\n")
+    parts.append(tbl("tableS_conditional_coverage", round_=3))
+    parts.append("\n**Few-night recalibration: probability that realised coverage of the remaining target nights falls below 0.80 (500 repetitions)**\n\n")
+    for st in ["yasa", "lgbm_sc_s0"]:
+        parts.append(f"\n*{st}*\n\n" + tbl(f"tableS_fewshot_risk_{st}", "method in ['ba_loa','scp_abs_bc','norm_reg_ffbs']", round_=3))
     md = "\n".join(parts)
     OUT.mkdir(exist_ok=True)
     (OUT / "Supplementary_Material.md").write_text(md)

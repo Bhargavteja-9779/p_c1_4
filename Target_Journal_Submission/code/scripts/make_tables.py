@@ -285,7 +285,9 @@ def supp_tables():
     sg = pd.concat(sg)
     md(sg, TABLES_DIR / "tableS_subgroup_coverage")
     pr = sg[sg.method == PROPOSED]
-    pr = pr[pr["count"] >= 40]
+    pr = pr[pr["count"] >= 40].reset_index(drop=True)
+    prn = pr[pr.factor != "acc_quartile"]
+    NUM["subgroup_cov_min_noacc"], NUM["subgroup_cov_max_noacc"] = float(prn.coverage.min()), float(prn.coverage.max())
     NUM["subgroup_cov_min"] = float(pr.coverage.min())
     NUM["subgroup_cov_max"] = float(pr.coverage.max())
     NUM["subgroup_cov_min_level"] = str(pr.loc[pr.coverage.idxmin(), ["stager", "cohort", "factor", "level"]].tolist())
@@ -355,6 +357,71 @@ def supp_tables():
         NUM["eff_stager_s"] = float(e.t_stager_s.median())
         meta = json.loads((RESULTS_DIR / "raw" / "e10_efficiency_meta.json").read_text())
         NUM["eff_conformal_s"] = float(meta["t_conformal_per_night_s"])
+    # E11 conditional coverage (exploratory Mondrian)
+    f = RESULTS_DIR / "statistics" / "e11_conditional_summary.csv"
+    if f.exists():
+        c11 = pd.read_csv(f)
+        md(c11.round(4), TABLES_DIR / "tableS_conditional_coverage")
+        w = c11[c11.subset == "Q1 (worst)"]
+        for meth in ["proposed", "dfloa", "mondrian_entropy", "mondrian_sd"]:
+            v = w[w.method == meth].coverage
+            NUM[f"q1cov_min_{meth}"], NUM[f"q1cov_max_{meth}"] = float(v.min()), float(v.max())
+            for _, r in w[w.method == meth].iterrows():
+                NUM[f"q1cov_{r.stager}_{r.cohort}_{meth}"] = float(r.coverage)
+        b = c11[c11.subset == "Q4 (best)"]
+        for meth in ["proposed", "dfloa"]:
+            v = b[b.method == meth].coverage
+            NUM[f"q4cov_min_{meth}"], NUM[f"q4cov_max_{meth}"] = float(v.min()), float(v.max())
+        a = c11[c11.subset == "all"]
+        for meth in ["mondrian_entropy"]:
+            v = a[a.method == meth].coverage
+            NUM[f"allcov_min_{meth}"], NUM[f"allcov_max_{meth}"] = float(v.min()), float(v.max())
+        gain = (w[w.method == "mondrian_entropy"].set_index(["stager", "cohort"]).coverage
+                - w[w.method == "proposed"].set_index(["stager", "cohort"]).coverage)
+        NUM["mondrian_gain_min"], NUM["mondrian_gain_max"] = float(gain.min()), float(gain.max())
+        NUM["mondrian_n_improved"], NUM["mondrian_n"] = int((gain > 0).sum()), int(len(gain))
+    # factorial median ratio range over all centres and stagers
+    meds = [v for k, v in NUM.items() if k.startswith("fact_median_ratio_")]
+    if meds:
+        NUM["fact_median_ratio_min"], NUM["fact_median_ratio_max"] = float(min(meds)), float(max(meds))
+    # few-night recalibration: probability that realised coverage < 0.80 (median over parameters)
+    for st in STAGERS:
+        f = RESULTS_DIR / "raw" / f"e06_fewshot_{st}.csv.gz"
+        if f.exists():
+            fs6 = pd.read_csv(f)
+            q = (fs6[fs6.strategy == "target"].groupby(["target", "n_target", "method", "param"])["coverage"]
+                 .apply(lambda x: float((x < 0.80).mean())).reset_index())
+            g = q.groupby(["target", "n_target", "method"])["coverage"].median().reset_index()
+            for _, r in g.iterrows():
+                NUM[f"fs_p80_{st}_{r.target}_{r.n_target}_{r.method}"] = float(r.coverage)
+            md(q.rename(columns={"coverage": "P(coverage<0.80)"}), TABLES_DIR / f"tableS_fewshot_risk_{st}")
+    # bayes_pct coverage by parameter class (YASA)
+    d = _splits("yasa")
+    d = d[(d.alpha == 0.10) & (d.method == "bayes_pct")].groupby(["cohort", "param"])["coverage"].mean().reset_index()
+    lat = d[d.param.isin(["SOL", "REML"])].coverage
+    oth = d[~d.param.isin(["SOL", "REML"])].coverage
+    NUM["bayes_lat_min"], NUM["bayes_lat_max"] = float(lat.min()), float(lat.max())
+    NUM["bayes_oth_min"], NUM["bayes_oth_max"] = float(oth.min()), float(oth.max())
+    # error analysis: covered vs missed
+    for st in STAGERS:
+        f = RESULTS_DIR / "statistics" / f"e08_noncovered_{st}.csv"
+        if f.exists():
+            nc = pd.read_csv(f)
+            for v in ["acc_plugin", "mean_entropy"]:
+                g = nc[nc.variable == v]
+                NUM[f"nc_{st}_{v}_nsig"] = int((g.p < 0.05).sum())
+                NUM[f"nc_{st}_{v}_ntests"] = int(g.p.notna().sum())
+                NUM[f"nc_{st}_{v}_med_cov"] = float(g.median_covered.median())
+                NUM[f"nc_{st}_{v}_med_missed"] = float(g.median_missed.median())
+    # significant losses vs DF-LoA (list)
+    for st in STAGERS:
+        t = pd.read_csv(RESULTS_DIR / "statistics" / f"e07_paired_tests_{st}.csv")
+        t = t[(t.baseline == "scp_abs_bc") & (t.p_holm < 0.05) & (t.mean_is_proposed > t.mean_is_baseline)]
+        groups = {}
+        for r in t.itertuples():
+            groups.setdefault(r.param.replace("%", " %"), []).append(r.cohort)
+        items = [f"{k} ({', '.join(v)})" for k, v in groups.items()]
+        NUM[f"losses_vs_dfloa_{st}"] = (", ".join(items[:-1]) + " and " + items[-1]) if len(items) > 1 else "".join(items)
     # tau values
     sm = json.loads((RESULTS_DIR / "summaries" / "source_models.json").read_text())
     taus = [v for st in ["yasa", "lgbm_sc_s0"] for v in sm[st].values()]
