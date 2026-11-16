@@ -43,6 +43,29 @@ def wilcoxon_paired(a: np.ndarray, b: np.ndarray):
     return dict(p=float(res.pvalue), median_diff=float(np.median(d)), r_rb=float((wp - wm) / (wp + wm)), n=len(d))
 
 
+def perm_mean_paired(a: np.ndarray, b: np.ndarray, B: int = 20000, seed: int = 0):
+    """Two-sided paired sign-flip permutation test of the MEAN difference (a - b) over clusters
+    (subjects).  Tests exactly the quantity reported (difference of mean interval scores), unlike the
+    Wilcoxon signed-rank test, which targets the pseudo-median.  Returns p, mean difference and a
+    percentile-bootstrap 95% CI of the ratio mean(a)/mean(b)."""
+    a, b = np.asarray(a, float), np.asarray(b, float)
+    ok = np.isfinite(a) & np.isfinite(b)
+    a, b = a[ok], b[ok]
+    d = a - b
+    n = len(d)
+    if n < 5 or np.all(d == 0):
+        return dict(p=np.nan, mean_diff=float(d.mean()) if n else np.nan, ratio=np.nan, ratio_lo=np.nan, ratio_hi=np.nan, n=n)
+    rng = np.random.default_rng(seed)
+    obs = abs(d.mean())
+    signs = rng.choice([-1.0, 1.0], size=(B, n))
+    null = np.abs((signs * d).mean(1))
+    p = (1 + np.sum(null >= obs - 1e-12)) / (B + 1)
+    idx = rng.integers(0, n, size=(2000, n))
+    rat = a[idx].mean(1) / b[idx].mean(1)
+    return dict(p=float(p), mean_diff=float(d.mean()), ratio=float(a.mean() / b.mean()),
+                ratio_lo=float(np.percentile(rat, 2.5)), ratio_hi=float(np.percentile(rat, 97.5)), n=n)
+
+
 def holm(pvals):
     p = np.asarray(pvals, float)
     out = np.full_like(p, np.nan)

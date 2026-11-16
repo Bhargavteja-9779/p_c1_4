@@ -81,15 +81,18 @@ def main():
         d["width"] = d.hi - d.lo
         d["is"] = interval_score(d.y.values, d.lo.values, d.hi.values, ALPHA)
         for (c, meth, q), g in d.groupby(["cohort", "method", "acc_quartile"], observed=True):
-            out_rows.append(dict(stager=st, cohort=c, method=meth, subset=str(q), coverage=g["cov"].mean(),
+            out_rows.append(dict(stager=st, cohort=c, method=meth, subset=str(q), param="all", coverage=g["cov"].mean(),
+                                 mean_width=g.width.mean(), interval_score=g["is"].mean(), n=len(g)))
+        for (c, meth, q, prm), g in d.groupby(["cohort", "method", "acc_quartile", "param"], observed=True):
+            out_rows.append(dict(stager=st, cohort=c, method=meth, subset=str(q), param=prm, coverage=g["cov"].mean(),
                                  mean_width=g.width.mean(), interval_score=g["is"].mean(), n=len(g)))
         for (c, meth), g in d.groupby(["cohort", "method"]):
-            out_rows.append(dict(stager=st, cohort=c, method=meth, subset="all", coverage=g["cov"].mean(),
+            out_rows.append(dict(stager=st, cohort=c, method=meth, subset="all", param="all", coverage=g["cov"].mean(),
                                  mean_width=g.width.mean(), interval_score=g["is"].mean(), n=len(g)))
     s = pd.DataFrame(out_rows)
     (RESULTS_DIR / "statistics").mkdir(exist_ok=True)
     s.to_csv(RESULTS_DIR / "statistics" / "e11_conditional_summary.csv", index=False)
-    print(s.pivot_table(index=["stager", "cohort", "subset"], columns="method", values="coverage").round(3).to_string())
+    print(s[s.param == "all"].pivot_table(index=["stager", "cohort", "subset"], columns="method", values="coverage").round(3).to_string())
 
 
 if __name__ == "__main__":

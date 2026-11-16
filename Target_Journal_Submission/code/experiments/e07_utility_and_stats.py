@@ -18,7 +18,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from src.evaluation.conformal_eval import PARAMS, PROPOSED  # noqa: E402
 from src.statistics.stats import (auroc, bland_altman, cluster_bootstrap, holm, icc_a1,  # noqa: E402
-                                  wilcoxon_paired)
+                                  perm_mean_paired, wilcoxon_paired)
 from src.uncertainty.conformal import interval_score  # noqa: E402
 from src.utils import RESULTS_DIR  # noqa: E402
 
@@ -38,11 +38,13 @@ def paired_tests(loso):
         prop = subj[subj.method == PROPOSED].set_index("subject")
         for b in BASELINES:
             base = subj[subj.method == b].set_index("subject").reindex(prop.index)
-            t = wilcoxon_paired(prop["is"].values, base["is"].values)
+            t = perm_mean_paired(prop["is"].values, base["is"].values)
+            w = wilcoxon_paired(prop["is"].values, base["is"].values)
             rows.append(dict(cohort=cohort, param=p, baseline=b, n_subjects=t["n"],
                              mean_is_proposed=prop["is"].mean(), mean_is_baseline=base["is"].mean(),
+                             ratio=t["ratio"], ratio_lo95=t["ratio_lo"], ratio_hi95=t["ratio_hi"],
                              mean_width_proposed=prop["width"].mean(), mean_width_baseline=base["width"].mean(),
-                             median_diff_is=t["median_diff"], r_rb=t["r_rb"], p=t["p"]))
+                             mean_diff_is=t["mean_diff"], p=t["p"], p_wilcoxon=w["p"], r_rb=w["r_rb"]))
     df = pd.DataFrame(rows)
     df["p_holm"] = np.nan
     for c, g in df.groupby("cohort"):  # Holm across baselines x parameters within cohort
@@ -67,11 +69,11 @@ def factorial_tests(loso):
         for centre, const_m, scaled_m in FACTORIAL:
             if const_m not in subj or scaled_m not in subj:
                 continue
-            t = wilcoxon_paired(subj[scaled_m].values, subj[const_m].values)
+            t = perm_mean_paired(subj[scaled_m].values, subj[const_m].values)
             rows.append(dict(cohort=cohort, param=p, centre=centre, constant=const_m, scaled=scaled_m,
                              n_subjects=t["n"], mean_is_scaled=subj[scaled_m].mean(),
-                             mean_is_constant=subj[const_m].mean(),
-                             ratio=subj[scaled_m].mean() / subj[const_m].mean(), r_rb=t["r_rb"], p=t["p"]))
+                             mean_is_constant=subj[const_m].mean(), ratio=t["ratio"],
+                             ratio_lo95=t["ratio_lo"], ratio_hi95=t["ratio_hi"], p=t["p"]))
     df = pd.DataFrame(rows)
     df["p_holm"] = np.nan
     for c, g in df.groupby("cohort"):
@@ -150,10 +152,15 @@ def subgroup_coverage(summ, loso):
     d["cov"] = (d.y >= d.lo) & (d.y <= d.hi)
     rows = []
     for col in ["acc_quartile", "age_group", "sex", "condition"]:
-        g = d[d[col].astype(str).str.len() > 0].groupby(["cohort", "method", col], observed=True)["cov"]
-        r = g.agg(["mean", "count"]).reset_index().rename(columns={col: "level", "mean": "coverage"})
-        r["factor"] = col
-        rows.append(r)
+        dd = d[d[col].astype(str).str.len() > 0]
+        for keys, by in ((["cohort", "method", col], "all"), (["cohort", "method", col, "param"], "param")):
+            g = dd.groupby(keys, observed=True)
+            r = g.agg(coverage=("cov", "mean"), count=("cov", "size"), n_nights=("night", "nunique")).reset_index()
+            r = r.rename(columns={col: "level"})
+            r["factor"] = col
+            if by == "all":
+                r["param"] = "all"
+            rows.append(r)
     return pd.concat(rows, ignore_index=True)
 
 

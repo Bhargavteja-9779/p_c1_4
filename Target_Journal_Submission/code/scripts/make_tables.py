@@ -87,7 +87,10 @@ def _splits(st):
 
 
 def table2():
-    """Main within-cohort table: proposed coverage, width, and interval-score ratios (LOSO, Holm)."""
+    """Main within-cohort table. Coverage and width: mean over 500 subject-grouped splits. Interval-score
+    ratios, 95% bootstrap CIs and significance: leave-one-subject-out (LOSO), per-subject mean interval
+    scores, paired sign-flip permutation test of the mean difference, Holm-adjusted within cohort x stager.
+    Ratios and stars therefore come from the same analysis."""
     rows = []
     for st in STAGERS:
         d = _splits(st)
@@ -95,21 +98,21 @@ def table2():
         g = d.groupby(["cohort", "param", "method"])[["coverage", "mean_width", "interval_score"]].mean()
         pt = pd.read_csv(RESULTS_DIR / "statistics" / f"e07_paired_tests_{st}.csv")
         for p in PARAMS:
-            r = {"Stager": STAGERS[st], "Parameter": f"{p} ({UNIT[p]})"}
             for c in COHORTS:
                 pr = g.loc[(c, p, PROPOSED)]
-                r[f"{c} coverage"] = round(pr["coverage"], 3)
-                r[f"{c} width"] = round(pr["mean_width"], 1)
-                for b, lab in (("ba_loa", "vs BA-LoA"), ("scp_abs_bc", "vs DF-LoA"), ("scp_abs", "vs constant"),
-                               ("scp_abs_cal", "vs constant-cal")):
+                r = {"Stager": "YASA" if st == "yasa" else "LightGBM-SC", "Parameter": f"{p} ({UNIT[p]})",
+                     "Cohort": c, "Coverage": f"{pr['coverage']:.3f}", "Mean width": f"{pr['mean_width']:.1f}"}
+                for b, lab in (("scp_abs_bc", "IS ratio vs DF-LoA (95% CI)"), ("ba_loa", "IS ratio vs BA-LoA (95% CI)")):
                     t = pt[(pt.cohort == c) & (pt.param == p) & (pt.baseline == b)].iloc[0]
-                    ratio = g.loc[(c, p, PROPOSED), "interval_score"] / g.loc[(c, p, b), "interval_score"]
-                    r[f"{c} IS ratio {lab}"] = f"{ratio:.2f}{'*' if t.p_holm < 0.05 else ''}"
-                    NUM[f"isratio_{st}_{c}_{p}_{b}"] = float(ratio)
+                    r[lab] = f"{t.ratio:.2f} ({t.ratio_lo95:.2f}–{t.ratio_hi95:.2f}){'*' if t.p_holm < 0.05 else ''}"
+                    NUM[f"isratio_{st}_{c}_{p}_{b}"] = float(t.ratio)
                     NUM[f"pholm_{st}_{c}_{p}_{b}"] = float(t.p_holm)
+                for b in ("scp_abs", "scp_abs_cal"):
+                    t = pt[(pt.cohort == c) & (pt.param == p) & (pt.baseline == b)].iloc[0]
+                    NUM[f"isratio_{st}_{c}_{p}_{b}"] = float(t.ratio)
                 NUM[f"cov_{st}_{c}_{p}"] = float(pr["coverage"])
                 NUM[f"width_{st}_{c}_{p}"] = float(pr["mean_width"])
-            rows.append(r)
+                rows.append(r)
         cov_all = g.xs(PROPOSED, level="method")["coverage"]
         NUM[f"cov_min_{st}"] = float(cov_all.min())
         NUM[f"cov_max_{st}"] = float(cov_all.max())
@@ -117,25 +120,22 @@ def table2():
             cm = g.xs(m, level="method")["coverage"]
             NUM[f"cov_min_{st}_{m}"] = float(cm.min())
             NUM[f"cov_max_{st}_{m}"] = float(cm.max())
-        for b in ["scp_abs_bc", "scp_abs_cal", "cqr_ffbs", "cqr_qr", "norm_entropy_reg", "norm_reg_plugc"]:
+        for b in ["ba_loa", "scp_abs", "scp_abs_bc", "scp_abs_cal", "cqr_ffbs", "cqr_qr", "norm_entropy_reg",
+                  "norm_reg_plugc", "norm_ffbs"]:
             sb = pt[(pt.baseline == b)]
-            NUM[f"n_sig_better_vs_{b}_{st}"] = int(((sb.p_holm < 0.05) & (sb.mean_is_proposed < sb.mean_is_baseline)).sum())
-            NUM[f"n_sig_worse_vs_{b}_{st}"] = int(((sb.p_holm < 0.05) & (sb.mean_is_proposed > sb.mean_is_baseline)).sum())
-        sig = pt[(pt.baseline == "scp_abs")]
-        NUM[f"n_sig_better_vs_const_{st}"] = int(((sig.p_holm < 0.05) & (sig.mean_is_proposed < sig.mean_is_baseline)).sum())
-        NUM[f"n_sig_worse_vs_const_{st}"] = int(((sig.p_holm < 0.05) & (sig.mean_is_proposed > sig.mean_is_baseline)).sum())
-        sig = pt[(pt.baseline == "ba_loa")]
-        NUM[f"n_sig_better_vs_ba_{st}"] = int(((sig.p_holm < 0.05) & (sig.mean_is_proposed < sig.mean_is_baseline)).sum())
-        NUM[f"n_sig_worse_vs_ba_{st}"] = int(((sig.p_holm < 0.05) & (sig.mean_is_proposed > sig.mean_is_baseline)).sum())
+            NUM[f"n_sig_better_vs_{b}_{st}"] = int(((sb.p_holm < 0.05) & (sb.ratio < 1)).sum())
+            NUM[f"n_sig_worse_vs_{b}_{st}"] = int(((sb.p_holm < 0.05) & (sb.ratio > 1)).sum())
+            NUM[f"n_lower_vs_{b}_{st}"] = int((sb.ratio < 1).sum())
+            NUM[f"mean_ratio_vs_{b}_{st}"] = float(sb.ratio.mean())
+            NUM[f"mean_ratio_noTST_vs_{b}_{st}"] = float(sb[sb.param != "TST"].ratio.mean())
+        NUM[f"n_sig_better_vs_ba_{st}"] = NUM[f"n_sig_better_vs_ba_loa_{st}"]
+        NUM[f"n_sig_worse_vs_ba_{st}"] = NUM[f"n_sig_worse_vs_ba_loa_{st}"]
+        NUM[f"n_sig_better_vs_const_{st}"] = NUM[f"n_sig_better_vs_scp_abs_{st}"]
+        NUM[f"n_sig_worse_vs_const_{st}"] = NUM[f"n_sig_worse_vs_scp_abs_{st}"]
     t2 = pd.DataFrame(rows)
     md(t2, TABLES_DIR / "table2_within_cohort")
-    disp = []
-    for _, r in t2.iterrows():
-        d = {"Stager": "YASA" if r["Stager"].startswith("YASA") else "LightGBM-SC", "Parameter": r["Parameter"]}
-        for c in COHORTS:
-            d[c] = f"{r[f'{c} coverage']:.3f} | {r[f'{c} width']:.1f} | {r[f'{c} IS ratio vs DF-LoA']} | {r[f'{c} IS ratio vs BA-LoA']}"
-        disp.append(d)
-    md(pd.DataFrame(disp), TABLES_DIR / "table2_display")
+    md(t2[t2.Stager == "YASA"].drop(columns="Stager"), TABLES_DIR / "table2_display")
+    md(t2[t2.Stager != "YASA"].drop(columns="Stager"), TABLES_DIR / "tableS_within_cohort_lgbm")
 
 
 def table3():
@@ -284,8 +284,14 @@ def supp_tables():
         sg.append(t[t.method.isin([PROPOSED, "scp_abs", "scp_abs_bc", "ba_loa"])])
     sg = pd.concat(sg)
     md(sg, TABLES_DIR / "tableS_subgroup_coverage")
-    pr = sg[sg.method == PROPOSED]
-    pr = pr[pr["count"] >= 40].reset_index(drop=True)
+    pr = sg[(sg.method == PROPOSED) & (sg.param == "all")]
+    pr = pr[pr["n_nights"] >= 20].reset_index(drop=True)          # subgroups with >= 20 distinct nights
+    pp = sg[(sg.method == PROPOSED) & (sg.param != "all") & (sg["n_nights"] >= 20)]
+    for fac in ["age_group", "acc_quartile"]:
+        for lev in pp[pp.factor == fac].level.unique():
+            v = pp[(pp.factor == fac) & (pp.level == lev)].coverage
+            key = str(lev).split(" ")[0].replace(">=", "ge").replace("<", "lt").replace("-", "_")
+            NUM[f"sgp_{fac}_{key}_min"], NUM[f"sgp_{fac}_{key}_max"] = float(v.min()), float(v.max())
     prn = pr[pr.factor != "acc_quartile"]
     NUM["subgroup_cov_min_noacc"], NUM["subgroup_cov_max_noacc"] = float(prn.coverage.min()), float(prn.coverage.max())
     NUM["subgroup_cov_min"] = float(pr.coverage.min())
@@ -360,8 +366,13 @@ def supp_tables():
     # E11 conditional coverage (exploratory Mondrian)
     f = RESULTS_DIR / "statistics" / "e11_conditional_summary.csv"
     if f.exists():
-        c11 = pd.read_csv(f)
-        md(c11.round(4), TABLES_DIR / "tableS_conditional_coverage")
+        c11a = pd.read_csv(f)
+        md(c11a.round(4), TABLES_DIR / "tableS_conditional_coverage")
+        pq = c11a[(c11a.param != "all") & (c11a.subset == "Q1 (worst)")]
+        for meth in ["proposed", "dfloa", "mondrian_entropy"]:
+            v = pq[pq.method == meth].coverage
+            NUM[f"q1cov_param_min_{meth}"], NUM[f"q1cov_param_max_{meth}"] = float(v.min()), float(v.max())
+        c11 = c11a[c11a.param == "all"]
         w = c11[c11.subset == "Q1 (worst)"]
         for meth in ["proposed", "dfloa", "mondrian_entropy", "mondrian_sd"]:
             v = w[w.method == meth].coverage

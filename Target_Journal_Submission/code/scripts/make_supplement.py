@@ -30,7 +30,7 @@ from src.utils import _QUICK, RESULTS_DIR, ROOT_DIR, TABLES_DIR  # noqa: E402
 OUT = (RESULTS_DIR / "supplementary") if _QUICK else (ROOT_DIR / "supplementary")   # never overwrite full results
 
 
-def tbl(name, query=None, cols=None, round_=3, max_rows=400):
+def tbl(name, query=None, cols=None, round_=3, max_rows=None):
     f = TABLES_DIR / f"{name}.csv"
     if not f.exists():
         return f"*[{name} not available]*\n"
@@ -40,7 +40,7 @@ def tbl(name, query=None, cols=None, round_=3, max_rows=400):
     if cols:
         d = d[[c for c in cols if c in d.columns]]
     d = d.round(round_)
-    if len(d) > max_rows:
+    if max_rows is not None and len(d) > max_rows:
         d = d.head(max_rows)
     return d.to_markdown(index=False) + "\n"
 
