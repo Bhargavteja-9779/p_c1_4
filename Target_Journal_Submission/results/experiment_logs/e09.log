@@ -3,35 +3,50 @@ corruption method
 art10      ba_loa               0.846      58.603
            cqr_ffbs             0.912      59.136
            cqr_qr               0.899      75.772
-           norm_entropy_reg     0.919      69.576
-           norm_reg_ffbs        0.907      60.995
+           norm_entropy_reg     0.918      69.116
+           norm_reg_ffbs        0.906      60.945
+           norm_reg_plugc       0.885      59.457
            scp_abs              0.843      71.614
+           scp_abs_bc           0.843      58.505
+           scp_abs_cal          0.876      60.070
            scp_abs_mu           0.897      64.103
 art25      ba_loa               0.764      59.220
            cqr_ffbs             0.902      62.527
            cqr_qr               0.858      82.178
-           norm_entropy_reg     0.918      75.275
-           norm_reg_ffbs        0.894      64.068
+           norm_entropy_reg     0.914      73.919
+           norm_reg_ffbs        0.892      63.777
+           norm_reg_plugc       0.854      61.727
            scp_abs              0.754      71.964
+           scp_abs_bc           0.762      59.016
+           scp_abs_cal          0.836      60.219
            scp_abs_mu           0.877      64.811
 clean      ba_loa               0.899      56.513
            cqr_ffbs             0.912      54.959
            cqr_qr               0.910      67.441
-           norm_entropy_reg     0.907      62.533
-           norm_reg_ffbs        0.908      57.341
+           norm_entropy_reg     0.907      62.511
+           norm_reg_ffbs        0.907      57.302
+           norm_reg_plugc       0.907      55.376
            scp_abs              0.907      70.005
+           scp_abs_bc           0.899      56.617
+           scp_abs_cal          0.908      58.915
            scp_abs_mu           0.907      63.179
 gauss05    ba_loa               0.591      58.643
            cqr_ffbs             0.797      70.346
            cqr_qr               0.748      86.861
-           norm_entropy_reg     0.817      78.986
-           norm_reg_ffbs        0.799      71.329
+           norm_entropy_reg     0.808      76.803
+           norm_reg_ffbs        0.790      70.159
+           norm_reg_plugc       0.736      65.609
            scp_abs              0.588      71.042
+           scp_abs_bc           0.589      58.495
+           scp_abs_cal          0.683      59.127
            scp_abs_mu           0.743      65.593
 gauss10    ba_loa               0.400      58.105
            cqr_ffbs             0.727      80.322
            cqr_qr               0.666      94.261
-           norm_entropy_reg     0.754      83.086
-           norm_reg_ffbs        0.724      78.528
+           norm_entropy_reg     0.739      79.974
+           norm_reg_ffbs        0.712      75.688
+           norm_reg_plugc       0.604      71.047
            scp_abs              0.409      70.415
+           scp_abs_bc           0.400      58.136
+           scp_abs_cal          0.518      59.631
            scp_abs_mu           0.657      66.248

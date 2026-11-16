@@ -14,3 +14,14 @@
   partly attributable to calibration alone (anticipated reviewer objection). Primary method unchanged.
 * [Statistics] cluster_bootstrap now returns no CI when the statistic is undefined in >50% of resamples
   (e.g. AUROC with zero events); AUROCs with <10 events are flagged as not interpretable.
+* [Comparators, after calibrated-plug-in results] The calibrated plug-in reproduced most of the TST
+  bias reduction attributed earlier to the posterior mean, showing that the original constant-width
+  comparators (centred on the raw, biased plug-in) conflated calibration with adaptivity. Added
+  (i) `scp_abs_bc`: bias-corrected constant-width split conformal (distribution-free analogue of
+  Bland–Altman LoA; strongest simple competitor) and (ii) a centre × scale factorial
+  (`norm_reg_plug`, `norm_reg_plugc` = FFBS-SD scale with raw/calibrated plug-in centres). Manuscript
+  claims about point estimates and efficiency rewritten accordingly. Primary method unchanged.
+* [Method correction for exact validity] The regulariser of normalised scores (median scale) is now
+  computed from calibration AND test nights (label-free), making the score a symmetric function of all
+  nights' features so that the finite-sample guarantee is exact (previously calibration-only;
+  numerically negligible difference). All E04/E06/E07/E09 conformal evaluations re-run.

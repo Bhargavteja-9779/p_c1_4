@@ -5,6 +5,8 @@ Methods (all receive identical calibration/test nights):
   scp_abs          split conformal, |ref - plug-in|                    (constant width)
   scp_abs_cal      split conformal, |ref - calibrated plug-in|         (constant width, local calibration)
   scp_abs_mu       split conformal, |ref - FFBS mean|                  (constant width, better centre)
+  scp_abs_bc       split conformal, |ref - (plug-in + mean calibration bias)|  (distribution-free,
+                   bias-corrected limits of agreement; strongest constant-width competitor)
   bayes_pct        raw FFBS posterior percentile interval              (no conformal step)
   ind_pct          raw independent-epoch-sampling percentile interval  (no conformal step)
   cqr_ffbs         conformalised FFBS quantiles (CQR score)
@@ -14,6 +16,10 @@ Methods (all receive identical calibration/test nights):
   norm_reg_ffbs    normalised conformal, scale = FFBS SD + median_cal(SD)        (PROPOSED)
   norm_reg_ind     as proposed, but independent-epoch sampling SD               (ablation)
   norm_reg_ffbs1   as proposed, but emission temperature tau = 1               (ablation)
+  norm_reg_plug    FFBS-SD scale, centred on the raw plug-in                   (centre x scale factorial)
+  norm_reg_plugc   FFBS-SD scale, centred on the calibrated plug-in            (centre x scale factorial)
+Regularised scales add the median of the label-free scale over calibration AND test nights, so that the
+score is a symmetric function of all nights' features and finite-sample validity is exact.
 """
 from __future__ import annotations
 
@@ -26,8 +32,9 @@ from ..uncertainty.conformal import conformal_quantile, interval_score
 PARAMS = ["TST", "SOL", "WASO", "REML", "N1%", "N2%", "N3%", "REM%"]
 BOUNDS = {"TST": (0, None), "SOL": (0, None), "WASO": (0, None), "REML": (0, None),
           "N1%": (0, 100), "N2%": (0, 100), "N3%": (0, 100), "REM%": (0, 100)}
-METHODS = ["ba_loa", "scp_abs", "scp_abs_cal", "scp_abs_mu", "bayes_pct", "ind_pct", "cqr_ffbs", "cqr_qr",
-           "norm_entropy_reg", "norm_ffbs", "norm_reg_ffbs", "norm_reg_ind", "norm_reg_ffbs1"]
+METHODS = ["ba_loa", "scp_abs", "scp_abs_bc", "scp_abs_cal", "scp_abs_mu", "bayes_pct", "ind_pct", "cqr_ffbs",
+           "cqr_qr", "norm_entropy_reg", "norm_ffbs", "norm_reg_ffbs", "norm_reg_ind", "norm_reg_ffbs1",
+           "norm_reg_plug", "norm_reg_plugc"]
 PROPOSED = "norm_reg_ffbs"
 QK = {0.05: ("q025", "q975"), 0.10: ("q05", "q95"), 0.20: ("q10", "q90")}
 ZK = {0.05: 1.959964, 0.10: 1.644854, 0.20: 1.281552}
@@ -80,6 +87,11 @@ def make_interval(method, cal, test, alpha):
     if method == "scp_abs":
         q = conformal_quantile(np.abs(y_c - cal["plug"].values), alpha)
         return test["plug"].values - q, test["plug"].values + q
+    if method == "scp_abs_bc":      # bias-corrected constant width (distribution-free LoA analogue)
+        r = y_c - cal["plug"].values
+        b = r.mean()
+        q = conformal_quantile(np.abs(r - b), alpha)
+        return test["plug"].values + b - q, test["plug"].values + b + q
     if method == "scp_abs_cal":     # constant width around the locally calibrated plug-in
         q = conformal_quantile(np.abs(y_c - cal["plugc"].values), alpha)
         return test["plugc"].values - q, test["plugc"].values + q
@@ -103,10 +115,11 @@ def make_interval(method, cal, test, alpha):
         return pr["lo"][1] - q, pr["hi"][1] + q
     centre_key, scale_key = {"norm_ffbs": ("mu", "sd"), "norm_reg_ffbs": ("mu", "sd"),
                              "norm_reg_ind": ("mu_ind", "sd_ind"), "norm_reg_ffbs1": ("mu1", "sd1"),
-                             "norm_entropy_reg": ("mu", "entropy")}[method]
+                             "norm_entropy_reg": ("mu", "entropy"), "norm_reg_plug": ("plug", "sd"),
+                             "norm_reg_plugc": ("plugc", "sd")}[method]
     sc, st = cal[scale_key].values, test[scale_key].values
     if method != "norm_ffbs":
-        c = np.median(sc)
+        c = np.median(np.concatenate([sc, st]))   # label-free, symmetric in all nights -> exact validity
         sc, st = sc + c, st + c
     q = conformal_quantile(np.abs(y_c - cal[centre_key].values) / np.maximum(sc, 1e-9), alpha)
     return test[centre_key].values - q * st, test[centre_key].values + q * st

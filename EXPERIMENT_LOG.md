@@ -67,3 +67,17 @@ All experiments are logged here, including failures and abandoned directions.
   10-h SC window (see E08). REML/REM%/SOL: posterior mean worse than plug-in.
 * Flagging AUROC (width vs mean entropy): REML and N3% better with width; TST similar; WASO worse.
 * Led to protocol extension (calibrated plug-in comparators) — rerun scheduled.
+
+## E04/E07 rerun with calibrated-plug-in comparators (16:30–16:52) and container restart
+* Calibrated plug-in (BCTS on calibration nights, argmax) explains most of the TST bias removal
+  (YASA HMC MAE: raw 40.2, calibrated 19.5, FFBS mean 19.3 min; posterior mean vs calibrated p = 0.64).
+  → earlier interpretation ("posterior averaging removes TST bias") was WRONG; corrected in manuscript.
+* Container restarted at ~17:08 (E04 seeds interrupted). All results committed and pushed (0d41db0).
+
+## E04 rerun #3 with bias-corrected and factorial comparators (21:56–22:02, parallel)
+* New comparators: scp_abs_bc (distribution-free bias-corrected LoA), norm_reg_plug, norm_reg_plugc;
+  regulariser now computed on calibration+test nights (exact validity).
+* Factorial (same centre, FFBS-SD scale vs constant width): interval score lower in 79–92% of the 24
+  cohort×parameter combinations for every centre, both stagers → adaptive scale is the robust contribution.
+* Proposed vs scp_abs_bc: better in 62–67% of combinations (TST, N2%, REML), worse for SOL, REM%,
+  WASO-SC (posterior-mean centre biased for these). scp_abs_bc coverage min 0.852 (ST; approximate validity).

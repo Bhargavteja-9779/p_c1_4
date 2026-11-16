@@ -1,11 +1,11 @@
 # PROJECT_STATE (checkpoint file — update after every significant stage)
 
-_Last update: 2026-11-15, session 1 (approx. 3 h into session)_
+_Last update: 2026-11-15, session 1 (after container restart; results saved & pushed at commit 0d41db0)_
 
 ## Selected target journal
 **Sleep Medicine** (Elsevier, ISSN 1389-9457). JIF 4.1; Q1 Clinical Neurology 68/296 (secondary source, LetPub);
 median submission→acceptance 91 d (own PubMed computation, n=400). Details: `Target_Journal_Submission/journal_selection/`.
-Guidelines: ≤5000 words, structured abstract ≤300 w, ≤50 refs, ≤8 display items, highlights, GenAI declaration.
+Guidelines: ≤5000 words, structured abstract ≤300 w, ≤50 refs, ≤8 display items, highlights ≤85 chars, GenAI declaration.
 
 ## Research topic (FINAL)
 Per-night conformal prediction intervals for automatically scored PSG parameters (TST, SOL, WASO, REML,
@@ -13,23 +13,24 @@ N1/N2/N3/REM %) using HMM forward-filtering backward-sampling (FFBS) over stager
 normalised split-conformal calibration; two stagers (YASA pretrained external; LightGBM in-domain on SC),
 three cohorts (Sleep-EDF SC/ST, HMC; 348 nights, 251 subjects). Protocol: `supplementary/PREREGISTERED_PROTOCOL.md`.
 
-## Key results so far (see EXPERIMENT_LOG.md)
+## Key scientific findings (see EXPERIMENT_LOG.md)
 * Within-cohort validity achieved (0.89–0.92 coverage) for all conformal methods.
-* Efficiency gains vs constant-width/BA-LoA for TST, stage %, REML (SC/ST); not for SOL, REM%, WASO-SC.
+* IMPORTANT CORRECTION: TST bias removal is mostly due to LOCAL CALIBRATION (calibrated plug-in), not posterior
+  averaging (YASA HMC MAE: raw 40.2, calibrated 19.5, FFBS mean 19.3 min, p=0.64). Manuscript must say so.
+* Original constant-width comparators were centred on the raw biased plug-in → added bias-corrected
+  constant-width conformal (`scp_abs_bc`, distribution-free LoA) and centre×scale factorial (CHANGELOG).
 * Cross-cohort coverage fails for N3% (bias sign flips SC vs HMC); 10 local nights restore coverage.
-* Posterior-mean TST removes plug-in bias (−38 → −4 min in HMC); WASO-SC failure (long post-awakening wake).
 
-## Code / pipeline
-`Target_Journal_Submission/code/` — run_all.py (quick/full), experiments e01–e10, scripts make_tables/make_figures,
-tests (8 passing). Manuscript sources: `Target_Journal_Submission/manuscript/sections/*.md`, builder build_manuscript.py
-(pandoc + python-docx + LibreOffice; numbers injected from tables/manuscript_numbers.json).
-
-## In progress (background)
-* Rerun chain E03→E04→E06→E07→E04-seeds after adding calibrated plug-in comparators (CHANGELOG).
-* E09 robustness (YASA predictions on corrupted signals; 1 worker).
+## In progress (background, started 21:56)
+`code/scripts/rerun_conformal_evaluations.sh` = E04 main → E06 → E07 → E08 → E09 (skip-predict; regenerates
+corrupted-night summaries with plugc columns) → E04 seeds → E10. Log: results/experiment_logs/.
+Review cycle 1 wave A agents (#1 novelty, #2 methodology, #5 dataset/leakage, #8 literature) running;
+outputs → REVIEW/cycle01/agentNN_*.md.
 
 ## Next exact steps
-1. After chain: run E08 (error analysis), E10 (efficiency), make_tables, make_figures.
-2. Write Results/Discussion/Conclusion/Abstract with placeholders; references; build DOCX/PDF.
-3. Ten-agent review cycles (REVIEW/), fixes, reruns.
-4. Cover letter, final audits, risk report, decision; commit + push to branch claude/tender-bohr-dljsc0.
+1. When chain finishes: `python scripts/make_tables.py`, `python scripts/make_figures.py`; rewrite Results 3.3/3.4,
+   Abstract, Highlights, Discussion for the calibration finding (use NUM keys n_sig_better_vs_scp_abs_bc_*,
+   pe_*_plug_in_calibrated_*); `python manuscript/build_manuscript.py`.
+2. Launch cycle-1 wave B agents (#3 design, #4 statistics, #6 robustness, #7 efficiency, #9 AE, #10 competitor).
+3. Consolidate cycle-1 reviews → REVIEW/review_01.md; fix; rerun; cycles 2..10 (delta reviews).
+4. Cover letter DOCX, final audits, risk report, decision; commit + push (branch claude/tender-bohr-dljsc0).

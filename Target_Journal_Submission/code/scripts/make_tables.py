@@ -14,7 +14,10 @@ from src.evaluation.conformal_eval import PARAMS, PROPOSED  # noqa: E402
 from src.utils import RESULTS_DIR, TABLES_DIR, cache_root  # noqa: E402
 
 STAGERS = {"yasa": "YASA (pretrained, external)", "lgbm_sc_s0": "LightGBM-SC (in-domain)"}
-METHOD_LABEL = {"ba_loa": "Bland–Altman LoA", "scp_abs": "Split conformal (constant)",
+METHOD_LABEL = {"ba_loa": "Bland–Altman LoA", "scp_abs": "Split conformal (constant, raw plug-in)",
+                "scp_abs_bc": "Distribution-free LoA (bias-corrected constant width)",
+                "scp_abs_cal": "Split conformal (constant, calibrated plug-in)",
+                "norm_reg_plug": "FFBS-SD scale, raw plug-in centre", "norm_reg_plugc": "FFBS-SD scale, calibrated plug-in centre",
                 "scp_abs_mu": "Split conformal (constant, FFBS centre)", "bayes_pct": "FFBS percentiles (uncalibrated)",
                 "ind_pct": "Independent-epoch percentiles (uncalibrated)", "cqr_ffbs": "CQR on FFBS quantiles",
                 "cqr_qr": "CQR, quantile regression", "norm_entropy_reg": "Normalised by mean entropy",
@@ -75,7 +78,7 @@ def table1():
 
 
 UNIT = {"TST": "min", "SOL": "min", "WASO": "min", "REML": "min", "N1%": "pp", "N2%": "pp", "N3%": "pp", "REM%": "pp"}
-COMP = ["ba_loa", "scp_abs", "scp_abs_cal", "scp_abs_mu", "cqr_qr", "cqr_ffbs", "norm_entropy_reg", "norm_ffbs"]
+COMP = ["ba_loa", "scp_abs", "scp_abs_bc", "scp_abs_cal", "scp_abs_mu", "cqr_qr", "cqr_ffbs", "norm_entropy_reg", "norm_ffbs"]
 
 
 def _splits(st):
@@ -97,7 +100,8 @@ def table2():
                 pr = g.loc[(c, p, PROPOSED)]
                 r[f"{c} coverage"] = round(pr["coverage"], 3)
                 r[f"{c} width"] = round(pr["mean_width"], 1)
-                for b, lab in (("ba_loa", "vs BA-LoA"), ("scp_abs", "vs constant")):
+                for b, lab in (("ba_loa", "vs BA-LoA"), ("scp_abs_bc", "vs DF-LoA"), ("scp_abs", "vs constant"),
+                               ("scp_abs_cal", "vs constant-cal")):
                     t = pt[(pt.cohort == c) & (pt.param == p) & (pt.baseline == b)].iloc[0]
                     ratio = g.loc[(c, p, PROPOSED), "interval_score"] / g.loc[(c, p, b), "interval_score"]
                     r[f"{c} IS ratio {lab}"] = f"{ratio:.2f}{'*' if t.p_holm < 0.05 else ''}"
@@ -109,10 +113,14 @@ def table2():
         cov_all = g.xs(PROPOSED, level="method")["coverage"]
         NUM[f"cov_min_{st}"] = float(cov_all.min())
         NUM[f"cov_max_{st}"] = float(cov_all.max())
-        for m in ["ba_loa", "scp_abs", "cqr_qr", "cqr_ffbs", "bayes_pct", "ind_pct"]:
+        for m in ["ba_loa", "scp_abs", "scp_abs_bc", "scp_abs_cal", "cqr_qr", "cqr_ffbs", "bayes_pct", "ind_pct"]:
             cm = g.xs(m, level="method")["coverage"]
             NUM[f"cov_min_{st}_{m}"] = float(cm.min())
             NUM[f"cov_max_{st}_{m}"] = float(cm.max())
+        for b in ["scp_abs_bc", "scp_abs_cal", "cqr_ffbs", "cqr_qr", "norm_entropy_reg", "norm_reg_plugc"]:
+            sb = pt[(pt.baseline == b)]
+            NUM[f"n_sig_better_vs_{b}_{st}"] = int(((sb.p_holm < 0.05) & (sb.mean_is_proposed < sb.mean_is_baseline)).sum())
+            NUM[f"n_sig_worse_vs_{b}_{st}"] = int(((sb.p_holm < 0.05) & (sb.mean_is_proposed > sb.mean_is_baseline)).sum())
         sig = pt[(pt.baseline == "scp_abs")]
         NUM[f"n_sig_better_vs_const_{st}"] = int(((sig.p_holm < 0.05) & (sig.mean_is_proposed < sig.mean_is_baseline)).sum())
         NUM[f"n_sig_worse_vs_const_{st}"] = int(((sig.p_holm < 0.05) & (sig.mean_is_proposed > sig.mean_is_baseline)).sum())
@@ -125,7 +133,7 @@ def table2():
     for _, r in t2.iterrows():
         d = {"Stager": "YASA" if r["Stager"].startswith("YASA") else "LightGBM-SC", "Parameter": r["Parameter"]}
         for c in COHORTS:
-            d[c] = f"{r[f'{c} coverage']:.3f} | {r[f'{c} width']:.1f} | {r[f'{c} IS ratio vs constant']} | {r[f'{c} IS ratio vs BA-LoA']}"
+            d[c] = f"{r[f'{c} coverage']:.3f} | {r[f'{c} width']:.1f} | {r[f'{c} IS ratio vs DF-LoA']} | {r[f'{c} IS ratio vs BA-LoA']}"
         disp.append(d)
     md(pd.DataFrame(disp), TABLES_DIR / "table2_display")
 
@@ -190,7 +198,8 @@ def supp_tables():
         d = _splits(st)
         d = d[d.alpha == 0.10]
         g = d.groupby(["cohort", "param", "method"])["interval_score"].mean().unstack("method")
-        for m in ["norm_reg_ind", "norm_reg_ffbs1", "norm_ffbs", "norm_entropy_reg", "cqr_ffbs", "scp_abs_mu", "scp_abs_cal"]:
+        for m in ["norm_reg_ind", "norm_reg_ffbs1", "norm_ffbs", "norm_entropy_reg", "cqr_ffbs", "scp_abs_mu", "scp_abs_cal",
+                  "scp_abs_bc", "norm_reg_plug", "norm_reg_plugc", "scp_abs"]:
             if m not in g:
                 continue
             r = (g[m] / g[PROPOSED]).rename("ratio_to_proposed").reset_index()
@@ -202,7 +211,8 @@ def supp_tables():
     piv = ab.pivot_table(index=["stager", "param"], columns="variant", values="ratio_to_proposed", aggfunc="median").round(2).reset_index()
     md(piv, TABLES_DIR / "tableS_ablation_summary")
     for st in STAGERS:
-        for m in ["norm_reg_ind", "norm_reg_ffbs1", "norm_ffbs", "cqr_ffbs", "scp_abs_cal", "scp_abs_mu", "norm_entropy_reg"]:
+        for m in ["norm_reg_ind", "norm_reg_ffbs1", "norm_ffbs", "cqr_ffbs", "scp_abs_cal", "scp_abs_mu", "norm_entropy_reg",
+                  "scp_abs_bc", "norm_reg_plug", "norm_reg_plugc", "scp_abs"]:
             sub = ab[(ab.stager == st) & (ab.variant == m)]
             if len(sub):
                 NUM[f"ablation_median_ratio_{st}_{m}"] = float(sub.ratio_to_proposed.median())
@@ -214,7 +224,7 @@ def supp_tables():
         f = RESULTS_DIR / "raw" / f"e04_splits_lgbm_sc_s{s}.csv.gz"
         if f.exists():
             d = pd.read_csv(f)
-            d = d[(d.alpha == 0.10) & (d.method.isin([PROPOSED, "scp_abs", "ba_loa"]))]
+            d = d[(d.alpha == 0.10) & (d.method.isin([PROPOSED, "scp_abs", "scp_abs_bc", "ba_loa"]))]
             g = d.groupby(["cohort", "param", "method"])[["coverage", "mean_width", "interval_score"]].mean().reset_index()
             g["seed"] = s
             sd.append(g)
@@ -228,6 +238,25 @@ def supp_tables():
         NUM["seed_max_width_cv"] = float(v.width_cv.max())
         NUM["n_seeds"] = int(sd.seed.nunique())
     # sample-size sensitivity M (proposed scale computed from first 100/300/1000 draws)
+    # centre x scale factorial (paired LOSO tests, same centre)
+    ft = []
+    for st in STAGERS:
+        f = RESULTS_DIR / "statistics" / f"e07_factorial_tests_{st}.csv"
+        if f.exists():
+            t = pd.read_csv(f)
+            t.insert(0, "stager", st)
+            ft.append(t)
+            for centre, key in (("raw plug-in", "raw"), ("calibrated plug-in", "cal"), ("FFBS mean", "mu")):
+                tc = t[t.centre == centre]
+                NUM[f"fact_better_{st}_{key}"] = int(((tc.p_holm < 0.05) & (tc.ratio < 1)).sum())
+                NUM[f"fact_worse_{st}_{key}"] = int(((tc.p_holm < 0.05) & (tc.ratio > 1)).sum())
+                NUM[f"fact_lower_{st}_{key}"] = int((tc.ratio < 1).sum())
+                NUM[f"fact_n_{st}_{key}"] = int(len(tc))
+                NUM[f"fact_median_ratio_{st}_{key}"] = float(tc.ratio.median())
+                for _, r in tc.iterrows():
+                    NUM[f"fact_ratio_{st}_{key}_{r.cohort}_{r.param}"] = float(r.ratio)
+    if ft:
+        md(pd.concat(ft), TABLES_DIR / "tableS_factorial_tests")
     # LOSO coverage + bootstrap CIs
     lc = []
     for st in STAGERS:
@@ -252,7 +281,7 @@ def supp_tables():
     for st in STAGERS:
         t = pd.read_csv(RESULTS_DIR / "statistics" / f"e07_subgroup_coverage_{st}.csv")
         t.insert(0, "stager", st)
-        sg.append(t[t.method.isin([PROPOSED, "scp_abs", "ba_loa"])])
+        sg.append(t[t.method.isin([PROPOSED, "scp_abs", "scp_abs_bc", "ba_loa"])])
     sg = pd.concat(sg)
     md(sg, TABLES_DIR / "tableS_subgroup_coverage")
     pr = sg[sg.method == PROPOSED]
@@ -266,7 +295,7 @@ def supp_tables():
         so = pd.read_csv(RESULTS_DIR / "raw" / f"e06_source_only_{st}.csv")
         so = so[so.alpha == 0.10]
         xs.append(so)
-        for _, r in so[so.method.isin([PROPOSED, "ba_loa", "scp_abs"])].iterrows():
+        for _, r in so[so.method.isin([PROPOSED, "ba_loa", "scp_abs", "scp_abs_bc", "scp_abs_cal", "cqr_ffbs"])].iterrows():
             NUM[f"x_cov_{st}_{r.target}_{r.param}_{r.method}"] = float(r.coverage)
             NUM[f"x_width_{st}_{r.target}_{r.param}_{r.method}"] = float(r.mean_width)
     md(pd.concat(xs), TABLES_DIR / "tableS_cross_cohort_source_only")
@@ -333,9 +362,36 @@ def supp_tables():
     NUM["tau_median"] = float(np.median(taus))
 
 
+def export_manifest_files():
+    """results/raw_results.csv (per-night results, both stagers, LOSO intervals of the proposed method),
+    results/metrics.json (all manuscript numbers), results/statistics.json (all hypothesis tests)."""
+    rows = []
+    for st in STAGERS:
+        summ = pd.read_csv(RESULTS_DIR / "summaries" / f"{st}_xfit.csv")
+        keep = ["night", "subject", "cohort", "age", "sex", "condition", "n_scored", "acc_plugin", "mean_entropy"]
+        for p in PARAMS:
+            keep += [f"ref_{p}", f"plug_{p}", f"plugc_{p}", f"ffbs_mean_{p}", f"ffbs_sd_{p}"]
+        d = summ[[c for c in keep if c in summ.columns]].copy()
+        loso = pd.read_csv(RESULTS_DIR / "raw" / f"e04_loso_{st}.csv")
+        loso = loso[loso.method == PROPOSED].pivot_table(index="night", columns="param", values=["lo", "hi"])
+        loso.columns = [f"interval_{a}_{b}" for a, b in loso.columns]
+        d = d.merge(loso.reset_index(), on="night", how="left")
+        d.insert(0, "stager", st)
+        rows.append(d)
+    pd.concat(rows).to_csv(RESULTS_DIR / "raw_results.csv", index=False)
+    (RESULTS_DIR / "metrics.json").write_text(json.dumps(NUM, indent=1, default=float))
+    stats = {}
+    for st in STAGERS:
+        for name in ["paired_tests", "factorial_tests", "point_estimates", "flagging", "loso_coverage"]:
+            f = RESULTS_DIR / "statistics" / f"e07_{name}_{st}.csv"
+            if f.exists():
+                stats[f"{name}_{st}"] = json.loads(pd.read_csv(f).to_json(orient="records"))
+    (RESULTS_DIR / "statistics.json").write_text(json.dumps(stats, indent=1))
+
+
 if __name__ == "__main__":
     table1()
-    for fn in (table2, table3, supp_tables):
+    for fn in (table2, table3, supp_tables, export_manifest_files):
         try:
             fn()
         except FileNotFoundError as e:

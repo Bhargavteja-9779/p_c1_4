@@ -19,10 +19,12 @@ plt.rcParams.update({"font.size": 8, "axes.titlesize": 9, "axes.labelsize": 8, "
                      "xtick.labelsize": 7, "ytick.labelsize": 7, "font.family": "DejaVu Sans",
                      "axes.spines.top": False, "axes.spines.right": False})
 # colour-blind-safe palette (Okabe–Ito)
-C = {"ba_loa": "#999999", "scp_abs": "#E69F00", "scp_abs_mu": "#F0E442", "cqr_qr": "#56B4E9",
+C = {"ba_loa": "#999999", "scp_abs": "#E69F00", "scp_abs_bc": "#E69F00", "scp_abs_cal": "#882255", "norm_reg_plugc": "#44AA99", "scp_abs_mu": "#F0E442", "cqr_qr": "#56B4E9",
      "cqr_ffbs": "#009E73", "norm_entropy_reg": "#CC79A7", "norm_ffbs": "#D55E00", PROPOSED: "#0072B2",
      "bayes_pct": "#000000", "ind_pct": "#AAAAAA"}
-LAB = {"ba_loa": "Bland–Altman LoA", "scp_abs": "Conformal, constant", "scp_abs_mu": "Conformal, constant (FFBS centre)",
+LAB = {"ba_loa": "Bland–Altman LoA", "scp_abs": "Conformal, constant (raw centre)",
+       "scp_abs_bc": "Distribution-free LoA (bias-corrected constant)", "scp_abs_cal": "Conformal, constant (calibrated centre)",
+       "norm_reg_plugc": "FFBS-scaled, calibrated centre", "scp_abs_mu": "Conformal, constant (FFBS centre)",
        "cqr_qr": "CQR (quantile regression)", "cqr_ffbs": "CQR (FFBS quantiles)", "norm_entropy_reg": "Conformal, entropy-scaled",
        "norm_ffbs": "Conformal, FFBS SD (unreg.)", PROPOSED: "Proposed (FFBS-scaled)", "bayes_pct": "FFBS percentiles (uncal.)",
        "ind_pct": "Independent-epoch percentiles (uncal.)"}
@@ -97,7 +99,7 @@ def fig1_example(night="SN050", cohort="HMC", stager="yasa"):
 
 
 def fig2_within(stagers=("yasa", "lgbm_sc_s0")):
-    meths = ["ba_loa", "scp_abs", "cqr_qr", "cqr_ffbs", "norm_entropy_reg", PROPOSED]
+    meths = ["ba_loa", "scp_abs_cal", "cqr_qr", "cqr_ffbs", "norm_entropy_reg", PROPOSED]
     fig, axes = plt.subplots(2, 3, figsize=(7.2, 4.6), sharey="row")
     for si, st in enumerate(stagers):
         d = pd.read_csv(RESULTS_DIR / "raw" / f"e04_splits_{st}.csv.gz")
@@ -106,7 +108,7 @@ def fig2_within(stagers=("yasa", "lgbm_sc_s0")):
         for ci, c in enumerate(["SC", "ST", "HMC"]):
             ax = axes[si, ci]
             gc = g[g.cohort == c]
-            ref = gc[gc.method == "scp_abs"].set_index("param")["interval_score"]
+            ref = gc[gc.method == "scp_abs_bc"].set_index("param")["interval_score"]
             for mi, m in enumerate(meths):
                 gm = gc[gc.method == m].set_index("param").reindex(PARAMS)
                 x = np.arange(len(PARAMS)) + (mi - len(meths) / 2) * 0.12
@@ -116,7 +118,7 @@ def fig2_within(stagers=("yasa", "lgbm_sc_s0")):
             ax.set_xticks(range(len(PARAMS))); ax.set_xticklabels(PARAMS, rotation=45, ha="right")
             ax.set_title(f"{STAGER_LAB[st]} – {c}", loc="left")
             if ci == 0:
-                ax.set_ylabel("Interval score relative to\nconstant-width conformal")
+                ax.set_ylabel("Interval score relative to\ndistribution-free LoA")
     axes[0, 0].legend(ncol=3, loc="lower left", bbox_to_anchor=(0, 1.15), frameon=False)
     fig.tight_layout()
     save(fig, "fig2_within_cohort_efficiency")
@@ -165,7 +167,7 @@ def fig4_transport(stagers=("yasa", "lgbm_sc_s0")):
         so = pd.read_csv(RESULTS_DIR / "raw" / f"e06_source_only_{st}.csv")
         so = so[so.alpha == 0.10]
         ax = axes[si, 0]
-        meths = ["ba_loa", "scp_abs", "cqr_ffbs", PROPOSED]
+        meths = ["ba_loa", "scp_abs_bc", "cqr_ffbs", PROPOSED]
         for ti, tgt in enumerate(["ST", "HMC"]):
             for mi, m in enumerate(meths):
                 v = so[(so.target == tgt) & (so.method == m)].set_index("param").reindex(PARAMS)["coverage"]
@@ -178,7 +180,7 @@ def fig4_transport(stagers=("yasa", "lgbm_sc_s0")):
         for j, tgt in enumerate(["HMC", "ST"]):
             ax = axes[si, 1 + j]
             g = fs[fs.target == tgt].groupby(["strategy", "n_target", "method"])["coverage"].mean().reset_index()
-            for m in ["ba_loa", "scp_abs", PROPOSED]:
+            for m in ["ba_loa", "scp_abs_bc", PROPOSED]:
                 for strat, ls in (("target", "-"), ("pooled", "--")):
                     gg = g[(g.method == m) & (g.strategy == strat)]
                     ax.plot(gg.n_target, gg.coverage, ls, color=C[m], marker="o", ms=3,
@@ -199,7 +201,7 @@ def fig5_robust():
     lab = ["clean", "noise 0.5 SD", "noise 1.0 SD", "artefacts 10%", "artefacts 25%"]
     fig, axes = plt.subplots(2, 3, figsize=(7.2, 3.8))
     for i, p in enumerate(["TST", "WASO", "N3%"]):
-        for m in ["ba_loa", "scp_abs", "cqr_ffbs", PROPOSED]:
+        for m in ["ba_loa", "scp_abs_bc", "cqr_ffbs", PROPOSED]:
             gg = g[(g.param == p) & (g.method == m)].set_index("corruption").reindex(order)
             axes[0, i].plot(range(5), gg.coverage, "-o", ms=3, color=C[m], label=LAB[m])
             axes[1, i].plot(range(5), gg.mean_width, "-o", ms=3, color=C[m])

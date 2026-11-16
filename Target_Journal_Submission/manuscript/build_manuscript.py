@@ -190,6 +190,12 @@ def main():
                    check=True)
     postprocess(out)
     print("DOCX:", out)
+    # cover letter (same number injection)
+    cl = render((HERE / "cover_letter.md").read_text(), ns)
+    (build / "cover_letter_rendered.md").write_text(cl)
+    subprocess.run(["pandoc", str(build / "cover_letter_rendered.md"), "-o", str(HERE / "cover_letter.docx"),
+                    "--reference-doc", str(ref)], check=True)
+    print("Cover letter:", HERE / "cover_letter.docx")
     if not a.no_pdf:
         subprocess.run(["soffice", "--headless", "--convert-to", "pdf", "--outdir", str(HERE), str(out)],
                        check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)

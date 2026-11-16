@@ -22,7 +22,7 @@ from src.statistics.stats import (auroc, bland_altman, cluster_bootstrap, holm, 
 from src.uncertainty.conformal import interval_score  # noqa: E402
 from src.utils import RESULTS_DIR  # noqa: E402
 
-BASELINES = ["ba_loa", "scp_abs", "scp_abs_cal", "scp_abs_mu", "cqr_ffbs", "cqr_qr", "norm_entropy_reg", "norm_ffbs"]
+BASELINES = ["ba_loa", "scp_abs", "scp_abs_bc", "scp_abs_cal", "scp_abs_mu", "norm_reg_plugc", "cqr_ffbs", "cqr_qr", "norm_entropy_reg", "norm_ffbs"]
 # clinically relevant error thresholds (pre-registered primary: TST, REML, N3%; others secondary)
 THRESH = {"TST": 30, "REML": 30, "N3%": 5, "SOL": 15, "WASO": 30, "N1%": 5, "N2%": 10, "REM%": 5}
 PRIMARY_FLAG = ["TST", "REML", "N3%"]
@@ -46,6 +46,35 @@ def paired_tests(loso):
     df = pd.DataFrame(rows)
     df["p_holm"] = np.nan
     for c, g in df.groupby("cohort"):  # Holm across baselines x parameters within cohort
+        df.loc[g.index, "p_holm"] = holm(g["p"].values)
+    return df
+
+
+FACTORIAL = [("raw plug-in", "scp_abs", "norm_reg_plug"),
+             ("calibrated plug-in", "scp_abs_cal", "norm_reg_plugc"),
+             ("FFBS mean", "scp_abs_mu", "norm_reg_ffbs")]
+
+
+def factorial_tests(loso):
+    """Effect of the FFBS-SD SCALE with the CENTRE held fixed: per centre, FFBS-scaled vs constant-width
+    interval (Wilcoxon on per-subject mean LOSO interval scores; Holm across centres x parameters
+    within cohort)."""
+    loso = loso.copy()
+    loso["is"] = interval_score(loso["y"].values, loso["lo"].values, loso["hi"].values, 0.10)
+    rows = []
+    for (cohort, p), g in loso.groupby(["cohort", "param"]):
+        subj = g.groupby(["method", "subject"])["is"].mean().unstack("method")
+        for centre, const_m, scaled_m in FACTORIAL:
+            if const_m not in subj or scaled_m not in subj:
+                continue
+            t = wilcoxon_paired(subj[scaled_m].values, subj[const_m].values)
+            rows.append(dict(cohort=cohort, param=p, centre=centre, constant=const_m, scaled=scaled_m,
+                             n_subjects=t["n"], mean_is_scaled=subj[scaled_m].mean(),
+                             mean_is_constant=subj[const_m].mean(),
+                             ratio=subj[scaled_m].mean() / subj[const_m].mean(), r_rb=t["r_rb"], p=t["p"]))
+    df = pd.DataFrame(rows)
+    df["p_holm"] = np.nan
+    for c, g in df.groupby("cohort"):
         df.loc[g.index, "p_holm"] = holm(g["p"].values)
     return df
 
@@ -139,6 +168,7 @@ def main():
         summ = pd.read_csv(RESULTS_DIR / "summaries" / f"{s}_xfit.csv")
         pt = paired_tests(loso)
         pt.to_csv(out / f"e07_paired_tests_{s}.csv", index=False)
+        factorial_tests(loso).to_csv(out / f"e07_factorial_tests_{s}.csv", index=False)
         loso_coverage(loso).to_csv(out / f"e07_loso_coverage_{s}.csv", index=False)
         flagging(summ, loso).to_csv(out / f"e07_flagging_{s}.csv", index=False)
         point_estimates(summ).to_csv(out / f"e07_point_estimates_{s}.csv", index=False)
