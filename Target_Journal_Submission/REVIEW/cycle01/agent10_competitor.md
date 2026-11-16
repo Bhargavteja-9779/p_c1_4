@@ -1,14 +1,14 @@
 # Reviewer #10 (hostile competing researcher), cycle 1
 
 ## Summary of the submission (3-5 sentences)
-The authors sample whole hypnograms by FFBS from a tempered hybrid HMM built on a stager's (recalibrated) epoch probabilities, and conformalise the per-night posterior spread to obtain 90 % intervals for eight sleep parameters. The evaluation covers YASA and an in-domain LightGBM stager on Sleep-EDF SC/ST and HMC (348 nights), with 16 interval methods, 500 subject-grouped splits and LOSO tests. Coverage is nominal within cohorts. Relative to constant-width limits of agreement, the headline claim is better efficiency ("more informative"), with gains concentrated in TST. I re-analysed `results/raw/e04_splits_{yasa,lgbm_sc_s0}.csv.gz` (α = 0.10; 2 stagers × 3 cohorts × 8 parameters = 48 combinations), `e07_paired_tests_*.csv` and `results/summaries/*_xfit.csv`. My re-implementation reproduces the published ratios (DF-LoA/proposed geometric mean 1.055 vs 1.057).
+FFBS hypnogram samples from a tempered HMM on recalibrated stager probabilities are conformalised into per-night 90 % intervals for eight parameters (YASA and LightGBM; SC, ST, HMC; 348 nights). Coverage is nominal within cohorts; the headline claim is greater efficiency than limits of agreement ("more informative"), mainly for TST. I re-analysed `e04_splits_{yasa,lgbm_sc_s0}.csv.gz` (α = 0.10; 48 stager × cohort × parameter combinations), `e07_paired_tests_*.csv` and `summaries/*_xfit.csv`; my re-implementation reproduces the published ratios (DF-LoA/proposed 1.055 vs 1.057).
 
 ## Fatal concerns
-None. The validity results are sound and the authors report many negative findings honestly. My concerns are about whether the efficiency gain is real and how large it is.
+None. Validity is sound and negative findings are reported candidly; my concerns are about the size and source of the efficiency gain.
 
 ## Critical/Major concerns
 
-**M1. The pre-specified method does not beat simple or variant competitors overall.** Ratios are competitor IS / proposed IS (mean over 500 splits); values < 1 mean the competitor is better. The LOSO column counts Holm-significant results from `e07_paired_tests`.
+**M1. The pre-specified method does not beat simple or variant competitors overall.** Ratio = competitor IS / proposed IS (500-split means; < 1 favours the competitor); LOSO = Holm-significant counts from `e07_paired_tests`.
 
 | Competitor | geo-mean ratio | arith. mean | competitor better (of 48) | better by ≥5 % | proposed better by ≥5 % | LOSO: proposed sig. better / worse | min coverage |
 |---|---|---|---|---|---|---|---|
@@ -22,9 +22,9 @@ None. The validity results are sound and the authors report many negative findin
 
 (Minimum coverage of the proposed method: 0.890.)
 
-The simplest competitor, DF-LoA, comes within ~6 % on average and wins in 17 of 48 combinations. An oracle that picks the best of the three constant-width intervals per combination beats the proposed method on average (0.954; 23/48 wins). Three variants dominate the pre-specified configuration: CQR on FFBS quantiles, the calibrated-plug-in centre, and the unregularised score. The unregularised score is never worse by ≥5 % and is significantly better in 20/48 LOSO tests. The manuscript calls this "modestly" (line 115) and keeps σ̄ in the method. *Action:* add this 48-combination summary to the main text. Present the pre-specified method as dominated by its own ablations, and state the effect size (~5 %) in the abstract.
+DF-LoA is within ~6 % on average and wins 17/48; the best of the three constant-width intervals per cell beats the proposed method (0.954; 23/48). CQR-FFBS, the calibrated-plug-in centre and the unregularised score dominate the pre-specified configuration; dropping σ̄ is never ≥5 % worse and significantly better in 20/48 LOSO tests, yet line 115 calls this "modest". *Action:* add this 48-combination summary to the main text. Present the pre-specified method as dominated by its own ablations, and state the effect size (~5 %) in the abstract.
 
-**M2. The headline TST gain is mostly a better point estimate, not better uncertainty.** I decomposed log(IS_prop/IS_DF-LoA) into a centre step (DF-LoA → constant width around μ̂, `scp_abs_mu`) and a scale step (`scp_abs_mu` → proposed). Geometric means over 6 combinations per row:
+**M2. The headline TST gain is mostly a better point estimate, not better uncertainty.** Decomposition of prop/DF-LoA into a centre step (DF-LoA → constant width around μ̂, `scp_abs_mu`) and a scale step (`scp_abs_mu` → proposed); geometric means over 6 cells:
 
 | Param | DF-LoA/prop | plugc-scaled/prop | cqr_ffbs/prop | prop/DF-LoA | centre part | scale part |
 |---|---|---|---|---|---|---|
@@ -38,19 +38,17 @@ The simplest competitor, DF-LoA, comes within ~6 % on average and wins in 17 of 
 | SOL | 0.867 | 0.863 | 0.749 | 1.154 | 1.448 | 0.797 |
 | All 48 | 1.057 | 0.993 | 0.953 | 0.946 | **1.037** | **0.912** |
 
-- About two-thirds of the TST gain (in log terms) comes from the centre. Across all parameters the posterior-mean centre is *worse* than plug-in plus bias (1.037).
-- The "largest gain" in Table 2, YASA ST TST at 0.59, splits into centre 0.639 × scale 0.930. In that cell, a *constant-width* interval around the calibrated plug-in beats the proposed method (scp_abs_cal/prop = 0.73).
-- Gains are not driven by the small ST cohort: DF-LoA/prop is 1.064 without ST. They are driven by TST: without TST the ratio is 1.018 (17/42 wins), i.e. near parity.
+Two-thirds of the TST gain (log scale) is the centre; over all parameters the μ̂ centre is *worse* than plug-in + bias (1.037). The "largest gain" (YASA ST TST, 0.59) is centre 0.639 × scale 0.930, and there a *constant-width* interval around the calibrated plug-in beats the proposed method (0.73). Gains are TST-driven, not ST-driven: without ST DF-LoA/prop = 1.064; without TST 1.018 (17/42 wins).
 
-*Action:* say that the TST advantage over LoA comes mainly from per-night probability recalibration. Report the centre/scale decomposition, and attribute only ~9 % to adaptivity.
+*Action:* attribute the TST advantage mainly to probability recalibration, report the decomposition, and credit adaptivity with ~9 %.
 
 **M3. Labelled data are used asymmetrically (fairness).** Line 89 states "Comparators used the same calibration nights". This is not true:
 - BCTS, π_s, A, p₀ and τ, which define μ̂ and the calibrated plug-in, are cross-fitted on a fixed 5-fold split covering ~80 % of the cohort (`e03_night_summaries.py` l.24–68, `FOLD_SEED=2026`). This split is independent of the 500 random 50/50 conformal splits, so it includes labels of the *test* half.
 - DF-LoA and BA-LoA estimate their bias from the 50 % calibration half only (`conformal_eval.py` l.83–94).
 - CQR-QR is fitted on *half the calibration subjects* (`_qr_fit_predict`, l.63–78): ~25 % of the cohort, ≈11 nights (5–6 subjects) in ST, for an unpenalised 5-coefficient fit at the 0.05/0.95 quantiles. Its features also omit the FFBS SD. It is a strawman (geo-mean ratio 1.137).
-- Because calibration scores depend on test labels through the cross-fit, the "exact" finite-sample claim (lines 82, 86) does not strictly hold within cohort.
+- Calibration scores depend on test labels via the cross-fit, so the "exact" guarantee (lines 82, 86) does not strictly hold within cohort.
 
-*Action:* use a nested design in which every learned component is fitted only on the calibration half. Alternatively, give comparators the same 80 % (e.g. bias estimated on the cross-fit folds). Refit CQR-QR with CV+/cross-conformal on all calibration nights and with log σ̂ as a feature.
+*Action:* nested design fitting every learned component on the calibration half only (or give comparators the same 80 %); CQR-QR via CV+ on all calibration nights with log σ̂ as a feature.
 
 **M4. "A few / ten local nights corrected the TST bias" was never tested.** In E06 (`e06_cross_cohort.py` l.45), target nights use `srcSC` summaries: BCTS and HMM are fitted on SC, and only the conformal quantile uses the n_t target nights. The within-cohort TST bias reduction (−38 → −5 min, HMC) used BCTS fitted on ~120 HMC nights (~35 in ST). Highlights 2–3, Discussion (line 135, "a few locally scored nights") and Conclusion (line 148, "A small set of locally scored nights corrected most of the stagers' TST bias") conflate the two experiments. *Action:* run BCTS recalibration on n_t ∈ {10, 20, 30} target nights, or reword these claims.
 
@@ -61,9 +59,9 @@ The simplest competitor, DF-LoA, comes within ~6 % on average and wins in 17 of 
 | All | 1.062 (11) | 1.308 | 1.105 |
 | Easier half | **0.905 (21)** | **1.011** | 1.102 |
 
-With smaller errors, DF-LoA beats the proposed method in most combinations and the TST advantage disappears. Only the ~10 % scale gain at a fixed centre survives. The evaluated stagers are weak: YASA per-night κ is 0.63–0.73, and LightGBM on HMC is 0.49, where the largest TST gain (0.67) occurs. The Fpz-Cz montage is not the main issue, since HMC with YASA's preferred C4-M1 montage is the worst cohort. Still, nothing shows that the conclusion holds for modern sequence models (U-Sleep, SleepTransformer). Their long built-in context could also push τ even lower. *Action:* add at least one pretrained deep stager, and report gains as a function of stager accuracy.
+With smaller errors DF-LoA wins most cells and the TST advantage disappears; only the ~10 % fixed-centre scale gain survives. The stagers are weak (YASA κ 0.63–0.73; LightGBM-HMC 0.49, where the largest TST gain, 0.67, occurs). Fpz-Cz is not the main issue (HMC with YASA's preferred C4-M1 is the worst cohort), but nothing shows the conclusion holds for U-Sleep/SleepTransformer, whose longer context may push τ lower still. *Action:* add at least one pretrained deep stager, and report gains as a function of stager accuracy.
 
-**M6. "More informative" is not shown in absolute terms.** I compared the proposed intervals with a null conformal interval around the calibration mean of the reference value, which ignores the recording (200 splits). For REM % (YASA), proposed/null IS is 0.99, 1.09 and 1.05 (HMC/SC/ST), and the proposed widths are *wider* than the null (22.0/25.0/24.0 vs 20.5/21.1/20.4 pp). For YASA SC WASO the ratio is 1.53 (width 230.6 vs 127.5 min). Across all 48 combinations, the proposed method is worse than the null in 8 and within 10 % of it in 17. The median by parameter is 0.91 for N1 % and N2 % and 0.99 for REM %. *Action:* report the null baseline. Restrict "informative" to TST, N3 %, SOL and REML, and qualify the Conclusion accordingly.
+**M6. "More informative" is not shown in absolute terms.** Against a null conformal interval around the calibration mean of the reference (ignoring the recording; 200 splits), YASA REM % proposed/null IS is 0.99/1.09/1.05 (HMC/SC/ST) with *wider* proposed widths (22.0/25.0/24.0 vs 20.5/21.1/20.4 pp); SC WASO 1.53 (230.6 vs 127.5 min). Overall the proposed method is worse than the null in 8/48 cells and within 10 % in 17/48 (median N1 %/N2 % 0.91, REM % 0.99). *Action:* report the null baseline. Restrict "informative" to TST, N3 %, SOL and REML, and qualify the Conclusion accordingly.
 
 ## Moderate concerns
 
@@ -71,13 +69,13 @@ With smaller errors, DF-LoA beats the proposed method in most combinations and t
 
 **Mo2.** Supplementary Table S4 summarises by the *median over cohorts*, which hides heterogeneity: TST scp_abs_cal/prop ranges from 0.73 to 1.30. *Action:* report per-cell ratios with split-bootstrap intervals.
 
-**Mo3.** No method is better for the skewed latencies than the post-hoc CQR-FFBS (SOL 0.749, REML 0.894 relative to the proposed). The protocol already listed `cqr` as a candidate score (S1, RQ3). Pre-specifying a symmetric score was therefore a choice the data contradict. *Action:* discuss this in the Methods rationale, not only as "a post-hoc observation".
+**Mo3.** CQR-FFBS, already a protocol candidate (S1, RQ3), beats the symmetric score for latencies (SOL 0.749, REML 0.894). *Action:* discuss as a design limitation, not only "a post-hoc observation".
 
 ## Minor concerns
 
-**Mi1.** In 13 starred cells of S3/S4, the direction of the split-mean ratio disagrees with the significant LOSO direction. Example: LightGBM ST SOL vs scp_abs_cal has split ratio 0.965 but LOSO ratio 1.179 (p_holm = 0.018). Table 2 itself is consistent. *Action:* flag such cells.
+**Mi1.** In 13 Holm-significant S3/S4 cells the split-mean and LOSO directions disagree (e.g. LightGBM ST SOL vs scp_abs_cal: 0.965 vs 1.179, p_holm = 0.018); Table 2 is consistent. *Action:* flag such cells.
 
-**Mi2.** YASA's ST TST bias correction by a single constant (DF-LoA) is far worse than BCTS (scp_abs_cal/DF-LoA = 0.43). DF-LoA also under-covers in ST (minimum 0.852). This makes ST comparisons against DF-LoA a weak test. *Action:* note this in Section 3.3.
+**Mi2.** In ST, constant bias correction is far worse than BCTS for YASA TST (scp_abs_cal/DF-LoA 0.43) and DF-LoA under-covers (min 0.852), so ST ratios against DF-LoA are a weak test. *Action:* note in Section 3.3.
 
 **Mi3.** The "model-agnostic" claim (line 137) is supported by two feature-based LightGBM stagers only. *Action:* soften it, or address it through M5.
 
@@ -89,7 +87,7 @@ With smaller errors, DF-LoA beats the proposed method in most combinations and t
 5. The centre/scale decomposition in the main text (M2).
 
 ## Recommendation
-**Major revision.** The intervals are valid and the reporting is unusually candid. However, my re-analysis shows that the advantage of the pre-specified method over the simplest competitor averages ~5 %, that two-thirds of the TST gain is a recalibrated point estimate, and that three of the authors' own variants match or beat the method. The advantage over LoA disappears when stager errors are smaller. Several comparisons give the proposed pipeline more labelled data than its competitors, and the "ten local nights fix the bias" message was not tested. The abstract, highlights and conclusions overstate the contribution and must be rewritten after the fair experiments are run.
+**Major revision.** The intervals are valid and reporting is candid, but the gain over the simplest competitor averages ~5 %, two-thirds of the TST gain is a recalibrated point estimate, three of the authors' own variants match or beat the method, and the advantage over LoA vanishes with smaller stager errors. Comparisons give the proposed pipeline more labelled data, and "ten local nights fix the bias" was not tested. Abstract, highlights and conclusions must be rewritten after fair experiments.
 
 ```json
 [

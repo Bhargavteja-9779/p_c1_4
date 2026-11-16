@@ -8,7 +8,7 @@ None.
 
 ## Critical/Major concerns
 
-**M1. The 10-night experiment never recalibrates the stager, so "a few local nights correct the bias" is not tested.** `e06_cross_cohort.py` reads `<stager>_srcSC.csv`. There, BCTS, π_s, A and τ are fitted on SC, and only the conformal step uses the n_t target nights. The HMC TST bias reduction (−38.3 → −4.8 min, Table 3) comes from the `xfit` summaries, i.e. 5-fold cross-fitting with ≈120 HMC nights (`e03_night_summaries.py`, N_FOLDS = 5). Yet the Highlights (l.22–23), Discussion (l.135, "a few locally scored nights"), Clinical use (l.141, "recalibrate the stager's probabilities and the intervals") and Conclusion (l.148, "A small set … corrected most of the TST bias and restored coverage") merge these two experiments into one deployment claim that was never run. *Action:* refit BCTS (and optionally π_s, A, τ) on n_t ∈ {10, 20, 30, 50} target nights. Report bias, MAE, coverage, width and the risk of low coverage on the remaining nights. Otherwise, restate the claims separately.
+**M1. The 10-night experiment never recalibrates the stager, so "a few local nights correct the bias" is not tested.** `e06_cross_cohort.py` reads `<stager>_srcSC.csv`. There, BCTS, π_s, A and τ are fitted on SC, and only the conformal step uses the n_t target nights. The HMC TST bias reduction (−38.3 → −4.8 min, Table 3) comes from the `xfit` summaries, i.e. 5-fold cross-fitting with ≈120 HMC nights (`e03_night_summaries.py`, N_FOLDS = 5). Yet the Highlights (l.22–23), Discussion (l.135, "a few locally scored nights"), Clinical use (l.141, "recalibrate the stager's probabilities and the intervals") and Conclusion (l.148, "A small set … corrected most of the TST bias and restored coverage") merge these two experiments into one deployment claim that was never run. *Action:* refit BCTS (± π_s, A, τ) on n_t ∈ {10, 20, 30, 50} target nights, and report bias, coverage and width on the remaining nights. Otherwise, restate the claims separately.
 
 **M2. "Ten nights restored coverage" is the generic finite-sample conformal law, and single-site reliability is poor.** With n = 10 and α = 0.1, q̂ is the maximum of the 10 calibration scores, and realised coverage follows ≈ Beta(10, 1): mean 0.909, P(<0.80) = 0.107, P(<0.85) = 0.197.
 - HMC matches this exactly. For the proposed method, P(<0.80) is 0.078–0.120 and P(<0.85) is 0.176–0.206 across parameters. A constant-width interval around the calibrated plug-in gives the same (P(<0.80) 0.088–0.124).
@@ -22,11 +22,10 @@ None.
 **M3. Transport failure is broader than reported, the method is the most fragile under shift, and the "cohort shift" may be a montage/rule artefact.** Source-only YASA results (`e06_source_only_yasa.csv`, α = 0.1):
 - The proposed method is the worst or tied-worst method for HMC N3 % (0.377), HMC REML (0.813), ST N3 % (0.705, against 0.818 for Bland–Altman and 0.841 for raw-plug-in conformal) and ST REM % (0.818, against 0.955 for Bland–Altman).
 - ST is also over-covered (100 %) for SOL, WASO and N1 %, so "acceptable on ST for most parameters" (§3.5) is generous.
-- Intervals around the uncorrected plug-in kept N3 % at 0.834 (scp_abs) and 0.841 (FFBS-SD scale). The within-cohort advantage of correcting the centre therefore becomes a liability under shift. This trade-off belongs in the Abstract and the Conclusion.
-- YASA was run on HMC C4-M1, although F4-M1 is cached (`src/data/sleep.py` l.14/179: "frontal, closest available analogue of Fpz-Cz"). AASM N3 is scored on frontal slow-wave amplitude, and 30 % of HMC N3 epochs went to N2 (S10). The N3 "bias reversal" may therefore come from derivation and scoring rules (R&K vs AASM), not from the population.
-- LightGBM's HMC failure (TST 0.503, N3 % 0.305) mixes montage shift (Fpz-Cz → C4-M1) with population shift.
+- Intervals around the uncorrected plug-in kept N3 % at 0.834–0.841, so correcting the centre becomes a liability under shift. The Abstract should state this trade-off.
+- YASA was run on HMC C4-M1, although F4-M1 is cached (`src/data/sleep.py` l.14/179). AASM N3 is scored on frontal slow-wave amplitude, and 30 % of HMC N3 epochs went to N2 (S10). The N3 "bias reversal" may therefore be a derivation/rule artefact (R&K vs AASM) rather than a population shift. LightGBM's HMC failure (TST 0.503) also mixes montage and population shift.
 
-*Action:* re-run HMC with F4-M1 for both stagers. The data are cached, and YASA takes ≈1.4 s per night. Qualify "external validation" in the title and abstract.
+*Action:* re-run HMC with F4-M1 for both stagers, and qualify "external validation" in the title.
 
 **M4. The corruption experiment is a stress test whose mechanism is mis-attributed.**
 - (a) *Design.* Clean calibration with corrupted test nights violates exchangeability by construction. A deployed laboratory calibrates on a mixture of clean and corrupted nights. I re-ran the analysis with 25 % corrupted nights in both halves (R = 100):
@@ -36,16 +35,16 @@ None.
 - (b) *Attribution.* Under strong noise for TST, constant width around the *calibrated* plug-in (scp_abs_cal) matched the proposed method's mean coverage (0.320 vs 0.323) and had a lower interval score (614 vs 732; cohort means from `tableS_robustness.csv`). The FFBS-SD scale around the calibrated plug-in reached 0.485. The claim that intervals "degraded less because their width responded" (§3.7) is therefore confounded with the centre, and Fig. 5 omits these comparators.
 - (c) The headline figures (32 %, 7 %, 71 → 108 min, 85 vs 48 %) are unweighted means over SC, ST and HMC, which is not stated. TST coverage under strong noise was 20 % in SC and 15 % in ST.
 
-*Action:* report the mixture design with coverage conditional on corrupted nights, add the centre-matched comparators, report per cohort, and add LightGBM.
+*Action:* report the mixture design with conditional coverage, centre-matched comparators and per-cohort results.
 
-**M5. The age subgroup statement is wrong and hides conditional under-coverage.** In S9, "count" is night × parameter pairs pooled over 8 parameters. `make_tables.py` filters `count >= 40`, so "subgroups with ≥40 nights" (l.110) includes ST ≥60 y (48 pairs = 6 nights). Per-parameter LOSO coverage in SC adults ≥60 y (73 nights, YASA) is 0.86 for TST, 0.84 for N1 %, 0.84 for N2 %, 0.86 for N3 % and 0.86 for REM %, against 0.92–0.96 below 60 y. LightGBM is similar (0.84–0.88). The adaptive scale does not help: the distribution-free LoA gives 0.84–0.88 in the same group. This is the known age bias (Baumert 2023), and age is label-free, so it is correctable. *Action:* add a per-parameter subgroup table and fix the wording. Add Mondrian calibration by age, and an age-shift experiment (calibrate on <60 y, test on ≥60 y).
+**M5. The age subgroup statement is wrong and hides conditional under-coverage.** In S9, "count" is night × parameter pairs pooled over 8 parameters. `make_tables.py` filters `count >= 40`, so "subgroups with ≥40 nights" (l.110) includes ST ≥60 y (48 pairs = 6 nights). Per-parameter LOSO coverage in SC adults ≥60 y (73 nights, YASA) is 0.86 for TST, 0.84 for N1 %, 0.84 for N2 %, 0.86 for N3 % and 0.86 for REM %, against 0.92–0.96 below 60 y. LightGBM is similar (0.84–0.88). The adaptive scale does not help: the distribution-free LoA gives 0.84–0.88 in the same group. Age needs no labels, so this is correctable. *Action:* add a per-parameter subgroup table and fix the wording. Add Mondrian calibration by age, and an age-shift experiment (calibrate on <60 y, test on ≥60 y).
 
-**M6. The supplement silently truncates the tables that the robustness and transport claims cite.** `make_supplement.py` `tbl(max_rows=400)` cuts S12 at 400 of 480 rows: only 16 of the 96 strong-noise rows appear, so the §3.7 headline numbers cannot be verified. S13 few-shot is cut (672 rows), as are S2 (768) and S3 (480). The 18:35 regeneration still contains only 16 strong-noise rows. *Action:* remove the cap or move these tables to CSV files, and state in the text how aggregates are formed.
+**M6. The supplement silently truncates the tables that the robustness and transport claims cite.** `make_supplement.py` `tbl(max_rows=400)` cuts S12 at 400 of 480 rows: only 16 of the 96 strong-noise rows appear, so the §3.7 headline numbers cannot be verified. S13 few-shot is cut (672 rows), as are S2 (768) and S3 (480). This persists after regeneration. *Action:* remove the cap or move these tables to CSV files, and state in the text how aggregates are formed.
 
 ## Moderate concerns
 **Mo1. Mondrian is not adequate yet.** For YASA, worst-quartile coverage with entropy-binned Mondrian calibration is 0.836 (HMC), 0.844 (SC) and 0.864 (ST). This is still below the pre-specified 87 % bound, and width rises in Q1 (HMC 59 → 73). With K = 2 bins, ST bins hold about 21 nights. *Action:* test bins by age plus entropy, or a localized/weighted conformal method, and report bin sizes.
 
-**Mo2. "Two stagers" is one model family.** Both are gradient-boosted trees on the same 116 YASA features, and both fitted τ ≈ 0.10. Deep stagers that use whole-night context (U-Sleep) and give sharper outputs may collapse the FFBS spread. U-Sleep was trained on Sleep-EDF, so it cannot be tested on SC/ST. *Action:* add a raw-signal CNN (e.g. TinySleepNet, CPU-trainable) trained with subject-grouped CV on SC. As a cheap stress test, feed HMM-smoothed marginals in as the stager output.
+**Mo2. "Two stagers" is one model family.** Both are gradient-boosted trees on the same 116 YASA features, and both fitted τ ≈ 0.10. Deep stagers with whole-night context (U-Sleep, which was trained on Sleep-EDF) may collapse the FFBS spread. *Action:* add a raw-signal CNN trained with subject-grouped CV on SC, plus a stress test that uses HMM-smoothed marginals as the stager output.
 
 **Mo3. Corruption realism and a protocol deviation.** The noise is 0 dB white noise applied to EEG and EOG together. The artefact model is an AR(1) drift (stationary SD ≈ 500 µV) clipped at ±300 µV, which saturates the affected epochs. Each night has one fixed realisation. The pre-registered 50 Hz line noise (PREREGISTERED_PROTOCOL l.41) was neither run nor logged in CHANGELOG. *Action:* add line noise, electrode pop or flat-line, single-channel loss, EMG bursts and several corruption seeds, and log the deviation.
 
@@ -56,16 +55,15 @@ None.
 ## Minor concerns
 **Mi1.** Fig. 4 shows means only, and the Fig. 5 caption does not say that values are averaged over cohorts.
 **Mi2.** §3.5 "88.1 % with 50 target nights" omits LightGBM pooled (0.83).
-**Mi3.** The robustness experiment uses YASA only.
+**Mi3.** Robustness was tested with YASA only.
 
 ## Required additional experiments/analyses
-1. Full few-night recalibration (BCTS ± HMM refit on n_t target nights): bias, coverage, width and P(coverage < 0.85). FFBS takes 0.02 s per night.
-2. HMC with F4-M1 for both stagers, with transport re-run.
-3. Mixture-corruption design with coverage conditional on corrupted nights, calibration on corrupted nights, centre-matched comparators, realistic artefacts and several seeds, for both stagers.
-4. Per-parameter subgroup table, an age-shift experiment, and Mondrian calibration by age.
-5. Small-n comparators: a t-based Bland–Altman prediction interval and PAC-style quantiles.
-6. One deep raw-signal stager, plus a smoothed-input stress test.
-7. Optional: an OSA or multi-scorer public cohort.
+1. Few-night recalibration with stager recalibration (M1).
+2. HMC transport re-run with F4-M1 (M3).
+3. Mixture-corruption design with realistic artefacts (M4, Mo3).
+4. Age-shift experiment and Mondrian calibration by age (M5, Mo1).
+5. Small-n comparators: t-based Bland–Altman and PAC calibration (M2).
+6. A deep stager (Mo2); optionally an OSA or multi-scorer cohort (Mo5).
 
 ## Recommendation
 **Major revision.** Within-cohort marginal validity holds, but the deployment claims (few nights fix bias and coverage; adaptive intervals are robust to corruption; coverage is nominal across age) are not tested as stated, or are contradicted by the authors' own result files. All the analyses needed are cheap with the cached data.
