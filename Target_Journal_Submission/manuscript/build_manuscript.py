@@ -62,8 +62,14 @@ def make_reference_docx(path):
         except KeyError:
             continue
         st.font.name = "Times New Roman"
-        st.font.color.rgb = None
+        from docx.shared import RGBColor
+        st.font.color.rgb = RGBColor(0, 0, 0)
         rpr = st.element.get_or_add_rPr()
+        W = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
+        for el in list(rpr.iter()):   # strip theme fonts/colours that override explicit settings
+            for att in list(el.attrib):
+                if att.endswith("Theme") or att.endswith("themeColor") or att.endswith("themeShade") or att.endswith("themeTint"):
+                    del el.attrib[att]
         rfonts = rpr.find("{http://schemas.openxmlformats.org/wordprocessingml/2006/main}rFonts")
         if rfonts is not None:
             for a in ("w:ascii", "w:hAnsi", "w:cs", "w:eastAsia"):
@@ -73,9 +79,9 @@ def make_reference_docx(path):
             st.font.size = Pt(12)
             pf.line_spacing_rule = WD_LINE_SPACING.DOUBLE
             pf.space_after = Pt(0)
-        if name == "Compact":
-            st.font.size = Pt(9)
-            pf.line_spacing_rule = WD_LINE_SPACING.SINGLE
+        if name == "Compact":   # list items (e.g. highlights); table cells are resized in postprocess()
+            st.font.size = Pt(12)
+            pf.line_spacing_rule = WD_LINE_SPACING.DOUBLE
         if name.startswith("Heading"):
             st.font.size = Pt({"Heading 1": 13, "Heading 2": 12, "Heading 3": 12}[name])
             st.font.bold = True
@@ -97,7 +103,23 @@ def postprocess(docx_path):
     from docx.oxml.ns import qn
     from docx.shared import Cm
     doc = Document(str(docx_path))
+    from docx.shared import Mm, Pt, RGBColor
+    for st in doc.styles:   # headings/title: black Times New Roman (by style id; theme attributes removed)
+        sid = getattr(st, "style_id", "") or ""
+        if sid.startswith("Heading") or sid == "Title":
+            rpr = st.element.get_or_add_rPr()
+            for el in list(rpr.iter()):
+                for att in list(el.attrib):
+                    a = att.split("}")[-1].lower()
+                    if a.endswith("theme") or a in ("themecolor", "themeshade", "themetint"):
+                        del el.attrib[att]
+            st.font.name = "Times New Roman"
+            st.font.color.rgb = RGBColor(0, 0, 0)
+            st.font.size = Pt({"Heading1": 13, "Heading2": 12, "Heading3": 12}.get(sid, st.font.size.pt if st.font.size else 12))
+            if sid == "Heading3":
+                st.font.italic = True
     for sec in doc.sections:
+        sec.page_width, sec.page_height = Mm(210), Mm(297)          # A4
         sec.top_margin = sec.bottom_margin = sec.left_margin = sec.right_margin = Cm(2.5)
         sectPr = sec._sectPr
         ln = OxmlElement("w:lnNumType")

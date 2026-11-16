@@ -49,6 +49,8 @@ def fig1_example(night="SN050", cohort="HMC", stager="yasa"):
     TST/REML posterior histograms with the LOSO conformal interval."""
     from experiments_loader import load_preds  # local helper (see below)
     preds = load_preds(stager, cohort)
+    if night not in preds:  # quick mode uses a subset of nights
+        night = sorted(preds)[0]
     P, y = preds[night]
     folds = pd.read_csv(RESULTS_DIR / "summaries" / f"{stager}_xfit.csv")
     k = int(folds.loc[folds.night == night, "fold"].iloc[0])

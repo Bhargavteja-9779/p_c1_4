@@ -25,9 +25,9 @@ from pathlib import Path
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from src.utils import RESULTS_DIR, ROOT_DIR, TABLES_DIR  # noqa: E402
+from src.utils import _QUICK, RESULTS_DIR, ROOT_DIR, TABLES_DIR  # noqa: E402
 
-OUT = ROOT_DIR / "supplementary"
+OUT = (RESULTS_DIR / "supplementary") if _QUICK else (ROOT_DIR / "supplementary")   # never overwrite full results
 
 
 def tbl(name, query=None, cols=None, round_=3, max_rows=400):

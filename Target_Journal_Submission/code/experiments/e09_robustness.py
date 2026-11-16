@@ -87,12 +87,14 @@ def main():
     ap.add_argument("--R", type=int, default=200)
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--skip-predict", action="store_true")
+    ap.add_argument("--limit", type=int, default=0, help="quick mode: nights per cohort")
     a = ap.parse_args()
     meta = pd.read_csv(cache_root() / "sleep" / "nights.csv")
     meta["condition"] = meta["condition"].fillna("")
     with ProcessPoolExecutor(a.workers) as ex:
         if not a.skip_predict:
-            jobs = [(str(p), k) for k in CORRUPTIONS for c in a.cohorts for p in sleep.cached_nights(cache_root(), c)]
+            jobs = [(str(p), k) for k in CORRUPTIONS for c in a.cohorts
+                    for p in (sleep.cached_nights(cache_root(), c)[:a.limit] if a.limit else sleep.cached_nights(cache_root(), c))]
             list(ex.map(_job, jobs, chunksize=2))
         clean = {c: load_preds("yasa", c) for c in a.cohorts}
         for k in CORRUPTIONS:

@@ -21,16 +21,16 @@ three cohorts (Sleep-EDF SC/ST, HMC; 348 nights, 251 subjects). Protocol: `suppl
   constant-width conformal (`scp_abs_bc`, distribution-free LoA) and centre×scale factorial (CHANGELOG).
 * Cross-cohort coverage fails for N3% (bias sign flips SC vs HMC); 10 local nights restore coverage.
 
-## In progress (background, started 21:56)
-`code/scripts/rerun_conformal_evaluations.sh` = E04 main → E06 → E07 → E08 → E09 (skip-predict; regenerates
-corrupted-night summaries with plugc columns) → E04 seeds → E10. Log: results/experiment_logs/.
-Review cycle 1 wave A agents (#1 novelty, #2 methodology, #5 dataset/leakage, #8 literature) running;
-outputs → REVIEW/cycle01/agentNN_*.md.
+## Status (2026-11-16 ~09:45 UTC)
+* All experiments complete: E01–E04 (+seeds), E06–E11; tables, figures (5), supplement (S1–S17),
+  manuscript DOCX/PDF (4,437 words; abstract 288), cover letter DOCX. Commit d618813 pushed.
+* Review cycle 1: 10 independent reviewer agents launched (outputs → REVIEW/cycle01/agentNN_*.md, each ends
+  with a JSON findings block). The earlier wave-A agents (cycle 1 attempt) died on the 5-h rate limit.
 
 ## Next exact steps
-1. When chain finishes: `python scripts/make_tables.py`, `python scripts/make_figures.py`; rewrite Results 3.3/3.4,
-   Abstract, Highlights, Discussion for the calibration finding (use NUM keys n_sig_better_vs_scp_abs_bc_*,
-   pe_*_plug_in_calibrated_*); `python manuscript/build_manuscript.py`.
-2. Launch cycle-1 wave B agents (#3 design, #4 statistics, #6 robustness, #7 efficiency, #9 AE, #10 competitor).
-3. Consolidate cycle-1 reviews → REVIEW/review_01.md; fix; rerun; cycles 2..10 (delta reviews).
-4. Cover letter DOCX, final audits, risk report, decision; commit + push (branch claude/tender-bohr-dljsc0).
+1. When cycle-1 reviews arrive: consolidate → REVIEW/review_01.md (issue list with severity, decision, fix).
+   Adversarially verify fatal/critical/major findings (workflow), implement fixes, rerun affected experiments
+   (scripts/rerun_conformal_evaluations.sh; make_tables; make_figures; make_supplement; build_manuscript).
+2. Cycles 2..10: delta reviews (same 10 roles, new weaknesses only) → review_02..10.md.
+3. Final audits (consistency, reproducibility quick-mode run), final_audit.md, rejection-risk report, decision.
+4. Commit + push after every cycle (branch claude/tender-bohr-dljsc0).

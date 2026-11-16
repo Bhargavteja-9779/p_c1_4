@@ -74,7 +74,34 @@ OVERRIDES = {  # registry records missing fields (verified against the publisher
                             {"family": "Shafer", "given": "G"}], "publisher": "Springer", "type": "book"},
     "bourlard1994": {"type": "book", "publisher": "Springer (Kluwer Academic Publishers)"},
     "li2025conmil": {"note": "ConMIL: conformalised multiple-instance learning; arXiv:2501.16215"},
+    "bland1986": {"author": [{"family": "Bland", "given": "J M"}, {"family": "Altman", "given": "D G"}]},
 }
+AUTHOR_FIXES = {  # (doi-key, index) -> corrected name, where the registry splits names wrongly
+    ("deirossi2025", 0): {"family": "Dei Rossi", "given": "Alvise"},
+    ("deirossi2025", 4): {"family": "van der Meer", "given": "Julia"},
+}
+
+
+def normalise(key, rec):
+    """Clean registry quirks: HTML entities, ALL-CAPS names/titles, 'Volume 16' volumes."""
+    import html
+    import re
+    for f in ("title", "container-title"):
+        if isinstance(rec.get(f), str):
+            t = html.unescape(rec[f]).replace("&Amp;", "&")
+            if t.isupper():
+                t = t[0] + t[1:].lower()
+            rec[f] = t
+    for i, a in enumerate(rec.get("author", []) or []):
+        for part in ("family", "given"):
+            v = a.get(part)
+            if isinstance(v, str) and v.isupper() and len(v) > 2:
+                a[part] = v.title()
+        if (key, i) in AUTHOR_FIXES:
+            rec["author"][i] = dict(AUTHOR_FIXES[(key, i)])
+    if isinstance(rec.get("volume"), str):
+        rec["volume"] = re.sub(r"^Volume\s*", "", rec["volume"])
+    return rec
 
 
 def fetch(doi):
@@ -104,6 +131,7 @@ def main():
         keep["id"] = key
         keep["DOI"] = doi
         keep.update(OVERRIDES.get(key, {}))
+        keep = normalise(key, keep)
         items.append(keep)
         first = (keep.get("author") or [{}])[0]
         audit.append(dict(key=key, doi=doi, source="doi-registry", title=d.get("title"),

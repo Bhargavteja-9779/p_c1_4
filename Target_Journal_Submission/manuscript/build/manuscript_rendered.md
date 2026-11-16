@@ -12,7 +12,7 @@ title: "Per-night prediction intervals for automatically scored polysomnography:
 
 **Article type:** Original Article
 
-**Word count:** main text 4,437 words; abstract 288 words
+**Word count:** main text 4,449 words; abstract 288 words
 
 **Highlights**
 
@@ -60,26 +60,26 @@ To avoid deriving the analysis window from the reference hypnogram, windows were
 The method operates on the epoch-wise stage probabilities of any stager. We studied two. (i) YASA [@vallat2021], a published open-source stager whose LightGBM classifier was trained by its authors on several thousand NSRR recordings; we used its EEG + EOG model without any retraining, so every night in our cohorts is an external test night for this stager (SC/ST: Fpz-Cz and horizontal EOG; HMC: C4-M1 and E1-M2, the montage recommended by its authors). (ii) An in-domain LightGBM model trained on the same 116 YASA features of SC nights, with out-of-fold SC predictions from subject-grouped five-fold cross-validation and a model trained on all SC nights for ST and HMC (where it additionally faces a montage change). Hyper-parameters were fixed a priori; three predefined seeds were run. The stager's own hypnogram (most probable stage per epoch) defines the *plug-in* parameter estimates, i.e. current practice.
 
 ### 2.4. Posterior sampling of whole hypnograms
-Let $p(k \mid x_t)$ be the stager probability of stage k for epoch t of a night with N epochs. Probabilities were first recalibrated by bias-corrected temperature scaling [@alexandari2020],
+Let $p_t(k)$ be the stager probability of stage $k$ for epoch $t$ of a night with $N$ epochs. Probabilities were first recalibrated by bias-corrected temperature scaling [@alexandari2020],
 
-$$\tilde p(k \mid x_t)=\operatorname{softmax}_k\!\left(\frac{\log p(k \mid x_t)}{T}+b_k\right) \qquad (1)$$
+$$\tilde p_t(k)=\operatorname{softmax}_k\left(\frac{\log p_t(k)}{T}+b_k\right) \qquad (1)$$
 
 fitted by maximum likelihood on labelled source nights; $\pi_s$ denotes the stage distribution of those nights. Following the hybrid classifier/hidden-Markov formulation [@bourlard1994; @rabiner1989], scaled likelihoods
 
-$$e_t(k)=\left[\frac{\tilde p(k \mid x_t)}{\pi_s(k)}\right]^{\tau} \qquad (2)$$
+$$e_t(k)=\left[\frac{\tilde p_t(k)}{\pi_s(k)}\right]^{\tau} \qquad (2)$$
 
-serve as emission scores of a first-order Markov chain with transition matrix $A$ and initial distribution $p_0$ estimated from the source hypnograms (add-one smoothing). The posterior over complete hypnograms is then
+serve as emission scores of a first-order Markov chain with transition matrix $A$ and initial distribution $p_0$ estimated from the source hypnograms (add-one smoothing). Given the night's signals, the posterior over complete hypnograms is then
 
-$$P(y_1,\dots,y_N \mid x)\;\propto\; p_0(y_1)\,e_1(y_1)\prod_{t=2}^{N} A(y_{t-1},y_t)\,e_t(y_t) \qquad (3)$$
+$$P(y_1,\dots,y_N)\propto p_0(y_1)\,e_1(y_1)\prod_{t=2}^{N} A(y_{t-1},y_t)\,e_t(y_t) \qquad (3)$$
 
-Because most stagers already use neighbouring epochs as context (YASA uses rolling-window features), multiplying their outputs along the chain would count the same evidence repeatedly; the emission temperature $\tau \in [0.02, 1.5]$ absorbs this and was fitted on source nights by maximising the smoothed posterior log-likelihood of the reference stages. We drew $M = 1000$ hypnograms per night exactly from (3) by forward-filtering backward-sampling (FFBS) [@carter1994; @fruhwirth1994]: forward probabilities $\alpha_t(k) \propto e_t(k)\sum_j \alpha_{t-1}(j)A(j,k)$, then $y_N \sim \alpha_N$ and $y_t \mid y_{t+1} \sim \alpha_t(j)A(j,y_{t+1})$ for $t=N-1,\dots,1$. Every parameter $\theta$ was computed on every sample, giving a per-night posterior mean $\hat\mu$ and standard deviation $\hat\sigma$ (and quantiles). Unlike sampling each epoch independently, FFBS preserves the temporal correlation of stage errors, which dominates the uncertainty of sums and latencies.
+Because most stagers already use neighbouring epochs as context (YASA uses rolling-window features), multiplying their outputs along the chain would count the same evidence repeatedly; the emission temperature $\tau \in [0.02, 1.5]$ absorbs this and was fitted on source nights by maximising the smoothed posterior log-likelihood of the reference stages. We drew $M = 1000$ hypnograms per night exactly from (3) by forward-filtering backward-sampling (FFBS) [@carter1994; @fruhwirth1994]: forward probabilities $\alpha_t(k) \propto e_t(k)\sum_j \alpha_{t-1}(j)A(j,k)$, then $y_N \sim \alpha_N$ and, given $y_{t+1}$, $y_t \sim \alpha_t(j)A(j,y_{t+1})$ for $t=N-1,\dots,1$. Every parameter $\theta$ was computed on every sample, giving a per-night posterior mean $\hat\mu$ and standard deviation $\hat\sigma$ (and quantiles). Unlike sampling each epoch independently, FFBS preserves the temporal correlation of stage errors, which dominates the uncertainty of sums and latencies.
 
 ### 2.5. Conformal calibration of per-night intervals
 Posterior spreads from (3) are not calibrated: they describe uncertainty given the model, not the stager's systematic errors. We therefore used split conformal prediction [@vovk2005; @lei2018; @angelopoulos2023]. For $n$ labelled calibration nights with reference values $\theta_i$ we computed normalised scores
 
-$$s_i=\frac{\lvert \theta_i-\hat\mu_i\rvert}{\hat\sigma_i+\bar\sigma} \qquad (4)$$
+$$s_i=\frac{|\theta_i-\hat\mu_i|}{\hat\sigma_i+\bar\sigma} \qquad (4)$$
 
-where $\bar\sigma$ is the median of $\hat\sigma$ over the calibration and test nights (a regulariser that stops nights with near-zero posterior spread from dominating; because $\hat\sigma$ requires no labels, computing $\bar\sigma$ over all nights keeps the score a symmetric function of the data and the guarantee below exact). With $\hat q$ the $\lceil (n+1)(1-\alpha)\rceil$-th smallest score, the interval for a new night is
+where $\bar\sigma$ is the median of $\hat\sigma$ over the calibration and test nights (a regulariser that stops nights with near-zero posterior spread from dominating; because $\hat\sigma$ requires no labels, computing $\bar\sigma$ over all nights keeps the score a symmetric function of the data and the guarantee below exact). With $\hat q$ the $k$-th smallest score, where $k$ is $(n+1)(1-\alpha)$ rounded up, the interval for a new night is
 
 $$C(x)=\left[\hat\mu-\hat q\,(\hat\sigma+\bar\sigma),\;\hat\mu+\hat q\,(\hat\sigma+\bar\sigma)\right] \qquad (5)$$
 

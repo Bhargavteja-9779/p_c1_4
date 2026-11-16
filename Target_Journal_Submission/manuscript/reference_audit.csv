@@ -1,6 +1,6 @@
 key,doi,source,title,first_author,year,container,volume,pages
 rosenberg2013,10.5664/jcsm.2350,doi-registry,The American Academy of Sleep Medicine Inter-scorer Reliability Program: Sleep Stage Scoring,Rosenberg,2013,Journal of Clinical Sleep Medicine,9,81-87
-dankerhopfe2009,10.1111/j.1365-2869.2008.00700.x,doi-registry,Interrater reliability for sleep scoring according to the Rechtschaffen &amp; Kales and the new AASM standard,DANKER‐HOPFE,2009,Journal of Sleep Research,18,74-84
+dankerhopfe2009,10.1111/j.1365-2869.2008.00700.x,doi-registry,Interrater reliability for sleep scoring according to the Rechtschaffen &amp; Kales and the new AASM standard,Danker‐Hopfe,2009,Journal of Sleep Research,18,74-84
 stephansen2018,10.1038/s41467-018-07229-3,doi-registry,Neural network analysis of sleep stages enables efficient diagnosis of narcolepsy,Stephansen,2018,Nature Communications,9,
 perslev2021,10.1038/s41746-021-00440-5,doi-registry,U-Sleep: resilient high-frequency sleep staging,Perslev,2021,npj Digital Medicine,4,
 vallat2021,10.7554/eLife.70092,doi-registry,"An open-source, high-performance tool for automated sleep staging",Vallat,2021,eLife,10,
@@ -17,27 +17,27 @@ kang2021,10.1038/s41746-021-00515-3,doi-registry,Statistical uncertainty quantif
 vangorp2022,10.1093/sleep/zsac134,doi-registry,Certainty about uncertainty in sleep staging: a theoretical framework,van Gorp,2022,Sleep,45,
 bakker2023,10.1093/sleep/zsac154,doi-registry,Scoring sleep with artificial intelligence enables quantification of sleep stage ambiguity: hypnodensity based on multiple expert scorers and auto-scoring,Bakker,2022,Sleep,46,
 li2025conmil,10.1007/s41666-025-00207-7,doi-registry,Smarter Together: Combining Large Language Models and Small Models for Physiological Signals Visual Inspection,Li,2025,Journal of Healthcare Informatics Research,9,656-685
-ganglberger2024,10.1093/sleep/zsae202,doi-registry,Refining sleep staging accuracy: transfer learning coupled with scorability models,Ganglberger,2024,SLEEP,47,
-mikkelsen2020,10.1109/EMBC44109.2020.9175743,doi-registry,Predicting Sleep Classification Performance without Labels,Mikkelsen,2020,2020 42nd Annual International Conference of the IEEE Engineering in Medicine &amp; Biology Society (EMBC),,645-648
+ganglberger2024,10.1093/sleep/zsae202,doi-registry,Refining sleep staging accuracy: transfer learning coupled with scorability models,Ganglberger,2024,Sleep,47,
+mikkelsen2020,10.1109/EMBC44109.2020.9175743,doi-registry,Predicting Sleep Classification Performance without Labels,Mikkelsen,2020,2020 42nd Annual International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC),,645-648
 kemp2000,10.1109/10.867928,doi-registry,Analysis of a sleep-dependent neuronal feedback loop: the slow-wave microcontinuity of the EEG,Kemp,2000,IEEE Transactions on Biomedical Engineering,47,1185-1194
 sleepedf_data,10.13026/C2X676,doi-registry,The Sleep-EDF Database [Expanded],Kemp,2018,,,
 goldberger2000,10.1161/01.CIR.101.23.e215,doi-registry,"PhysioBank, PhysioToolkit, and PhysioNet",Goldberger,2000,Circulation,101,
-alvarez2021,10.1371/journal.pone.0256111,doi-registry,Inter-database validation of a deep learning approach for automatic sleep scoring,Alvarez-Estevez,2021,PLOS ONE,16,e0256111
+alvarez2021,10.1371/journal.pone.0256111,doi-registry,Inter-database validation of a deep learning approach for automatic sleep scoring,Alvarez-Estevez,2021,Plos one,16,e0256111
 hmc_data,10.13026/t79q-fr32,doi-registry,Haaglanden Medisch Centrum sleep staging database,Alvarez-Estevez,2022,,,
 bourlard1994,10.1007/978-1-4615-3210-1,doi-registry,Connectionist Speech Recognition,Bourlard,1994,,,
-carter1994,10.1093/biomet/81.3.541,doi-registry,On Gibbs sampling for state space models,CARTER,1994,Biometrika,81,541-553
+carter1994,10.1093/biomet/81.3.541,doi-registry,On Gibbs sampling for state space models,Carter,1994,Biometrika,81,541-553
 fruhwirth1994,10.1111/j.1467-9892.1994.tb00184.x,doi-registry,DATA AUGMENTATION AND DYNAMIC LINEAR MODELS,Frühwirth‐Schnatter,1994,Journal of Time Series Analysis,15,183-202
 vovk2005,10.1007/b106715,doi-registry,Algorithmic Learning in a Random World,Vovk,2005,,,
 lei2018,10.1080/01621459.2017.1307116,doi-registry,Distribution-Free Predictive Inference for Regression,Lei,2018,Journal of the American Statistical Association,113,1094-1111
 angelopoulos2023,10.1561/2200000101,doi-registry,Conformal Prediction: A Gentle Introduction,Angelopoulos,2023,Foundations and Trends® in Machine Learning,16,494-591
 barber2023,10.1214/23-AOS2276,doi-registry,Conformal prediction beyond exchangeability,Barber,2023,The Annals of Statistics,51,816-845
-bland1986,10.1016/S0140-6736(86)90837-8,doi-registry,STATISTICAL METHODS FOR ASSESSING AGREEMENT BETWEEN TWO METHODS OF CLINICAL MEASUREMENT,Martin Bland,1986,The Lancet,327,307-310
+bland1986,10.1016/S0140-6736(86)90837-8,doi-registry,STATISTICAL METHODS FOR ASSESSING AGREEMENT BETWEEN TWO METHODS OF CLINICAL MEASUREMENT,Bland,1986,The Lancet,327,307-310
 gneiting2007,10.1198/016214506000001437,doi-registry,"Strictly Proper Scoring Rules, Prediction, and Estimation",Gneiting,2007,Journal of the American Statistical Association,102,359-378
 mcgraw1996,10.1037/1082-989X.1.1.30,doi-registry,Forming inferences about some intraclass correlation coefficients.,McGraw,1996,Psychological Methods,1,30-46
 berry2017,10.5664/jcsm.6576,doi-registry,AASM Scoring Manual Updates for 2017 (Version 2.4),Berry,2017,Journal of Clinical Sleep Medicine,13,665-666
 rabiner1989,10.1109/5.18626,doi-registry,A tutorial on hidden Markov models and selected applications in speech recognition,Rabiner,1989,Proceedings of the IEEE,77,257-286
 kaneda2026,10.1093/sleepadvances/zpag054,doi-registry,Automated sleep stage and event detection algorithms using quality-controlled polysomnography annotations,Kaneda,2026,SLEEP Advances,7,
-deirossi2025,10.1038/s41746-025-02237-2,doi-registry,SLEEPYLAND: trust begins with fair evaluation of automatic sleep staging models,Rossi,2025,npj Digital Medicine,9,
+deirossi2025,10.1038/s41746-025-02237-2,doi-registry,SLEEPYLAND: trust begins with fair evaluation of automatic sleep staging models,Dei Rossi,2025,npj Digital Medicine,9,
 vainikka2026,10.1109/TBME.2025.3623380,doi-registry,Direct Quantification of Uncertainty in Deep Learning-Based Automatic Sleep Staging,Vainikka,2026,IEEE Transactions on Biomedical Engineering,73,2144-2154
 alexandari2020,,manual (no DOI; verified against proceedings listing),Maximum likelihood with bias-corrected calibration is hard-to-beat at label shift adaptation,Alexandari,2020,Proceedings of the 37th International Conference on Machine Learning (PMLR 119),,222-232
 romano2019,,manual (no DOI; verified against proceedings listing),Conformalized quantile regression,Romano,2019,Advances in Neural Information Processing Systems 32 (NeurIPS 2019),,3543-3553

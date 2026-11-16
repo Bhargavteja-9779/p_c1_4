@@ -65,7 +65,7 @@ def main():
         (4, py + ["experiments/e04_within_cohort.py"] + R + (["--stagers", "yasa", "lgbm_sc_s0"] if q else [])),
         (5, py + ["experiments/e06_cross_cohort.py"] + R),
         (6, py + ["experiments/e07_utility_and_stats.py"]),
-        (7, py + ["experiments/e09_robustness.py"] + (["--R", "20", "--cohorts", "HMC"] if q else [])),
+        (7, py + ["experiments/e09_robustness.py"] + (["--R", "20", "--cohorts", "HMC", "--limit", "12"] if q else [])),
         (8, py + ["experiments/e08_error_analysis.py"]),
         (9, py + ["experiments/e11_conditional_coverage.py"]),
         (10, py + ["experiments/e10_efficiency.py"]),
