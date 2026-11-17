@@ -16,7 +16,7 @@ This research did not receive any specific grant from funding agencies in the pu
 
 ## Ethics statement
 
-This secondary analysis used only de-identified, openly available PSG recordings (Sleep-EDF Expanded, Open Data Commons Attribution Licence v1.0; HMC Sleep Staging Database, CC BY 4.0) distributed through PhysioNet [@goldberger2000]. The original studies obtained the approvals and consents described in their data descriptors [@kemp2000; @alvarez2021]. No new data were collected and no additional ethical approval was required.
+This secondary analysis used only de-identified, openly available PSG recordings distributed through PhysioNet [@goldberger2000; @pollard2026]: Sleep-EDF Expanded (Open Data Commons Attribution Licence v1.0) and the HMC Sleep Staging Database (CC BY 4.0). For the HMC database, the data descriptor and PhysioNet record state that the recordings were acquired in routine clinical care, fully anonymised, and that their reuse was approved by the institutional review board of Zuid-West Holland (METC-19-065) [@alvarez2021; @hmc_data]. The Sleep-EDF Expanded record [@sleepedf_data] does not document the approvals obtained by the original studies [@kemp2000]. No new data were collected and no one was contacted. [AUTHOR ACTION REQUIRED: state your institution's determination that this analysis of public, de-identified data does not require further ethical review, as required by the journal.]
 
 ## Data availability
 

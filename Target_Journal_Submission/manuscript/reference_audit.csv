@@ -22,6 +22,7 @@ mikkelsen2020,10.1109/EMBC44109.2020.9175743,doi-registry,Predicting Sleep Class
 kemp2000,10.1109/10.867928,doi-registry,Analysis of a sleep-dependent neuronal feedback loop: the slow-wave microcontinuity of the EEG,Kemp,2000,IEEE Transactions on Biomedical Engineering,47,1185-1194
 sleepedf_data,10.13026/C2X676,doi-registry,The Sleep-EDF Database [Expanded],Kemp,2018,,,
 goldberger2000,10.1161/01.CIR.101.23.e215,doi-registry,"PhysioBank, PhysioToolkit, and PhysioNet",Goldberger,2000,Circulation,101,
+pollard2026,10.1038/s44360-026-00096-z,doi-registry,PhysioNet as a global platform for biomedical research,Pollard,2026,Nature Health,1,792-795
 alvarez2021,10.1371/journal.pone.0256111,doi-registry,Inter-database validation of a deep learning approach for automatic sleep scoring,Alvarez-Estevez,2021,Plos one,16,e0256111
 hmc_data,10.13026/t79q-fr32,doi-registry,Haaglanden Medisch Centrum sleep staging database,Alvarez-Estevez,2022,,,
 bourlard1994,10.1007/978-1-4615-3210-1,doi-registry,Connectionist Speech Recognition,Bourlard,1994,,,

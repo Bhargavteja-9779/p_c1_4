@@ -2717,6 +2717,139 @@
  },
  {
   "type": "journal-article",
+  "title": "PhysioNet as a global platform for biomedical research",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-5676-7898",
+    "authenticated-orcid": false,
+    "given": "Tom",
+    "family": "Pollard",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Benjamin E.",
+    "family": "Moody",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Li-wei H.",
+    "family": "Lehman",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Brian J.",
+    "family": "Gow",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Chrystinne",
+    "family": "Fernandes",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Chen",
+    "family": "Xie",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Alistair",
+    "family": "Johnson",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Roger G.",
+    "family": "Mark",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Thomas",
+    "family": "Heldt",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Nature Health",
+  "volume": "1",
+  "issue": "8",
+  "page": "792-795",
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     3,
+     26
+    ]
+   ]
+  },
+  "DOI": "10.1038/s44360-026-00096-z",
+  "publisher": "Springer Science and Business Media LLC",
+  "URL": "http://dx.doi.org/10.1038/s44360-026-00096-z",
+  "id": "pollard2026"
+ },
+ {
+  "type": "journal-article",
   "title": "Inter-database validation of a deep learning approach for automatic sleep scoring",
   "author": [
    {

@@ -32,3 +32,39 @@
   exploratory; the pre-specified method is unchanged.
 * [Reporting] Few-night recalibration: report the probability that a site's realised coverage falls below
   0.80 (variability across repetitions), not only mean coverage.
+
+## Revision 1 (after review cycle 1; 10 independent reviewers; see Target_Journal_Submission/REVIEW/review_01.md)
+* [Primary analysis changed — deviation from protocol] The honest end-to-end protocol E12 (every
+  label-dependent component — BCTS, prior, transitions, tau, conformal quantile — fitted only on the
+  calibration half of 50/50 subject-grouped splits, calibration scores cross-fitted inside the calibration
+  set) is now the PRIMARY within-cohort analysis. Reason: in the pre-registered analysis the HMM/BCTS were
+  cross-fitted on ~80 % of each cohort, including labels of test-half subjects, whereas the comparators used
+  only the 50 % calibration half (unequal use of labelled data; reviewers 2, 3, 5, 10). The pre-registered
+  cross-fitted analysis (E04/E07) is retained in the supplement. Validity guarantee for cross-fitted scores
+  stated as CV+-type (>= 1 - 2 alpha; Barber et al. 2021).
+* [Leakage fix] Automatic hypnograms are now evaluated on all analysis-window epochs; the reference
+  "unscored" mask is no longer applied to automatic hypnograms (it is label information). Reference unscored
+  epochs are treated as wake. All night summaries (E03) and downstream evaluations re-run.
+* [Comparators added] Regression-based Bland–Altman limits (`ba_reg`; Bland & Altman 1999) and an exactly
+  valid signed-residual distribution-free LoA (`scp_signed`). Parametric LoA now a t-based prediction
+  interval (previously z-based). CQR-QR features extended (plug-in, calibrated plug-in, FFBS mean/SD,
+  entropy, max-probability) with a quantile-crossing guard.
+* [Ablations] Scale-only ablations at a fixed centre (`norm_reg_ind_s`, `norm_reg_ffbs1_s`) added; earlier
+  ablations changed centre and scale together.
+* [Statistics] Paired tests changed from Wilcoxon signed-rank (tests the pseudo-median) to a two-sided
+  sign-flip permutation test of the mean per-subject difference, so that the reported ratio of means,
+  its subject-bootstrap CI and the p-value come from the same analysis; Holm within stager x cohort.
+  Wilcoxon p kept as a secondary column. LOSO coverage CIs no longer used for claims.
+* [Pre-registered items now run] E13: Spearman success criterion, number of posterior samples M, calibration
+  size. 50 Hz line-noise corruption NOT run (deviation): YASA band-pass filtering removes it before feature
+  extraction, so the test would not exercise the method.
+* [New sensitivity analyses] E14 montage sensitivity (YASA with F4-M1 on HMC; source-only SC->HMC);
+  E15 clinical decision thresholds (TST < 360, SOL > 30, WASO > 30, REML <= 15 min) and easier/harder-night
+  stratification; label-free flag |raw - calibrated plug-in| added to the flagging analysis.
+* [Efficiency] E10 extended: one-off costs (source-model fit incl. JIT compilation, first FFBS call), peak
+  memory for a 7 x 24 h recording, single-thread setting.
+* [Reporting] Subgroups require >= 20 distinct nights; per-parameter coverage ranges reported; non-finite
+  conformal scores treated as +inf.
+* [Literature] Closest prior art (van Gorp et al. 2023 JBHI/ICASSP; Philips patent application EP4388985A1)
+  added; novelty restricted to calibrated (conformal) per-night coverage, transport and local recalibration.
+  Misattributed citations corrected. Ethics statement corrected (only HMC documents an approval, METC-19-065).
