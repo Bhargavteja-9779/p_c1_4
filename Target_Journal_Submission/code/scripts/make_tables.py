@@ -274,7 +274,7 @@ def honest_tables():
                     if k not in qi.index:
                         return "–"
                     e = qi.loc[k]
-                    return f"{e.bias:+.1f} ({e.mae:.1f})"
+                    return f"{e.bias:+.1f} ({e.mae:.1f})".replace("-", "\u2212")
                 rows.append({"Stager": STAGERS[st], "Parameter": f"{p} ({UNIT[p]})", "Cohort": c,
                              "Plug-in": cell("within", 0, "plug_in"),
                              "Calibrated plug-in": cell("within", 0, "plug_in_calibrated"),

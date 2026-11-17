@@ -41,7 +41,9 @@ def render(text, ns):
             sys.exit(f"MISSING NUMBER for placeholder {{{{{body}}}}}: {e}")
         if val is None:
             sys.exit(f"Placeholder {{{{{body}}}}} evaluated to None (undefined statistic)")
-        return format(val, fmt) if fmt else str(val)
+        s = format(val, fmt) if fmt else str(val)
+        # typographic minus for negative numbers
+        return "\u2212" + s[1:] if isinstance(val, (int, float)) and s.startswith("-") else s
     return re.sub(r"\{\{(.+?)\}\}", rep, text)
 
 
