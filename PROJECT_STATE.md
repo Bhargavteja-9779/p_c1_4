@@ -1,6 +1,6 @@
 # PROJECT_STATE (checkpoint file — update after every significant stage)
 
-_Last update: 2026-11-15, session 1 (after container restart; results saved & pushed at commit 0d41db0)_
+_Last update: 2026-11-17 (revision 1 in progress)_
 
 ## Selected target journal
 **Sleep Medicine** (Elsevier, ISSN 1389-9457). JIF 4.1; Q1 Clinical Neurology 68/296 (secondary source, LetPub);
@@ -21,16 +21,21 @@ three cohorts (Sleep-EDF SC/ST, HMC; 348 nights, 251 subjects). Protocol: `suppl
   constant-width conformal (`scp_abs_bc`, distribution-free LoA) and centre×scale factorial (CHANGELOG).
 * Cross-cohort coverage fails for N3% (bias sign flips SC vs HMC); 10 local nights restore coverage.
 
-## Status (2026-11-16 ~09:45 UTC)
-* All experiments complete: E01–E04 (+seeds), E06–E11; tables, figures (5), supplement (S1–S17),
-  manuscript DOCX/PDF (4,437 words; abstract 288), cover letter DOCX. Commit d618813 pushed.
-* Review cycle 1: 10 independent reviewer agents launched (outputs → REVIEW/cycle01/agentNN_*.md, each ends
-  with a JSON findings block). The earlier wave-A agents (cycle 1 attempt) died on the 5-h rate limit.
+## Status (2026-11-17 ~15:45 UTC) — REVISION 1 in progress
+* Review cycle 1 complete (10/10 reviews, all "major revision"); consolidated response REVIEW/review_01.md.
+* Revision-1 code changes done: no-mask convention (leakage fix), new comparators (ba_reg, scp_signed, t-based BA),
+  honest end-to-end protocol E12 as PRIMARY analysis, E13 (pre-registered sensitivity), E14 (montage), E15 (honest
+  stats incl. decision thresholds, difficulty), E10 one-off costs. make_tables (honest_tables, sensitivity_tables;
+  manuscript_numbers.json now written fresh, keys h_*), make_figures (Fig2 honest efficiency, Fig3 transport+local,
+  Fig4 robustness, Fig5 adaptivity+decisions), make_supplement (S1–S16 renumbered), run_all (E12–E15 added).
+* Manuscript: Introduction, Methods, captions, ethics rewritten; Results/Abstract/Highlights/Discussion/Conclusion/
+  cover letter STILL OLD (must be rewritten with h_* keys after numbers arrive). 49/50 references cited.
+* Running: code/scripts/rerun_revision1.sh (E03→E04→E06→E07→E08→E09→E11→E12→E13→E14→E04 seeds→E10) and an early
+  parallel E12+E15 run (results/experiment_logs/e12_early.log, e15.log).
 
 ## Next exact steps
-1. When cycle-1 reviews arrive: consolidate → REVIEW/review_01.md (issue list with severity, decision, fix).
-   Adversarially verify fatal/critical/major findings (workflow), implement fixes, rerun affected experiments
-   (scripts/rerun_conformal_evaluations.sh; make_tables; make_figures; make_supplement; build_manuscript).
-2. Cycles 2..10: delta reviews (same 10 roles, new weaknesses only) → review_02..10.md.
-3. Final audits (consistency, reproducibility quick-mode run), final_audit.md, rejection-risk report, decision.
-4. Commit + push after every cycle (branch claude/tender-bohr-dljsc0).
+1. After E12 early: inspect e15_*.csv; write Results/Abstract/Highlights/Discussion/Conclusion with h_* keys.
+2. After chain: run e15 again, make_tables, make_figures, make_supplement, build_manuscript; inspect PDF;
+   delete obsolete figure files (fig3_adaptivity_flagging, fig4_transport_recalibration, fig5_robustness).
+3. Review cycle 2 (prompt REVIEW/prompts/cycle02.md) → REVIEW/cycle02/, review_02.md; cycles 3–10 delta reviews.
+4. Final audits, final_audit.md, rejection-risk report, decision. Commit + push after every step.
