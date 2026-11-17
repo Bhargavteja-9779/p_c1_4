@@ -116,7 +116,7 @@ def fig2_within(stagers=("yasa", "lgbm_sc_s0")):
             ref = gc[gc.method == "scp_signed"].set_index("param")["interval_score"].reindex(PARAMS)
             for mi, m in enumerate(meths):
                 gm = gc[gc.method == m].set_index("param").reindex(PARAMS)
-                x = np.arange(len(PARAMS)) + (mi - len(meths) / 2) * 0.11
+                x = np.arange(len(PARAMS)) + (mi - (len(meths) - 1) / 2) * 0.11
                 y = gm["interval_score"] / ref
                 if m == PROPOSED:
                     t = pr[(pr.stager == st) & (pr.cohort == c) & (pr.comparator == "scp_signed")].set_index("param").reindex(PARAMS)
@@ -125,12 +125,15 @@ def fig2_within(stagers=("yasa", "lgbm_sc_s0")):
                 else:
                     ax.scatter(x, y, s=10, color=C[m], label=LAB[m], zorder=3)
             ax.axhline(1, color="k", lw=0.6, ls=":")
+            ax.set_yscale("log")
+            ax.set_yticks([0.5, 0.7, 1, 1.4, 2]); ax.set_yticklabels(["0.5", "0.7", "1", "1.4", "2"])
+            ax.minorticks_off()
             ax.set_xticks(range(len(PARAMS)))
             if si == len(stagers) - 1:
                 ax.set_xticklabels(PARAMS, rotation=45, ha="right")
             ax.set_title(f"{'abcdef'[si * 3 + ci]}  {STAGER_LAB[st]} – {c}", loc="left", fontsize=8)
             if ci == 0:
-                ax.set_ylabel("Interval score relative to\ndistribution-free LoA")
+                ax.set_ylabel("Interval score relative to\ndistribution-free LoA (log scale)")
     h, l = axes[0, 0].get_legend_handles_labels()
     fig.tight_layout(rect=(0, 0, 1, 0.9))
     fig.legend(h, l, loc="upper center", ncol=4, frameon=False, bbox_to_anchor=(0.5, 1.0))
@@ -144,8 +147,8 @@ def fig5_adaptivity(stager="yasa"):
     loso = pd.read_csv(RESULTS_DIR / "raw" / f"e04_loso_{stager}.csv")
     fl = pd.read_csv(RESULTS_DIR / "statistics" / f"e07_flagging_{stager}.csv")
     dec = pd.read_csv(RESULTS_DIR / "statistics" / "e15_decisions.csv")
-    fig = plt.figure(figsize=(7.2, 4.9))
-    gs = fig.add_gridspec(2, 4, width_ratios=[1, 1, 1, 1.3], hspace=0.75, wspace=0.45)
+    fig = plt.figure(figsize=(7.2, 5.2))
+    gs = fig.add_gridspec(2, 4, width_ratios=[1, 1, 1, 1.25], hspace=0.95, wspace=0.62)
     for i, p in enumerate(["TST", "REML", "N3%"]):
         ax = fig.add_subplot(gs[0, i])
         d = loso[(loso.param == p) & (loso.method == PROPOSED)]
@@ -153,7 +156,7 @@ def fig5_adaptivity(stager="yasa"):
             dd = d[d.cohort == c]
             ax.scatter(dd.hi - dd.lo, np.abs(dd.y - dd.plug), s=5, alpha=0.6, marker=mk, label=c, lw=0)
         u = "pp" if p.endswith("%") else "min"
-        ax.set_xlabel(f"{p} interval width ({u})"); ax.set_ylabel(f"|plug-in error| ({u})")
+        ax.set_xlabel(f"Interval width ({u})"); ax.set_ylabel(f"|Plug-in error| ({u})")
         ax.set_title(f"{'abc'[i]}  {p}", loc="left")
         if i == 0:
             ax.legend(frameon=False, markerscale=2, fontsize=6)
@@ -177,11 +180,13 @@ def fig5_adaptivity(stager="yasa"):
         yy += 0.8
     ax.axvline(0.5, color="k", lw=0.6, ls=":")
     ax.set_yticks([a for a, _ in ylab]); ax.set_yticklabels([b for _, b in ylab])
-    ax.set_xlabel("AUROC for clinically relevant error"); ax.set_title("d  Flagging nights", loc="left")
+    ax.set_xlabel("AUROC, clinically relevant error"); ax.set_title("d  Flagging nights", loc="left")
     h, l = ax.get_legend_handles_labels()
-    ax.legend(h, l, frameon=False, fontsize=5.5, loc="lower left", bbox_to_anchor=(-0.05, -0.62))
+    ax.legend(h, l, frameon=False, fontsize=5.5, loc="upper left", bbox_to_anchor=(-0.55, -0.27), ncol=1)
     meths = ["ba_loa", "ba_reg", "scp_signed", "cqr_qr", PROPOSED]
     dd = dec[dec.stager == stager]
+    YMIN = min(0.8, float(np.floor((dd.groupby("param").apply(lambda g: np.average(g.plugin_accuracy, weights=g.n)).min() - 0.03) * 20) / 20),
+               float(np.floor((dd.acc_confident.min() - 0.02) * 20) / 20))
     for j, p in enumerate(["TST", "SOL", "WASO", "REML"]):
         ax = fig.add_subplot(gs[1, j])
         g = dd[dd.param == p]
@@ -197,11 +202,11 @@ def fig5_adaptivity(stager="yasa"):
             ax.scatter(frac, acc, s=22 if m == PROPOSED else 14, color=C[m], marker="D" if m == PROPOSED else "o",
                        label=LAB[m], zorder=3)
         ax.axhline(plug, color="k", lw=0.6, ls=":")
-        ax.set_xlim(0, 1); ax.set_ylim(min(0.8, plug - 0.05), 1.005)
-        ax.set_xlabel("Nights decided by the interval"); ax.set_ylabel("Accuracy of these decisions" if j == 0 else "")
+        ax.set_xlim(0, 1); ax.set_ylim(YMIN, 1.01)
+        ax.set_xlabel("Fraction of nights decided"); ax.set_ylabel("Accuracy of decisions" if j == 0 else "")
         ax.set_title(f"{'efgh'[j]}  {thr.replace('<=', '≤')} min", loc="left")
     h, l = ax.get_legend_handles_labels()
-    fig.legend(h, l, loc="lower center", ncol=5, frameon=False, fontsize=6.5, bbox_to_anchor=(0.5, -0.04))
+    fig.legend(h, l, loc="lower center", ncol=5, frameon=False, fontsize=6.5, bbox_to_anchor=(0.5, -0.05))
     save(fig, "fig5_adaptivity_decisions")
 
 
@@ -225,19 +230,19 @@ def fig3_transport(stagers=("yasa", "lgbm_sc_s0")):
         ax.set_xticks(range(8)); ax.set_xticklabels(PARAMS, rotation=45, ha="right"); ax.set_ylim(0.3, 1.02)
         ax.set_ylabel("Coverage"); ax.set_title(f"{'ad'[si]}  {STAGER_LAB[st].split(' ')[0]}: calibrated on SC", loc="left", fontsize=8)
         g = loc[loc.stager == st]
-        for j, (col, ylab) in enumerate((("coverage", "Coverage (mean over 50 sites)"),
-                                         ("p_cov_lt80", "P(site coverage < 0.80)"))):
+        for j, (col, ylab) in enumerate((("coverage", "Mean coverage"),
+                                         ("p_cov_lt80", "P(realised coverage < 0.80)"))):
             ax = axes[si, 1 + j]
             for m in meths_loc:
                 for tgt, ls in (("HMC", "-"), ("ST", "--")):
                     gg = g[(g.method == m) & (g.cohort == tgt)].groupby("n_target")[col]
                     mid = gg.mean() if col == "coverage" else gg.median()
                     ax.plot(mid.index, mid.values, ls, color=C[m], marker="o", ms=3)
-                    if col == "coverage" and tgt == "HMC":
+                    if col == "coverage" and tgt == "HMC" and m == PROPOSED:
                         ax.fill_between(mid.index, gg.min().values, gg.max().values, color=C[m], alpha=0.10, lw=0)
             if col == "coverage":
                 ax.axhline(0.9, color="k", lw=0.6, ls=":")
-            ax.set_xlabel("Labelled local nights (all components fitted on them)"); ax.set_ylabel(ylab)
+            ax.set_xlabel("Labelled local nights"); ax.set_ylabel(ylab)
             ax.set_xticks(sorted(g.n_target.unique()))
             ttl = "local coverage" if col == "coverage" else "site-level risk"
             ax.set_title(f"{('be' if j == 0 else 'cf')[si]}  {STAGER_LAB[st].split(' ')[0]}: {ttl}", loc="left", fontsize=8)

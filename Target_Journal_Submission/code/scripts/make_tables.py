@@ -27,11 +27,11 @@ COHORTS = ["SC", "ST", "HMC"]
 NUM = {}
 
 
-def md(df, path, floatfmt=".3f"):
+def md(df, path, floatfmt=".3f", numparse=True):
     TABLES_DIR.mkdir(parents=True, exist_ok=True)
     df.to_csv(path.with_suffix(".csv"), index=False)
     try:
-        path.with_suffix(".md").write_text(df.to_markdown(index=False, floatfmt=floatfmt))
+        path.with_suffix(".md").write_text(df.to_markdown(index=False, floatfmt=floatfmt, disable_numparse=not numparse))
     except ImportError:
         path.with_suffix(".md").write_text(df.to_string(index=False))
 
@@ -244,8 +244,8 @@ def honest_tables():
                                                 else ("".join(items) if items else "none"))
     t2 = pd.DataFrame(rows)
     md(t2, TABLES_DIR / "table2_within_cohort")
-    md(t2[t2.Stager == "YASA"].drop(columns="Stager"), TABLES_DIR / "table2_display")
-    md(t2[t2.Stager != "YASA"].drop(columns="Stager"), TABLES_DIR / "tableS_within_cohort_lgbm")
+    md(t2[t2.Stager == "YASA"].drop(columns="Stager"), TABLES_DIR / "table2_display", numparse=False)
+    md(t2[t2.Stager != "YASA"].drop(columns="Stager"), TABLES_DIR / "tableS_within_cohort_lgbm", numparse=False)
     pr_out = pr.copy()
     md(pr_out.round(4), TABLES_DIR / "tableS_honest_paired")
     md(summ.round(4), TABLES_DIR / "tableS_honest_all_methods")
@@ -276,8 +276,8 @@ def honest_tables():
                              "Calibrated plug-in, 10 local nights": cell("local", 10, "plug_in_calibrated"),
                              "Posterior mean, 10 local nights": cell("local", 10, "ffbs_mean")})
     t3 = pd.DataFrame(rows)
-    md(t3[t3.Stager == STAGERS["yasa"]].drop(columns="Stager"), TABLES_DIR / "table3_display")
-    md(t3[t3.Stager != STAGERS["yasa"]].drop(columns="Stager"), TABLES_DIR / "tableS_point_estimates_lgbm")
+    md(t3[t3.Stager == STAGERS["yasa"]].drop(columns="Stager"), TABLES_DIR / "table3_display", numparse=False)
+    md(t3[t3.Stager != STAGERS["yasa"]].drop(columns="Stager"), TABLES_DIR / "tableS_point_estimates_lgbm", numparse=False)
 
     # ---- local deployment (few labelled target nights; everything fitted on them)
     md(loc.round(4), TABLES_DIR / "tableS_local_deployment")
