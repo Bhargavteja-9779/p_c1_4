@@ -1,7 +1,7 @@
         nights  ...  spearman_frac_vs_err
 cohort          ...                      
 HMC        151  ...              0.134868
-SC         153  ...              0.786070
+SC         153  ...              0.790748
 ST          44  ...              0.246190
 
 [3 rows x 4 columns]

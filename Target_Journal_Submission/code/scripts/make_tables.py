@@ -216,6 +216,9 @@ def honest_tables():
         for m, gg in gm.groupby("method"):
             NUM[f"h_cov_min_{st}_{m}"], NUM[f"h_cov_max_{st}_{m}"] = float(gg.coverage.min()), float(gg.coverage.max())
             NUM[f"h_covp025_min_{st}_{m}"] = float(gg.cov_p025.min())
+            NUM[f"h_cov_mean_{st}_{m}"] = float(gg.coverage.mean())
+            NUM[f"h_cov_n3pp_{st}_{m}"] = int(((gg.coverage - 0.90).abs() <= 0.03).sum())
+            NUM[f"h_cov_nbelow87_{st}_{m}"] = int((gg.coverage < 0.87).sum())
         NUM[f"h_ncal_min_{st}"], NUM[f"h_ncal_max_{st}"] = float(gm.n_cal.min()), float(gm.n_cal.max())
         for _, r in t.iterrows():
             k = SCALE_KEY.get(r.comparator, r.comparator)
@@ -521,7 +524,7 @@ def supp_tables():
         so = pd.read_csv(RESULTS_DIR / "raw" / f"e06_source_only_{st}.csv")
         so = so[so.alpha == 0.10]
         xs.append(so)
-        for _, r in so[so.method.isin([PROPOSED, "ba_loa", "scp_abs", "scp_abs_bc", "scp_abs_cal", "cqr_ffbs"])].iterrows():
+        for _, r in so[so.method.isin([PROPOSED, "ba_loa", "ba_reg", "scp_signed", "scp_abs", "scp_abs_bc", "scp_abs_cal", "cqr_ffbs"])].iterrows():
             NUM[f"x_cov_{st}_{r.target}_{r.param}_{r.method}"] = float(r.coverage)
             NUM[f"x_width_{st}_{r.target}_{r.param}_{r.method}"] = float(r.mean_width)
     md(pd.concat(xs), TABLES_DIR / "tableS_cross_cohort_source_only")

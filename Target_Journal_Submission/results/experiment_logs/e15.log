@@ -1,0 +1,26 @@
+                                     mean_ratio  wins  sig_better  sig_worse
+stager     comparator                                                       
+lgbm_sc_s0 SCALE@FFBS mean                0.919    23          15          0
+           SCALE@calibrated plug-in       0.938    21           9          0
+           ba_loa                         0.961    15           2          0
+           ba_reg                         1.030    13           2          1
+           cqr_ffbs                       1.045    13           3          3
+           cqr_qr                         0.922    15           9          1
+           norm_entropy_reg               0.945    19           7          1
+           norm_ffbs                      1.052     4           0          3
+           norm_reg_plugc                 0.999    14           2          0
+           scp_abs_bc                     0.964    16           2          0
+           scp_abs_cal                    0.940    18           4          0
+           scp_signed                     0.945    15           3          1
+yasa       SCALE@FFBS mean                0.917    21          15          0
+           SCALE@calibrated plug-in       0.938    21          12          0
+           ba_loa                         0.992    14           5          1
+           ba_reg                         1.104    11           1          2
+           cqr_ffbs                       1.080    13           6          5
+           cqr_qr                         0.911    19           7          1
+           norm_entropy_reg               0.940    20           5          0
+           norm_ffbs                      1.055     4           1          7
+           norm_reg_plugc                 1.061    13           2          1
+           scp_abs_bc                     0.993    13           4          1
+           scp_abs_cal                    0.996    14           5          1
+           scp_signed                     1.030    15           6          1

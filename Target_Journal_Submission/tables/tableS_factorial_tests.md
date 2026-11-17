@@ -1,146 +1,146 @@
-| stager     | cohort   | param   | centre             | constant    | scaled         |   n_subjects |   mean_is_scaled |   mean_is_constant |   ratio |   r_rb |     p |   p_holm |
-|:-----------|:---------|:--------|:-------------------|:------------|:---------------|-------------:|-----------------:|-------------------:|--------:|-------:|------:|---------:|
-| yasa       | HMC      | N1%     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           38.562 |             41.659 |   0.926 |  0.014 | 0.882 |    0.924 |
-| yasa       | HMC      | N1%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           39.156 |             40.930 |   0.957 |  0.145 | 0.123 |    0.403 |
-| yasa       | HMC      | N1%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           34.469 |             36.389 |   0.947 | -0.263 | 0.005 |    0.040 |
-| yasa       | HMC      | N2%     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           59.116 |             65.293 |   0.905 | -0.766 | 0.000 |    0.000 |
-| yasa       | HMC      | N2%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           51.348 |             52.749 |   0.973 | -0.365 | 0.000 |    0.001 |
-| yasa       | HMC      | N2%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           34.491 |             35.114 |   0.982 | -0.182 | 0.052 |    0.261 |
-| yasa       | HMC      | N3%     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           39.540 |             39.527 |   1.000 |  0.430 | 0.000 |    0.000 |
-| yasa       | HMC      | N3%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           34.765 |             34.390 |   1.011 |  0.069 | 0.462 |    0.924 |
-| yasa       | HMC      | N3%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           35.559 |             37.266 |   0.954 | -0.208 | 0.027 |    0.188 |
-| yasa       | HMC      | REM%    | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           23.252 |             25.379 |   0.916 | -0.714 | 0.000 |    0.000 |
-| yasa       | HMC      | REM%    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           22.255 |             23.330 |   0.954 | -0.413 | 0.000 |    0.000 |
-| yasa       | HMC      | REM%    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           26.661 |             27.448 |   0.971 |  0.207 | 0.028 |    0.188 |
-| yasa       | HMC      | REML    | raw plug-in        | scp_abs     | norm_reg_plug  |          150 |          294.444 |            310.983 |   0.947 | -0.154 | 0.101 |    0.403 |
-| yasa       | HMC      | REML    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          150 |          315.455 |            360.653 |   0.875 | -0.294 | 0.002 |    0.016 |
-| yasa       | HMC      | REML    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          150 |          309.681 |            374.685 |   0.827 | -0.740 | 0.000 |    0.000 |
-| yasa       | HMC      | SOL     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           49.188 |             59.629 |   0.825 | -0.714 | 0.000 |    0.000 |
-| yasa       | HMC      | SOL     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           49.552 |             54.142 |   0.915 | -0.662 | 0.000 |    0.000 |
-| yasa       | HMC      | SOL     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           71.259 |             76.770 |   0.928 | -0.785 | 0.000 |    0.000 |
-| yasa       | HMC      | TST     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |          230.268 |            253.318 |   0.909 | -0.519 | 0.000 |    0.000 |
-| yasa       | HMC      | TST     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |          141.218 |            162.371 |   0.870 | -0.578 | 0.000 |    0.000 |
-| yasa       | HMC      | TST     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |          144.878 |            161.002 |   0.900 | -0.724 | 0.000 |    0.000 |
-| yasa       | HMC      | WASO    | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |          214.292 |            228.844 |   0.936 | -0.508 | 0.000 |    0.000 |
-| yasa       | HMC      | WASO    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |          133.018 |            156.957 |   0.847 | -0.847 | 0.000 |    0.000 |
-| yasa       | HMC      | WASO    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |          146.908 |            155.581 |   0.944 | -0.458 | 0.000 |    0.000 |
-| yasa       | SC       | N1%     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           43.062 |             45.618 |   0.944 | -0.502 | 0.000 |    0.001 |
-| yasa       | SC       | N1%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           43.909 |             44.039 |   0.997 | -0.216 | 0.097 |    0.320 |
-| yasa       | SC       | N1%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           39.561 |             42.019 |   0.942 | -0.464 | 0.000 |    0.002 |
-| yasa       | SC       | N2%     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           55.800 |             59.471 |   0.938 | -0.690 | 0.000 |    0.000 |
-| yasa       | SC       | N2%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           58.804 |             62.428 |   0.942 | -0.718 | 0.000 |    0.000 |
-| yasa       | SC       | N2%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           42.529 |             44.058 |   0.965 | -0.083 | 0.525 |    0.525 |
-| yasa       | SC       | N3%     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           32.666 |             34.856 |   0.937 | -0.565 | 0.000 |    0.000 |
-| yasa       | SC       | N3%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           23.878 |             27.623 |   0.864 | -0.896 | 0.000 |    0.000 |
-| yasa       | SC       | N3%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           22.395 |             25.869 |   0.866 | -0.886 | 0.000 |    0.000 |
-| yasa       | SC       | REM%    | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           29.609 |             31.719 |   0.933 | -0.566 | 0.000 |    0.000 |
-| yasa       | SC       | REM%    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           28.237 |             30.060 |   0.939 | -0.387 | 0.003 |    0.015 |
-| yasa       | SC       | REM%    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           32.700 |             35.626 |   0.918 | -0.537 | 0.000 |    0.000 |
-| yasa       | SC       | REML    | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |          197.746 |            222.119 |   0.890 | -0.631 | 0.000 |    0.000 |
-| yasa       | SC       | REML    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |          188.851 |            219.167 |   0.862 | -0.685 | 0.000 |    0.000 |
-| yasa       | SC       | REML    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |          152.473 |            183.357 |   0.832 | -0.657 | 0.000 |    0.000 |
-| yasa       | SC       | SOL     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           51.666 |             69.513 |   0.743 | -0.531 | 0.000 |    0.000 |
-| yasa       | SC       | SOL     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           52.635 |             73.054 |   0.720 | -0.650 | 0.000 |    0.000 |
-| yasa       | SC       | SOL     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           56.109 |             81.022 |   0.693 | -0.677 | 0.000 |    0.000 |
-| yasa       | SC       | TST     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |          168.624 |            200.513 |   0.841 | -0.847 | 0.000 |    0.000 |
-| yasa       | SC       | TST     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |          148.782 |            165.859 |   0.897 | -0.675 | 0.000 |    0.000 |
-| yasa       | SC       | TST     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |          142.740 |            158.067 |   0.903 | -0.711 | 0.000 |    0.000 |
-| yasa       | SC       | WASO    | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |          277.132 |            282.125 |   0.982 | -0.178 | 0.172 |    0.343 |
-| yasa       | SC       | WASO    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |          260.785 |            267.330 |   0.976 |  0.228 | 0.080 |    0.320 |
-| yasa       | SC       | WASO    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |          324.384 |            329.684 |   0.984 | -0.513 | 0.000 |    0.001 |
-| yasa       | ST       | N1%     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           19.915 |             20.743 |   0.960 | -0.478 | 0.050 |    0.651 |
-| yasa       | ST       | N1%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           20.005 |             19.249 |   1.039 | -0.099 | 0.702 |    1.000 |
-| yasa       | ST       | N1%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           24.272 |             24.668 |   0.984 | -0.573 | 0.017 |    0.292 |
-| yasa       | ST       | N2%     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           42.937 |             42.699 |   1.006 |  0.462 | 0.059 |    0.704 |
-| yasa       | ST       | N2%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           43.318 |             40.094 |   1.080 |  0.700 | 0.003 |    0.057 |
-| yasa       | ST       | N2%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           37.558 |             39.208 |   0.958 | -0.051 | 0.849 |    1.000 |
-| yasa       | ST       | N3%     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           37.849 |             36.290 |   1.043 |  0.518 | 0.033 |    0.461 |
-| yasa       | ST       | N3%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           29.992 |             27.402 |   1.095 |  0.700 | 0.003 |    0.057 |
-| yasa       | ST       | N3%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           27.815 |             29.429 |   0.945 | -0.107 | 0.679 |    1.000 |
-| yasa       | ST       | REM%    | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           31.419 |             27.751 |   1.132 |  0.984 | 0.000 |    0.000 |
-| yasa       | ST       | REM%    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           30.103 |             26.893 |   1.119 |  0.945 | 0.000 |    0.000 |
-| yasa       | ST       | REM%    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           28.043 |             27.131 |   1.034 |  0.083 | 0.750 |    1.000 |
-| yasa       | ST       | REML    | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |          196.807 |            206.818 |   0.952 | -0.447 | 0.068 |    0.704 |
-| yasa       | ST       | REML    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |          202.321 |            212.830 |   0.951 | -0.462 | 0.059 |    0.704 |
-| yasa       | ST       | REML    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |          191.409 |            201.984 |   0.948 | -0.621 | 0.009 |    0.167 |
-| yasa       | ST       | SOL     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           21.232 |             25.170 |   0.844 | -0.115 | 0.656 |    1.000 |
-| yasa       | ST       | SOL     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           33.589 |             36.398 |   0.923 | -0.573 | 0.017 |    0.292 |
-| yasa       | ST       | SOL     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           39.042 |             45.030 |   0.867 | -0.834 | 0.000 |    0.004 |
-| yasa       | ST       | TST     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |          117.257 |            138.318 |   0.848 | -0.866 | 0.000 |    0.002 |
-| yasa       | ST       | TST     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           37.406 |             39.591 |   0.945 | -0.557 | 0.021 |    0.313 |
-| yasa       | ST       | TST     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           56.841 |             58.497 |   0.972 | -0.249 | 0.321 |    1.000 |
-| yasa       | ST       | WASO    | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           95.135 |             99.148 |   0.960 |  0.249 | 0.321 |    1.000 |
-| yasa       | ST       | WASO    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           48.614 |             47.795 |   1.017 |  0.012 | 0.975 |    1.000 |
-| yasa       | ST       | WASO    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           82.357 |             86.342 |   0.954 | -0.383 | 0.121 |    1.000 |
-| lgbm_sc_s0 | HMC      | N1%     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           50.046 |             54.722 |   0.915 | -0.636 | 0.000 |    0.000 |
-| lgbm_sc_s0 | HMC      | N1%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           41.999 |             41.396 |   1.015 | -0.271 | 0.004 |    0.023 |
-| lgbm_sc_s0 | HMC      | N1%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           38.797 |             39.113 |   0.992 |  0.148 | 0.115 |    0.442 |
-| lgbm_sc_s0 | HMC      | N2%     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           54.859 |             52.551 |   1.044 |  0.290 | 0.002 |    0.014 |
-| lgbm_sc_s0 | HMC      | N2%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           48.052 |             48.500 |   0.991 | -0.440 | 0.000 |    0.000 |
-| lgbm_sc_s0 | HMC      | N2%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           46.488 |             46.361 |   1.003 | -0.357 | 0.000 |    0.001 |
-| lgbm_sc_s0 | HMC      | N3%     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           46.992 |             49.538 |   0.949 |  0.201 | 0.032 |    0.161 |
-| lgbm_sc_s0 | HMC      | N3%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           54.498 |             57.684 |   0.945 | -0.150 | 0.111 |    0.442 |
-| lgbm_sc_s0 | HMC      | N3%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           56.827 |             57.288 |   0.992 |  0.067 | 0.478 |    0.541 |
-| lgbm_sc_s0 | HMC      | REM%    | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           26.322 |             27.152 |   0.969 | -0.313 | 0.001 |    0.007 |
-| lgbm_sc_s0 | HMC      | REM%    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           22.686 |             23.118 |   0.981 | -0.433 | 0.000 |    0.000 |
-| lgbm_sc_s0 | HMC      | REM%    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           26.408 |             28.957 |   0.912 | -0.632 | 0.000 |    0.000 |
-| lgbm_sc_s0 | HMC      | REML    | raw plug-in        | scp_abs     | norm_reg_plug  |          150 |          297.589 |            313.563 |   0.949 | -0.104 | 0.270 |    0.541 |
-| lgbm_sc_s0 | HMC      | REML    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          150 |          380.520 |            379.670 |   1.002 | -0.355 | 0.000 |    0.001 |
-| lgbm_sc_s0 | HMC      | REML    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          150 |          387.815 |            401.828 |   0.965 | -0.639 | 0.000 |    0.000 |
-| lgbm_sc_s0 | HMC      | SOL     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           58.995 |             64.023 |   0.921 | -0.773 | 0.000 |    0.000 |
-| lgbm_sc_s0 | HMC      | SOL     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           50.300 |             51.887 |   0.969 | -0.686 | 0.000 |    0.000 |
-| lgbm_sc_s0 | HMC      | SOL     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           72.716 |             82.520 |   0.881 | -0.751 | 0.000 |    0.000 |
-| lgbm_sc_s0 | HMC      | TST     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |          244.466 |            258.411 |   0.946 | -0.452 | 0.000 |    0.000 |
-| lgbm_sc_s0 | HMC      | TST     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |          175.758 |            223.583 |   0.786 | -0.977 | 0.000 |    0.000 |
-| lgbm_sc_s0 | HMC      | TST     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |          159.486 |            193.243 |   0.825 | -0.951 | 0.000 |    0.000 |
-| lgbm_sc_s0 | HMC      | WASO    | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |          209.563 |            218.593 |   0.959 | -0.499 | 0.000 |    0.000 |
-| lgbm_sc_s0 | HMC      | WASO    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |          148.888 |            160.864 |   0.926 | -0.795 | 0.000 |    0.000 |
-| lgbm_sc_s0 | HMC      | WASO    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |          142.258 |            150.497 |   0.945 | -0.755 | 0.000 |    0.000 |
-| lgbm_sc_s0 | SC       | N1%     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           42.502 |             47.420 |   0.896 | -0.867 | 0.000 |    0.000 |
-| lgbm_sc_s0 | SC       | N1%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           41.002 |             44.602 |   0.919 | -0.804 | 0.000 |    0.000 |
-| lgbm_sc_s0 | SC       | N1%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           39.258 |             41.679 |   0.942 | -0.421 | 0.001 |    0.012 |
-| lgbm_sc_s0 | SC       | N2%     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           42.032 |             45.003 |   0.934 | -0.538 | 0.000 |    0.000 |
-| lgbm_sc_s0 | SC       | N2%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           50.858 |             53.173 |   0.956 | -0.635 | 0.000 |    0.000 |
-| lgbm_sc_s0 | SC       | N2%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           40.823 |             41.812 |   0.976 | -0.150 | 0.251 |    0.871 |
-| lgbm_sc_s0 | SC       | N3%     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           17.200 |             18.894 |   0.910 | -0.733 | 0.000 |    0.000 |
-| lgbm_sc_s0 | SC       | N3%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           16.116 |             17.220 |   0.936 | -0.606 | 0.000 |    0.000 |
-| lgbm_sc_s0 | SC       | N3%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           17.464 |             17.914 |   0.975 | -0.459 | 0.000 |    0.005 |
-| lgbm_sc_s0 | SC       | REM%    | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           27.590 |             28.114 |   0.981 |  0.294 | 0.024 |    0.167 |
-| lgbm_sc_s0 | SC       | REM%    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           26.881 |             28.107 |   0.956 |  0.119 | 0.361 |    0.871 |
-| lgbm_sc_s0 | SC       | REM%    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           30.393 |             32.858 |   0.925 | -0.287 | 0.028 |    0.167 |
-| lgbm_sc_s0 | SC       | REML    | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |          173.912 |            209.147 |   0.832 | -0.659 | 0.000 |    0.000 |
-| lgbm_sc_s0 | SC       | REML    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |          190.130 |            242.410 |   0.784 | -0.540 | 0.000 |    0.000 |
-| lgbm_sc_s0 | SC       | REML    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |          141.837 |            192.028 |   0.739 | -0.806 | 0.000 |    0.000 |
-| lgbm_sc_s0 | SC       | SOL     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           52.916 |             61.564 |   0.860 | -0.357 | 0.006 |    0.055 |
-| lgbm_sc_s0 | SC       | SOL     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           48.648 |             57.625 |   0.844 | -0.355 | 0.006 |    0.055 |
-| lgbm_sc_s0 | SC       | SOL     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           54.231 |             80.702 |   0.672 | -0.908 | 0.000 |    0.000 |
-| lgbm_sc_s0 | SC       | TST     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |          136.791 |            143.821 |   0.951 | -0.161 | 0.218 |    0.871 |
-| lgbm_sc_s0 | SC       | TST     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |          131.385 |            139.090 |   0.945 | -0.503 | 0.000 |    0.001 |
-| lgbm_sc_s0 | SC       | TST     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |          110.442 |            124.459 |   0.887 | -0.679 | 0.000 |    0.000 |
-| lgbm_sc_s0 | SC       | WASO    | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |          187.876 |            194.827 |   0.964 |  0.043 | 0.740 |    0.871 |
-| lgbm_sc_s0 | SC       | WASO    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |          199.494 |            198.151 |   1.007 |  0.185 | 0.156 |    0.782 |
-| lgbm_sc_s0 | SC       | WASO    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |          259.607 |            294.106 |   0.883 | -0.719 | 0.000 |    0.000 |
-| lgbm_sc_s0 | ST       | N1%     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           29.130 |             27.394 |   1.063 |  0.051 | 0.849 |    1.000 |
-| lgbm_sc_s0 | ST       | N1%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           23.833 |             23.996 |   0.993 |  0.059 | 0.824 |    1.000 |
-| lgbm_sc_s0 | ST       | N1%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           23.346 |             24.096 |   0.969 | -0.581 | 0.016 |    0.234 |
-| lgbm_sc_s0 | ST       | N2%     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           37.694 |             41.083 |   0.918 | -0.407 | 0.098 |    1.000 |
-| lgbm_sc_s0 | ST       | N2%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           45.270 |             41.792 |   1.083 |  0.692 | 0.003 |    0.055 |
-| lgbm_sc_s0 | ST       | N2%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           35.218 |             34.921 |   1.009 |  0.423 | 0.085 |    1.000 |
-| lgbm_sc_s0 | ST       | N3%     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           34.986 |             37.711 |   0.928 | -0.265 | 0.290 |    1.000 |
-| lgbm_sc_s0 | ST       | N3%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           32.972 |             34.742 |   0.949 | -0.542 | 0.025 |    0.352 |
-| lgbm_sc_s0 | ST       | N3%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           35.267 |             35.667 |   0.989 |  0.028 | 0.924 |    1.000 |
-| lgbm_sc_s0 | ST       | REM%    | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           36.725 |             33.558 |   1.094 |  0.889 | 0.000 |    0.001 |
-| lgbm_sc_s0 | ST       | REM%    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           30.372 |             28.130 |   1.080 |  0.794 | 0.001 |    0.011 |
-| lgbm_sc_s0 | ST       | REM%    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           26.479 |             25.931 |   1.021 | -0.146 | 0.566 |    1.000 |
-| lgbm_sc_s0 | ST       | REML    | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |          193.457 |            225.193 |   0.859 | -0.708 | 0.003 |    0.045 |
-| lgbm_sc_s0 | ST       | REML    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |          228.473 |            228.580 |   1.000 | -0.107 | 0.679 |    1.000 |
-| lgbm_sc_s0 | ST       | REML    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |          157.974 |            166.410 |   0.949 | -0.375 | 0.129 |    1.000 |
-| lgbm_sc_s0 | ST       | SOL     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           39.269 |             36.989 |   1.062 |  0.455 | 0.063 |    0.824 |
-| lgbm_sc_s0 | ST       | SOL     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           39.242 |             35.523 |   1.105 |  0.787 | 0.001 |    0.011 |
-| lgbm_sc_s0 | ST       | SOL     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           41.876 |             48.963 |   0.855 | -0.794 | 0.001 |    0.011 |
-| lgbm_sc_s0 | ST       | TST     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           89.450 |             90.273 |   0.991 |  0.304 | 0.222 |    1.000 |
-| lgbm_sc_s0 | ST       | TST     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           62.063 |             70.182 |   0.884 | -0.652 | 0.006 |    0.095 |
-| lgbm_sc_s0 | ST       | TST     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           56.175 |             66.128 |   0.849 | -0.810 | 0.000 |    0.008 |
-| lgbm_sc_s0 | ST       | WASO    | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           82.998 |             82.636 |   1.004 |  0.328 | 0.187 |    1.000 |
-| lgbm_sc_s0 | ST       | WASO    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           76.315 |             80.352 |   0.950 | -0.407 | 0.098 |    1.000 |
-| lgbm_sc_s0 | ST       | WASO    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           81.191 |             88.338 |   0.919 | -0.794 | 0.001 |    0.011 |
+| stager     | cohort   | param   | centre             | constant    | scaled         |   n_subjects |   mean_is_scaled |   mean_is_constant |   ratio |   ratio_lo95 |   ratio_hi95 |     p |   p_holm |
+|:-----------|:---------|:--------|:-------------------|:------------|:---------------|-------------:|-----------------:|-------------------:|--------:|-------------:|-------------:|------:|---------:|
+| yasa       | HMC      | N1%     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           38.562 |             41.659 |   0.926 |        0.869 |        0.982 | 0.022 |    0.243 |
+| yasa       | HMC      | N1%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           39.156 |             40.930 |   0.957 |        0.906 |        1.009 | 0.146 |    1.000 |
+| yasa       | HMC      | N1%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           34.469 |             36.389 |   0.947 |        0.894 |        0.991 | 0.034 |    0.344 |
+| yasa       | HMC      | N2%     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           59.116 |             65.293 |   0.905 |        0.874 |        0.933 | 0.000 |    0.001 |
+| yasa       | HMC      | N2%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           51.348 |             52.749 |   0.973 |        0.943 |        1.011 | 0.133 |    1.000 |
+| yasa       | HMC      | N2%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           34.491 |             35.114 |   0.982 |        0.945 |        1.022 | 0.401 |    1.000 |
+| yasa       | HMC      | N3%     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           39.540 |             39.527 |   1.000 |        0.952 |        1.057 | 0.991 |    1.000 |
+| yasa       | HMC      | N3%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           34.765 |             34.390 |   1.011 |        0.970 |        1.055 | 0.636 |    1.000 |
+| yasa       | HMC      | N3%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           35.559 |             37.266 |   0.954 |        0.891 |        1.015 | 0.168 |    1.000 |
+| yasa       | HMC      | REM%    | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           23.252 |             25.379 |   0.916 |        0.855 |        0.974 | 0.000 |    0.007 |
+| yasa       | HMC      | REM%    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           22.255 |             23.330 |   0.954 |        0.903 |        1.008 | 0.115 |    1.000 |
+| yasa       | HMC      | REM%    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           26.661 |             27.448 |   0.971 |        0.910 |        1.032 | 0.438 |    1.000 |
+| yasa       | HMC      | REML    | raw plug-in        | scp_abs     | norm_reg_plug  |          150 |          294.444 |            310.983 |   0.947 |        0.868 |        1.033 | 0.259 |    1.000 |
+| yasa       | HMC      | REML    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          150 |          315.455 |            360.653 |   0.875 |        0.806 |        0.957 | 0.005 |    0.060 |
+| yasa       | HMC      | REML    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          150 |          309.681 |            374.685 |   0.827 |        0.771 |        0.878 | 0.000 |    0.001 |
+| yasa       | HMC      | SOL     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           49.188 |             59.629 |   0.825 |        0.776 |        0.867 | 0.000 |    0.001 |
+| yasa       | HMC      | SOL     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           49.552 |             54.142 |   0.915 |        0.854 |        0.951 | 0.000 |    0.001 |
+| yasa       | HMC      | SOL     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           71.259 |             76.770 |   0.928 |        0.853 |        0.969 | 0.000 |    0.001 |
+| yasa       | HMC      | TST     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |          230.268 |            253.318 |   0.909 |        0.880 |        0.947 | 0.000 |    0.001 |
+| yasa       | HMC      | TST     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |          141.218 |            162.371 |   0.870 |        0.821 |        0.919 | 0.000 |    0.001 |
+| yasa       | HMC      | TST     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |          144.878 |            161.002 |   0.900 |        0.859 |        0.942 | 0.000 |    0.001 |
+| yasa       | HMC      | WASO    | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |          214.292 |            228.844 |   0.936 |        0.907 |        0.970 | 0.001 |    0.013 |
+| yasa       | HMC      | WASO    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |          133.018 |            156.957 |   0.847 |        0.803 |        0.887 | 0.000 |    0.001 |
+| yasa       | HMC      | WASO    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |          146.908 |            155.581 |   0.944 |        0.916 |        0.977 | 0.001 |    0.017 |
+| yasa       | SC       | N1%     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           43.050 |             45.615 |   0.944 |        0.915 |        0.975 | 0.000 |    0.002 |
+| yasa       | SC       | N1%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           43.899 |             44.038 |   0.997 |        0.971 |        1.023 | 0.833 |    1.000 |
+| yasa       | SC       | N1%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           39.562 |             42.021 |   0.941 |        0.911 |        0.975 | 0.002 |    0.016 |
+| yasa       | SC       | N2%     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           55.922 |             59.559 |   0.939 |        0.919 |        0.960 | 0.000 |    0.001 |
+| yasa       | SC       | N2%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           58.992 |             62.498 |   0.944 |        0.923 |        0.965 | 0.000 |    0.001 |
+| yasa       | SC       | N2%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           42.525 |             44.040 |   0.966 |        0.931 |        1.000 | 0.072 |    0.362 |
+| yasa       | SC       | N3%     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           32.648 |             34.845 |   0.937 |        0.911 |        0.964 | 0.000 |    0.001 |
+| yasa       | SC       | N3%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           23.872 |             27.622 |   0.864 |        0.812 |        0.912 | 0.000 |    0.001 |
+| yasa       | SC       | N3%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           22.406 |             25.830 |   0.867 |        0.819 |        0.911 | 0.000 |    0.001 |
+| yasa       | SC       | REM%    | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           29.611 |             31.722 |   0.933 |        0.891 |        0.977 | 0.011 |    0.079 |
+| yasa       | SC       | REM%    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           28.125 |             29.857 |   0.942 |        0.905 |        0.988 | 0.041 |    0.247 |
+| yasa       | SC       | REM%    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           32.843 |             35.719 |   0.919 |        0.873 |        0.973 | 0.007 |    0.055 |
+| yasa       | SC       | REML    | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |          197.741 |            222.119 |   0.890 |        0.827 |        0.964 | 0.003 |    0.023 |
+| yasa       | SC       | REML    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |          188.847 |            219.167 |   0.862 |        0.796 |        0.929 | 0.000 |    0.001 |
+| yasa       | SC       | REML    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |          152.458 |            181.846 |   0.838 |        0.755 |        0.921 | 0.000 |    0.002 |
+| yasa       | SC       | SOL     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           51.666 |             69.513 |   0.743 |        0.672 |        0.846 | 0.001 |    0.014 |
+| yasa       | SC       | SOL     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           52.635 |             73.054 |   0.720 |        0.647 |        0.809 | 0.000 |    0.001 |
+| yasa       | SC       | SOL     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           56.109 |             81.022 |   0.693 |        0.635 |        0.761 | 0.000 |    0.001 |
+| yasa       | SC       | TST     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |          170.257 |            189.654 |   0.898 |        0.861 |        0.935 | 0.000 |    0.001 |
+| yasa       | SC       | TST     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |          149.019 |            165.859 |   0.898 |        0.838 |        0.946 | 0.000 |    0.001 |
+| yasa       | SC       | TST     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |          143.223 |            157.553 |   0.909 |        0.851 |        0.953 | 0.000 |    0.001 |
+| yasa       | SC       | WASO    | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |          282.730 |            286.109 |   0.988 |        0.944 |        1.032 | 0.617 |    1.000 |
+| yasa       | SC       | WASO    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |          260.919 |            269.058 |   0.970 |        0.914 |        1.024 | 0.303 |    1.000 |
+| yasa       | SC       | WASO    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |          324.308 |            328.023 |   0.989 |        0.929 |        1.064 | 0.820 |    1.000 |
+| yasa       | ST       | N1%     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           19.937 |             20.747 |   0.961 |        0.911 |        1.026 | 0.265 |    1.000 |
+| yasa       | ST       | N1%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           20.039 |             19.266 |   1.040 |        0.962 |        1.112 | 0.399 |    1.000 |
+| yasa       | ST       | N1%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           24.146 |             24.545 |   0.984 |        0.913 |        1.036 | 0.703 |    1.000 |
+| yasa       | ST       | N2%     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           43.121 |             42.646 |   1.011 |        0.948 |        1.082 | 0.755 |    1.000 |
+| yasa       | ST       | N2%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           43.223 |             40.288 |   1.073 |        1.014 |        1.171 | 0.020 |    0.355 |
+| yasa       | ST       | N2%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           37.552 |             39.302 |   0.955 |        0.896 |        1.021 | 0.262 |    1.000 |
+| yasa       | ST       | N3%     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           37.844 |             36.289 |   1.043 |        0.969 |        1.142 | 0.401 |    1.000 |
+| yasa       | ST       | N3%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           30.029 |             27.419 |   1.095 |        1.034 |        1.171 | 0.002 |    0.050 |
+| yasa       | ST       | N3%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           27.790 |             29.403 |   0.945 |        0.863 |        1.022 | 0.307 |    1.000 |
+| yasa       | ST       | REM%    | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           31.123 |             27.509 |   1.131 |        1.093 |        1.180 | 0.000 |    0.001 |
+| yasa       | ST       | REM%    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           29.355 |             27.392 |   1.072 |        1.021 |        1.119 | 0.014 |    0.261 |
+| yasa       | ST       | REM%    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           28.439 |             27.301 |   1.042 |        0.964 |        1.128 | 0.445 |    1.000 |
+| yasa       | ST       | REML    | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |          197.155 |            206.886 |   0.953 |        0.889 |        1.023 | 0.199 |    1.000 |
+| yasa       | ST       | REML    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |          202.706 |            212.920 |   0.952 |        0.888 |        1.012 | 0.135 |    1.000 |
+| yasa       | ST       | REML    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |          185.541 |            200.572 |   0.925 |        0.834 |        1.001 | 0.042 |    0.671 |
+| yasa       | ST       | SOL     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           20.697 |             25.125 |   0.824 |        0.645 |        1.009 | 0.144 |    1.000 |
+| yasa       | ST       | SOL     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           33.866 |             36.352 |   0.932 |        0.848 |        0.982 | 0.044 |    0.671 |
+| yasa       | ST       | SOL     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           40.596 |             44.788 |   0.906 |        0.793 |        0.982 | 0.005 |    0.098 |
+| yasa       | ST       | TST     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |          117.935 |            138.318 |   0.853 |        0.797 |        0.903 | 0.000 |    0.002 |
+| yasa       | ST       | TST     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           37.570 |             39.591 |   0.949 |        0.860 |        1.066 | 0.375 |    1.000 |
+| yasa       | ST       | TST     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           55.596 |             58.497 |   0.950 |        0.904 |        1.027 | 0.237 |    1.000 |
+| yasa       | ST       | WASO    | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           89.770 |             99.614 |   0.901 |        0.825 |        0.989 | 0.033 |    0.556 |
+| yasa       | ST       | WASO    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           49.549 |             48.125 |   1.030 |        0.927 |        1.154 | 0.628 |    1.000 |
+| yasa       | ST       | WASO    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           75.801 |             94.610 |   0.801 |        0.740 |        0.883 | 0.000 |    0.001 |
+| lgbm_sc_s0 | HMC      | N1%     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           50.046 |             54.722 |   0.915 |        0.868 |        0.962 | 0.000 |    0.001 |
+| lgbm_sc_s0 | HMC      | N1%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           41.999 |             41.396 |   1.015 |        0.980 |        1.046 | 0.416 |    1.000 |
+| lgbm_sc_s0 | HMC      | N1%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           38.797 |             39.113 |   0.992 |        0.953 |        1.023 | 0.684 |    1.000 |
+| lgbm_sc_s0 | HMC      | N2%     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           54.859 |             52.551 |   1.044 |        1.006 |        1.082 | 0.023 |    0.347 |
+| lgbm_sc_s0 | HMC      | N2%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           48.052 |             48.500 |   0.991 |        0.958 |        1.024 | 0.606 |    1.000 |
+| lgbm_sc_s0 | HMC      | N2%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           46.488 |             46.361 |   1.003 |        0.973 |        1.033 | 0.862 |    1.000 |
+| lgbm_sc_s0 | HMC      | N3%     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           46.992 |             49.538 |   0.949 |        0.897 |        1.000 | 0.085 |    1.000 |
+| lgbm_sc_s0 | HMC      | N3%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           54.498 |             57.684 |   0.945 |        0.900 |        0.991 | 0.031 |    0.402 |
+| lgbm_sc_s0 | HMC      | N3%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           56.827 |             57.288 |   0.992 |        0.954 |        1.035 | 0.767 |    1.000 |
+| lgbm_sc_s0 | HMC      | REM%    | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           26.322 |             27.152 |   0.969 |        0.931 |        1.006 | 0.140 |    1.000 |
+| lgbm_sc_s0 | HMC      | REM%    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           22.686 |             23.118 |   0.981 |        0.938 |        1.024 | 0.409 |    1.000 |
+| lgbm_sc_s0 | HMC      | REM%    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           26.408 |             28.957 |   0.912 |        0.874 |        0.950 | 0.000 |    0.001 |
+| lgbm_sc_s0 | HMC      | REML    | raw plug-in        | scp_abs     | norm_reg_plug  |          150 |          297.589 |            313.563 |   0.949 |        0.882 |        1.016 | 0.182 |    1.000 |
+| lgbm_sc_s0 | HMC      | REML    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          150 |          380.520 |            379.670 |   1.002 |        0.946 |        1.061 | 0.944 |    1.000 |
+| lgbm_sc_s0 | HMC      | REML    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          150 |          387.815 |            401.828 |   0.965 |        0.893 |        1.031 | 0.313 |    1.000 |
+| lgbm_sc_s0 | HMC      | SOL     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |           58.995 |             64.023 |   0.921 |        0.854 |        0.964 | 0.000 |    0.001 |
+| lgbm_sc_s0 | HMC      | SOL     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |           50.300 |             51.887 |   0.969 |        0.902 |        1.006 | 0.108 |    1.000 |
+| lgbm_sc_s0 | HMC      | SOL     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |           72.716 |             82.520 |   0.881 |        0.794 |        0.936 | 0.000 |    0.001 |
+| lgbm_sc_s0 | HMC      | TST     | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |          244.466 |            258.411 |   0.946 |        0.911 |        0.982 | 0.006 |    0.094 |
+| lgbm_sc_s0 | HMC      | TST     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |          175.758 |            223.583 |   0.786 |        0.752 |        0.818 | 0.000 |    0.001 |
+| lgbm_sc_s0 | HMC      | TST     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |          159.486 |            193.243 |   0.825 |        0.797 |        0.854 | 0.000 |    0.001 |
+| lgbm_sc_s0 | HMC      | WASO    | raw plug-in        | scp_abs     | norm_reg_plug  |          151 |          209.563 |            218.593 |   0.959 |        0.923 |        0.996 | 0.029 |    0.402 |
+| lgbm_sc_s0 | HMC      | WASO    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |          151 |          148.888 |            160.864 |   0.926 |        0.902 |        0.950 | 0.000 |    0.001 |
+| lgbm_sc_s0 | HMC      | WASO    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |          151 |          142.258 |            150.497 |   0.945 |        0.915 |        0.974 | 0.000 |    0.002 |
+| lgbm_sc_s0 | SC       | N1%     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           41.945 |             46.683 |   0.899 |        0.873 |        0.923 | 0.000 |    0.001 |
+| lgbm_sc_s0 | SC       | N1%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           41.003 |             44.610 |   0.919 |        0.887 |        0.943 | 0.000 |    0.001 |
+| lgbm_sc_s0 | SC       | N1%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           39.254 |             41.679 |   0.942 |        0.902 |        0.980 | 0.008 |    0.092 |
+| lgbm_sc_s0 | SC       | N2%     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           41.998 |             44.935 |   0.935 |        0.910 |        0.960 | 0.000 |    0.001 |
+| lgbm_sc_s0 | SC       | N2%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           50.848 |             53.776 |   0.946 |        0.922 |        0.968 | 0.000 |    0.001 |
+| lgbm_sc_s0 | SC       | N2%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           40.985 |             42.026 |   0.975 |        0.952 |        1.002 | 0.082 |    0.461 |
+| lgbm_sc_s0 | SC       | N3%     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           17.503 |             19.270 |   0.908 |        0.853 |        0.963 | 0.000 |    0.005 |
+| lgbm_sc_s0 | SC       | N3%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           16.475 |             17.408 |   0.946 |        0.885 |        1.007 | 0.077 |    0.461 |
+| lgbm_sc_s0 | SC       | N3%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           17.036 |             17.937 |   0.950 |        0.895 |        1.004 | 0.063 |    0.442 |
+| lgbm_sc_s0 | SC       | REM%    | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           27.261 |             27.793 |   0.981 |        0.933 |        1.040 | 0.532 |    1.000 |
+| lgbm_sc_s0 | SC       | REM%    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           26.755 |             27.990 |   0.956 |        0.909 |        1.018 | 0.257 |    1.000 |
+| lgbm_sc_s0 | SC       | REM%    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           30.576 |             32.972 |   0.927 |        0.875 |        0.986 | 0.047 |    0.375 |
+| lgbm_sc_s0 | SC       | REML    | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |          173.855 |            206.744 |   0.841 |        0.760 |        0.925 | 0.000 |    0.006 |
+| lgbm_sc_s0 | SC       | REML    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |          189.846 |            242.410 |   0.783 |        0.678 |        0.905 | 0.001 |    0.009 |
+| lgbm_sc_s0 | SC       | REML    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |          141.611 |            191.800 |   0.738 |        0.642 |        0.828 | 0.000 |    0.001 |
+| lgbm_sc_s0 | SC       | SOL     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |           52.916 |             61.564 |   0.860 |        0.794 |        0.953 | 0.025 |    0.229 |
+| lgbm_sc_s0 | SC       | SOL     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |           48.648 |             57.625 |   0.844 |        0.780 |        0.943 | 0.020 |    0.199 |
+| lgbm_sc_s0 | SC       | SOL     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |           54.231 |             80.702 |   0.672 |        0.592 |        0.751 | 0.000 |    0.001 |
+| lgbm_sc_s0 | SC       | TST     | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |          127.646 |            146.308 |   0.872 |        0.820 |        0.927 | 0.000 |    0.003 |
+| lgbm_sc_s0 | SC       | TST     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |          131.497 |            139.910 |   0.940 |        0.889 |        0.986 | 0.013 |    0.148 |
+| lgbm_sc_s0 | SC       | TST     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |          111.367 |            120.825 |   0.922 |        0.856 |        0.975 | 0.004 |    0.049 |
+| lgbm_sc_s0 | SC       | WASO    | raw plug-in        | scp_abs     | norm_reg_plug  |           78 |          190.917 |            188.074 |   1.015 |        0.983 |        1.068 | 0.434 |    1.000 |
+| lgbm_sc_s0 | SC       | WASO    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           78 |          193.756 |            192.737 |   1.005 |        0.969 |        1.062 | 0.815 |    1.000 |
+| lgbm_sc_s0 | SC       | WASO    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           78 |          259.494 |            295.792 |   0.877 |        0.818 |        0.935 | 0.000 |    0.001 |
+| lgbm_sc_s0 | ST       | N1%     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           29.240 |             27.469 |   1.064 |        0.977 |        1.151 | 0.292 |    1.000 |
+| lgbm_sc_s0 | ST       | N1%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           23.930 |             24.077 |   0.994 |        0.931 |        1.108 | 0.911 |    1.000 |
+| lgbm_sc_s0 | ST       | N1%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           22.867 |             23.672 |   0.966 |        0.910 |        1.002 | 0.066 |    1.000 |
+| lgbm_sc_s0 | ST       | N2%     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           38.183 |             42.477 |   0.899 |        0.841 |        0.956 | 0.000 |    0.007 |
+| lgbm_sc_s0 | ST       | N2%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           44.228 |             42.847 |   1.032 |        0.981 |        1.105 | 0.470 |    1.000 |
+| lgbm_sc_s0 | ST       | N2%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           35.604 |             35.564 |   1.001 |        0.955 |        1.047 | 0.963 |    1.000 |
+| lgbm_sc_s0 | ST       | N3%     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           34.910 |             37.659 |   0.927 |        0.862 |        1.003 | 0.130 |    1.000 |
+| lgbm_sc_s0 | ST       | N3%     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           32.804 |             34.390 |   0.954 |        0.867 |        1.029 | 0.363 |    1.000 |
+| lgbm_sc_s0 | ST       | N3%     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           35.165 |             35.562 |   0.989 |        0.910 |        1.058 | 0.852 |    1.000 |
+| lgbm_sc_s0 | ST       | REM%    | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           36.838 |             33.681 |   1.094 |        1.066 |        1.121 | 0.000 |    0.002 |
+| lgbm_sc_s0 | ST       | REM%    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           30.332 |             28.088 |   1.080 |        1.038 |        1.122 | 0.001 |    0.010 |
+| lgbm_sc_s0 | ST       | REM%    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           26.641 |             26.011 |   1.024 |        0.966 |        1.094 | 0.557 |    1.000 |
+| lgbm_sc_s0 | ST       | REML    | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |          194.921 |            225.591 |   0.864 |        0.776 |        0.969 | 0.015 |    0.255 |
+| lgbm_sc_s0 | ST       | REML    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |          203.915 |            225.273 |   0.905 |        0.785 |        1.037 | 0.267 |    1.000 |
+| lgbm_sc_s0 | ST       | REML    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |          158.515 |            166.532 |   0.952 |        0.889 |        1.011 | 0.127 |    1.000 |
+| lgbm_sc_s0 | ST       | SOL     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           38.912 |             35.739 |   1.089 |        1.036 |        1.293 | 0.000 |    0.001 |
+| lgbm_sc_s0 | ST       | SOL     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           37.604 |             35.284 |   1.066 |        0.992 |        1.332 | 0.097 |    1.000 |
+| lgbm_sc_s0 | ST       | SOL     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           40.929 |             47.713 |   0.858 |        0.709 |        0.957 | 0.000 |    0.003 |
+| lgbm_sc_s0 | ST       | TST     | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           87.069 |             88.273 |   0.986 |        0.905 |        1.102 | 0.923 |    1.000 |
+| lgbm_sc_s0 | ST       | TST     | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           62.510 |             70.182 |   0.891 |        0.826 |        0.958 | 0.003 |    0.062 |
+| lgbm_sc_s0 | ST       | TST     | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           56.492 |             66.115 |   0.854 |        0.818 |        0.910 | 0.000 |    0.010 |
+| lgbm_sc_s0 | ST       | WASO    | raw plug-in        | scp_abs     | norm_reg_plug  |           22 |           82.615 |             81.909 |   1.009 |        0.948 |        1.084 | 0.885 |    1.000 |
+| lgbm_sc_s0 | ST       | WASO    | calibrated plug-in | scp_abs_cal | norm_reg_plugc |           22 |           76.992 |             80.739 |   0.954 |        0.917 |        1.025 | 0.294 |    1.000 |
+| lgbm_sc_s0 | ST       | WASO    | FFBS mean          | scp_abs_mu  | norm_reg_ffbs  |           22 |           94.128 |             90.230 |   1.043 |        0.971 |        1.120 | 0.367 |    1.000 |

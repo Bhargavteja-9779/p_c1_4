@@ -230,6 +230,9 @@ def fig3_transport(stagers=("yasa", "lgbm_sc_s0")):
         ax.set_xticks(range(8)); ax.set_xticklabels(PARAMS, rotation=45, ha="right"); ax.set_ylim(0.3, 1.02)
         ax.set_ylabel("Coverage"); ax.set_title(f"{'ad'[si]}  {STAGER_LAB[st].split(' ')[0]}: calibrated on SC", loc="left", fontsize=8)
         g = loc[loc.stager == st]
+        # settings with unbounded intervals (e.g. distribution-free LoA with < 19 calibration nights) are not plotted
+        bad = g[~np.isfinite(g.mean_width)].groupby(["cohort", "n_target", "method"]).size().index
+        g = g[~g.set_index(["cohort", "n_target", "method"]).index.isin(bad)]
         for j, (col, ylab) in enumerate((("coverage", "Mean coverage"),
                                          ("p_cov_lt80", "P(realised coverage < 0.80)"))):
             ax = axes[si, 1 + j]
