@@ -10,7 +10,7 @@ Project root: /home/user/p_c1_4/Target_Journal_Submission
 * Manuscript as submitted (all numbers injected automatically): manuscript/build/manuscript_rendered.md
   (PDF: manuscript/Final_Manuscript.pdf; DOCX: manuscript/Final_Manuscript.docx; sources with {{placeholders}}:
   manuscript/sections/*.md; word counts: manuscript/build/word_counts.json)
-* Supplementary material: supplementary/Supplementary_Material.md (S1–S17)
+* Supplementary material: supplementary/Supplementary_Material.md (S1–S16)
 * Figures: figures/*.png; main tables: tables/table1_cohorts.md, table2_display.md, table3_display.md
 * Pre-registered protocol: supplementary/PREREGISTERED_PROTOCOL.md; deviations: /home/user/p_c1_4/CHANGELOG.md
 * Experiment log: /home/user/p_c1_4/EXPERIMENT_LOG.md; data/leakage audit: supplementary/S_data_and_leakage_audit.md
