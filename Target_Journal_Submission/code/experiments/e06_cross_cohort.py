@@ -19,7 +19,7 @@ from src.evaluation.conformal_eval import METHODS, PARAMS, evaluate, param_frame
 from src.utils import RESULTS_DIR  # noqa: E402
 
 NT = {"ST": [10, 20, 30], "HMC": [10, 20, 30, 50]}
-FEW_METHODS = ["ba_loa", "scp_abs", "scp_abs_bc", "scp_abs_cal", "scp_abs_mu", "cqr_ffbs", "norm_reg_ffbs", "norm_reg_plugc"]
+FEW_METHODS = ["ba_loa", "ba_reg", "scp_signed", "scp_abs", "scp_abs_bc", "scp_abs_cal", "scp_abs_mu", "cqr_ffbs", "norm_reg_ffbs", "norm_reg_plugc"]
 
 
 def pick_subjects(f, n_nights, rng):

@@ -20,6 +20,8 @@ Methods (all receive identical calibration/test nights):
   norm_reg_plugc   FFBS-SD scale, centred on the calibrated plug-in            (centre x scale factorial)
   norm_reg_ind_s   scale-only ablation: FFBS-mean centre, independent-epoch SD as scale
   norm_reg_ffbs1_s scale-only ablation: FFBS-mean centre (fitted tau), SD from tau = 1 samples
+  scp_signed       exactly valid distribution-free LoA: plug-in + conformal lower/upper quantiles (alpha/2 each)
+                   of the signed residual ref - plug-in
   ba_reg           regression-based (heteroscedastic) Bland–Altman limits of agreement (Bland & Altman 1999):
                    bias and mean absolute residual regressed on the automatic value
 Regularised scales add the median of the label-free scale over calibration AND test nights, so that the
@@ -36,7 +38,7 @@ from ..uncertainty.conformal import conformal_quantile, interval_score
 PARAMS = ["TST", "SOL", "WASO", "REML", "N1%", "N2%", "N3%", "REM%"]
 BOUNDS = {"TST": (0, None), "SOL": (0, None), "WASO": (0, None), "REML": (0, None),
           "N1%": (0, 100), "N2%": (0, 100), "N3%": (0, 100), "REM%": (0, 100)}
-METHODS = ["ba_loa", "ba_reg", "scp_abs", "scp_abs_bc", "scp_abs_cal", "scp_abs_mu", "bayes_pct", "ind_pct", "cqr_ffbs",
+METHODS = ["ba_loa", "ba_reg", "scp_abs", "scp_abs_bc", "scp_signed", "scp_abs_cal", "scp_abs_mu", "bayes_pct", "ind_pct", "cqr_ffbs",
            "cqr_qr", "norm_entropy_reg", "norm_ffbs", "norm_reg_ffbs", "norm_reg_ind", "norm_reg_ffbs1",
            "norm_reg_plug", "norm_reg_plugc", "norm_reg_ind_s", "norm_reg_ffbs1_s"]
 PROPOSED = "norm_reg_ffbs"
@@ -84,10 +86,18 @@ def _qr_fit_predict(cal, test, alpha):
 
 def make_interval(method, cal, test, alpha):
     y_c = cal["y"].values
-    if method == "ba_loa":
+    if method == "ba_loa":     # parametric LoA as a prediction interval (t quantile, sqrt(1 + 1/n))
+        from scipy.stats import t as tdist
         r = y_c - cal["plug"].values
+        n = len(r)
         b, s = r.mean(), r.std(ddof=1)
-        return test["plug"].values + b - ZK[alpha] * s, test["plug"].values + b + ZK[alpha] * s
+        h = tdist.ppf(1 - alpha / 2, n - 1) * s * np.sqrt(1 + 1 / n)
+        return test["plug"].values + b - h, test["plug"].values + b + h
+    if method == "scp_signed":
+        r = y_c - cal["plug"].values
+        q_hi = conformal_quantile(r, alpha / 2)
+        q_lo = -conformal_quantile(-r, alpha / 2)
+        return test["plug"].values + q_lo, test["plug"].values + q_hi
     if method == "ba_reg":
         x, xt = cal["plug"].values, test["plug"].values
         d = y_c - x
@@ -124,7 +134,8 @@ def make_interval(method, cal, test, alpha):
         return test[f"f_{lo_k}"].values - q, test[f"f_{hi_k}"].values + q
     if method == "cqr_qr":
         c2, pr = _qr_fit_predict(cal, test, alpha)
-        lo_c, hi_c = pr["lo"][0], pr["hi"][0]
+        lo_c, hi_c = np.minimum(pr["lo"][0], pr["hi"][0]), np.maximum(pr["lo"][0], pr["hi"][0])
+        pr = {"lo": (lo_c, np.minimum(pr["lo"][1], pr["hi"][1])), "hi": (hi_c, np.maximum(pr["lo"][1], pr["hi"][1]))}
         s = np.maximum(lo_c - y_c[c2], y_c[c2] - hi_c)
         q = conformal_quantile(s, alpha)
         return pr["lo"][1] - q, pr["hi"][1] + q

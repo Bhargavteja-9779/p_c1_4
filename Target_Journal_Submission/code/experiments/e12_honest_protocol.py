@@ -29,7 +29,7 @@ from src.uncertainty.conformal import interval_score  # noqa: E402
 from src.uncertainty.night_summary import fit_source_model, summarise_night  # noqa: E402
 from src.utils import RESULTS_DIR, cache_root  # noqa: E402
 
-METHODS = ["ba_loa", "ba_reg", "cqr_qr", "scp_abs_bc", "scp_abs_cal", "scp_abs_mu", "cqr_ffbs", "norm_entropy_reg",
+METHODS = ["ba_loa", "ba_reg", "cqr_qr", "scp_signed", "scp_abs_bc", "scp_abs_cal", "scp_abs_mu", "cqr_ffbs", "norm_entropy_reg",
            "norm_ffbs", "norm_reg_ffbs", "norm_reg_plugc"]
 M = 1000
 

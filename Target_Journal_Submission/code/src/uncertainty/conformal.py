@@ -19,8 +19,8 @@ import numpy as np
 
 def conformal_quantile(scores: np.ndarray, alpha: float) -> float:
     """ceil((n+1)(1-alpha))-th smallest score; +inf if that exceeds n (Lei et al. 2018)."""
-    s = np.sort(np.asarray(scores, float))
-    s = s[np.isfinite(s)]
+    s = np.asarray(scores, float)
+    s = np.sort(np.where(np.isfinite(s), s, np.inf))   # non-finite scores count as +inf (conservative)
     n = len(s)
     k = int(np.ceil((n + 1) * (1 - alpha)))
     if n == 0 or k > n:

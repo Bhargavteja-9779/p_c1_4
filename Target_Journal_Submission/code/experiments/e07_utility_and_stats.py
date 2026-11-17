@@ -22,7 +22,7 @@ from src.statistics.stats import (auroc, bland_altman, cluster_bootstrap, holm, 
 from src.uncertainty.conformal import interval_score  # noqa: E402
 from src.utils import RESULTS_DIR  # noqa: E402
 
-BASELINES = ["ba_loa", "ba_reg", "scp_abs", "scp_abs_bc", "scp_abs_cal", "scp_abs_mu", "norm_reg_plugc", "cqr_ffbs", "cqr_qr", "norm_entropy_reg", "norm_ffbs"]
+BASELINES = ["ba_loa", "ba_reg", "scp_signed", "scp_abs", "scp_abs_bc", "scp_abs_cal", "scp_abs_mu", "norm_reg_plugc", "cqr_ffbs", "cqr_qr", "norm_entropy_reg", "norm_ffbs"]
 # clinically relevant error thresholds (pre-registered primary: TST, REML, N3%; others secondary)
 THRESH = {"TST": 30, "REML": 30, "N3%": 5, "SOL": 15, "WASO": 30, "N1%": 5, "N2%": 10, "REM%": 5}
 PRIMARY_FLAG = ["TST", "REML", "N3%"]
