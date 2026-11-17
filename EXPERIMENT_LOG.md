@@ -81,3 +81,25 @@ All experiments are logged here, including failures and abandoned directions.
   cohort×parameter combinations for every centre, both stagers → adaptive scale is the robust contribution.
 * Proposed vs scp_abs_bc: better in 62–67% of combinations (TST, N2%, REML), worse for SOL, REM%,
   WASO-SC (posterior-mean centre biased for these). scp_abs_bc coverage min 0.852 (ST; approximate validity).
+
+## Revision 1 — E12 end-to-end ("honest") protocol + E15 statistics (early run, 16:00–16:53, 2026-11-17)
+PRIMARY within-cohort analysis after review cycle 1: every label-dependent component fitted on the calibration half
+of 50 subject-grouped 50/50 splits (calibration scores K=5 cross-fitted); local deployment n_t=10/20/30 on ST/HMC.
+* Validity: proposed coverage 0.902–0.925 (YASA), 0.890–0.928 (LightGBM), within ±3 pp in all 48 cells.
+  DF-LoA (scp_signed) 0.871–0.928 (lowest in ST: 2 nights/subject → clustered calibration scores);
+  BA-LoA 0.855–0.940; regression-based LoA (ba_reg) under-covers (mean 0.860, min 0.745–0.785).
+* Scale at fixed centre (pre-specified criterion): FFBS-SD scale vs constant width around the FFBS mean lower IS in
+  21/24 (YASA) and 23/24 (LGBM), significant 15 and 15, never significantly worse (mean ratio 0.92). Met.
+* vs LoA family: TST better than all three LoA in every cohort and stager (ratio vs DF-LoA 0.64–0.86, all Holm p<0.05);
+  other parameters no consistent gain (mean ratio vs DF-LoA excl. TST 1.07 YASA, 0.98 LGBM); WASO-SC significantly
+  WORSE (1.72 YASA, 1.50 LGBM; posterior-mean WASO bias +68/+55 min in SC). ba_reg lower IS for most non-TST
+  parameters (mean ratio excl. TST 1.16/1.07) but under-covers.
+* Regulariser: unregularised score better in 20/24 (both stagers; ~5 % lower IS) — pre-specified choice not optimal.
+* Harder nights (below-median accuracy): proposed lower IS than DF-LoA in 17/24 and 19/24; easier 10/24 and 14/24.
+* Q1 (lowest-accuracy quartile) coverage: proposed mean 0.847, DF-LoA ~0.83, BA 0.79, ba_reg 0.76.
+* Local deployment (10 nights): proposed mean coverage 0.920 HMC / 0.903 ST (YASA); BA 0.898/0.860; ba_reg 0.767/0.724;
+  DF-LoA unbounded (<19 nights). P(realised cov<0.80) median 0.09/0.17 (BA 0.10/0.28); with 30 nights 0.07/0.15.
+* Decisions (YASA, pooled): TST<6h decided 64 % with 98.7 % accuracy (DF-LoA 60 %/98.3 %; plug-in 84.2 % overall);
+  WASO>30 29 %/92.7 % vs DF-LoA 20 %/95.7 %.
+* Determinism: chain E12 (YASA) summary identical to early run to 3 dp (lgbm comparison pending).
+* Consequence: claims narrowed — advantage over LoA is parameter-specific (TST), not general. Title changed.
