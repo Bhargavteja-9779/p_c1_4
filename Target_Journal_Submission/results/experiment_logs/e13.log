@@ -1,0 +1,14 @@
+                 coverage  interval_score
+stager     M                             
+lgbm_sc_s0 100      0.906          88.153
+           300      0.907          88.199
+           1000     0.907          88.084
+yasa       100      0.907          87.944
+           300      0.908          88.153
+           1000     0.907          88.456
+          coverage  mean_width
+cal_frac                      
+0.25         0.910      61.071
+0.50         0.907      57.466
+0.75         0.903      55.397
+Spearman criterion met: 30 of 48
