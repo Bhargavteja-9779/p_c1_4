@@ -3915,6 +3915,583 @@
   "id": "vainikka2026"
  },
  {
+  "type": "journal-article",
+  "title": "Modeling the Impact of Inter-Rater Disagreement on Sleep Statistics Using Deep Generative Learning",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0003-4823-2874",
+    "authenticated-orcid": false,
+    "given": "Hans",
+    "family": "van Gorp",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering, Eindhoven University of Technology, Eindhoven, The Netherlands"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2138-5686",
+    "authenticated-orcid": false,
+    "given": "Merel M.",
+    "family": "van Gilst",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering, Eindhoven University of Technology, Eindhoven, The Netherlands"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2932-6402",
+    "authenticated-orcid": false,
+    "given": "Pedro",
+    "family": "Fonseca",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering, Eindhoven University of Technology, Eindhoven, The Netherlands"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0002-6445-9836",
+    "authenticated-orcid": false,
+    "given": "Sebastiaan",
+    "family": "Overeem",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering, Eindhoven University of Technology, Eindhoven, The Netherlands"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-2845-0495",
+    "authenticated-orcid": false,
+    "given": "Ruud J.G.",
+    "family": "van Sloun",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Electrical Engineering, Eindhoven University of Technology, Eindhoven, The Netherlands"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "IEEE Journal of Biomedical and Health Informatics",
+  "volume": "27",
+  "issue": "11",
+  "page": "5599-5609",
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     11
+    ]
+   ]
+  },
+  "DOI": "10.1109/JBHI.2023.3304010",
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "URL": "http://dx.doi.org/10.1109/JBHI.2023.3304010",
+  "id": "vangorp2023jbhi"
+ },
+ {
+  "type": "proceedings-article",
+  "title": "Aleatoric Uncertainty Estimation of Overnight Sleep Statistics Through Posterior Sampling Using Conditional Normalizing Flows",
+  "author": [
+   {
+    "family": "van Gorp",
+    "given": "Hans"
+   },
+   {
+    "given": "Merel M.",
+    "family": "van Gilst",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Eindhoven University of Technology,Department of Electrical Engineering,The Netherlands"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Pedro",
+    "family": "Fonseca",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Eindhoven University of Technology,Department of Electrical Engineering,The Netherlands"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Sebastiaan",
+    "family": "Overeem",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Eindhoven University of Technology,Department of Electrical Engineering,The Netherlands"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Ruud J. G.",
+    "family": "van Sloun",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Eindhoven University of Technology,Department of Electrical Engineering,The Netherlands"
+     }
+    ],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   }
+  ],
+  "container-title": "ICASSP 2023 - 2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+  "page": "1-5",
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     6,
+     4
+    ]
+   ]
+  },
+  "DOI": "10.1109/ICASSP49357.2023.10096894",
+  "publisher": "IEEE",
+  "URL": "http://dx.doi.org/10.1109/ICASSP49357.2023.10096894",
+  "id": "vangorp2023icassp"
+ },
+ {
+  "type": "journal-article",
+  "title": "Predictive inference with the jackknife+",
+  "author": [
+   {
+    "given": "Rina Foygel",
+    "family": "Barber",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Emmanuel J.",
+    "family": "Candès",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Aaditya",
+    "family": "Ramdas",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ryan J.",
+    "family": "Tibshirani",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "The Annals of Statistics",
+  "volume": "49",
+  "issue": "1",
+  "page": "486-507",
+  "issued": {
+   "date-parts": [
+    [
+     2021,
+     2,
+     1
+    ]
+   ]
+  },
+  "DOI": "10.1214/20-AOS1965",
+  "publisher": "Institute of Mathematical Statistics",
+  "URL": "http://dx.doi.org/10.1214/20-AOS1965",
+  "id": "barber2021"
+ },
+ {
+  "type": "journal-article",
+  "title": "Measuring agreement in method comparison studies",
+  "author": [
+   {
+    "given": "J Martin",
+    "family": "Bland",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Department of Public Health Sciences, St George's Hospital Medical School, London, UK"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Douglas G",
+    "family": "Altman",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "ICRF Medical Statistics Group, Centre for Statistics in Medicine, Institute of Health Sciences, Oxford, UK"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Statistical Methods in Medical Research",
+  "volume": "8",
+  "issue": "2",
+  "page": "135-160",
+  "issued": {
+   "date-parts": [
+    [
+     1999,
+     4
+    ]
+   ]
+  },
+  "DOI": "10.1177/096228029900800204",
+  "publisher": "SAGE Publications",
+  "URL": "http://dx.doi.org/10.1177/096228029900800204",
+  "id": "bland1999"
+ },
+ {
+  "type": "journal-article",
+  "title": "Calculating posterior distributions and modal estimates in Markov mixture models",
+  "author": [
+   {
+    "given": "Siddhartha",
+    "family": "Chib",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Journal of Econometrics",
+  "volume": "75",
+  "issue": "1",
+  "page": "79-97",
+  "issued": {
+   "date-parts": [
+    [
+     1996,
+     11
+    ]
+   ]
+  },
+  "DOI": "10.1016/0304-4076(95)01770-4",
+  "publisher": "Elsevier BV",
+  "URL": "http://dx.doi.org/10.1016/0304-4076(95)01770-4",
+  "id": "chib1996"
+ },
+ {
+  "type": "journal-article",
+  "title": "Sleep Classification According to AASM and Rechtschaffen & Kales: Effects on Sleep Scoring Parameters",
+  "author": [
+   {
+    "given": "Doris",
+    "family": "Moser",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Peter",
+    "family": "Anderer",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Georg",
+    "family": "Gruber",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Silvia",
+    "family": "Parapatics",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Erna",
+    "family": "Loretz",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Marion",
+    "family": "Boeck",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Gerhard",
+    "family": "Kloesch",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Esther",
+    "family": "Heller",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Andrea",
+    "family": "Schmidt",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Heidi",
+    "family": "Danker-Hopfe",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Bernd",
+    "family": "Saletu",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Josef",
+    "family": "Zeitlhofer",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Georg",
+    "family": "Dorffner",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": "Sleep",
+  "volume": "32",
+  "issue": "2",
+  "page": "139-149",
+  "issued": {
+   "date-parts": [
+    [
+     2009,
+     2
+    ]
+   ]
+  },
+  "DOI": "10.1093/sleep/32.2.139",
+  "publisher": "Oxford University Press (OUP)",
+  "URL": "http://dx.doi.org/10.1093/sleep/32.2.139",
+  "id": "moser2009"
+ },
+ {
+  "id": "philips2024patent",
+  "type": "patent",
+  "title": "System for estimating uncertainty of overnight sleep parameters through a stochastic neural network",
+  "author": [
+   {
+    "family": "van Gorp",
+    "given": "H"
+   },
+   {
+    "family": "Fonseca",
+    "given": "P"
+   },
+   {
+    "family": "van Gilst",
+    "given": "M M"
+   },
+   {
+    "family": "Overeem",
+    "given": "S"
+   },
+   {
+    "family": "van Sloun",
+    "given": "R J G"
+   }
+  ],
+  "publisher": "Koninklijke Philips N.V.",
+  "number": "EP4388985A1",
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     6,
+     26
+    ]
+   ]
+  },
+  "note": "European patent application, published 26 June 2024 (withdrawn)"
+ },
+ {
   "id": "alexandari2020",
   "type": "paper-conference",
   "title": "Maximum likelihood with bias-corrected calibration is hard-to-beat at label shift adaptation",

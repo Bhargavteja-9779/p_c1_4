@@ -50,8 +50,20 @@ DOIS = {
     "kaneda2026": "10.1093/sleepadvances/zpag054",
     "deirossi2025": "10.1038/s41746-025-02237-2",
     "vainikka2026": "10.1109/TBME.2025.3623380",
+    "vangorp2023jbhi": "10.1109/JBHI.2023.3304010",
+    "vangorp2023icassp": "10.1109/ICASSP49357.2023.10096894",
+    "barber2021": "10.1214/20-AOS1965",
+    "bland1999": "10.1177/096228029900800204",
+    "chib1996": "10.1016/0304-4076(95)01770-4",
+    "moser2009": "10.1093/sleep/32.2.139",
 }
 MANUAL = [
+    {"id": "philips2024patent", "type": "patent",
+     "title": "System for estimating uncertainty of overnight sleep parameters through a stochastic neural network",
+     "author": [{"family": "van Gorp", "given": "H"}, {"family": "Fonseca", "given": "P"}, {"family": "van Gilst", "given": "M M"},
+                {"family": "Overeem", "given": "S"}, {"family": "van Sloun", "given": "R J G"}],
+     "publisher": "Koninklijke Philips N.V.", "number": "EP4388985A1", "issued": {"date-parts": [[2024, 6, 26]]},
+     "note": "European patent application, published 26 June 2024 (withdrawn)"},
     {"id": "alexandari2020", "type": "paper-conference",
      "title": "Maximum likelihood with bias-corrected calibration is hard-to-beat at label shift adaptation",
      "author": [{"family": "Alexandari", "given": "A"}, {"family": "Kundaje", "given": "A"}, {"family": "Shrikumar", "given": "A"}],
@@ -79,6 +91,7 @@ OVERRIDES = {  # registry records missing fields (verified against the publisher
 AUTHOR_FIXES = {  # (doi-key, index) -> corrected name, where the registry splits names wrongly
     ("deirossi2025", 0): {"family": "Dei Rossi", "given": "Alvise"},
     ("deirossi2025", 4): {"family": "van der Meer", "given": "Julia"},
+    ("vangorp2023icassp", 0): {"family": "van Gorp", "given": "Hans"},
 }
 
 
@@ -143,7 +156,7 @@ def main():
         items.append(m)
         audit.append(dict(key=m["id"], doi="", source="manual (no DOI; verified against proceedings listing)",
                           title=m["title"], first_author=m["author"][0]["family"], year=m["issued"]["date-parts"][0][0],
-                          container=m["container-title"], volume="", pages=m.get("page", "")))
+                          container=m.get("container-title", m.get("number", "")), volume="", pages=m.get("page", "")))
     (HERE / "references.json").write_text(json.dumps(items, indent=1, ensure_ascii=False))
     with open(HERE / "reference_audit.csv", "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(audit[0]))

@@ -39,6 +39,13 @@ rabiner1989,10.1109/5.18626,doi-registry,A tutorial on hidden Markov models and 
 kaneda2026,10.1093/sleepadvances/zpag054,doi-registry,Automated sleep stage and event detection algorithms using quality-controlled polysomnography annotations,Kaneda,2026,SLEEP Advances,7,
 deirossi2025,10.1038/s41746-025-02237-2,doi-registry,SLEEPYLAND: trust begins with fair evaluation of automatic sleep staging models,Dei Rossi,2025,npj Digital Medicine,9,
 vainikka2026,10.1109/TBME.2025.3623380,doi-registry,Direct Quantification of Uncertainty in Deep Learning-Based Automatic Sleep Staging,Vainikka,2026,IEEE Transactions on Biomedical Engineering,73,2144-2154
+vangorp2023jbhi,10.1109/JBHI.2023.3304010,doi-registry,Modeling the Impact of Inter-Rater Disagreement on Sleep Statistics Using Deep Generative Learning,van Gorp,2023,IEEE Journal of Biomedical and Health Informatics,27,5599-5609
+vangorp2023icassp,10.1109/ICASSP49357.2023.10096894,doi-registry,Aleatoric Uncertainty Estimation of Overnight Sleep Statistics Through Posterior Sampling Using Conditional Normalizing Flows,van Gorp,2023,"ICASSP 2023 - 2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",,1-5
+barber2021,10.1214/20-AOS1965,doi-registry,Predictive inference with the jackknife+,Barber,2021,The Annals of Statistics,49,486-507
+bland1999,10.1177/096228029900800204,doi-registry,Measuring agreement in method comparison studies,Bland,1999,Statistical Methods in Medical Research,8,135-160
+chib1996,10.1016/0304-4076(95)01770-4,doi-registry,Calculating posterior distributions and modal estimates in Markov mixture models,Chib,1996,Journal of Econometrics,75,79-97
+moser2009,10.1093/sleep/32.2.139,doi-registry,Sleep Classification According to AASM and Rechtschaffen &amp; Kales: Effects on Sleep Scoring Parameters,Moser,2009,Sleep,32,139-149
+philips2024patent,,manual (no DOI; verified against proceedings listing),System for estimating uncertainty of overnight sleep parameters through a stochastic neural network,van Gorp,2024,EP4388985A1,,
 alexandari2020,,manual (no DOI; verified against proceedings listing),Maximum likelihood with bias-corrected calibration is hard-to-beat at label shift adaptation,Alexandari,2020,Proceedings of the 37th International Conference on Machine Learning (PMLR 119),,222-232
 romano2019,,manual (no DOI; verified against proceedings listing),Conformalized quantile regression,Romano,2019,Advances in Neural Information Processing Systems 32 (NeurIPS 2019),,3543-3553
 tibshirani2019,,manual (no DOI; verified against proceedings listing),Conformal prediction under covariate shift,Tibshirani,2019,Advances in Neural Information Processing Systems 32 (NeurIPS 2019),,2530-2540

@@ -25,10 +25,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from e03_night_summaries import load_preds  # noqa: E402
 from src.evaluation.conformal_eval import PARAMS, evaluate, param_frame, subject_split  # noqa: E402
+from src.uncertainty.conformal import interval_score  # noqa: E402
 from src.uncertainty.night_summary import fit_source_model, summarise_night  # noqa: E402
 from src.utils import RESULTS_DIR, cache_root  # noqa: E402
 
-METHODS = ["ba_loa", "scp_abs_bc", "scp_abs_cal", "scp_abs_mu", "cqr_ffbs", "norm_entropy_reg",
+METHODS = ["ba_loa", "ba_reg", "cqr_qr", "scp_abs_bc", "scp_abs_cal", "scp_abs_mu", "cqr_ffbs", "norm_entropy_reg",
            "norm_ffbs", "norm_reg_ffbs", "norm_reg_plugc"]
 M = 1000
 
@@ -61,19 +62,26 @@ def honest_frames(cal_nights, test_nights, preds, meta, tag, K=5):
 
 
 def _evaluate(cal_df, test_df, info):
-    rows, pts = [], []
+    rows, pts, per_night = [], [], []
     for p in PARAMS:
         cal, test = param_frame(cal_df, p), param_frame(test_df, p)
         if len(cal) < 3 or len(test) < 1:
             continue
         for meth in METHODS:
-            res, _, _ = evaluate(p, meth, cal, test, 0.10)
+            res, lo, hi = evaluate(p, meth, cal, test, 0.10)
             rows.append(dict(**info, param=p, method=meth, n_cal=len(cal), n_test=len(test), **res))
+            y = test["y"].values
+            isc = interval_score(y, lo, hi, 0.10)
+            for i in range(len(test)):
+                per_night.append((info["setting"], info["cohort"], info["rep"], info["n_target"], p, meth,
+                                  test["night"].iloc[i], test["subject"].iloc[i], float(isc[i]),
+                                  float(hi[i] - lo[i]), bool(lo[i] <= y[i] <= hi[i]), float(y[i]),
+                                  float(lo[i]), float(hi[i]), float(test["plug"].iloc[i]), float(test["plugc"].iloc[i])))
         d = test_df if p != "REML" else test_df[test_df.ref_has_rem.astype(bool)]
         for est, col in (("plug_in", f"plug_{p}"), ("plug_in_calibrated", f"plugc_{p}"), ("ffbs_mean", f"ffbs_mean_{p}")):
             e = d[col].values - d[f"ref_{p}"].values
             pts.append(dict(**info, param=p, estimator=est, bias=float(np.mean(e)), mae=float(np.mean(np.abs(e))), n=len(e)))
-    return rows, pts
+    return rows, pts, per_night
 
 
 def _task(args):
@@ -121,14 +129,17 @@ def main():
                     for r in range(a.R):
                         cal_n, test_n = pick_subjects(nights, subj, nt, np.random.default_rng(r))
                         tasks.append(("local", st, c, (r, nt), cal_n, test_n))
-        rows, pts = [], []
+        rows, pts, pn = [], [], []
         with ProcessPoolExecutor(a.workers) as ex:
-            for rr, pp in ex.map(_task, tasks, chunksize=2):
+            for rr, pp, nn in ex.map(_task, tasks, chunksize=2):
                 rows += rr
                 pts += pp
+                pn += nn
         out = RESULTS_DIR / "raw"
         pd.DataFrame(rows).to_csv(out / f"e12_honest_{st}.csv.gz", index=False)
         pd.DataFrame(pts).to_csv(out / f"e12_points_{st}.csv.gz", index=False)
+        pd.DataFrame(pn, columns=["setting", "cohort", "rep", "n_target", "param", "method", "night", "subject",
+                                  "interval_score", "width", "covered", "y", "lo", "hi", "plug", "plugc"]).to_csv(out / f"e12_nights_{st}.csv.gz", index=False)
         d = pd.DataFrame(rows)
         print(st, "\n", d[d.method.isin(["ba_loa", "scp_abs_bc", "norm_reg_ffbs", "norm_ffbs"])]
               .groupby(["setting", "cohort", "n_target", "method"])["coverage"].mean().unstack("method").round(3), flush=True)

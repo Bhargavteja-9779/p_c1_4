@@ -18,6 +18,10 @@ Methods (all receive identical calibration/test nights):
   norm_reg_ffbs1   as proposed, but emission temperature tau = 1               (ablation)
   norm_reg_plug    FFBS-SD scale, centred on the raw plug-in                   (centre x scale factorial)
   norm_reg_plugc   FFBS-SD scale, centred on the calibrated plug-in            (centre x scale factorial)
+  norm_reg_ind_s   scale-only ablation: FFBS-mean centre, independent-epoch SD as scale
+  norm_reg_ffbs1_s scale-only ablation: FFBS-mean centre (fitted tau), SD from tau = 1 samples
+  ba_reg           regression-based (heteroscedastic) Bland–Altman limits of agreement (Bland & Altman 1999):
+                   bias and mean absolute residual regressed on the automatic value
 Regularised scales add the median of the label-free scale over calibration AND test nights, so that the
 score is a symmetric function of all nights' features and finite-sample validity is exact.
 """
@@ -32,9 +36,9 @@ from ..uncertainty.conformal import conformal_quantile, interval_score
 PARAMS = ["TST", "SOL", "WASO", "REML", "N1%", "N2%", "N3%", "REM%"]
 BOUNDS = {"TST": (0, None), "SOL": (0, None), "WASO": (0, None), "REML": (0, None),
           "N1%": (0, 100), "N2%": (0, 100), "N3%": (0, 100), "REM%": (0, 100)}
-METHODS = ["ba_loa", "scp_abs", "scp_abs_bc", "scp_abs_cal", "scp_abs_mu", "bayes_pct", "ind_pct", "cqr_ffbs",
+METHODS = ["ba_loa", "ba_reg", "scp_abs", "scp_abs_bc", "scp_abs_cal", "scp_abs_mu", "bayes_pct", "ind_pct", "cqr_ffbs",
            "cqr_qr", "norm_entropy_reg", "norm_ffbs", "norm_reg_ffbs", "norm_reg_ind", "norm_reg_ffbs1",
-           "norm_reg_plug", "norm_reg_plugc"]
+           "norm_reg_plug", "norm_reg_plugc", "norm_reg_ind_s", "norm_reg_ffbs1_s"]
 PROPOSED = "norm_reg_ffbs"
 QK = {0.05: ("q025", "q975"), 0.10: ("q05", "q95"), 0.20: ("q10", "q90")}
 ZK = {0.05: 1.959964, 0.10: 1.644854, 0.20: 1.281552}
@@ -64,7 +68,7 @@ def _qr_fit_predict(cal, test, alpha):
     """Linear quantile regression on night-level features, fitted on half of the calibration nights;
     returns (cal2 index mask, lo/hi for cal2 and test)."""
     from sklearn.linear_model import QuantileRegressor
-    feats = ["plug", "mu", "entropy", "maxprob"]
+    feats = [f for f in ["plug", "plugc", "mu", "sd", "entropy", "maxprob"] if f in cal.columns]
     m_tr = subject_split(cal["subject"].values, seed=12345)   # subject-grouped half split
     idx = np.arange(len(cal))
     tr, c2 = idx[m_tr], idx[~m_tr]
@@ -84,6 +88,17 @@ def make_interval(method, cal, test, alpha):
         r = y_c - cal["plug"].values
         b, s = r.mean(), r.std(ddof=1)
         return test["plug"].values + b - ZK[alpha] * s, test["plug"].values + b + ZK[alpha] * s
+    if method == "ba_reg":
+        x, xt = cal["plug"].values, test["plug"].values
+        d = y_c - x
+        if np.std(x) < 1e-9:
+            bcoef, ccoef = np.array([0.0, d.mean()]), np.array([0.0, np.abs(d - d.mean()).mean()])
+        else:
+            bcoef = np.polyfit(x, d, 1)
+            ccoef = np.polyfit(x, np.abs(d - np.polyval(bcoef, x)), 1)
+        sd_t = np.sqrt(np.pi / 2) * np.maximum(np.polyval(ccoef, xt), 1e-6)
+        centre = xt + np.polyval(bcoef, xt)
+        return centre - ZK[alpha] * sd_t, centre + ZK[alpha] * sd_t
     if method == "scp_abs":
         q = conformal_quantile(np.abs(y_c - cal["plug"].values), alpha)
         return test["plug"].values - q, test["plug"].values + q
@@ -116,7 +131,8 @@ def make_interval(method, cal, test, alpha):
     centre_key, scale_key = {"norm_ffbs": ("mu", "sd"), "norm_reg_ffbs": ("mu", "sd"),
                              "norm_reg_ind": ("mu_ind", "sd_ind"), "norm_reg_ffbs1": ("mu1", "sd1"),
                              "norm_entropy_reg": ("mu", "entropy"), "norm_reg_plug": ("plug", "sd"),
-                             "norm_reg_plugc": ("plugc", "sd")}[method]
+                             "norm_reg_plugc": ("plugc", "sd"), "norm_reg_ind_s": ("mu", "sd_ind"),
+                             "norm_reg_ffbs1_s": ("mu", "sd1")}[method]
     sc, st = cal[scale_key].values, test[scale_key].values
     if method != "norm_ffbs":
         c = np.median(np.concatenate([sc, st]))   # label-free, symmetric in all nights -> exact validity

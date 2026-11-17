@@ -48,7 +48,7 @@ def waso_mechanism(stager="yasa"):
                 if len(sl_ref) == 0:
                     continue
                 last_ref = sl_ref[-1]
-                sl = (S > 0) & mask[None, :]
+                sl = S > 0                       # automatic hypnograms evaluated on all epochs
                 last = np.where(sl.any(1), len(y) - 1 - sl[:, ::-1].argmax(1), -1)
                 post_wake_ref = (len(y) - 1 - last_ref) * 0.5
                 rows.append(dict(cohort=c, night=n, post_awakening_wake_min=post_wake_ref,

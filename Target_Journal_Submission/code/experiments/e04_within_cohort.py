@@ -21,7 +21,7 @@ from src.utils import RESULTS_DIR  # noqa: E402
 
 ALPHAS = [0.05, 0.10, 0.20]
 SKIP_OTHER_ALPHA = ("norm_reg_ind", "norm_reg_ffbs1", "ind_pct", "norm_reg_plug", "norm_reg_plugc",
-                    "scp_abs_cal", "scp_abs_mu")
+                    "scp_abs_cal", "scp_abs_mu", "norm_reg_ind_s", "norm_reg_ffbs1_s")
 
 
 def _split_task(args):

@@ -22,7 +22,7 @@ from src.statistics.stats import (auroc, bland_altman, cluster_bootstrap, holm, 
 from src.uncertainty.conformal import interval_score  # noqa: E402
 from src.utils import RESULTS_DIR  # noqa: E402
 
-BASELINES = ["ba_loa", "scp_abs", "scp_abs_bc", "scp_abs_cal", "scp_abs_mu", "norm_reg_plugc", "cqr_ffbs", "cqr_qr", "norm_entropy_reg", "norm_ffbs"]
+BASELINES = ["ba_loa", "ba_reg", "scp_abs", "scp_abs_bc", "scp_abs_cal", "scp_abs_mu", "norm_reg_plugc", "cqr_ffbs", "cqr_qr", "norm_entropy_reg", "norm_ffbs"]
 # clinically relevant error thresholds (pre-registered primary: TST, REML, N3%; others secondary)
 THRESH = {"TST": 30, "REML": 30, "N3%": 5, "SOL": 15, "WASO": 30, "N1%": 5, "N2%": 10, "REM%": 5}
 PRIMARY_FLAG = ["TST", "REML", "N3%"]
@@ -106,7 +106,8 @@ def flagging(summ, loso):
             lab = err > THRESH[p]
             signals = {"proposed_width": (d["hi"] - d["lo"]).values,
                        "ffbs_sd": d[f"ffbs_sd_{p}"].values, "ind_sd": d[f"ind_sd_{p}"].values,
-                       "mean_entropy": d["mean_entropy"].values, "one_minus_maxprob": 1 - d["mean_maxprob"].values}
+                       "mean_entropy": d["mean_entropy"].values, "one_minus_maxprob": 1 - d["mean_maxprob"].values,
+                       "abs_raw_minus_calibrated": np.abs(d[f"plug_{p}"] - d[f"plugc_{p}"]).values}
             for name, sc in signals.items():
                 by_s = {s: (sc[d.subject.values == s], lab[d.subject.values == s]) for s in d.subject.unique()}
                 est, lo, hi = cluster_bootstrap(

@@ -64,11 +64,13 @@ def night_seed(name: str, tag: str) -> int:
 
 def summarise_night(P: np.ndarray, y: np.ndarray, sm: SourceModel, name: str, tag: str,
                     M: int = 1000, ablations: bool = True) -> dict:
-    mask = y >= 0
+    mask = y >= 0          # used ONLY for epoch-level accuracy summaries
     Pc = sm.cal.transform(np.log(np.clip(P, 1e-12, 1)))
-    ref = compute_params(np.where(mask, y, 0).astype(np.int8), mask)
+    # Reference: epochs left unscored by the scorer (movement, '?') are treated as wake. Automatic hypnograms
+    # are evaluated on ALL window epochs, so no information from the reference enters automatic parameters.
+    ref = compute_params(np.where(mask, y, 0).astype(np.int8))
     plug_h = P.argmax(1).astype(np.int8)
-    plug = compute_params(plug_h, mask)
+    plug = compute_params(plug_h)
     rng = np.random.default_rng(night_seed(name, tag))
     S = hmm.ffbs_sample(Pc, sm.pi_s, sm.A, sm.p0, sm.tau, M, rng)
     rec = {"n_epochs": len(y), "n_scored": int(mask.sum()), "ref_has_rem": has_rem(y, mask),
@@ -78,23 +80,23 @@ def summarise_night(P: np.ndarray, y: np.ndarray, sm: SourceModel, name: str, ta
     g, _ = hmm.smoothed_marginals(Pc, sm.pi_s, sm.A, sm.p0, sm.tau)
     rec["acc_hmm_marginal"] = float(np.mean(g[mask].argmax(1) == y[mask]))
     rec["acc_plugin_cal"] = float(np.mean(Pc[mask].argmax(1) == y[mask]))
-    plugc = compute_params(Pc.argmax(1).astype(np.int8), mask)     # locally calibrated plug-in
-    plugh = compute_params(g.argmax(1).astype(np.int8), mask)      # HMM-smoothed plug-in
+    plugc = compute_params(Pc.argmax(1).astype(np.int8))     # locally calibrated plug-in
+    plugh = compute_params(g.argmax(1).astype(np.int8))      # HMM-smoothed plug-in
     for p in PARAMS:
         rec[f"ref_{p}"] = float(ref[p])
         rec[f"plug_{p}"] = float(plug[p])
         rec[f"plugc_{p}"] = float(plugc[p])
         rec[f"plugh_{p}"] = float(plugh[p])
-    rec.update(_summ(compute_params(S, mask), "ffbs"))
+    rec.update(_summ(compute_params(S), "ffbs"))
     if ablations:
         rng1 = np.random.default_rng(night_seed(name, tag + "|tau1"))
         S1 = hmm.ffbs_sample(Pc, sm.pi_s, sm.A, sm.p0, 1.0, M, rng1)
-        rec.update(_summ(compute_params(S1, mask), "ffbs1"))
+        rec.update(_summ(compute_params(S1), "ffbs1"))
         rng2 = np.random.default_rng(night_seed(name, tag + "|ind"))
         S2 = hmm.independent_sample(Pc, M, rng2)
-        rec.update(_summ(compute_params(S2, mask), "ind"))
+        rec.update(_summ(compute_params(S2), "ind"))
         # sample-size sensitivity: first 100 / 300 FFBS draws
         for m in (100, 300):
-            sub = _summ(compute_params(S[:m], mask), f"ffbsM{m}")
+            sub = _summ(compute_params(S[:m]), f"ffbsM{m}")
             rec.update({k: v for k, v in sub.items() if "_mean_" in k or "_sd_" in k})
     return rec
