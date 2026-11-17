@@ -75,16 +75,24 @@ def paired(sm, st):
 
 
 def difficulty(w, st):
+    """Interval-score ratios on easier/harder nights (median split of plug-in accuracy within cohort) and
+    coverage in the quartile of nights with the lowest plug-in accuracy (Q1) vs the others."""
     meta_acc = pd.read_csv(RESULTS_DIR / "summaries" / f"{st}_xfit.csv")[["night", "cohort", "acc_plugin"]]
     meta_acc["harder"] = meta_acc.groupby("cohort")["acc_plugin"].transform(lambda x: x < x.median())
-    d = w.merge(meta_acc[["night", "harder"]], on="night")
+    meta_acc["q1"] = meta_acc.groupby("cohort")["acc_plugin"].transform(lambda x: x <= x.quantile(0.25))
+    d = w.merge(meta_acc[["night", "harder", "q1"]], on="night")
     rows = []
     for (c, p, h), g in d.groupby(["cohort", "param", "harder"]):
         m = g.groupby("method").interval_score.mean()
         if PROPOSED in m and "scp_signed" in m:
             rows.append(dict(stager=st, cohort=c, param=p, subset="harder" if h else "easier",
-                             ratio_vs_dfloa=m[PROPOSED] / m["scp_signed"], ratio_vs_ba=m[PROPOSED] / m["ba_loa"]))
-    return pd.DataFrame(rows)
+                             ratio_vs_dfloa=m[PROPOSED] / m["scp_signed"], ratio_vs_ba=m[PROPOSED] / m["ba_loa"],
+                             ratio_vs_bareg=m[PROPOSED] / m["ba_reg"]))
+    cov = d.groupby(["cohort", "param", "q1", "method"]).agg(coverage=("covered", "mean"),
+                                                            n_nights=("night", "nunique")).reset_index()
+    cov["subset"] = np.where(cov.q1, "Q1_lowest_accuracy", "Q2-4")
+    cov.insert(0, "stager", st)
+    return pd.DataFrame(rows), cov.drop(columns="q1")
 
 
 def decisions(w, st):
@@ -117,14 +125,16 @@ def points(st):
 
 def main():
     OUT.mkdir(exist_ok=True)
-    out = {k: [] for k in ["summary", "local", "paired", "difficulty", "decisions", "points"]}
+    out = {k: [] for k in ["summary", "local", "paired", "difficulty", "q1coverage", "decisions", "points"]}
     for st in ["yasa", "lgbm_sc_s0"]:
         g, loc = summary(st)
         out["summary"].append(g)
         out["local"].append(loc)
         w, sm = subject_means(st)
         out["paired"].append(paired(sm, st))
-        out["difficulty"].append(difficulty(w, st))
+        dr, dc = difficulty(w, st)
+        out["difficulty"].append(dr)
+        out["q1coverage"].append(dc)
         out["decisions"].append(decisions(w, st))
         out["points"].append(points(st))
     for k, v in out.items():

@@ -30,7 +30,7 @@ from src.uncertainty.night_summary import fit_source_model, night_seed, summaris
 from src.utils import RESULTS_DIR, cache_root  # noqa: E402
 
 CORRUPTIONS = ["gauss05", "gauss10", "art10", "art25"]
-EVAL_METHODS = ["ba_loa", "scp_abs", "scp_abs_bc", "scp_abs_cal", "scp_abs_mu", "cqr_ffbs", "cqr_qr", "norm_entropy_reg", "norm_reg_ffbs", "norm_reg_plugc"]
+EVAL_METHODS = ["ba_loa", "ba_reg", "scp_signed", "scp_abs", "scp_abs_bc", "scp_abs_cal", "scp_abs_mu", "cqr_ffbs", "cqr_qr", "norm_entropy_reg", "norm_reg_ffbs", "norm_reg_plugc"]
 
 
 def corrupt(x: np.ndarray, kind: str, rng) -> np.ndarray:

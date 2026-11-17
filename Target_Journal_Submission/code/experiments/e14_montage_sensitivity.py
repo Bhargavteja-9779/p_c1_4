@@ -56,7 +56,7 @@ def main():
         for p in PARAMS:
             ft, fs = param_frame(t, p), param_frame(src, p)
             bias = float(np.mean(ft["plug"] - ft["y"]))
-            for meth in ("ba_loa", "scp_abs_bc", "norm_reg_ffbs"):
+            for meth in ("ba_loa", "ba_reg", "scp_signed", "scp_abs", "scp_abs_bc", "norm_reg_ffbs"):
                 res, _, _ = evaluate(p, meth, fs, ft, 0.10)
                 rows.append(dict(montage=mont, param=p, method=meth, plugin_bias=bias, mean_night_acc=acc, **res))
     out = pd.DataFrame(rows)

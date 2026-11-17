@@ -68,7 +68,7 @@ def main(n_per=20):
                 S = hmm.ffbs_sample(Pc, sm.pi_s, sm.A, sm.p0, sm.tau, M, np.random.default_rng(1))
                 t_ffbs = time.perf_counter() - t0
                 t0 = time.perf_counter()
-                compute_params(S, n.y >= 0)
+                compute_params(S)   # no reference mask (label-free deployment)
                 t_params = time.perf_counter() - t0
                 rows.append(dict(cohort=c, night=n.night, n_epochs=n.n_epochs, M=M, t_stager_s=t_stager,
                                  t_ffbs_s=t_ffbs, t_params_s=t_params, samples_MB=S.nbytes / 1e6))

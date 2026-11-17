@@ -1,7 +1,7 @@
 """Reproduce the complete study.
 
   python run_all.py --mode quick   # pipeline check: few nights, few splits (~10 min on 4 CPUs)
-  python run_all.py --mode full    # complete pre-registered analysis (~2-3 h on 4 CPUs, no GPU needed)
+  python run_all.py --mode full    # complete pre-registered analysis (~6-8 h on 4 CPUs, no GPU needed)
 
 Steps (each is an independent script in experiments/ and can be re-run on its own):
   0  data cache   scripts/build_sleep_cache.py   (requires raw data; scripts/download_data.sh)
@@ -14,8 +14,13 @@ Steps (each is an independent script in experiments/ and can be re-run on its ow
   7  E09          robustness to signal corruption
   8  E08          error analysis (WASO mechanism, non-covered nights, cohort bias)
   9  E11          conditional coverage by difficulty; exploratory Mondrian calibration
-  10 E10          computational cost (run on an otherwise idle machine)
-  11-13 tables, figures, supplementary material (+ manuscript numbers for build_manuscript.py)
+  10 E12          honest end-to-end protocol (PRIMARY analysis after review: all components fitted on
+                  calibration nights only; within-cohort splits and few-night local deployment)
+  11 E13          pre-registered sensitivity analyses (Spearman criterion, M, calibration size)
+  12 E14          montage sensitivity (YASA re-run on HMC with F4-M1; full mode only)
+  13 E15          statistics of the honest protocol (paired tests, difficulty, decision thresholds)
+  14 E10          computational cost (run on an otherwise idle machine)
+  15-17 tables, figures, supplementary material (+ manuscript numbers for build_manuscript.py)
 In quick mode results are written to results_quick/ (via LSA_RESULTS_DIR) so that the full results used
 by the manuscript are never overwritten.
 """
@@ -68,13 +73,17 @@ def main():
         (7, py + ["experiments/e09_robustness.py"] + (["--R", "20", "--cohorts", "HMC", "--limit", "12"] if q else [])),
         (8, py + ["experiments/e08_error_analysis.py"]),
         (9, py + ["experiments/e11_conditional_coverage.py"]),
-        (10, py + ["experiments/e10_efficiency.py"]),
-        (11, py + ["scripts/make_tables.py"]),
-        (12, py + ["scripts/make_figures.py"]),
-        (13, py + ["scripts/make_supplement.py"]),
+        (10, py + ["experiments/e12_honest_protocol.py"] + (["--R", "2", "--nt", "10"] if q else [])),
+        (11, py + ["experiments/e13_preregistered_sensitivity.py"]),
+        (12, None if q else py + ["experiments/e14_montage_sensitivity.py"]),
+        (13, py + ["experiments/e15_honest_stats.py"]),
+        (14, py + ["experiments/e10_efficiency.py"]),
+        (15, py + ["scripts/make_tables.py"]),
+        (16, py + ["scripts/make_figures.py"]),
+        (17, py + ["scripts/make_supplement.py"]),
     ]
     for k, cmd in steps:
-        if k < a.from_step or (k == 0 and a.skip_cache):
+        if cmd is None or k < a.from_step or (k == 0 and a.skip_cache):
             continue
         sh(cmd, log)
     print(f"\nDone. Results in {res}")

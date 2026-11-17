@@ -48,7 +48,7 @@ def _task(args):
             rows_m.append(dict(stager=st, cohort=c, param=p, split=r, M=m, **res))
         for frac in (0.25, 0.50, 0.75):
             msk2 = subject_split(f["subject"].values, seed=r, frac=frac)
-            for meth in (PROPOSED, "scp_abs_bc", "ba_loa"):
+            for meth in (PROPOSED, "scp_signed", "scp_abs_bc", "ba_loa", "ba_reg"):
                 res, _, _ = evaluate(p, meth, f[msk2].reset_index(drop=True), f[~msk2].reset_index(drop=True), 0.10)
                 rows_c.append(dict(stager=st, cohort=c, param=p, split=r, cal_frac=frac, method=meth,
                                    n_cal=int(msk2.sum()), **res))

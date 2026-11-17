@@ -19,10 +19,10 @@ plt.rcParams.update({"font.size": 8, "axes.titlesize": 9, "axes.labelsize": 8, "
                      "xtick.labelsize": 7, "ytick.labelsize": 7, "font.family": "DejaVu Sans",
                      "axes.spines.top": False, "axes.spines.right": False})
 # colour-blind-safe palette (Okabe–Ito)
-C = {"ba_loa": "#999999", "scp_abs": "#E69F00", "scp_abs_bc": "#E69F00", "scp_abs_cal": "#882255", "norm_reg_plugc": "#44AA99", "scp_abs_mu": "#F0E442", "cqr_qr": "#56B4E9",
+C = {"ba_loa": "#999999", "ba_reg": "#661100", "scp_signed": "#E69F00", "scp_abs": "#E69F00", "scp_abs_bc": "#E69F00", "scp_abs_cal": "#882255", "norm_reg_plugc": "#44AA99", "scp_abs_mu": "#F0E442", "cqr_qr": "#56B4E9",
      "cqr_ffbs": "#009E73", "norm_entropy_reg": "#CC79A7", "norm_ffbs": "#D55E00", PROPOSED: "#0072B2",
      "bayes_pct": "#000000", "ind_pct": "#AAAAAA"}
-LAB = {"ba_loa": "Bland–Altman LoA", "scp_abs": "Conformal, constant (raw centre)",
+LAB = {"ba_loa": "Bland–Altman LoA", "ba_reg": "Regression-based LoA", "scp_signed": "Distribution-free LoA", "scp_abs": "Conformal, constant (raw centre)",
        "scp_abs_bc": "Distribution-free LoA (bias-corrected constant)", "scp_abs_cal": "Conformal, constant (calibrated centre)",
        "norm_reg_plugc": "FFBS-scaled, calibrated centre", "scp_abs_mu": "Conformal, constant (FFBS centre)",
        "cqr_qr": "CQR (quantile regression)", "cqr_ffbs": "CQR (FFBS quantiles)", "norm_entropy_reg": "Conformal, entropy-scaled",
@@ -102,41 +102,53 @@ def fig1_example(night="SN050", cohort="HMC", stager="yasa"):
 
 
 def fig2_within(stagers=("yasa", "lgbm_sc_s0")):
-    meths = ["ba_loa", "scp_abs_cal", "cqr_qr", "cqr_ffbs", "norm_entropy_reg", PROPOSED]
+    """Honest protocol (E12/E15): mean interval score of each method relative to the distribution-free LoA;
+    proposed method with the 95% subject-bootstrap CI of the paired ratio."""
+    meths = ["ba_loa", "ba_reg", "scp_abs_cal", "cqr_qr", "cqr_ffbs", "norm_ffbs", PROPOSED]
+    summ = pd.read_csv(RESULTS_DIR / "statistics" / "e15_summary.csv")
+    pr = pd.read_csv(RESULTS_DIR / "statistics" / "e15_paired.csv")
     fig, axes = plt.subplots(2, 3, figsize=(7.2, 5.0), sharey="row", sharex=True)
     for si, st in enumerate(stagers):
-        d = pd.read_csv(RESULTS_DIR / "raw" / f"e04_splits_{st}.csv.gz")
-        d = d[d.alpha == 0.10]
-        g = d.groupby(["cohort", "param", "method"])[["coverage", "interval_score", "mean_width"]].mean().reset_index()
+        g = summ[summ.stager == st]
         for ci, c in enumerate(["SC", "ST", "HMC"]):
             ax = axes[si, ci]
             gc = g[g.cohort == c]
-            ref = gc[gc.method == "scp_abs_bc"].set_index("param")["interval_score"]
+            ref = gc[gc.method == "scp_signed"].set_index("param")["interval_score"].reindex(PARAMS)
             for mi, m in enumerate(meths):
                 gm = gc[gc.method == m].set_index("param").reindex(PARAMS)
-                x = np.arange(len(PARAMS)) + (mi - len(meths) / 2) * 0.12
-                ax.scatter(x, gm["interval_score"] / ref.reindex(PARAMS), s=12, color=C[m], label=LAB[m], zorder=3,
-                           marker="D" if m == PROPOSED else "o")
+                x = np.arange(len(PARAMS)) + (mi - len(meths) / 2) * 0.11
+                y = gm["interval_score"] / ref
+                if m == PROPOSED:
+                    t = pr[(pr.stager == st) & (pr.cohort == c) & (pr.comparator == "scp_signed")].set_index("param").reindex(PARAMS)
+                    ax.errorbar(x, t.ratio, yerr=[t.ratio - t.ratio_lo95, t.ratio_hi95 - t.ratio], fmt="D", ms=3.5,
+                                color=C[m], label=LAB[m], zorder=4, elinewidth=0.8, capsize=0)
+                else:
+                    ax.scatter(x, y, s=10, color=C[m], label=LAB[m], zorder=3)
             ax.axhline(1, color="k", lw=0.6, ls=":")
             ax.set_xticks(range(len(PARAMS)))
             if si == len(stagers) - 1:
                 ax.set_xticklabels(PARAMS, rotation=45, ha="right")
-            ax.set_title(f"{STAGER_LAB[st]} – {c}", loc="left", fontsize=8)
+            ax.set_title(f"{'abcdef'[si * 3 + ci]}  {STAGER_LAB[st]} – {c}", loc="left", fontsize=8)
             if ci == 0:
                 ax.set_ylabel("Interval score relative to\ndistribution-free LoA")
-    axes[0, 0].legend(ncol=3, loc="lower left", bbox_to_anchor=(0, 1.15), frameon=False)
-    fig.tight_layout()
+    h, l = axes[0, 0].get_legend_handles_labels()
+    fig.tight_layout(rect=(0, 0, 1, 0.9))
+    fig.legend(h, l, loc="upper center", ncol=4, frameon=False, bbox_to_anchor=(0.5, 1.0))
     save(fig, "fig2_within_cohort_efficiency")
 
 
-def fig3_adaptivity(stager="yasa"):
+def fig5_adaptivity(stager="yasa"):
+    """(a-c) interval width vs absolute plug-in error (LOSO, pre-registered summaries); (d) flagging AUROC;
+    (e-h) decisions at clinical thresholds (honest protocol): fraction of nights with a confident decision
+    (interval entirely on one side of the threshold) and accuracy of those decisions, pooled over cohorts."""
     loso = pd.read_csv(RESULTS_DIR / "raw" / f"e04_loso_{stager}.csv")
     fl = pd.read_csv(RESULTS_DIR / "statistics" / f"e07_flagging_{stager}.csv")
-    fig, axes = plt.subplots(1, 4, figsize=(7.2, 2.3), gridspec_kw={"width_ratios": [1, 1, 1, 1.3]})
+    dec = pd.read_csv(RESULTS_DIR / "statistics" / "e15_decisions.csv")
+    fig = plt.figure(figsize=(7.2, 4.9))
+    gs = fig.add_gridspec(2, 4, width_ratios=[1, 1, 1, 1.3], hspace=0.75, wspace=0.45)
     for i, p in enumerate(["TST", "REML", "N3%"]):
-        ax = axes[i]
+        ax = fig.add_subplot(gs[0, i])
         d = loso[(loso.param == p) & (loso.method == PROPOSED)]
-        err = np.abs(d.y - d.plug)
         for c, mk in zip(["SC", "ST", "HMC"], ["o", "s", "^"]):
             dd = d[d.cohort == c]
             ax.scatter(dd.hi - dd.lo, np.abs(dd.y - dd.plug), s=5, alpha=0.6, marker=mk, label=c, lw=0)
@@ -144,18 +156,22 @@ def fig3_adaptivity(stager="yasa"):
         ax.set_xlabel(f"{p} interval width ({u})"); ax.set_ylabel(f"|plug-in error| ({u})")
         ax.set_title(f"{'abc'[i]}  {p}", loc="left")
         if i == 0:
-            ax.legend(frameon=False, markerscale=2)
-    ax = axes[3]
-    sig = ["proposed_width", "mean_entropy", "one_minus_maxprob"]
-    sl = {"proposed_width": "Proposed width", "mean_entropy": "Mean entropy", "one_minus_maxprob": "1 − mean max-prob"}
+            ax.legend(frameon=False, markerscale=2, fontsize=6)
+    ax = fig.add_subplot(gs[0, 3])
+    sig = ["proposed_width", "mean_entropy", "abs_raw_minus_calibrated"]
+    sl = {"proposed_width": "Interval width (proposed)", "mean_entropy": "Mean epoch entropy",
+          "abs_raw_minus_calibrated": "|raw − calibrated plug-in|"}
+    sig = [x for x in sig if x in set(fl.signal)]
     f = fl[fl.primary & fl.signal.isin(sig)]
-    ylab = []
-    yy = 0
+    ylab, yy, seen = [], 0, set()
     for (c, p), g in f.groupby(["cohort", "param"], sort=False):
-        for s_i, s in enumerate(sig):
-            r = g[g.signal == s].iloc[0]
-            ax.errorbar(r.auroc, yy, xerr=[[r.auroc - r.lo95], [r.hi95 - r.auroc]], fmt="o", ms=3,
-                        color=["#0072B2", "#CC79A7", "#999999"][s_i], label=sl[s] if yy < 3 else None)
+        for s_i, sg in enumerate(sig):
+            r = g[g.signal == sg]
+            if len(r) and pd.notna(r.iloc[0].auroc):
+                r = r.iloc[0]
+                ax.errorbar(r.auroc, yy, xerr=[[r.auroc - r.lo95], [r.hi95 - r.auroc]], fmt="o", ms=3,
+                            color=["#0072B2", "#CC79A7", "#999999"][s_i], label=None if sg in seen else sl[sg])
+                seen.add(sg)
             yy += 1
         ylab.append((yy - 2, f"{c} {p}"))
         yy += 0.8
@@ -163,58 +179,87 @@ def fig3_adaptivity(stager="yasa"):
     ax.set_yticks([a for a, _ in ylab]); ax.set_yticklabels([b for _, b in ylab])
     ax.set_xlabel("AUROC for clinically relevant error"); ax.set_title("d  Flagging nights", loc="left")
     h, l = ax.get_legend_handles_labels()
-    fig.tight_layout(rect=(0, 0.1, 1, 1))
-    fig.legend(h, l, loc="lower right", ncol=3, frameon=False, fontsize=6.5, bbox_to_anchor=(0.99, 0.0))
-    save(fig, "fig3_adaptivity_flagging")
+    ax.legend(h, l, frameon=False, fontsize=5.5, loc="lower left", bbox_to_anchor=(-0.05, -0.62))
+    meths = ["ba_loa", "ba_reg", "scp_signed", "cqr_qr", PROPOSED]
+    dd = dec[dec.stager == stager]
+    for j, p in enumerate(["TST", "SOL", "WASO", "REML"]):
+        ax = fig.add_subplot(gs[1, j])
+        g = dd[dd.param == p]
+        thr = g.threshold.iloc[0]
+        plug = np.average(g[g.method == PROPOSED].plugin_accuracy, weights=g[g.method == PROPOSED].n)
+        for m in meths:
+            gm = g[g.method == m]
+            if not len(gm):
+                continue
+            frac = np.average(gm.frac_confident, weights=gm.n)
+            ok = gm.acc_confident.notna()
+            acc = np.average(gm.acc_confident[ok], weights=(gm.frac_confident * gm.n)[ok]) if ok.any() else np.nan
+            ax.scatter(frac, acc, s=22 if m == PROPOSED else 14, color=C[m], marker="D" if m == PROPOSED else "o",
+                       label=LAB[m], zorder=3)
+        ax.axhline(plug, color="k", lw=0.6, ls=":")
+        ax.set_xlim(0, 1); ax.set_ylim(min(0.8, plug - 0.05), 1.005)
+        ax.set_xlabel("Nights decided by the interval"); ax.set_ylabel("Accuracy of these decisions" if j == 0 else "")
+        ax.set_title(f"{'efgh'[j]}  {thr.replace('<=', '≤')} min", loc="left")
+    h, l = ax.get_legend_handles_labels()
+    fig.legend(h, l, loc="lower center", ncol=5, frameon=False, fontsize=6.5, bbox_to_anchor=(0.5, -0.04))
+    save(fig, "fig5_adaptivity_decisions")
 
 
-def fig4_transport(stagers=("yasa", "lgbm_sc_s0")):
+def fig3_transport(stagers=("yasa", "lgbm_sc_s0")):
+    """(a, d) SC-calibrated intervals on ST/HMC (E06 source-only); (b, e) local deployment in which every
+    component is fitted on n_t labelled target nights only (E12): mean coverage over parameters (range as band);
+    (c, f) probability that a site's realised coverage falls below 0.80 (median over parameters)."""
+    loc = pd.read_csv(RESULTS_DIR / "statistics" / "e15_local.csv")
     fig, axes = plt.subplots(2, 3, figsize=(7.2, 5.4))
+    meths_src = ["ba_loa", "ba_reg", "scp_signed", "cqr_ffbs", PROPOSED]
+    meths_loc = ["ba_loa", "ba_reg", "scp_signed", PROPOSED]
     for si, st in enumerate(stagers):
         so = pd.read_csv(RESULTS_DIR / "raw" / f"e06_source_only_{st}.csv")
         so = so[so.alpha == 0.10]
         ax = axes[si, 0]
-        meths = ["ba_loa", "scp_abs_bc", "cqr_ffbs", PROPOSED]
         for ti, tgt in enumerate(["ST", "HMC"]):
-            for mi, m in enumerate(meths):
+            for mi, m in enumerate(meths_src):
                 v = so[(so.target == tgt) & (so.method == m)].set_index("param").reindex(PARAMS)["coverage"]
-                ax.scatter(np.arange(8) + (mi - 1.5) * 0.15, v, s=10, color=C[m], marker="o" if tgt == "HMC" else "x",
-                           label=f"{LAB[m]}" if ti == 1 else None)
+                ax.scatter(np.arange(8) + (mi - 2) * 0.13, v, s=10, color=C[m], marker="o" if tgt == "HMC" else "x")
         ax.axhline(0.9, color="k", lw=0.6, ls=":")
         ax.set_xticks(range(8)); ax.set_xticklabels(PARAMS, rotation=45, ha="right"); ax.set_ylim(0.3, 1.02)
-        ax.set_ylabel("Coverage"); ax.set_title(f"{'ad'[si]}  {STAGER_LAB[st].split(' ')[0]}: SC-calibrated", loc="left", fontsize=8)
-        fs = pd.read_csv(RESULTS_DIR / "raw" / f"e06_fewshot_{st}.csv.gz")
-        for j, tgt in enumerate(["HMC", "ST"]):
+        ax.set_ylabel("Coverage"); ax.set_title(f"{'ad'[si]}  {STAGER_LAB[st].split(' ')[0]}: calibrated on SC", loc="left", fontsize=8)
+        g = loc[loc.stager == st]
+        for j, (col, ylab) in enumerate((("coverage", "Coverage (mean over 50 sites)"),
+                                         ("p_cov_lt80", "P(site coverage < 0.80)"))):
             ax = axes[si, 1 + j]
-            g = fs[fs.target == tgt].groupby(["strategy", "n_target", "method"])["coverage"].mean().reset_index()
-            for m in ["ba_loa", "scp_abs_bc", PROPOSED]:
-                for strat, ls in (("target", "-"), ("pooled", "--")):
-                    gg = g[(g.method == m) & (g.strategy == strat)]
-                    ax.plot(gg.n_target, gg.coverage, ls, color=C[m], marker="o", ms=3,
-                            label=f"{LAB[m]} ({strat})" if (si == 0 and j == 0) else None)
-            ax.axhline(0.9, color="k", lw=0.6, ls=":")
-            ax.set_xlabel("Labelled target nights"); ax.set_ylabel("Coverage (mean of 500)")
-            ax.set_title(f"{'be'[si] if j == 0 else 'cf'[si]}  {STAGER_LAB[st].split(' ')[0]}: recalibration on {tgt}", loc="left", fontsize=8)
+            for m in meths_loc:
+                for tgt, ls in (("HMC", "-"), ("ST", "--")):
+                    gg = g[(g.method == m) & (g.cohort == tgt)].groupby("n_target")[col]
+                    mid = gg.mean() if col == "coverage" else gg.median()
+                    ax.plot(mid.index, mid.values, ls, color=C[m], marker="o", ms=3)
+                    if col == "coverage" and tgt == "HMC":
+                        ax.fill_between(mid.index, gg.min().values, gg.max().values, color=C[m], alpha=0.10, lw=0)
+            if col == "coverage":
+                ax.axhline(0.9, color="k", lw=0.6, ls=":")
+            ax.set_xlabel("Labelled local nights (all components fitted on them)"); ax.set_ylabel(ylab)
+            ax.set_xticks(sorted(g.n_target.unique()))
+            ttl = "local coverage" if col == "coverage" else "site-level risk"
+            ax.set_title(f"{('be' if j == 0 else 'cf')[si]}  {STAGER_LAB[st].split(' ')[0]}: {ttl}", loc="left", fontsize=8)
     from matplotlib.lines import Line2D
-    hs = [Line2D([], [], color=C[m], marker="o", ls="", ms=4, label=LAB[m])
-          for m in ["ba_loa", "scp_abs_bc", "cqr_ffbs", PROPOSED]]
+    hs = [Line2D([], [], color=C[m], marker="o", ls="", ms=4, label=LAB[m]) for m in meths_src]
     hs += [Line2D([], [], color="k", marker="o", ls="", ms=4, label="HMC (a, d)"),
            Line2D([], [], color="k", marker="x", ls="", ms=4, label="ST (a, d)"),
-           Line2D([], [], color="k", ls="-", label="target-only calibration (b, c, e, f)"),
-           Line2D([], [], color="k", ls="--", label="SC + target calibration (b, c, e, f)")]
-    fig.tight_layout(rect=(0, 0.12, 1, 1))
-    fig.legend(handles=hs, loc="lower center", ncol=4, frameon=False, fontsize=6, bbox_to_anchor=(0.5, 0.0))
-    save(fig, "fig4_transport_recalibration")
+           Line2D([], [], color="k", ls="-", label="HMC (b, c, e, f)"),
+           Line2D([], [], color="k", ls="--", label="ST (b, c, e, f)")]
+    fig.tight_layout(rect=(0, 0.11, 1, 1))
+    fig.legend(handles=hs, loc="lower center", ncol=5, frameon=False, fontsize=6, bbox_to_anchor=(0.5, 0.0))
+    save(fig, "fig3_transport_local")
 
 
-def fig5_robust():
+def fig4_robust():
     d = pd.read_csv(RESULTS_DIR / "raw" / "e09_robustness.csv.gz")
     g = d.groupby(["corruption", "method", "param"])[["coverage", "mean_width"]].mean().reset_index()
     order = ["clean", "gauss05", "gauss10", "art10", "art25"]
     lab = ["clean", "noise 0.5 SD", "noise 1.0 SD", "artefacts 10%", "artefacts 25%"]
     fig, axes = plt.subplots(2, 3, figsize=(7.2, 3.8))
     for i, p in enumerate(["TST", "WASO", "N3%"]):
-        for m in ["ba_loa", "scp_abs_bc", "cqr_ffbs", PROPOSED]:
+        for m in ["ba_loa", "scp_signed", "scp_abs_cal", "cqr_ffbs", PROPOSED]:
             gg = g[(g.param == p) & (g.method == m)].set_index("corruption").reindex(order)
             axes[0, i].plot(range(5), gg.coverage, "-o", ms=3, color=C[m], label=LAB[m])
             axes[1, i].plot(range(5), gg.mean_width, "-o", ms=3, color=C[m])
@@ -226,7 +271,7 @@ def fig5_robust():
     h, l = axes[0, 0].get_legend_handles_labels()
     fig.tight_layout(rect=(0, 0, 1, 0.92))
     fig.legend(h, l, loc="upper center", ncol=4, frameon=False, fontsize=6.5, bbox_to_anchor=(0.5, 1.0))
-    save(fig, "fig5_robustness")
+    save(fig, "fig4_robustness")
 
 
 if __name__ == "__main__":
@@ -235,7 +280,7 @@ if __name__ == "__main__":
     globals()["experiments_loader"] = importlib.import_module("e03_night_summaries")
     sys.modules["experiments_loader"] = globals()["experiments_loader"]
     which = sys.argv[1:] or ["1", "2", "3", "4", "5"]
-    fns = {"1": fig1_example, "2": fig2_within, "3": fig3_adaptivity, "4": fig4_transport, "5": fig5_robust}
+    fns = {"1": fig1_example, "2": fig2_within, "3": fig3_transport, "4": fig4_robust, "5": fig5_adaptivity}
     for w in which:
         try:
             fns[w]()
