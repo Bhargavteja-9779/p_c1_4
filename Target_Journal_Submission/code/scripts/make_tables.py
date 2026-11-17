@@ -228,6 +228,9 @@ def honest_tables():
             NUM[f"h_pholm_{st}_{r.cohort}_{r.param}_{k}"] = float(r.p_holm)
         for comp, tc in t.groupby("comparator"):
             k = SCALE_KEY.get(comp, comp)
+            for p_, tp in tc.groupby("param"):
+                NUM[f"h_nlowerp_{st}_{p_}_{k}"] = int((tp.ratio < 1).sum())
+                NUM[f"h_nbetterp_{st}_{p_}_{k}"] = int(((tp.ratio < 1) & (tp.p_holm < 0.05)).sum())
             NUM[f"h_n_{st}_{k}"] = int(len(tc))
             NUM[f"h_nlower_{st}_{k}"] = int((tc.ratio < 1).sum())
             NUM[f"h_nbetter_{st}_{k}"] = int(((tc.ratio < 1) & (tc.p_holm < 0.05)).sum())

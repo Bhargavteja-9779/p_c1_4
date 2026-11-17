@@ -68,3 +68,12 @@
 * [Literature] Closest prior art (van Gorp et al. 2023 JBHI/ICASSP; Philips patent application EP4388985A1)
   added; novelty restricted to calibrated (conformal) per-night coverage, transport and local recalibration.
   Misattributed citations corrected. Ethics statement corrected (only HMC documents an approval, METC-19-065).
+* [Manuscript, after the E12/E15 results] Title changed to "...compared with limits of agreement"; Abstract,
+  Highlights, Results (3.1–3.8), Discussion, Conclusion and cover letter rewritten around the end-to-end protocol.
+  Claims NARROWED: the advantage over limits of agreement is specific to TST (significant against distribution-free
+  LoA in 6/6 stager-cohort combinations; against regression-based LoA in 3/6); no consistent gain for other
+  parameters; WASO-SC significantly worse; the pre-specified regulariser is suboptimal (unregularised score better in
+  20/24); regression-based LoA is competitive in interval score but under-covers. Recommendation changed from
+  "about ten local nights" to "at least 20 local nights". Cover letter no longer states that no ethics approval was
+  required. Fig. 3 no longer plots unbounded distribution-free LoA (n_t = 10). Per-night E12 files (>85 MB) are
+  regenerated rather than versioned.

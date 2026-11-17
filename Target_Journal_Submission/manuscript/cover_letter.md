@@ -14,7 +14,7 @@ Automatic sleep staging is increasingly used in clinical and research laboratori
 Using a published pretrained stager (YASA) and an in-domain stager on three open cohorts ({{nights_total}} nights; healthy community-dwelling adults, insomnia-complaint/temazepam nights and a clinical sleep-centre cohort), with every component fitted on calibration nights only, we show that:
 
 - the per-night 90 % intervals reach their nominal coverage within cohorts, whereas regression-based limits of agreement under-cover;
-- for total sleep time the intervals are more informative than parametric, regression-based and distribution-free limits of agreement in every cohort, and allow more nights to be classified confidently at a 6-h threshold;
+- for total sleep time the intervals have lower interval scores than parametric, regression-based and distribution-free limits of agreement in every cohort (significantly so against distribution-free limits), and allow more nights to be classified confidently at a 6-h threshold;
 - for the other parameters there is no consistent advantage, and wake after sleep onset intervals are worse in long ambulatory recordings — we report these negative results and their mechanism explicitly;
 - neither the intervals nor any limits of agreement transfer between cohorts; ten locally scored nights restore average coverage, but not reliably at every site, which leads us to recommend at least 20 local nights.
 

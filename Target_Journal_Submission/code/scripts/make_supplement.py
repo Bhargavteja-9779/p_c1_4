@@ -32,7 +32,7 @@ OUT = (RESULTS_DIR / "supplementary") if _QUICK else (ROOT_DIR / "supplementary"
 
 def tbl(name, query=None, cols=None, round_=3, max_rows=None):
     f = TABLES_DIR / f"{name}.csv"
-    if not f.exists():
+    if not f.exists() or f.stat().st_size < 2:
         return f"*[{name} not available]*\n"
     d = pd.read_csv(f)
     if query:
