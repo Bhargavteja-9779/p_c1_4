@@ -1,1153 +1,1154 @@
-    stager cohort  n_target param           method  coverage  p_cov_lt80  mean_width  median_width  interval_score
-      yasa    HMC        10   N1%           ba_loa    0.8888        0.16     26.2765       25.4496         42.4349
-      yasa    HMC        10   N1%           ba_reg    0.7627        0.50     19.3791       17.7282         50.1460
-      yasa    HMC        10   N1%         cqr_ffbs    0.9148        0.08     27.9309       23.9246         39.9142
-      yasa    HMC        10   N1%           cqr_qr    1.0000        0.00    100.0000      100.0000        100.0000
-      yasa    HMC        10   N1% norm_entropy_reg    0.9193        0.04     26.8108       23.8491         37.2991
-      yasa    HMC        10   N1%        norm_ffbs    0.9257        0.06     30.4318       25.5200         40.2318
-      yasa    HMC        10   N1%    norm_reg_ffbs    0.9210        0.08     28.7736       23.9632         39.8910
-      yasa    HMC        10   N1%   norm_reg_plugc    0.9216        0.08     30.4662       24.6635         44.3932
-      yasa    HMC        10   N1%       scp_abs_bc    0.8902        0.22     28.2724       26.1784         44.2603
-      yasa    HMC        10   N1%      scp_abs_cal    0.9160        0.10     30.3398       23.6682         46.0432
-      yasa    HMC        10   N1%       scp_abs_mu    0.9132        0.08     27.8158       24.1021         40.3541
-      yasa    HMC        10   N1%       scp_signed    1.0000        0.00    100.0000      100.0000        100.0000
-      yasa    HMC        10   N2%           ba_loa    0.9065        0.10     37.6605       35.5134         52.5575
-      yasa    HMC        10   N2%           ba_reg    0.7528        0.54     20.8440       20.8544         48.6605
-      yasa    HMC        10   N2%         cqr_ffbs    0.9400        0.02     35.2908       32.9965         40.6649
-      yasa    HMC        10   N2%           cqr_qr    1.0000        0.00    100.0000      100.0000        100.0000
-      yasa    HMC        10   N2% norm_entropy_reg    0.9306        0.06     35.2031       32.0711         41.2431
-      yasa    HMC        10   N2%        norm_ffbs    0.9268        0.04     36.1059       33.3947         42.0287
-      yasa    HMC        10   N2%    norm_reg_ffbs    0.9376        0.02     35.4286       33.1252         40.9875
-      yasa    HMC        10   N2%   norm_reg_plugc    0.9267        0.04     46.9755       45.5563         58.1767
-      yasa    HMC        10   N2%       scp_abs_bc    0.9102        0.10     41.4247       35.2378         55.5322
-      yasa    HMC        10   N2%      scp_abs_cal    0.9240        0.10     51.6932       48.7266         64.2865
-      yasa    HMC        10   N2%       scp_abs_mu    0.9376        0.02     35.5888       33.4859         41.3659
-      yasa    HMC        10   N2%       scp_signed    1.0000        0.00    100.0000      100.0000        100.0000
-      yasa    HMC        10   N3%           ba_loa    0.9000        0.10     27.3812       26.7414         36.9811
-      yasa    HMC        10   N3%           ba_reg    0.7691        0.58     19.9285       19.0262         44.7705
-      yasa    HMC        10   N3%         cqr_ffbs    0.9220        0.08     35.8718       34.6641         42.4975
-      yasa    HMC        10   N3%           cqr_qr    1.0000        0.00    100.0000      100.0000        100.0000
-      yasa    HMC        10   N3% norm_entropy_reg    0.9199        0.10     36.4192       35.7539         43.4661
-      yasa    HMC        10   N3%        norm_ffbs    0.9203        0.14     35.6735       34.9602         42.1744
-      yasa    HMC        10   N3%    norm_reg_ffbs    0.9207        0.06     34.8300       32.8978         41.3369
-      yasa    HMC        10   N3%   norm_reg_plugc    0.9210        0.08     31.8276       32.4781         39.2485
-      yasa    HMC        10   N3%       scp_abs_bc    0.8814        0.18     27.3031       23.9096         38.5520
-      yasa    HMC        10   N3%      scp_abs_cal    0.9118        0.10     31.6183       28.4849         40.3129
-      yasa    HMC        10   N3%       scp_abs_mu    0.9248        0.06     37.4278       36.4766         44.4915
-      yasa    HMC        10   N3%       scp_signed    1.0000        0.00    100.0000      100.0000        100.0000
-      yasa    HMC        10  REM%           ba_loa    0.9184        0.02     20.7020       20.0209         27.4877
-      yasa    HMC        10  REM%           ba_reg    0.7803        0.42     13.8538       13.9788         28.1290
-      yasa    HMC        10  REM%         cqr_ffbs    0.9411        0.04     26.3784       25.2923         29.9705
-      yasa    HMC        10  REM%           cqr_qr    1.0000        0.00    100.0000      100.0000        100.0000
-      yasa    HMC        10  REM% norm_entropy_reg    0.9374        0.06     26.0139       25.8764         29.6572
-      yasa    HMC        10  REM%        norm_ffbs    0.9435        0.04     28.9265       26.3151         32.1211
-      yasa    HMC        10  REM%    norm_reg_ffbs    0.9438        0.04     26.7657       25.8516         30.0272
-      yasa    HMC        10  REM%   norm_reg_plugc    0.9227        0.06     22.4265       20.2767         28.0861
-      yasa    HMC        10  REM%       scp_abs_bc    0.9089        0.06     21.2261       19.7894         28.7411
-      yasa    HMC        10  REM%      scp_abs_cal    0.9136        0.06     21.9489       20.6264         28.7267
-      yasa    HMC        10  REM%       scp_abs_mu    0.9346        0.10     26.6513       26.1218         31.0129
-      yasa    HMC        10  REM%       scp_signed    1.0000        0.00    100.0000      100.0000        100.0000
-      yasa    HMC        10  REML           ba_loa    0.8471        0.40    167.7814      158.4988        365.7283
-      yasa    HMC        10  REML           ba_reg    0.7106        0.72    120.5058      104.0084        476.3186
-      yasa    HMC        10  REML         cqr_ffbs    0.9100        0.14    195.1960      174.5169        310.2639
-      yasa    HMC        10  REML           cqr_qr    1.0000        0.00         inf           inf             NaN
-      yasa    HMC        10  REML norm_entropy_reg    0.8892        0.20    214.0261      209.0650        370.7219
-      yasa    HMC        10  REML        norm_ffbs    0.8969        0.12    206.6560      182.1982        334.4548
-      yasa    HMC        10  REML    norm_reg_ffbs    0.8940        0.12    201.2960      181.0408        347.1624
-      yasa    HMC        10  REML   norm_reg_plugc    0.8792        0.16    200.0564      183.7126        365.5477
-      yasa    HMC        10  REML       scp_abs_bc    0.8695        0.20    188.8394      161.6961        357.2457
-      yasa    HMC        10  REML      scp_abs_cal    0.8818        0.16    221.5881      193.5071        403.7584
-      yasa    HMC        10  REML       scp_abs_mu    0.8882        0.18    224.4881      214.5202        388.2947
-      yasa    HMC        10  REML       scp_signed    1.0000        0.00         inf           inf             NaN
-      yasa    HMC        10   SOL           ba_loa    0.8875        0.12     22.9667       19.5585         53.3836
-      yasa    HMC        10   SOL           ba_reg    0.7626        0.60     16.4717       15.1068         55.0626
-      yasa    HMC        10   SOL         cqr_ffbs    0.9193        0.06     32.7551       19.7317         64.6949
-      yasa    HMC        10   SOL           cqr_qr    1.0000        0.00         inf           inf             NaN
-      yasa    HMC        10   SOL norm_entropy_reg    0.8949        0.18     41.3567       28.7956         88.2861
-      yasa    HMC        10   SOL        norm_ffbs    0.9067        0.10     28.5410       21.5460         64.8617
-      yasa    HMC        10   SOL    norm_reg_ffbs    0.8984        0.16     30.2511       21.5368         73.2131
-      yasa    HMC        10   SOL   norm_reg_plugc    0.9009        0.12     26.7063       19.3228         57.1941
-      yasa    HMC        10   SOL       scp_abs_bc    0.8974        0.14     26.3880       22.5454         54.3021
-      yasa    HMC        10   SOL      scp_abs_cal    0.8911        0.14     31.4987       19.3741         66.4817
-      yasa    HMC        10   SOL       scp_abs_mu    0.8915        0.20     40.6242       29.6756         88.4539
-      yasa    HMC        10   SOL       scp_signed    1.0000        0.00         inf           inf             NaN
-      yasa    HMC        10   TST           ba_loa    0.9194        0.10    149.0182      135.2920        230.3192
-      yasa    HMC        10   TST           ba_reg    0.7889        0.56    103.1999       87.9289        248.5520
-      yasa    HMC        10   TST         cqr_ffbs    0.9153        0.12    145.9095      126.8554        197.5852
-      yasa    HMC        10   TST           cqr_qr    1.0000        0.00         inf           inf             NaN
-      yasa    HMC        10   TST norm_entropy_reg    0.9140        0.14    143.1512      131.8299        197.6989
-      yasa    HMC        10   TST        norm_ffbs    0.9203        0.08    121.5744      107.6250        162.5339
-      yasa    HMC        10   TST    norm_reg_ffbs    0.9182        0.10    131.9702      111.4251        180.6459
-      yasa    HMC        10   TST   norm_reg_plugc    0.9123        0.14    136.7279      122.2788        190.6937
-      yasa    HMC        10   TST       scp_abs_bc    0.9244        0.06    173.8347      148.0500        250.4069
-      yasa    HMC        10   TST      scp_abs_cal    0.9089        0.18    160.0000      149.5000        224.7262
-      yasa    HMC        10   TST       scp_abs_mu    0.9105        0.18    154.8920      141.8700        214.6783
-      yasa    HMC        10   TST       scp_signed    1.0000        0.00         inf           inf             NaN
-      yasa    HMC        10  WASO           ba_loa    0.9174        0.06    109.0654      104.2677        182.7953
-      yasa    HMC        10  WASO           ba_reg    0.8129        0.40     82.1072       77.6270        186.3258
-      yasa    HMC        10  WASO         cqr_ffbs    0.9243        0.10    118.2619      115.5196        162.9459
-      yasa    HMC        10  WASO           cqr_qr    1.0000        0.00         inf           inf             NaN
-      yasa    HMC        10  WASO norm_entropy_reg    0.9172        0.14    118.5294      109.5657        168.9506
-      yasa    HMC        10  WASO        norm_ffbs    0.9237        0.12    110.4637       99.5975        149.7436
-      yasa    HMC        10  WASO    norm_reg_ffbs    0.9230        0.12    114.7938      109.6435        159.8312
-      yasa    HMC        10  WASO   norm_reg_plugc    0.9169        0.10    108.7076      107.8619        158.2951
-      yasa    HMC        10  WASO       scp_abs_bc    0.9274        0.06    123.0158      114.0759        191.6393
-      yasa    HMC        10  WASO      scp_abs_cal    0.9200        0.08    118.2923      119.2979        171.8128
-      yasa    HMC        10  WASO       scp_abs_mu    0.9186        0.12    123.9473      127.2136        176.0214
-      yasa    HMC        10  WASO       scp_signed    1.0000        0.00         inf           inf             NaN
-      yasa    HMC        20   N1%           ba_loa    0.8971        0.12     25.3835       23.0027         40.9391
-      yasa    HMC        20   N1%           ba_reg    0.8333        0.28     21.0054       19.8548         43.9774
-      yasa    HMC        20   N1%         cqr_ffbs    0.9090        0.06     23.8658       22.2861         37.0419
-      yasa    HMC        20   N1%           cqr_qr    0.8963        0.20     32.6205       28.8267         46.8957
-      yasa    HMC        20   N1% norm_entropy_reg    0.9093        0.06     23.3869       22.2409         35.6380
-      yasa    HMC        20   N1%        norm_ffbs    0.9139        0.06     24.4544       22.8544         36.3258
-      yasa    HMC        20   N1%    norm_reg_ffbs    0.9116        0.08     23.9009       21.9626         36.5418
-      yasa    HMC        20   N1%   norm_reg_plugc    0.9000        0.10     23.7370       22.8495         40.5611
-      yasa    HMC        20   N1%       scp_abs_bc    0.8792        0.16     23.5868       22.4368         40.9127
-      yasa    HMC        20   N1%      scp_abs_cal    0.9032        0.08     24.9176       23.2667         42.7426
-      yasa    HMC        20   N1%       scp_abs_mu    0.9060        0.06     23.9304       22.2318         37.6268
-      yasa    HMC        20   N1%       scp_signed    0.8934        0.08     32.0325       27.5231         45.8168
-      yasa    HMC        20   N2%           ba_loa    0.9089        0.08     34.9385       33.2575         49.9820
-      yasa    HMC        20   N2%           ba_reg    0.8238        0.36     22.3137       21.7718         40.4421
-      yasa    HMC        20   N2%         cqr_ffbs    0.9085        0.08     29.8066       29.2224         37.4088
-      yasa    HMC        20   N2%           cqr_qr    0.9038        0.12     52.5873       50.5681         67.7848
-      yasa    HMC        20   N2% norm_entropy_reg    0.9137        0.08     30.3634       30.0232         37.7699
-      yasa    HMC        20   N2%        norm_ffbs    0.9119        0.06     30.1237       29.9697         37.2135
-      yasa    HMC        20   N2%    norm_reg_ffbs    0.9064        0.06     29.4516       29.1472         37.2003
-      yasa    HMC        20   N2%   norm_reg_plugc    0.9104        0.06     39.0427       38.5640         53.0260
-      yasa    HMC        20   N2%       scp_abs_bc    0.8821        0.16     31.8599       30.6079         49.9175
-      yasa    HMC        20   N2%      scp_abs_cal    0.9093        0.10     42.0086       41.4802         57.0901
-      yasa    HMC        20   N2%       scp_abs_mu    0.9073        0.10     30.1361       29.2853         38.5416
-      yasa    HMC        20   N2%       scp_signed    0.8988        0.10     38.5579       37.4464         51.8593
-      yasa    HMC        20   N3%           ba_loa    0.8982        0.08     25.5940       24.6919         34.9200
-      yasa    HMC        20   N3%           ba_reg    0.8223        0.44     20.6374       19.7111         39.3596
-      yasa    HMC        20   N3%         cqr_ffbs    0.9121        0.08     32.3868       31.7533         39.1838
-      yasa    HMC        20   N3%           cqr_qr    0.9050        0.06     43.9203       42.8918         57.9938
-      yasa    HMC        20   N3% norm_entropy_reg    0.9081        0.06     32.1779       32.4004         39.7894
-      yasa    HMC        20   N3%        norm_ffbs    0.9159        0.10     32.0354       31.3480         37.8538
-      yasa    HMC        20   N3%    norm_reg_ffbs    0.9111        0.08     31.6205       30.9548         38.1626
-      yasa    HMC        20   N3%   norm_reg_plugc    0.9173        0.08     29.5693       28.8839         36.9885
-      yasa    HMC        20   N3%       scp_abs_bc    0.8898        0.14     25.4509       23.3965         35.4953
-      yasa    HMC        20   N3%      scp_abs_cal    0.9102        0.06     29.3695       26.7112         37.9858
-      yasa    HMC        20   N3%       scp_abs_mu    0.9090        0.08     32.8843       32.7033         41.0436
-      yasa    HMC        20   N3%       scp_signed    0.8986        0.12     28.5375       26.9478         36.8918
-      yasa    HMC        20  REM%           ba_loa    0.9081        0.04     19.0586       17.9408         26.4456
-      yasa    HMC        20  REM%           ba_reg    0.8434        0.22     14.6164       14.5042         23.8935
-      yasa    HMC        20  REM%         cqr_ffbs    0.9188        0.06     22.9501       22.2994         27.5423
-      yasa    HMC        20  REM%           cqr_qr    0.8905        0.16     30.4763       26.5831         40.3614
-      yasa    HMC        20  REM% norm_entropy_reg    0.9229        0.04     23.3342       23.0331         27.7330
-      yasa    HMC        20  REM%        norm_ffbs    0.9147        0.04     23.3977       22.4898         28.2940
-      yasa    HMC        20  REM%    norm_reg_ffbs    0.9223        0.04     22.8635       22.6708         27.3273
-      yasa    HMC        20  REM%   norm_reg_plugc    0.9110        0.06     18.1478       17.3343         24.0432
-      yasa    HMC        20  REM%       scp_abs_bc    0.8997        0.08     18.4616       17.8297         26.5648
-      yasa    HMC        20  REM%      scp_abs_cal    0.9133        0.08     19.2927       18.2224         25.5169
-      yasa    HMC        20  REM%       scp_abs_mu    0.9243        0.04     24.2858       23.8746         29.4095
-      yasa    HMC        20  REM%       scp_signed    0.9082        0.02     21.5108       19.0306         28.4707
-      yasa    HMC        20  REML           ba_loa    0.8735        0.26    177.5448      180.0541        340.9847
-      yasa    HMC        20  REML           ba_reg    0.8110        0.42    145.0582      136.4514        391.6025
-      yasa    HMC        20  REML         cqr_ffbs    0.8963        0.08    171.0471      156.8132        288.1288
-      yasa    HMC        20  REML           cqr_qr    0.8975        0.20    435.2005      301.9534        607.1498
-      yasa    HMC        20  REML norm_entropy_reg    0.8989        0.08    208.3305      193.7287        352.2590
-      yasa    HMC        20  REML        norm_ffbs    0.8974        0.10    183.0338      174.2265        303.0756
-      yasa    HMC        20  REML    norm_reg_ffbs    0.8961        0.06    183.9475      174.6713        321.0002
-      yasa    HMC        20  REML   norm_reg_plugc    0.8909        0.12    184.8864      187.7614        332.1243
-      yasa    HMC        20  REML       scp_abs_bc    0.8851        0.14    188.5319      183.1878        338.4580
-      yasa    HMC        20  REML      scp_abs_cal    0.8961        0.12    205.9347      190.6038        375.3697
-      yasa    HMC        20  REML       scp_abs_mu    0.8985        0.08    215.0034      198.1953        370.2643
-      yasa    HMC        20  REML       scp_signed    0.8990        0.14    234.0548      198.7731        359.8079
-      yasa    HMC        20   SOL           ba_loa    0.9049        0.10     24.4074       23.7749         50.2986
-      yasa    HMC        20   SOL           ba_reg    0.8208        0.34     17.7753       18.2428         48.3290
-      yasa    HMC        20   SOL         cqr_ffbs    0.9171        0.06     23.9376       19.4073         56.2536
-      yasa    HMC        20   SOL           cqr_qr    0.9096        0.12     50.8604       33.0921         82.4154
-      yasa    HMC        20   SOL norm_entropy_reg    0.9031        0.10     31.7960       29.2883         76.7013
-      yasa    HMC        20   SOL        norm_ffbs    0.9085        0.08     22.0003       19.3187         59.7818
-      yasa    HMC        20   SOL    norm_reg_ffbs    0.9035        0.10     24.3915       21.5423         67.0990
-      yasa    HMC        20   SOL   norm_reg_plugc    0.9104        0.06     22.1154       19.1949         51.8120
-      yasa    HMC        20   SOL       scp_abs_bc    0.8980        0.14     25.0799       24.4038         52.4906
-      yasa    HMC        20   SOL      scp_abs_cal    0.9093        0.06     25.7779       20.0878         57.9214
-      yasa    HMC        20   SOL       scp_abs_mu    0.9060        0.08     32.1330       30.6910         76.9453
-      yasa    HMC        20   SOL       scp_signed    0.9119        0.08     24.3162       17.4141         46.6490
-      yasa    HMC        20   TST           ba_loa    0.9229        0.04    141.1134      114.8882        220.1616
-      yasa    HMC        20   TST           ba_reg    0.8374        0.34    104.1088       94.8290        215.2815
-      yasa    HMC        20   TST         cqr_ffbs    0.9145        0.12    119.5382      116.4107        169.6982
-      yasa    HMC        20   TST           cqr_qr    0.9359        0.04    302.8790      237.5058        360.5015
-      yasa    HMC        20   TST norm_entropy_reg    0.9145        0.10    119.0885      121.6908        171.2370
-      yasa    HMC        20   TST        norm_ffbs    0.9142        0.06     96.0741       93.9888        136.7782
-      yasa    HMC        20   TST    norm_reg_ffbs    0.9124        0.10    107.2092       99.7152        155.5369
-      yasa    HMC        20   TST   norm_reg_plugc    0.9090        0.12    108.3770      101.4379        160.6534
-      yasa    HMC        20   TST       scp_abs_bc    0.9072        0.04    121.9710      113.2750        209.0000
-      yasa    HMC        20   TST      scp_abs_cal    0.9105        0.14    131.6400      129.0000        192.1331
-      yasa    HMC        20   TST       scp_abs_mu    0.9128        0.12    130.7680      130.4925        186.9854
-      yasa    HMC        20   TST       scp_signed    0.9183        0.06    180.8000      147.2500        249.4748
-      yasa    HMC        20  WASO           ba_loa    0.9183        0.04    105.5015       94.4873        179.0406
-      yasa    HMC        20  WASO           ba_reg    0.8408        0.24     84.3909       83.4868        156.0083
-      yasa    HMC        20  WASO         cqr_ffbs    0.9214        0.04    102.7095       97.6480        149.4239
-      yasa    HMC        20  WASO           cqr_qr    0.9272        0.08    166.7133      153.7385        224.7955
-      yasa    HMC        20  WASO norm_entropy_reg    0.9234        0.04    105.3003      101.5793        155.0766
-      yasa    HMC        20  WASO        norm_ffbs    0.9211        0.04     93.3519       91.5913        134.3657
-      yasa    HMC        20  WASO    norm_reg_ffbs    0.9206        0.04     99.9279       97.0433        146.4295
-      yasa    HMC        20  WASO   norm_reg_plugc    0.9212        0.02     91.9712       85.4892        139.7078
-      yasa    HMC        20  WASO       scp_abs_bc    0.9139        0.00     97.4932       93.5567        173.5508
-      yasa    HMC        20  WASO      scp_abs_cal    0.9208        0.02    102.2308      102.6107        155.5544
-      yasa    HMC        20  WASO       scp_abs_mu    0.9195        0.08    110.4453      113.6711        162.4858
-      yasa    HMC        20  WASO       scp_signed    0.9183        0.02    101.8103       97.3340        168.2302
-      yasa    HMC        30   N1%           ba_loa    0.9137        0.02     25.8088       24.5865         39.7015
-      yasa    HMC        30   N1%           ba_reg    0.8610        0.22     21.9076       22.0258         42.1298
-      yasa    HMC        30   N1%         cqr_ffbs    0.9015        0.04     22.0930       21.6926         36.1833
-      yasa    HMC        30   N1%           cqr_qr    0.9393        0.00     33.4496       32.1160         41.5984
-      yasa    HMC        30   N1% norm_entropy_reg    0.9060        0.04     22.2595       21.8789         34.7745
-      yasa    HMC        30   N1%        norm_ffbs    0.9026        0.06     22.6202       22.1727         35.6284
-      yasa    HMC        30   N1%    norm_reg_ffbs    0.9025        0.06     22.2394       21.7497         35.8763
-      yasa    HMC        30   N1%   norm_reg_plugc    0.9036        0.08     22.8508       22.6308         39.3486
-      yasa    HMC        30   N1%       scp_abs_bc    0.8949        0.06     23.6190       23.7666         39.5132
-      yasa    HMC        30   N1%      scp_abs_cal    0.9036        0.06     23.5443       22.0665         41.8360
-      yasa    HMC        30   N1%       scp_abs_mu    0.9035        0.04     22.3321       21.4972         36.6498
-      yasa    HMC        30   N1%       scp_signed    0.9322        0.00     37.9439       34.7986         47.0420
-      yasa    HMC        30   N2%           ba_loa    0.9192        0.00     34.2261       34.2336         47.8874
-      yasa    HMC        30   N2%           ba_reg    0.8365        0.24     22.2772       22.9306         38.0366
-      yasa    HMC        30   N2%         cqr_ffbs    0.8979        0.10     28.1798       27.9765         36.4483
-      yasa    HMC        30   N2%           cqr_qr    0.9283        0.10     45.2131       41.1339         53.0662
-      yasa    HMC        30   N2% norm_entropy_reg    0.9003        0.08     28.6846       28.1075         36.8739
-      yasa    HMC        30   N2%        norm_ffbs    0.9053        0.04     29.2690       28.8561         36.5249
-      yasa    HMC        30   N2%    norm_reg_ffbs    0.8992        0.08     28.2313       28.1567         36.4101
-      yasa    HMC        30   N2%   norm_reg_plugc    0.9021        0.04     37.0195       37.3896         51.7803
-      yasa    HMC        30   N2%       scp_abs_bc    0.8884        0.08     30.8602       29.1448         48.0891
-      yasa    HMC        30   N2%      scp_abs_cal    0.9025        0.02     39.6793       39.5917         55.4335
-      yasa    HMC        30   N2%       scp_abs_mu    0.8972        0.10     28.3285       27.2019         37.3364
-      yasa    HMC        30   N2%       scp_signed    0.9322        0.00     43.9680       45.5327         53.2918
-      yasa    HMC        30   N3%           ba_loa    0.8983        0.08     25.0466       25.9730         34.3138
-      yasa    HMC        30   N3%           ba_reg    0.8402        0.26     20.7551       21.1415         38.3510
-      yasa    HMC        30   N3%         cqr_ffbs    0.9093        0.08     30.9722       30.6419         38.0324
-      yasa    HMC        30   N3%           cqr_qr    0.9202        0.04     38.9724       37.8980         48.7660
-      yasa    HMC        30   N3% norm_entropy_reg    0.9094        0.04     31.2476       31.6618         38.2506
-      yasa    HMC        30   N3%        norm_ffbs    0.9136        0.06     30.6026       30.3717         36.3720
-      yasa    HMC        30   N3%    norm_reg_ffbs    0.9081        0.08     30.4458       30.0575         36.9445
-      yasa    HMC        30   N3%   norm_reg_plugc    0.9061        0.04     27.5100       27.3312         35.8940
-      yasa    HMC        30   N3%       scp_abs_bc    0.8861        0.10     24.0292       23.7878         34.4822
-      yasa    HMC        30   N3%      scp_abs_cal    0.9048        0.04     27.6794       26.6249         36.5364
-      yasa    HMC        30   N3%       scp_abs_mu    0.9099        0.02     31.8976       31.9433         39.6290
-      yasa    HMC        30   N3%       scp_signed    0.9298        0.04     32.0678       32.9083         38.0668
-      yasa    HMC        30  REM%           ba_loa    0.9185        0.00     19.1065       18.0612         25.8659
-      yasa    HMC        30  REM%           ba_reg    0.8810        0.08     15.4178       14.9769         22.4933
-      yasa    HMC        30  REM%         cqr_ffbs    0.9193        0.00     22.4552       22.0809         26.9218
-      yasa    HMC        30  REM%           cqr_qr    0.9446        0.02     29.8994       26.6951         34.9032
-      yasa    HMC        30  REM% norm_entropy_reg    0.9203        0.02     22.6520       22.5550         27.0993
-      yasa    HMC        30  REM%        norm_ffbs    0.9154        0.00     23.1321       22.4821         27.7244
-      yasa    HMC        30  REM%    norm_reg_ffbs    0.9192        0.00     22.3606       21.6866         26.6969
-      yasa    HMC        30  REM%   norm_reg_plugc    0.9134        0.00     17.2986       16.8942         23.1204
-      yasa    HMC        30  REM%       scp_abs_bc    0.8983        0.04     17.8870       17.7990         25.7703
-      yasa    HMC        30  REM%      scp_abs_cal    0.9129        0.00     17.9681       17.0134         24.2393
-      yasa    HMC        30  REM%       scp_abs_mu    0.9205        0.02     23.0705       22.4342         28.4550
-      yasa    HMC        30  REM%       scp_signed    0.9400        0.00     25.1124       21.7565         29.8513
-      yasa    HMC        30  REML           ba_loa    0.8979        0.08    188.3398      187.7720        321.3156
-      yasa    HMC        30  REML           ba_reg    0.8434        0.28    154.5275      154.7474        362.1075
-      yasa    HMC        30  REML         cqr_ffbs    0.9027        0.04    156.5373      144.5309        281.7698
-      yasa    HMC        30  REML           cqr_qr    0.9444        0.02    323.0129      344.5007        401.4264
-      yasa    HMC        30  REML norm_entropy_reg    0.8964        0.06    197.6991      195.6387        348.5771
-      yasa    HMC        30  REML        norm_ffbs    0.9034        0.00    172.6747      169.0218        287.5894
-      yasa    HMC        30  REML    norm_reg_ffbs    0.8909        0.06    175.4311      174.3101        318.6721
-      yasa    HMC        30  REML   norm_reg_plugc    0.8929        0.04    182.0469      182.3375        321.8722
-      yasa    HMC        30  REML       scp_abs_bc    0.8984        0.06    185.5213      184.1246        321.0848
-      yasa    HMC        30  REML      scp_abs_cal    0.9047        0.04    202.8900      189.2812        368.0510
-      yasa    HMC        30  REML       scp_abs_mu    0.8981        0.06    203.3927      207.6136        363.9444
-      yasa    HMC        30  REML       scp_signed    0.9436        0.00    293.7688      298.5208        359.5504
-      yasa    HMC        30   SOL           ba_loa    0.9136        0.06     24.6462       24.8670         49.0449
-      yasa    HMC        30   SOL           ba_reg    0.8650        0.20     18.9599       19.1334         41.6227
-      yasa    HMC        30   SOL         cqr_ffbs    0.9264        0.02     21.4338       19.7636         54.7404
-      yasa    HMC        30   SOL           cqr_qr    0.9455        0.02     45.3368       33.5555         63.0514
-      yasa    HMC        30   SOL norm_entropy_reg    0.8993        0.10     27.3695       27.2814         75.4726
-      yasa    HMC        30   SOL        norm_ffbs    0.9084        0.04     20.1141       18.4900         59.7436
-      yasa    HMC        30   SOL    norm_reg_ffbs    0.8990        0.12     21.7367       20.1742         67.0068
-      yasa    HMC        30   SOL   norm_reg_plugc    0.9081        0.08     20.3395       17.5432         51.5493
-      yasa    HMC        30   SOL       scp_abs_bc    0.8992        0.14     23.1792       23.0904         51.5912
-      yasa    HMC        30   SOL      scp_abs_cal    0.9018        0.12     22.7347       20.2707         57.4752
-      yasa    HMC        30   SOL       scp_abs_mu    0.8985        0.10     28.6237       27.1207         76.2979
-      yasa    HMC        30   SOL       scp_signed    0.9410        0.00     29.6109       19.8574         46.9051
-      yasa    HMC        30   TST           ba_loa    0.9279        0.04    140.0034      120.4567        216.7149
-      yasa    HMC        30   TST           ba_reg    0.8506        0.22    104.6867       97.8966        206.2955
-      yasa    HMC        30   TST         cqr_ffbs    0.9012        0.08    104.7760       95.4087        163.8774
-      yasa    HMC        30   TST           cqr_qr    0.9405        0.02    196.3162      164.5661        235.2701
-      yasa    HMC        30   TST norm_entropy_reg    0.9018        0.06    104.1708       99.3390        164.3015
-      yasa    HMC        30   TST        norm_ffbs    0.9038        0.06     86.7200       81.3004        134.8889
-      yasa    HMC        30   TST    norm_reg_ffbs    0.9015        0.08     95.2716       89.2779        151.2695
-      yasa    HMC        30   TST   norm_reg_plugc    0.9018        0.08     94.7329       93.4749        153.0732
-      yasa    HMC        30   TST       scp_abs_bc    0.9117        0.02    119.2320      111.1167        205.2213
-      yasa    HMC        30   TST      scp_abs_cal    0.9030        0.10    115.5800      114.5000        182.5635
-      yasa    HMC        30   TST       scp_abs_mu    0.9026        0.06    116.1785      114.2140        180.2599
-      yasa    HMC        30   TST       scp_signed    0.9405        0.02    213.6300      181.5000        271.7308
-      yasa    HMC        30  WASO           ba_loa    0.9240        0.00    105.1983       97.4913        176.5136
-      yasa    HMC        30  WASO           ba_reg    0.8582        0.18     87.2885       85.8872        144.6971
-      yasa    HMC        30  WASO         cqr_ffbs    0.9111        0.02     92.4064       91.5546        147.0553
-      yasa    HMC        30  WASO           cqr_qr    0.9304        0.04    149.8005      135.3573        198.4350
-      yasa    HMC        30  WASO norm_entropy_reg    0.9132        0.02     94.3412       90.2516        152.1313
-      yasa    HMC        30  WASO        norm_ffbs    0.9124        0.04     84.4220       84.5275        131.8510
-      yasa    HMC        30  WASO    norm_reg_ffbs    0.9107        0.00     89.1470       88.4333        144.2801
-      yasa    HMC        30  WASO   norm_reg_plugc    0.9008        0.06     80.3426       76.2551        139.6896
-      yasa    HMC        30  WASO       scp_abs_bc    0.9078        0.04     93.8338       90.4302        173.8075
-      yasa    HMC        30  WASO      scp_abs_cal    0.9056        0.04     90.6431       91.5971        154.9654
-      yasa    HMC        30  WASO       scp_abs_mu    0.9098        0.06    100.5170       96.2243        161.1914
-      yasa    HMC        30  WASO       scp_signed    0.9436        0.00    113.9201      116.7645        166.4507
-      yasa     ST        10   N1%           ba_loa    0.8624        0.28     15.8739       16.4902         23.7253
-      yasa     ST        10   N1%           ba_reg    0.7276        0.64     12.2305       12.2337         30.3798
-      yasa     ST        10   N1%         cqr_ffbs    0.9059        0.16     17.6872       17.9311         24.4977
-      yasa     ST        10   N1%           cqr_qr    1.0000        0.00    100.0000      100.0000        100.0000
-      yasa     ST        10   N1% norm_entropy_reg    0.9018        0.16     17.4227       17.0753         24.4135
-      yasa     ST        10   N1%        norm_ffbs    0.9200        0.12     17.6114       17.0597         22.1777
-      yasa     ST        10   N1%    norm_reg_ffbs    0.9100        0.16     17.6381       17.3786         23.6982
-      yasa     ST        10   N1%   norm_reg_plugc    0.9300        0.16     17.2999       17.7753         21.8706
-      yasa     ST        10   N1%       scp_abs_bc    0.8571        0.24     15.2991       15.4669         23.0182
-      yasa     ST        10   N1%      scp_abs_cal    0.9206        0.14     17.3753       18.1263         22.8453
-      yasa     ST        10   N1%       scp_abs_mu    0.9012        0.16     17.8270       18.1981         25.4313
-      yasa     ST        10   N1%       scp_signed    1.0000        0.00    100.0000      100.0000        100.0000
-      yasa     ST        10   N2%           ba_loa    0.8376        0.32     34.0128       32.9308         47.8140
-      yasa     ST        10   N2%           ba_reg    0.7100        0.64     26.7523       26.2779         60.2402
-      yasa     ST        10   N2%         cqr_ffbs    0.8800        0.26     38.5596       35.7538         48.2510
-      yasa     ST        10   N2%           cqr_qr    1.0000        0.00    100.0000      100.0000        100.0000
-      yasa     ST        10   N2% norm_entropy_reg    0.8818        0.26     39.1559       37.4143         48.4483
-      yasa     ST        10   N2%        norm_ffbs    0.8900        0.22     43.7928       41.0121         52.7890
-      yasa     ST        10   N2%    norm_reg_ffbs    0.8865        0.26     39.9446       37.7008         49.2627
-      yasa     ST        10   N2%   norm_reg_plugc    0.8853        0.28     39.1254       38.4930         49.3793
-      yasa     ST        10   N2%       scp_abs_bc    0.8041        0.46     30.8285       29.9317         49.5102
-      yasa     ST        10   N2%      scp_abs_cal    0.8700        0.26     36.5186       35.3522         47.6855
-      yasa     ST        10   N2%       scp_abs_mu    0.8829        0.26     38.0224       35.3327         47.5814
-      yasa     ST        10   N2%       scp_signed    1.0000        0.00    100.0000      100.0000        100.0000
-      yasa     ST        10   N3%           ba_loa    0.8676        0.24     26.2240       26.4514         36.6088
-      yasa     ST        10   N3%           ba_reg    0.7182        0.64     21.4301       21.1380         52.1080
-      yasa     ST        10   N3%         cqr_ffbs    0.8976        0.22     30.1687       31.6178         37.9301
-      yasa     ST        10   N3%           cqr_qr    1.0000        0.00    100.0000      100.0000        100.0000
-      yasa     ST        10   N3% norm_entropy_reg    0.9018        0.18     30.1019       30.8666         37.5321
-      yasa     ST        10   N3%        norm_ffbs    0.9165        0.16     31.1820       30.0422         37.6792
-      yasa     ST        10   N3%    norm_reg_ffbs    0.9076        0.20     30.1826       30.7799         37.2903
-      yasa     ST        10   N3%   norm_reg_plugc    0.8959        0.28     28.5276       29.5042         37.0666
-      yasa     ST        10   N3%       scp_abs_bc    0.8594        0.26     25.7172       26.2084         37.4435
-      yasa     ST        10   N3%      scp_abs_cal    0.8906        0.26     28.7448       30.0719         38.1141
-      yasa     ST        10   N3%       scp_abs_mu    0.8947        0.20     30.4130       31.3526         38.9760
-      yasa     ST        10   N3%       scp_signed    1.0000        0.00    100.0000      100.0000        100.0000
-      yasa     ST        10  REM%           ba_loa    0.8488        0.28     18.4412       18.3200         29.8920
-      yasa     ST        10  REM%           ba_reg    0.7176        0.54     13.7785       13.4732         34.8391
-      yasa     ST        10  REM%         cqr_ffbs    0.8959        0.12     25.4901       23.9796         31.3532
-      yasa     ST        10  REM%           cqr_qr    1.0000        0.00    100.0000      100.0000        100.0000
-      yasa     ST        10  REM% norm_entropy_reg    0.8965        0.14     26.2479       23.7617         32.4706
-      yasa     ST        10  REM%        norm_ffbs    0.8965        0.20     28.9301       25.6700         35.4026
-      yasa     ST        10  REM%    norm_reg_ffbs    0.8947        0.14     25.9031       24.3038         32.0497
-      yasa     ST        10  REM%   norm_reg_plugc    0.8971        0.18     23.9414       24.7334         33.3840
-      yasa     ST        10  REM%       scp_abs_bc    0.8435        0.38     18.0080       19.4533         30.5104
-      yasa     ST        10  REM%      scp_abs_cal    0.8894        0.20     21.7660       22.6302         31.1437
-      yasa     ST        10  REM%       scp_abs_mu    0.9012        0.12     25.8656       24.0794         31.5372
-      yasa     ST        10  REM%       scp_signed    1.0000        0.00    100.0000      100.0000        100.0000
-      yasa     ST        10  REML           ba_loa    0.8488        0.32    126.9036      131.4367        245.6858
-      yasa     ST        10  REML           ba_reg    0.7241        0.68     74.7751       70.6990        274.2277
-      yasa     ST        10  REML         cqr_ffbs    0.8965        0.18    139.1278      126.7544        171.1122
-      yasa     ST        10  REML           cqr_qr    1.0000        0.00         inf           inf             NaN
-      yasa     ST        10  REML norm_entropy_reg    0.8982        0.16    181.9069      178.4204        238.8596
-      yasa     ST        10  REML        norm_ffbs    0.8900        0.16    151.3240      140.9689        215.2303
-      yasa     ST        10  REML    norm_reg_ffbs    0.8941        0.12    156.5387      149.0822        215.6199
-      yasa     ST        10  REML   norm_reg_plugc    0.9029        0.18    177.8892      182.7725        251.5750
-      yasa     ST        10  REML       scp_abs_bc    0.8694        0.28    143.5481      156.7956        230.1446
-      yasa     ST        10  REML      scp_abs_cal    0.9082        0.16    184.2868      186.9191        260.2809
-      yasa     ST        10  REML       scp_abs_mu    0.8941        0.12    170.5675      163.4585        222.0167
-      yasa     ST        10  REML       scp_signed    1.0000        0.00         inf           inf             NaN
-      yasa     ST        10   SOL           ba_loa    0.8500        0.28     11.6304       10.8483         20.4971
-      yasa     ST        10   SOL           ba_reg    0.7071        0.68      8.9058        8.4734         26.0233
-      yasa     ST        10   SOL         cqr_ffbs    0.9412        0.08     20.6673       17.1820         27.3229
-      yasa     ST        10   SOL           cqr_qr    1.0000        0.00         inf           inf             NaN
-      yasa     ST        10   SOL norm_entropy_reg    0.9106        0.14     27.7248       27.0464         44.3381
-      yasa     ST        10   SOL        norm_ffbs    0.9276        0.10     20.4427       18.2200         31.9694
-      yasa     ST        10   SOL    norm_reg_ffbs    0.9218        0.10     22.6127       19.5090         36.9777
-      yasa     ST        10   SOL   norm_reg_plugc    0.8906        0.20     15.7630       13.6278         29.4093
-      yasa     ST        10   SOL       scp_abs_bc    0.8518        0.30     11.8552       11.0074         21.1387
-      yasa     ST        10   SOL      scp_abs_cal    0.8947        0.18     16.9203       13.6912         32.3850
-      yasa     ST        10   SOL       scp_abs_mu    0.9112        0.18     28.8040       27.2234         46.2131
-      yasa     ST        10   SOL       scp_signed    1.0000        0.00         inf           inf             NaN
-      yasa     ST        10   TST           ba_loa    0.8835        0.22     60.7830       56.1886        106.3726
-      yasa     ST        10   TST           ba_reg    0.7418        0.64     42.4088       38.5379        116.3328
-      yasa     ST        10   TST         cqr_ffbs    0.9241        0.14     48.5472       44.3702         64.3293
-      yasa     ST        10   TST           cqr_qr    1.0000        0.00         inf           inf             NaN
-      yasa     ST        10   TST norm_entropy_reg    0.9094        0.18     50.7536       44.7518         69.9603
-      yasa     ST        10   TST        norm_ffbs    0.9265        0.08     42.9555       42.1347         55.9106
-      yasa     ST        10   TST    norm_reg_ffbs    0.9171        0.18     45.6836       42.9011         63.0322
-      yasa     ST        10   TST   norm_reg_plugc    0.9006        0.22     36.5664       37.2164         47.4119
-      yasa     ST        10   TST       scp_abs_bc    0.8935        0.22     69.3360       66.1500        108.7384
-      yasa     ST        10   TST      scp_abs_cal    0.8918        0.20     40.1200       40.0000         54.8612
-      yasa     ST        10   TST       scp_abs_mu    0.9082        0.18     52.9388       49.1780         74.0642
-      yasa     ST        10   TST       scp_signed    1.0000        0.00         inf           inf             NaN
-      yasa     ST        10  WASO           ba_loa    0.8806        0.30     40.0474       36.9678         77.3660
-      yasa     ST        10  WASO           ba_reg    0.7459        0.64     27.8291       25.5979         76.4312
-      yasa     ST        10  WASO         cqr_ffbs    0.9000        0.18     55.3935       48.8103         77.5391
-      yasa     ST        10  WASO           cqr_qr    1.0000        0.00         inf           inf             NaN
-      yasa     ST        10  WASO norm_entropy_reg    0.8835        0.28     63.0560       59.9934         97.2128
-      yasa     ST        10  WASO        norm_ffbs    0.9018        0.20     52.6201       53.4306         73.9921
-      yasa     ST        10  WASO    norm_reg_ffbs    0.8929        0.22     54.8925       50.2728         82.5102
-      yasa     ST        10  WASO   norm_reg_plugc    0.8894        0.24     34.7090       37.7444         50.4037
-      yasa     ST        10  WASO       scp_abs_bc    0.8947        0.22     45.0092       38.3632         78.5622
-      yasa     ST        10  WASO      scp_abs_cal    0.8835        0.20     35.2265       36.0956         54.1500
-      yasa     ST        10  WASO       scp_abs_mu    0.8859        0.26     64.5742       63.8217         99.9094
-      yasa     ST        10  WASO       scp_signed    1.0000        0.00         inf           inf             NaN
-      yasa     ST        20   N1%           ba_loa    0.8642        0.30     15.3783       15.7329         22.0913
-      yasa     ST        20   N1%           ba_reg    0.8150        0.36     13.5497       13.6992         24.6367
-      yasa     ST        20   N1%         cqr_ffbs    0.8983        0.22     16.9238       17.1815         24.7234
-      yasa     ST        20   N1%           cqr_qr    0.8842        0.26     25.2541       24.8711         36.6795
-      yasa     ST        20   N1% norm_entropy_reg    0.9008        0.20     16.7604       17.0002         24.7187
-      yasa     ST        20   N1%        norm_ffbs    0.9083        0.18     16.0350       16.0915         22.2235
-      yasa     ST        20   N1%    norm_reg_ffbs    0.9017        0.20     16.5174       16.8715         23.9967
-      yasa     ST        20   N1%   norm_reg_plugc    0.9125        0.16     16.3064       16.6736         21.6350
-      yasa     ST        20   N1%       scp_abs_bc    0.8708        0.28     15.6293       15.6247         21.2365
-      yasa     ST        20   N1%      scp_abs_cal    0.9033        0.16     16.8687       17.5005         22.5694
-      yasa     ST        20   N1%       scp_abs_mu    0.8925        0.28     17.3336       17.7887         25.6762
-      yasa     ST        20   N1%       scp_signed    0.8750        0.30     16.5377       17.6018         22.2379
-      yasa     ST        20   N2%           ba_loa    0.8767        0.22     33.7728       32.9404         43.1801
-      yasa     ST        20   N2%           ba_reg    0.8250        0.36     30.6200       29.8468         45.8795
-      yasa     ST        20   N2%         cqr_ffbs    0.9050        0.18     36.4897       36.4339         43.1496
-      yasa     ST        20   N2%           cqr_qr    0.8975        0.16     61.4649       58.4797         79.3598
-      yasa     ST        20   N2% norm_entropy_reg    0.9075        0.18     36.4947       37.3171         43.1700
-      yasa     ST        20   N2%        norm_ffbs    0.9150        0.12     41.3019       40.0063         47.0654
-      yasa     ST        20   N2%    norm_reg_ffbs    0.9058        0.18     37.5713       37.1719         44.1025
-      yasa     ST        20   N2%   norm_reg_plugc    0.9075        0.16     41.4616       41.7093         49.0988
-      yasa     ST        20   N2%       scp_abs_bc    0.8525        0.34     32.3055       32.1588         44.3126
-      yasa     ST        20   N2%      scp_abs_cal    0.8908        0.22     37.8681       37.0215         47.5282
-      yasa     ST        20   N2%       scp_abs_mu    0.8967        0.18     35.7059       35.3187         43.0375
-      yasa     ST        20   N2%       scp_signed    0.8775        0.22     35.5779       35.4347         45.8458
-      yasa     ST        20   N3%           ba_loa    0.8683        0.28     25.3716       24.9909         34.0116
-      yasa     ST        20   N3%           ba_reg    0.7783        0.60     23.3340       22.8680         41.6056
-      yasa     ST        20   N3%         cqr_ffbs    0.9108        0.12     27.6929       28.0598         32.1364
-      yasa     ST        20   N3%           cqr_qr    0.8983        0.18     43.4080       40.7050         57.7009
-      yasa     ST        20   N3% norm_entropy_reg    0.9083        0.18     27.9111       28.3876         32.2648
-      yasa     ST        20   N3%        norm_ffbs    0.9242        0.08     28.2429       28.5828         31.5847
-      yasa     ST        20   N3%    norm_reg_ffbs    0.9117        0.08     27.5555       27.4185         31.4046
-      yasa     ST        20   N3%   norm_reg_plugc    0.9008        0.20     26.7867       27.3533         32.4964
-      yasa     ST        20   N3%       scp_abs_bc    0.8683        0.28     25.6201       25.6972         34.0558
-      yasa     ST        20   N3%      scp_abs_cal    0.8908        0.20     26.7544       27.5353         33.9864
-      yasa     ST        20   N3%       scp_abs_mu    0.9067        0.12     28.0274       27.5558         33.2728
-      yasa     ST        20   N3%       scp_signed    0.8817        0.22     26.5298       27.7786         35.3512
-      yasa     ST        20  REM%           ba_loa    0.8950        0.08     18.9074       19.7214         27.2090
-      yasa     ST        20  REM%           ba_reg    0.8800        0.16     15.5573       15.6385         26.3002
-      yasa     ST        20  REM%         cqr_ffbs    0.9158        0.14     25.3876       25.3619         29.0675
-      yasa     ST        20  REM%           cqr_qr    0.9108        0.12     38.3262       37.7505         48.4785
-      yasa     ST        20  REM% norm_entropy_reg    0.9183        0.08     26.0754       24.8477         30.4694
-      yasa     ST        20  REM%        norm_ffbs    0.9367        0.12     30.1319       30.1953         33.8540
-      yasa     ST        20  REM%    norm_reg_ffbs    0.9242        0.14     26.2432       26.1881         30.0665
-      yasa     ST        20  REM%   norm_reg_plugc    0.9283        0.16     24.2251       25.7495         30.8007
-      yasa     ST        20  REM%       scp_abs_bc    0.8933        0.16     19.3558       20.7807         27.7795
-      yasa     ST        20  REM%      scp_abs_cal    0.9092        0.16     21.6084       22.6743         28.3756
-      yasa     ST        20  REM%       scp_abs_mu    0.9117        0.10     25.0348       24.4340         28.8408
-      yasa     ST        20  REM%       scp_signed    0.9158        0.12     21.7587       21.9377         27.9317
-      yasa     ST        20  REML           ba_loa    0.8625        0.26    132.8398      136.9648        221.5394
-      yasa     ST        20  REML           ba_reg    0.8200        0.44     88.6210       88.1560        201.9275
-      yasa     ST        20  REML         cqr_ffbs    0.9300        0.08    128.9010      126.3661        147.8985
-      yasa     ST        20  REML           cqr_qr    0.9183        0.08    392.4109      226.3222        625.1585
-      yasa     ST        20  REML norm_entropy_reg    0.9275        0.14    179.4559      184.2755        224.4035
-      yasa     ST        20  REML        norm_ffbs    0.9233        0.16    169.7185      167.3065        222.5773
-      yasa     ST        20  REML    norm_reg_ffbs    0.9200        0.16    166.7235      173.2206        215.2572
-      yasa     ST        20  REML   norm_reg_plugc    0.9200        0.08    174.0953      177.4181        224.5127
-      yasa     ST        20  REML       scp_abs_bc    0.9050        0.12    158.4818      160.2208        204.1342
-      yasa     ST        20  REML      scp_abs_cal    0.9125        0.10    177.7125      184.0104        224.0125
-      yasa     ST        20  REML       scp_abs_mu    0.9192        0.14    163.3469      168.9643        205.9794
-      yasa     ST        20  REML       scp_signed    0.9067        0.14    157.4704      162.0312        213.5454
-      yasa     ST        20   SOL           ba_loa    0.8908        0.16     11.9540       12.5060         19.0734
-      yasa     ST        20   SOL           ba_reg    0.8108        0.38      9.7672        9.7596         19.1318
-      yasa     ST        20   SOL         cqr_ffbs    0.9375        0.08     16.7919       16.3896         26.4940
-      yasa     ST        20   SOL           cqr_qr    0.9075        0.18     22.7398       21.3362         33.7525
-      yasa     ST        20   SOL norm_entropy_reg    0.8967        0.20     23.0246       21.8887         45.0312
-      yasa     ST        20   SOL        norm_ffbs    0.9092        0.12     17.5886       17.4132         33.8181
-      yasa     ST        20   SOL    norm_reg_ffbs    0.8983        0.14     19.5390       19.6012         38.6288
-      yasa     ST        20   SOL   norm_reg_plugc    0.8917        0.20     13.1307       13.6960         27.9701
-      yasa     ST        20   SOL       scp_abs_bc    0.8817        0.18     11.8177       11.0479         19.8369
-      yasa     ST        20   SOL      scp_abs_cal    0.8992        0.22     13.6754       13.6979         29.6671
-      yasa     ST        20   SOL       scp_abs_mu    0.8975        0.18     23.5653       23.0237         45.5968
-      yasa     ST        20   SOL       scp_signed    0.8917        0.24     12.5742       12.5104         18.3908
-      yasa     ST        20   TST           ba_loa    0.9050        0.18     60.1591       58.6985         96.4934
-      yasa     ST        20   TST           ba_reg    0.8400        0.40     49.4771       48.4025         93.3982
-      yasa     ST        20   TST         cqr_ffbs    0.9017        0.14     37.2675       37.1104         55.1080
-      yasa     ST        20   TST           cqr_qr    0.9375        0.08     87.4174       77.1267        104.4300
-      yasa     ST        20   TST norm_entropy_reg    0.8867        0.22     37.9199       38.5225         58.0601
-      yasa     ST        20   TST        norm_ffbs    0.9025        0.12     35.8486       35.4646         51.2299
-      yasa     ST        20   TST    norm_reg_ffbs    0.8967        0.14     36.8895       37.0011         55.5395
-      yasa     ST        20   TST   norm_reg_plugc    0.8917        0.18     32.3258       32.3494         41.1402
-      yasa     ST        20   TST       scp_abs_bc    0.9033        0.18     60.8300       60.1000         97.4525
-      yasa     ST        20   TST      scp_abs_cal    0.8992        0.16     35.2600       36.0000         46.2600
-      yasa     ST        20   TST       scp_abs_mu    0.8917        0.16     39.5831       40.8375         60.8822
-      yasa     ST        20   TST       scp_signed    0.8858        0.22     65.5200       64.0000         88.0533
-      yasa     ST        20  WASO           ba_loa    0.9183        0.20     40.8128       40.0437         71.6108
-      yasa     ST        20  WASO           ba_reg    0.8000        0.54     31.6030       31.8206         58.7457
-      yasa     ST        20  WASO         cqr_ffbs    0.8975        0.16     50.1299       50.9141         78.7341
-      yasa     ST        20  WASO           cqr_qr    0.9092        0.16     66.5147       57.8327         91.6388
-      yasa     ST        20  WASO norm_entropy_reg    0.8900        0.18     55.7450       52.1875         98.8252
-      yasa     ST        20  WASO        norm_ffbs    0.8967        0.16     50.5631       50.2078         76.7261
-      yasa     ST        20  WASO    norm_reg_ffbs    0.8950        0.16     51.9103       51.6218         84.9923
-      yasa     ST        20  WASO   norm_reg_plugc    0.8992        0.24     33.3641       35.9045         45.9771
-      yasa     ST        20  WASO       scp_abs_bc    0.8967        0.20     34.3563       32.4750         68.7113
-      yasa     ST        20  WASO      scp_abs_cal    0.8942        0.18     33.5608       33.8438         48.2692
-      yasa     ST        20  WASO       scp_abs_mu    0.8883        0.18     57.4473       54.6109        100.5237
-      yasa     ST        20  WASO       scp_signed    0.8658        0.26     34.7483       35.5833         60.4900
-      yasa     ST        30   N1%           ba_loa    0.8871        0.24     15.3337       15.5436         20.1555
-      yasa     ST        30   N1%           ba_reg    0.8300        0.38     13.8816       13.9790         21.4376
-      yasa     ST        30   N1%         cqr_ffbs    0.9029        0.16     16.9812       16.9639         23.7177
-      yasa     ST        30   N1%           cqr_qr    0.9600        0.04     25.7075       25.0014         28.7833
-      yasa     ST        30   N1% norm_entropy_reg    0.9029        0.16     16.7428       16.8152         23.2171
-      yasa     ST        30   N1%        norm_ffbs    0.9029        0.20     15.6299       15.4508         22.1376
-      yasa     ST        30   N1%    norm_reg_ffbs    0.9014        0.16     16.4412       16.1769         23.1224
-      yasa     ST        30   N1%   norm_reg_plugc    0.9100        0.06     16.0524       16.0074         20.3297
-      yasa     ST        30   N1%       scp_abs_bc    0.8871        0.24     15.5122       15.4691         19.7478
-      yasa     ST        30   N1%      scp_abs_cal    0.9129        0.06     16.7348       16.7812         20.2903
-      yasa     ST        30   N1%       scp_abs_mu    0.9043        0.16     17.4905       17.7212         24.3632
-      yasa     ST        30   N1%       scp_signed    0.9343        0.16     18.1948       18.5659         20.9246
-      yasa     ST        30   N2%           ba_loa    0.8800        0.26     33.1744       33.2469         42.9488
-      yasa     ST        30   N2%           ba_reg    0.8500        0.30     31.7827       31.8253         43.7337
-      yasa     ST        30   N2%         cqr_ffbs    0.8914        0.24     35.2049       34.6866         42.9896
-      yasa     ST        30   N2%           cqr_qr    0.9300        0.12     56.8217       55.0752         65.9829
-      yasa     ST        30   N2% norm_entropy_reg    0.8886        0.24     35.0287       35.2633         42.9832
-      yasa     ST        30   N2%        norm_ffbs    0.9043        0.18     38.1475       38.2017         44.6766
-      yasa     ST        30   N2%    norm_reg_ffbs    0.8900        0.24     36.0682       36.3560         43.2425
-      yasa     ST        30   N2%   norm_reg_plugc    0.8886        0.22     38.4592       39.1382         47.3822
-      yasa     ST        30   N2%       scp_abs_bc    0.8714        0.26     32.9219       32.5618         43.8617
-      yasa     ST        30   N2%      scp_abs_cal    0.8900        0.24     36.0304       36.1539         46.0669
-      yasa     ST        30   N2%       scp_abs_mu    0.8914        0.22     34.4011       34.2163         43.0413
-      yasa     ST        30   N2%       scp_signed    0.9029        0.20     39.0484       39.4141         46.1334
-      yasa     ST        30   N3%           ba_loa    0.8786        0.22     25.2630       25.3918         32.7099
-      yasa     ST        30   N3%           ba_reg    0.8257        0.44     24.5920       24.1195         34.2262
-      yasa     ST        30   N3%         cqr_ffbs    0.9129        0.14     26.7738       26.9417         30.0324
-      yasa     ST        30   N3%           cqr_qr    0.9314        0.12     46.0590       44.4582         53.0933
-      yasa     ST        30   N3% norm_entropy_reg    0.9057        0.08     27.2411       27.3477         30.1072
-      yasa     ST        30   N3%        norm_ffbs    0.9243        0.08     27.0423       27.0934         29.9496
-      yasa     ST        30   N3%    norm_reg_ffbs    0.9114        0.12     26.6204       26.5931         29.5135
-      yasa     ST        30   N3%   norm_reg_plugc    0.9029        0.12     26.3649       26.0647         30.2144
-      yasa     ST        30   N3%       scp_abs_bc    0.8900        0.18     26.2113       26.8370         32.7504
-      yasa     ST        30   N3%      scp_abs_cal    0.8971        0.16     26.5592       26.9730         31.2713
-      yasa     ST        30   N3%       scp_abs_mu    0.9071        0.14     26.9506       26.6197         31.2402
-      yasa     ST        30   N3%       scp_signed    0.9414        0.10     29.3078       29.5489         32.4149
-      yasa     ST        30  REM%           ba_loa    0.8886        0.18     18.3912       18.7585         27.7703
-      yasa     ST        30  REM%           ba_reg    0.8871        0.18     15.6663       15.1273         26.9618
-      yasa     ST        30  REM%         cqr_ffbs    0.9086        0.18     23.6438       23.9212         28.1412
-      yasa     ST        30  REM%           cqr_qr    0.8943        0.18     29.7944       28.9838         38.1294
-      yasa     ST        30  REM% norm_entropy_reg    0.9029        0.18     23.6611       23.8341         28.7822
-      yasa     ST        30  REM%        norm_ffbs    0.9200        0.14     26.1848       26.0153         30.6106
-      yasa     ST        30  REM%    norm_reg_ffbs    0.9114        0.14     24.5728       24.5999         28.9194
-      yasa     ST        30  REM%   norm_reg_plugc    0.9071        0.16     22.9185       24.1814         30.5085
-      yasa     ST        30  REM%       scp_abs_bc    0.8900        0.16     19.5235       20.6701         28.1067
-      yasa     ST        30  REM%      scp_abs_cal    0.8986        0.16     21.1624       22.2380         28.5697
-      yasa     ST        30  REM%       scp_abs_mu    0.9043        0.22     23.3291       23.7348         27.7051
-      yasa     ST        30  REM%       scp_signed    0.9400        0.08     23.9696       25.4618         27.5616
-      yasa     ST        30  REML           ba_loa    0.8471        0.34    129.7918      131.1946        230.5332
-      yasa     ST        30  REML           ba_reg    0.8343        0.42     90.4408       93.1820        195.6210
-      yasa     ST        30  REML         cqr_ffbs    0.9029        0.26    121.2479      122.8723        145.0022
-      yasa     ST        30  REML           cqr_qr    0.9357        0.10    240.2244      210.1779        287.1211
-      yasa     ST        30  REML norm_entropy_reg    0.8886        0.20    155.6843      157.0384        215.7712
-      yasa     ST        30  REML        norm_ffbs    0.8829        0.24    126.4664      117.8852        195.7493
-      yasa     ST        30  REML    norm_reg_ffbs    0.8886        0.24    137.7523      135.2484        198.3738
-      yasa     ST        30  REML   norm_reg_plugc    0.8914        0.24    164.9290      165.7430        227.6687
-      yasa     ST        30  REML       scp_abs_bc    0.8929        0.22    161.1526      165.6810        209.9555
-      yasa     ST        30  REML      scp_abs_cal    0.8914        0.24    175.5336      182.2321        229.6907
-      yasa     ST        30  REML       scp_abs_mu    0.8829        0.22    151.5735      154.2940        202.5388
-      yasa     ST        30  REML       scp_signed    0.9071        0.18    174.8650      192.4464        219.7936
-      yasa     ST        30   SOL           ba_loa    0.8900        0.24     11.9365       12.0064         19.4356
-      yasa     ST        30   SOL           ba_reg    0.8257        0.46     10.4067       10.2736         18.5132
-      yasa     ST        30   SOL         cqr_ffbs    0.9500        0.08     16.1598       16.1089         25.0983
-      yasa     ST        30   SOL           cqr_qr    0.9029        0.28     19.7656       17.6604         29.2884
-      yasa     ST        30   SOL norm_entropy_reg    0.8886        0.22     20.9576       20.1659         44.5773
-      yasa     ST        30   SOL        norm_ffbs    0.9057        0.14     17.1454       16.9887         32.8203
-      yasa     ST        30   SOL    norm_reg_ffbs    0.8943        0.16     19.2740       19.5605         38.0140
-      yasa     ST        30   SOL   norm_reg_plugc    0.8986        0.28     12.7866       13.7815         27.9703
-      yasa     ST        30   SOL       scp_abs_bc    0.8871        0.28     10.9808       11.3202         19.7522
-      yasa     ST        30   SOL      scp_abs_cal    0.8900        0.24     12.4679       13.3214         29.8536
-      yasa     ST        30   SOL       scp_abs_mu    0.8886        0.24     22.0094       21.4468         44.8350
-      yasa     ST        30   SOL       scp_signed    0.9257        0.24     14.1507       14.6607         17.8650
-      yasa     ST        30   TST           ba_loa    0.9200        0.18     60.9692       65.2995         91.2299
-      yasa     ST        30   TST           ba_reg    0.8943        0.22     50.6651       50.3324         79.9884
-      yasa     ST        30   TST         cqr_ffbs    0.9157        0.14     37.1095       36.9509         52.5866
-      yasa     ST        30   TST           cqr_qr    0.9414        0.10     76.5093       67.0725         84.7624
-      yasa     ST        30   TST norm_entropy_reg    0.9200        0.08     37.7472       37.5034         54.5721
-      yasa     ST        30   TST        norm_ffbs    0.9143        0.16     36.3493       36.6060         49.6294
-      yasa     ST        30   TST    norm_reg_ffbs    0.9171        0.08     36.8432       37.2339         53.0125
-      yasa     ST        30   TST   norm_reg_plugc    0.9086        0.18     33.2451       34.1528         40.9028
-      yasa     ST        30   TST       scp_abs_bc    0.9200        0.18     60.7347       65.1167         92.6442
-      yasa     ST        30   TST      scp_abs_cal    0.9100        0.20     35.3200       36.0000         44.2771
-      yasa     ST        30   TST       scp_abs_mu    0.9029        0.22     38.5227       37.9970         57.8605
-      yasa     ST        30   TST       scp_signed    0.9386        0.12     75.9500       79.5000         88.8500
-      yasa     ST        30  WASO           ba_loa    0.9329        0.10     41.6055       42.4640         67.1222
-      yasa     ST        30  WASO           ba_reg    0.8229        0.40     32.5420       32.0722         50.5668
-      yasa     ST        30  WASO         cqr_ffbs    0.9200        0.10     51.6140       53.4384         75.8504
-      yasa     ST        30  WASO           cqr_qr    0.9371        0.08     59.4616       56.6003         74.9011
-      yasa     ST        30  WASO norm_entropy_reg    0.9014        0.18     55.8513       53.6081         92.7752
-      yasa     ST        30  WASO        norm_ffbs    0.9186        0.10     53.4666       53.4795         75.1666
-      yasa     ST        30  WASO    norm_reg_ffbs    0.9129        0.08     53.2654       54.4048         79.1990
-      yasa     ST        30  WASO   norm_reg_plugc    0.9129        0.14     34.7394       36.0797         44.9871
-      yasa     ST        30  WASO       scp_abs_bc    0.9043        0.18     31.0703       31.3429         60.9113
-      yasa     ST        30  WASO      scp_abs_cal    0.8986        0.24     33.8350       34.0000         46.8493
-      yasa     ST        30  WASO       scp_abs_mu    0.9057        0.16     58.2335       56.1014         95.1518
-      yasa     ST        30  WASO       scp_signed    0.9300        0.16     38.5093       38.2857         54.7236
-lgbm_sc_s0    HMC        10   N1%           ba_loa    0.9172        0.08     32.6499       30.7627         45.7964
-lgbm_sc_s0    HMC        10   N1%           ba_reg    0.7765        0.44     19.2740       18.3332         47.3324
-lgbm_sc_s0    HMC        10   N1%         cqr_ffbs    0.9135        0.10     29.4937       26.3798         43.7937
-lgbm_sc_s0    HMC        10   N1%           cqr_qr    1.0000        0.00    100.0000      100.0000        100.0000
-lgbm_sc_s0    HMC        10   N1% norm_entropy_reg    0.9122        0.10     28.6606       25.6072         42.3200
-lgbm_sc_s0    HMC        10   N1%        norm_ffbs    0.9201        0.10     33.6478       26.6599         47.2320
-lgbm_sc_s0    HMC        10   N1%    norm_reg_ffbs    0.9159        0.10     31.4057       26.9198         45.4025
-lgbm_sc_s0    HMC        10   N1%   norm_reg_plugc    0.9228        0.06     33.2907       27.8350         47.2768
-lgbm_sc_s0    HMC        10   N1%       scp_abs_bc    0.9044        0.12     32.7297       29.6820         47.4350
-lgbm_sc_s0    HMC        10   N1%      scp_abs_cal    0.9190        0.10     31.2069       28.0354         45.3227
-lgbm_sc_s0    HMC        10   N1%       scp_abs_mu    0.9101        0.12     29.1841       26.6443         43.7241
-lgbm_sc_s0    HMC        10   N1%       scp_signed    1.0000        0.00    100.0000      100.0000        100.0000
-lgbm_sc_s0    HMC        10   N2%           ba_loa    0.8929        0.18     45.0873       46.9462         60.1090
-lgbm_sc_s0    HMC        10   N2%           ba_reg    0.7638        0.54     24.8856       25.0393         51.9033
-lgbm_sc_s0    HMC        10   N2%         cqr_ffbs    0.9370        0.02     46.1686       43.6419         53.7339
-lgbm_sc_s0    HMC        10   N2%           cqr_qr    1.0000        0.00    100.0000      100.0000        100.0000
-lgbm_sc_s0    HMC        10   N2% norm_entropy_reg    0.9367        0.02     44.5651       41.5445         51.6340
-lgbm_sc_s0    HMC        10   N2%        norm_ffbs    0.9390        0.02     51.2624       46.2708         58.7535
-lgbm_sc_s0    HMC        10   N2%    norm_reg_ffbs    0.9399        0.02     47.7391       44.0764         55.2051
-lgbm_sc_s0    HMC        10   N2%   norm_reg_plugc    0.9121        0.14     47.4351       45.6292         56.4527
-lgbm_sc_s0    HMC        10   N2%       scp_abs_bc    0.8777        0.24     44.0900       46.2905         61.4288
-lgbm_sc_s0    HMC        10   N2%      scp_abs_cal    0.9156        0.14     47.8037       47.9107         56.5170
-lgbm_sc_s0    HMC        10   N2%       scp_abs_mu    0.9356        0.00     45.4323       43.3870         53.2020
-lgbm_sc_s0    HMC        10   N2%       scp_signed    1.0000        0.00    100.0000      100.0000        100.0000
-lgbm_sc_s0    HMC        10   N3%           ba_loa    0.8972        0.10     36.4128       35.2914         49.7037
-lgbm_sc_s0    HMC        10   N3%           ba_reg    0.7548        0.56     26.0279       25.9205         60.1898
-lgbm_sc_s0    HMC        10   N3%         cqr_ffbs    0.9166        0.08     48.7673       44.4372         66.2543
-lgbm_sc_s0    HMC        10   N3%           cqr_qr    1.0000        0.00    100.0000      100.0000        100.0000
-lgbm_sc_s0    HMC        10   N3% norm_entropy_reg    0.9187        0.10     49.0584       45.7474         65.7075
-lgbm_sc_s0    HMC        10   N3%        norm_ffbs    0.9203        0.08     48.9067       48.0038         63.4807
-lgbm_sc_s0    HMC        10   N3%    norm_reg_ffbs    0.9160        0.10     47.4041       44.0631         64.3674
-lgbm_sc_s0    HMC        10   N3%   norm_reg_plugc    0.9218        0.06     45.1959       42.9630         59.5344
-lgbm_sc_s0    HMC        10   N3%       scp_abs_bc    0.8841        0.16     36.1359       35.4807         51.4023
-lgbm_sc_s0    HMC        10   N3%      scp_abs_cal    0.9157        0.12     45.6706       45.7889         62.9854
-lgbm_sc_s0    HMC        10   N3%       scp_abs_mu    0.9180        0.08     49.6256       46.7918         67.8233
-lgbm_sc_s0    HMC        10   N3%       scp_signed    1.0000        0.00    100.0000      100.0000        100.0000
-lgbm_sc_s0    HMC        10  REM%           ba_loa    0.9123        0.04     21.3897       20.8702         27.9546
-lgbm_sc_s0    HMC        10  REM%           ba_reg    0.7579        0.60     13.2716       13.2615         29.1824
-lgbm_sc_s0    HMC        10  REM%         cqr_ffbs    0.9350        0.06     27.5424       25.6396         31.4266
-lgbm_sc_s0    HMC        10  REM%           cqr_qr    1.0000        0.00    100.0000      100.0000        100.0000
-lgbm_sc_s0    HMC        10  REM% norm_entropy_reg    0.9333        0.08     27.2466       25.6032         31.2974
-lgbm_sc_s0    HMC        10  REM%        norm_ffbs    0.9420        0.08     28.1999       26.4331         31.4830
-lgbm_sc_s0    HMC        10  REM%    norm_reg_ffbs    0.9367        0.06     27.4660       25.6676         31.2543
-lgbm_sc_s0    HMC        10  REM%   norm_reg_plugc    0.9306        0.02     22.7037       21.9837         27.8520
-lgbm_sc_s0    HMC        10  REM%       scp_abs_bc    0.9070        0.04     22.0944       20.1456         28.7906
-lgbm_sc_s0    HMC        10  REM%      scp_abs_cal    0.9271        0.04     22.7463       21.8532         28.1201
-lgbm_sc_s0    HMC        10  REM%       scp_abs_mu    0.9271        0.10     28.1374       26.8143         33.2038
-lgbm_sc_s0    HMC        10  REM%       scp_signed    1.0000        0.00    100.0000      100.0000        100.0000
-lgbm_sc_s0    HMC        10  REML           ba_loa    0.8689        0.24    189.1187      181.7946        348.1012
-lgbm_sc_s0    HMC        10  REML           ba_reg    0.7510        0.50    134.8461      128.5911        466.9945
-lgbm_sc_s0    HMC        10  REML         cqr_ffbs    0.9073        0.10    235.4544      230.0954        409.2685
-lgbm_sc_s0    HMC        10  REML           cqr_qr    1.0000        0.00         inf           inf             NaN
-lgbm_sc_s0    HMC        10  REML norm_entropy_reg    0.8922        0.16    244.3148      262.2041        418.4995
-lgbm_sc_s0    HMC        10  REML        norm_ffbs    0.9156        0.10    275.4171      252.3377        417.0097
-lgbm_sc_s0    HMC        10  REML    norm_reg_ffbs    0.9046        0.10    250.5982      247.5253        415.0309
-lgbm_sc_s0    HMC        10  REML   norm_reg_plugc    0.9088        0.12    255.3215      245.2945        401.9260
-lgbm_sc_s0    HMC        10  REML       scp_abs_bc    0.8826        0.20    201.9137      190.7625        347.2643
-lgbm_sc_s0    HMC        10  REML      scp_abs_cal    0.9042        0.12    260.0212      247.1000        419.7989
-lgbm_sc_s0    HMC        10  REML       scp_abs_mu    0.8931        0.14    253.1410      267.0395        436.3903
-lgbm_sc_s0    HMC        10  REML       scp_signed    1.0000        0.00         inf           inf             NaN
-lgbm_sc_s0    HMC        10   SOL           ba_loa    0.8891        0.14     26.9612       21.0398         65.0930
-lgbm_sc_s0    HMC        10   SOL           ba_reg    0.7640        0.50     19.9897       17.3983         76.5238
-lgbm_sc_s0    HMC        10   SOL         cqr_ffbs    0.8959        0.10     37.9474       23.8451         83.5423
-lgbm_sc_s0    HMC        10   SOL           cqr_qr    1.0000        0.00         inf           inf             NaN
-lgbm_sc_s0    HMC        10   SOL norm_entropy_reg    0.8925        0.14     42.6821       33.2521         93.7771
-lgbm_sc_s0    HMC        10   SOL        norm_ffbs    0.8993        0.14     35.4410       23.1864         80.9278
-lgbm_sc_s0    HMC        10   SOL    norm_reg_ffbs    0.8925        0.12     36.3878       25.8557         85.7032
-lgbm_sc_s0    HMC        10   SOL   norm_reg_plugc    0.9140        0.12     31.9145       24.3930         64.1754
-lgbm_sc_s0    HMC        10   SOL       scp_abs_bc    0.9033        0.08     32.2022       24.7720         67.1228
-lgbm_sc_s0    HMC        10   SOL      scp_abs_cal    0.9099        0.12     34.1182       25.8050         67.8515
-lgbm_sc_s0    HMC        10   SOL       scp_abs_mu    0.8913        0.12     42.8297       33.4815         94.3321
-lgbm_sc_s0    HMC        10   SOL       scp_signed    1.0000        0.00         inf           inf             NaN
-lgbm_sc_s0    HMC        10   TST           ba_loa    0.9010        0.12    182.6614      168.2521        265.9698
-lgbm_sc_s0    HMC        10   TST           ba_reg    0.7857        0.48    136.0579      128.8743        288.7432
-lgbm_sc_s0    HMC        10   TST         cqr_ffbs    0.9196        0.12    177.7327      179.8511        236.1823
-lgbm_sc_s0    HMC        10   TST           cqr_qr    1.0000        0.00         inf           inf             NaN
-lgbm_sc_s0    HMC        10   TST norm_entropy_reg    0.9203        0.10    179.1092      174.0572        239.4345
-lgbm_sc_s0    HMC        10   TST        norm_ffbs    0.9250        0.12    153.6959      154.8442        204.0360
-lgbm_sc_s0    HMC        10   TST    norm_reg_ffbs    0.9230        0.10    166.8569      164.9517        223.1242
-lgbm_sc_s0    HMC        10   TST   norm_reg_plugc    0.9156        0.16    177.0598      179.6895        244.5305
-lgbm_sc_s0    HMC        10   TST       scp_abs_bc    0.9034        0.12    195.0960      175.7000        277.7959
-lgbm_sc_s0    HMC        10   TST      scp_abs_cal    0.9125        0.18    199.1800      212.0000        275.3843
-lgbm_sc_s0    HMC        10   TST       scp_abs_mu    0.9182        0.08    185.6689      184.2420        250.0650
-lgbm_sc_s0    HMC        10   TST       scp_signed    1.0000        0.00         inf           inf             NaN
-lgbm_sc_s0    HMC        10  WASO           ba_loa    0.9048        0.06    120.7393      119.1537        189.4097
-lgbm_sc_s0    HMC        10  WASO           ba_reg    0.8119        0.42     97.1685       94.4754        215.3813
-lgbm_sc_s0    HMC        10  WASO         cqr_ffbs    0.9155        0.16    128.5919      143.0547        172.3772
-lgbm_sc_s0    HMC        10  WASO           cqr_qr    1.0000        0.00         inf           inf             NaN
-lgbm_sc_s0    HMC        10  WASO norm_entropy_reg    0.9184        0.14    129.4990      142.1073        174.9945
-lgbm_sc_s0    HMC        10  WASO        norm_ffbs    0.9230        0.12    123.4725      126.6145        162.3374
-lgbm_sc_s0    HMC        10  WASO    norm_reg_ffbs    0.9201        0.16    126.9179      135.5610        170.2219
-lgbm_sc_s0    HMC        10  WASO   norm_reg_plugc    0.9115        0.14    126.5160      119.3656        176.6694
-lgbm_sc_s0    HMC        10  WASO       scp_abs_bc    0.9023        0.10    127.2197      114.9670        196.8441
-lgbm_sc_s0    HMC        10  WASO      scp_abs_cal    0.9037        0.16    132.0280      131.8067        191.2436
-lgbm_sc_s0    HMC        10  WASO       scp_abs_mu    0.9133        0.14    131.6744      142.1446        180.3701
-lgbm_sc_s0    HMC        10  WASO       scp_signed    1.0000        0.00         inf           inf             NaN
-lgbm_sc_s0    HMC        20   N1%           ba_loa    0.9165        0.04     30.4571       28.9947         44.1464
-lgbm_sc_s0    HMC        20   N1%           ba_reg    0.8473        0.30     20.7368       20.0442         39.9101
-lgbm_sc_s0    HMC        20   N1%         cqr_ffbs    0.9089        0.06     25.2191       23.8693         40.5556
-lgbm_sc_s0    HMC        20   N1%           cqr_qr    0.9150        0.10     37.1532       36.0992         51.2824
-lgbm_sc_s0    HMC        20   N1% norm_entropy_reg    0.9085        0.04     24.7270       23.6872         39.4368
-lgbm_sc_s0    HMC        20   N1%        norm_ffbs    0.9163        0.04     26.5818       24.7357         41.2150
-lgbm_sc_s0    HMC        20   N1%    norm_reg_ffbs    0.9111        0.04     25.5891       24.4551         40.7735
-lgbm_sc_s0    HMC        20   N1%   norm_reg_plugc    0.9118        0.08     26.8322       25.0746         43.0076
-lgbm_sc_s0    HMC        20   N1%       scp_abs_bc    0.9084        0.08     30.0021       28.1808         44.8269
-lgbm_sc_s0    HMC        20   N1%      scp_abs_cal    0.9078        0.06     26.0620       24.1731         42.5417
-lgbm_sc_s0    HMC        20   N1%       scp_abs_mu    0.9067        0.04     25.0970       23.1550         40.6204
-lgbm_sc_s0    HMC        20   N1%       scp_signed    0.9189        0.04     35.3291       28.0176         48.6501
-lgbm_sc_s0    HMC        20   N2%           ba_loa    0.9070        0.02     41.7391       41.2950         54.3555
-lgbm_sc_s0    HMC        20   N2%           ba_reg    0.8510        0.24     26.4347       26.2537         41.1392
-lgbm_sc_s0    HMC        20   N2%         cqr_ffbs    0.9157        0.02     38.5031       36.8235         48.5303
-lgbm_sc_s0    HMC        20   N2%           cqr_qr    0.9325        0.08     55.1585       51.3633         65.1256
-lgbm_sc_s0    HMC        20   N2% norm_entropy_reg    0.9121        0.02     37.6283       36.3507         47.2484
-lgbm_sc_s0    HMC        20   N2%        norm_ffbs    0.9208        0.02     40.9942       39.5082         50.6599
-lgbm_sc_s0    HMC        20   N2%    norm_reg_ffbs    0.9169        0.02     39.0984       37.6894         49.0260
-lgbm_sc_s0    HMC        20   N2%   norm_reg_plugc    0.9264        0.00     44.4081       43.5738         51.9099
-lgbm_sc_s0    HMC        20   N2%       scp_abs_bc    0.9043        0.06     42.6144       42.8441         56.0555
-lgbm_sc_s0    HMC        20   N2%      scp_abs_cal    0.9234        0.06     43.7848       42.9849         51.4957
-lgbm_sc_s0    HMC        20   N2%       scp_abs_mu    0.9140        0.02     38.1969       37.0081         48.3048
-lgbm_sc_s0    HMC        20   N2%       scp_signed    0.9089        0.08     46.4510       45.2086         58.5007
-lgbm_sc_s0    HMC        20   N3%           ba_loa    0.8988        0.04     34.8506       35.2911         47.9208
-lgbm_sc_s0    HMC        20   N3%           ba_reg    0.8221        0.32     27.2417       27.6719         50.3957
-lgbm_sc_s0    HMC        20   N3%         cqr_ffbs    0.9055        0.14     41.5072       41.2071         60.8823
-lgbm_sc_s0    HMC        20   N3%           cqr_qr    0.9078        0.12     54.1109       51.7153         71.2455
-lgbm_sc_s0    HMC        20   N3% norm_entropy_reg    0.9081        0.12     41.6081       41.3291         60.6605
-lgbm_sc_s0    HMC        20   N3%        norm_ffbs    0.9151        0.06     43.1756       41.8050         58.2530
-lgbm_sc_s0    HMC        20   N3%    norm_reg_ffbs    0.9090        0.12     41.1894       40.9064         59.5242
-lgbm_sc_s0    HMC        20   N3%   norm_reg_plugc    0.9092        0.08     39.8314       39.8812         56.3875
-lgbm_sc_s0    HMC        20   N3%       scp_abs_bc    0.8971        0.12     35.4609       35.6969         48.9692
-lgbm_sc_s0    HMC        20   N3%      scp_abs_cal    0.9011        0.14     39.4252       39.7153         59.0659
-lgbm_sc_s0    HMC        20   N3%       scp_abs_mu    0.9047        0.16     41.6770       40.4531         62.4444
-lgbm_sc_s0    HMC        20   N3%       scp_signed    0.9113        0.06     37.9480       39.4623         49.5997
-lgbm_sc_s0    HMC        20  REM%           ba_loa    0.9116        0.06     20.2248       19.9025         26.5444
-lgbm_sc_s0    HMC        20  REM%           ba_reg    0.8583        0.18     15.1225       14.6675         24.2764
-lgbm_sc_s0    HMC        20  REM%         cqr_ffbs    0.9305        0.04     24.4914       23.7181         28.3467
-lgbm_sc_s0    HMC        20  REM%           cqr_qr    0.9180        0.10     32.2963       31.9036         40.0270
-lgbm_sc_s0    HMC        20  REM% norm_entropy_reg    0.9249        0.04     24.2058       23.5512         28.2050
-lgbm_sc_s0    HMC        20  REM%        norm_ffbs    0.9392        0.04     24.6420       23.7462         28.0150
-lgbm_sc_s0    HMC        20  REM%    norm_reg_ffbs    0.9331        0.04     24.2555       23.6249         28.1013
-lgbm_sc_s0    HMC        20  REM%   norm_reg_plugc    0.9165        0.08     19.0317       19.9654         24.3744
-lgbm_sc_s0    HMC        20  REM%       scp_abs_bc    0.9024        0.06     19.5741       18.8886         26.5135
-lgbm_sc_s0    HMC        20  REM%      scp_abs_cal    0.9171        0.10     19.6292       20.2769         24.9138
-lgbm_sc_s0    HMC        20  REM%       scp_abs_mu    0.9188        0.04     25.2957       24.3615         30.0057
-lgbm_sc_s0    HMC        20  REM%       scp_signed    0.9173        0.06     22.5292       22.4601         28.5785
-lgbm_sc_s0    HMC        20  REML           ba_loa    0.8869        0.14    193.4062      193.3111        330.4311
-lgbm_sc_s0    HMC        20  REML           ba_reg    0.8290        0.34    162.6982      158.2259        384.7746
-lgbm_sc_s0    HMC        20  REML         cqr_ffbs    0.9033        0.12    223.8646      210.7414        412.7530
-lgbm_sc_s0    HMC        20  REML           cqr_qr    0.9162        0.12    365.8849      340.1560        508.5790
-lgbm_sc_s0    HMC        20  REML norm_entropy_reg    0.8960        0.12    241.5621      258.2247        415.4084
-lgbm_sc_s0    HMC        20  REML        norm_ffbs    0.8994        0.16    235.9892      229.0628        408.0928
-lgbm_sc_s0    HMC        20  REML    norm_reg_ffbs    0.8969        0.14    233.6420      235.8495        418.7947
-lgbm_sc_s0    HMC        20  REML   norm_reg_plugc    0.9044        0.12    245.2674      237.9011        399.9999
-lgbm_sc_s0    HMC        20  REML       scp_abs_bc    0.8929        0.14    197.5741      187.8365        329.1819
-lgbm_sc_s0    HMC        20  REML      scp_abs_cal    0.9091        0.10    258.8610      265.5096        411.6788
-lgbm_sc_s0    HMC        20  REML       scp_abs_mu    0.8975        0.12    249.8324      259.9161        433.6321
-lgbm_sc_s0    HMC        20  REML       scp_signed    0.9030        0.14    245.3267      236.8635        358.9624
-lgbm_sc_s0    HMC        20   SOL           ba_loa    0.9153        0.04     30.2486       24.1365         62.9358
-lgbm_sc_s0    HMC        20   SOL           ba_reg    0.8365        0.32     22.7438       19.9363         68.0982
-lgbm_sc_s0    HMC        20   SOL         cqr_ffbs    0.9012        0.12     28.2987       21.8890         75.3329
-lgbm_sc_s0    HMC        20   SOL           cqr_qr    0.9089        0.10     48.4037       39.1509        101.0110
-lgbm_sc_s0    HMC        20   SOL norm_entropy_reg    0.9021        0.08     34.0228       34.6703         82.9474
-lgbm_sc_s0    HMC        20   SOL        norm_ffbs    0.8954        0.14     26.5133       21.9548         75.0647
-lgbm_sc_s0    HMC        20   SOL    norm_reg_ffbs    0.8956        0.12     28.6957       24.7212         78.6458
-lgbm_sc_s0    HMC        20   SOL   norm_reg_plugc    0.9116        0.04     25.1345       20.8214         56.3193
-lgbm_sc_s0    HMC        20   SOL       scp_abs_bc    0.9084        0.04     28.3197       21.4718         63.0927
-lgbm_sc_s0    HMC        20   SOL      scp_abs_cal    0.9101        0.06     27.1163       22.2691         58.8812
-lgbm_sc_s0    HMC        20   SOL       scp_abs_mu    0.9012        0.12     34.5696       34.5127         83.7222
-lgbm_sc_s0    HMC        20   SOL       scp_signed    0.9142        0.04     42.1881       24.3397         74.7591
-lgbm_sc_s0    HMC        20   TST           ba_loa    0.9018        0.06    169.9915      160.3535        253.2089
-lgbm_sc_s0    HMC        20   TST           ba_reg    0.8226        0.36    133.2817      131.6100        253.0064
-lgbm_sc_s0    HMC        20   TST         cqr_ffbs    0.9182        0.04    141.1029      142.5126        195.1348
-lgbm_sc_s0    HMC        20   TST           cqr_qr    0.9485        0.04    337.2346      312.4201        383.6406
-lgbm_sc_s0    HMC        20   TST norm_entropy_reg    0.9173        0.06    144.5452      150.5368        200.5954
-lgbm_sc_s0    HMC        20   TST        norm_ffbs    0.9195        0.02    116.6436      115.1444        164.1107
-lgbm_sc_s0    HMC        20   TST    norm_reg_ffbs    0.9188        0.04    130.8021      130.5622        183.3792
-lgbm_sc_s0    HMC        20   TST   norm_reg_plugc    0.9157        0.04    139.4636      136.4671        200.8995
-lgbm_sc_s0    HMC        20   TST       scp_abs_bc    0.9079        0.10    185.1520      180.7750        262.8934
-lgbm_sc_s0    HMC        20   TST      scp_abs_cal    0.9150        0.06    160.4000      155.5000        229.6061
-lgbm_sc_s0    HMC        20   TST       scp_abs_mu    0.9154        0.04    152.3946      153.2290        211.4927
-lgbm_sc_s0    HMC        20   TST       scp_signed    0.9176        0.04    215.9900      201.5000        285.5152
-lgbm_sc_s0    HMC        20  WASO           ba_loa    0.8988        0.10    115.3476      112.2171        186.9485
-lgbm_sc_s0    HMC        20  WASO           ba_reg    0.8559        0.22    101.3702      102.3057        177.5888
-lgbm_sc_s0    HMC        20  WASO         cqr_ffbs    0.9151        0.06    108.6615      105.7528        150.3877
-lgbm_sc_s0    HMC        20  WASO           cqr_qr    0.9447        0.04    188.2926      182.9747        235.3370
-lgbm_sc_s0    HMC        20  WASO norm_entropy_reg    0.9145        0.02    111.0394      112.0955        153.1531
-lgbm_sc_s0    HMC        20  WASO        norm_ffbs    0.9177        0.06     98.7528       99.5764        138.0470
-lgbm_sc_s0    HMC        20  WASO    norm_reg_ffbs    0.9151        0.06    105.6044      104.0507        147.4746
-lgbm_sc_s0    HMC        20  WASO   norm_reg_plugc    0.9150        0.04    111.0188      110.4019        154.8756
-lgbm_sc_s0    HMC        20  WASO       scp_abs_bc    0.9020        0.10    118.0242      114.0132        188.9268
-lgbm_sc_s0    HMC        20  WASO      scp_abs_cal    0.9144        0.04    119.1059      118.8511        168.5486
-lgbm_sc_s0    HMC        20  WASO       scp_abs_mu    0.9145        0.04    115.6150      115.7187        159.2187
-lgbm_sc_s0    HMC        20  WASO       scp_signed    0.9144        0.04    129.9124      126.5916        193.2971
-lgbm_sc_s0    HMC        30   N1%           ba_loa    0.9208        0.02     29.9293       29.4191         43.0041
-lgbm_sc_s0    HMC        30   N1%           ba_reg    0.8754        0.16     21.4351       21.4214         38.3181
-lgbm_sc_s0    HMC        30   N1%         cqr_ffbs    0.9056        0.04     23.7553       22.8444         39.6772
-lgbm_sc_s0    HMC        30   N1%           cqr_qr    0.9246        0.08     35.4575       32.6811         45.0018
-lgbm_sc_s0    HMC        30   N1% norm_entropy_reg    0.9078        0.04     23.4058       22.8447         38.4827
-lgbm_sc_s0    HMC        30   N1%        norm_ffbs    0.9122        0.06     24.4977       24.0237         39.8681
-lgbm_sc_s0    HMC        30   N1%    norm_reg_ffbs    0.9079        0.04     23.8439       23.7566         39.8111
-lgbm_sc_s0    HMC        30   N1%   norm_reg_plugc    0.9144        0.02     25.2606       24.6184         41.6215
-lgbm_sc_s0    HMC        30   N1%       scp_abs_bc    0.9045        0.02     28.2879       27.0664         43.7495
-lgbm_sc_s0    HMC        30   N1%      scp_abs_cal    0.9152        0.02     25.0627       23.6914         41.3742
-lgbm_sc_s0    HMC        30   N1%       scp_abs_mu    0.9056        0.06     23.8227       22.3989         39.7151
-lgbm_sc_s0    HMC        30   N1%       scp_signed    0.9451        0.00     40.7714       35.2029         50.4593
-lgbm_sc_s0    HMC        30   N2%           ba_loa    0.8975        0.04     40.1113       40.8010         53.7376
-lgbm_sc_s0    HMC        30   N2%           ba_reg    0.8547        0.22     26.1504       25.2063         39.2157
-lgbm_sc_s0    HMC        30   N2%         cqr_ffbs    0.9033        0.06     36.4407       35.3234         48.0457
-lgbm_sc_s0    HMC        30   N2%           cqr_qr    0.9291        0.08     46.4227       45.5332         53.2492
-lgbm_sc_s0    HMC        30   N2% norm_entropy_reg    0.9008        0.04     35.6073       35.2598         46.8797
-lgbm_sc_s0    HMC        30   N2%        norm_ffbs    0.9078        0.04     38.9820       38.6008         50.1589
-lgbm_sc_s0    HMC        30   N2%    norm_reg_ffbs    0.9033        0.06     36.7727       35.7773         48.5492
-lgbm_sc_s0    HMC        30   N2%   norm_reg_plugc    0.9137        0.02     41.2278       41.4962         50.0676
-lgbm_sc_s0    HMC        30   N2%       scp_abs_bc    0.8861        0.18     39.1346       39.9537         54.7743
-lgbm_sc_s0    HMC        30   N2%      scp_abs_cal    0.9096        0.02     41.1369       41.0926         50.0986
-lgbm_sc_s0    HMC        30   N2%       scp_abs_mu    0.9046        0.02     36.0714       35.4648         47.4169
-lgbm_sc_s0    HMC        30   N2%       scp_signed    0.9273        0.02     50.6770       52.6910         60.2085
-lgbm_sc_s0    HMC        30   N3%           ba_loa    0.8957        0.04     34.0132       34.0697         47.5734
-lgbm_sc_s0    HMC        30   N3%           ba_reg    0.8309        0.24     27.2328       27.2030         49.5547
-lgbm_sc_s0    HMC        30   N3%         cqr_ffbs    0.9043        0.08     38.5821       37.4243         58.5586
-lgbm_sc_s0    HMC        30   N3%           cqr_qr    0.9258        0.06     45.0806       43.4126         54.8662
-lgbm_sc_s0    HMC        30   N3% norm_entropy_reg    0.9046        0.04     38.4934       37.4999         58.3316
-lgbm_sc_s0    HMC        30   N3%        norm_ffbs    0.9121        0.02     41.1391       40.0275         56.4449
-lgbm_sc_s0    HMC        30   N3%    norm_reg_ffbs    0.9060        0.02     39.0455       37.6420         57.9513
-lgbm_sc_s0    HMC        30   N3%   norm_reg_plugc    0.9040        0.02     38.5293       37.9450         55.4912
-lgbm_sc_s0    HMC        30   N3%       scp_abs_bc    0.9030        0.06     34.8962       35.2962         47.6729
-lgbm_sc_s0    HMC        30   N3%      scp_abs_cal    0.9074        0.04     38.2715       38.6094         57.2250
-lgbm_sc_s0    HMC        30   N3%       scp_abs_mu    0.9043        0.12     38.5203       38.1787         59.6065
-lgbm_sc_s0    HMC        30   N3%       scp_signed    0.9364        0.02     40.8233       41.2292         48.9021
-lgbm_sc_s0    HMC        30  REM%           ba_loa    0.9154        0.04     19.9512       20.0270         26.0061
-lgbm_sc_s0    HMC        30  REM%           ba_reg    0.8800        0.06     15.6718       15.5356         23.3384
-lgbm_sc_s0    HMC        30  REM%         cqr_ffbs    0.9298        0.02     23.8257       23.7909         27.5695
-lgbm_sc_s0    HMC        30  REM%           cqr_qr    0.9585        0.00     31.1692       31.1608         34.0394
-lgbm_sc_s0    HMC        30  REM% norm_entropy_reg    0.9281        0.00     24.0130       23.9448         27.4724
-lgbm_sc_s0    HMC        30  REM%        norm_ffbs    0.9322        0.00     23.2125       23.2843         26.8112
-lgbm_sc_s0    HMC        30  REM%    norm_reg_ffbs    0.9281        0.02     23.5333       23.2768         27.3622
-lgbm_sc_s0    HMC        30  REM%   norm_reg_plugc    0.9268        0.02     19.1056       19.2236         23.8254
-lgbm_sc_s0    HMC        30  REM%       scp_abs_bc    0.9142        0.04     19.6519       19.2798         25.9095
-lgbm_sc_s0    HMC        30  REM%      scp_abs_cal    0.9250        0.02     19.4827       20.1419         24.0634
-lgbm_sc_s0    HMC        30  REM%       scp_abs_mu    0.9198        0.02     25.0886       24.7758         29.4415
-lgbm_sc_s0    HMC        30  REM%       scp_signed    0.9453        0.00     25.3867       23.7739         29.9872
-lgbm_sc_s0    HMC        30  REML           ba_loa    0.8952        0.12    193.5999      196.9286        320.6131
-lgbm_sc_s0    HMC        30  REML           ba_reg    0.8489        0.32    168.1332      159.4342        365.0826
-lgbm_sc_s0    HMC        30  REML         cqr_ffbs    0.8987        0.08    205.7005      201.5789        412.4950
-lgbm_sc_s0    HMC        30  REML           cqr_qr    0.9306        0.08    315.3368      290.9000        415.2675
-lgbm_sc_s0    HMC        30  REML norm_entropy_reg    0.8932        0.08    225.9442      231.2412        408.9674
-lgbm_sc_s0    HMC        30  REML        norm_ffbs    0.8989        0.10    221.4127      229.0286        399.2448
-lgbm_sc_s0    HMC        30  REML    norm_reg_ffbs    0.8936        0.12    219.8875      218.9621        413.1336
-lgbm_sc_s0    HMC        30  REML   norm_reg_plugc    0.9037        0.08    230.0578      228.1098        387.3485
-lgbm_sc_s0    HMC        30  REML       scp_abs_bc    0.8935        0.14    196.2597      189.7837        320.6970
-lgbm_sc_s0    HMC        30  REML      scp_abs_cal    0.9079        0.02    240.4902      239.0908        396.1870
-lgbm_sc_s0    HMC        30  REML       scp_abs_mu    0.8936        0.12    230.4304      240.3598        426.7797
-lgbm_sc_s0    HMC        30  REML       scp_signed    0.9386        0.02    287.5762      281.7062        350.0882
-lgbm_sc_s0    HMC        30   SOL           ba_loa    0.9238        0.00     30.2821       26.7549         61.4332
-lgbm_sc_s0    HMC        30   SOL           ba_reg    0.8669        0.10     22.4422       19.9799         62.1003
-lgbm_sc_s0    HMC        30   SOL         cqr_ffbs    0.9025        0.04     25.2538       21.8509         73.8221
-lgbm_sc_s0    HMC        30   SOL           cqr_qr    0.9445        0.04     54.2731       50.5328         76.9600
-lgbm_sc_s0    HMC        30   SOL norm_entropy_reg    0.9005        0.02     30.9121       31.0804         81.2483
-lgbm_sc_s0    HMC        30   SOL        norm_ffbs    0.9007        0.02     23.0345       21.0700         72.6553
-lgbm_sc_s0    HMC        30   SOL    norm_reg_ffbs    0.9030        0.04     26.2395       24.0032         75.9542
-lgbm_sc_s0    HMC        30   SOL   norm_reg_plugc    0.9018        0.06     21.5731       17.8849         55.2170
-lgbm_sc_s0    HMC        30   SOL       scp_abs_bc    0.9023        0.00     24.8506       21.3665         61.9111
-lgbm_sc_s0    HMC        30   SOL      scp_abs_cal    0.9003        0.04     23.4148       19.4504         57.9140
-lgbm_sc_s0    HMC        30   SOL       scp_abs_mu    0.9025        0.04     32.0885       32.3812         82.2049
-lgbm_sc_s0    HMC        30   SOL       scp_signed    0.9377        0.02     51.6282       35.7355         78.7720
-lgbm_sc_s0    HMC        30   TST           ba_loa    0.9030        0.02    166.4783      164.3472        248.4535
-lgbm_sc_s0    HMC        30   TST           ba_reg    0.8367        0.26    133.4880      127.7139        244.2734
-lgbm_sc_s0    HMC        30   TST         cqr_ffbs    0.9137        0.06    133.9457      133.4526        192.5365
-lgbm_sc_s0    HMC        30   TST           cqr_qr    0.9388        0.04    234.5680      218.3715        276.6756
-lgbm_sc_s0    HMC        30   TST norm_entropy_reg    0.9107        0.08    138.0623      139.1715        199.4904
-lgbm_sc_s0    HMC        30   TST        norm_ffbs    0.9147        0.02    111.2114      118.0314        162.0085
-lgbm_sc_s0    HMC        30   TST    norm_reg_ffbs    0.9142        0.06    124.2427      125.6648        180.7331
-lgbm_sc_s0    HMC        30   TST   norm_reg_plugc    0.9145        0.08    131.6568      127.4736        196.0052
-lgbm_sc_s0    HMC        30   TST       scp_abs_bc    0.9069        0.06    173.1107      173.2167        250.9073
-lgbm_sc_s0    HMC        30   TST      scp_abs_cal    0.9164        0.08    154.1000      151.0000        226.0223
-lgbm_sc_s0    HMC        30   TST       scp_abs_mu    0.9126        0.08    145.5318      147.8065        209.1707
-lgbm_sc_s0    HMC        30   TST       scp_signed    0.9403        0.00    246.9900      226.2500        300.0462
-lgbm_sc_s0    HMC        30  WASO           ba_loa    0.9012        0.04    115.1010      108.4903        183.9695
-lgbm_sc_s0    HMC        30  WASO           ba_reg    0.8841        0.14    105.8884      106.4540        163.2866
-lgbm_sc_s0    HMC        30  WASO         cqr_ffbs    0.9076        0.04    102.2036      101.2064        148.9334
-lgbm_sc_s0    HMC        30  WASO           cqr_qr    0.9476        0.04    164.3294      171.0555        194.0640
-lgbm_sc_s0    HMC        30  WASO norm_entropy_reg    0.9064        0.04    105.0092      104.9001        152.7563
-lgbm_sc_s0    HMC        30  WASO        norm_ffbs    0.9084        0.00     92.9195       92.2017        136.5531
-lgbm_sc_s0    HMC        30  WASO    norm_reg_ffbs    0.9068        0.04     99.7593       98.8481        146.3334
-lgbm_sc_s0    HMC        30  WASO   norm_reg_plugc    0.9167        0.02    107.2236      106.4612        151.7382
-lgbm_sc_s0    HMC        30  WASO       scp_abs_bc    0.9043        0.04    115.4939      116.0522        183.4964
-lgbm_sc_s0    HMC        30  WASO      scp_abs_cal    0.9104        0.02    114.7650      113.1384        166.2874
-lgbm_sc_s0    HMC        30  WASO       scp_abs_mu    0.9053        0.06    109.3371      112.8631        159.1073
-lgbm_sc_s0    HMC        30  WASO       scp_signed    0.9436        0.00    146.2597      141.3678        192.3836
-lgbm_sc_s0     ST        10   N1%           ba_loa    0.8600        0.28     15.8139       15.0613         26.8180
-lgbm_sc_s0     ST        10   N1%           ba_reg    0.7182        0.74     11.1384       10.7906         29.7542
-lgbm_sc_s0     ST        10   N1%         cqr_ffbs    0.8971        0.20     17.5906       16.5438         24.9937
-lgbm_sc_s0     ST        10   N1%           cqr_qr    1.0000        0.00    100.0000      100.0000        100.0000
-lgbm_sc_s0     ST        10   N1% norm_entropy_reg    0.8988        0.20     17.5370       16.3842         24.7221
-lgbm_sc_s0     ST        10   N1%        norm_ffbs    0.9100        0.10     17.6645       16.6041         23.5890
-lgbm_sc_s0     ST        10   N1%    norm_reg_ffbs    0.9041        0.12     17.5137       15.9494         24.3738
-lgbm_sc_s0     ST        10   N1%   norm_reg_plugc    0.9076        0.16     16.5186       15.9735         22.2963
-lgbm_sc_s0     ST        10   N1%       scp_abs_bc    0.8224        0.44     15.2147       13.2164         28.9471
-lgbm_sc_s0     ST        10   N1%      scp_abs_cal    0.9029        0.12     16.4167       16.9025         22.8652
-lgbm_sc_s0     ST        10   N1%       scp_abs_mu    0.8953        0.20     17.7820       17.4673         25.6833
-lgbm_sc_s0     ST        10   N1%       scp_signed    1.0000        0.00    100.0000      100.0000        100.0000
-lgbm_sc_s0     ST        10   N2%           ba_loa    0.8682        0.20     35.0613       34.1613         45.8094
-lgbm_sc_s0     ST        10   N2%           ba_reg    0.7271        0.68     27.4587       26.3520         55.1976
-lgbm_sc_s0     ST        10   N2%         cqr_ffbs    0.8806        0.26     37.2520       36.1075         47.4671
-lgbm_sc_s0     ST        10   N2%           cqr_qr    1.0000        0.00    100.0000      100.0000        100.0000
-lgbm_sc_s0     ST        10   N2% norm_entropy_reg    0.8818        0.24     38.4327       38.2599         48.4528
-lgbm_sc_s0     ST        10   N2%        norm_ffbs    0.8947        0.22     41.5894       40.9840         49.7382
-lgbm_sc_s0     ST        10   N2%    norm_reg_ffbs    0.8812        0.26     38.2204       36.7599         47.9345
-lgbm_sc_s0     ST        10   N2%   norm_reg_plugc    0.8947        0.16     37.9643       38.0256         46.4984
-lgbm_sc_s0     ST        10   N2%       scp_abs_bc    0.8212        0.34     31.2500       32.1985         47.5804
-lgbm_sc_s0     ST        10   N2%      scp_abs_cal    0.8971        0.20     36.5438       37.0693         45.7574
-lgbm_sc_s0     ST        10   N2%       scp_abs_mu    0.8765        0.30     36.7908       36.9722         47.5879
-lgbm_sc_s0     ST        10   N2%       scp_signed    1.0000        0.00    100.0000      100.0000        100.0000
-lgbm_sc_s0     ST        10   N3%           ba_loa    0.8435        0.24     24.1725       25.6186         40.8070
-lgbm_sc_s0     ST        10   N3%           ba_reg    0.6588        0.82     18.4637       18.2794         58.9788
-lgbm_sc_s0     ST        10   N3%         cqr_ffbs    0.8841        0.22     29.5230       29.2794         42.4957
-lgbm_sc_s0     ST        10   N3%           cqr_qr    1.0000        0.00    100.0000      100.0000        100.0000
-lgbm_sc_s0     ST        10   N3% norm_entropy_reg    0.8882        0.18     30.2535       30.4708         43.8185
-lgbm_sc_s0     ST        10   N3%        norm_ffbs    0.8876        0.22     28.0831       28.1300         38.9622
-lgbm_sc_s0     ST        10   N3%    norm_reg_ffbs    0.8841        0.22     28.3488       29.3455         40.3738
-lgbm_sc_s0     ST        10   N3%   norm_reg_plugc    0.8847        0.24     26.9296       26.6398         37.5669
-lgbm_sc_s0     ST        10   N3%       scp_abs_bc    0.8547        0.26     24.9449       26.6648         41.6118
-lgbm_sc_s0     ST        10   N3%      scp_abs_cal    0.8841        0.18     28.3099       29.0578         40.5261
-lgbm_sc_s0     ST        10   N3%       scp_abs_mu    0.8853        0.20     30.0401       30.1876         43.6303
-lgbm_sc_s0     ST        10   N3%       scp_signed    1.0000        0.00    100.0000      100.0000        100.0000
-lgbm_sc_s0     ST        10  REM%           ba_loa    0.8459        0.28     18.6045       19.4976         31.0627
-lgbm_sc_s0     ST        10  REM%           ba_reg    0.7071        0.64     13.5792       13.3877         34.7817
-lgbm_sc_s0     ST        10  REM%         cqr_ffbs    0.8865        0.20     24.0588       22.9829         30.8958
-lgbm_sc_s0     ST        10  REM%           cqr_qr    1.0000        0.00    100.0000      100.0000        100.0000
-lgbm_sc_s0     ST        10  REM% norm_entropy_reg    0.8988        0.16     25.4267       25.1640         32.1126
-lgbm_sc_s0     ST        10  REM%        norm_ffbs    0.9041        0.12     26.9535       25.2404         32.8655
-lgbm_sc_s0     ST        10  REM%    norm_reg_ffbs    0.8912        0.20     24.7261       23.5359         31.2047
-lgbm_sc_s0     ST        10  REM%   norm_reg_plugc    0.8912        0.20     24.4221       27.3052         34.0870
-lgbm_sc_s0     ST        10  REM%       scp_abs_bc    0.8318        0.32     18.6302       19.2764         31.6370
-lgbm_sc_s0     ST        10  REM%      scp_abs_cal    0.8835        0.22     23.0021       25.4343         33.4186
-lgbm_sc_s0     ST        10  REM%       scp_abs_mu    0.8853        0.20     24.5350       24.1121         31.6048
-lgbm_sc_s0     ST        10  REM%       scp_signed    1.0000        0.00    100.0000      100.0000        100.0000
-lgbm_sc_s0     ST        10  REML           ba_loa    0.8706        0.26    154.7667      163.0591        262.3836
-lgbm_sc_s0     ST        10  REML           ba_reg    0.7635        0.60     87.5449       85.7347        247.4298
-lgbm_sc_s0     ST        10  REML         cqr_ffbs    0.9159        0.16    131.0742      128.8408        136.6242
-lgbm_sc_s0     ST        10  REML           cqr_qr    1.0000        0.00         inf           inf             NaN
-lgbm_sc_s0     ST        10  REML norm_entropy_reg    0.8900        0.18    156.5475      152.2935        197.2179
-lgbm_sc_s0     ST        10  REML        norm_ffbs    0.8835        0.24    133.4251      119.5497        174.7326
-lgbm_sc_s0     ST        10  REML    norm_reg_ffbs    0.8847        0.22    136.3996      132.8251        177.5687
-lgbm_sc_s0     ST        10  REML   norm_reg_plugc    0.8947        0.22    178.6880      182.8437        230.8071
-lgbm_sc_s0     ST        10  REML       scp_abs_bc    0.8959        0.20    173.9857      188.8456        244.9869
-lgbm_sc_s0     ST        10  REML      scp_abs_cal    0.9006        0.22    193.2526      193.2721        262.5644
-lgbm_sc_s0     ST        10  REML       scp_abs_mu    0.8829        0.20    148.0172      145.9855        188.5329
-lgbm_sc_s0     ST        10  REML       scp_signed    1.0000        0.00         inf           inf             NaN
-lgbm_sc_s0     ST        10   SOL           ba_loa    0.8641        0.26     19.3842       11.9915         43.9083
-lgbm_sc_s0     ST        10   SOL           ba_reg    0.7606        0.56     13.8847        9.3219         48.8774
-lgbm_sc_s0     ST        10   SOL         cqr_ffbs    0.9176        0.12     23.6099       19.9526         36.2558
-lgbm_sc_s0     ST        10   SOL           cqr_qr    1.0000        0.00         inf           inf             NaN
-lgbm_sc_s0     ST        10   SOL norm_entropy_reg    0.9047        0.18     29.5797       28.9430         47.8755
-lgbm_sc_s0     ST        10   SOL        norm_ffbs    0.9071        0.12     23.2017       21.3130         38.8463
-lgbm_sc_s0     ST        10   SOL    norm_reg_ffbs    0.9076        0.20     25.5119       24.5977         43.2572
-lgbm_sc_s0     ST        10   SOL   norm_reg_plugc    0.8941        0.16     23.7826       16.7668         45.3576
-lgbm_sc_s0     ST        10   SOL       scp_abs_bc    0.8629        0.28     22.3041       12.6235         47.0606
-lgbm_sc_s0     ST        10   SOL      scp_abs_cal    0.8988        0.18     26.2238       14.0662         49.9179
-lgbm_sc_s0     ST        10   SOL       scp_abs_mu    0.8971        0.20     30.9082       29.6711         51.2355
-lgbm_sc_s0     ST        10   SOL       scp_signed    1.0000        0.00         inf           inf             NaN
-lgbm_sc_s0     ST        10   TST           ba_loa    0.8565        0.32     65.8574       65.4416         99.9164
-lgbm_sc_s0     ST        10   TST           ba_reg    0.7100        0.66     52.0335       51.3753        131.9345
-lgbm_sc_s0     ST        10   TST         cqr_ffbs    0.8953        0.20     56.7336       53.3761         76.3177
-lgbm_sc_s0     ST        10   TST           cqr_qr    1.0000        0.00         inf           inf             NaN
-lgbm_sc_s0     ST        10   TST norm_entropy_reg    0.8906        0.20     55.2898       55.4801         77.0567
-lgbm_sc_s0     ST        10   TST        norm_ffbs    0.8976        0.16     48.2888       46.7943         63.6261
-lgbm_sc_s0     ST        10   TST    norm_reg_ffbs    0.8865        0.20     52.6807       52.6175         74.3562
-lgbm_sc_s0     ST        10   TST   norm_reg_plugc    0.8859        0.30     59.8587       61.5888         83.8430
-lgbm_sc_s0     ST        10   TST       scp_abs_bc    0.8376        0.32     63.7100       58.7500        102.1771
-lgbm_sc_s0     ST        10   TST      scp_abs_cal    0.8788        0.28     67.4800       66.0000         99.0859
-lgbm_sc_s0     ST        10   TST       scp_abs_mu    0.8865        0.20     62.8164       55.6480         88.6870
-lgbm_sc_s0     ST        10   TST       scp_signed    1.0000        0.00         inf           inf             NaN
-lgbm_sc_s0     ST        10  WASO           ba_loa    0.8318        0.28     46.8346       48.1675         77.9051
-lgbm_sc_s0     ST        10  WASO           ba_reg    0.7371        0.66     37.8900       38.1046        107.4528
-lgbm_sc_s0     ST        10  WASO         cqr_ffbs    0.9141        0.14     62.7971       63.8757         78.1327
-lgbm_sc_s0     ST        10  WASO           cqr_qr    1.0000        0.00         inf           inf             NaN
-lgbm_sc_s0     ST        10  WASO norm_entropy_reg    0.8965        0.22     68.6004       63.7071         96.2964
-lgbm_sc_s0     ST        10  WASO        norm_ffbs    0.9047        0.20     60.3012       56.7148         77.3901
-lgbm_sc_s0     ST        10  WASO    norm_reg_ffbs    0.8953        0.20     62.3792       62.0566         83.0435
-lgbm_sc_s0     ST        10  WASO   norm_reg_plugc    0.8771        0.26     55.2763       58.5443         87.4914
-lgbm_sc_s0     ST        10  WASO       scp_abs_bc    0.8188        0.38     44.5832       48.1471         78.6621
-lgbm_sc_s0     ST        10  WASO      scp_abs_cal    0.8759        0.26     57.5376       53.2059         96.2494
-lgbm_sc_s0     ST        10  WASO       scp_abs_mu    0.8953        0.24     70.2726       74.0942         96.4361
-lgbm_sc_s0     ST        10  WASO       scp_signed    1.0000        0.00         inf           inf             NaN
-lgbm_sc_s0     ST        20   N1%           ba_loa    0.9117        0.16     15.7253       15.3414         24.2726
-lgbm_sc_s0     ST        20   N1%           ba_reg    0.8083        0.52     12.6925       12.6669         21.6967
-lgbm_sc_s0     ST        20   N1%         cqr_ffbs    0.9025        0.22     17.8915       17.0254         25.5760
-lgbm_sc_s0     ST        20   N1%           cqr_qr    0.8992        0.30     25.5347       22.6320         32.5764
-lgbm_sc_s0     ST        20   N1% norm_entropy_reg    0.9008        0.20     17.4264       16.7827         25.1822
-lgbm_sc_s0     ST        20   N1%        norm_ffbs    0.9150        0.16     17.3389       16.0411         23.2465
-lgbm_sc_s0     ST        20   N1%    norm_reg_ffbs    0.9092        0.14     17.5804       16.4996         24.7944
-lgbm_sc_s0     ST        20   N1%   norm_reg_plugc    0.9092        0.16     16.2039       15.6631         23.2773
-lgbm_sc_s0     ST        20   N1%       scp_abs_bc    0.8758        0.14     14.2406       14.1715         23.8232
-lgbm_sc_s0     ST        20   N1%      scp_abs_cal    0.9042        0.16     16.4861       16.5366         24.0357
-lgbm_sc_s0     ST        20   N1%       scp_abs_mu    0.8983        0.28     18.1028       17.7491         26.6294
-lgbm_sc_s0     ST        20   N1%       scp_signed    0.8933        0.16     14.9135       15.0571         23.1757
-lgbm_sc_s0     ST        20   N2%           ba_loa    0.8808        0.22     34.2322       33.3636         43.4585
-lgbm_sc_s0     ST        20   N2%           ba_reg    0.8350        0.42     29.6718       28.9990         45.4854
-lgbm_sc_s0     ST        20   N2%         cqr_ffbs    0.9050        0.14     34.9718       35.1366         41.7812
-lgbm_sc_s0     ST        20   N2%           cqr_qr    0.9058        0.16     59.2981       61.2714         74.8393
-lgbm_sc_s0     ST        20   N2% norm_entropy_reg    0.9117        0.12     36.2842       36.5488         42.3070
-lgbm_sc_s0     ST        20   N2%        norm_ffbs    0.9258        0.12     38.2697       38.2948         43.7704
-lgbm_sc_s0     ST        20   N2%    norm_reg_ffbs    0.9142        0.12     35.6513       35.7510         42.0175
-lgbm_sc_s0     ST        20   N2%   norm_reg_plugc    0.9192        0.08     39.3958       38.7954         46.1219
-lgbm_sc_s0     ST        20   N2%       scp_abs_bc    0.8825        0.22     33.5722       34.1189         43.3209
-lgbm_sc_s0     ST        20   N2%      scp_abs_cal    0.9092        0.18     37.3425       34.5731         46.1502
-lgbm_sc_s0     ST        20   N2%       scp_abs_mu    0.8975        0.12     34.2368       33.7664         41.7139
-lgbm_sc_s0     ST        20   N2%       scp_signed    0.8883        0.20     35.5606       37.3584         44.0548
-lgbm_sc_s0     ST        20   N3%           ba_loa    0.8833        0.16     24.5126       25.1633         35.9940
-lgbm_sc_s0     ST        20   N3%           ba_reg    0.7408        0.68     21.5052       22.1856         43.8276
-lgbm_sc_s0     ST        20   N3%         cqr_ffbs    0.9017        0.18     27.4746       27.6662         35.3609
-lgbm_sc_s0     ST        20   N3%           cqr_qr    0.9075        0.12     42.0108       37.9328         52.4884
-lgbm_sc_s0     ST        20   N3% norm_entropy_reg    0.9075        0.16     28.2488       27.4492         35.5886
-lgbm_sc_s0     ST        20   N3%        norm_ffbs    0.9008        0.18     25.3714       25.7122         32.1751
-lgbm_sc_s0     ST        20   N3%    norm_reg_ffbs    0.8975        0.22     26.2759       26.4502         33.6388
-lgbm_sc_s0     ST        20   N3%   norm_reg_plugc    0.9033        0.18     25.8317       25.5447         32.4104
-lgbm_sc_s0     ST        20   N3%       scp_abs_bc    0.9033        0.18     26.3512       27.1258         36.6654
-lgbm_sc_s0     ST        20   N3%      scp_abs_cal    0.9050        0.16     27.7098       26.5428         35.0382
-lgbm_sc_s0     ST        20   N3%       scp_abs_mu    0.9100        0.16     28.3384       28.1601         36.4276
-lgbm_sc_s0     ST        20   N3%       scp_signed    0.8833        0.24     26.0869       26.9913         35.8982
-lgbm_sc_s0     ST        20  REM%           ba_loa    0.8883        0.14     19.0382       19.8481         27.3759
-lgbm_sc_s0     ST        20  REM%           ba_reg    0.8525        0.34     15.4715       15.5404         26.4983
-lgbm_sc_s0     ST        20  REM%         cqr_ffbs    0.9092        0.18     24.3058       24.5092         28.2257
-lgbm_sc_s0     ST        20  REM%           cqr_qr    0.8942        0.18     36.1047       34.1560         50.9464
-lgbm_sc_s0     ST        20  REM% norm_entropy_reg    0.9092        0.14     25.0158       25.2623         29.4084
-lgbm_sc_s0     ST        20  REM%        norm_ffbs    0.9317        0.10     26.3233       25.3994         29.4297
-lgbm_sc_s0     ST        20  REM%    norm_reg_ffbs    0.9150        0.16     24.7106       24.3760         28.2620
-lgbm_sc_s0     ST        20  REM%   norm_reg_plugc    0.9158        0.16     23.1573       24.0116         30.0625
-lgbm_sc_s0     ST        20  REM%       scp_abs_bc    0.8933        0.16     19.8900       20.3041         28.3407
-lgbm_sc_s0     ST        20  REM%      scp_abs_cal    0.8975        0.14     22.5552       22.4165         30.5031
-lgbm_sc_s0     ST        20  REM%       scp_abs_mu    0.8925        0.22     24.2400       24.6693         28.8891
-lgbm_sc_s0     ST        20  REM%       scp_signed    0.8783        0.26     20.4745       21.2453         26.4038
-lgbm_sc_s0     ST        20  REML           ba_loa    0.8675        0.22    152.2032      152.9849        246.6684
-lgbm_sc_s0     ST        20  REML           ba_reg    0.8333        0.40     98.2992       98.8904        182.6857
-lgbm_sc_s0     ST        20  REML         cqr_ffbs    0.9258        0.08    128.3897      130.9188        132.0622
-lgbm_sc_s0     ST        20  REML           cqr_qr    0.9242        0.12    292.6027      226.7901        348.2444
-lgbm_sc_s0     ST        20  REML norm_entropy_reg    0.9225        0.12    154.5858      153.0700        184.8627
-lgbm_sc_s0     ST        20  REML        norm_ffbs    0.9192        0.08    128.4577      126.1635        152.8587
-lgbm_sc_s0     ST        20  REML    norm_reg_ffbs    0.9233        0.12    136.2484      138.1546        159.7307
-lgbm_sc_s0     ST        20  REML   norm_reg_plugc    0.9142        0.12    180.9022      182.0995        223.5051
-lgbm_sc_s0     ST        20  REML       scp_abs_bc    0.8958        0.10    178.7212      183.5812        234.9662
-lgbm_sc_s0     ST        20  REML      scp_abs_cal    0.9092        0.14    191.1179      180.2812        253.6429
-lgbm_sc_s0     ST        20  REML       scp_abs_mu    0.9208        0.14    148.1356      147.6483        174.1172
-lgbm_sc_s0     ST        20  REML       scp_signed    0.9058        0.14    176.2450      181.4167        230.8617
-lgbm_sc_s0     ST        20   SOL           ba_loa    0.8783        0.30     19.4532       11.4876         46.2459
-lgbm_sc_s0     ST        20   SOL           ba_reg    0.8192        0.46     13.7758        9.9520         45.7129
-lgbm_sc_s0     ST        20   SOL         cqr_ffbs    0.9125        0.08     20.0548       19.7688         35.4778
-lgbm_sc_s0     ST        20   SOL           cqr_qr    0.9050        0.14     33.6916       31.4446         49.9297
-lgbm_sc_s0     ST        20   SOL norm_entropy_reg    0.9033        0.16     24.9464       23.0639         47.0224
-lgbm_sc_s0     ST        20   SOL        norm_ffbs    0.9033        0.10     21.1791       20.9008         39.1904
-lgbm_sc_s0     ST        20   SOL    norm_reg_ffbs    0.9000        0.10     22.7640       22.6450         42.1195
-lgbm_sc_s0     ST        20   SOL   norm_reg_plugc    0.9017        0.18     19.4460       16.7353         43.1501
-lgbm_sc_s0     ST        20   SOL       scp_abs_bc    0.8833        0.26     15.4409       13.1000         41.6575
-lgbm_sc_s0     ST        20   SOL      scp_abs_cal    0.9092        0.20     18.2312       13.7396         43.7229
-lgbm_sc_s0     ST        20   SOL       scp_abs_mu    0.9042        0.14     26.2278       25.2625         48.5070
-lgbm_sc_s0     ST        20   SOL       scp_signed    0.8675        0.22     27.0962       13.2292         54.0879
-lgbm_sc_s0     ST        20   TST           ba_loa    0.8817        0.24     64.5285       65.9479         89.5931
-lgbm_sc_s0     ST        20   TST           ba_reg    0.7750        0.56     55.9239       55.7385        106.0472
-lgbm_sc_s0     ST        20   TST         cqr_ffbs    0.9225        0.12     47.8953       48.9224         63.6561
-lgbm_sc_s0     ST        20   TST           cqr_qr    0.8958        0.16    113.5579       95.2683        147.4426
-lgbm_sc_s0     ST        20   TST norm_entropy_reg    0.9025        0.12     45.7142       45.9432         64.3386
-lgbm_sc_s0     ST        20   TST        norm_ffbs    0.9142        0.16     44.4573       45.7436         57.8475
-lgbm_sc_s0     ST        20   TST    norm_reg_ffbs    0.9092        0.16     46.2355       47.6892         64.6723
-lgbm_sc_s0     ST        20   TST   norm_reg_plugc    0.8917        0.20     56.0484       58.9297         73.1034
-lgbm_sc_s0     ST        20   TST       scp_abs_bc    0.8800        0.22     62.7720       62.9000         91.3720
-lgbm_sc_s0     ST        20   TST      scp_abs_cal    0.9017        0.22     61.2400       62.5000         81.9900
-lgbm_sc_s0     ST        20   TST       scp_abs_mu    0.9108        0.10     49.9319       53.4025         71.7354
-lgbm_sc_s0     ST        20   TST       scp_signed    0.8983        0.12     74.6700       86.0000         99.3867
-lgbm_sc_s0     ST        20  WASO           ba_loa    0.8733        0.16     47.2711       48.3328         69.0645
-lgbm_sc_s0     ST        20  WASO           ba_reg    0.8042        0.36     43.0567       43.8593         88.9503
-lgbm_sc_s0     ST        20  WASO         cqr_ffbs    0.8925        0.22     57.4744       61.3026         81.4702
-lgbm_sc_s0     ST        20  WASO           cqr_qr    0.9108        0.16     84.0103       72.3901        122.6750
-lgbm_sc_s0     ST        20  WASO norm_entropy_reg    0.8825        0.18     58.1824       56.5444         90.8464
-lgbm_sc_s0     ST        20  WASO        norm_ffbs    0.8883        0.24     56.7377       57.1133         80.3566
-lgbm_sc_s0     ST        20  WASO    norm_reg_ffbs    0.8800        0.26     58.3112       61.2276         86.1077
-lgbm_sc_s0     ST        20  WASO   norm_reg_plugc    0.8700        0.34     51.7675       53.0544         88.9077
-lgbm_sc_s0     ST        20  WASO       scp_abs_bc    0.8842        0.16     48.7916       52.1833         70.0191
-lgbm_sc_s0     ST        20  WASO      scp_abs_cal    0.8717        0.30     50.1604       49.3125         93.5104
-lgbm_sc_s0     ST        20  WASO       scp_abs_mu    0.8775        0.22     62.3557       59.9582         95.0519
-lgbm_sc_s0     ST        20  WASO       scp_signed    0.8867        0.12     51.6112       53.9688         73.1862
-lgbm_sc_s0     ST        30   N1%           ba_loa    0.9300        0.12     15.9234       15.8628         23.6264
-lgbm_sc_s0     ST        30   N1%           ba_reg    0.8600        0.32     13.8883       13.4521         17.7854
-lgbm_sc_s0     ST        30   N1%         cqr_ffbs    0.9086        0.16     16.2118       16.3848         23.5165
-lgbm_sc_s0     ST        30   N1%           cqr_qr    0.9586        0.04     21.5704       22.0948         24.2349
-lgbm_sc_s0     ST        30   N1% norm_entropy_reg    0.9043        0.16     16.1623       16.3284         23.2997
-lgbm_sc_s0     ST        30   N1%        norm_ffbs    0.9257        0.14     15.5743       15.4966         21.4965
-lgbm_sc_s0     ST        30   N1%    norm_reg_ffbs    0.9114        0.16     15.8243       15.8779         22.8299
-lgbm_sc_s0     ST        30   N1%   norm_reg_plugc    0.9071        0.22     15.2923       15.4608         23.4701
-lgbm_sc_s0     ST        30   N1%       scp_abs_bc    0.8786        0.26     13.8907       13.7148         23.3081
-lgbm_sc_s0     ST        30   N1%      scp_abs_cal    0.9086        0.26     15.5398       15.5057         24.1622
-lgbm_sc_s0     ST        30   N1%       scp_abs_mu    0.9071        0.16     16.8456       17.3020         24.2670
-lgbm_sc_s0     ST        30   N1%       scp_signed    0.9371        0.08     16.0780       15.8859         21.1475
-lgbm_sc_s0     ST        30   N2%           ba_loa    0.8686        0.32     33.3259       33.1692         43.5768
-lgbm_sc_s0     ST        30   N2%           ba_reg    0.8543        0.38     30.6997       30.6634         44.4064
-lgbm_sc_s0     ST        30   N2%         cqr_ffbs    0.9043        0.18     33.6813       33.5256         40.8144
-lgbm_sc_s0     ST        30   N2%           cqr_qr    0.9114        0.16     52.2922       50.6696         60.9631
-lgbm_sc_s0     ST        30   N2% norm_entropy_reg    0.9014        0.18     35.1146       34.5890         41.4544
-lgbm_sc_s0     ST        30   N2%        norm_ffbs    0.9100        0.18     35.3270       36.1861         42.4048
-lgbm_sc_s0     ST        30   N2%    norm_reg_ffbs    0.9043        0.18     33.9255       33.7109         41.0317
-lgbm_sc_s0     ST        30   N2%   norm_reg_plugc    0.8857        0.24     36.0552       35.8622         45.9877
-lgbm_sc_s0     ST        30   N2%       scp_abs_bc    0.8771        0.36     33.8487       35.1321         43.6192
-lgbm_sc_s0     ST        30   N2%      scp_abs_cal    0.8914        0.22     34.4139       34.0847         44.2794
-lgbm_sc_s0     ST        30   N2%       scp_abs_mu    0.8943        0.24     33.5632       33.0799         41.2302
-lgbm_sc_s0     ST        30   N2%       scp_signed    0.9114        0.20     38.3658       37.9314         43.3925
-lgbm_sc_s0     ST        30   N3%           ba_loa    0.8986        0.16     24.4935       24.5372         33.9309
-lgbm_sc_s0     ST        30   N3%           ba_reg    0.8000        0.56     23.2492       23.3163         33.7197
-lgbm_sc_s0     ST        30   N3%         cqr_ffbs    0.9043        0.18     26.8389       27.7966         32.7724
-lgbm_sc_s0     ST        30   N3%           cqr_qr    0.8914        0.22     35.7527       34.6604         47.1182
-lgbm_sc_s0     ST        30   N3% norm_entropy_reg    0.9057        0.18     27.4848       27.6488         32.9371
-lgbm_sc_s0     ST        30   N3%        norm_ffbs    0.9200        0.10     24.7193       24.1623         29.3518
-lgbm_sc_s0     ST        30   N3%    norm_reg_ffbs    0.9157        0.14     26.0080       26.3235         30.9749
-lgbm_sc_s0     ST        30   N3%   norm_reg_plugc    0.9029        0.16     25.2554       25.0975         30.6088
-lgbm_sc_s0     ST        30   N3%       scp_abs_bc    0.8971        0.22     25.3756       26.1836         35.5881
-lgbm_sc_s0     ST        30   N3%      scp_abs_cal    0.8929        0.20     26.6213       27.1761         33.4794
-lgbm_sc_s0     ST        30   N3%       scp_abs_mu    0.9014        0.18     27.3246       27.5806         34.3238
-lgbm_sc_s0     ST        30   N3%       scp_signed    0.9443        0.02     29.2424       29.5055         32.6433
-lgbm_sc_s0     ST        30  REM%           ba_loa    0.8814        0.22     18.6439       18.6038         27.4428
-lgbm_sc_s0     ST        30  REM%           ba_reg    0.8771        0.18     15.6404       15.8655         26.2876
-lgbm_sc_s0     ST        30  REM%         cqr_ffbs    0.9157        0.18     23.7514       23.9235         27.1181
-lgbm_sc_s0     ST        30  REM%           cqr_qr    0.9286        0.12     30.4699       29.8655         36.4521
-lgbm_sc_s0     ST        30  REM% norm_entropy_reg    0.9129        0.16     24.1164       24.1049         27.8148
-lgbm_sc_s0     ST        30  REM%        norm_ffbs    0.9129        0.12     23.7231       23.7477         28.4328
-lgbm_sc_s0     ST        30  REM%    norm_reg_ffbs    0.9100        0.12     23.4738       23.7460         27.4779
-lgbm_sc_s0     ST        30  REM%   norm_reg_plugc    0.9029        0.18     21.7940       22.9606         30.0622
-lgbm_sc_s0     ST        30  REM%       scp_abs_bc    0.8929        0.18     19.8945       19.7633         28.3533
-lgbm_sc_s0     ST        30  REM%      scp_abs_cal    0.8914        0.24     21.6788       21.9632         30.3551
-lgbm_sc_s0     ST        30  REM%       scp_abs_mu    0.9071        0.18     24.0973       24.5673         26.9704
-lgbm_sc_s0     ST        30  REM%       scp_signed    0.9286        0.10     22.3627       23.2669         25.0127
-lgbm_sc_s0     ST        30  REML           ba_loa    0.8514        0.34    150.5689      154.1306        245.3012
-lgbm_sc_s0     ST        30  REML           ba_reg    0.8643        0.28    100.0938      101.1715        170.8638
-lgbm_sc_s0     ST        30  REML         cqr_ffbs    0.9014        0.18    127.9076      129.7812        133.0633
-lgbm_sc_s0     ST        30  REML           cqr_qr    0.9086        0.16    174.6981      177.3053        213.1667
-lgbm_sc_s0     ST        30  REML norm_entropy_reg    0.8914        0.38    143.2723      144.5098        185.1204
-lgbm_sc_s0     ST        30  REML        norm_ffbs    0.8957        0.22    117.0534      119.2512        152.7426
-lgbm_sc_s0     ST        30  REML    norm_reg_ffbs    0.8971        0.28    125.1279      122.4114        161.7995
-lgbm_sc_s0     ST        30  REML   norm_reg_plugc    0.9100        0.14    177.6150      179.7077        214.2662
-lgbm_sc_s0     ST        30  REML       scp_abs_bc    0.8986        0.24    177.7566      174.4583        235.0632
-lgbm_sc_s0     ST        30  REML      scp_abs_cal    0.9014        0.18    179.5157      176.7500        239.5871
-lgbm_sc_s0     ST        30  REML       scp_abs_mu    0.8843        0.34    137.1251      138.1292        173.0669
-lgbm_sc_s0     ST        30  REML       scp_signed    0.9314        0.08    193.2857      198.8929        221.4429
-lgbm_sc_s0     ST        30   SOL           ba_loa    0.9200        0.30     21.8737       27.1641         46.2609
-lgbm_sc_s0     ST        30   SOL           ba_reg    0.8529        0.44     14.9952       17.1942         43.2751
-lgbm_sc_s0     ST        30   SOL         cqr_ffbs    0.9000        0.28     18.9775       19.4071         33.8646
-lgbm_sc_s0     ST        30   SOL           cqr_qr    0.8914        0.24     28.6678       22.8290         46.0692
-lgbm_sc_s0     ST        30   SOL norm_entropy_reg    0.8929        0.22     23.6372       22.7050         47.6026
-lgbm_sc_s0     ST        30   SOL        norm_ffbs    0.9000        0.26     20.6686       20.4436         38.5273
-lgbm_sc_s0     ST        30   SOL    norm_reg_ffbs    0.8914        0.26     22.3701       22.5421         42.6268
-lgbm_sc_s0     ST        30   SOL   norm_reg_plugc    0.9114        0.18     16.1786       16.2356         39.3072
-lgbm_sc_s0     ST        30   SOL       scp_abs_bc    0.8871        0.30     15.2152       14.5333         40.4229
-lgbm_sc_s0     ST        30   SOL      scp_abs_cal    0.9171        0.24     14.0171       13.5179         38.1029
-lgbm_sc_s0     ST        30   SOL       scp_abs_mu    0.8900        0.26     25.0324       25.5646         48.9032
-lgbm_sc_s0     ST        30   SOL       scp_signed    0.8900        0.26     38.0293       49.5000         62.6721
-lgbm_sc_s0     ST        30   TST           ba_loa    0.8643        0.24     63.1266       64.3258         88.3805
-lgbm_sc_s0     ST        30   TST           ba_reg    0.8000        0.44     56.6955       55.7665         97.5068
-lgbm_sc_s0     ST        30   TST         cqr_ffbs    0.9171        0.26     42.3995       41.6107         56.8824
-lgbm_sc_s0     ST        30   TST           cqr_qr    0.9414        0.08     90.1566       81.6996        108.1632
-lgbm_sc_s0     ST        30   TST norm_entropy_reg    0.9157        0.20     43.8169       43.6610         58.9749
-lgbm_sc_s0     ST        30   TST        norm_ffbs    0.9200        0.24     41.2758       40.6535         53.6862
-lgbm_sc_s0     ST        30   TST    norm_reg_ffbs    0.9229        0.20     42.7011       41.7605         57.2297
-lgbm_sc_s0     ST        30   TST   norm_reg_plugc    0.8657        0.24     52.3180       52.6530         73.1359
-lgbm_sc_s0     ST        30   TST       scp_abs_bc    0.8786        0.22     61.4887       63.7500         87.9449
-lgbm_sc_s0     ST        30   TST      scp_abs_cal    0.8871        0.22     58.2000       60.0000         81.1571
-lgbm_sc_s0     ST        30   TST       scp_abs_mu    0.9229        0.18     46.7569       46.6730         64.0632
-lgbm_sc_s0     ST        30   TST       scp_signed    0.9186        0.12     84.1100       88.0000        104.2243
-lgbm_sc_s0     ST        30  WASO           ba_loa    0.8814        0.12     46.1877       47.0386         69.1880
-lgbm_sc_s0     ST        30  WASO           ba_reg    0.8229        0.36     42.8008       44.0944         89.3048
-lgbm_sc_s0     ST        30  WASO         cqr_ffbs    0.9143        0.20     60.6826       63.3446         78.4633
-lgbm_sc_s0     ST        30  WASO           cqr_qr    0.9357        0.08     72.6760       73.7656         96.3026
-lgbm_sc_s0     ST        30  WASO norm_entropy_reg    0.9000        0.12     59.5792       59.4244         84.9601
-lgbm_sc_s0     ST        30  WASO        norm_ffbs    0.9086        0.22     58.4883       60.7553         78.6336
-lgbm_sc_s0     ST        30  WASO    norm_reg_ffbs    0.9100        0.20     61.0091       62.8290         81.1663
-lgbm_sc_s0     ST        30  WASO   norm_reg_plugc    0.8600        0.30     50.2320       50.7375         86.0447
-lgbm_sc_s0     ST        30  WASO       scp_abs_bc    0.8871        0.12     48.6274       49.1500         69.0074
-lgbm_sc_s0     ST        30  WASO      scp_abs_cal    0.8686        0.26     49.1771       49.6071         90.7486
-lgbm_sc_s0     ST        30  WASO       scp_abs_mu    0.9157        0.14     63.4545       64.1263         84.9859
-lgbm_sc_s0     ST        30  WASO       scp_signed    0.9171        0.10     55.3857       55.2679         68.9286
+| stager     | cohort   |   n_target | param   | method           |   coverage |   p_cov_lt80 |   mean_width |   median_width |   interval_score |
+|:-----------|:---------|-----------:|:--------|:-----------------|-----------:|-------------:|-------------:|---------------:|-----------------:|
+| yasa       | HMC      |         10 | N1%     | ba_loa           |      0.889 |        0.160 |       26.276 |         25.450 |           42.435 |
+| yasa       | HMC      |         10 | N1%     | ba_reg           |      0.763 |        0.500 |       19.379 |         17.728 |           50.146 |
+| yasa       | HMC      |         10 | N1%     | cqr_ffbs         |      0.915 |        0.080 |       27.931 |         23.925 |           39.914 |
+| yasa       | HMC      |         10 | N1%     | cqr_qr           |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| yasa       | HMC      |         10 | N1%     | norm_entropy_reg |      0.919 |        0.040 |       26.811 |         23.849 |           37.299 |
+| yasa       | HMC      |         10 | N1%     | norm_ffbs        |      0.926 |        0.060 |       30.432 |         25.520 |           40.232 |
+| yasa       | HMC      |         10 | N1%     | norm_reg_ffbs    |      0.921 |        0.080 |       28.774 |         23.963 |           39.891 |
+| yasa       | HMC      |         10 | N1%     | norm_reg_plugc   |      0.922 |        0.080 |       30.466 |         24.663 |           44.393 |
+| yasa       | HMC      |         10 | N1%     | scp_abs_bc       |      0.890 |        0.220 |       28.272 |         26.178 |           44.260 |
+| yasa       | HMC      |         10 | N1%     | scp_abs_cal      |      0.916 |        0.100 |       30.340 |         23.668 |           46.043 |
+| yasa       | HMC      |         10 | N1%     | scp_abs_mu       |      0.913 |        0.080 |       27.816 |         24.102 |           40.354 |
+| yasa       | HMC      |         10 | N1%     | scp_signed       |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| yasa       | HMC      |         10 | N2%     | ba_loa           |      0.906 |        0.100 |       37.660 |         35.513 |           52.557 |
+| yasa       | HMC      |         10 | N2%     | ba_reg           |      0.753 |        0.540 |       20.844 |         20.854 |           48.660 |
+| yasa       | HMC      |         10 | N2%     | cqr_ffbs         |      0.940 |        0.020 |       35.291 |         32.996 |           40.665 |
+| yasa       | HMC      |         10 | N2%     | cqr_qr           |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| yasa       | HMC      |         10 | N2%     | norm_entropy_reg |      0.931 |        0.060 |       35.203 |         32.071 |           41.243 |
+| yasa       | HMC      |         10 | N2%     | norm_ffbs        |      0.927 |        0.040 |       36.106 |         33.395 |           42.029 |
+| yasa       | HMC      |         10 | N2%     | norm_reg_ffbs    |      0.938 |        0.020 |       35.429 |         33.125 |           40.987 |
+| yasa       | HMC      |         10 | N2%     | norm_reg_plugc   |      0.927 |        0.040 |       46.975 |         45.556 |           58.177 |
+| yasa       | HMC      |         10 | N2%     | scp_abs_bc       |      0.910 |        0.100 |       41.425 |         35.238 |           55.532 |
+| yasa       | HMC      |         10 | N2%     | scp_abs_cal      |      0.924 |        0.100 |       51.693 |         48.727 |           64.287 |
+| yasa       | HMC      |         10 | N2%     | scp_abs_mu       |      0.938 |        0.020 |       35.589 |         33.486 |           41.366 |
+| yasa       | HMC      |         10 | N2%     | scp_signed       |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| yasa       | HMC      |         10 | N3%     | ba_loa           |      0.900 |        0.100 |       27.381 |         26.741 |           36.981 |
+| yasa       | HMC      |         10 | N3%     | ba_reg           |      0.769 |        0.580 |       19.928 |         19.026 |           44.770 |
+| yasa       | HMC      |         10 | N3%     | cqr_ffbs         |      0.922 |        0.080 |       35.872 |         34.664 |           42.498 |
+| yasa       | HMC      |         10 | N3%     | cqr_qr           |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| yasa       | HMC      |         10 | N3%     | norm_entropy_reg |      0.920 |        0.100 |       36.419 |         35.754 |           43.466 |
+| yasa       | HMC      |         10 | N3%     | norm_ffbs        |      0.920 |        0.140 |       35.673 |         34.960 |           42.174 |
+| yasa       | HMC      |         10 | N3%     | norm_reg_ffbs    |      0.921 |        0.060 |       34.830 |         32.898 |           41.337 |
+| yasa       | HMC      |         10 | N3%     | norm_reg_plugc   |      0.921 |        0.080 |       31.828 |         32.478 |           39.248 |
+| yasa       | HMC      |         10 | N3%     | scp_abs_bc       |      0.881 |        0.180 |       27.303 |         23.910 |           38.552 |
+| yasa       | HMC      |         10 | N3%     | scp_abs_cal      |      0.912 |        0.100 |       31.618 |         28.485 |           40.313 |
+| yasa       | HMC      |         10 | N3%     | scp_abs_mu       |      0.925 |        0.060 |       37.428 |         36.477 |           44.492 |
+| yasa       | HMC      |         10 | N3%     | scp_signed       |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| yasa       | HMC      |         10 | REM%    | ba_loa           |      0.918 |        0.020 |       20.702 |         20.021 |           27.488 |
+| yasa       | HMC      |         10 | REM%    | ba_reg           |      0.780 |        0.420 |       13.854 |         13.979 |           28.129 |
+| yasa       | HMC      |         10 | REM%    | cqr_ffbs         |      0.941 |        0.040 |       26.378 |         25.292 |           29.971 |
+| yasa       | HMC      |         10 | REM%    | cqr_qr           |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| yasa       | HMC      |         10 | REM%    | norm_entropy_reg |      0.937 |        0.060 |       26.014 |         25.876 |           29.657 |
+| yasa       | HMC      |         10 | REM%    | norm_ffbs        |      0.944 |        0.040 |       28.927 |         26.315 |           32.121 |
+| yasa       | HMC      |         10 | REM%    | norm_reg_ffbs    |      0.944 |        0.040 |       26.766 |         25.852 |           30.027 |
+| yasa       | HMC      |         10 | REM%    | norm_reg_plugc   |      0.923 |        0.060 |       22.427 |         20.277 |           28.086 |
+| yasa       | HMC      |         10 | REM%    | scp_abs_bc       |      0.909 |        0.060 |       21.226 |         19.789 |           28.741 |
+| yasa       | HMC      |         10 | REM%    | scp_abs_cal      |      0.914 |        0.060 |       21.949 |         20.626 |           28.727 |
+| yasa       | HMC      |         10 | REM%    | scp_abs_mu       |      0.935 |        0.100 |       26.651 |         26.122 |           31.013 |
+| yasa       | HMC      |         10 | REM%    | scp_signed       |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| yasa       | HMC      |         10 | REML    | ba_loa           |      0.847 |        0.400 |      167.781 |        158.499 |          365.728 |
+| yasa       | HMC      |         10 | REML    | ba_reg           |      0.711 |        0.720 |      120.506 |        104.008 |          476.319 |
+| yasa       | HMC      |         10 | REML    | cqr_ffbs         |      0.910 |        0.140 |      195.196 |        174.517 |          310.264 |
+| yasa       | HMC      |         10 | REML    | cqr_qr           |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| yasa       | HMC      |         10 | REML    | norm_entropy_reg |      0.889 |        0.200 |      214.026 |        209.065 |          370.722 |
+| yasa       | HMC      |         10 | REML    | norm_ffbs        |      0.897 |        0.120 |      206.656 |        182.198 |          334.455 |
+| yasa       | HMC      |         10 | REML    | norm_reg_ffbs    |      0.894 |        0.120 |      201.296 |        181.041 |          347.162 |
+| yasa       | HMC      |         10 | REML    | norm_reg_plugc   |      0.879 |        0.160 |      200.056 |        183.713 |          365.548 |
+| yasa       | HMC      |         10 | REML    | scp_abs_bc       |      0.870 |        0.200 |      188.839 |        161.696 |          357.246 |
+| yasa       | HMC      |         10 | REML    | scp_abs_cal      |      0.882 |        0.160 |      221.588 |        193.507 |          403.758 |
+| yasa       | HMC      |         10 | REML    | scp_abs_mu       |      0.888 |        0.180 |      224.488 |        214.520 |          388.295 |
+| yasa       | HMC      |         10 | REML    | scp_signed       |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| yasa       | HMC      |         10 | SOL     | ba_loa           |      0.887 |        0.120 |       22.967 |         19.558 |           53.384 |
+| yasa       | HMC      |         10 | SOL     | ba_reg           |      0.763 |        0.600 |       16.472 |         15.107 |           55.063 |
+| yasa       | HMC      |         10 | SOL     | cqr_ffbs         |      0.919 |        0.060 |       32.755 |         19.732 |           64.695 |
+| yasa       | HMC      |         10 | SOL     | cqr_qr           |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| yasa       | HMC      |         10 | SOL     | norm_entropy_reg |      0.895 |        0.180 |       41.357 |         28.796 |           88.286 |
+| yasa       | HMC      |         10 | SOL     | norm_ffbs        |      0.907 |        0.100 |       28.541 |         21.546 |           64.862 |
+| yasa       | HMC      |         10 | SOL     | norm_reg_ffbs    |      0.898 |        0.160 |       30.251 |         21.537 |           73.213 |
+| yasa       | HMC      |         10 | SOL     | norm_reg_plugc   |      0.901 |        0.120 |       26.706 |         19.323 |           57.194 |
+| yasa       | HMC      |         10 | SOL     | scp_abs_bc       |      0.897 |        0.140 |       26.388 |         22.545 |           54.302 |
+| yasa       | HMC      |         10 | SOL     | scp_abs_cal      |      0.891 |        0.140 |       31.499 |         19.374 |           66.482 |
+| yasa       | HMC      |         10 | SOL     | scp_abs_mu       |      0.891 |        0.200 |       40.624 |         29.676 |           88.454 |
+| yasa       | HMC      |         10 | SOL     | scp_signed       |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| yasa       | HMC      |         10 | TST     | ba_loa           |      0.919 |        0.100 |      149.018 |        135.292 |          230.319 |
+| yasa       | HMC      |         10 | TST     | ba_reg           |      0.789 |        0.560 |      103.200 |         87.929 |          248.552 |
+| yasa       | HMC      |         10 | TST     | cqr_ffbs         |      0.915 |        0.120 |      145.910 |        126.855 |          197.585 |
+| yasa       | HMC      |         10 | TST     | cqr_qr           |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| yasa       | HMC      |         10 | TST     | norm_entropy_reg |      0.914 |        0.140 |      143.151 |        131.830 |          197.699 |
+| yasa       | HMC      |         10 | TST     | norm_ffbs        |      0.920 |        0.080 |      121.574 |        107.625 |          162.534 |
+| yasa       | HMC      |         10 | TST     | norm_reg_ffbs    |      0.918 |        0.100 |      131.970 |        111.425 |          180.646 |
+| yasa       | HMC      |         10 | TST     | norm_reg_plugc   |      0.912 |        0.140 |      136.728 |        122.279 |          190.694 |
+| yasa       | HMC      |         10 | TST     | scp_abs_bc       |      0.924 |        0.060 |      173.835 |        148.050 |          250.407 |
+| yasa       | HMC      |         10 | TST     | scp_abs_cal      |      0.909 |        0.180 |      160.000 |        149.500 |          224.726 |
+| yasa       | HMC      |         10 | TST     | scp_abs_mu       |      0.910 |        0.180 |      154.892 |        141.870 |          214.678 |
+| yasa       | HMC      |         10 | TST     | scp_signed       |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| yasa       | HMC      |         10 | WASO    | ba_loa           |      0.917 |        0.060 |      109.065 |        104.268 |          182.795 |
+| yasa       | HMC      |         10 | WASO    | ba_reg           |      0.813 |        0.400 |       82.107 |         77.627 |          186.326 |
+| yasa       | HMC      |         10 | WASO    | cqr_ffbs         |      0.924 |        0.100 |      118.262 |        115.520 |          162.946 |
+| yasa       | HMC      |         10 | WASO    | cqr_qr           |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| yasa       | HMC      |         10 | WASO    | norm_entropy_reg |      0.917 |        0.140 |      118.529 |        109.566 |          168.951 |
+| yasa       | HMC      |         10 | WASO    | norm_ffbs        |      0.924 |        0.120 |      110.464 |         99.597 |          149.744 |
+| yasa       | HMC      |         10 | WASO    | norm_reg_ffbs    |      0.923 |        0.120 |      114.794 |        109.644 |          159.831 |
+| yasa       | HMC      |         10 | WASO    | norm_reg_plugc   |      0.917 |        0.100 |      108.708 |        107.862 |          158.295 |
+| yasa       | HMC      |         10 | WASO    | scp_abs_bc       |      0.927 |        0.060 |      123.016 |        114.076 |          191.639 |
+| yasa       | HMC      |         10 | WASO    | scp_abs_cal      |      0.920 |        0.080 |      118.292 |        119.298 |          171.813 |
+| yasa       | HMC      |         10 | WASO    | scp_abs_mu       |      0.919 |        0.120 |      123.947 |        127.214 |          176.021 |
+| yasa       | HMC      |         10 | WASO    | scp_signed       |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| yasa       | HMC      |         20 | N1%     | ba_loa           |      0.897 |        0.120 |       25.384 |         23.003 |           40.939 |
+| yasa       | HMC      |         20 | N1%     | ba_reg           |      0.833 |        0.280 |       21.005 |         19.855 |           43.977 |
+| yasa       | HMC      |         20 | N1%     | cqr_ffbs         |      0.909 |        0.060 |       23.866 |         22.286 |           37.042 |
+| yasa       | HMC      |         20 | N1%     | cqr_qr           |      0.896 |        0.200 |       32.620 |         28.827 |           46.896 |
+| yasa       | HMC      |         20 | N1%     | norm_entropy_reg |      0.909 |        0.060 |       23.387 |         22.241 |           35.638 |
+| yasa       | HMC      |         20 | N1%     | norm_ffbs        |      0.914 |        0.060 |       24.454 |         22.854 |           36.326 |
+| yasa       | HMC      |         20 | N1%     | norm_reg_ffbs    |      0.912 |        0.080 |       23.901 |         21.963 |           36.542 |
+| yasa       | HMC      |         20 | N1%     | norm_reg_plugc   |      0.900 |        0.100 |       23.737 |         22.849 |           40.561 |
+| yasa       | HMC      |         20 | N1%     | scp_abs_bc       |      0.879 |        0.160 |       23.587 |         22.437 |           40.913 |
+| yasa       | HMC      |         20 | N1%     | scp_abs_cal      |      0.903 |        0.080 |       24.918 |         23.267 |           42.743 |
+| yasa       | HMC      |         20 | N1%     | scp_abs_mu       |      0.906 |        0.060 |       23.930 |         22.232 |           37.627 |
+| yasa       | HMC      |         20 | N1%     | scp_signed       |      0.893 |        0.080 |       32.032 |         27.523 |           45.817 |
+| yasa       | HMC      |         20 | N2%     | ba_loa           |      0.909 |        0.080 |       34.938 |         33.258 |           49.982 |
+| yasa       | HMC      |         20 | N2%     | ba_reg           |      0.824 |        0.360 |       22.314 |         21.772 |           40.442 |
+| yasa       | HMC      |         20 | N2%     | cqr_ffbs         |      0.908 |        0.080 |       29.807 |         29.222 |           37.409 |
+| yasa       | HMC      |         20 | N2%     | cqr_qr           |      0.904 |        0.120 |       52.587 |         50.568 |           67.785 |
+| yasa       | HMC      |         20 | N2%     | norm_entropy_reg |      0.914 |        0.080 |       30.363 |         30.023 |           37.770 |
+| yasa       | HMC      |         20 | N2%     | norm_ffbs        |      0.912 |        0.060 |       30.124 |         29.970 |           37.214 |
+| yasa       | HMC      |         20 | N2%     | norm_reg_ffbs    |      0.906 |        0.060 |       29.452 |         29.147 |           37.200 |
+| yasa       | HMC      |         20 | N2%     | norm_reg_plugc   |      0.910 |        0.060 |       39.043 |         38.564 |           53.026 |
+| yasa       | HMC      |         20 | N2%     | scp_abs_bc       |      0.882 |        0.160 |       31.860 |         30.608 |           49.917 |
+| yasa       | HMC      |         20 | N2%     | scp_abs_cal      |      0.909 |        0.100 |       42.009 |         41.480 |           57.090 |
+| yasa       | HMC      |         20 | N2%     | scp_abs_mu       |      0.907 |        0.100 |       30.136 |         29.285 |           38.542 |
+| yasa       | HMC      |         20 | N2%     | scp_signed       |      0.899 |        0.100 |       38.558 |         37.446 |           51.859 |
+| yasa       | HMC      |         20 | N3%     | ba_loa           |      0.898 |        0.080 |       25.594 |         24.692 |           34.920 |
+| yasa       | HMC      |         20 | N3%     | ba_reg           |      0.822 |        0.440 |       20.637 |         19.711 |           39.360 |
+| yasa       | HMC      |         20 | N3%     | cqr_ffbs         |      0.912 |        0.080 |       32.387 |         31.753 |           39.184 |
+| yasa       | HMC      |         20 | N3%     | cqr_qr           |      0.905 |        0.060 |       43.920 |         42.892 |           57.994 |
+| yasa       | HMC      |         20 | N3%     | norm_entropy_reg |      0.908 |        0.060 |       32.178 |         32.400 |           39.789 |
+| yasa       | HMC      |         20 | N3%     | norm_ffbs        |      0.916 |        0.100 |       32.035 |         31.348 |           37.854 |
+| yasa       | HMC      |         20 | N3%     | norm_reg_ffbs    |      0.911 |        0.080 |       31.620 |         30.955 |           38.163 |
+| yasa       | HMC      |         20 | N3%     | norm_reg_plugc   |      0.917 |        0.080 |       29.569 |         28.884 |           36.989 |
+| yasa       | HMC      |         20 | N3%     | scp_abs_bc       |      0.890 |        0.140 |       25.451 |         23.396 |           35.495 |
+| yasa       | HMC      |         20 | N3%     | scp_abs_cal      |      0.910 |        0.060 |       29.369 |         26.711 |           37.986 |
+| yasa       | HMC      |         20 | N3%     | scp_abs_mu       |      0.909 |        0.080 |       32.884 |         32.703 |           41.044 |
+| yasa       | HMC      |         20 | N3%     | scp_signed       |      0.899 |        0.120 |       28.538 |         26.948 |           36.892 |
+| yasa       | HMC      |         20 | REM%    | ba_loa           |      0.908 |        0.040 |       19.059 |         17.941 |           26.446 |
+| yasa       | HMC      |         20 | REM%    | ba_reg           |      0.843 |        0.220 |       14.616 |         14.504 |           23.893 |
+| yasa       | HMC      |         20 | REM%    | cqr_ffbs         |      0.919 |        0.060 |       22.950 |         22.299 |           27.542 |
+| yasa       | HMC      |         20 | REM%    | cqr_qr           |      0.890 |        0.160 |       30.476 |         26.583 |           40.361 |
+| yasa       | HMC      |         20 | REM%    | norm_entropy_reg |      0.923 |        0.040 |       23.334 |         23.033 |           27.733 |
+| yasa       | HMC      |         20 | REM%    | norm_ffbs        |      0.915 |        0.040 |       23.398 |         22.490 |           28.294 |
+| yasa       | HMC      |         20 | REM%    | norm_reg_ffbs    |      0.922 |        0.040 |       22.863 |         22.671 |           27.327 |
+| yasa       | HMC      |         20 | REM%    | norm_reg_plugc   |      0.911 |        0.060 |       18.148 |         17.334 |           24.043 |
+| yasa       | HMC      |         20 | REM%    | scp_abs_bc       |      0.900 |        0.080 |       18.462 |         17.830 |           26.565 |
+| yasa       | HMC      |         20 | REM%    | scp_abs_cal      |      0.913 |        0.080 |       19.293 |         18.222 |           25.517 |
+| yasa       | HMC      |         20 | REM%    | scp_abs_mu       |      0.924 |        0.040 |       24.286 |         23.875 |           29.410 |
+| yasa       | HMC      |         20 | REM%    | scp_signed       |      0.908 |        0.020 |       21.511 |         19.031 |           28.471 |
+| yasa       | HMC      |         20 | REML    | ba_loa           |      0.874 |        0.260 |      177.545 |        180.054 |          340.985 |
+| yasa       | HMC      |         20 | REML    | ba_reg           |      0.811 |        0.420 |      145.058 |        136.451 |          391.603 |
+| yasa       | HMC      |         20 | REML    | cqr_ffbs         |      0.896 |        0.080 |      171.047 |        156.813 |          288.129 |
+| yasa       | HMC      |         20 | REML    | cqr_qr           |      0.897 |        0.200 |      435.200 |        301.953 |          607.150 |
+| yasa       | HMC      |         20 | REML    | norm_entropy_reg |      0.899 |        0.080 |      208.331 |        193.729 |          352.259 |
+| yasa       | HMC      |         20 | REML    | norm_ffbs        |      0.897 |        0.100 |      183.034 |        174.226 |          303.076 |
+| yasa       | HMC      |         20 | REML    | norm_reg_ffbs    |      0.896 |        0.060 |      183.947 |        174.671 |          321.000 |
+| yasa       | HMC      |         20 | REML    | norm_reg_plugc   |      0.891 |        0.120 |      184.886 |        187.761 |          332.124 |
+| yasa       | HMC      |         20 | REML    | scp_abs_bc       |      0.885 |        0.140 |      188.532 |        183.188 |          338.458 |
+| yasa       | HMC      |         20 | REML    | scp_abs_cal      |      0.896 |        0.120 |      205.935 |        190.604 |          375.370 |
+| yasa       | HMC      |         20 | REML    | scp_abs_mu       |      0.898 |        0.080 |      215.003 |        198.195 |          370.264 |
+| yasa       | HMC      |         20 | REML    | scp_signed       |      0.899 |        0.140 |      234.055 |        198.773 |          359.808 |
+| yasa       | HMC      |         20 | SOL     | ba_loa           |      0.905 |        0.100 |       24.407 |         23.775 |           50.299 |
+| yasa       | HMC      |         20 | SOL     | ba_reg           |      0.821 |        0.340 |       17.775 |         18.243 |           48.329 |
+| yasa       | HMC      |         20 | SOL     | cqr_ffbs         |      0.917 |        0.060 |       23.938 |         19.407 |           56.254 |
+| yasa       | HMC      |         20 | SOL     | cqr_qr           |      0.910 |        0.120 |       50.860 |         33.092 |           82.415 |
+| yasa       | HMC      |         20 | SOL     | norm_entropy_reg |      0.903 |        0.100 |       31.796 |         29.288 |           76.701 |
+| yasa       | HMC      |         20 | SOL     | norm_ffbs        |      0.908 |        0.080 |       22.000 |         19.319 |           59.782 |
+| yasa       | HMC      |         20 | SOL     | norm_reg_ffbs    |      0.903 |        0.100 |       24.392 |         21.542 |           67.099 |
+| yasa       | HMC      |         20 | SOL     | norm_reg_plugc   |      0.910 |        0.060 |       22.115 |         19.195 |           51.812 |
+| yasa       | HMC      |         20 | SOL     | scp_abs_bc       |      0.898 |        0.140 |       25.080 |         24.404 |           52.491 |
+| yasa       | HMC      |         20 | SOL     | scp_abs_cal      |      0.909 |        0.060 |       25.778 |         20.088 |           57.921 |
+| yasa       | HMC      |         20 | SOL     | scp_abs_mu       |      0.906 |        0.080 |       32.133 |         30.691 |           76.945 |
+| yasa       | HMC      |         20 | SOL     | scp_signed       |      0.912 |        0.080 |       24.316 |         17.414 |           46.649 |
+| yasa       | HMC      |         20 | TST     | ba_loa           |      0.923 |        0.040 |      141.113 |        114.888 |          220.162 |
+| yasa       | HMC      |         20 | TST     | ba_reg           |      0.837 |        0.340 |      104.109 |         94.829 |          215.281 |
+| yasa       | HMC      |         20 | TST     | cqr_ffbs         |      0.914 |        0.120 |      119.538 |        116.411 |          169.698 |
+| yasa       | HMC      |         20 | TST     | cqr_qr           |      0.936 |        0.040 |      302.879 |        237.506 |          360.502 |
+| yasa       | HMC      |         20 | TST     | norm_entropy_reg |      0.914 |        0.100 |      119.088 |        121.691 |          171.237 |
+| yasa       | HMC      |         20 | TST     | norm_ffbs        |      0.914 |        0.060 |       96.074 |         93.989 |          136.778 |
+| yasa       | HMC      |         20 | TST     | norm_reg_ffbs    |      0.912 |        0.100 |      107.209 |         99.715 |          155.537 |
+| yasa       | HMC      |         20 | TST     | norm_reg_plugc   |      0.909 |        0.120 |      108.377 |        101.438 |          160.653 |
+| yasa       | HMC      |         20 | TST     | scp_abs_bc       |      0.907 |        0.040 |      121.971 |        113.275 |          209.000 |
+| yasa       | HMC      |         20 | TST     | scp_abs_cal      |      0.910 |        0.140 |      131.640 |        129.000 |          192.133 |
+| yasa       | HMC      |         20 | TST     | scp_abs_mu       |      0.913 |        0.120 |      130.768 |        130.493 |          186.985 |
+| yasa       | HMC      |         20 | TST     | scp_signed       |      0.918 |        0.060 |      180.800 |        147.250 |          249.475 |
+| yasa       | HMC      |         20 | WASO    | ba_loa           |      0.918 |        0.040 |      105.501 |         94.487 |          179.041 |
+| yasa       | HMC      |         20 | WASO    | ba_reg           |      0.841 |        0.240 |       84.391 |         83.487 |          156.008 |
+| yasa       | HMC      |         20 | WASO    | cqr_ffbs         |      0.921 |        0.040 |      102.710 |         97.648 |          149.424 |
+| yasa       | HMC      |         20 | WASO    | cqr_qr           |      0.927 |        0.080 |      166.713 |        153.738 |          224.796 |
+| yasa       | HMC      |         20 | WASO    | norm_entropy_reg |      0.923 |        0.040 |      105.300 |        101.579 |          155.077 |
+| yasa       | HMC      |         20 | WASO    | norm_ffbs        |      0.921 |        0.040 |       93.352 |         91.591 |          134.366 |
+| yasa       | HMC      |         20 | WASO    | norm_reg_ffbs    |      0.921 |        0.040 |       99.928 |         97.043 |          146.429 |
+| yasa       | HMC      |         20 | WASO    | norm_reg_plugc   |      0.921 |        0.020 |       91.971 |         85.489 |          139.708 |
+| yasa       | HMC      |         20 | WASO    | scp_abs_bc       |      0.914 |        0.000 |       97.493 |         93.557 |          173.551 |
+| yasa       | HMC      |         20 | WASO    | scp_abs_cal      |      0.921 |        0.020 |      102.231 |        102.611 |          155.554 |
+| yasa       | HMC      |         20 | WASO    | scp_abs_mu       |      0.919 |        0.080 |      110.445 |        113.671 |          162.486 |
+| yasa       | HMC      |         20 | WASO    | scp_signed       |      0.918 |        0.020 |      101.810 |         97.334 |          168.230 |
+| yasa       | HMC      |         30 | N1%     | ba_loa           |      0.914 |        0.020 |       25.809 |         24.587 |           39.702 |
+| yasa       | HMC      |         30 | N1%     | ba_reg           |      0.861 |        0.220 |       21.908 |         22.026 |           42.130 |
+| yasa       | HMC      |         30 | N1%     | cqr_ffbs         |      0.901 |        0.040 |       22.093 |         21.693 |           36.183 |
+| yasa       | HMC      |         30 | N1%     | cqr_qr           |      0.939 |        0.000 |       33.450 |         32.116 |           41.598 |
+| yasa       | HMC      |         30 | N1%     | norm_entropy_reg |      0.906 |        0.040 |       22.259 |         21.879 |           34.775 |
+| yasa       | HMC      |         30 | N1%     | norm_ffbs        |      0.903 |        0.060 |       22.620 |         22.173 |           35.628 |
+| yasa       | HMC      |         30 | N1%     | norm_reg_ffbs    |      0.902 |        0.060 |       22.239 |         21.750 |           35.876 |
+| yasa       | HMC      |         30 | N1%     | norm_reg_plugc   |      0.904 |        0.080 |       22.851 |         22.631 |           39.349 |
+| yasa       | HMC      |         30 | N1%     | scp_abs_bc       |      0.895 |        0.060 |       23.619 |         23.767 |           39.513 |
+| yasa       | HMC      |         30 | N1%     | scp_abs_cal      |      0.904 |        0.060 |       23.544 |         22.067 |           41.836 |
+| yasa       | HMC      |         30 | N1%     | scp_abs_mu       |      0.903 |        0.040 |       22.332 |         21.497 |           36.650 |
+| yasa       | HMC      |         30 | N1%     | scp_signed       |      0.932 |        0.000 |       37.944 |         34.799 |           47.042 |
+| yasa       | HMC      |         30 | N2%     | ba_loa           |      0.919 |        0.000 |       34.226 |         34.234 |           47.887 |
+| yasa       | HMC      |         30 | N2%     | ba_reg           |      0.837 |        0.240 |       22.277 |         22.931 |           38.037 |
+| yasa       | HMC      |         30 | N2%     | cqr_ffbs         |      0.898 |        0.100 |       28.180 |         27.977 |           36.448 |
+| yasa       | HMC      |         30 | N2%     | cqr_qr           |      0.928 |        0.100 |       45.213 |         41.134 |           53.066 |
+| yasa       | HMC      |         30 | N2%     | norm_entropy_reg |      0.900 |        0.080 |       28.685 |         28.108 |           36.874 |
+| yasa       | HMC      |         30 | N2%     | norm_ffbs        |      0.905 |        0.040 |       29.269 |         28.856 |           36.525 |
+| yasa       | HMC      |         30 | N2%     | norm_reg_ffbs    |      0.899 |        0.080 |       28.231 |         28.157 |           36.410 |
+| yasa       | HMC      |         30 | N2%     | norm_reg_plugc   |      0.902 |        0.040 |       37.020 |         37.390 |           51.780 |
+| yasa       | HMC      |         30 | N2%     | scp_abs_bc       |      0.888 |        0.080 |       30.860 |         29.145 |           48.089 |
+| yasa       | HMC      |         30 | N2%     | scp_abs_cal      |      0.902 |        0.020 |       39.679 |         39.592 |           55.434 |
+| yasa       | HMC      |         30 | N2%     | scp_abs_mu       |      0.897 |        0.100 |       28.328 |         27.202 |           37.336 |
+| yasa       | HMC      |         30 | N2%     | scp_signed       |      0.932 |        0.000 |       43.968 |         45.533 |           53.292 |
+| yasa       | HMC      |         30 | N3%     | ba_loa           |      0.898 |        0.080 |       25.047 |         25.973 |           34.314 |
+| yasa       | HMC      |         30 | N3%     | ba_reg           |      0.840 |        0.260 |       20.755 |         21.142 |           38.351 |
+| yasa       | HMC      |         30 | N3%     | cqr_ffbs         |      0.909 |        0.080 |       30.972 |         30.642 |           38.032 |
+| yasa       | HMC      |         30 | N3%     | cqr_qr           |      0.920 |        0.040 |       38.972 |         37.898 |           48.766 |
+| yasa       | HMC      |         30 | N3%     | norm_entropy_reg |      0.909 |        0.040 |       31.248 |         31.662 |           38.251 |
+| yasa       | HMC      |         30 | N3%     | norm_ffbs        |      0.914 |        0.060 |       30.603 |         30.372 |           36.372 |
+| yasa       | HMC      |         30 | N3%     | norm_reg_ffbs    |      0.908 |        0.080 |       30.446 |         30.058 |           36.944 |
+| yasa       | HMC      |         30 | N3%     | norm_reg_plugc   |      0.906 |        0.040 |       27.510 |         27.331 |           35.894 |
+| yasa       | HMC      |         30 | N3%     | scp_abs_bc       |      0.886 |        0.100 |       24.029 |         23.788 |           34.482 |
+| yasa       | HMC      |         30 | N3%     | scp_abs_cal      |      0.905 |        0.040 |       27.679 |         26.625 |           36.536 |
+| yasa       | HMC      |         30 | N3%     | scp_abs_mu       |      0.910 |        0.020 |       31.898 |         31.943 |           39.629 |
+| yasa       | HMC      |         30 | N3%     | scp_signed       |      0.930 |        0.040 |       32.068 |         32.908 |           38.067 |
+| yasa       | HMC      |         30 | REM%    | ba_loa           |      0.918 |        0.000 |       19.107 |         18.061 |           25.866 |
+| yasa       | HMC      |         30 | REM%    | ba_reg           |      0.881 |        0.080 |       15.418 |         14.977 |           22.493 |
+| yasa       | HMC      |         30 | REM%    | cqr_ffbs         |      0.919 |        0.000 |       22.455 |         22.081 |           26.922 |
+| yasa       | HMC      |         30 | REM%    | cqr_qr           |      0.945 |        0.020 |       29.899 |         26.695 |           34.903 |
+| yasa       | HMC      |         30 | REM%    | norm_entropy_reg |      0.920 |        0.020 |       22.652 |         22.555 |           27.099 |
+| yasa       | HMC      |         30 | REM%    | norm_ffbs        |      0.915 |        0.000 |       23.132 |         22.482 |           27.724 |
+| yasa       | HMC      |         30 | REM%    | norm_reg_ffbs    |      0.919 |        0.000 |       22.361 |         21.687 |           26.697 |
+| yasa       | HMC      |         30 | REM%    | norm_reg_plugc   |      0.913 |        0.000 |       17.299 |         16.894 |           23.120 |
+| yasa       | HMC      |         30 | REM%    | scp_abs_bc       |      0.898 |        0.040 |       17.887 |         17.799 |           25.770 |
+| yasa       | HMC      |         30 | REM%    | scp_abs_cal      |      0.913 |        0.000 |       17.968 |         17.013 |           24.239 |
+| yasa       | HMC      |         30 | REM%    | scp_abs_mu       |      0.920 |        0.020 |       23.070 |         22.434 |           28.455 |
+| yasa       | HMC      |         30 | REM%    | scp_signed       |      0.940 |        0.000 |       25.112 |         21.756 |           29.851 |
+| yasa       | HMC      |         30 | REML    | ba_loa           |      0.898 |        0.080 |      188.340 |        187.772 |          321.316 |
+| yasa       | HMC      |         30 | REML    | ba_reg           |      0.843 |        0.280 |      154.528 |        154.747 |          362.108 |
+| yasa       | HMC      |         30 | REML    | cqr_ffbs         |      0.903 |        0.040 |      156.537 |        144.531 |          281.770 |
+| yasa       | HMC      |         30 | REML    | cqr_qr           |      0.944 |        0.020 |      323.013 |        344.501 |          401.426 |
+| yasa       | HMC      |         30 | REML    | norm_entropy_reg |      0.896 |        0.060 |      197.699 |        195.639 |          348.577 |
+| yasa       | HMC      |         30 | REML    | norm_ffbs        |      0.903 |        0.000 |      172.675 |        169.022 |          287.589 |
+| yasa       | HMC      |         30 | REML    | norm_reg_ffbs    |      0.891 |        0.060 |      175.431 |        174.310 |          318.672 |
+| yasa       | HMC      |         30 | REML    | norm_reg_plugc   |      0.893 |        0.040 |      182.047 |        182.338 |          321.872 |
+| yasa       | HMC      |         30 | REML    | scp_abs_bc       |      0.898 |        0.060 |      185.521 |        184.125 |          321.085 |
+| yasa       | HMC      |         30 | REML    | scp_abs_cal      |      0.905 |        0.040 |      202.890 |        189.281 |          368.051 |
+| yasa       | HMC      |         30 | REML    | scp_abs_mu       |      0.898 |        0.060 |      203.393 |        207.614 |          363.944 |
+| yasa       | HMC      |         30 | REML    | scp_signed       |      0.944 |        0.000 |      293.769 |        298.521 |          359.550 |
+| yasa       | HMC      |         30 | SOL     | ba_loa           |      0.914 |        0.060 |       24.646 |         24.867 |           49.045 |
+| yasa       | HMC      |         30 | SOL     | ba_reg           |      0.865 |        0.200 |       18.960 |         19.133 |           41.623 |
+| yasa       | HMC      |         30 | SOL     | cqr_ffbs         |      0.926 |        0.020 |       21.434 |         19.764 |           54.740 |
+| yasa       | HMC      |         30 | SOL     | cqr_qr           |      0.946 |        0.020 |       45.337 |         33.556 |           63.051 |
+| yasa       | HMC      |         30 | SOL     | norm_entropy_reg |      0.899 |        0.100 |       27.369 |         27.281 |           75.473 |
+| yasa       | HMC      |         30 | SOL     | norm_ffbs        |      0.908 |        0.040 |       20.114 |         18.490 |           59.744 |
+| yasa       | HMC      |         30 | SOL     | norm_reg_ffbs    |      0.899 |        0.120 |       21.737 |         20.174 |           67.007 |
+| yasa       | HMC      |         30 | SOL     | norm_reg_plugc   |      0.908 |        0.080 |       20.340 |         17.543 |           51.549 |
+| yasa       | HMC      |         30 | SOL     | scp_abs_bc       |      0.899 |        0.140 |       23.179 |         23.090 |           51.591 |
+| yasa       | HMC      |         30 | SOL     | scp_abs_cal      |      0.902 |        0.120 |       22.735 |         20.271 |           57.475 |
+| yasa       | HMC      |         30 | SOL     | scp_abs_mu       |      0.898 |        0.100 |       28.624 |         27.121 |           76.298 |
+| yasa       | HMC      |         30 | SOL     | scp_signed       |      0.941 |        0.000 |       29.611 |         19.857 |           46.905 |
+| yasa       | HMC      |         30 | TST     | ba_loa           |      0.928 |        0.040 |      140.003 |        120.457 |          216.715 |
+| yasa       | HMC      |         30 | TST     | ba_reg           |      0.851 |        0.220 |      104.687 |         97.897 |          206.296 |
+| yasa       | HMC      |         30 | TST     | cqr_ffbs         |      0.901 |        0.080 |      104.776 |         95.409 |          163.877 |
+| yasa       | HMC      |         30 | TST     | cqr_qr           |      0.941 |        0.020 |      196.316 |        164.566 |          235.270 |
+| yasa       | HMC      |         30 | TST     | norm_entropy_reg |      0.902 |        0.060 |      104.171 |         99.339 |          164.302 |
+| yasa       | HMC      |         30 | TST     | norm_ffbs        |      0.904 |        0.060 |       86.720 |         81.300 |          134.889 |
+| yasa       | HMC      |         30 | TST     | norm_reg_ffbs    |      0.901 |        0.080 |       95.272 |         89.278 |          151.269 |
+| yasa       | HMC      |         30 | TST     | norm_reg_plugc   |      0.902 |        0.080 |       94.733 |         93.475 |          153.073 |
+| yasa       | HMC      |         30 | TST     | scp_abs_bc       |      0.912 |        0.020 |      119.232 |        111.117 |          205.221 |
+| yasa       | HMC      |         30 | TST     | scp_abs_cal      |      0.903 |        0.100 |      115.580 |        114.500 |          182.564 |
+| yasa       | HMC      |         30 | TST     | scp_abs_mu       |      0.903 |        0.060 |      116.178 |        114.214 |          180.260 |
+| yasa       | HMC      |         30 | TST     | scp_signed       |      0.941 |        0.020 |      213.630 |        181.500 |          271.731 |
+| yasa       | HMC      |         30 | WASO    | ba_loa           |      0.924 |        0.000 |      105.198 |         97.491 |          176.514 |
+| yasa       | HMC      |         30 | WASO    | ba_reg           |      0.858 |        0.180 |       87.288 |         85.887 |          144.697 |
+| yasa       | HMC      |         30 | WASO    | cqr_ffbs         |      0.911 |        0.020 |       92.406 |         91.555 |          147.055 |
+| yasa       | HMC      |         30 | WASO    | cqr_qr           |      0.930 |        0.040 |      149.800 |        135.357 |          198.435 |
+| yasa       | HMC      |         30 | WASO    | norm_entropy_reg |      0.913 |        0.020 |       94.341 |         90.252 |          152.131 |
+| yasa       | HMC      |         30 | WASO    | norm_ffbs        |      0.912 |        0.040 |       84.422 |         84.528 |          131.851 |
+| yasa       | HMC      |         30 | WASO    | norm_reg_ffbs    |      0.911 |        0.000 |       89.147 |         88.433 |          144.280 |
+| yasa       | HMC      |         30 | WASO    | norm_reg_plugc   |      0.901 |        0.060 |       80.343 |         76.255 |          139.690 |
+| yasa       | HMC      |         30 | WASO    | scp_abs_bc       |      0.908 |        0.040 |       93.834 |         90.430 |          173.808 |
+| yasa       | HMC      |         30 | WASO    | scp_abs_cal      |      0.906 |        0.040 |       90.643 |         91.597 |          154.965 |
+| yasa       | HMC      |         30 | WASO    | scp_abs_mu       |      0.910 |        0.060 |      100.517 |         96.224 |          161.191 |
+| yasa       | HMC      |         30 | WASO    | scp_signed       |      0.944 |        0.000 |      113.920 |        116.764 |          166.451 |
+| yasa       | ST       |         10 | N1%     | ba_loa           |      0.862 |        0.280 |       15.874 |         16.490 |           23.725 |
+| yasa       | ST       |         10 | N1%     | ba_reg           |      0.728 |        0.640 |       12.230 |         12.234 |           30.380 |
+| yasa       | ST       |         10 | N1%     | cqr_ffbs         |      0.906 |        0.160 |       17.687 |         17.931 |           24.498 |
+| yasa       | ST       |         10 | N1%     | cqr_qr           |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| yasa       | ST       |         10 | N1%     | norm_entropy_reg |      0.902 |        0.160 |       17.423 |         17.075 |           24.413 |
+| yasa       | ST       |         10 | N1%     | norm_ffbs        |      0.920 |        0.120 |       17.611 |         17.060 |           22.178 |
+| yasa       | ST       |         10 | N1%     | norm_reg_ffbs    |      0.910 |        0.160 |       17.638 |         17.379 |           23.698 |
+| yasa       | ST       |         10 | N1%     | norm_reg_plugc   |      0.930 |        0.160 |       17.300 |         17.775 |           21.871 |
+| yasa       | ST       |         10 | N1%     | scp_abs_bc       |      0.857 |        0.240 |       15.299 |         15.467 |           23.018 |
+| yasa       | ST       |         10 | N1%     | scp_abs_cal      |      0.921 |        0.140 |       17.375 |         18.126 |           22.845 |
+| yasa       | ST       |         10 | N1%     | scp_abs_mu       |      0.901 |        0.160 |       17.827 |         18.198 |           25.431 |
+| yasa       | ST       |         10 | N1%     | scp_signed       |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| yasa       | ST       |         10 | N2%     | ba_loa           |      0.838 |        0.320 |       34.013 |         32.931 |           47.814 |
+| yasa       | ST       |         10 | N2%     | ba_reg           |      0.710 |        0.640 |       26.752 |         26.278 |           60.240 |
+| yasa       | ST       |         10 | N2%     | cqr_ffbs         |      0.880 |        0.260 |       38.560 |         35.754 |           48.251 |
+| yasa       | ST       |         10 | N2%     | cqr_qr           |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| yasa       | ST       |         10 | N2%     | norm_entropy_reg |      0.882 |        0.260 |       39.156 |         37.414 |           48.448 |
+| yasa       | ST       |         10 | N2%     | norm_ffbs        |      0.890 |        0.220 |       43.793 |         41.012 |           52.789 |
+| yasa       | ST       |         10 | N2%     | norm_reg_ffbs    |      0.886 |        0.260 |       39.945 |         37.701 |           49.263 |
+| yasa       | ST       |         10 | N2%     | norm_reg_plugc   |      0.885 |        0.280 |       39.125 |         38.493 |           49.379 |
+| yasa       | ST       |         10 | N2%     | scp_abs_bc       |      0.804 |        0.460 |       30.828 |         29.932 |           49.510 |
+| yasa       | ST       |         10 | N2%     | scp_abs_cal      |      0.870 |        0.260 |       36.519 |         35.352 |           47.685 |
+| yasa       | ST       |         10 | N2%     | scp_abs_mu       |      0.883 |        0.260 |       38.022 |         35.333 |           47.581 |
+| yasa       | ST       |         10 | N2%     | scp_signed       |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| yasa       | ST       |         10 | N3%     | ba_loa           |      0.868 |        0.240 |       26.224 |         26.451 |           36.609 |
+| yasa       | ST       |         10 | N3%     | ba_reg           |      0.718 |        0.640 |       21.430 |         21.138 |           52.108 |
+| yasa       | ST       |         10 | N3%     | cqr_ffbs         |      0.898 |        0.220 |       30.169 |         31.618 |           37.930 |
+| yasa       | ST       |         10 | N3%     | cqr_qr           |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| yasa       | ST       |         10 | N3%     | norm_entropy_reg |      0.902 |        0.180 |       30.102 |         30.867 |           37.532 |
+| yasa       | ST       |         10 | N3%     | norm_ffbs        |      0.916 |        0.160 |       31.182 |         30.042 |           37.679 |
+| yasa       | ST       |         10 | N3%     | norm_reg_ffbs    |      0.908 |        0.200 |       30.183 |         30.780 |           37.290 |
+| yasa       | ST       |         10 | N3%     | norm_reg_plugc   |      0.896 |        0.280 |       28.528 |         29.504 |           37.067 |
+| yasa       | ST       |         10 | N3%     | scp_abs_bc       |      0.859 |        0.260 |       25.717 |         26.208 |           37.444 |
+| yasa       | ST       |         10 | N3%     | scp_abs_cal      |      0.891 |        0.260 |       28.745 |         30.072 |           38.114 |
+| yasa       | ST       |         10 | N3%     | scp_abs_mu       |      0.895 |        0.200 |       30.413 |         31.353 |           38.976 |
+| yasa       | ST       |         10 | N3%     | scp_signed       |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| yasa       | ST       |         10 | REM%    | ba_loa           |      0.849 |        0.280 |       18.441 |         18.320 |           29.892 |
+| yasa       | ST       |         10 | REM%    | ba_reg           |      0.718 |        0.540 |       13.778 |         13.473 |           34.839 |
+| yasa       | ST       |         10 | REM%    | cqr_ffbs         |      0.896 |        0.120 |       25.490 |         23.980 |           31.353 |
+| yasa       | ST       |         10 | REM%    | cqr_qr           |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| yasa       | ST       |         10 | REM%    | norm_entropy_reg |      0.896 |        0.140 |       26.248 |         23.762 |           32.471 |
+| yasa       | ST       |         10 | REM%    | norm_ffbs        |      0.896 |        0.200 |       28.930 |         25.670 |           35.403 |
+| yasa       | ST       |         10 | REM%    | norm_reg_ffbs    |      0.895 |        0.140 |       25.903 |         24.304 |           32.050 |
+| yasa       | ST       |         10 | REM%    | norm_reg_plugc   |      0.897 |        0.180 |       23.941 |         24.733 |           33.384 |
+| yasa       | ST       |         10 | REM%    | scp_abs_bc       |      0.844 |        0.380 |       18.008 |         19.453 |           30.510 |
+| yasa       | ST       |         10 | REM%    | scp_abs_cal      |      0.889 |        0.200 |       21.766 |         22.630 |           31.144 |
+| yasa       | ST       |         10 | REM%    | scp_abs_mu       |      0.901 |        0.120 |       25.866 |         24.079 |           31.537 |
+| yasa       | ST       |         10 | REM%    | scp_signed       |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| yasa       | ST       |         10 | REML    | ba_loa           |      0.849 |        0.320 |      126.904 |        131.437 |          245.686 |
+| yasa       | ST       |         10 | REML    | ba_reg           |      0.724 |        0.680 |       74.775 |         70.699 |          274.228 |
+| yasa       | ST       |         10 | REML    | cqr_ffbs         |      0.896 |        0.180 |      139.128 |        126.754 |          171.112 |
+| yasa       | ST       |         10 | REML    | cqr_qr           |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| yasa       | ST       |         10 | REML    | norm_entropy_reg |      0.898 |        0.160 |      181.907 |        178.420 |          238.860 |
+| yasa       | ST       |         10 | REML    | norm_ffbs        |      0.890 |        0.160 |      151.324 |        140.969 |          215.230 |
+| yasa       | ST       |         10 | REML    | norm_reg_ffbs    |      0.894 |        0.120 |      156.539 |        149.082 |          215.620 |
+| yasa       | ST       |         10 | REML    | norm_reg_plugc   |      0.903 |        0.180 |      177.889 |        182.773 |          251.575 |
+| yasa       | ST       |         10 | REML    | scp_abs_bc       |      0.869 |        0.280 |      143.548 |        156.796 |          230.145 |
+| yasa       | ST       |         10 | REML    | scp_abs_cal      |      0.908 |        0.160 |      184.287 |        186.919 |          260.281 |
+| yasa       | ST       |         10 | REML    | scp_abs_mu       |      0.894 |        0.120 |      170.567 |        163.458 |          222.017 |
+| yasa       | ST       |         10 | REML    | scp_signed       |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| yasa       | ST       |         10 | SOL     | ba_loa           |      0.850 |        0.280 |       11.630 |         10.848 |           20.497 |
+| yasa       | ST       |         10 | SOL     | ba_reg           |      0.707 |        0.680 |        8.906 |          8.473 |           26.023 |
+| yasa       | ST       |         10 | SOL     | cqr_ffbs         |      0.941 |        0.080 |       20.667 |         17.182 |           27.323 |
+| yasa       | ST       |         10 | SOL     | cqr_qr           |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| yasa       | ST       |         10 | SOL     | norm_entropy_reg |      0.911 |        0.140 |       27.725 |         27.046 |           44.338 |
+| yasa       | ST       |         10 | SOL     | norm_ffbs        |      0.928 |        0.100 |       20.443 |         18.220 |           31.969 |
+| yasa       | ST       |         10 | SOL     | norm_reg_ffbs    |      0.922 |        0.100 |       22.613 |         19.509 |           36.978 |
+| yasa       | ST       |         10 | SOL     | norm_reg_plugc   |      0.891 |        0.200 |       15.763 |         13.628 |           29.409 |
+| yasa       | ST       |         10 | SOL     | scp_abs_bc       |      0.852 |        0.300 |       11.855 |         11.007 |           21.139 |
+| yasa       | ST       |         10 | SOL     | scp_abs_cal      |      0.895 |        0.180 |       16.920 |         13.691 |           32.385 |
+| yasa       | ST       |         10 | SOL     | scp_abs_mu       |      0.911 |        0.180 |       28.804 |         27.223 |           46.213 |
+| yasa       | ST       |         10 | SOL     | scp_signed       |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| yasa       | ST       |         10 | TST     | ba_loa           |      0.883 |        0.220 |       60.783 |         56.189 |          106.373 |
+| yasa       | ST       |         10 | TST     | ba_reg           |      0.742 |        0.640 |       42.409 |         38.538 |          116.333 |
+| yasa       | ST       |         10 | TST     | cqr_ffbs         |      0.924 |        0.140 |       48.547 |         44.370 |           64.329 |
+| yasa       | ST       |         10 | TST     | cqr_qr           |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| yasa       | ST       |         10 | TST     | norm_entropy_reg |      0.909 |        0.180 |       50.754 |         44.752 |           69.960 |
+| yasa       | ST       |         10 | TST     | norm_ffbs        |      0.926 |        0.080 |       42.956 |         42.135 |           55.911 |
+| yasa       | ST       |         10 | TST     | norm_reg_ffbs    |      0.917 |        0.180 |       45.684 |         42.901 |           63.032 |
+| yasa       | ST       |         10 | TST     | norm_reg_plugc   |      0.901 |        0.220 |       36.566 |         37.216 |           47.412 |
+| yasa       | ST       |         10 | TST     | scp_abs_bc       |      0.893 |        0.220 |       69.336 |         66.150 |          108.738 |
+| yasa       | ST       |         10 | TST     | scp_abs_cal      |      0.892 |        0.200 |       40.120 |         40.000 |           54.861 |
+| yasa       | ST       |         10 | TST     | scp_abs_mu       |      0.908 |        0.180 |       52.939 |         49.178 |           74.064 |
+| yasa       | ST       |         10 | TST     | scp_signed       |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| yasa       | ST       |         10 | WASO    | ba_loa           |      0.881 |        0.300 |       40.047 |         36.968 |           77.366 |
+| yasa       | ST       |         10 | WASO    | ba_reg           |      0.746 |        0.640 |       27.829 |         25.598 |           76.431 |
+| yasa       | ST       |         10 | WASO    | cqr_ffbs         |      0.900 |        0.180 |       55.394 |         48.810 |           77.539 |
+| yasa       | ST       |         10 | WASO    | cqr_qr           |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| yasa       | ST       |         10 | WASO    | norm_entropy_reg |      0.883 |        0.280 |       63.056 |         59.993 |           97.213 |
+| yasa       | ST       |         10 | WASO    | norm_ffbs        |      0.902 |        0.200 |       52.620 |         53.431 |           73.992 |
+| yasa       | ST       |         10 | WASO    | norm_reg_ffbs    |      0.893 |        0.220 |       54.892 |         50.273 |           82.510 |
+| yasa       | ST       |         10 | WASO    | norm_reg_plugc   |      0.889 |        0.240 |       34.709 |         37.744 |           50.404 |
+| yasa       | ST       |         10 | WASO    | scp_abs_bc       |      0.895 |        0.220 |       45.009 |         38.363 |           78.562 |
+| yasa       | ST       |         10 | WASO    | scp_abs_cal      |      0.883 |        0.200 |       35.227 |         36.096 |           54.150 |
+| yasa       | ST       |         10 | WASO    | scp_abs_mu       |      0.886 |        0.260 |       64.574 |         63.822 |           99.909 |
+| yasa       | ST       |         10 | WASO    | scp_signed       |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| yasa       | ST       |         20 | N1%     | ba_loa           |      0.864 |        0.300 |       15.378 |         15.733 |           22.091 |
+| yasa       | ST       |         20 | N1%     | ba_reg           |      0.815 |        0.360 |       13.550 |         13.699 |           24.637 |
+| yasa       | ST       |         20 | N1%     | cqr_ffbs         |      0.898 |        0.220 |       16.924 |         17.181 |           24.723 |
+| yasa       | ST       |         20 | N1%     | cqr_qr           |      0.884 |        0.260 |       25.254 |         24.871 |           36.679 |
+| yasa       | ST       |         20 | N1%     | norm_entropy_reg |      0.901 |        0.200 |       16.760 |         17.000 |           24.719 |
+| yasa       | ST       |         20 | N1%     | norm_ffbs        |      0.908 |        0.180 |       16.035 |         16.091 |           22.224 |
+| yasa       | ST       |         20 | N1%     | norm_reg_ffbs    |      0.902 |        0.200 |       16.517 |         16.872 |           23.997 |
+| yasa       | ST       |         20 | N1%     | norm_reg_plugc   |      0.912 |        0.160 |       16.306 |         16.674 |           21.635 |
+| yasa       | ST       |         20 | N1%     | scp_abs_bc       |      0.871 |        0.280 |       15.629 |         15.625 |           21.236 |
+| yasa       | ST       |         20 | N1%     | scp_abs_cal      |      0.903 |        0.160 |       16.869 |         17.500 |           22.569 |
+| yasa       | ST       |         20 | N1%     | scp_abs_mu       |      0.892 |        0.280 |       17.334 |         17.789 |           25.676 |
+| yasa       | ST       |         20 | N1%     | scp_signed       |      0.875 |        0.300 |       16.538 |         17.602 |           22.238 |
+| yasa       | ST       |         20 | N2%     | ba_loa           |      0.877 |        0.220 |       33.773 |         32.940 |           43.180 |
+| yasa       | ST       |         20 | N2%     | ba_reg           |      0.825 |        0.360 |       30.620 |         29.847 |           45.880 |
+| yasa       | ST       |         20 | N2%     | cqr_ffbs         |      0.905 |        0.180 |       36.490 |         36.434 |           43.150 |
+| yasa       | ST       |         20 | N2%     | cqr_qr           |      0.897 |        0.160 |       61.465 |         58.480 |           79.360 |
+| yasa       | ST       |         20 | N2%     | norm_entropy_reg |      0.907 |        0.180 |       36.495 |         37.317 |           43.170 |
+| yasa       | ST       |         20 | N2%     | norm_ffbs        |      0.915 |        0.120 |       41.302 |         40.006 |           47.065 |
+| yasa       | ST       |         20 | N2%     | norm_reg_ffbs    |      0.906 |        0.180 |       37.571 |         37.172 |           44.102 |
+| yasa       | ST       |         20 | N2%     | norm_reg_plugc   |      0.907 |        0.160 |       41.462 |         41.709 |           49.099 |
+| yasa       | ST       |         20 | N2%     | scp_abs_bc       |      0.853 |        0.340 |       32.306 |         32.159 |           44.313 |
+| yasa       | ST       |         20 | N2%     | scp_abs_cal      |      0.891 |        0.220 |       37.868 |         37.022 |           47.528 |
+| yasa       | ST       |         20 | N2%     | scp_abs_mu       |      0.897 |        0.180 |       35.706 |         35.319 |           43.038 |
+| yasa       | ST       |         20 | N2%     | scp_signed       |      0.877 |        0.220 |       35.578 |         35.435 |           45.846 |
+| yasa       | ST       |         20 | N3%     | ba_loa           |      0.868 |        0.280 |       25.372 |         24.991 |           34.012 |
+| yasa       | ST       |         20 | N3%     | ba_reg           |      0.778 |        0.600 |       23.334 |         22.868 |           41.606 |
+| yasa       | ST       |         20 | N3%     | cqr_ffbs         |      0.911 |        0.120 |       27.693 |         28.060 |           32.136 |
+| yasa       | ST       |         20 | N3%     | cqr_qr           |      0.898 |        0.180 |       43.408 |         40.705 |           57.701 |
+| yasa       | ST       |         20 | N3%     | norm_entropy_reg |      0.908 |        0.180 |       27.911 |         28.388 |           32.265 |
+| yasa       | ST       |         20 | N3%     | norm_ffbs        |      0.924 |        0.080 |       28.243 |         28.583 |           31.585 |
+| yasa       | ST       |         20 | N3%     | norm_reg_ffbs    |      0.912 |        0.080 |       27.555 |         27.419 |           31.405 |
+| yasa       | ST       |         20 | N3%     | norm_reg_plugc   |      0.901 |        0.200 |       26.787 |         27.353 |           32.496 |
+| yasa       | ST       |         20 | N3%     | scp_abs_bc       |      0.868 |        0.280 |       25.620 |         25.697 |           34.056 |
+| yasa       | ST       |         20 | N3%     | scp_abs_cal      |      0.891 |        0.200 |       26.754 |         27.535 |           33.986 |
+| yasa       | ST       |         20 | N3%     | scp_abs_mu       |      0.907 |        0.120 |       28.027 |         27.556 |           33.273 |
+| yasa       | ST       |         20 | N3%     | scp_signed       |      0.882 |        0.220 |       26.530 |         27.779 |           35.351 |
+| yasa       | ST       |         20 | REM%    | ba_loa           |      0.895 |        0.080 |       18.907 |         19.721 |           27.209 |
+| yasa       | ST       |         20 | REM%    | ba_reg           |      0.880 |        0.160 |       15.557 |         15.639 |           26.300 |
+| yasa       | ST       |         20 | REM%    | cqr_ffbs         |      0.916 |        0.140 |       25.388 |         25.362 |           29.067 |
+| yasa       | ST       |         20 | REM%    | cqr_qr           |      0.911 |        0.120 |       38.326 |         37.751 |           48.478 |
+| yasa       | ST       |         20 | REM%    | norm_entropy_reg |      0.918 |        0.080 |       26.075 |         24.848 |           30.469 |
+| yasa       | ST       |         20 | REM%    | norm_ffbs        |      0.937 |        0.120 |       30.132 |         30.195 |           33.854 |
+| yasa       | ST       |         20 | REM%    | norm_reg_ffbs    |      0.924 |        0.140 |       26.243 |         26.188 |           30.067 |
+| yasa       | ST       |         20 | REM%    | norm_reg_plugc   |      0.928 |        0.160 |       24.225 |         25.750 |           30.801 |
+| yasa       | ST       |         20 | REM%    | scp_abs_bc       |      0.893 |        0.160 |       19.356 |         20.781 |           27.779 |
+| yasa       | ST       |         20 | REM%    | scp_abs_cal      |      0.909 |        0.160 |       21.608 |         22.674 |           28.376 |
+| yasa       | ST       |         20 | REM%    | scp_abs_mu       |      0.912 |        0.100 |       25.035 |         24.434 |           28.841 |
+| yasa       | ST       |         20 | REM%    | scp_signed       |      0.916 |        0.120 |       21.759 |         21.938 |           27.932 |
+| yasa       | ST       |         20 | REML    | ba_loa           |      0.863 |        0.260 |      132.840 |        136.965 |          221.539 |
+| yasa       | ST       |         20 | REML    | ba_reg           |      0.820 |        0.440 |       88.621 |         88.156 |          201.928 |
+| yasa       | ST       |         20 | REML    | cqr_ffbs         |      0.930 |        0.080 |      128.901 |        126.366 |          147.899 |
+| yasa       | ST       |         20 | REML    | cqr_qr           |      0.918 |        0.080 |      392.411 |        226.322 |          625.159 |
+| yasa       | ST       |         20 | REML    | norm_entropy_reg |      0.927 |        0.140 |      179.456 |        184.275 |          224.404 |
+| yasa       | ST       |         20 | REML    | norm_ffbs        |      0.923 |        0.160 |      169.719 |        167.306 |          222.577 |
+| yasa       | ST       |         20 | REML    | norm_reg_ffbs    |      0.920 |        0.160 |      166.724 |        173.221 |          215.257 |
+| yasa       | ST       |         20 | REML    | norm_reg_plugc   |      0.920 |        0.080 |      174.095 |        177.418 |          224.513 |
+| yasa       | ST       |         20 | REML    | scp_abs_bc       |      0.905 |        0.120 |      158.482 |        160.221 |          204.134 |
+| yasa       | ST       |         20 | REML    | scp_abs_cal      |      0.912 |        0.100 |      177.713 |        184.010 |          224.012 |
+| yasa       | ST       |         20 | REML    | scp_abs_mu       |      0.919 |        0.140 |      163.347 |        168.964 |          205.979 |
+| yasa       | ST       |         20 | REML    | scp_signed       |      0.907 |        0.140 |      157.470 |        162.031 |          213.545 |
+| yasa       | ST       |         20 | SOL     | ba_loa           |      0.891 |        0.160 |       11.954 |         12.506 |           19.073 |
+| yasa       | ST       |         20 | SOL     | ba_reg           |      0.811 |        0.380 |        9.767 |          9.760 |           19.132 |
+| yasa       | ST       |         20 | SOL     | cqr_ffbs         |      0.938 |        0.080 |       16.792 |         16.390 |           26.494 |
+| yasa       | ST       |         20 | SOL     | cqr_qr           |      0.907 |        0.180 |       22.740 |         21.336 |           33.752 |
+| yasa       | ST       |         20 | SOL     | norm_entropy_reg |      0.897 |        0.200 |       23.025 |         21.889 |           45.031 |
+| yasa       | ST       |         20 | SOL     | norm_ffbs        |      0.909 |        0.120 |       17.589 |         17.413 |           33.818 |
+| yasa       | ST       |         20 | SOL     | norm_reg_ffbs    |      0.898 |        0.140 |       19.539 |         19.601 |           38.629 |
+| yasa       | ST       |         20 | SOL     | norm_reg_plugc   |      0.892 |        0.200 |       13.131 |         13.696 |           27.970 |
+| yasa       | ST       |         20 | SOL     | scp_abs_bc       |      0.882 |        0.180 |       11.818 |         11.048 |           19.837 |
+| yasa       | ST       |         20 | SOL     | scp_abs_cal      |      0.899 |        0.220 |       13.675 |         13.698 |           29.667 |
+| yasa       | ST       |         20 | SOL     | scp_abs_mu       |      0.897 |        0.180 |       23.565 |         23.024 |           45.597 |
+| yasa       | ST       |         20 | SOL     | scp_signed       |      0.892 |        0.240 |       12.574 |         12.510 |           18.391 |
+| yasa       | ST       |         20 | TST     | ba_loa           |      0.905 |        0.180 |       60.159 |         58.699 |           96.493 |
+| yasa       | ST       |         20 | TST     | ba_reg           |      0.840 |        0.400 |       49.477 |         48.403 |           93.398 |
+| yasa       | ST       |         20 | TST     | cqr_ffbs         |      0.902 |        0.140 |       37.267 |         37.110 |           55.108 |
+| yasa       | ST       |         20 | TST     | cqr_qr           |      0.938 |        0.080 |       87.417 |         77.127 |          104.430 |
+| yasa       | ST       |         20 | TST     | norm_entropy_reg |      0.887 |        0.220 |       37.920 |         38.523 |           58.060 |
+| yasa       | ST       |         20 | TST     | norm_ffbs        |      0.902 |        0.120 |       35.849 |         35.465 |           51.230 |
+| yasa       | ST       |         20 | TST     | norm_reg_ffbs    |      0.897 |        0.140 |       36.889 |         37.001 |           55.539 |
+| yasa       | ST       |         20 | TST     | norm_reg_plugc   |      0.892 |        0.180 |       32.326 |         32.349 |           41.140 |
+| yasa       | ST       |         20 | TST     | scp_abs_bc       |      0.903 |        0.180 |       60.830 |         60.100 |           97.453 |
+| yasa       | ST       |         20 | TST     | scp_abs_cal      |      0.899 |        0.160 |       35.260 |         36.000 |           46.260 |
+| yasa       | ST       |         20 | TST     | scp_abs_mu       |      0.892 |        0.160 |       39.583 |         40.837 |           60.882 |
+| yasa       | ST       |         20 | TST     | scp_signed       |      0.886 |        0.220 |       65.520 |         64.000 |           88.053 |
+| yasa       | ST       |         20 | WASO    | ba_loa           |      0.918 |        0.200 |       40.813 |         40.044 |           71.611 |
+| yasa       | ST       |         20 | WASO    | ba_reg           |      0.800 |        0.540 |       31.603 |         31.821 |           58.746 |
+| yasa       | ST       |         20 | WASO    | cqr_ffbs         |      0.897 |        0.160 |       50.130 |         50.914 |           78.734 |
+| yasa       | ST       |         20 | WASO    | cqr_qr           |      0.909 |        0.160 |       66.515 |         57.833 |           91.639 |
+| yasa       | ST       |         20 | WASO    | norm_entropy_reg |      0.890 |        0.180 |       55.745 |         52.188 |           98.825 |
+| yasa       | ST       |         20 | WASO    | norm_ffbs        |      0.897 |        0.160 |       50.563 |         50.208 |           76.726 |
+| yasa       | ST       |         20 | WASO    | norm_reg_ffbs    |      0.895 |        0.160 |       51.910 |         51.622 |           84.992 |
+| yasa       | ST       |         20 | WASO    | norm_reg_plugc   |      0.899 |        0.240 |       33.364 |         35.904 |           45.977 |
+| yasa       | ST       |         20 | WASO    | scp_abs_bc       |      0.897 |        0.200 |       34.356 |         32.475 |           68.711 |
+| yasa       | ST       |         20 | WASO    | scp_abs_cal      |      0.894 |        0.180 |       33.561 |         33.844 |           48.269 |
+| yasa       | ST       |         20 | WASO    | scp_abs_mu       |      0.888 |        0.180 |       57.447 |         54.611 |          100.524 |
+| yasa       | ST       |         20 | WASO    | scp_signed       |      0.866 |        0.260 |       34.748 |         35.583 |           60.490 |
+| yasa       | ST       |         30 | N1%     | ba_loa           |      0.887 |        0.240 |       15.334 |         15.544 |           20.155 |
+| yasa       | ST       |         30 | N1%     | ba_reg           |      0.830 |        0.380 |       13.882 |         13.979 |           21.438 |
+| yasa       | ST       |         30 | N1%     | cqr_ffbs         |      0.903 |        0.160 |       16.981 |         16.964 |           23.718 |
+| yasa       | ST       |         30 | N1%     | cqr_qr           |      0.960 |        0.040 |       25.707 |         25.001 |           28.783 |
+| yasa       | ST       |         30 | N1%     | norm_entropy_reg |      0.903 |        0.160 |       16.743 |         16.815 |           23.217 |
+| yasa       | ST       |         30 | N1%     | norm_ffbs        |      0.903 |        0.200 |       15.630 |         15.451 |           22.138 |
+| yasa       | ST       |         30 | N1%     | norm_reg_ffbs    |      0.901 |        0.160 |       16.441 |         16.177 |           23.122 |
+| yasa       | ST       |         30 | N1%     | norm_reg_plugc   |      0.910 |        0.060 |       16.052 |         16.007 |           20.330 |
+| yasa       | ST       |         30 | N1%     | scp_abs_bc       |      0.887 |        0.240 |       15.512 |         15.469 |           19.748 |
+| yasa       | ST       |         30 | N1%     | scp_abs_cal      |      0.913 |        0.060 |       16.735 |         16.781 |           20.290 |
+| yasa       | ST       |         30 | N1%     | scp_abs_mu       |      0.904 |        0.160 |       17.491 |         17.721 |           24.363 |
+| yasa       | ST       |         30 | N1%     | scp_signed       |      0.934 |        0.160 |       18.195 |         18.566 |           20.925 |
+| yasa       | ST       |         30 | N2%     | ba_loa           |      0.880 |        0.260 |       33.174 |         33.247 |           42.949 |
+| yasa       | ST       |         30 | N2%     | ba_reg           |      0.850 |        0.300 |       31.783 |         31.825 |           43.734 |
+| yasa       | ST       |         30 | N2%     | cqr_ffbs         |      0.891 |        0.240 |       35.205 |         34.687 |           42.990 |
+| yasa       | ST       |         30 | N2%     | cqr_qr           |      0.930 |        0.120 |       56.822 |         55.075 |           65.983 |
+| yasa       | ST       |         30 | N2%     | norm_entropy_reg |      0.889 |        0.240 |       35.029 |         35.263 |           42.983 |
+| yasa       | ST       |         30 | N2%     | norm_ffbs        |      0.904 |        0.180 |       38.148 |         38.202 |           44.677 |
+| yasa       | ST       |         30 | N2%     | norm_reg_ffbs    |      0.890 |        0.240 |       36.068 |         36.356 |           43.242 |
+| yasa       | ST       |         30 | N2%     | norm_reg_plugc   |      0.889 |        0.220 |       38.459 |         39.138 |           47.382 |
+| yasa       | ST       |         30 | N2%     | scp_abs_bc       |      0.871 |        0.260 |       32.922 |         32.562 |           43.862 |
+| yasa       | ST       |         30 | N2%     | scp_abs_cal      |      0.890 |        0.240 |       36.030 |         36.154 |           46.067 |
+| yasa       | ST       |         30 | N2%     | scp_abs_mu       |      0.891 |        0.220 |       34.401 |         34.216 |           43.041 |
+| yasa       | ST       |         30 | N2%     | scp_signed       |      0.903 |        0.200 |       39.048 |         39.414 |           46.133 |
+| yasa       | ST       |         30 | N3%     | ba_loa           |      0.879 |        0.220 |       25.263 |         25.392 |           32.710 |
+| yasa       | ST       |         30 | N3%     | ba_reg           |      0.826 |        0.440 |       24.592 |         24.119 |           34.226 |
+| yasa       | ST       |         30 | N3%     | cqr_ffbs         |      0.913 |        0.140 |       26.774 |         26.942 |           30.032 |
+| yasa       | ST       |         30 | N3%     | cqr_qr           |      0.931 |        0.120 |       46.059 |         44.458 |           53.093 |
+| yasa       | ST       |         30 | N3%     | norm_entropy_reg |      0.906 |        0.080 |       27.241 |         27.348 |           30.107 |
+| yasa       | ST       |         30 | N3%     | norm_ffbs        |      0.924 |        0.080 |       27.042 |         27.093 |           29.950 |
+| yasa       | ST       |         30 | N3%     | norm_reg_ffbs    |      0.911 |        0.120 |       26.620 |         26.593 |           29.514 |
+| yasa       | ST       |         30 | N3%     | norm_reg_plugc   |      0.903 |        0.120 |       26.365 |         26.065 |           30.214 |
+| yasa       | ST       |         30 | N3%     | scp_abs_bc       |      0.890 |        0.180 |       26.211 |         26.837 |           32.750 |
+| yasa       | ST       |         30 | N3%     | scp_abs_cal      |      0.897 |        0.160 |       26.559 |         26.973 |           31.271 |
+| yasa       | ST       |         30 | N3%     | scp_abs_mu       |      0.907 |        0.140 |       26.951 |         26.620 |           31.240 |
+| yasa       | ST       |         30 | N3%     | scp_signed       |      0.941 |        0.100 |       29.308 |         29.549 |           32.415 |
+| yasa       | ST       |         30 | REM%    | ba_loa           |      0.889 |        0.180 |       18.391 |         18.759 |           27.770 |
+| yasa       | ST       |         30 | REM%    | ba_reg           |      0.887 |        0.180 |       15.666 |         15.127 |           26.962 |
+| yasa       | ST       |         30 | REM%    | cqr_ffbs         |      0.909 |        0.180 |       23.644 |         23.921 |           28.141 |
+| yasa       | ST       |         30 | REM%    | cqr_qr           |      0.894 |        0.180 |       29.794 |         28.984 |           38.129 |
+| yasa       | ST       |         30 | REM%    | norm_entropy_reg |      0.903 |        0.180 |       23.661 |         23.834 |           28.782 |
+| yasa       | ST       |         30 | REM%    | norm_ffbs        |      0.920 |        0.140 |       26.185 |         26.015 |           30.611 |
+| yasa       | ST       |         30 | REM%    | norm_reg_ffbs    |      0.911 |        0.140 |       24.573 |         24.600 |           28.919 |
+| yasa       | ST       |         30 | REM%    | norm_reg_plugc   |      0.907 |        0.160 |       22.919 |         24.181 |           30.509 |
+| yasa       | ST       |         30 | REM%    | scp_abs_bc       |      0.890 |        0.160 |       19.523 |         20.670 |           28.107 |
+| yasa       | ST       |         30 | REM%    | scp_abs_cal      |      0.899 |        0.160 |       21.162 |         22.238 |           28.570 |
+| yasa       | ST       |         30 | REM%    | scp_abs_mu       |      0.904 |        0.220 |       23.329 |         23.735 |           27.705 |
+| yasa       | ST       |         30 | REM%    | scp_signed       |      0.940 |        0.080 |       23.970 |         25.462 |           27.562 |
+| yasa       | ST       |         30 | REML    | ba_loa           |      0.847 |        0.340 |      129.792 |        131.195 |          230.533 |
+| yasa       | ST       |         30 | REML    | ba_reg           |      0.834 |        0.420 |       90.441 |         93.182 |          195.621 |
+| yasa       | ST       |         30 | REML    | cqr_ffbs         |      0.903 |        0.260 |      121.248 |        122.872 |          145.002 |
+| yasa       | ST       |         30 | REML    | cqr_qr           |      0.936 |        0.100 |      240.224 |        210.178 |          287.121 |
+| yasa       | ST       |         30 | REML    | norm_entropy_reg |      0.889 |        0.200 |      155.684 |        157.038 |          215.771 |
+| yasa       | ST       |         30 | REML    | norm_ffbs        |      0.883 |        0.240 |      126.466 |        117.885 |          195.749 |
+| yasa       | ST       |         30 | REML    | norm_reg_ffbs    |      0.889 |        0.240 |      137.752 |        135.248 |          198.374 |
+| yasa       | ST       |         30 | REML    | norm_reg_plugc   |      0.891 |        0.240 |      164.929 |        165.743 |          227.669 |
+| yasa       | ST       |         30 | REML    | scp_abs_bc       |      0.893 |        0.220 |      161.153 |        165.681 |          209.956 |
+| yasa       | ST       |         30 | REML    | scp_abs_cal      |      0.891 |        0.240 |      175.534 |        182.232 |          229.691 |
+| yasa       | ST       |         30 | REML    | scp_abs_mu       |      0.883 |        0.220 |      151.573 |        154.294 |          202.539 |
+| yasa       | ST       |         30 | REML    | scp_signed       |      0.907 |        0.180 |      174.865 |        192.446 |          219.794 |
+| yasa       | ST       |         30 | SOL     | ba_loa           |      0.890 |        0.240 |       11.937 |         12.006 |           19.436 |
+| yasa       | ST       |         30 | SOL     | ba_reg           |      0.826 |        0.460 |       10.407 |         10.274 |           18.513 |
+| yasa       | ST       |         30 | SOL     | cqr_ffbs         |      0.950 |        0.080 |       16.160 |         16.109 |           25.098 |
+| yasa       | ST       |         30 | SOL     | cqr_qr           |      0.903 |        0.280 |       19.766 |         17.660 |           29.288 |
+| yasa       | ST       |         30 | SOL     | norm_entropy_reg |      0.889 |        0.220 |       20.958 |         20.166 |           44.577 |
+| yasa       | ST       |         30 | SOL     | norm_ffbs        |      0.906 |        0.140 |       17.145 |         16.989 |           32.820 |
+| yasa       | ST       |         30 | SOL     | norm_reg_ffbs    |      0.894 |        0.160 |       19.274 |         19.561 |           38.014 |
+| yasa       | ST       |         30 | SOL     | norm_reg_plugc   |      0.899 |        0.280 |       12.787 |         13.781 |           27.970 |
+| yasa       | ST       |         30 | SOL     | scp_abs_bc       |      0.887 |        0.280 |       10.981 |         11.320 |           19.752 |
+| yasa       | ST       |         30 | SOL     | scp_abs_cal      |      0.890 |        0.240 |       12.468 |         13.321 |           29.854 |
+| yasa       | ST       |         30 | SOL     | scp_abs_mu       |      0.889 |        0.240 |       22.009 |         21.447 |           44.835 |
+| yasa       | ST       |         30 | SOL     | scp_signed       |      0.926 |        0.240 |       14.151 |         14.661 |           17.865 |
+| yasa       | ST       |         30 | TST     | ba_loa           |      0.920 |        0.180 |       60.969 |         65.299 |           91.230 |
+| yasa       | ST       |         30 | TST     | ba_reg           |      0.894 |        0.220 |       50.665 |         50.332 |           79.988 |
+| yasa       | ST       |         30 | TST     | cqr_ffbs         |      0.916 |        0.140 |       37.109 |         36.951 |           52.587 |
+| yasa       | ST       |         30 | TST     | cqr_qr           |      0.941 |        0.100 |       76.509 |         67.073 |           84.762 |
+| yasa       | ST       |         30 | TST     | norm_entropy_reg |      0.920 |        0.080 |       37.747 |         37.503 |           54.572 |
+| yasa       | ST       |         30 | TST     | norm_ffbs        |      0.914 |        0.160 |       36.349 |         36.606 |           49.629 |
+| yasa       | ST       |         30 | TST     | norm_reg_ffbs    |      0.917 |        0.080 |       36.843 |         37.234 |           53.013 |
+| yasa       | ST       |         30 | TST     | norm_reg_plugc   |      0.909 |        0.180 |       33.245 |         34.153 |           40.903 |
+| yasa       | ST       |         30 | TST     | scp_abs_bc       |      0.920 |        0.180 |       60.735 |         65.117 |           92.644 |
+| yasa       | ST       |         30 | TST     | scp_abs_cal      |      0.910 |        0.200 |       35.320 |         36.000 |           44.277 |
+| yasa       | ST       |         30 | TST     | scp_abs_mu       |      0.903 |        0.220 |       38.523 |         37.997 |           57.861 |
+| yasa       | ST       |         30 | TST     | scp_signed       |      0.939 |        0.120 |       75.950 |         79.500 |           88.850 |
+| yasa       | ST       |         30 | WASO    | ba_loa           |      0.933 |        0.100 |       41.605 |         42.464 |           67.122 |
+| yasa       | ST       |         30 | WASO    | ba_reg           |      0.823 |        0.400 |       32.542 |         32.072 |           50.567 |
+| yasa       | ST       |         30 | WASO    | cqr_ffbs         |      0.920 |        0.100 |       51.614 |         53.438 |           75.850 |
+| yasa       | ST       |         30 | WASO    | cqr_qr           |      0.937 |        0.080 |       59.462 |         56.600 |           74.901 |
+| yasa       | ST       |         30 | WASO    | norm_entropy_reg |      0.901 |        0.180 |       55.851 |         53.608 |           92.775 |
+| yasa       | ST       |         30 | WASO    | norm_ffbs        |      0.919 |        0.100 |       53.467 |         53.480 |           75.167 |
+| yasa       | ST       |         30 | WASO    | norm_reg_ffbs    |      0.913 |        0.080 |       53.265 |         54.405 |           79.199 |
+| yasa       | ST       |         30 | WASO    | norm_reg_plugc   |      0.913 |        0.140 |       34.739 |         36.080 |           44.987 |
+| yasa       | ST       |         30 | WASO    | scp_abs_bc       |      0.904 |        0.180 |       31.070 |         31.343 |           60.911 |
+| yasa       | ST       |         30 | WASO    | scp_abs_cal      |      0.899 |        0.240 |       33.835 |         34.000 |           46.849 |
+| yasa       | ST       |         30 | WASO    | scp_abs_mu       |      0.906 |        0.160 |       58.233 |         56.101 |           95.152 |
+| yasa       | ST       |         30 | WASO    | scp_signed       |      0.930 |        0.160 |       38.509 |         38.286 |           54.724 |
+| lgbm_sc_s0 | HMC      |         10 | N1%     | ba_loa           |      0.917 |        0.080 |       32.650 |         30.763 |           45.796 |
+| lgbm_sc_s0 | HMC      |         10 | N1%     | ba_reg           |      0.776 |        0.440 |       19.274 |         18.333 |           47.332 |
+| lgbm_sc_s0 | HMC      |         10 | N1%     | cqr_ffbs         |      0.913 |        0.100 |       29.494 |         26.380 |           43.794 |
+| lgbm_sc_s0 | HMC      |         10 | N1%     | cqr_qr           |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| lgbm_sc_s0 | HMC      |         10 | N1%     | norm_entropy_reg |      0.912 |        0.100 |       28.661 |         25.607 |           42.320 |
+| lgbm_sc_s0 | HMC      |         10 | N1%     | norm_ffbs        |      0.920 |        0.100 |       33.648 |         26.660 |           47.232 |
+| lgbm_sc_s0 | HMC      |         10 | N1%     | norm_reg_ffbs    |      0.916 |        0.100 |       31.406 |         26.920 |           45.403 |
+| lgbm_sc_s0 | HMC      |         10 | N1%     | norm_reg_plugc   |      0.923 |        0.060 |       33.291 |         27.835 |           47.277 |
+| lgbm_sc_s0 | HMC      |         10 | N1%     | scp_abs_bc       |      0.904 |        0.120 |       32.730 |         29.682 |           47.435 |
+| lgbm_sc_s0 | HMC      |         10 | N1%     | scp_abs_cal      |      0.919 |        0.100 |       31.207 |         28.035 |           45.323 |
+| lgbm_sc_s0 | HMC      |         10 | N1%     | scp_abs_mu       |      0.910 |        0.120 |       29.184 |         26.644 |           43.724 |
+| lgbm_sc_s0 | HMC      |         10 | N1%     | scp_signed       |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| lgbm_sc_s0 | HMC      |         10 | N2%     | ba_loa           |      0.893 |        0.180 |       45.087 |         46.946 |           60.109 |
+| lgbm_sc_s0 | HMC      |         10 | N2%     | ba_reg           |      0.764 |        0.540 |       24.886 |         25.039 |           51.903 |
+| lgbm_sc_s0 | HMC      |         10 | N2%     | cqr_ffbs         |      0.937 |        0.020 |       46.169 |         43.642 |           53.734 |
+| lgbm_sc_s0 | HMC      |         10 | N2%     | cqr_qr           |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| lgbm_sc_s0 | HMC      |         10 | N2%     | norm_entropy_reg |      0.937 |        0.020 |       44.565 |         41.544 |           51.634 |
+| lgbm_sc_s0 | HMC      |         10 | N2%     | norm_ffbs        |      0.939 |        0.020 |       51.262 |         46.271 |           58.754 |
+| lgbm_sc_s0 | HMC      |         10 | N2%     | norm_reg_ffbs    |      0.940 |        0.020 |       47.739 |         44.076 |           55.205 |
+| lgbm_sc_s0 | HMC      |         10 | N2%     | norm_reg_plugc   |      0.912 |        0.140 |       47.435 |         45.629 |           56.453 |
+| lgbm_sc_s0 | HMC      |         10 | N2%     | scp_abs_bc       |      0.878 |        0.240 |       44.090 |         46.291 |           61.429 |
+| lgbm_sc_s0 | HMC      |         10 | N2%     | scp_abs_cal      |      0.916 |        0.140 |       47.804 |         47.911 |           56.517 |
+| lgbm_sc_s0 | HMC      |         10 | N2%     | scp_abs_mu       |      0.936 |        0.000 |       45.432 |         43.387 |           53.202 |
+| lgbm_sc_s0 | HMC      |         10 | N2%     | scp_signed       |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| lgbm_sc_s0 | HMC      |         10 | N3%     | ba_loa           |      0.897 |        0.100 |       36.413 |         35.291 |           49.704 |
+| lgbm_sc_s0 | HMC      |         10 | N3%     | ba_reg           |      0.755 |        0.560 |       26.028 |         25.921 |           60.190 |
+| lgbm_sc_s0 | HMC      |         10 | N3%     | cqr_ffbs         |      0.917 |        0.080 |       48.767 |         44.437 |           66.254 |
+| lgbm_sc_s0 | HMC      |         10 | N3%     | cqr_qr           |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| lgbm_sc_s0 | HMC      |         10 | N3%     | norm_entropy_reg |      0.919 |        0.100 |       49.058 |         45.747 |           65.707 |
+| lgbm_sc_s0 | HMC      |         10 | N3%     | norm_ffbs        |      0.920 |        0.080 |       48.907 |         48.004 |           63.481 |
+| lgbm_sc_s0 | HMC      |         10 | N3%     | norm_reg_ffbs    |      0.916 |        0.100 |       47.404 |         44.063 |           64.367 |
+| lgbm_sc_s0 | HMC      |         10 | N3%     | norm_reg_plugc   |      0.922 |        0.060 |       45.196 |         42.963 |           59.534 |
+| lgbm_sc_s0 | HMC      |         10 | N3%     | scp_abs_bc       |      0.884 |        0.160 |       36.136 |         35.481 |           51.402 |
+| lgbm_sc_s0 | HMC      |         10 | N3%     | scp_abs_cal      |      0.916 |        0.120 |       45.671 |         45.789 |           62.985 |
+| lgbm_sc_s0 | HMC      |         10 | N3%     | scp_abs_mu       |      0.918 |        0.080 |       49.626 |         46.792 |           67.823 |
+| lgbm_sc_s0 | HMC      |         10 | N3%     | scp_signed       |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| lgbm_sc_s0 | HMC      |         10 | REM%    | ba_loa           |      0.912 |        0.040 |       21.390 |         20.870 |           27.955 |
+| lgbm_sc_s0 | HMC      |         10 | REM%    | ba_reg           |      0.758 |        0.600 |       13.272 |         13.261 |           29.182 |
+| lgbm_sc_s0 | HMC      |         10 | REM%    | cqr_ffbs         |      0.935 |        0.060 |       27.542 |         25.640 |           31.427 |
+| lgbm_sc_s0 | HMC      |         10 | REM%    | cqr_qr           |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| lgbm_sc_s0 | HMC      |         10 | REM%    | norm_entropy_reg |      0.933 |        0.080 |       27.247 |         25.603 |           31.297 |
+| lgbm_sc_s0 | HMC      |         10 | REM%    | norm_ffbs        |      0.942 |        0.080 |       28.200 |         26.433 |           31.483 |
+| lgbm_sc_s0 | HMC      |         10 | REM%    | norm_reg_ffbs    |      0.937 |        0.060 |       27.466 |         25.668 |           31.254 |
+| lgbm_sc_s0 | HMC      |         10 | REM%    | norm_reg_plugc   |      0.931 |        0.020 |       22.704 |         21.984 |           27.852 |
+| lgbm_sc_s0 | HMC      |         10 | REM%    | scp_abs_bc       |      0.907 |        0.040 |       22.094 |         20.146 |           28.791 |
+| lgbm_sc_s0 | HMC      |         10 | REM%    | scp_abs_cal      |      0.927 |        0.040 |       22.746 |         21.853 |           28.120 |
+| lgbm_sc_s0 | HMC      |         10 | REM%    | scp_abs_mu       |      0.927 |        0.100 |       28.137 |         26.814 |           33.204 |
+| lgbm_sc_s0 | HMC      |         10 | REM%    | scp_signed       |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| lgbm_sc_s0 | HMC      |         10 | REML    | ba_loa           |      0.869 |        0.240 |      189.119 |        181.795 |          348.101 |
+| lgbm_sc_s0 | HMC      |         10 | REML    | ba_reg           |      0.751 |        0.500 |      134.846 |        128.591 |          466.995 |
+| lgbm_sc_s0 | HMC      |         10 | REML    | cqr_ffbs         |      0.907 |        0.100 |      235.454 |        230.095 |          409.269 |
+| lgbm_sc_s0 | HMC      |         10 | REML    | cqr_qr           |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| lgbm_sc_s0 | HMC      |         10 | REML    | norm_entropy_reg |      0.892 |        0.160 |      244.315 |        262.204 |          418.500 |
+| lgbm_sc_s0 | HMC      |         10 | REML    | norm_ffbs        |      0.916 |        0.100 |      275.417 |        252.338 |          417.010 |
+| lgbm_sc_s0 | HMC      |         10 | REML    | norm_reg_ffbs    |      0.905 |        0.100 |      250.598 |        247.525 |          415.031 |
+| lgbm_sc_s0 | HMC      |         10 | REML    | norm_reg_plugc   |      0.909 |        0.120 |      255.321 |        245.294 |          401.926 |
+| lgbm_sc_s0 | HMC      |         10 | REML    | scp_abs_bc       |      0.883 |        0.200 |      201.914 |        190.762 |          347.264 |
+| lgbm_sc_s0 | HMC      |         10 | REML    | scp_abs_cal      |      0.904 |        0.120 |      260.021 |        247.100 |          419.799 |
+| lgbm_sc_s0 | HMC      |         10 | REML    | scp_abs_mu       |      0.893 |        0.140 |      253.141 |        267.039 |          436.390 |
+| lgbm_sc_s0 | HMC      |         10 | REML    | scp_signed       |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| lgbm_sc_s0 | HMC      |         10 | SOL     | ba_loa           |      0.889 |        0.140 |       26.961 |         21.040 |           65.093 |
+| lgbm_sc_s0 | HMC      |         10 | SOL     | ba_reg           |      0.764 |        0.500 |       19.990 |         17.398 |           76.524 |
+| lgbm_sc_s0 | HMC      |         10 | SOL     | cqr_ffbs         |      0.896 |        0.100 |       37.947 |         23.845 |           83.542 |
+| lgbm_sc_s0 | HMC      |         10 | SOL     | cqr_qr           |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| lgbm_sc_s0 | HMC      |         10 | SOL     | norm_entropy_reg |      0.892 |        0.140 |       42.682 |         33.252 |           93.777 |
+| lgbm_sc_s0 | HMC      |         10 | SOL     | norm_ffbs        |      0.899 |        0.140 |       35.441 |         23.186 |           80.928 |
+| lgbm_sc_s0 | HMC      |         10 | SOL     | norm_reg_ffbs    |      0.892 |        0.120 |       36.388 |         25.856 |           85.703 |
+| lgbm_sc_s0 | HMC      |         10 | SOL     | norm_reg_plugc   |      0.914 |        0.120 |       31.915 |         24.393 |           64.175 |
+| lgbm_sc_s0 | HMC      |         10 | SOL     | scp_abs_bc       |      0.903 |        0.080 |       32.202 |         24.772 |           67.123 |
+| lgbm_sc_s0 | HMC      |         10 | SOL     | scp_abs_cal      |      0.910 |        0.120 |       34.118 |         25.805 |           67.852 |
+| lgbm_sc_s0 | HMC      |         10 | SOL     | scp_abs_mu       |      0.891 |        0.120 |       42.830 |         33.481 |           94.332 |
+| lgbm_sc_s0 | HMC      |         10 | SOL     | scp_signed       |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| lgbm_sc_s0 | HMC      |         10 | TST     | ba_loa           |      0.901 |        0.120 |      182.661 |        168.252 |          265.970 |
+| lgbm_sc_s0 | HMC      |         10 | TST     | ba_reg           |      0.786 |        0.480 |      136.058 |        128.874 |          288.743 |
+| lgbm_sc_s0 | HMC      |         10 | TST     | cqr_ffbs         |      0.920 |        0.120 |      177.733 |        179.851 |          236.182 |
+| lgbm_sc_s0 | HMC      |         10 | TST     | cqr_qr           |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| lgbm_sc_s0 | HMC      |         10 | TST     | norm_entropy_reg |      0.920 |        0.100 |      179.109 |        174.057 |          239.435 |
+| lgbm_sc_s0 | HMC      |         10 | TST     | norm_ffbs        |      0.925 |        0.120 |      153.696 |        154.844 |          204.036 |
+| lgbm_sc_s0 | HMC      |         10 | TST     | norm_reg_ffbs    |      0.923 |        0.100 |      166.857 |        164.952 |          223.124 |
+| lgbm_sc_s0 | HMC      |         10 | TST     | norm_reg_plugc   |      0.916 |        0.160 |      177.060 |        179.690 |          244.530 |
+| lgbm_sc_s0 | HMC      |         10 | TST     | scp_abs_bc       |      0.903 |        0.120 |      195.096 |        175.700 |          277.796 |
+| lgbm_sc_s0 | HMC      |         10 | TST     | scp_abs_cal      |      0.912 |        0.180 |      199.180 |        212.000 |          275.384 |
+| lgbm_sc_s0 | HMC      |         10 | TST     | scp_abs_mu       |      0.918 |        0.080 |      185.669 |        184.242 |          250.065 |
+| lgbm_sc_s0 | HMC      |         10 | TST     | scp_signed       |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| lgbm_sc_s0 | HMC      |         10 | WASO    | ba_loa           |      0.905 |        0.060 |      120.739 |        119.154 |          189.410 |
+| lgbm_sc_s0 | HMC      |         10 | WASO    | ba_reg           |      0.812 |        0.420 |       97.168 |         94.475 |          215.381 |
+| lgbm_sc_s0 | HMC      |         10 | WASO    | cqr_ffbs         |      0.915 |        0.160 |      128.592 |        143.055 |          172.377 |
+| lgbm_sc_s0 | HMC      |         10 | WASO    | cqr_qr           |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| lgbm_sc_s0 | HMC      |         10 | WASO    | norm_entropy_reg |      0.918 |        0.140 |      129.499 |        142.107 |          174.994 |
+| lgbm_sc_s0 | HMC      |         10 | WASO    | norm_ffbs        |      0.923 |        0.120 |      123.472 |        126.615 |          162.337 |
+| lgbm_sc_s0 | HMC      |         10 | WASO    | norm_reg_ffbs    |      0.920 |        0.160 |      126.918 |        135.561 |          170.222 |
+| lgbm_sc_s0 | HMC      |         10 | WASO    | norm_reg_plugc   |      0.911 |        0.140 |      126.516 |        119.366 |          176.669 |
+| lgbm_sc_s0 | HMC      |         10 | WASO    | scp_abs_bc       |      0.902 |        0.100 |      127.220 |        114.967 |          196.844 |
+| lgbm_sc_s0 | HMC      |         10 | WASO    | scp_abs_cal      |      0.904 |        0.160 |      132.028 |        131.807 |          191.244 |
+| lgbm_sc_s0 | HMC      |         10 | WASO    | scp_abs_mu       |      0.913 |        0.140 |      131.674 |        142.145 |          180.370 |
+| lgbm_sc_s0 | HMC      |         10 | WASO    | scp_signed       |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| lgbm_sc_s0 | HMC      |         20 | N1%     | ba_loa           |      0.916 |        0.040 |       30.457 |         28.995 |           44.146 |
+| lgbm_sc_s0 | HMC      |         20 | N1%     | ba_reg           |      0.847 |        0.300 |       20.737 |         20.044 |           39.910 |
+| lgbm_sc_s0 | HMC      |         20 | N1%     | cqr_ffbs         |      0.909 |        0.060 |       25.219 |         23.869 |           40.556 |
+| lgbm_sc_s0 | HMC      |         20 | N1%     | cqr_qr           |      0.915 |        0.100 |       37.153 |         36.099 |           51.282 |
+| lgbm_sc_s0 | HMC      |         20 | N1%     | norm_entropy_reg |      0.908 |        0.040 |       24.727 |         23.687 |           39.437 |
+| lgbm_sc_s0 | HMC      |         20 | N1%     | norm_ffbs        |      0.916 |        0.040 |       26.582 |         24.736 |           41.215 |
+| lgbm_sc_s0 | HMC      |         20 | N1%     | norm_reg_ffbs    |      0.911 |        0.040 |       25.589 |         24.455 |           40.773 |
+| lgbm_sc_s0 | HMC      |         20 | N1%     | norm_reg_plugc   |      0.912 |        0.080 |       26.832 |         25.075 |           43.008 |
+| lgbm_sc_s0 | HMC      |         20 | N1%     | scp_abs_bc       |      0.908 |        0.080 |       30.002 |         28.181 |           44.827 |
+| lgbm_sc_s0 | HMC      |         20 | N1%     | scp_abs_cal      |      0.908 |        0.060 |       26.062 |         24.173 |           42.542 |
+| lgbm_sc_s0 | HMC      |         20 | N1%     | scp_abs_mu       |      0.907 |        0.040 |       25.097 |         23.155 |           40.620 |
+| lgbm_sc_s0 | HMC      |         20 | N1%     | scp_signed       |      0.919 |        0.040 |       35.329 |         28.018 |           48.650 |
+| lgbm_sc_s0 | HMC      |         20 | N2%     | ba_loa           |      0.907 |        0.020 |       41.739 |         41.295 |           54.355 |
+| lgbm_sc_s0 | HMC      |         20 | N2%     | ba_reg           |      0.851 |        0.240 |       26.435 |         26.254 |           41.139 |
+| lgbm_sc_s0 | HMC      |         20 | N2%     | cqr_ffbs         |      0.916 |        0.020 |       38.503 |         36.824 |           48.530 |
+| lgbm_sc_s0 | HMC      |         20 | N2%     | cqr_qr           |      0.932 |        0.080 |       55.158 |         51.363 |           65.126 |
+| lgbm_sc_s0 | HMC      |         20 | N2%     | norm_entropy_reg |      0.912 |        0.020 |       37.628 |         36.351 |           47.248 |
+| lgbm_sc_s0 | HMC      |         20 | N2%     | norm_ffbs        |      0.921 |        0.020 |       40.994 |         39.508 |           50.660 |
+| lgbm_sc_s0 | HMC      |         20 | N2%     | norm_reg_ffbs    |      0.917 |        0.020 |       39.098 |         37.689 |           49.026 |
+| lgbm_sc_s0 | HMC      |         20 | N2%     | norm_reg_plugc   |      0.926 |        0.000 |       44.408 |         43.574 |           51.910 |
+| lgbm_sc_s0 | HMC      |         20 | N2%     | scp_abs_bc       |      0.904 |        0.060 |       42.614 |         42.844 |           56.056 |
+| lgbm_sc_s0 | HMC      |         20 | N2%     | scp_abs_cal      |      0.923 |        0.060 |       43.785 |         42.985 |           51.496 |
+| lgbm_sc_s0 | HMC      |         20 | N2%     | scp_abs_mu       |      0.914 |        0.020 |       38.197 |         37.008 |           48.305 |
+| lgbm_sc_s0 | HMC      |         20 | N2%     | scp_signed       |      0.909 |        0.080 |       46.451 |         45.209 |           58.501 |
+| lgbm_sc_s0 | HMC      |         20 | N3%     | ba_loa           |      0.899 |        0.040 |       34.851 |         35.291 |           47.921 |
+| lgbm_sc_s0 | HMC      |         20 | N3%     | ba_reg           |      0.822 |        0.320 |       27.242 |         27.672 |           50.396 |
+| lgbm_sc_s0 | HMC      |         20 | N3%     | cqr_ffbs         |      0.905 |        0.140 |       41.507 |         41.207 |           60.882 |
+| lgbm_sc_s0 | HMC      |         20 | N3%     | cqr_qr           |      0.908 |        0.120 |       54.111 |         51.715 |           71.246 |
+| lgbm_sc_s0 | HMC      |         20 | N3%     | norm_entropy_reg |      0.908 |        0.120 |       41.608 |         41.329 |           60.660 |
+| lgbm_sc_s0 | HMC      |         20 | N3%     | norm_ffbs        |      0.915 |        0.060 |       43.176 |         41.805 |           58.253 |
+| lgbm_sc_s0 | HMC      |         20 | N3%     | norm_reg_ffbs    |      0.909 |        0.120 |       41.189 |         40.906 |           59.524 |
+| lgbm_sc_s0 | HMC      |         20 | N3%     | norm_reg_plugc   |      0.909 |        0.080 |       39.831 |         39.881 |           56.388 |
+| lgbm_sc_s0 | HMC      |         20 | N3%     | scp_abs_bc       |      0.897 |        0.120 |       35.461 |         35.697 |           48.969 |
+| lgbm_sc_s0 | HMC      |         20 | N3%     | scp_abs_cal      |      0.901 |        0.140 |       39.425 |         39.715 |           59.066 |
+| lgbm_sc_s0 | HMC      |         20 | N3%     | scp_abs_mu       |      0.905 |        0.160 |       41.677 |         40.453 |           62.444 |
+| lgbm_sc_s0 | HMC      |         20 | N3%     | scp_signed       |      0.911 |        0.060 |       37.948 |         39.462 |           49.600 |
+| lgbm_sc_s0 | HMC      |         20 | REM%    | ba_loa           |      0.912 |        0.060 |       20.225 |         19.902 |           26.544 |
+| lgbm_sc_s0 | HMC      |         20 | REM%    | ba_reg           |      0.858 |        0.180 |       15.123 |         14.668 |           24.276 |
+| lgbm_sc_s0 | HMC      |         20 | REM%    | cqr_ffbs         |      0.930 |        0.040 |       24.491 |         23.718 |           28.347 |
+| lgbm_sc_s0 | HMC      |         20 | REM%    | cqr_qr           |      0.918 |        0.100 |       32.296 |         31.904 |           40.027 |
+| lgbm_sc_s0 | HMC      |         20 | REM%    | norm_entropy_reg |      0.925 |        0.040 |       24.206 |         23.551 |           28.205 |
+| lgbm_sc_s0 | HMC      |         20 | REM%    | norm_ffbs        |      0.939 |        0.040 |       24.642 |         23.746 |           28.015 |
+| lgbm_sc_s0 | HMC      |         20 | REM%    | norm_reg_ffbs    |      0.933 |        0.040 |       24.256 |         23.625 |           28.101 |
+| lgbm_sc_s0 | HMC      |         20 | REM%    | norm_reg_plugc   |      0.916 |        0.080 |       19.032 |         19.965 |           24.374 |
+| lgbm_sc_s0 | HMC      |         20 | REM%    | scp_abs_bc       |      0.902 |        0.060 |       19.574 |         18.889 |           26.514 |
+| lgbm_sc_s0 | HMC      |         20 | REM%    | scp_abs_cal      |      0.917 |        0.100 |       19.629 |         20.277 |           24.914 |
+| lgbm_sc_s0 | HMC      |         20 | REM%    | scp_abs_mu       |      0.919 |        0.040 |       25.296 |         24.361 |           30.006 |
+| lgbm_sc_s0 | HMC      |         20 | REM%    | scp_signed       |      0.917 |        0.060 |       22.529 |         22.460 |           28.578 |
+| lgbm_sc_s0 | HMC      |         20 | REML    | ba_loa           |      0.887 |        0.140 |      193.406 |        193.311 |          330.431 |
+| lgbm_sc_s0 | HMC      |         20 | REML    | ba_reg           |      0.829 |        0.340 |      162.698 |        158.226 |          384.775 |
+| lgbm_sc_s0 | HMC      |         20 | REML    | cqr_ffbs         |      0.903 |        0.120 |      223.865 |        210.741 |          412.753 |
+| lgbm_sc_s0 | HMC      |         20 | REML    | cqr_qr           |      0.916 |        0.120 |      365.885 |        340.156 |          508.579 |
+| lgbm_sc_s0 | HMC      |         20 | REML    | norm_entropy_reg |      0.896 |        0.120 |      241.562 |        258.225 |          415.408 |
+| lgbm_sc_s0 | HMC      |         20 | REML    | norm_ffbs        |      0.899 |        0.160 |      235.989 |        229.063 |          408.093 |
+| lgbm_sc_s0 | HMC      |         20 | REML    | norm_reg_ffbs    |      0.897 |        0.140 |      233.642 |        235.850 |          418.795 |
+| lgbm_sc_s0 | HMC      |         20 | REML    | norm_reg_plugc   |      0.904 |        0.120 |      245.267 |        237.901 |          400.000 |
+| lgbm_sc_s0 | HMC      |         20 | REML    | scp_abs_bc       |      0.893 |        0.140 |      197.574 |        187.837 |          329.182 |
+| lgbm_sc_s0 | HMC      |         20 | REML    | scp_abs_cal      |      0.909 |        0.100 |      258.861 |        265.510 |          411.679 |
+| lgbm_sc_s0 | HMC      |         20 | REML    | scp_abs_mu       |      0.897 |        0.120 |      249.832 |        259.916 |          433.632 |
+| lgbm_sc_s0 | HMC      |         20 | REML    | scp_signed       |      0.903 |        0.140 |      245.327 |        236.863 |          358.962 |
+| lgbm_sc_s0 | HMC      |         20 | SOL     | ba_loa           |      0.915 |        0.040 |       30.249 |         24.137 |           62.936 |
+| lgbm_sc_s0 | HMC      |         20 | SOL     | ba_reg           |      0.837 |        0.320 |       22.744 |         19.936 |           68.098 |
+| lgbm_sc_s0 | HMC      |         20 | SOL     | cqr_ffbs         |      0.901 |        0.120 |       28.299 |         21.889 |           75.333 |
+| lgbm_sc_s0 | HMC      |         20 | SOL     | cqr_qr           |      0.909 |        0.100 |       48.404 |         39.151 |          101.011 |
+| lgbm_sc_s0 | HMC      |         20 | SOL     | norm_entropy_reg |      0.902 |        0.080 |       34.023 |         34.670 |           82.947 |
+| lgbm_sc_s0 | HMC      |         20 | SOL     | norm_ffbs        |      0.895 |        0.140 |       26.513 |         21.955 |           75.065 |
+| lgbm_sc_s0 | HMC      |         20 | SOL     | norm_reg_ffbs    |      0.896 |        0.120 |       28.696 |         24.721 |           78.646 |
+| lgbm_sc_s0 | HMC      |         20 | SOL     | norm_reg_plugc   |      0.912 |        0.040 |       25.134 |         20.821 |           56.319 |
+| lgbm_sc_s0 | HMC      |         20 | SOL     | scp_abs_bc       |      0.908 |        0.040 |       28.320 |         21.472 |           63.093 |
+| lgbm_sc_s0 | HMC      |         20 | SOL     | scp_abs_cal      |      0.910 |        0.060 |       27.116 |         22.269 |           58.881 |
+| lgbm_sc_s0 | HMC      |         20 | SOL     | scp_abs_mu       |      0.901 |        0.120 |       34.570 |         34.513 |           83.722 |
+| lgbm_sc_s0 | HMC      |         20 | SOL     | scp_signed       |      0.914 |        0.040 |       42.188 |         24.340 |           74.759 |
+| lgbm_sc_s0 | HMC      |         20 | TST     | ba_loa           |      0.902 |        0.060 |      169.992 |        160.353 |          253.209 |
+| lgbm_sc_s0 | HMC      |         20 | TST     | ba_reg           |      0.823 |        0.360 |      133.282 |        131.610 |          253.006 |
+| lgbm_sc_s0 | HMC      |         20 | TST     | cqr_ffbs         |      0.918 |        0.040 |      141.103 |        142.513 |          195.135 |
+| lgbm_sc_s0 | HMC      |         20 | TST     | cqr_qr           |      0.949 |        0.040 |      337.235 |        312.420 |          383.641 |
+| lgbm_sc_s0 | HMC      |         20 | TST     | norm_entropy_reg |      0.917 |        0.060 |      144.545 |        150.537 |          200.595 |
+| lgbm_sc_s0 | HMC      |         20 | TST     | norm_ffbs        |      0.919 |        0.020 |      116.644 |        115.144 |          164.111 |
+| lgbm_sc_s0 | HMC      |         20 | TST     | norm_reg_ffbs    |      0.919 |        0.040 |      130.802 |        130.562 |          183.379 |
+| lgbm_sc_s0 | HMC      |         20 | TST     | norm_reg_plugc   |      0.916 |        0.040 |      139.464 |        136.467 |          200.899 |
+| lgbm_sc_s0 | HMC      |         20 | TST     | scp_abs_bc       |      0.908 |        0.100 |      185.152 |        180.775 |          262.893 |
+| lgbm_sc_s0 | HMC      |         20 | TST     | scp_abs_cal      |      0.915 |        0.060 |      160.400 |        155.500 |          229.606 |
+| lgbm_sc_s0 | HMC      |         20 | TST     | scp_abs_mu       |      0.915 |        0.040 |      152.395 |        153.229 |          211.493 |
+| lgbm_sc_s0 | HMC      |         20 | TST     | scp_signed       |      0.918 |        0.040 |      215.990 |        201.500 |          285.515 |
+| lgbm_sc_s0 | HMC      |         20 | WASO    | ba_loa           |      0.899 |        0.100 |      115.348 |        112.217 |          186.948 |
+| lgbm_sc_s0 | HMC      |         20 | WASO    | ba_reg           |      0.856 |        0.220 |      101.370 |        102.306 |          177.589 |
+| lgbm_sc_s0 | HMC      |         20 | WASO    | cqr_ffbs         |      0.915 |        0.060 |      108.662 |        105.753 |          150.388 |
+| lgbm_sc_s0 | HMC      |         20 | WASO    | cqr_qr           |      0.945 |        0.040 |      188.293 |        182.975 |          235.337 |
+| lgbm_sc_s0 | HMC      |         20 | WASO    | norm_entropy_reg |      0.914 |        0.020 |      111.039 |        112.096 |          153.153 |
+| lgbm_sc_s0 | HMC      |         20 | WASO    | norm_ffbs        |      0.918 |        0.060 |       98.753 |         99.576 |          138.047 |
+| lgbm_sc_s0 | HMC      |         20 | WASO    | norm_reg_ffbs    |      0.915 |        0.060 |      105.604 |        104.051 |          147.475 |
+| lgbm_sc_s0 | HMC      |         20 | WASO    | norm_reg_plugc   |      0.915 |        0.040 |      111.019 |        110.402 |          154.876 |
+| lgbm_sc_s0 | HMC      |         20 | WASO    | scp_abs_bc       |      0.902 |        0.100 |      118.024 |        114.013 |          188.927 |
+| lgbm_sc_s0 | HMC      |         20 | WASO    | scp_abs_cal      |      0.914 |        0.040 |      119.106 |        118.851 |          168.549 |
+| lgbm_sc_s0 | HMC      |         20 | WASO    | scp_abs_mu       |      0.914 |        0.040 |      115.615 |        115.719 |          159.219 |
+| lgbm_sc_s0 | HMC      |         20 | WASO    | scp_signed       |      0.914 |        0.040 |      129.912 |        126.592 |          193.297 |
+| lgbm_sc_s0 | HMC      |         30 | N1%     | ba_loa           |      0.921 |        0.020 |       29.929 |         29.419 |           43.004 |
+| lgbm_sc_s0 | HMC      |         30 | N1%     | ba_reg           |      0.875 |        0.160 |       21.435 |         21.421 |           38.318 |
+| lgbm_sc_s0 | HMC      |         30 | N1%     | cqr_ffbs         |      0.906 |        0.040 |       23.755 |         22.844 |           39.677 |
+| lgbm_sc_s0 | HMC      |         30 | N1%     | cqr_qr           |      0.925 |        0.080 |       35.458 |         32.681 |           45.002 |
+| lgbm_sc_s0 | HMC      |         30 | N1%     | norm_entropy_reg |      0.908 |        0.040 |       23.406 |         22.845 |           38.483 |
+| lgbm_sc_s0 | HMC      |         30 | N1%     | norm_ffbs        |      0.912 |        0.060 |       24.498 |         24.024 |           39.868 |
+| lgbm_sc_s0 | HMC      |         30 | N1%     | norm_reg_ffbs    |      0.908 |        0.040 |       23.844 |         23.757 |           39.811 |
+| lgbm_sc_s0 | HMC      |         30 | N1%     | norm_reg_plugc   |      0.914 |        0.020 |       25.261 |         24.618 |           41.621 |
+| lgbm_sc_s0 | HMC      |         30 | N1%     | scp_abs_bc       |      0.904 |        0.020 |       28.288 |         27.066 |           43.749 |
+| lgbm_sc_s0 | HMC      |         30 | N1%     | scp_abs_cal      |      0.915 |        0.020 |       25.063 |         23.691 |           41.374 |
+| lgbm_sc_s0 | HMC      |         30 | N1%     | scp_abs_mu       |      0.906 |        0.060 |       23.823 |         22.399 |           39.715 |
+| lgbm_sc_s0 | HMC      |         30 | N1%     | scp_signed       |      0.945 |        0.000 |       40.771 |         35.203 |           50.459 |
+| lgbm_sc_s0 | HMC      |         30 | N2%     | ba_loa           |      0.897 |        0.040 |       40.111 |         40.801 |           53.738 |
+| lgbm_sc_s0 | HMC      |         30 | N2%     | ba_reg           |      0.855 |        0.220 |       26.150 |         25.206 |           39.216 |
+| lgbm_sc_s0 | HMC      |         30 | N2%     | cqr_ffbs         |      0.903 |        0.060 |       36.441 |         35.323 |           48.046 |
+| lgbm_sc_s0 | HMC      |         30 | N2%     | cqr_qr           |      0.929 |        0.080 |       46.423 |         45.533 |           53.249 |
+| lgbm_sc_s0 | HMC      |         30 | N2%     | norm_entropy_reg |      0.901 |        0.040 |       35.607 |         35.260 |           46.880 |
+| lgbm_sc_s0 | HMC      |         30 | N2%     | norm_ffbs        |      0.908 |        0.040 |       38.982 |         38.601 |           50.159 |
+| lgbm_sc_s0 | HMC      |         30 | N2%     | norm_reg_ffbs    |      0.903 |        0.060 |       36.773 |         35.777 |           48.549 |
+| lgbm_sc_s0 | HMC      |         30 | N2%     | norm_reg_plugc   |      0.914 |        0.020 |       41.228 |         41.496 |           50.068 |
+| lgbm_sc_s0 | HMC      |         30 | N2%     | scp_abs_bc       |      0.886 |        0.180 |       39.135 |         39.954 |           54.774 |
+| lgbm_sc_s0 | HMC      |         30 | N2%     | scp_abs_cal      |      0.910 |        0.020 |       41.137 |         41.093 |           50.099 |
+| lgbm_sc_s0 | HMC      |         30 | N2%     | scp_abs_mu       |      0.905 |        0.020 |       36.071 |         35.465 |           47.417 |
+| lgbm_sc_s0 | HMC      |         30 | N2%     | scp_signed       |      0.927 |        0.020 |       50.677 |         52.691 |           60.209 |
+| lgbm_sc_s0 | HMC      |         30 | N3%     | ba_loa           |      0.896 |        0.040 |       34.013 |         34.070 |           47.573 |
+| lgbm_sc_s0 | HMC      |         30 | N3%     | ba_reg           |      0.831 |        0.240 |       27.233 |         27.203 |           49.555 |
+| lgbm_sc_s0 | HMC      |         30 | N3%     | cqr_ffbs         |      0.904 |        0.080 |       38.582 |         37.424 |           58.559 |
+| lgbm_sc_s0 | HMC      |         30 | N3%     | cqr_qr           |      0.926 |        0.060 |       45.081 |         43.413 |           54.866 |
+| lgbm_sc_s0 | HMC      |         30 | N3%     | norm_entropy_reg |      0.905 |        0.040 |       38.493 |         37.500 |           58.332 |
+| lgbm_sc_s0 | HMC      |         30 | N3%     | norm_ffbs        |      0.912 |        0.020 |       41.139 |         40.028 |           56.445 |
+| lgbm_sc_s0 | HMC      |         30 | N3%     | norm_reg_ffbs    |      0.906 |        0.020 |       39.045 |         37.642 |           57.951 |
+| lgbm_sc_s0 | HMC      |         30 | N3%     | norm_reg_plugc   |      0.904 |        0.020 |       38.529 |         37.945 |           55.491 |
+| lgbm_sc_s0 | HMC      |         30 | N3%     | scp_abs_bc       |      0.903 |        0.060 |       34.896 |         35.296 |           47.673 |
+| lgbm_sc_s0 | HMC      |         30 | N3%     | scp_abs_cal      |      0.907 |        0.040 |       38.272 |         38.609 |           57.225 |
+| lgbm_sc_s0 | HMC      |         30 | N3%     | scp_abs_mu       |      0.904 |        0.120 |       38.520 |         38.179 |           59.606 |
+| lgbm_sc_s0 | HMC      |         30 | N3%     | scp_signed       |      0.936 |        0.020 |       40.823 |         41.229 |           48.902 |
+| lgbm_sc_s0 | HMC      |         30 | REM%    | ba_loa           |      0.915 |        0.040 |       19.951 |         20.027 |           26.006 |
+| lgbm_sc_s0 | HMC      |         30 | REM%    | ba_reg           |      0.880 |        0.060 |       15.672 |         15.536 |           23.338 |
+| lgbm_sc_s0 | HMC      |         30 | REM%    | cqr_ffbs         |      0.930 |        0.020 |       23.826 |         23.791 |           27.570 |
+| lgbm_sc_s0 | HMC      |         30 | REM%    | cqr_qr           |      0.959 |        0.000 |       31.169 |         31.161 |           34.039 |
+| lgbm_sc_s0 | HMC      |         30 | REM%    | norm_entropy_reg |      0.928 |        0.000 |       24.013 |         23.945 |           27.472 |
+| lgbm_sc_s0 | HMC      |         30 | REM%    | norm_ffbs        |      0.932 |        0.000 |       23.212 |         23.284 |           26.811 |
+| lgbm_sc_s0 | HMC      |         30 | REM%    | norm_reg_ffbs    |      0.928 |        0.020 |       23.533 |         23.277 |           27.362 |
+| lgbm_sc_s0 | HMC      |         30 | REM%    | norm_reg_plugc   |      0.927 |        0.020 |       19.106 |         19.224 |           23.825 |
+| lgbm_sc_s0 | HMC      |         30 | REM%    | scp_abs_bc       |      0.914 |        0.040 |       19.652 |         19.280 |           25.910 |
+| lgbm_sc_s0 | HMC      |         30 | REM%    | scp_abs_cal      |      0.925 |        0.020 |       19.483 |         20.142 |           24.063 |
+| lgbm_sc_s0 | HMC      |         30 | REM%    | scp_abs_mu       |      0.920 |        0.020 |       25.089 |         24.776 |           29.442 |
+| lgbm_sc_s0 | HMC      |         30 | REM%    | scp_signed       |      0.945 |        0.000 |       25.387 |         23.774 |           29.987 |
+| lgbm_sc_s0 | HMC      |         30 | REML    | ba_loa           |      0.895 |        0.120 |      193.600 |        196.929 |          320.613 |
+| lgbm_sc_s0 | HMC      |         30 | REML    | ba_reg           |      0.849 |        0.320 |      168.133 |        159.434 |          365.083 |
+| lgbm_sc_s0 | HMC      |         30 | REML    | cqr_ffbs         |      0.899 |        0.080 |      205.701 |        201.579 |          412.495 |
+| lgbm_sc_s0 | HMC      |         30 | REML    | cqr_qr           |      0.931 |        0.080 |      315.337 |        290.900 |          415.267 |
+| lgbm_sc_s0 | HMC      |         30 | REML    | norm_entropy_reg |      0.893 |        0.080 |      225.944 |        231.241 |          408.967 |
+| lgbm_sc_s0 | HMC      |         30 | REML    | norm_ffbs        |      0.899 |        0.100 |      221.413 |        229.029 |          399.245 |
+| lgbm_sc_s0 | HMC      |         30 | REML    | norm_reg_ffbs    |      0.894 |        0.120 |      219.887 |        218.962 |          413.134 |
+| lgbm_sc_s0 | HMC      |         30 | REML    | norm_reg_plugc   |      0.904 |        0.080 |      230.058 |        228.110 |          387.349 |
+| lgbm_sc_s0 | HMC      |         30 | REML    | scp_abs_bc       |      0.893 |        0.140 |      196.260 |        189.784 |          320.697 |
+| lgbm_sc_s0 | HMC      |         30 | REML    | scp_abs_cal      |      0.908 |        0.020 |      240.490 |        239.091 |          396.187 |
+| lgbm_sc_s0 | HMC      |         30 | REML    | scp_abs_mu       |      0.894 |        0.120 |      230.430 |        240.360 |          426.780 |
+| lgbm_sc_s0 | HMC      |         30 | REML    | scp_signed       |      0.939 |        0.020 |      287.576 |        281.706 |          350.088 |
+| lgbm_sc_s0 | HMC      |         30 | SOL     | ba_loa           |      0.924 |        0.000 |       30.282 |         26.755 |           61.433 |
+| lgbm_sc_s0 | HMC      |         30 | SOL     | ba_reg           |      0.867 |        0.100 |       22.442 |         19.980 |           62.100 |
+| lgbm_sc_s0 | HMC      |         30 | SOL     | cqr_ffbs         |      0.902 |        0.040 |       25.254 |         21.851 |           73.822 |
+| lgbm_sc_s0 | HMC      |         30 | SOL     | cqr_qr           |      0.945 |        0.040 |       54.273 |         50.533 |           76.960 |
+| lgbm_sc_s0 | HMC      |         30 | SOL     | norm_entropy_reg |      0.900 |        0.020 |       30.912 |         31.080 |           81.248 |
+| lgbm_sc_s0 | HMC      |         30 | SOL     | norm_ffbs        |      0.901 |        0.020 |       23.035 |         21.070 |           72.655 |
+| lgbm_sc_s0 | HMC      |         30 | SOL     | norm_reg_ffbs    |      0.903 |        0.040 |       26.239 |         24.003 |           75.954 |
+| lgbm_sc_s0 | HMC      |         30 | SOL     | norm_reg_plugc   |      0.902 |        0.060 |       21.573 |         17.885 |           55.217 |
+| lgbm_sc_s0 | HMC      |         30 | SOL     | scp_abs_bc       |      0.902 |        0.000 |       24.851 |         21.366 |           61.911 |
+| lgbm_sc_s0 | HMC      |         30 | SOL     | scp_abs_cal      |      0.900 |        0.040 |       23.415 |         19.450 |           57.914 |
+| lgbm_sc_s0 | HMC      |         30 | SOL     | scp_abs_mu       |      0.902 |        0.040 |       32.089 |         32.381 |           82.205 |
+| lgbm_sc_s0 | HMC      |         30 | SOL     | scp_signed       |      0.938 |        0.020 |       51.628 |         35.736 |           78.772 |
+| lgbm_sc_s0 | HMC      |         30 | TST     | ba_loa           |      0.903 |        0.020 |      166.478 |        164.347 |          248.453 |
+| lgbm_sc_s0 | HMC      |         30 | TST     | ba_reg           |      0.837 |        0.260 |      133.488 |        127.714 |          244.273 |
+| lgbm_sc_s0 | HMC      |         30 | TST     | cqr_ffbs         |      0.914 |        0.060 |      133.946 |        133.453 |          192.536 |
+| lgbm_sc_s0 | HMC      |         30 | TST     | cqr_qr           |      0.939 |        0.040 |      234.568 |        218.371 |          276.676 |
+| lgbm_sc_s0 | HMC      |         30 | TST     | norm_entropy_reg |      0.911 |        0.080 |      138.062 |        139.172 |          199.490 |
+| lgbm_sc_s0 | HMC      |         30 | TST     | norm_ffbs        |      0.915 |        0.020 |      111.211 |        118.031 |          162.008 |
+| lgbm_sc_s0 | HMC      |         30 | TST     | norm_reg_ffbs    |      0.914 |        0.060 |      124.243 |        125.665 |          180.733 |
+| lgbm_sc_s0 | HMC      |         30 | TST     | norm_reg_plugc   |      0.914 |        0.080 |      131.657 |        127.474 |          196.005 |
+| lgbm_sc_s0 | HMC      |         30 | TST     | scp_abs_bc       |      0.907 |        0.060 |      173.111 |        173.217 |          250.907 |
+| lgbm_sc_s0 | HMC      |         30 | TST     | scp_abs_cal      |      0.916 |        0.080 |      154.100 |        151.000 |          226.022 |
+| lgbm_sc_s0 | HMC      |         30 | TST     | scp_abs_mu       |      0.913 |        0.080 |      145.532 |        147.806 |          209.171 |
+| lgbm_sc_s0 | HMC      |         30 | TST     | scp_signed       |      0.940 |        0.000 |      246.990 |        226.250 |          300.046 |
+| lgbm_sc_s0 | HMC      |         30 | WASO    | ba_loa           |      0.901 |        0.040 |      115.101 |        108.490 |          183.970 |
+| lgbm_sc_s0 | HMC      |         30 | WASO    | ba_reg           |      0.884 |        0.140 |      105.888 |        106.454 |          163.287 |
+| lgbm_sc_s0 | HMC      |         30 | WASO    | cqr_ffbs         |      0.908 |        0.040 |      102.204 |        101.206 |          148.933 |
+| lgbm_sc_s0 | HMC      |         30 | WASO    | cqr_qr           |      0.948 |        0.040 |      164.329 |        171.055 |          194.064 |
+| lgbm_sc_s0 | HMC      |         30 | WASO    | norm_entropy_reg |      0.906 |        0.040 |      105.009 |        104.900 |          152.756 |
+| lgbm_sc_s0 | HMC      |         30 | WASO    | norm_ffbs        |      0.908 |        0.000 |       92.919 |         92.202 |          136.553 |
+| lgbm_sc_s0 | HMC      |         30 | WASO    | norm_reg_ffbs    |      0.907 |        0.040 |       99.759 |         98.848 |          146.333 |
+| lgbm_sc_s0 | HMC      |         30 | WASO    | norm_reg_plugc   |      0.917 |        0.020 |      107.224 |        106.461 |          151.738 |
+| lgbm_sc_s0 | HMC      |         30 | WASO    | scp_abs_bc       |      0.904 |        0.040 |      115.494 |        116.052 |          183.496 |
+| lgbm_sc_s0 | HMC      |         30 | WASO    | scp_abs_cal      |      0.910 |        0.020 |      114.765 |        113.138 |          166.287 |
+| lgbm_sc_s0 | HMC      |         30 | WASO    | scp_abs_mu       |      0.905 |        0.060 |      109.337 |        112.863 |          159.107 |
+| lgbm_sc_s0 | HMC      |         30 | WASO    | scp_signed       |      0.944 |        0.000 |      146.260 |        141.368 |          192.384 |
+| lgbm_sc_s0 | ST       |         10 | N1%     | ba_loa           |      0.860 |        0.280 |       15.814 |         15.061 |           26.818 |
+| lgbm_sc_s0 | ST       |         10 | N1%     | ba_reg           |      0.718 |        0.740 |       11.138 |         10.791 |           29.754 |
+| lgbm_sc_s0 | ST       |         10 | N1%     | cqr_ffbs         |      0.897 |        0.200 |       17.591 |         16.544 |           24.994 |
+| lgbm_sc_s0 | ST       |         10 | N1%     | cqr_qr           |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| lgbm_sc_s0 | ST       |         10 | N1%     | norm_entropy_reg |      0.899 |        0.200 |       17.537 |         16.384 |           24.722 |
+| lgbm_sc_s0 | ST       |         10 | N1%     | norm_ffbs        |      0.910 |        0.100 |       17.665 |         16.604 |           23.589 |
+| lgbm_sc_s0 | ST       |         10 | N1%     | norm_reg_ffbs    |      0.904 |        0.120 |       17.514 |         15.949 |           24.374 |
+| lgbm_sc_s0 | ST       |         10 | N1%     | norm_reg_plugc   |      0.908 |        0.160 |       16.519 |         15.973 |           22.296 |
+| lgbm_sc_s0 | ST       |         10 | N1%     | scp_abs_bc       |      0.822 |        0.440 |       15.215 |         13.216 |           28.947 |
+| lgbm_sc_s0 | ST       |         10 | N1%     | scp_abs_cal      |      0.903 |        0.120 |       16.417 |         16.902 |           22.865 |
+| lgbm_sc_s0 | ST       |         10 | N1%     | scp_abs_mu       |      0.895 |        0.200 |       17.782 |         17.467 |           25.683 |
+| lgbm_sc_s0 | ST       |         10 | N1%     | scp_signed       |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| lgbm_sc_s0 | ST       |         10 | N2%     | ba_loa           |      0.868 |        0.200 |       35.061 |         34.161 |           45.809 |
+| lgbm_sc_s0 | ST       |         10 | N2%     | ba_reg           |      0.727 |        0.680 |       27.459 |         26.352 |           55.198 |
+| lgbm_sc_s0 | ST       |         10 | N2%     | cqr_ffbs         |      0.881 |        0.260 |       37.252 |         36.108 |           47.467 |
+| lgbm_sc_s0 | ST       |         10 | N2%     | cqr_qr           |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| lgbm_sc_s0 | ST       |         10 | N2%     | norm_entropy_reg |      0.882 |        0.240 |       38.433 |         38.260 |           48.453 |
+| lgbm_sc_s0 | ST       |         10 | N2%     | norm_ffbs        |      0.895 |        0.220 |       41.589 |         40.984 |           49.738 |
+| lgbm_sc_s0 | ST       |         10 | N2%     | norm_reg_ffbs    |      0.881 |        0.260 |       38.220 |         36.760 |           47.934 |
+| lgbm_sc_s0 | ST       |         10 | N2%     | norm_reg_plugc   |      0.895 |        0.160 |       37.964 |         38.026 |           46.498 |
+| lgbm_sc_s0 | ST       |         10 | N2%     | scp_abs_bc       |      0.821 |        0.340 |       31.250 |         32.199 |           47.580 |
+| lgbm_sc_s0 | ST       |         10 | N2%     | scp_abs_cal      |      0.897 |        0.200 |       36.544 |         37.069 |           45.757 |
+| lgbm_sc_s0 | ST       |         10 | N2%     | scp_abs_mu       |      0.876 |        0.300 |       36.791 |         36.972 |           47.588 |
+| lgbm_sc_s0 | ST       |         10 | N2%     | scp_signed       |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| lgbm_sc_s0 | ST       |         10 | N3%     | ba_loa           |      0.844 |        0.240 |       24.172 |         25.619 |           40.807 |
+| lgbm_sc_s0 | ST       |         10 | N3%     | ba_reg           |      0.659 |        0.820 |       18.464 |         18.279 |           58.979 |
+| lgbm_sc_s0 | ST       |         10 | N3%     | cqr_ffbs         |      0.884 |        0.220 |       29.523 |         29.279 |           42.496 |
+| lgbm_sc_s0 | ST       |         10 | N3%     | cqr_qr           |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| lgbm_sc_s0 | ST       |         10 | N3%     | norm_entropy_reg |      0.888 |        0.180 |       30.253 |         30.471 |           43.819 |
+| lgbm_sc_s0 | ST       |         10 | N3%     | norm_ffbs        |      0.888 |        0.220 |       28.083 |         28.130 |           38.962 |
+| lgbm_sc_s0 | ST       |         10 | N3%     | norm_reg_ffbs    |      0.884 |        0.220 |       28.349 |         29.346 |           40.374 |
+| lgbm_sc_s0 | ST       |         10 | N3%     | norm_reg_plugc   |      0.885 |        0.240 |       26.930 |         26.640 |           37.567 |
+| lgbm_sc_s0 | ST       |         10 | N3%     | scp_abs_bc       |      0.855 |        0.260 |       24.945 |         26.665 |           41.612 |
+| lgbm_sc_s0 | ST       |         10 | N3%     | scp_abs_cal      |      0.884 |        0.180 |       28.310 |         29.058 |           40.526 |
+| lgbm_sc_s0 | ST       |         10 | N3%     | scp_abs_mu       |      0.885 |        0.200 |       30.040 |         30.188 |           43.630 |
+| lgbm_sc_s0 | ST       |         10 | N3%     | scp_signed       |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| lgbm_sc_s0 | ST       |         10 | REM%    | ba_loa           |      0.846 |        0.280 |       18.605 |         19.498 |           31.063 |
+| lgbm_sc_s0 | ST       |         10 | REM%    | ba_reg           |      0.707 |        0.640 |       13.579 |         13.388 |           34.782 |
+| lgbm_sc_s0 | ST       |         10 | REM%    | cqr_ffbs         |      0.886 |        0.200 |       24.059 |         22.983 |           30.896 |
+| lgbm_sc_s0 | ST       |         10 | REM%    | cqr_qr           |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| lgbm_sc_s0 | ST       |         10 | REM%    | norm_entropy_reg |      0.899 |        0.160 |       25.427 |         25.164 |           32.113 |
+| lgbm_sc_s0 | ST       |         10 | REM%    | norm_ffbs        |      0.904 |        0.120 |       26.953 |         25.240 |           32.865 |
+| lgbm_sc_s0 | ST       |         10 | REM%    | norm_reg_ffbs    |      0.891 |        0.200 |       24.726 |         23.536 |           31.205 |
+| lgbm_sc_s0 | ST       |         10 | REM%    | norm_reg_plugc   |      0.891 |        0.200 |       24.422 |         27.305 |           34.087 |
+| lgbm_sc_s0 | ST       |         10 | REM%    | scp_abs_bc       |      0.832 |        0.320 |       18.630 |         19.276 |           31.637 |
+| lgbm_sc_s0 | ST       |         10 | REM%    | scp_abs_cal      |      0.883 |        0.220 |       23.002 |         25.434 |           33.419 |
+| lgbm_sc_s0 | ST       |         10 | REM%    | scp_abs_mu       |      0.885 |        0.200 |       24.535 |         24.112 |           31.605 |
+| lgbm_sc_s0 | ST       |         10 | REM%    | scp_signed       |      1.000 |        0.000 |      100.000 |        100.000 |          100.000 |
+| lgbm_sc_s0 | ST       |         10 | REML    | ba_loa           |      0.871 |        0.260 |      154.767 |        163.059 |          262.384 |
+| lgbm_sc_s0 | ST       |         10 | REML    | ba_reg           |      0.763 |        0.600 |       87.545 |         85.735 |          247.430 |
+| lgbm_sc_s0 | ST       |         10 | REML    | cqr_ffbs         |      0.916 |        0.160 |      131.074 |        128.841 |          136.624 |
+| lgbm_sc_s0 | ST       |         10 | REML    | cqr_qr           |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| lgbm_sc_s0 | ST       |         10 | REML    | norm_entropy_reg |      0.890 |        0.180 |      156.548 |        152.293 |          197.218 |
+| lgbm_sc_s0 | ST       |         10 | REML    | norm_ffbs        |      0.883 |        0.240 |      133.425 |        119.550 |          174.733 |
+| lgbm_sc_s0 | ST       |         10 | REML    | norm_reg_ffbs    |      0.885 |        0.220 |      136.400 |        132.825 |          177.569 |
+| lgbm_sc_s0 | ST       |         10 | REML    | norm_reg_plugc   |      0.895 |        0.220 |      178.688 |        182.844 |          230.807 |
+| lgbm_sc_s0 | ST       |         10 | REML    | scp_abs_bc       |      0.896 |        0.200 |      173.986 |        188.846 |          244.987 |
+| lgbm_sc_s0 | ST       |         10 | REML    | scp_abs_cal      |      0.901 |        0.220 |      193.253 |        193.272 |          262.564 |
+| lgbm_sc_s0 | ST       |         10 | REML    | scp_abs_mu       |      0.883 |        0.200 |      148.017 |        145.986 |          188.533 |
+| lgbm_sc_s0 | ST       |         10 | REML    | scp_signed       |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| lgbm_sc_s0 | ST       |         10 | SOL     | ba_loa           |      0.864 |        0.260 |       19.384 |         11.992 |           43.908 |
+| lgbm_sc_s0 | ST       |         10 | SOL     | ba_reg           |      0.761 |        0.560 |       13.885 |          9.322 |           48.877 |
+| lgbm_sc_s0 | ST       |         10 | SOL     | cqr_ffbs         |      0.918 |        0.120 |       23.610 |         19.953 |           36.256 |
+| lgbm_sc_s0 | ST       |         10 | SOL     | cqr_qr           |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| lgbm_sc_s0 | ST       |         10 | SOL     | norm_entropy_reg |      0.905 |        0.180 |       29.580 |         28.943 |           47.876 |
+| lgbm_sc_s0 | ST       |         10 | SOL     | norm_ffbs        |      0.907 |        0.120 |       23.202 |         21.313 |           38.846 |
+| lgbm_sc_s0 | ST       |         10 | SOL     | norm_reg_ffbs    |      0.908 |        0.200 |       25.512 |         24.598 |           43.257 |
+| lgbm_sc_s0 | ST       |         10 | SOL     | norm_reg_plugc   |      0.894 |        0.160 |       23.783 |         16.767 |           45.358 |
+| lgbm_sc_s0 | ST       |         10 | SOL     | scp_abs_bc       |      0.863 |        0.280 |       22.304 |         12.623 |           47.061 |
+| lgbm_sc_s0 | ST       |         10 | SOL     | scp_abs_cal      |      0.899 |        0.180 |       26.224 |         14.066 |           49.918 |
+| lgbm_sc_s0 | ST       |         10 | SOL     | scp_abs_mu       |      0.897 |        0.200 |       30.908 |         29.671 |           51.236 |
+| lgbm_sc_s0 | ST       |         10 | SOL     | scp_signed       |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| lgbm_sc_s0 | ST       |         10 | TST     | ba_loa           |      0.857 |        0.320 |       65.857 |         65.442 |           99.916 |
+| lgbm_sc_s0 | ST       |         10 | TST     | ba_reg           |      0.710 |        0.660 |       52.033 |         51.375 |          131.935 |
+| lgbm_sc_s0 | ST       |         10 | TST     | cqr_ffbs         |      0.895 |        0.200 |       56.734 |         53.376 |           76.318 |
+| lgbm_sc_s0 | ST       |         10 | TST     | cqr_qr           |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| lgbm_sc_s0 | ST       |         10 | TST     | norm_entropy_reg |      0.891 |        0.200 |       55.290 |         55.480 |           77.057 |
+| lgbm_sc_s0 | ST       |         10 | TST     | norm_ffbs        |      0.898 |        0.160 |       48.289 |         46.794 |           63.626 |
+| lgbm_sc_s0 | ST       |         10 | TST     | norm_reg_ffbs    |      0.886 |        0.200 |       52.681 |         52.617 |           74.356 |
+| lgbm_sc_s0 | ST       |         10 | TST     | norm_reg_plugc   |      0.886 |        0.300 |       59.859 |         61.589 |           83.843 |
+| lgbm_sc_s0 | ST       |         10 | TST     | scp_abs_bc       |      0.838 |        0.320 |       63.710 |         58.750 |          102.177 |
+| lgbm_sc_s0 | ST       |         10 | TST     | scp_abs_cal      |      0.879 |        0.280 |       67.480 |         66.000 |           99.086 |
+| lgbm_sc_s0 | ST       |         10 | TST     | scp_abs_mu       |      0.886 |        0.200 |       62.816 |         55.648 |           88.687 |
+| lgbm_sc_s0 | ST       |         10 | TST     | scp_signed       |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| lgbm_sc_s0 | ST       |         10 | WASO    | ba_loa           |      0.832 |        0.280 |       46.835 |         48.167 |           77.905 |
+| lgbm_sc_s0 | ST       |         10 | WASO    | ba_reg           |      0.737 |        0.660 |       37.890 |         38.105 |          107.453 |
+| lgbm_sc_s0 | ST       |         10 | WASO    | cqr_ffbs         |      0.914 |        0.140 |       62.797 |         63.876 |           78.133 |
+| lgbm_sc_s0 | ST       |         10 | WASO    | cqr_qr           |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| lgbm_sc_s0 | ST       |         10 | WASO    | norm_entropy_reg |      0.896 |        0.220 |       68.600 |         63.707 |           96.296 |
+| lgbm_sc_s0 | ST       |         10 | WASO    | norm_ffbs        |      0.905 |        0.200 |       60.301 |         56.715 |           77.390 |
+| lgbm_sc_s0 | ST       |         10 | WASO    | norm_reg_ffbs    |      0.895 |        0.200 |       62.379 |         62.057 |           83.043 |
+| lgbm_sc_s0 | ST       |         10 | WASO    | norm_reg_plugc   |      0.877 |        0.260 |       55.276 |         58.544 |           87.491 |
+| lgbm_sc_s0 | ST       |         10 | WASO    | scp_abs_bc       |      0.819 |        0.380 |       44.583 |         48.147 |           78.662 |
+| lgbm_sc_s0 | ST       |         10 | WASO    | scp_abs_cal      |      0.876 |        0.260 |       57.538 |         53.206 |           96.249 |
+| lgbm_sc_s0 | ST       |         10 | WASO    | scp_abs_mu       |      0.895 |        0.240 |       70.273 |         74.094 |           96.436 |
+| lgbm_sc_s0 | ST       |         10 | WASO    | scp_signed       |      1.000 |        0.000 |      inf     |        inf     |          nan     |
+| lgbm_sc_s0 | ST       |         20 | N1%     | ba_loa           |      0.912 |        0.160 |       15.725 |         15.341 |           24.273 |
+| lgbm_sc_s0 | ST       |         20 | N1%     | ba_reg           |      0.808 |        0.520 |       12.693 |         12.667 |           21.697 |
+| lgbm_sc_s0 | ST       |         20 | N1%     | cqr_ffbs         |      0.902 |        0.220 |       17.892 |         17.025 |           25.576 |
+| lgbm_sc_s0 | ST       |         20 | N1%     | cqr_qr           |      0.899 |        0.300 |       25.535 |         22.632 |           32.576 |
+| lgbm_sc_s0 | ST       |         20 | N1%     | norm_entropy_reg |      0.901 |        0.200 |       17.426 |         16.783 |           25.182 |
+| lgbm_sc_s0 | ST       |         20 | N1%     | norm_ffbs        |      0.915 |        0.160 |       17.339 |         16.041 |           23.247 |
+| lgbm_sc_s0 | ST       |         20 | N1%     | norm_reg_ffbs    |      0.909 |        0.140 |       17.580 |         16.500 |           24.794 |
+| lgbm_sc_s0 | ST       |         20 | N1%     | norm_reg_plugc   |      0.909 |        0.160 |       16.204 |         15.663 |           23.277 |
+| lgbm_sc_s0 | ST       |         20 | N1%     | scp_abs_bc       |      0.876 |        0.140 |       14.241 |         14.171 |           23.823 |
+| lgbm_sc_s0 | ST       |         20 | N1%     | scp_abs_cal      |      0.904 |        0.160 |       16.486 |         16.537 |           24.036 |
+| lgbm_sc_s0 | ST       |         20 | N1%     | scp_abs_mu       |      0.898 |        0.280 |       18.103 |         17.749 |           26.629 |
+| lgbm_sc_s0 | ST       |         20 | N1%     | scp_signed       |      0.893 |        0.160 |       14.914 |         15.057 |           23.176 |
+| lgbm_sc_s0 | ST       |         20 | N2%     | ba_loa           |      0.881 |        0.220 |       34.232 |         33.364 |           43.459 |
+| lgbm_sc_s0 | ST       |         20 | N2%     | ba_reg           |      0.835 |        0.420 |       29.672 |         28.999 |           45.485 |
+| lgbm_sc_s0 | ST       |         20 | N2%     | cqr_ffbs         |      0.905 |        0.140 |       34.972 |         35.137 |           41.781 |
+| lgbm_sc_s0 | ST       |         20 | N2%     | cqr_qr           |      0.906 |        0.160 |       59.298 |         61.271 |           74.839 |
+| lgbm_sc_s0 | ST       |         20 | N2%     | norm_entropy_reg |      0.912 |        0.120 |       36.284 |         36.549 |           42.307 |
+| lgbm_sc_s0 | ST       |         20 | N2%     | norm_ffbs        |      0.926 |        0.120 |       38.270 |         38.295 |           43.770 |
+| lgbm_sc_s0 | ST       |         20 | N2%     | norm_reg_ffbs    |      0.914 |        0.120 |       35.651 |         35.751 |           42.017 |
+| lgbm_sc_s0 | ST       |         20 | N2%     | norm_reg_plugc   |      0.919 |        0.080 |       39.396 |         38.795 |           46.122 |
+| lgbm_sc_s0 | ST       |         20 | N2%     | scp_abs_bc       |      0.882 |        0.220 |       33.572 |         34.119 |           43.321 |
+| lgbm_sc_s0 | ST       |         20 | N2%     | scp_abs_cal      |      0.909 |        0.180 |       37.343 |         34.573 |           46.150 |
+| lgbm_sc_s0 | ST       |         20 | N2%     | scp_abs_mu       |      0.897 |        0.120 |       34.237 |         33.766 |           41.714 |
+| lgbm_sc_s0 | ST       |         20 | N2%     | scp_signed       |      0.888 |        0.200 |       35.561 |         37.358 |           44.055 |
+| lgbm_sc_s0 | ST       |         20 | N3%     | ba_loa           |      0.883 |        0.160 |       24.513 |         25.163 |           35.994 |
+| lgbm_sc_s0 | ST       |         20 | N3%     | ba_reg           |      0.741 |        0.680 |       21.505 |         22.186 |           43.828 |
+| lgbm_sc_s0 | ST       |         20 | N3%     | cqr_ffbs         |      0.902 |        0.180 |       27.475 |         27.666 |           35.361 |
+| lgbm_sc_s0 | ST       |         20 | N3%     | cqr_qr           |      0.907 |        0.120 |       42.011 |         37.933 |           52.488 |
+| lgbm_sc_s0 | ST       |         20 | N3%     | norm_entropy_reg |      0.907 |        0.160 |       28.249 |         27.449 |           35.589 |
+| lgbm_sc_s0 | ST       |         20 | N3%     | norm_ffbs        |      0.901 |        0.180 |       25.371 |         25.712 |           32.175 |
+| lgbm_sc_s0 | ST       |         20 | N3%     | norm_reg_ffbs    |      0.897 |        0.220 |       26.276 |         26.450 |           33.639 |
+| lgbm_sc_s0 | ST       |         20 | N3%     | norm_reg_plugc   |      0.903 |        0.180 |       25.832 |         25.545 |           32.410 |
+| lgbm_sc_s0 | ST       |         20 | N3%     | scp_abs_bc       |      0.903 |        0.180 |       26.351 |         27.126 |           36.665 |
+| lgbm_sc_s0 | ST       |         20 | N3%     | scp_abs_cal      |      0.905 |        0.160 |       27.710 |         26.543 |           35.038 |
+| lgbm_sc_s0 | ST       |         20 | N3%     | scp_abs_mu       |      0.910 |        0.160 |       28.338 |         28.160 |           36.428 |
+| lgbm_sc_s0 | ST       |         20 | N3%     | scp_signed       |      0.883 |        0.240 |       26.087 |         26.991 |           35.898 |
+| lgbm_sc_s0 | ST       |         20 | REM%    | ba_loa           |      0.888 |        0.140 |       19.038 |         19.848 |           27.376 |
+| lgbm_sc_s0 | ST       |         20 | REM%    | ba_reg           |      0.853 |        0.340 |       15.472 |         15.540 |           26.498 |
+| lgbm_sc_s0 | ST       |         20 | REM%    | cqr_ffbs         |      0.909 |        0.180 |       24.306 |         24.509 |           28.226 |
+| lgbm_sc_s0 | ST       |         20 | REM%    | cqr_qr           |      0.894 |        0.180 |       36.105 |         34.156 |           50.946 |
+| lgbm_sc_s0 | ST       |         20 | REM%    | norm_entropy_reg |      0.909 |        0.140 |       25.016 |         25.262 |           29.408 |
+| lgbm_sc_s0 | ST       |         20 | REM%    | norm_ffbs        |      0.932 |        0.100 |       26.323 |         25.399 |           29.430 |
+| lgbm_sc_s0 | ST       |         20 | REM%    | norm_reg_ffbs    |      0.915 |        0.160 |       24.711 |         24.376 |           28.262 |
+| lgbm_sc_s0 | ST       |         20 | REM%    | norm_reg_plugc   |      0.916 |        0.160 |       23.157 |         24.012 |           30.062 |
+| lgbm_sc_s0 | ST       |         20 | REM%    | scp_abs_bc       |      0.893 |        0.160 |       19.890 |         20.304 |           28.341 |
+| lgbm_sc_s0 | ST       |         20 | REM%    | scp_abs_cal      |      0.897 |        0.140 |       22.555 |         22.416 |           30.503 |
+| lgbm_sc_s0 | ST       |         20 | REM%    | scp_abs_mu       |      0.892 |        0.220 |       24.240 |         24.669 |           28.889 |
+| lgbm_sc_s0 | ST       |         20 | REM%    | scp_signed       |      0.878 |        0.260 |       20.474 |         21.245 |           26.404 |
+| lgbm_sc_s0 | ST       |         20 | REML    | ba_loa           |      0.868 |        0.220 |      152.203 |        152.985 |          246.668 |
+| lgbm_sc_s0 | ST       |         20 | REML    | ba_reg           |      0.833 |        0.400 |       98.299 |         98.890 |          182.686 |
+| lgbm_sc_s0 | ST       |         20 | REML    | cqr_ffbs         |      0.926 |        0.080 |      128.390 |        130.919 |          132.062 |
+| lgbm_sc_s0 | ST       |         20 | REML    | cqr_qr           |      0.924 |        0.120 |      292.603 |        226.790 |          348.244 |
+| lgbm_sc_s0 | ST       |         20 | REML    | norm_entropy_reg |      0.922 |        0.120 |      154.586 |        153.070 |          184.863 |
+| lgbm_sc_s0 | ST       |         20 | REML    | norm_ffbs        |      0.919 |        0.080 |      128.458 |        126.163 |          152.859 |
+| lgbm_sc_s0 | ST       |         20 | REML    | norm_reg_ffbs    |      0.923 |        0.120 |      136.248 |        138.155 |          159.731 |
+| lgbm_sc_s0 | ST       |         20 | REML    | norm_reg_plugc   |      0.914 |        0.120 |      180.902 |        182.100 |          223.505 |
+| lgbm_sc_s0 | ST       |         20 | REML    | scp_abs_bc       |      0.896 |        0.100 |      178.721 |        183.581 |          234.966 |
+| lgbm_sc_s0 | ST       |         20 | REML    | scp_abs_cal      |      0.909 |        0.140 |      191.118 |        180.281 |          253.643 |
+| lgbm_sc_s0 | ST       |         20 | REML    | scp_abs_mu       |      0.921 |        0.140 |      148.136 |        147.648 |          174.117 |
+| lgbm_sc_s0 | ST       |         20 | REML    | scp_signed       |      0.906 |        0.140 |      176.245 |        181.417 |          230.862 |
+| lgbm_sc_s0 | ST       |         20 | SOL     | ba_loa           |      0.878 |        0.300 |       19.453 |         11.488 |           46.246 |
+| lgbm_sc_s0 | ST       |         20 | SOL     | ba_reg           |      0.819 |        0.460 |       13.776 |          9.952 |           45.713 |
+| lgbm_sc_s0 | ST       |         20 | SOL     | cqr_ffbs         |      0.912 |        0.080 |       20.055 |         19.769 |           35.478 |
+| lgbm_sc_s0 | ST       |         20 | SOL     | cqr_qr           |      0.905 |        0.140 |       33.692 |         31.445 |           49.930 |
+| lgbm_sc_s0 | ST       |         20 | SOL     | norm_entropy_reg |      0.903 |        0.160 |       24.946 |         23.064 |           47.022 |
+| lgbm_sc_s0 | ST       |         20 | SOL     | norm_ffbs        |      0.903 |        0.100 |       21.179 |         20.901 |           39.190 |
+| lgbm_sc_s0 | ST       |         20 | SOL     | norm_reg_ffbs    |      0.900 |        0.100 |       22.764 |         22.645 |           42.120 |
+| lgbm_sc_s0 | ST       |         20 | SOL     | norm_reg_plugc   |      0.902 |        0.180 |       19.446 |         16.735 |           43.150 |
+| lgbm_sc_s0 | ST       |         20 | SOL     | scp_abs_bc       |      0.883 |        0.260 |       15.441 |         13.100 |           41.657 |
+| lgbm_sc_s0 | ST       |         20 | SOL     | scp_abs_cal      |      0.909 |        0.200 |       18.231 |         13.740 |           43.723 |
+| lgbm_sc_s0 | ST       |         20 | SOL     | scp_abs_mu       |      0.904 |        0.140 |       26.228 |         25.262 |           48.507 |
+| lgbm_sc_s0 | ST       |         20 | SOL     | scp_signed       |      0.868 |        0.220 |       27.096 |         13.229 |           54.088 |
+| lgbm_sc_s0 | ST       |         20 | TST     | ba_loa           |      0.882 |        0.240 |       64.528 |         65.948 |           89.593 |
+| lgbm_sc_s0 | ST       |         20 | TST     | ba_reg           |      0.775 |        0.560 |       55.924 |         55.739 |          106.047 |
+| lgbm_sc_s0 | ST       |         20 | TST     | cqr_ffbs         |      0.922 |        0.120 |       47.895 |         48.922 |           63.656 |
+| lgbm_sc_s0 | ST       |         20 | TST     | cqr_qr           |      0.896 |        0.160 |      113.558 |         95.268 |          147.443 |
+| lgbm_sc_s0 | ST       |         20 | TST     | norm_entropy_reg |      0.902 |        0.120 |       45.714 |         45.943 |           64.339 |
+| lgbm_sc_s0 | ST       |         20 | TST     | norm_ffbs        |      0.914 |        0.160 |       44.457 |         45.744 |           57.847 |
+| lgbm_sc_s0 | ST       |         20 | TST     | norm_reg_ffbs    |      0.909 |        0.160 |       46.236 |         47.689 |           64.672 |
+| lgbm_sc_s0 | ST       |         20 | TST     | norm_reg_plugc   |      0.892 |        0.200 |       56.048 |         58.930 |           73.103 |
+| lgbm_sc_s0 | ST       |         20 | TST     | scp_abs_bc       |      0.880 |        0.220 |       62.772 |         62.900 |           91.372 |
+| lgbm_sc_s0 | ST       |         20 | TST     | scp_abs_cal      |      0.902 |        0.220 |       61.240 |         62.500 |           81.990 |
+| lgbm_sc_s0 | ST       |         20 | TST     | scp_abs_mu       |      0.911 |        0.100 |       49.932 |         53.403 |           71.735 |
+| lgbm_sc_s0 | ST       |         20 | TST     | scp_signed       |      0.898 |        0.120 |       74.670 |         86.000 |           99.387 |
+| lgbm_sc_s0 | ST       |         20 | WASO    | ba_loa           |      0.873 |        0.160 |       47.271 |         48.333 |           69.064 |
+| lgbm_sc_s0 | ST       |         20 | WASO    | ba_reg           |      0.804 |        0.360 |       43.057 |         43.859 |           88.950 |
+| lgbm_sc_s0 | ST       |         20 | WASO    | cqr_ffbs         |      0.892 |        0.220 |       57.474 |         61.303 |           81.470 |
+| lgbm_sc_s0 | ST       |         20 | WASO    | cqr_qr           |      0.911 |        0.160 |       84.010 |         72.390 |          122.675 |
+| lgbm_sc_s0 | ST       |         20 | WASO    | norm_entropy_reg |      0.882 |        0.180 |       58.182 |         56.544 |           90.846 |
+| lgbm_sc_s0 | ST       |         20 | WASO    | norm_ffbs        |      0.888 |        0.240 |       56.738 |         57.113 |           80.357 |
+| lgbm_sc_s0 | ST       |         20 | WASO    | norm_reg_ffbs    |      0.880 |        0.260 |       58.311 |         61.228 |           86.108 |
+| lgbm_sc_s0 | ST       |         20 | WASO    | norm_reg_plugc   |      0.870 |        0.340 |       51.767 |         53.054 |           88.908 |
+| lgbm_sc_s0 | ST       |         20 | WASO    | scp_abs_bc       |      0.884 |        0.160 |       48.792 |         52.183 |           70.019 |
+| lgbm_sc_s0 | ST       |         20 | WASO    | scp_abs_cal      |      0.872 |        0.300 |       50.160 |         49.312 |           93.510 |
+| lgbm_sc_s0 | ST       |         20 | WASO    | scp_abs_mu       |      0.877 |        0.220 |       62.356 |         59.958 |           95.052 |
+| lgbm_sc_s0 | ST       |         20 | WASO    | scp_signed       |      0.887 |        0.120 |       51.611 |         53.969 |           73.186 |
+| lgbm_sc_s0 | ST       |         30 | N1%     | ba_loa           |      0.930 |        0.120 |       15.923 |         15.863 |           23.626 |
+| lgbm_sc_s0 | ST       |         30 | N1%     | ba_reg           |      0.860 |        0.320 |       13.888 |         13.452 |           17.785 |
+| lgbm_sc_s0 | ST       |         30 | N1%     | cqr_ffbs         |      0.909 |        0.160 |       16.212 |         16.385 |           23.517 |
+| lgbm_sc_s0 | ST       |         30 | N1%     | cqr_qr           |      0.959 |        0.040 |       21.570 |         22.095 |           24.235 |
+| lgbm_sc_s0 | ST       |         30 | N1%     | norm_entropy_reg |      0.904 |        0.160 |       16.162 |         16.328 |           23.300 |
+| lgbm_sc_s0 | ST       |         30 | N1%     | norm_ffbs        |      0.926 |        0.140 |       15.574 |         15.497 |           21.497 |
+| lgbm_sc_s0 | ST       |         30 | N1%     | norm_reg_ffbs    |      0.911 |        0.160 |       15.824 |         15.878 |           22.830 |
+| lgbm_sc_s0 | ST       |         30 | N1%     | norm_reg_plugc   |      0.907 |        0.220 |       15.292 |         15.461 |           23.470 |
+| lgbm_sc_s0 | ST       |         30 | N1%     | scp_abs_bc       |      0.879 |        0.260 |       13.891 |         13.715 |           23.308 |
+| lgbm_sc_s0 | ST       |         30 | N1%     | scp_abs_cal      |      0.909 |        0.260 |       15.540 |         15.506 |           24.162 |
+| lgbm_sc_s0 | ST       |         30 | N1%     | scp_abs_mu       |      0.907 |        0.160 |       16.846 |         17.302 |           24.267 |
+| lgbm_sc_s0 | ST       |         30 | N1%     | scp_signed       |      0.937 |        0.080 |       16.078 |         15.886 |           21.148 |
+| lgbm_sc_s0 | ST       |         30 | N2%     | ba_loa           |      0.869 |        0.320 |       33.326 |         33.169 |           43.577 |
+| lgbm_sc_s0 | ST       |         30 | N2%     | ba_reg           |      0.854 |        0.380 |       30.700 |         30.663 |           44.406 |
+| lgbm_sc_s0 | ST       |         30 | N2%     | cqr_ffbs         |      0.904 |        0.180 |       33.681 |         33.526 |           40.814 |
+| lgbm_sc_s0 | ST       |         30 | N2%     | cqr_qr           |      0.911 |        0.160 |       52.292 |         50.670 |           60.963 |
+| lgbm_sc_s0 | ST       |         30 | N2%     | norm_entropy_reg |      0.901 |        0.180 |       35.115 |         34.589 |           41.454 |
+| lgbm_sc_s0 | ST       |         30 | N2%     | norm_ffbs        |      0.910 |        0.180 |       35.327 |         36.186 |           42.405 |
+| lgbm_sc_s0 | ST       |         30 | N2%     | norm_reg_ffbs    |      0.904 |        0.180 |       33.925 |         33.711 |           41.032 |
+| lgbm_sc_s0 | ST       |         30 | N2%     | norm_reg_plugc   |      0.886 |        0.240 |       36.055 |         35.862 |           45.988 |
+| lgbm_sc_s0 | ST       |         30 | N2%     | scp_abs_bc       |      0.877 |        0.360 |       33.849 |         35.132 |           43.619 |
+| lgbm_sc_s0 | ST       |         30 | N2%     | scp_abs_cal      |      0.891 |        0.220 |       34.414 |         34.085 |           44.279 |
+| lgbm_sc_s0 | ST       |         30 | N2%     | scp_abs_mu       |      0.894 |        0.240 |       33.563 |         33.080 |           41.230 |
+| lgbm_sc_s0 | ST       |         30 | N2%     | scp_signed       |      0.911 |        0.200 |       38.366 |         37.931 |           43.392 |
+| lgbm_sc_s0 | ST       |         30 | N3%     | ba_loa           |      0.899 |        0.160 |       24.494 |         24.537 |           33.931 |
+| lgbm_sc_s0 | ST       |         30 | N3%     | ba_reg           |      0.800 |        0.560 |       23.249 |         23.316 |           33.720 |
+| lgbm_sc_s0 | ST       |         30 | N3%     | cqr_ffbs         |      0.904 |        0.180 |       26.839 |         27.797 |           32.772 |
+| lgbm_sc_s0 | ST       |         30 | N3%     | cqr_qr           |      0.891 |        0.220 |       35.753 |         34.660 |           47.118 |
+| lgbm_sc_s0 | ST       |         30 | N3%     | norm_entropy_reg |      0.906 |        0.180 |       27.485 |         27.649 |           32.937 |
+| lgbm_sc_s0 | ST       |         30 | N3%     | norm_ffbs        |      0.920 |        0.100 |       24.719 |         24.162 |           29.352 |
+| lgbm_sc_s0 | ST       |         30 | N3%     | norm_reg_ffbs    |      0.916 |        0.140 |       26.008 |         26.323 |           30.975 |
+| lgbm_sc_s0 | ST       |         30 | N3%     | norm_reg_plugc   |      0.903 |        0.160 |       25.255 |         25.098 |           30.609 |
+| lgbm_sc_s0 | ST       |         30 | N3%     | scp_abs_bc       |      0.897 |        0.220 |       25.376 |         26.184 |           35.588 |
+| lgbm_sc_s0 | ST       |         30 | N3%     | scp_abs_cal      |      0.893 |        0.200 |       26.621 |         27.176 |           33.479 |
+| lgbm_sc_s0 | ST       |         30 | N3%     | scp_abs_mu       |      0.901 |        0.180 |       27.325 |         27.581 |           34.324 |
+| lgbm_sc_s0 | ST       |         30 | N3%     | scp_signed       |      0.944 |        0.020 |       29.242 |         29.506 |           32.643 |
+| lgbm_sc_s0 | ST       |         30 | REM%    | ba_loa           |      0.881 |        0.220 |       18.644 |         18.604 |           27.443 |
+| lgbm_sc_s0 | ST       |         30 | REM%    | ba_reg           |      0.877 |        0.180 |       15.640 |         15.866 |           26.288 |
+| lgbm_sc_s0 | ST       |         30 | REM%    | cqr_ffbs         |      0.916 |        0.180 |       23.751 |         23.924 |           27.118 |
+| lgbm_sc_s0 | ST       |         30 | REM%    | cqr_qr           |      0.929 |        0.120 |       30.470 |         29.866 |           36.452 |
+| lgbm_sc_s0 | ST       |         30 | REM%    | norm_entropy_reg |      0.913 |        0.160 |       24.116 |         24.105 |           27.815 |
+| lgbm_sc_s0 | ST       |         30 | REM%    | norm_ffbs        |      0.913 |        0.120 |       23.723 |         23.748 |           28.433 |
+| lgbm_sc_s0 | ST       |         30 | REM%    | norm_reg_ffbs    |      0.910 |        0.120 |       23.474 |         23.746 |           27.478 |
+| lgbm_sc_s0 | ST       |         30 | REM%    | norm_reg_plugc   |      0.903 |        0.180 |       21.794 |         22.961 |           30.062 |
+| lgbm_sc_s0 | ST       |         30 | REM%    | scp_abs_bc       |      0.893 |        0.180 |       19.895 |         19.763 |           28.353 |
+| lgbm_sc_s0 | ST       |         30 | REM%    | scp_abs_cal      |      0.891 |        0.240 |       21.679 |         21.963 |           30.355 |
+| lgbm_sc_s0 | ST       |         30 | REM%    | scp_abs_mu       |      0.907 |        0.180 |       24.097 |         24.567 |           26.970 |
+| lgbm_sc_s0 | ST       |         30 | REM%    | scp_signed       |      0.929 |        0.100 |       22.363 |         23.267 |           25.013 |
+| lgbm_sc_s0 | ST       |         30 | REML    | ba_loa           |      0.851 |        0.340 |      150.569 |        154.131 |          245.301 |
+| lgbm_sc_s0 | ST       |         30 | REML    | ba_reg           |      0.864 |        0.280 |      100.094 |        101.171 |          170.864 |
+| lgbm_sc_s0 | ST       |         30 | REML    | cqr_ffbs         |      0.901 |        0.180 |      127.908 |        129.781 |          133.063 |
+| lgbm_sc_s0 | ST       |         30 | REML    | cqr_qr           |      0.909 |        0.160 |      174.698 |        177.305 |          213.167 |
+| lgbm_sc_s0 | ST       |         30 | REML    | norm_entropy_reg |      0.891 |        0.380 |      143.272 |        144.510 |          185.120 |
+| lgbm_sc_s0 | ST       |         30 | REML    | norm_ffbs        |      0.896 |        0.220 |      117.053 |        119.251 |          152.743 |
+| lgbm_sc_s0 | ST       |         30 | REML    | norm_reg_ffbs    |      0.897 |        0.280 |      125.128 |        122.411 |          161.799 |
+| lgbm_sc_s0 | ST       |         30 | REML    | norm_reg_plugc   |      0.910 |        0.140 |      177.615 |        179.708 |          214.266 |
+| lgbm_sc_s0 | ST       |         30 | REML    | scp_abs_bc       |      0.899 |        0.240 |      177.757 |        174.458 |          235.063 |
+| lgbm_sc_s0 | ST       |         30 | REML    | scp_abs_cal      |      0.901 |        0.180 |      179.516 |        176.750 |          239.587 |
+| lgbm_sc_s0 | ST       |         30 | REML    | scp_abs_mu       |      0.884 |        0.340 |      137.125 |        138.129 |          173.067 |
+| lgbm_sc_s0 | ST       |         30 | REML    | scp_signed       |      0.931 |        0.080 |      193.286 |        198.893 |          221.443 |
+| lgbm_sc_s0 | ST       |         30 | SOL     | ba_loa           |      0.920 |        0.300 |       21.874 |         27.164 |           46.261 |
+| lgbm_sc_s0 | ST       |         30 | SOL     | ba_reg           |      0.853 |        0.440 |       14.995 |         17.194 |           43.275 |
+| lgbm_sc_s0 | ST       |         30 | SOL     | cqr_ffbs         |      0.900 |        0.280 |       18.977 |         19.407 |           33.865 |
+| lgbm_sc_s0 | ST       |         30 | SOL     | cqr_qr           |      0.891 |        0.240 |       28.668 |         22.829 |           46.069 |
+| lgbm_sc_s0 | ST       |         30 | SOL     | norm_entropy_reg |      0.893 |        0.220 |       23.637 |         22.705 |           47.603 |
+| lgbm_sc_s0 | ST       |         30 | SOL     | norm_ffbs        |      0.900 |        0.260 |       20.669 |         20.444 |           38.527 |
+| lgbm_sc_s0 | ST       |         30 | SOL     | norm_reg_ffbs    |      0.891 |        0.260 |       22.370 |         22.542 |           42.627 |
+| lgbm_sc_s0 | ST       |         30 | SOL     | norm_reg_plugc   |      0.911 |        0.180 |       16.179 |         16.236 |           39.307 |
+| lgbm_sc_s0 | ST       |         30 | SOL     | scp_abs_bc       |      0.887 |        0.300 |       15.215 |         14.533 |           40.423 |
+| lgbm_sc_s0 | ST       |         30 | SOL     | scp_abs_cal      |      0.917 |        0.240 |       14.017 |         13.518 |           38.103 |
+| lgbm_sc_s0 | ST       |         30 | SOL     | scp_abs_mu       |      0.890 |        0.260 |       25.032 |         25.565 |           48.903 |
+| lgbm_sc_s0 | ST       |         30 | SOL     | scp_signed       |      0.890 |        0.260 |       38.029 |         49.500 |           62.672 |
+| lgbm_sc_s0 | ST       |         30 | TST     | ba_loa           |      0.864 |        0.240 |       63.127 |         64.326 |           88.380 |
+| lgbm_sc_s0 | ST       |         30 | TST     | ba_reg           |      0.800 |        0.440 |       56.696 |         55.767 |           97.507 |
+| lgbm_sc_s0 | ST       |         30 | TST     | cqr_ffbs         |      0.917 |        0.260 |       42.400 |         41.611 |           56.882 |
+| lgbm_sc_s0 | ST       |         30 | TST     | cqr_qr           |      0.941 |        0.080 |       90.157 |         81.700 |          108.163 |
+| lgbm_sc_s0 | ST       |         30 | TST     | norm_entropy_reg |      0.916 |        0.200 |       43.817 |         43.661 |           58.975 |
+| lgbm_sc_s0 | ST       |         30 | TST     | norm_ffbs        |      0.920 |        0.240 |       41.276 |         40.654 |           53.686 |
+| lgbm_sc_s0 | ST       |         30 | TST     | norm_reg_ffbs    |      0.923 |        0.200 |       42.701 |         41.761 |           57.230 |
+| lgbm_sc_s0 | ST       |         30 | TST     | norm_reg_plugc   |      0.866 |        0.240 |       52.318 |         52.653 |           73.136 |
+| lgbm_sc_s0 | ST       |         30 | TST     | scp_abs_bc       |      0.879 |        0.220 |       61.489 |         63.750 |           87.945 |
+| lgbm_sc_s0 | ST       |         30 | TST     | scp_abs_cal      |      0.887 |        0.220 |       58.200 |         60.000 |           81.157 |
+| lgbm_sc_s0 | ST       |         30 | TST     | scp_abs_mu       |      0.923 |        0.180 |       46.757 |         46.673 |           64.063 |
+| lgbm_sc_s0 | ST       |         30 | TST     | scp_signed       |      0.919 |        0.120 |       84.110 |         88.000 |          104.224 |
+| lgbm_sc_s0 | ST       |         30 | WASO    | ba_loa           |      0.881 |        0.120 |       46.188 |         47.039 |           69.188 |
+| lgbm_sc_s0 | ST       |         30 | WASO    | ba_reg           |      0.823 |        0.360 |       42.801 |         44.094 |           89.305 |
+| lgbm_sc_s0 | ST       |         30 | WASO    | cqr_ffbs         |      0.914 |        0.200 |       60.683 |         63.345 |           78.463 |
+| lgbm_sc_s0 | ST       |         30 | WASO    | cqr_qr           |      0.936 |        0.080 |       72.676 |         73.766 |           96.303 |
+| lgbm_sc_s0 | ST       |         30 | WASO    | norm_entropy_reg |      0.900 |        0.120 |       59.579 |         59.424 |           84.960 |
+| lgbm_sc_s0 | ST       |         30 | WASO    | norm_ffbs        |      0.909 |        0.220 |       58.488 |         60.755 |           78.634 |
+| lgbm_sc_s0 | ST       |         30 | WASO    | norm_reg_ffbs    |      0.910 |        0.200 |       61.009 |         62.829 |           81.166 |
+| lgbm_sc_s0 | ST       |         30 | WASO    | norm_reg_plugc   |      0.860 |        0.300 |       50.232 |         50.737 |           86.045 |
+| lgbm_sc_s0 | ST       |         30 | WASO    | scp_abs_bc       |      0.887 |        0.120 |       48.627 |         49.150 |           69.007 |
+| lgbm_sc_s0 | ST       |         30 | WASO    | scp_abs_cal      |      0.869 |        0.260 |       49.177 |         49.607 |           90.749 |
+| lgbm_sc_s0 | ST       |         30 | WASO    | scp_abs_mu       |      0.916 |        0.140 |       63.455 |         64.126 |           84.986 |
+| lgbm_sc_s0 | ST       |         30 | WASO    | scp_signed       |      0.917 |        0.100 |       55.386 |         55.268 |           68.929 |

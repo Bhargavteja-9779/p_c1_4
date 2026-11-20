@@ -1,577 +1,578 @@
-    stager cohort param               comparator  n_subjects  ratio  ratio_lo95  ratio_hi95      p  p_holm
-      yasa    HMC   N1%                   ba_loa         151 0.9161      0.7897      1.0789 0.2948  1.0000
-      yasa    HMC   N1%                   ba_reg         151 0.9143      0.8145      1.0177 0.1386  1.0000
-      yasa    HMC   N1%               scp_signed         151 0.8748      0.7456      1.0321 0.0843  1.0000
-      yasa    HMC   N1%               scp_abs_bc         151 0.9070      0.7748      1.0690 0.2547  1.0000
-      yasa    HMC   N1%              scp_abs_cal         151 0.8574      0.7348      1.0165 0.0973  1.0000
-      yasa    HMC   N1%                   cqr_qr         151 1.0113      0.8453      1.1904 0.9120  1.0000
-      yasa    HMC   N1%                 cqr_ffbs         151 0.9965      0.9785      1.0152 0.7235  1.0000
-      yasa    HMC   N1%         norm_entropy_reg         151 1.0279      0.9999      1.0532 0.0905  1.0000
-      yasa    HMC   N1%                norm_ffbs         151 1.0064      0.9745      1.0403 0.7243  1.0000
-      yasa    HMC   N1%           norm_reg_plugc         151 0.9146      0.8127      1.0583 0.2334  1.0000
-      yasa    HMC   N1% SCALE@calibrated plug-in         151 0.9374      0.8852      0.9887 0.0334  0.2004
-      yasa    HMC   N1%          SCALE@FFBS mean         151 0.9797      0.9440      1.0146 0.2945  0.5891
-      yasa    HMC   N2%                   ba_loa         151 0.7530      0.6143      0.9194 0.0029  0.1885
-      yasa    HMC   N2%                   ba_reg         151 1.0043      0.8497      1.1933 0.9613  1.0000
-      yasa    HMC   N2%               scp_signed         151 0.7320      0.6141      0.8600 0.0000  0.0040
-      yasa    HMC   N2%               scp_abs_bc         151 0.7706      0.6236      0.9518 0.0274  1.0000
-      yasa    HMC   N2%              scp_abs_cal         151 0.6488      0.5380      0.8021 0.0000  0.0040
-      yasa    HMC   N2%                   cqr_qr         151 0.7991      0.7217      0.9003 0.0000  0.0040
-      yasa    HMC   N2%                 cqr_ffbs         151 0.9976      0.9920      1.0028 0.4032  1.0000
-      yasa    HMC   N2%         norm_entropy_reg         151 1.0062      0.9746      1.0366 0.6950  1.0000
-      yasa    HMC   N2%                norm_ffbs         151 1.0036      0.9770      1.0349 0.8185  1.0000
-      yasa    HMC   N2%           norm_reg_plugc         151 0.6864      0.5749      0.8320 0.0000  0.0040
-      yasa    HMC   N2% SCALE@calibrated plug-in         151 0.9452      0.9160      0.9783 0.0002  0.0022
-      yasa    HMC   N2%          SCALE@FFBS mean         151 0.9725      0.9347      1.0069 0.1603  0.4809
-      yasa    HMC   N3%                   ba_loa         151 1.0618      0.8856      1.2635 0.5411  1.0000
-      yasa    HMC   N3%                   ba_reg         151 1.0207      0.8435      1.2524 0.8439  1.0000
-      yasa    HMC   N3%               scp_signed         151 1.0504      0.9109      1.1980 0.5366  1.0000
-      yasa    HMC   N3%               scp_abs_bc         151 1.0576      0.8841      1.2578 0.5650  1.0000
-      yasa    HMC   N3%              scp_abs_cal         151 1.0041      0.8667      1.1667 0.9623  1.0000
-      yasa    HMC   N3%                   cqr_qr         151 0.8682      0.7745      0.9765 0.0167  0.9715
-      yasa    HMC   N3%                 cqr_ffbs         151 0.9821      0.9577      1.0025 0.1704  1.0000
-      yasa    HMC   N3%         norm_entropy_reg         151 0.9677      0.9278      1.0076 0.1292  1.0000
-      yasa    HMC   N3%                norm_ffbs         151 1.0196      0.9882      1.0631 0.3656  1.0000
-      yasa    HMC   N3%           norm_reg_plugc         151 1.0158      0.8929      1.1598 0.8166  1.0000
-      yasa    HMC   N3% SCALE@calibrated plug-in         151 0.9884      0.9501      1.0253 0.6861  0.6861
-      yasa    HMC   N3%          SCALE@FFBS mean         151 0.9318      0.8781      0.9803 0.0066  0.0462
-      yasa    HMC  REM%                   ba_loa         151 1.0466      0.8903      1.2067 0.6370  1.0000
-      yasa    HMC  REM%                   ba_reg         151 1.2327      1.0823      1.4025 0.0004  0.0264
-      yasa    HMC  REM%               scp_signed         151 1.0385      0.9022      1.1692 0.6725  1.0000
-      yasa    HMC  REM%               scp_abs_bc         151 1.0429      0.8848      1.2105 0.6741  1.0000
-      yasa    HMC  REM%              scp_abs_cal         151 1.1242      0.9774      1.2842 0.0542  1.0000
-      yasa    HMC  REM%                   cqr_qr         151 0.9235      0.8399      1.0111 0.0985  1.0000
-      yasa    HMC  REM%                 cqr_ffbs         151 0.9886      0.9696      1.0050 0.2537  1.0000
-      yasa    HMC  REM%         norm_entropy_reg         151 0.9917      0.9484      1.0320 0.7357  1.0000
-      yasa    HMC  REM%                norm_ffbs         151 0.9709      0.9389      1.0029 0.0882  1.0000
-      yasa    HMC  REM%           norm_reg_plugc         151 1.1707      1.0210      1.3331 0.0033  0.2144
-      yasa    HMC  REM% SCALE@calibrated plug-in         151 0.9603      0.9122      1.0044 0.0990  0.3962
-      yasa    HMC  REM%          SCALE@FFBS mean         151 0.9434      0.8854      0.9954 0.0509  0.2547
-      yasa    HMC  REML                   ba_loa         150 0.9928      0.8693      1.1412 0.9257  1.0000
-      yasa    HMC  REML                   ba_reg         150 0.9614      0.8489      1.1159 0.6085  1.0000
-      yasa    HMC  REML               scp_signed         150 0.9199      0.7666      1.0736 0.3091  1.0000
-      yasa    HMC  REML               scp_abs_bc         150 0.9889      0.8623      1.1360 0.8857  1.0000
-      yasa    HMC  REML              scp_abs_cal         150 0.8755      0.7407      1.0248 0.1473  1.0000
-      yasa    HMC  REML                   cqr_qr         150 0.9136      0.7792      1.0450 0.1909  1.0000
-      yasa    HMC  REML                 cqr_ffbs         150 1.1237      1.0183      1.2460 0.0119  0.7140
-      yasa    HMC  REML         norm_entropy_reg         150 0.9190      0.8553      0.9874 0.0128  0.7581
-      yasa    HMC  REML                norm_ffbs         150 1.0947      1.0181      1.1737 0.0203  1.0000
-      yasa    HMC  REML           norm_reg_plugc         150 0.9949      0.8694      1.1411 0.9473  1.0000
-      yasa    HMC  REML SCALE@calibrated plug-in         150 0.8800      0.8214      0.9457 0.0008  0.0068
-      yasa    HMC  REML          SCALE@FFBS mean         150 0.8778      0.8250      0.9301 0.0000  0.0008
-      yasa    HMC   SOL                   ba_loa         151 1.3743      0.7579      2.3572 0.4047  1.0000
-      yasa    HMC   SOL                   ba_reg         151 1.8108      0.9845      3.1282 0.0984  1.0000
-      yasa    HMC   SOL               scp_signed         151 1.7145      0.9530      3.0733 0.1206  1.0000
-      yasa    HMC   SOL               scp_abs_bc         151 1.3077      0.7243      2.2538 0.4999  1.0000
-      yasa    HMC   SOL              scp_abs_cal         151 1.1724      0.7437      2.1632 0.8064  1.0000
-      yasa    HMC   SOL                   cqr_qr         151 1.3691      0.9077      1.8811 0.2445  1.0000
-      yasa    HMC   SOL                 cqr_ffbs         151 1.2051      1.1224      1.3943 0.0000  0.0040
-      yasa    HMC   SOL         norm_entropy_reg         151 0.8837      0.7782      0.9459 0.0001  0.0068
-      yasa    HMC   SOL                norm_ffbs         151 1.0972      1.0584      1.1885 0.0000  0.0040
-      yasa    HMC   SOL           norm_reg_plugc         151 1.2976      0.8347      2.4381 0.5225  1.0000
-      yasa    HMC   SOL SCALE@calibrated plug-in         151 0.9035      0.8505      0.9351 0.0000  0.0008
-      yasa    HMC   SOL          SCALE@FFBS mean         151 0.8827      0.7764      0.9393 0.0000  0.0008
-      yasa    HMC   TST                   ba_loa         151 0.6853      0.5204      0.8720 0.0000  0.0040
-      yasa    HMC   TST                   ba_reg         151 0.7286      0.5562      0.9343 0.0116  0.7106
-      yasa    HMC   TST               scp_signed         151 0.7257      0.5630      0.8876 0.0000  0.0040
-      yasa    HMC   TST               scp_abs_bc         151 0.7147      0.5398      0.9288 0.0108  0.6709
-      yasa    HMC   TST              scp_abs_cal         151 0.8364      0.7920      0.8853 0.0000  0.0040
-      yasa    HMC   TST                   cqr_qr         151 0.9394      0.8248      1.0708 0.3579  1.0000
-      yasa    HMC   TST                 cqr_ffbs         151 0.9271      0.9060      0.9449 0.0000  0.0040
-      yasa    HMC   TST         norm_entropy_reg         151 0.9126      0.8812      0.9454 0.0000  0.0040
-      yasa    HMC   TST                norm_ffbs         151 1.1202      1.0766      1.1702 0.0000  0.0040
-      yasa    HMC   TST           norm_reg_plugc         151 0.9951      0.9373      1.0553 0.8803  1.0000
-      yasa    HMC   TST SCALE@calibrated plug-in         151 0.8406      0.7992      0.8760 0.0000  0.0008
-      yasa    HMC   TST          SCALE@FFBS mean         151 0.8371      0.7979      0.8710 0.0000  0.0008
-      yasa    HMC  WASO                   ba_loa         151 0.8239      0.6120      1.1043 0.3568  1.0000
-      yasa    HMC  WASO                   ba_reg         151 1.0466      0.8501      1.2923 0.6889  1.0000
-      yasa    HMC  WASO               scp_signed         151 0.8786      0.6635      1.1413 0.5670  1.0000
-      yasa    HMC  WASO               scp_abs_bc         151 0.8251      0.6125      1.1225 0.3758  1.0000
-      yasa    HMC  WASO              scp_abs_cal         151 0.9753      0.8652      1.1389 0.8016  1.0000
-      yasa    HMC  WASO                   cqr_qr         151 0.9639      0.8327      1.1031 0.6159  1.0000
-      yasa    HMC  WASO                 cqr_ffbs         151 0.9913      0.9794      1.0032 0.1779  1.0000
-      yasa    HMC  WASO         norm_entropy_reg         151 0.9610      0.9376      0.9886 0.0106  0.6709
-      yasa    HMC  WASO                norm_ffbs         151 1.0840      1.0402      1.1264 0.0003  0.0201
-      yasa    HMC  WASO           norm_reg_plugc         151 1.0741      0.9484      1.2618 0.3963  1.0000
-      yasa    HMC  WASO SCALE@calibrated plug-in         151 0.9081      0.8709      0.9441 0.0000  0.0008
-      yasa    HMC  WASO          SCALE@FFBS mean         151 0.9120      0.8852      0.9378 0.0000  0.0008
-      yasa     SC   N1%                   ba_loa          78 0.9226      0.8667      0.9832 0.0212  0.8268
-      yasa     SC   N1%                   ba_reg          78 0.8969      0.8392      0.9577 0.0010  0.0525
-      yasa     SC   N1%               scp_signed          78 0.9290      0.8329      1.0205 0.1422  1.0000
-      yasa     SC   N1%               scp_abs_bc          78 0.9084      0.8419      0.9851 0.0335  1.0000
-      yasa     SC   N1%              scp_abs_cal          78 0.8947      0.8455      0.9565 0.0025  0.1147
-      yasa     SC   N1%                   cqr_qr          78 0.9652      0.8127      1.1242 0.6850  1.0000
-      yasa     SC   N1%                 cqr_ffbs          78 0.9705      0.9541      0.9878 0.0012  0.0576
-      yasa     SC   N1%         norm_entropy_reg          78 0.9700      0.9504      0.9920 0.0194  0.7954
-      yasa     SC   N1%                norm_ffbs          78 1.0401      1.0018      1.0791 0.0692  1.0000
-      yasa     SC   N1%           norm_reg_plugc          78 0.9220      0.8743      0.9855 0.0196  0.7954
-      yasa     SC   N1% SCALE@calibrated plug-in          78 0.9704      0.9479      0.9934 0.0133  0.0464
-      yasa     SC   N1%          SCALE@FFBS mean          78 0.9422      0.9140      0.9719 0.0001  0.0008
-      yasa     SC   N2%                   ba_loa          78 0.7823      0.6717      0.8902 0.0001  0.0061
-      yasa     SC   N2%                   ba_reg          78 0.9371      0.8293      1.0293 0.3231  1.0000
-      yasa     SC   N2%               scp_signed          78 0.7743      0.6684      0.8876 0.0000  0.0040
-      yasa     SC   N2%               scp_abs_bc          78 0.7724      0.6661      0.8763 0.0000  0.0040
-      yasa     SC   N2%              scp_abs_cal          78 0.7134      0.6432      0.7951 0.0000  0.0040
-      yasa     SC   N2%                   cqr_qr          78 0.7893      0.6981      0.9026 0.0000  0.0040
-      yasa     SC   N2%                 cqr_ffbs          78 0.9817      0.9723      0.9898 0.0001  0.0061
-      yasa     SC   N2%         norm_entropy_reg          78 1.0159      0.9891      1.0428 0.2421  1.0000
-      yasa     SC   N2%                norm_ffbs          78 1.0206      0.9900      1.0484 0.2124  1.0000
-      yasa     SC   N2%           norm_reg_plugc          78 0.7489      0.6840      0.8293 0.0000  0.0040
-      yasa     SC   N2% SCALE@calibrated plug-in          78 0.9525      0.9290      0.9751 0.0000  0.0008
-      yasa     SC   N2%          SCALE@FFBS mean          78 0.9391      0.9130      0.9614 0.0000  0.0008
-      yasa     SC   N3%                   ba_loa          78 0.9213      0.7778      1.1077 0.5899  1.0000
-      yasa     SC   N3%                   ba_reg          78 1.0216      0.9180      1.1449 0.7346  1.0000
-      yasa     SC   N3%               scp_signed          78 0.9305      0.8119      1.0733 0.5046  1.0000
-      yasa     SC   N3%               scp_abs_bc          78 0.9130      0.7683      1.1084 0.5213  1.0000
-      yasa     SC   N3%              scp_abs_cal          78 0.8790      0.8380      0.9183 0.0000  0.0040
-      yasa     SC   N3%                   cqr_qr          78 0.8764      0.7909      0.9739 0.0030  0.1320
-      yasa     SC   N3%                 cqr_ffbs          78 0.9739      0.9620      0.9867 0.0000  0.0040
-      yasa     SC   N3%         norm_entropy_reg          78 0.9396      0.8986      0.9821 0.0037  0.1591
-      yasa     SC   N3%                norm_ffbs          78 1.0566      1.0179      1.0944 0.0004  0.0216
-      yasa     SC   N3%           norm_reg_plugc          78 0.9472      0.8913      1.0042 0.1119  1.0000
-      yasa     SC   N3% SCALE@calibrated plug-in          78 0.9280      0.8865      0.9780 0.0005  0.0030
-      yasa     SC   N3%          SCALE@FFBS mean          78 0.9232      0.8901      0.9591 0.0000  0.0008
-      yasa     SC  REM%                   ba_loa          78 1.0094      0.7870      1.3265 0.9479  1.0000
-      yasa     SC  REM%                   ba_reg          78 1.1201      0.8933      1.4364 0.3826  1.0000
-      yasa     SC  REM%               scp_signed          78 1.0191      0.8057      1.3072 0.8950  1.0000
-      yasa     SC  REM%               scp_abs_bc          78 1.0544      0.8105      1.4144 0.7394  1.0000
-      yasa     SC  REM%              scp_abs_cal          78 1.1159      0.8727      1.4635 0.4290  1.0000
-      yasa     SC  REM%                   cqr_qr          78 1.0496      0.8835      1.2820 0.6399  1.0000
-      yasa     SC  REM%                 cqr_ffbs          78 0.9650      0.9469      0.9847 0.0004  0.0216
-      yasa     SC  REM%         norm_entropy_reg          78 0.9690      0.9426      0.9946 0.0265  1.0000
-      yasa     SC  REM%                norm_ffbs          78 1.0688      1.0050      1.1424 0.0766  1.0000
-      yasa     SC  REM%           norm_reg_plugc          78 1.1884      0.9339      1.5539 0.1716  1.0000
-      yasa     SC  REM% SCALE@calibrated plug-in          78 0.9390      0.9030      0.9804 0.0116  0.0464
-      yasa     SC  REM%          SCALE@FFBS mean          78 0.9103      0.8655      0.9595 0.0006  0.0030
-      yasa     SC  REML                   ba_loa          78 0.6704      0.5119      0.8406 0.0001  0.0087
-      yasa     SC  REML                   ba_reg          78 0.7398      0.5543      0.9612 0.0410  1.0000
-      yasa     SC  REML               scp_signed          78 0.6765      0.5235      0.8424 0.0001  0.0061
-      yasa     SC  REML               scp_abs_bc          78 0.6919      0.5304      0.8643 0.0003  0.0192
-      yasa     SC  REML              scp_abs_cal          78 0.7178      0.5502      0.8950 0.0013  0.0621
-      yasa     SC  REML                   cqr_qr          78 0.7129      0.5968      0.8249 0.0000  0.0040
-      yasa     SC  REML                 cqr_ffbs          78 1.1242      0.9586      1.3489 0.2229  1.0000
-      yasa     SC  REML         norm_entropy_reg          78 0.8319      0.7605      0.9050 0.0000  0.0040
-      yasa     SC  REML                norm_ffbs          78 1.0884      1.0269      1.1662 0.0045  0.1911
-      yasa     SC  REML           norm_reg_plugc          78 0.8195      0.6533      1.0066 0.0562  1.0000
-      yasa     SC  REML SCALE@calibrated plug-in          78 0.8759      0.8164      0.9431 0.0001  0.0008
-      yasa     SC  REML          SCALE@FFBS mean          78 0.8363      0.7581      0.9125 0.0000  0.0008
-      yasa     SC   SOL                   ba_loa          78 0.8782      0.5561      1.3486 0.5731  1.0000
-      yasa     SC   SOL                   ba_reg          78 1.0460      0.7473      1.5043 0.8172  1.0000
-      yasa     SC   SOL               scp_signed          78 0.8915      0.5772      1.3874 0.6213  1.0000
-      yasa     SC   SOL               scp_abs_bc          78 0.8710      0.5463      1.3656 0.5702  1.0000
-      yasa     SC   SOL              scp_abs_cal          78 0.8058      0.5280      1.2522 0.3426  1.0000
-      yasa     SC   SOL                   cqr_qr          78 0.8988      0.6748      1.1052 0.3512  1.0000
-      yasa     SC   SOL                 cqr_ffbs          78 1.6689      1.2448      2.0872 0.0007  0.0382
-      yasa     SC   SOL         norm_entropy_reg          78 0.6959      0.6461      0.7561 0.0000  0.0040
-      yasa     SC   SOL                norm_ffbs          78 1.3212      1.0749      1.5368 0.0361  1.0000
-      yasa     SC   SOL           norm_reg_plugc          78 1.0467      0.7064      1.5448 0.8600  1.0000
-      yasa     SC   SOL SCALE@calibrated plug-in          78 0.7698      0.7120      0.8356 0.0000  0.0008
-      yasa     SC   SOL          SCALE@FFBS mean          78 0.6975      0.6487      0.7560 0.0000  0.0008
-      yasa     SC   TST                   ba_loa          78 0.8750      0.7974      0.9387 0.0000  0.0040
-      yasa     SC   TST                   ba_reg          78 0.8925      0.8192      0.9560 0.0010  0.0525
-      yasa     SC   TST               scp_signed          78 0.8621      0.7693      0.9418 0.0001  0.0087
-      yasa     SC   TST               scp_abs_bc          78 0.8759      0.7992      0.9366 0.0000  0.0040
-      yasa     SC   TST              scp_abs_cal          78 0.8609      0.7902      0.9166 0.0000  0.0040
-      yasa     SC   TST                   cqr_qr          78 0.8291      0.6967      0.9573 0.0013  0.0611
-      yasa     SC   TST                 cqr_ffbs          78 0.9697      0.9525      0.9827 0.0000  0.0040
-      yasa     SC   TST         norm_entropy_reg          78 0.9690      0.9283      0.9990 0.0502  1.0000
-      yasa     SC   TST                norm_ffbs          78 1.0627      1.0338      1.0995 0.0000  0.0040
-      yasa     SC   TST           norm_reg_plugc          78 0.9681      0.9177      1.0086 0.1720  1.0000
-      yasa     SC   TST SCALE@calibrated plug-in          78 0.8892      0.8415      0.9277 0.0000  0.0008
-      yasa     SC   TST          SCALE@FFBS mean          78 0.8962      0.8457      0.9354 0.0000  0.0008
-      yasa     SC  WASO                   ba_loa          78 1.4119      1.1545      1.8406 0.0002  0.0112
-      yasa     SC  WASO                   ba_reg          78 2.2531      1.8622      2.7136 0.0000  0.0040
-      yasa     SC  WASO               scp_signed          78 1.7227      1.4342      2.1870 0.0000  0.0040
-      yasa     SC  WASO               scp_abs_bc          78 1.3901      1.1238      1.8507 0.0005  0.0286
-      yasa     SC  WASO              scp_abs_cal          78 1.1537      0.9877      1.4029 0.0823  1.0000
-      yasa     SC  WASO                   cqr_qr          78 2.1080      1.8353      2.4588 0.0000  0.0040
-      yasa     SC  WASO                 cqr_ffbs          78 1.1110      1.0557      1.1680 0.0000  0.0040
-      yasa     SC  WASO         norm_entropy_reg          78 0.9307      0.8519      1.0366 0.1442  1.0000
-      yasa     SC  WASO                norm_ffbs          78 1.0015      0.9364      1.0690 0.9664  1.0000
-      yasa     SC  WASO           norm_reg_plugc          78 1.1787      1.0179      1.4232 0.0339  1.0000
-      yasa     SC  WASO SCALE@calibrated plug-in          78 0.9788      0.9303      1.0306 0.4110  0.4110
-      yasa     SC  WASO          SCALE@FFBS mean          78 0.9519      0.8970      1.0286 0.1460  0.2921
-      yasa     ST   N1%                   ba_loa          22 1.0770      0.8343      1.4865 0.9006  1.0000
-      yasa     ST   N1%                   ba_reg          22 0.9454      0.6989      1.3143 0.7683  1.0000
-      yasa     ST   N1%               scp_signed          22 1.0721      0.7588      1.5713 0.8245  1.0000
-      yasa     ST   N1%               scp_abs_bc          22 1.1080      0.8564      1.5418 0.8644  1.0000
-      yasa     ST   N1%              scp_abs_cal          22 1.0924      0.9329      1.3003 0.7661  1.0000
-      yasa     ST   N1%                   cqr_qr          22 0.7329      0.5482      0.9760 0.0354  1.0000
-      yasa     ST   N1%                 cqr_ffbs          22 0.9691      0.9484      0.9845 0.0005  0.0330
-      yasa     ST   N1%         norm_entropy_reg          22 0.9760      0.9533      0.9979 0.0400  1.0000
-      yasa     ST   N1%                norm_ffbs          22 1.0640      1.0393      1.0967 0.0001  0.0071
-      yasa     ST   N1%           norm_reg_plugc          22 1.1048      0.9643      1.2863 0.4353  1.0000
-      yasa     ST   N1% SCALE@calibrated plug-in          22 0.9887      0.9473      1.0248 0.5975  1.0000
-      yasa     ST   N1%          SCALE@FFBS mean          22 0.9417      0.9045      0.9716 0.0004  0.0063
-      yasa     ST   N2%                   ba_loa          22 1.0251      0.9488      1.1019 0.6094  1.0000
-      yasa     ST   N2%                   ba_reg          22 0.9804      0.8408      1.1261 0.9165  1.0000
-      yasa     ST   N2%               scp_signed          22 0.9607      0.8660      1.0416 0.6382  1.0000
-      yasa     ST   N2%               scp_abs_bc          22 1.0014      0.9254      1.0795 0.9846  1.0000
-      yasa     ST   N2%              scp_abs_cal          22 0.9427      0.7644      1.1465 0.6915  1.0000
-      yasa     ST   N2%                   cqr_qr          22 0.6171      0.5510      0.7004 0.0000  0.0040
-      yasa     ST   N2%                 cqr_ffbs          22 1.0143      0.9948      1.0348 0.1606  1.0000
-      yasa     ST   N2%         norm_entropy_reg          22 1.0144      0.9727      1.0538 0.5521  1.0000
-      yasa     ST   N2%                norm_ffbs          22 0.9522      0.9081      0.9984 0.0500  1.0000
-      yasa     ST   N2%           norm_reg_plugc          22 0.9164      0.7773      1.0931 0.3983  1.0000
-      yasa     ST   N2% SCALE@calibrated plug-in          22 1.0288      0.9674      1.0906 0.4363  1.0000
-      yasa     ST   N2%          SCALE@FFBS mean          22 1.0111      0.9706      1.0556 0.6205  1.0000
-      yasa     ST   N3%                   ba_loa          22 0.9186      0.7981      1.0479 0.3261  1.0000
-      yasa     ST   N3%                   ba_reg          22 0.8066      0.6980      0.9445 0.0321  1.0000
-      yasa     ST   N3%               scp_signed          22 0.8883      0.7707      1.0232 0.1808  1.0000
-      yasa     ST   N3%               scp_abs_bc          22 0.9240      0.8196      1.0321 0.2658  1.0000
-      yasa     ST   N3%              scp_abs_cal          22 0.9377      0.8465      1.0305 0.2799  1.0000
-      yasa     ST   N3%                   cqr_qr          22 0.5373      0.4560      0.6243 0.0000  0.0040
-      yasa     ST   N3%                 cqr_ffbs          22 0.9765      0.9547      0.9969 0.0419  1.0000
-      yasa     ST   N3%         norm_entropy_reg          22 0.9738      0.9418      1.0090 0.1577  1.0000
-      yasa     ST   N3%                norm_ffbs          22 1.0057      0.9705      1.0436 0.7740  1.0000
-      yasa     ST   N3%           norm_reg_plugc          22 0.9764      0.8804      1.0781 0.7131  1.0000
-      yasa     ST   N3% SCALE@calibrated plug-in          22 0.9603      0.9261      0.9936 0.0336  0.3024
-      yasa     ST   N3%          SCALE@FFBS mean          22 0.9445      0.9018      0.9831 0.0099  0.1122
-      yasa     ST  REM%                   ba_loa          22 1.0846      0.8837      1.3728 0.4758  1.0000
-      yasa     ST  REM%                   ba_reg          22 1.1182      0.8308      1.6405 0.5102  1.0000
-      yasa     ST  REM%               scp_signed          22 1.0657      0.9652      1.1701 0.2129  1.0000
-      yasa     ST  REM%               scp_abs_bc          22 1.0720      0.9096      1.2827 0.4411  1.0000
-      yasa     ST  REM%              scp_abs_cal          22 1.0582      0.9333      1.1974 0.4013  1.0000
-      yasa     ST  REM%                   cqr_qr          22 0.7073      0.6141      0.8279 0.0001  0.0102
-      yasa     ST  REM%                 cqr_ffbs          22 1.0274      1.0015      1.0530 0.0693  1.0000
-      yasa     ST  REM%         norm_entropy_reg          22 0.9737      0.9248      1.0146 0.3279  1.0000
-      yasa     ST  REM%                norm_ffbs          22 0.9089      0.8774      0.9490 0.0005  0.0330
-      yasa     ST  REM%           norm_reg_plugc          22 0.9794      0.8797      1.0891 0.7493  1.0000
-      yasa     ST  REM% SCALE@calibrated plug-in          22 1.0805      1.0240      1.1298 0.0093  0.1122
-      yasa     ST  REM%          SCALE@FFBS mean          22 1.0362      0.9900      1.0824 0.1763  1.0000
-      yasa     ST  REML                   ba_loa          22 0.9351      0.7252      1.1505 0.6384  1.0000
-      yasa     ST  REML                   ba_reg          22 1.0582      0.7194      1.5072 0.8083  1.0000
-      yasa     ST  REML               scp_signed          22 0.9830      0.7037      1.4186 0.8670  1.0000
-      yasa     ST  REML               scp_abs_bc          22 1.0448      0.8112      1.3714 0.9094  1.0000
-      yasa     ST  REML              scp_abs_cal          22 0.9444      0.6997      1.3034 0.7263  1.0000
-      yasa     ST  REML                   cqr_qr          22 0.6123      0.4160      0.8933 0.0082  0.4950
-      yasa     ST  REML                 cqr_ffbs          22 1.3987      1.2241      1.5923 0.0000  0.0040
-      yasa     ST  REML         norm_entropy_reg          22 0.9524      0.9002      0.9941 0.0339  1.0000
-      yasa     ST  REML                norm_ffbs          22 0.9730      0.9339      1.0343 0.4157  1.0000
-      yasa     ST  REML           norm_reg_plugc          22 0.9430      0.7134      1.2419 0.5989  1.0000
-      yasa     ST  REML SCALE@calibrated plug-in          22 1.0014      0.9462      1.0631 0.9711  1.0000
-      yasa     ST  REML          SCALE@FFBS mean          22 1.0429      0.9739      1.0999 0.3454  1.0000
-      yasa     ST   SOL                   ba_loa          22 1.9242      0.9272      3.9598 0.1630  1.0000
-      yasa     ST   SOL                   ba_reg          22 1.9313      0.9437      3.7021 0.1509  1.0000
-      yasa     ST   SOL               scp_signed          22 1.9857      1.0419      3.7440 0.0585  1.0000
-      yasa     ST   SOL               scp_abs_bc          22 1.8351      0.8900      3.7354 0.2059  1.0000
-      yasa     ST   SOL              scp_abs_cal          22 1.3647      0.9322      1.7206 0.2172  1.0000
-      yasa     ST   SOL                   cqr_qr          22 1.0775      0.7066      1.4652 0.9127  1.0000
-      yasa     ST   SOL                 cqr_ffbs          22 1.4960      1.2691      1.6587 0.0000  0.0040
-      yasa     ST   SOL         norm_entropy_reg          22 0.8301      0.7304      0.9173 0.0000  0.0040
-      yasa     ST   SOL                norm_ffbs          22 1.1564      1.1044      1.2579 0.0000  0.0040
-      yasa     ST   SOL           norm_reg_plugc          22 1.4577      1.0010      1.7969 0.1084  1.0000
-      yasa     ST   SOL SCALE@calibrated plug-in          22 0.9362      0.8626      1.0029 0.0879  0.7036
-      yasa     ST   SOL          SCALE@FFBS mean          22 0.8180      0.7373      0.8878 0.0000  0.0008
-      yasa     ST   TST                   ba_loa          22 0.5824      0.5247      0.6772 0.0000  0.0040
-      yasa     ST   TST                   ba_reg          22 0.6099      0.5382      0.7381 0.0001  0.0102
-      yasa     ST   TST               scp_signed          22 0.6404      0.5569      0.7173 0.0000  0.0040
-      yasa     ST   TST               scp_abs_bc          22 0.5717      0.5266      0.6402 0.0000  0.0040
-      yasa     ST   TST              scp_abs_cal          22 1.1789      0.9688      1.3692 0.1574  1.0000
-      yasa     ST   TST                   cqr_qr          22 0.6311      0.4833      0.8299 0.0007  0.0480
-      yasa     ST   TST                 cqr_ffbs          22 1.0093      0.9861      1.0277 0.5129  1.0000
-      yasa     ST   TST         norm_entropy_reg          22 0.9649      0.9234      1.0218 0.3461  1.0000
-      yasa     ST   TST                norm_ffbs          22 1.0842      1.0212      1.1400 0.0095  0.5605
-      yasa     ST   TST           norm_reg_plugc          22 1.3118      1.0681      1.5900 0.0068  0.4178
-      yasa     ST   TST SCALE@calibrated plug-in          22 0.8987      0.8406      0.9692 0.0085  0.1111
-      yasa     ST   TST          SCALE@FFBS mean          22 0.9170      0.8711      0.9821 0.0210  0.2105
-      yasa     ST  WASO                   ba_loa          22 1.1479      0.8036      1.8890 0.5424  1.0000
-      yasa     ST  WASO                   ba_reg          22 1.4128      1.1225      1.7758 0.0057  0.3565
-      yasa     ST  WASO               scp_signed          22 1.3760      1.0299      2.0099 0.0362  1.0000
-      yasa     ST  WASO               scp_abs_bc          22 1.1758      0.7909      2.1132 0.5093  1.0000
-      yasa     ST  WASO              scp_abs_cal          22 1.7383      1.2617      2.3162 0.0001  0.0071
-      yasa     ST  WASO                   cqr_qr          22 0.9305      0.7895      1.0485 0.2950  1.0000
-      yasa     ST  WASO                 cqr_ffbs          22 1.0486      0.9771      1.1244 0.2498  1.0000
-      yasa     ST  WASO         norm_entropy_reg          22 0.8730      0.8234      0.9318 0.0008  0.0535
-      yasa     ST  WASO                norm_ffbs          22 1.1084      0.9998      1.1930 0.1051  1.0000
-      yasa     ST  WASO           norm_reg_plugc          22 1.8108      1.2801      2.4386 0.0001  0.0071
-      yasa     ST  WASO SCALE@calibrated plug-in          22 0.9599      0.8869      1.0407 0.4602  1.0000
-      yasa     ST  WASO          SCALE@FFBS mean          22 0.8542      0.8178      0.9001 0.0001  0.0022
-lgbm_sc_s0    HMC   N1%                   ba_loa         151 0.9247      0.7449      1.1494 0.4919  1.0000
-lgbm_sc_s0    HMC   N1%                   ba_reg         151 1.0784      0.9719      1.1757 0.1574  1.0000
-lgbm_sc_s0    HMC   N1%               scp_signed         151 0.9305      0.7642      1.1313 0.5003  1.0000
-lgbm_sc_s0    HMC   N1%               scp_abs_bc         151 0.9107      0.7302      1.1338 0.4220  1.0000
-lgbm_sc_s0    HMC   N1%              scp_abs_cal         151 0.9551      0.8761      1.0273 0.3147  1.0000
-lgbm_sc_s0    HMC   N1%                   cqr_qr         151 1.0088      0.8552      1.1625 0.9216  1.0000
-lgbm_sc_s0    HMC   N1%                 cqr_ffbs         151 1.0003      0.9851      1.0130 0.9717  1.0000
-lgbm_sc_s0    HMC   N1%         norm_entropy_reg         151 1.0278      0.9959      1.0551 0.1132  1.0000
-lgbm_sc_s0    HMC   N1%                norm_ffbs         151 0.9916      0.9709      1.0156 0.5005  1.0000
-lgbm_sc_s0    HMC   N1%           norm_reg_plugc         151 0.9473      0.8799      1.0195 0.1750  1.0000
-lgbm_sc_s0    HMC   N1% SCALE@calibrated plug-in         151 1.0082      0.9786      1.0380 0.6052  1.0000
-lgbm_sc_s0    HMC   N1%          SCALE@FFBS mean         151 0.9972      0.9649      1.0230 0.8598  1.0000
-lgbm_sc_s0    HMC   N2%                   ba_loa         151 0.9119      0.7662      1.0653 0.3005  1.0000
-lgbm_sc_s0    HMC   N2%                   ba_reg         151 1.2988      1.0806      1.5903 0.0074  0.4736
-lgbm_sc_s0    HMC   N2%               scp_signed         151 0.8986      0.7568      1.0554 0.2304  1.0000
-lgbm_sc_s0    HMC   N2%               scp_abs_bc         151 0.9117      0.7721      1.0570 0.2791  1.0000
-lgbm_sc_s0    HMC   N2%              scp_abs_cal         151 0.9813      0.8234      1.1458 0.8328  1.0000
-lgbm_sc_s0    HMC   N2%                   cqr_qr         151 1.1453      0.9951      1.3286 0.0802  1.0000
-lgbm_sc_s0    HMC   N2%                 cqr_ffbs         151 1.0117      1.0049      1.0180 0.0001  0.0070
-lgbm_sc_s0    HMC   N2%         norm_entropy_reg         151 1.0439      1.0177      1.0721 0.0002  0.0136
-lgbm_sc_s0    HMC   N2%                norm_ffbs         151 0.9736      0.9517      0.9998 0.0294  1.0000
-lgbm_sc_s0    HMC   N2%           norm_reg_plugc         151 0.9814      0.8304      1.1459 0.8273  1.0000
-lgbm_sc_s0    HMC   N2% SCALE@calibrated plug-in         151 0.9999      0.9696      1.0308 0.9976  1.0000
-lgbm_sc_s0    HMC   N2%          SCALE@FFBS mean         151 1.0221      0.9949      1.0487 0.0939  0.8455
-lgbm_sc_s0    HMC   N3%                   ba_loa         151 1.2195      1.0676      1.3773 0.0075  0.4756
-lgbm_sc_s0    HMC   N3%                   ba_reg         151 1.2509      1.0234      1.5017 0.0416  1.0000
-lgbm_sc_s0    HMC   N3%               scp_signed         151 1.1830      1.0307      1.3415 0.0357  1.0000
-lgbm_sc_s0    HMC   N3%               scp_abs_bc         151 1.2118      1.0554      1.3735 0.0119  0.7409
-lgbm_sc_s0    HMC   N3%              scp_abs_cal         151 0.9916      0.9278      1.0535 0.8082  1.0000
-lgbm_sc_s0    HMC   N3%                   cqr_qr         151 1.2390      1.0038      1.5336 0.0818  1.0000
-lgbm_sc_s0    HMC   N3%                 cqr_ffbs         151 0.9921      0.9744      1.0100 0.5051  1.0000
-lgbm_sc_s0    HMC   N3%         norm_entropy_reg         151 0.9832      0.9499      1.0142 0.3577  1.0000
-lgbm_sc_s0    HMC   N3%                norm_ffbs         151 1.0167      0.9660      1.0748 0.6339  1.0000
-lgbm_sc_s0    HMC   N3%           norm_reg_plugc         151 1.0260      0.9528      1.1026 0.5345  1.0000
-lgbm_sc_s0    HMC   N3% SCALE@calibrated plug-in         151 0.9665      0.9227      1.0091 0.1879  1.0000
-lgbm_sc_s0    HMC   N3%          SCALE@FFBS mean         151 0.9773      0.9392      1.0154 0.3667  1.0000
-lgbm_sc_s0    HMC  REM%                   ba_loa         151 1.0428      0.8756      1.2332 0.6573  1.0000
-lgbm_sc_s0    HMC  REM%                   ba_reg         151 1.1555      0.9641      1.3713 0.1012  1.0000
-lgbm_sc_s0    HMC  REM%               scp_signed         151 1.0353      0.8710      1.2205 0.7176  1.0000
-lgbm_sc_s0    HMC  REM%               scp_abs_bc         151 1.0493      0.8768      1.2488 0.6148  1.0000
-lgbm_sc_s0    HMC  REM%              scp_abs_cal         151 1.1378      1.0011      1.3040 0.0448  1.0000
-lgbm_sc_s0    HMC  REM%                   cqr_qr         151 1.0053      0.9137      1.1118 0.9168  1.0000
-lgbm_sc_s0    HMC  REM%                 cqr_ffbs         151 0.9925      0.9870      0.9982 0.0026  0.1749
-lgbm_sc_s0    HMC  REM%         norm_entropy_reg         151 0.9901      0.9658      1.0152 0.4490  1.0000
-lgbm_sc_s0    HMC  REM%                norm_ffbs         151 1.0181      0.9904      1.0470 0.2069  1.0000
-lgbm_sc_s0    HMC  REM%           norm_reg_plugc         151 1.1577      1.0048      1.3426 0.0325  1.0000
-lgbm_sc_s0    HMC  REM% SCALE@calibrated plug-in         151 0.9829      0.9454      1.0222 0.3948  1.0000
-lgbm_sc_s0    HMC  REM%          SCALE@FFBS mean         151 0.9257      0.8930      0.9589 0.0000  0.0008
-lgbm_sc_s0    HMC  REML                   ba_loa         150 1.2368      1.0303      1.5360 0.0350  1.0000
-lgbm_sc_s0    HMC  REML                   ba_reg         150 1.2136      1.0102      1.5295 0.0663  1.0000
-lgbm_sc_s0    HMC  REML               scp_signed         150 1.1667      0.9678      1.4188 0.1603  1.0000
-lgbm_sc_s0    HMC  REML               scp_abs_bc         150 1.2394      1.0358      1.5277 0.0294  1.0000
-lgbm_sc_s0    HMC  REML              scp_abs_cal         150 1.0038      0.9262      1.0841 0.9325  1.0000
-lgbm_sc_s0    HMC  REML                   cqr_qr         150 1.2046      1.0265      1.4123 0.0398  1.0000
-lgbm_sc_s0    HMC  REML                 cqr_ffbs         150 0.9844      0.9317      1.0483 0.6300  1.0000
-lgbm_sc_s0    HMC  REML         norm_entropy_reg         150 1.0140      0.9529      1.0803 0.7155  1.0000
-lgbm_sc_s0    HMC  REML                norm_ffbs         150 1.0455      0.9901      1.1055 0.1418  1.0000
-lgbm_sc_s0    HMC  REML           norm_reg_plugc         150 1.0316      0.9696      1.1076 0.3693  1.0000
-lgbm_sc_s0    HMC  REML SCALE@calibrated plug-in         150 0.9730      0.9227      1.0281 0.3388  1.0000
-lgbm_sc_s0    HMC  REML          SCALE@FFBS mean         150 0.9796      0.9284      1.0354 0.4808  1.0000
-lgbm_sc_s0    HMC   SOL                   ba_loa         151 1.2227      0.7655      2.0438 0.5765  1.0000
-lgbm_sc_s0    HMC   SOL                   ba_reg         151 1.3764      0.9477      2.2692 0.1880  1.0000
-lgbm_sc_s0    HMC   SOL               scp_signed         151 1.1743      0.7367      1.9791 0.6772  1.0000
-lgbm_sc_s0    HMC   SOL               scp_abs_bc         151 1.1907      0.7279      2.0498 0.6290  1.0000
-lgbm_sc_s0    HMC   SOL              scp_abs_cal         151 1.3420      0.9093      2.2548 0.2631  1.0000
-lgbm_sc_s0    HMC   SOL                   cqr_qr         151 1.0644      0.7597      1.4426 0.9256  1.0000
-lgbm_sc_s0    HMC   SOL                 cqr_ffbs         151 1.0201      0.9931      1.0771 0.1592  1.0000
-lgbm_sc_s0    HMC   SOL         norm_entropy_reg         151 0.9269      0.8340      0.9883 0.0134  0.8204
-lgbm_sc_s0    HMC   SOL                norm_ffbs         151 1.0473      1.0130      1.1220 0.0008  0.0536
-lgbm_sc_s0    HMC   SOL           norm_reg_plugc         151 1.3783      0.9440      2.3278 0.1991  1.0000
-lgbm_sc_s0    HMC   SOL SCALE@calibrated plug-in         151 0.9736      0.9221      1.0037 0.0841  0.8415
-lgbm_sc_s0    HMC   SOL          SCALE@FFBS mean         151 0.9179      0.8258      0.9736 0.0004  0.0044
-lgbm_sc_s0    HMC   TST                   ba_loa         151 0.6915      0.5594      0.8116 0.0000  0.0040
-lgbm_sc_s0    HMC   TST                   ba_reg         151 0.7213      0.5776      0.8651 0.0001  0.0070
-lgbm_sc_s0    HMC   TST               scp_signed         151 0.6570      0.5351      0.7670 0.0000  0.0040
-lgbm_sc_s0    HMC   TST               scp_abs_bc         151 0.6828      0.5572      0.7931 0.0000  0.0040
-lgbm_sc_s0    HMC   TST              scp_abs_cal         151 0.7789      0.7422      0.8206 0.0000  0.0040
-lgbm_sc_s0    HMC   TST                   cqr_qr         151 1.0882      0.9646      1.2269 0.2222  1.0000
-lgbm_sc_s0    HMC   TST                 cqr_ffbs         151 0.9401      0.9291      0.9505 0.0000  0.0040
-lgbm_sc_s0    HMC   TST         norm_entropy_reg         151 0.9029      0.8827      0.9232 0.0000  0.0040
-lgbm_sc_s0    HMC   TST                norm_ffbs         151 1.1140      1.0858      1.1439 0.0000  0.0040
-lgbm_sc_s0    HMC   TST           norm_reg_plugc         151 0.9051      0.8503      0.9667 0.0046  0.2990
-lgbm_sc_s0    HMC   TST SCALE@calibrated plug-in         151 0.8606      0.8312      0.8878 0.0000  0.0008
-lgbm_sc_s0    HMC   TST          SCALE@FFBS mean         151 0.8611      0.8383      0.8833 0.0000  0.0008
-lgbm_sc_s0    HMC  WASO                   ba_loa         151 0.7727      0.5647      1.0232 0.1049  1.0000
-lgbm_sc_s0    HMC  WASO                   ba_reg         151 0.9089      0.7620      1.0969 0.3374  1.0000
-lgbm_sc_s0    HMC  WASO               scp_signed         151 0.7585      0.5634      0.9878 0.0498  1.0000
-lgbm_sc_s0    HMC  WASO               scp_abs_bc         151 0.7678      0.5645      1.0161 0.0900  1.0000
-lgbm_sc_s0    HMC  WASO              scp_abs_cal         151 0.8613      0.7532      1.0095 0.0411  1.0000
-lgbm_sc_s0    HMC  WASO                   cqr_qr         151 0.9719      0.8695      1.0890 0.6505  1.0000
-lgbm_sc_s0    HMC  WASO                 cqr_ffbs         151 0.9778      0.9699      0.9857 0.0000  0.0040
-lgbm_sc_s0    HMC  WASO         norm_entropy_reg         151 0.9531      0.9345      0.9695 0.0000  0.0040
-lgbm_sc_s0    HMC  WASO                norm_ffbs         151 1.0723      1.0478      1.0992 0.0000  0.0040
-lgbm_sc_s0    HMC  WASO           norm_reg_plugc         151 0.9522      0.8328      1.1118 0.5499  1.0000
-lgbm_sc_s0    HMC  WASO SCALE@calibrated plug-in         151 0.9045      0.8803      0.9287 0.0000  0.0008
-lgbm_sc_s0    HMC  WASO          SCALE@FFBS mean         151 0.9148      0.8873      0.9417 0.0000  0.0008
-lgbm_sc_s0     SC   N1%                   ba_loa          78 0.9316      0.7646      1.1080 0.4609  1.0000
-lgbm_sc_s0     SC   N1%                   ba_reg          78 1.0948      1.0151      1.1761 0.0276  1.0000
-lgbm_sc_s0     SC   N1%               scp_signed          78 0.9256      0.7864      1.0619 0.3178  1.0000
-lgbm_sc_s0     SC   N1%               scp_abs_bc          78 0.9287      0.7649      1.0980 0.4327  1.0000
-lgbm_sc_s0     SC   N1%              scp_abs_cal          78 0.9018      0.8351      0.9646 0.0040  0.2308
-lgbm_sc_s0     SC   N1%                   cqr_qr          78 0.9511      0.7883      1.1229 0.6192  1.0000
-lgbm_sc_s0     SC   N1%                 cqr_ffbs          78 0.9705      0.9552      0.9866 0.0002  0.0167
-lgbm_sc_s0     SC   N1%         norm_entropy_reg          78 0.9797      0.9481      1.0075 0.1970  1.0000
-lgbm_sc_s0     SC   N1%                norm_ffbs          78 1.0425      1.0089      1.0697 0.0102  0.5022
-lgbm_sc_s0     SC   N1%           norm_reg_plugc          78 0.9432      0.8803      1.0070 0.1105  1.0000
-lgbm_sc_s0     SC   N1% SCALE@calibrated plug-in          78 0.9561      0.9349      0.9745 0.0000  0.0008
-lgbm_sc_s0     SC   N1%          SCALE@FFBS mean          78 0.9431      0.9159      0.9691 0.0000  0.0008
-lgbm_sc_s0     SC   N2%                   ba_loa          78 0.9394      0.8549      1.0305 0.2115  1.0000
-lgbm_sc_s0     SC   N2%                   ba_reg          78 0.9796      0.9050      1.0628 0.6431  1.0000
-lgbm_sc_s0     SC   N2%               scp_signed          78 0.8835      0.7970      0.9835 0.0135  0.6480
-lgbm_sc_s0     SC   N2%               scp_abs_bc          78 0.9187      0.8411      1.0051 0.0692  1.0000
-lgbm_sc_s0     SC   N2%              scp_abs_cal          78 0.7823      0.7324      0.8381 0.0000  0.0040
-lgbm_sc_s0     SC   N2%                   cqr_qr          78 0.7959      0.6932      0.9117 0.0001  0.0068
-lgbm_sc_s0     SC   N2%                 cqr_ffbs          78 0.9872      0.9802      0.9946 0.0011  0.0671
-lgbm_sc_s0     SC   N2%         norm_entropy_reg          78 1.0080      0.9840      1.0321 0.5365  1.0000
-lgbm_sc_s0     SC   N2%                norm_ffbs          78 1.0344      1.0081      1.0614 0.0187  0.8415
-lgbm_sc_s0     SC   N2%           norm_reg_plugc          78 0.8101      0.7565      0.8661 0.0000  0.0040
-lgbm_sc_s0     SC   N2% SCALE@calibrated plug-in          78 0.9658      0.9451      0.9880 0.0034  0.0183
-lgbm_sc_s0     SC   N2%          SCALE@FFBS mean          78 0.9527      0.9342      0.9724 0.0000  0.0008
-lgbm_sc_s0     SC   N3%                   ba_loa          78 0.9307      0.8518      1.0318 0.2146  1.0000
-lgbm_sc_s0     SC   N3%                   ba_reg          78 0.8803      0.7820      1.0111 0.1113  1.0000
-lgbm_sc_s0     SC   N3%               scp_signed          78 0.9056      0.8422      0.9754 0.0095  0.4775
-lgbm_sc_s0     SC   N3%               scp_abs_bc          78 0.9278      0.8601      1.0068 0.1007  1.0000
-lgbm_sc_s0     SC   N3%              scp_abs_cal          78 0.9582      0.9005      1.0176 0.1690  1.0000
-lgbm_sc_s0     SC   N3%                   cqr_qr          78 0.7533      0.6626      0.8477 0.0000  0.0040
-lgbm_sc_s0     SC   N3%                 cqr_ffbs          78 0.9752      0.9572      0.9946 0.0045  0.2520
-lgbm_sc_s0     SC   N3%         norm_entropy_reg          78 0.9539      0.8996      1.0171 0.1521  1.0000
-lgbm_sc_s0     SC   N3%                norm_ffbs          78 1.0510      1.0032      1.1028 0.0367  1.0000
-lgbm_sc_s0     SC   N3%           norm_reg_plugc          78 1.0221      0.9393      1.1149 0.6495  1.0000
-lgbm_sc_s0     SC   N3% SCALE@calibrated plug-in          78 0.9375      0.8794      0.9986 0.0345  0.0714
-lgbm_sc_s0     SC   N3%          SCALE@FFBS mean          78 0.9241      0.8777      0.9761 0.0015  0.0105
-lgbm_sc_s0     SC  REM%                   ba_loa          78 1.0496      0.8413      1.3207 0.7312  1.0000
-lgbm_sc_s0     SC  REM%                   ba_reg          78 1.1018      0.8570      1.4535 0.5462  1.0000
-lgbm_sc_s0     SC  REM%               scp_signed          78 1.0556      0.8654      1.2883 0.6836  1.0000
-lgbm_sc_s0     SC  REM%               scp_abs_bc          78 1.0881      0.8631      1.3978 0.5501  1.0000
-lgbm_sc_s0     SC  REM%              scp_abs_cal          78 1.0701      0.8608      1.3563 0.6148  1.0000
-lgbm_sc_s0     SC  REM%                   cqr_qr          78 0.9813      0.8380      1.1815 0.8179  1.0000
-lgbm_sc_s0     SC  REM%                 cqr_ffbs          78 0.9781      0.9561      1.0020 0.1500  1.0000
-lgbm_sc_s0     SC  REM%         norm_entropy_reg          78 0.9752      0.9417      1.0134 0.2263  1.0000
-lgbm_sc_s0     SC  REM%                norm_ffbs          78 1.0567      1.0025      1.1129 0.0751  1.0000
-lgbm_sc_s0     SC  REM%           norm_reg_plugc          78 1.1446      0.9271      1.4488 0.2498  1.0000
-lgbm_sc_s0     SC  REM% SCALE@calibrated plug-in          78 0.9349      0.8925      0.9840 0.0178  0.0714
-lgbm_sc_s0     SC  REM%          SCALE@FFBS mean          78 0.9215      0.8694      0.9802 0.0208  0.0714
-lgbm_sc_s0     SC  REML                   ba_loa          78 0.7473      0.5151      1.0207 0.1213  1.0000
-lgbm_sc_s0     SC  REML                   ba_reg          78 0.7248      0.5235      0.9845 0.0587  1.0000
-lgbm_sc_s0     SC  REML               scp_signed          78 0.7520      0.5311      1.0075 0.0742  1.0000
-lgbm_sc_s0     SC  REML               scp_abs_bc          78 0.7496      0.5169      1.0309 0.1295  1.0000
-lgbm_sc_s0     SC  REML              scp_abs_cal          78 0.5887      0.4354      0.7698 0.0000  0.0040
-lgbm_sc_s0     SC  REML                   cqr_qr          78 0.7673      0.6135      0.9026 0.0003  0.0198
-lgbm_sc_s0     SC  REML                 cqr_ffbs          78 1.1200      0.9347      1.3831 0.3571  1.0000
-lgbm_sc_s0     SC  REML         norm_entropy_reg          78 0.7878      0.7040      0.8683 0.0000  0.0040
-lgbm_sc_s0     SC  REML                norm_ffbs          78 1.1099      1.0451      1.1867 0.0011  0.0671
-lgbm_sc_s0     SC  REML           norm_reg_plugc          78 0.7839      0.6083      0.9484 0.0066  0.3498
-lgbm_sc_s0     SC  REML SCALE@calibrated plug-in          78 0.7511      0.6478      0.8660 0.0000  0.0008
-lgbm_sc_s0     SC  REML          SCALE@FFBS mean          78 0.7841      0.6978      0.8674 0.0000  0.0008
-lgbm_sc_s0     SC   SOL                   ba_loa          78 0.8664      0.6810      1.1741 0.3350  1.0000
-lgbm_sc_s0     SC   SOL                   ba_reg          78 0.8758      0.7040      1.1933 0.3963  1.0000
-lgbm_sc_s0     SC   SOL               scp_signed          78 0.7967      0.6167      1.0647 0.0807  1.0000
-lgbm_sc_s0     SC   SOL               scp_abs_bc          78 0.8879      0.7027      1.2444 0.4718  1.0000
-lgbm_sc_s0     SC   SOL              scp_abs_cal          78 0.9248      0.7333      1.3094 0.6436  1.0000
-lgbm_sc_s0     SC   SOL                   cqr_qr          78 1.1448      0.9193      1.3091 0.2386  1.0000
-lgbm_sc_s0     SC   SOL                 cqr_ffbs          78 1.5738      1.2312      1.9370 0.0009  0.0558
-lgbm_sc_s0     SC   SOL         norm_entropy_reg          78 0.6987      0.6065      0.8036 0.0000  0.0040
-lgbm_sc_s0     SC   SOL                norm_ffbs          78 1.2494      1.0674      1.4375 0.0302  1.0000
-lgbm_sc_s0     SC   SOL           norm_reg_plugc          78 1.1105      0.8994      1.4779 0.5066  1.0000
-lgbm_sc_s0     SC   SOL SCALE@calibrated plug-in          78 0.8328      0.7748      0.9128 0.0030  0.0183
-lgbm_sc_s0     SC   SOL          SCALE@FFBS mean          78 0.6955      0.6099      0.7870 0.0000  0.0008
-lgbm_sc_s0     SC   TST                   ba_loa          78 0.8375      0.7095      0.9787 0.0282  1.0000
-lgbm_sc_s0     SC   TST                   ba_reg          78 0.8163      0.6919      0.9501 0.0153  0.7038
-lgbm_sc_s0     SC   TST               scp_signed          78 0.7891      0.6781      0.9040 0.0000  0.0040
-lgbm_sc_s0     SC   TST               scp_abs_bc          78 0.8190      0.6936      0.9555 0.0075  0.3900
-lgbm_sc_s0     SC   TST              scp_abs_cal          78 0.8074      0.7429      0.8649 0.0000  0.0040
-lgbm_sc_s0     SC   TST                   cqr_qr          78 0.7990      0.6746      0.9335 0.0003  0.0227
-lgbm_sc_s0     SC   TST                 cqr_ffbs          78 0.9869      0.9754      0.9961 0.0053  0.2915
-lgbm_sc_s0     SC   TST         norm_entropy_reg          78 0.9738      0.9445      0.9997 0.0487  1.0000
-lgbm_sc_s0     SC   TST                norm_ffbs          78 1.0567      1.0162      1.0937 0.0075  0.3900
-lgbm_sc_s0     SC   TST           norm_reg_plugc          78 0.8856      0.8268      0.9424 0.0000  0.0040
-lgbm_sc_s0     SC   TST SCALE@calibrated plug-in          78 0.9117      0.8790      0.9408 0.0000  0.0008
-lgbm_sc_s0     SC   TST          SCALE@FFBS mean          78 0.9193      0.8780      0.9563 0.0000  0.0008
-lgbm_sc_s0     SC  WASO                   ba_loa          78 1.3640      1.0702      1.8407 0.0055  0.2970
-lgbm_sc_s0     SC  WASO                   ba_reg          78 1.8388      1.4799      2.2787 0.0000  0.0040
-lgbm_sc_s0     SC  WASO               scp_signed          78 1.4979      1.1539      2.0984 0.0006  0.0378
-lgbm_sc_s0     SC  WASO               scp_abs_bc          78 1.3499      1.0432      1.8784 0.0141  0.6650
-lgbm_sc_s0     SC  WASO              scp_abs_cal          78 1.3382      1.0873      1.7814 0.0026  0.1508
-lgbm_sc_s0     SC  WASO                   cqr_qr          78 1.6990      1.4829      1.9646 0.0000  0.0040
-lgbm_sc_s0     SC  WASO                 cqr_ffbs          78 1.1621      1.0632      1.2905 0.0005  0.0352
-lgbm_sc_s0     SC  WASO         norm_entropy_reg          78 0.8244      0.7346      0.9351 0.0000  0.0040
-lgbm_sc_s0     SC  WASO                norm_ffbs          78 1.0244      0.9631      1.0993 0.5082  1.0000
-lgbm_sc_s0     SC  WASO           norm_reg_plugc          78 1.3311      1.0961      1.7428 0.0019  0.1121
-lgbm_sc_s0     SC  WASO SCALE@calibrated plug-in          78 1.0053      0.9706      1.0626 0.8046  0.8046
-lgbm_sc_s0     SC  WASO          SCALE@FFBS mean          78 0.8826      0.8273      0.9419 0.0000  0.0008
-lgbm_sc_s0     ST   N1%                   ba_loa          22 1.0135      0.5714      1.7739 0.9425  1.0000
-lgbm_sc_s0     ST   N1%                   ba_reg          22 1.2068      0.9854      1.4380 0.1305  1.0000
-lgbm_sc_s0     ST   N1%               scp_signed          22 1.0570      0.6162      1.7680 0.7214  1.0000
-lgbm_sc_s0     ST   N1%               scp_abs_bc          22 1.0353      0.5766      1.8724 0.8917  1.0000
-lgbm_sc_s0     ST   N1%              scp_abs_cal          22 1.0130      0.8998      1.1139 0.8383  1.0000
-lgbm_sc_s0     ST   N1%                   cqr_qr          22 0.7671      0.5788      0.9977 0.0487  1.0000
-lgbm_sc_s0     ST   N1%                 cqr_ffbs          22 0.9673      0.9410      0.9871 0.0016  0.1024
-lgbm_sc_s0     ST   N1%         norm_entropy_reg          22 0.9839      0.9557      1.0047 0.1818  1.0000
-lgbm_sc_s0     ST   N1%                norm_ffbs          22 1.0565      1.0292      1.0845 0.0017  0.1071
-lgbm_sc_s0     ST   N1%           norm_reg_plugc          22 1.0535      0.9457      1.1345 0.3533  1.0000
-lgbm_sc_s0     ST   N1% SCALE@calibrated plug-in          22 0.9616      0.9269      1.0058 0.1210  0.9684
-lgbm_sc_s0     ST   N1%          SCALE@FFBS mean          22 0.9371      0.8849      0.9795 0.0040  0.0440
-lgbm_sc_s0     ST   N2%                   ba_loa          22 0.9611      0.7805      1.1831 0.7809  1.0000
-lgbm_sc_s0     ST   N2%                   ba_reg          22 0.9171      0.7109      1.1291 0.8306  1.0000
-lgbm_sc_s0     ST   N2%               scp_signed          22 0.9460      0.8074      1.1224 0.5569  1.0000
-lgbm_sc_s0     ST   N2%               scp_abs_bc          22 0.9648      0.7932      1.1825 0.7753  1.0000
-lgbm_sc_s0     ST   N2%              scp_abs_cal          22 0.9150      0.7170      1.1468 0.6264  1.0000
-lgbm_sc_s0     ST   N2%                   cqr_qr          22 0.5982      0.5184      0.6995 0.0001  0.0073
-lgbm_sc_s0     ST   N2%                 cqr_ffbs          22 0.9999      0.9878      1.0120 0.9823  1.0000
-lgbm_sc_s0     ST   N2%         norm_entropy_reg          22 0.9944      0.9646      1.0293 0.7603  1.0000
-lgbm_sc_s0     ST   N2%                norm_ffbs          22 0.9724      0.9433      1.0001 0.0698  1.0000
-lgbm_sc_s0     ST   N2%           norm_reg_plugc          22 0.9076      0.7487      1.1053 0.4267  1.0000
-lgbm_sc_s0     ST   N2% SCALE@calibrated plug-in          22 1.0082      0.9506      1.0605 0.9527  1.0000
-lgbm_sc_s0     ST   N2%          SCALE@FFBS mean          22 0.9922      0.9620      1.0230 0.6691  1.0000
-lgbm_sc_s0     ST   N3%                   ba_loa          22 0.9018      0.7715      1.0752 0.4775  1.0000
-lgbm_sc_s0     ST   N3%                   ba_reg          22 0.7964      0.6950      0.9259 0.0253  1.0000
-lgbm_sc_s0     ST   N3%               scp_signed          22 0.9419      0.8724      1.0207 0.2316  1.0000
-lgbm_sc_s0     ST   N3%               scp_abs_bc          22 0.8847      0.7775      1.0146 0.2473  1.0000
-lgbm_sc_s0     ST   N3%              scp_abs_cal          22 0.9353      0.8887      0.9894 0.0417  1.0000
-lgbm_sc_s0     ST   N3%                   cqr_qr          22 0.6758      0.6174      0.7404 0.0000  0.0040
-lgbm_sc_s0     ST   N3%                 cqr_ffbs          22 0.9384      0.9104      0.9720 0.0015  0.0975
-lgbm_sc_s0     ST   N3%         norm_entropy_reg          22 0.9310      0.8933      0.9752 0.0035  0.2130
-lgbm_sc_s0     ST   N3%                norm_ffbs          22 1.0689      1.0102      1.1192 0.0207  1.0000
-lgbm_sc_s0     ST   N3%           norm_reg_plugc          22 1.0296      0.9849      1.0777 0.2322  1.0000
-lgbm_sc_s0     ST   N3% SCALE@calibrated plug-in          22 0.9084      0.8557      0.9738 0.0098  0.0985
-lgbm_sc_s0     ST   N3%          SCALE@FFBS mean          22 0.9020      0.8542      0.9577 0.0016  0.0201
-lgbm_sc_s0     ST  REM%                   ba_loa          22 1.0115      0.8193      1.2753 0.9280  1.0000
-lgbm_sc_s0     ST  REM%                   ba_reg          22 1.0473      0.7888      1.4700 0.7729  1.0000
-lgbm_sc_s0     ST  REM%               scp_signed          22 1.0673      0.9577      1.1854 0.2446  1.0000
-lgbm_sc_s0     ST  REM%               scp_abs_bc          22 0.9793      0.8292      1.1649 0.8330  1.0000
-lgbm_sc_s0     ST  REM%              scp_abs_cal          22 0.9109      0.7640      1.0880 0.4177  1.0000
-lgbm_sc_s0     ST  REM%                   cqr_qr          22 0.7627      0.6647      0.8628 0.0000  0.0040
-lgbm_sc_s0     ST  REM%                 cqr_ffbs          22 1.0176      1.0062      1.0299 0.0134  0.7504
-lgbm_sc_s0     ST  REM%         norm_entropy_reg          22 0.9708      0.9465      0.9979 0.0594  1.0000
-lgbm_sc_s0     ST  REM%                norm_ffbs          22 0.9399      0.9162      0.9663 0.0008  0.0536
-lgbm_sc_s0     ST  REM%           norm_reg_plugc          22 0.9142      0.7844      1.0652 0.3736  1.0000
-lgbm_sc_s0     ST  REM% SCALE@calibrated plug-in          22 0.9964      0.9376      1.0445 0.9441  1.0000
-lgbm_sc_s0     ST  REM%          SCALE@FFBS mean          22 0.9999      0.9637      1.0383 0.9977  1.0000
-lgbm_sc_s0     ST  REML                   ba_loa          22 0.6557      0.4721      0.9234 0.0389  1.0000
-lgbm_sc_s0     ST  REML                   ba_reg          22 0.9115      0.6636      1.2462 0.6494  1.0000
-lgbm_sc_s0     ST  REML               scp_signed          22 0.7044      0.5501      0.9411 0.0177  0.9735
-lgbm_sc_s0     ST  REML               scp_abs_bc          22 0.6980      0.5513      0.9165 0.0118  0.6754
-lgbm_sc_s0     ST  REML              scp_abs_cal          22 0.6534      0.5217      0.8820 0.0058  0.3422
-lgbm_sc_s0     ST  REML                   cqr_qr          22 0.6785      0.5568      0.8716 0.0022  0.1395
-lgbm_sc_s0     ST  REML                 cqr_ffbs          22 1.2390      1.0626      1.5253 0.0033  0.2013
-lgbm_sc_s0     ST  REML         norm_entropy_reg          22 0.8743      0.8329      0.9135 0.0000  0.0040
-lgbm_sc_s0     ST  REML                norm_ffbs          22 1.0409      0.9918      1.1027 0.1168  1.0000
-lgbm_sc_s0     ST  REML           norm_reg_plugc          22 0.7499      0.5977      0.9901 0.0376  1.0000
-lgbm_sc_s0     ST  REML SCALE@calibrated plug-in          22 0.8713      0.7959      0.9395 0.0015  0.0201
-lgbm_sc_s0     ST  REML          SCALE@FFBS mean          22 0.9274      0.8664      0.9860 0.0177  0.1593
-lgbm_sc_s0     ST   SOL                   ba_loa          22 0.8918      0.7001      1.3809 0.9590  1.0000
-lgbm_sc_s0     ST   SOL                   ba_reg          22 0.9177      0.7115      1.4439 0.9984  1.0000
-lgbm_sc_s0     ST   SOL               scp_signed          22 0.7299      0.6315      0.9530 0.0305  1.0000
-lgbm_sc_s0     ST   SOL               scp_abs_bc          22 0.9978      0.7403      1.7237 1.0000  1.0000
-lgbm_sc_s0     ST   SOL              scp_abs_cal          22 0.9407      0.7181      1.5299 1.0000  1.0000
-lgbm_sc_s0     ST   SOL                   cqr_qr          22 0.8132      0.6109      0.9708 0.0195  1.0000
-lgbm_sc_s0     ST   SOL                 cqr_ffbs          22 1.2110      1.1261      1.3621 0.0000  0.0040
-lgbm_sc_s0     ST   SOL         norm_entropy_reg          22 0.8699      0.7692      0.9479 0.0001  0.0073
-lgbm_sc_s0     ST   SOL                norm_ffbs          22 1.0856      1.0298      1.1820 0.0002  0.0138
-lgbm_sc_s0     ST   SOL           norm_reg_plugc          22 0.9499      0.7540      1.4020 0.9996  1.0000
-lgbm_sc_s0     ST   SOL SCALE@calibrated plug-in          22 0.9903      0.9491      1.1010 0.9790  1.0000
-lgbm_sc_s0     ST   SOL          SCALE@FFBS mean          22 0.8430      0.7591      0.9087 0.0000  0.0008
-lgbm_sc_s0     ST   TST                   ba_loa          22 0.7373      0.5812      0.8814 0.0004  0.0272
-lgbm_sc_s0     ST   TST                   ba_reg          22 0.6432      0.4876      0.8052 0.0000  0.0040
-lgbm_sc_s0     ST   TST               scp_signed          22 0.6543      0.5415      0.7510 0.0000  0.0040
-lgbm_sc_s0     ST   TST               scp_abs_bc          22 0.7311      0.5818      0.8641 0.0001  0.0073
-lgbm_sc_s0     ST   TST              scp_abs_cal          22 0.8483      0.5662      1.3110 0.5790  1.0000
-lgbm_sc_s0     ST   TST                   cqr_qr          22 0.5198      0.4097      0.6668 0.0000  0.0040
-lgbm_sc_s0     ST   TST                 cqr_ffbs          22 1.0036      0.9724      1.0263 0.9634  1.0000
-lgbm_sc_s0     ST   TST         norm_entropy_reg          22 1.0170      0.9840      1.0391 0.3353  1.0000
-lgbm_sc_s0     ST   TST                norm_ffbs          22 1.1188      1.0474      1.1754 0.0010  0.0660
-lgbm_sc_s0     ST   TST           norm_reg_plugc          22 0.9634      0.6460      1.5374 0.9615  1.0000
-lgbm_sc_s0     ST   TST SCALE@calibrated plug-in          22 0.8805      0.8387      0.9233 0.0001  0.0014
-lgbm_sc_s0     ST   TST          SCALE@FFBS mean          22 0.8960      0.8670      0.9237 0.0000  0.0008
-lgbm_sc_s0     ST  WASO                   ba_loa          22 1.1929      0.8890      1.6601 0.3503  1.0000
-lgbm_sc_s0     ST  WASO                   ba_reg          22 0.9617      0.6918      1.3053 0.8245  1.0000
-lgbm_sc_s0     ST  WASO               scp_signed          22 1.1588      0.8979      1.5674 0.4196  1.0000
-lgbm_sc_s0     ST  WASO               scp_abs_bc          22 1.1995      0.9188      1.6284 0.2967  1.0000
-lgbm_sc_s0     ST  WASO              scp_abs_cal          22 0.9303      0.7022      1.3423 0.7527  1.0000
-lgbm_sc_s0     ST  WASO                   cqr_qr          22 0.7017      0.5997      0.8311 0.0001  0.0073
-lgbm_sc_s0     ST  WASO                 cqr_ffbs          22 1.0378      0.9791      1.1256 0.6501  1.0000
-lgbm_sc_s0     ST  WASO         norm_entropy_reg          22 0.9992      0.8411      1.2203 0.9893  1.0000
-lgbm_sc_s0     ST  WASO                norm_ffbs          22 1.0707      1.0146      1.1416 0.0104  0.6061
-lgbm_sc_s0     ST  WASO           norm_reg_plugc          22 0.9978      0.7671      1.3957 0.9932  1.0000
-lgbm_sc_s0     ST  WASO SCALE@calibrated plug-in          22 0.9323      0.8835      1.0110 0.1686  1.0000
-lgbm_sc_s0     ST  WASO          SCALE@FFBS mean          22 0.9428      0.8518      1.0560 0.4158  1.0000
+| stager     | cohort   | param   | comparator               |   n_subjects |   ratio |   ratio_lo95 |   ratio_hi95 |     p |   p_holm |
+|:-----------|:---------|:--------|:-------------------------|-------------:|--------:|-------------:|-------------:|------:|---------:|
+| yasa       | HMC      | N1%     | ba_loa                   |          151 |   0.916 |        0.790 |        1.079 | 0.295 |    1.000 |
+| yasa       | HMC      | N1%     | ba_reg                   |          151 |   0.914 |        0.815 |        1.018 | 0.139 |    1.000 |
+| yasa       | HMC      | N1%     | scp_signed               |          151 |   0.875 |        0.746 |        1.032 | 0.084 |    1.000 |
+| yasa       | HMC      | N1%     | scp_abs_bc               |          151 |   0.907 |        0.775 |        1.069 | 0.255 |    1.000 |
+| yasa       | HMC      | N1%     | scp_abs_cal              |          151 |   0.857 |        0.735 |        1.016 | 0.097 |    1.000 |
+| yasa       | HMC      | N1%     | cqr_qr                   |          151 |   1.011 |        0.845 |        1.190 | 0.912 |    1.000 |
+| yasa       | HMC      | N1%     | cqr_ffbs                 |          151 |   0.997 |        0.979 |        1.015 | 0.724 |    1.000 |
+| yasa       | HMC      | N1%     | norm_entropy_reg         |          151 |   1.028 |        1.000 |        1.053 | 0.090 |    1.000 |
+| yasa       | HMC      | N1%     | norm_ffbs                |          151 |   1.006 |        0.975 |        1.040 | 0.724 |    1.000 |
+| yasa       | HMC      | N1%     | norm_reg_plugc           |          151 |   0.915 |        0.813 |        1.058 | 0.233 |    1.000 |
+| yasa       | HMC      | N1%     | SCALE@calibrated plug-in |          151 |   0.937 |        0.885 |        0.989 | 0.033 |    0.200 |
+| yasa       | HMC      | N1%     | SCALE@FFBS mean          |          151 |   0.980 |        0.944 |        1.015 | 0.294 |    0.589 |
+| yasa       | HMC      | N2%     | ba_loa                   |          151 |   0.753 |        0.614 |        0.919 | 0.003 |    0.189 |
+| yasa       | HMC      | N2%     | ba_reg                   |          151 |   1.004 |        0.850 |        1.193 | 0.961 |    1.000 |
+| yasa       | HMC      | N2%     | scp_signed               |          151 |   0.732 |        0.614 |        0.860 | 0.000 |    0.004 |
+| yasa       | HMC      | N2%     | scp_abs_bc               |          151 |   0.771 |        0.624 |        0.952 | 0.027 |    1.000 |
+| yasa       | HMC      | N2%     | scp_abs_cal              |          151 |   0.649 |        0.538 |        0.802 | 0.000 |    0.004 |
+| yasa       | HMC      | N2%     | cqr_qr                   |          151 |   0.799 |        0.722 |        0.900 | 0.000 |    0.004 |
+| yasa       | HMC      | N2%     | cqr_ffbs                 |          151 |   0.998 |        0.992 |        1.003 | 0.403 |    1.000 |
+| yasa       | HMC      | N2%     | norm_entropy_reg         |          151 |   1.006 |        0.975 |        1.037 | 0.695 |    1.000 |
+| yasa       | HMC      | N2%     | norm_ffbs                |          151 |   1.004 |        0.977 |        1.035 | 0.819 |    1.000 |
+| yasa       | HMC      | N2%     | norm_reg_plugc           |          151 |   0.686 |        0.575 |        0.832 | 0.000 |    0.004 |
+| yasa       | HMC      | N2%     | SCALE@calibrated plug-in |          151 |   0.945 |        0.916 |        0.978 | 0.000 |    0.002 |
+| yasa       | HMC      | N2%     | SCALE@FFBS mean          |          151 |   0.973 |        0.935 |        1.007 | 0.160 |    0.481 |
+| yasa       | HMC      | N3%     | ba_loa                   |          151 |   1.062 |        0.886 |        1.264 | 0.541 |    1.000 |
+| yasa       | HMC      | N3%     | ba_reg                   |          151 |   1.021 |        0.844 |        1.252 | 0.844 |    1.000 |
+| yasa       | HMC      | N3%     | scp_signed               |          151 |   1.050 |        0.911 |        1.198 | 0.537 |    1.000 |
+| yasa       | HMC      | N3%     | scp_abs_bc               |          151 |   1.058 |        0.884 |        1.258 | 0.565 |    1.000 |
+| yasa       | HMC      | N3%     | scp_abs_cal              |          151 |   1.004 |        0.867 |        1.167 | 0.962 |    1.000 |
+| yasa       | HMC      | N3%     | cqr_qr                   |          151 |   0.868 |        0.774 |        0.977 | 0.017 |    0.972 |
+| yasa       | HMC      | N3%     | cqr_ffbs                 |          151 |   0.982 |        0.958 |        1.002 | 0.170 |    1.000 |
+| yasa       | HMC      | N3%     | norm_entropy_reg         |          151 |   0.968 |        0.928 |        1.008 | 0.129 |    1.000 |
+| yasa       | HMC      | N3%     | norm_ffbs                |          151 |   1.020 |        0.988 |        1.063 | 0.366 |    1.000 |
+| yasa       | HMC      | N3%     | norm_reg_plugc           |          151 |   1.016 |        0.893 |        1.160 | 0.817 |    1.000 |
+| yasa       | HMC      | N3%     | SCALE@calibrated plug-in |          151 |   0.988 |        0.950 |        1.025 | 0.686 |    0.686 |
+| yasa       | HMC      | N3%     | SCALE@FFBS mean          |          151 |   0.932 |        0.878 |        0.980 | 0.007 |    0.046 |
+| yasa       | HMC      | REM%    | ba_loa                   |          151 |   1.047 |        0.890 |        1.207 | 0.637 |    1.000 |
+| yasa       | HMC      | REM%    | ba_reg                   |          151 |   1.233 |        1.082 |        1.403 | 0.000 |    0.026 |
+| yasa       | HMC      | REM%    | scp_signed               |          151 |   1.038 |        0.902 |        1.169 | 0.672 |    1.000 |
+| yasa       | HMC      | REM%    | scp_abs_bc               |          151 |   1.043 |        0.885 |        1.210 | 0.674 |    1.000 |
+| yasa       | HMC      | REM%    | scp_abs_cal              |          151 |   1.124 |        0.977 |        1.284 | 0.054 |    1.000 |
+| yasa       | HMC      | REM%    | cqr_qr                   |          151 |   0.923 |        0.840 |        1.011 | 0.099 |    1.000 |
+| yasa       | HMC      | REM%    | cqr_ffbs                 |          151 |   0.989 |        0.970 |        1.005 | 0.254 |    1.000 |
+| yasa       | HMC      | REM%    | norm_entropy_reg         |          151 |   0.992 |        0.948 |        1.032 | 0.736 |    1.000 |
+| yasa       | HMC      | REM%    | norm_ffbs                |          151 |   0.971 |        0.939 |        1.003 | 0.088 |    1.000 |
+| yasa       | HMC      | REM%    | norm_reg_plugc           |          151 |   1.171 |        1.021 |        1.333 | 0.003 |    0.214 |
+| yasa       | HMC      | REM%    | SCALE@calibrated plug-in |          151 |   0.960 |        0.912 |        1.004 | 0.099 |    0.396 |
+| yasa       | HMC      | REM%    | SCALE@FFBS mean          |          151 |   0.943 |        0.885 |        0.995 | 0.051 |    0.255 |
+| yasa       | HMC      | REML    | ba_loa                   |          150 |   0.993 |        0.869 |        1.141 | 0.926 |    1.000 |
+| yasa       | HMC      | REML    | ba_reg                   |          150 |   0.961 |        0.849 |        1.116 | 0.609 |    1.000 |
+| yasa       | HMC      | REML    | scp_signed               |          150 |   0.920 |        0.767 |        1.074 | 0.309 |    1.000 |
+| yasa       | HMC      | REML    | scp_abs_bc               |          150 |   0.989 |        0.862 |        1.136 | 0.886 |    1.000 |
+| yasa       | HMC      | REML    | scp_abs_cal              |          150 |   0.875 |        0.741 |        1.025 | 0.147 |    1.000 |
+| yasa       | HMC      | REML    | cqr_qr                   |          150 |   0.914 |        0.779 |        1.045 | 0.191 |    1.000 |
+| yasa       | HMC      | REML    | cqr_ffbs                 |          150 |   1.124 |        1.018 |        1.246 | 0.012 |    0.714 |
+| yasa       | HMC      | REML    | norm_entropy_reg         |          150 |   0.919 |        0.855 |        0.987 | 0.013 |    0.758 |
+| yasa       | HMC      | REML    | norm_ffbs                |          150 |   1.095 |        1.018 |        1.174 | 0.020 |    1.000 |
+| yasa       | HMC      | REML    | norm_reg_plugc           |          150 |   0.995 |        0.869 |        1.141 | 0.947 |    1.000 |
+| yasa       | HMC      | REML    | SCALE@calibrated plug-in |          150 |   0.880 |        0.821 |        0.946 | 0.001 |    0.007 |
+| yasa       | HMC      | REML    | SCALE@FFBS mean          |          150 |   0.878 |        0.825 |        0.930 | 0.000 |    0.001 |
+| yasa       | HMC      | SOL     | ba_loa                   |          151 |   1.374 |        0.758 |        2.357 | 0.405 |    1.000 |
+| yasa       | HMC      | SOL     | ba_reg                   |          151 |   1.811 |        0.985 |        3.128 | 0.098 |    1.000 |
+| yasa       | HMC      | SOL     | scp_signed               |          151 |   1.714 |        0.953 |        3.073 | 0.121 |    1.000 |
+| yasa       | HMC      | SOL     | scp_abs_bc               |          151 |   1.308 |        0.724 |        2.254 | 0.500 |    1.000 |
+| yasa       | HMC      | SOL     | scp_abs_cal              |          151 |   1.172 |        0.744 |        2.163 | 0.806 |    1.000 |
+| yasa       | HMC      | SOL     | cqr_qr                   |          151 |   1.369 |        0.908 |        1.881 | 0.244 |    1.000 |
+| yasa       | HMC      | SOL     | cqr_ffbs                 |          151 |   1.205 |        1.122 |        1.394 | 0.000 |    0.004 |
+| yasa       | HMC      | SOL     | norm_entropy_reg         |          151 |   0.884 |        0.778 |        0.946 | 0.000 |    0.007 |
+| yasa       | HMC      | SOL     | norm_ffbs                |          151 |   1.097 |        1.058 |        1.188 | 0.000 |    0.004 |
+| yasa       | HMC      | SOL     | norm_reg_plugc           |          151 |   1.298 |        0.835 |        2.438 | 0.522 |    1.000 |
+| yasa       | HMC      | SOL     | SCALE@calibrated plug-in |          151 |   0.903 |        0.851 |        0.935 | 0.000 |    0.001 |
+| yasa       | HMC      | SOL     | SCALE@FFBS mean          |          151 |   0.883 |        0.776 |        0.939 | 0.000 |    0.001 |
+| yasa       | HMC      | TST     | ba_loa                   |          151 |   0.685 |        0.520 |        0.872 | 0.000 |    0.004 |
+| yasa       | HMC      | TST     | ba_reg                   |          151 |   0.729 |        0.556 |        0.934 | 0.012 |    0.711 |
+| yasa       | HMC      | TST     | scp_signed               |          151 |   0.726 |        0.563 |        0.888 | 0.000 |    0.004 |
+| yasa       | HMC      | TST     | scp_abs_bc               |          151 |   0.715 |        0.540 |        0.929 | 0.011 |    0.671 |
+| yasa       | HMC      | TST     | scp_abs_cal              |          151 |   0.836 |        0.792 |        0.885 | 0.000 |    0.004 |
+| yasa       | HMC      | TST     | cqr_qr                   |          151 |   0.939 |        0.825 |        1.071 | 0.358 |    1.000 |
+| yasa       | HMC      | TST     | cqr_ffbs                 |          151 |   0.927 |        0.906 |        0.945 | 0.000 |    0.004 |
+| yasa       | HMC      | TST     | norm_entropy_reg         |          151 |   0.913 |        0.881 |        0.945 | 0.000 |    0.004 |
+| yasa       | HMC      | TST     | norm_ffbs                |          151 |   1.120 |        1.077 |        1.170 | 0.000 |    0.004 |
+| yasa       | HMC      | TST     | norm_reg_plugc           |          151 |   0.995 |        0.937 |        1.055 | 0.880 |    1.000 |
+| yasa       | HMC      | TST     | SCALE@calibrated plug-in |          151 |   0.841 |        0.799 |        0.876 | 0.000 |    0.001 |
+| yasa       | HMC      | TST     | SCALE@FFBS mean          |          151 |   0.837 |        0.798 |        0.871 | 0.000 |    0.001 |
+| yasa       | HMC      | WASO    | ba_loa                   |          151 |   0.824 |        0.612 |        1.104 | 0.357 |    1.000 |
+| yasa       | HMC      | WASO    | ba_reg                   |          151 |   1.047 |        0.850 |        1.292 | 0.689 |    1.000 |
+| yasa       | HMC      | WASO    | scp_signed               |          151 |   0.879 |        0.663 |        1.141 | 0.567 |    1.000 |
+| yasa       | HMC      | WASO    | scp_abs_bc               |          151 |   0.825 |        0.613 |        1.123 | 0.376 |    1.000 |
+| yasa       | HMC      | WASO    | scp_abs_cal              |          151 |   0.975 |        0.865 |        1.139 | 0.802 |    1.000 |
+| yasa       | HMC      | WASO    | cqr_qr                   |          151 |   0.964 |        0.833 |        1.103 | 0.616 |    1.000 |
+| yasa       | HMC      | WASO    | cqr_ffbs                 |          151 |   0.991 |        0.979 |        1.003 | 0.178 |    1.000 |
+| yasa       | HMC      | WASO    | norm_entropy_reg         |          151 |   0.961 |        0.938 |        0.989 | 0.011 |    0.671 |
+| yasa       | HMC      | WASO    | norm_ffbs                |          151 |   1.084 |        1.040 |        1.126 | 0.000 |    0.020 |
+| yasa       | HMC      | WASO    | norm_reg_plugc           |          151 |   1.074 |        0.948 |        1.262 | 0.396 |    1.000 |
+| yasa       | HMC      | WASO    | SCALE@calibrated plug-in |          151 |   0.908 |        0.871 |        0.944 | 0.000 |    0.001 |
+| yasa       | HMC      | WASO    | SCALE@FFBS mean          |          151 |   0.912 |        0.885 |        0.938 | 0.000 |    0.001 |
+| yasa       | SC       | N1%     | ba_loa                   |           78 |   0.923 |        0.867 |        0.983 | 0.021 |    0.827 |
+| yasa       | SC       | N1%     | ba_reg                   |           78 |   0.897 |        0.839 |        0.958 | 0.001 |    0.052 |
+| yasa       | SC       | N1%     | scp_signed               |           78 |   0.929 |        0.833 |        1.020 | 0.142 |    1.000 |
+| yasa       | SC       | N1%     | scp_abs_bc               |           78 |   0.908 |        0.842 |        0.985 | 0.034 |    1.000 |
+| yasa       | SC       | N1%     | scp_abs_cal              |           78 |   0.895 |        0.846 |        0.957 | 0.003 |    0.115 |
+| yasa       | SC       | N1%     | cqr_qr                   |           78 |   0.965 |        0.813 |        1.124 | 0.685 |    1.000 |
+| yasa       | SC       | N1%     | cqr_ffbs                 |           78 |   0.971 |        0.954 |        0.988 | 0.001 |    0.058 |
+| yasa       | SC       | N1%     | norm_entropy_reg         |           78 |   0.970 |        0.950 |        0.992 | 0.019 |    0.795 |
+| yasa       | SC       | N1%     | norm_ffbs                |           78 |   1.040 |        1.002 |        1.079 | 0.069 |    1.000 |
+| yasa       | SC       | N1%     | norm_reg_plugc           |           78 |   0.922 |        0.874 |        0.986 | 0.020 |    0.795 |
+| yasa       | SC       | N1%     | SCALE@calibrated plug-in |           78 |   0.970 |        0.948 |        0.993 | 0.013 |    0.046 |
+| yasa       | SC       | N1%     | SCALE@FFBS mean          |           78 |   0.942 |        0.914 |        0.972 | 0.000 |    0.001 |
+| yasa       | SC       | N2%     | ba_loa                   |           78 |   0.782 |        0.672 |        0.890 | 0.000 |    0.006 |
+| yasa       | SC       | N2%     | ba_reg                   |           78 |   0.937 |        0.829 |        1.029 | 0.323 |    1.000 |
+| yasa       | SC       | N2%     | scp_signed               |           78 |   0.774 |        0.668 |        0.888 | 0.000 |    0.004 |
+| yasa       | SC       | N2%     | scp_abs_bc               |           78 |   0.772 |        0.666 |        0.876 | 0.000 |    0.004 |
+| yasa       | SC       | N2%     | scp_abs_cal              |           78 |   0.713 |        0.643 |        0.795 | 0.000 |    0.004 |
+| yasa       | SC       | N2%     | cqr_qr                   |           78 |   0.789 |        0.698 |        0.903 | 0.000 |    0.004 |
+| yasa       | SC       | N2%     | cqr_ffbs                 |           78 |   0.982 |        0.972 |        0.990 | 0.000 |    0.006 |
+| yasa       | SC       | N2%     | norm_entropy_reg         |           78 |   1.016 |        0.989 |        1.043 | 0.242 |    1.000 |
+| yasa       | SC       | N2%     | norm_ffbs                |           78 |   1.021 |        0.990 |        1.048 | 0.212 |    1.000 |
+| yasa       | SC       | N2%     | norm_reg_plugc           |           78 |   0.749 |        0.684 |        0.829 | 0.000 |    0.004 |
+| yasa       | SC       | N2%     | SCALE@calibrated plug-in |           78 |   0.953 |        0.929 |        0.975 | 0.000 |    0.001 |
+| yasa       | SC       | N2%     | SCALE@FFBS mean          |           78 |   0.939 |        0.913 |        0.961 | 0.000 |    0.001 |
+| yasa       | SC       | N3%     | ba_loa                   |           78 |   0.921 |        0.778 |        1.108 | 0.590 |    1.000 |
+| yasa       | SC       | N3%     | ba_reg                   |           78 |   1.022 |        0.918 |        1.145 | 0.735 |    1.000 |
+| yasa       | SC       | N3%     | scp_signed               |           78 |   0.930 |        0.812 |        1.073 | 0.505 |    1.000 |
+| yasa       | SC       | N3%     | scp_abs_bc               |           78 |   0.913 |        0.768 |        1.108 | 0.521 |    1.000 |
+| yasa       | SC       | N3%     | scp_abs_cal              |           78 |   0.879 |        0.838 |        0.918 | 0.000 |    0.004 |
+| yasa       | SC       | N3%     | cqr_qr                   |           78 |   0.876 |        0.791 |        0.974 | 0.003 |    0.132 |
+| yasa       | SC       | N3%     | cqr_ffbs                 |           78 |   0.974 |        0.962 |        0.987 | 0.000 |    0.004 |
+| yasa       | SC       | N3%     | norm_entropy_reg         |           78 |   0.940 |        0.899 |        0.982 | 0.004 |    0.159 |
+| yasa       | SC       | N3%     | norm_ffbs                |           78 |   1.057 |        1.018 |        1.094 | 0.000 |    0.022 |
+| yasa       | SC       | N3%     | norm_reg_plugc           |           78 |   0.947 |        0.891 |        1.004 | 0.112 |    1.000 |
+| yasa       | SC       | N3%     | SCALE@calibrated plug-in |           78 |   0.928 |        0.886 |        0.978 | 0.001 |    0.003 |
+| yasa       | SC       | N3%     | SCALE@FFBS mean          |           78 |   0.923 |        0.890 |        0.959 | 0.000 |    0.001 |
+| yasa       | SC       | REM%    | ba_loa                   |           78 |   1.009 |        0.787 |        1.327 | 0.948 |    1.000 |
+| yasa       | SC       | REM%    | ba_reg                   |           78 |   1.120 |        0.893 |        1.436 | 0.383 |    1.000 |
+| yasa       | SC       | REM%    | scp_signed               |           78 |   1.019 |        0.806 |        1.307 | 0.895 |    1.000 |
+| yasa       | SC       | REM%    | scp_abs_bc               |           78 |   1.054 |        0.810 |        1.414 | 0.739 |    1.000 |
+| yasa       | SC       | REM%    | scp_abs_cal              |           78 |   1.116 |        0.873 |        1.464 | 0.429 |    1.000 |
+| yasa       | SC       | REM%    | cqr_qr                   |           78 |   1.050 |        0.883 |        1.282 | 0.640 |    1.000 |
+| yasa       | SC       | REM%    | cqr_ffbs                 |           78 |   0.965 |        0.947 |        0.985 | 0.000 |    0.022 |
+| yasa       | SC       | REM%    | norm_entropy_reg         |           78 |   0.969 |        0.943 |        0.995 | 0.026 |    1.000 |
+| yasa       | SC       | REM%    | norm_ffbs                |           78 |   1.069 |        1.005 |        1.142 | 0.077 |    1.000 |
+| yasa       | SC       | REM%    | norm_reg_plugc           |           78 |   1.188 |        0.934 |        1.554 | 0.172 |    1.000 |
+| yasa       | SC       | REM%    | SCALE@calibrated plug-in |           78 |   0.939 |        0.903 |        0.980 | 0.012 |    0.046 |
+| yasa       | SC       | REM%    | SCALE@FFBS mean          |           78 |   0.910 |        0.866 |        0.960 | 0.001 |    0.003 |
+| yasa       | SC       | REML    | ba_loa                   |           78 |   0.670 |        0.512 |        0.841 | 0.000 |    0.009 |
+| yasa       | SC       | REML    | ba_reg                   |           78 |   0.740 |        0.554 |        0.961 | 0.041 |    1.000 |
+| yasa       | SC       | REML    | scp_signed               |           78 |   0.676 |        0.523 |        0.842 | 0.000 |    0.006 |
+| yasa       | SC       | REML    | scp_abs_bc               |           78 |   0.692 |        0.530 |        0.864 | 0.000 |    0.019 |
+| yasa       | SC       | REML    | scp_abs_cal              |           78 |   0.718 |        0.550 |        0.895 | 0.001 |    0.062 |
+| yasa       | SC       | REML    | cqr_qr                   |           78 |   0.713 |        0.597 |        0.825 | 0.000 |    0.004 |
+| yasa       | SC       | REML    | cqr_ffbs                 |           78 |   1.124 |        0.959 |        1.349 | 0.223 |    1.000 |
+| yasa       | SC       | REML    | norm_entropy_reg         |           78 |   0.832 |        0.760 |        0.905 | 0.000 |    0.004 |
+| yasa       | SC       | REML    | norm_ffbs                |           78 |   1.088 |        1.027 |        1.166 | 0.004 |    0.191 |
+| yasa       | SC       | REML    | norm_reg_plugc           |           78 |   0.820 |        0.653 |        1.007 | 0.056 |    1.000 |
+| yasa       | SC       | REML    | SCALE@calibrated plug-in |           78 |   0.876 |        0.816 |        0.943 | 0.000 |    0.001 |
+| yasa       | SC       | REML    | SCALE@FFBS mean          |           78 |   0.836 |        0.758 |        0.912 | 0.000 |    0.001 |
+| yasa       | SC       | SOL     | ba_loa                   |           78 |   0.878 |        0.556 |        1.349 | 0.573 |    1.000 |
+| yasa       | SC       | SOL     | ba_reg                   |           78 |   1.046 |        0.747 |        1.504 | 0.817 |    1.000 |
+| yasa       | SC       | SOL     | scp_signed               |           78 |   0.891 |        0.577 |        1.387 | 0.621 |    1.000 |
+| yasa       | SC       | SOL     | scp_abs_bc               |           78 |   0.871 |        0.546 |        1.366 | 0.570 |    1.000 |
+| yasa       | SC       | SOL     | scp_abs_cal              |           78 |   0.806 |        0.528 |        1.252 | 0.343 |    1.000 |
+| yasa       | SC       | SOL     | cqr_qr                   |           78 |   0.899 |        0.675 |        1.105 | 0.351 |    1.000 |
+| yasa       | SC       | SOL     | cqr_ffbs                 |           78 |   1.669 |        1.245 |        2.087 | 0.001 |    0.038 |
+| yasa       | SC       | SOL     | norm_entropy_reg         |           78 |   0.696 |        0.646 |        0.756 | 0.000 |    0.004 |
+| yasa       | SC       | SOL     | norm_ffbs                |           78 |   1.321 |        1.075 |        1.537 | 0.036 |    1.000 |
+| yasa       | SC       | SOL     | norm_reg_plugc           |           78 |   1.047 |        0.706 |        1.545 | 0.860 |    1.000 |
+| yasa       | SC       | SOL     | SCALE@calibrated plug-in |           78 |   0.770 |        0.712 |        0.836 | 0.000 |    0.001 |
+| yasa       | SC       | SOL     | SCALE@FFBS mean          |           78 |   0.698 |        0.649 |        0.756 | 0.000 |    0.001 |
+| yasa       | SC       | TST     | ba_loa                   |           78 |   0.875 |        0.797 |        0.939 | 0.000 |    0.004 |
+| yasa       | SC       | TST     | ba_reg                   |           78 |   0.892 |        0.819 |        0.956 | 0.001 |    0.052 |
+| yasa       | SC       | TST     | scp_signed               |           78 |   0.862 |        0.769 |        0.942 | 0.000 |    0.009 |
+| yasa       | SC       | TST     | scp_abs_bc               |           78 |   0.876 |        0.799 |        0.937 | 0.000 |    0.004 |
+| yasa       | SC       | TST     | scp_abs_cal              |           78 |   0.861 |        0.790 |        0.917 | 0.000 |    0.004 |
+| yasa       | SC       | TST     | cqr_qr                   |           78 |   0.829 |        0.697 |        0.957 | 0.001 |    0.061 |
+| yasa       | SC       | TST     | cqr_ffbs                 |           78 |   0.970 |        0.953 |        0.983 | 0.000 |    0.004 |
+| yasa       | SC       | TST     | norm_entropy_reg         |           78 |   0.969 |        0.928 |        0.999 | 0.050 |    1.000 |
+| yasa       | SC       | TST     | norm_ffbs                |           78 |   1.063 |        1.034 |        1.099 | 0.000 |    0.004 |
+| yasa       | SC       | TST     | norm_reg_plugc           |           78 |   0.968 |        0.918 |        1.009 | 0.172 |    1.000 |
+| yasa       | SC       | TST     | SCALE@calibrated plug-in |           78 |   0.889 |        0.842 |        0.928 | 0.000 |    0.001 |
+| yasa       | SC       | TST     | SCALE@FFBS mean          |           78 |   0.896 |        0.846 |        0.935 | 0.000 |    0.001 |
+| yasa       | SC       | WASO    | ba_loa                   |           78 |   1.412 |        1.155 |        1.841 | 0.000 |    0.011 |
+| yasa       | SC       | WASO    | ba_reg                   |           78 |   2.253 |        1.862 |        2.714 | 0.000 |    0.004 |
+| yasa       | SC       | WASO    | scp_signed               |           78 |   1.723 |        1.434 |        2.187 | 0.000 |    0.004 |
+| yasa       | SC       | WASO    | scp_abs_bc               |           78 |   1.390 |        1.124 |        1.851 | 0.001 |    0.029 |
+| yasa       | SC       | WASO    | scp_abs_cal              |           78 |   1.154 |        0.988 |        1.403 | 0.082 |    1.000 |
+| yasa       | SC       | WASO    | cqr_qr                   |           78 |   2.108 |        1.835 |        2.459 | 0.000 |    0.004 |
+| yasa       | SC       | WASO    | cqr_ffbs                 |           78 |   1.111 |        1.056 |        1.168 | 0.000 |    0.004 |
+| yasa       | SC       | WASO    | norm_entropy_reg         |           78 |   0.931 |        0.852 |        1.037 | 0.144 |    1.000 |
+| yasa       | SC       | WASO    | norm_ffbs                |           78 |   1.002 |        0.936 |        1.069 | 0.966 |    1.000 |
+| yasa       | SC       | WASO    | norm_reg_plugc           |           78 |   1.179 |        1.018 |        1.423 | 0.034 |    1.000 |
+| yasa       | SC       | WASO    | SCALE@calibrated plug-in |           78 |   0.979 |        0.930 |        1.031 | 0.411 |    0.411 |
+| yasa       | SC       | WASO    | SCALE@FFBS mean          |           78 |   0.952 |        0.897 |        1.029 | 0.146 |    0.292 |
+| yasa       | ST       | N1%     | ba_loa                   |           22 |   1.077 |        0.834 |        1.486 | 0.901 |    1.000 |
+| yasa       | ST       | N1%     | ba_reg                   |           22 |   0.945 |        0.699 |        1.314 | 0.768 |    1.000 |
+| yasa       | ST       | N1%     | scp_signed               |           22 |   1.072 |        0.759 |        1.571 | 0.825 |    1.000 |
+| yasa       | ST       | N1%     | scp_abs_bc               |           22 |   1.108 |        0.856 |        1.542 | 0.864 |    1.000 |
+| yasa       | ST       | N1%     | scp_abs_cal              |           22 |   1.092 |        0.933 |        1.300 | 0.766 |    1.000 |
+| yasa       | ST       | N1%     | cqr_qr                   |           22 |   0.733 |        0.548 |        0.976 | 0.035 |    1.000 |
+| yasa       | ST       | N1%     | cqr_ffbs                 |           22 |   0.969 |        0.948 |        0.985 | 0.001 |    0.033 |
+| yasa       | ST       | N1%     | norm_entropy_reg         |           22 |   0.976 |        0.953 |        0.998 | 0.040 |    1.000 |
+| yasa       | ST       | N1%     | norm_ffbs                |           22 |   1.064 |        1.039 |        1.097 | 0.000 |    0.007 |
+| yasa       | ST       | N1%     | norm_reg_plugc           |           22 |   1.105 |        0.964 |        1.286 | 0.435 |    1.000 |
+| yasa       | ST       | N1%     | SCALE@calibrated plug-in |           22 |   0.989 |        0.947 |        1.025 | 0.598 |    1.000 |
+| yasa       | ST       | N1%     | SCALE@FFBS mean          |           22 |   0.942 |        0.904 |        0.972 | 0.000 |    0.006 |
+| yasa       | ST       | N2%     | ba_loa                   |           22 |   1.025 |        0.949 |        1.102 | 0.609 |    1.000 |
+| yasa       | ST       | N2%     | ba_reg                   |           22 |   0.980 |        0.841 |        1.126 | 0.916 |    1.000 |
+| yasa       | ST       | N2%     | scp_signed               |           22 |   0.961 |        0.866 |        1.042 | 0.638 |    1.000 |
+| yasa       | ST       | N2%     | scp_abs_bc               |           22 |   1.001 |        0.925 |        1.079 | 0.985 |    1.000 |
+| yasa       | ST       | N2%     | scp_abs_cal              |           22 |   0.943 |        0.764 |        1.147 | 0.692 |    1.000 |
+| yasa       | ST       | N2%     | cqr_qr                   |           22 |   0.617 |        0.551 |        0.700 | 0.000 |    0.004 |
+| yasa       | ST       | N2%     | cqr_ffbs                 |           22 |   1.014 |        0.995 |        1.035 | 0.161 |    1.000 |
+| yasa       | ST       | N2%     | norm_entropy_reg         |           22 |   1.014 |        0.973 |        1.054 | 0.552 |    1.000 |
+| yasa       | ST       | N2%     | norm_ffbs                |           22 |   0.952 |        0.908 |        0.998 | 0.050 |    1.000 |
+| yasa       | ST       | N2%     | norm_reg_plugc           |           22 |   0.916 |        0.777 |        1.093 | 0.398 |    1.000 |
+| yasa       | ST       | N2%     | SCALE@calibrated plug-in |           22 |   1.029 |        0.967 |        1.091 | 0.436 |    1.000 |
+| yasa       | ST       | N2%     | SCALE@FFBS mean          |           22 |   1.011 |        0.971 |        1.056 | 0.621 |    1.000 |
+| yasa       | ST       | N3%     | ba_loa                   |           22 |   0.919 |        0.798 |        1.048 | 0.326 |    1.000 |
+| yasa       | ST       | N3%     | ba_reg                   |           22 |   0.807 |        0.698 |        0.945 | 0.032 |    1.000 |
+| yasa       | ST       | N3%     | scp_signed               |           22 |   0.888 |        0.771 |        1.023 | 0.181 |    1.000 |
+| yasa       | ST       | N3%     | scp_abs_bc               |           22 |   0.924 |        0.820 |        1.032 | 0.266 |    1.000 |
+| yasa       | ST       | N3%     | scp_abs_cal              |           22 |   0.938 |        0.847 |        1.030 | 0.280 |    1.000 |
+| yasa       | ST       | N3%     | cqr_qr                   |           22 |   0.537 |        0.456 |        0.624 | 0.000 |    0.004 |
+| yasa       | ST       | N3%     | cqr_ffbs                 |           22 |   0.977 |        0.955 |        0.997 | 0.042 |    1.000 |
+| yasa       | ST       | N3%     | norm_entropy_reg         |           22 |   0.974 |        0.942 |        1.009 | 0.158 |    1.000 |
+| yasa       | ST       | N3%     | norm_ffbs                |           22 |   1.006 |        0.971 |        1.044 | 0.774 |    1.000 |
+| yasa       | ST       | N3%     | norm_reg_plugc           |           22 |   0.976 |        0.880 |        1.078 | 0.713 |    1.000 |
+| yasa       | ST       | N3%     | SCALE@calibrated plug-in |           22 |   0.960 |        0.926 |        0.994 | 0.034 |    0.302 |
+| yasa       | ST       | N3%     | SCALE@FFBS mean          |           22 |   0.945 |        0.902 |        0.983 | 0.010 |    0.112 |
+| yasa       | ST       | REM%    | ba_loa                   |           22 |   1.085 |        0.884 |        1.373 | 0.476 |    1.000 |
+| yasa       | ST       | REM%    | ba_reg                   |           22 |   1.118 |        0.831 |        1.641 | 0.510 |    1.000 |
+| yasa       | ST       | REM%    | scp_signed               |           22 |   1.066 |        0.965 |        1.170 | 0.213 |    1.000 |
+| yasa       | ST       | REM%    | scp_abs_bc               |           22 |   1.072 |        0.910 |        1.283 | 0.441 |    1.000 |
+| yasa       | ST       | REM%    | scp_abs_cal              |           22 |   1.058 |        0.933 |        1.197 | 0.401 |    1.000 |
+| yasa       | ST       | REM%    | cqr_qr                   |           22 |   0.707 |        0.614 |        0.828 | 0.000 |    0.010 |
+| yasa       | ST       | REM%    | cqr_ffbs                 |           22 |   1.027 |        1.002 |        1.053 | 0.069 |    1.000 |
+| yasa       | ST       | REM%    | norm_entropy_reg         |           22 |   0.974 |        0.925 |        1.015 | 0.328 |    1.000 |
+| yasa       | ST       | REM%    | norm_ffbs                |           22 |   0.909 |        0.877 |        0.949 | 0.001 |    0.033 |
+| yasa       | ST       | REM%    | norm_reg_plugc           |           22 |   0.979 |        0.880 |        1.089 | 0.749 |    1.000 |
+| yasa       | ST       | REM%    | SCALE@calibrated plug-in |           22 |   1.081 |        1.024 |        1.130 | 0.009 |    0.112 |
+| yasa       | ST       | REM%    | SCALE@FFBS mean          |           22 |   1.036 |        0.990 |        1.082 | 0.176 |    1.000 |
+| yasa       | ST       | REML    | ba_loa                   |           22 |   0.935 |        0.725 |        1.151 | 0.638 |    1.000 |
+| yasa       | ST       | REML    | ba_reg                   |           22 |   1.058 |        0.719 |        1.507 | 0.808 |    1.000 |
+| yasa       | ST       | REML    | scp_signed               |           22 |   0.983 |        0.704 |        1.419 | 0.867 |    1.000 |
+| yasa       | ST       | REML    | scp_abs_bc               |           22 |   1.045 |        0.811 |        1.371 | 0.909 |    1.000 |
+| yasa       | ST       | REML    | scp_abs_cal              |           22 |   0.944 |        0.700 |        1.303 | 0.726 |    1.000 |
+| yasa       | ST       | REML    | cqr_qr                   |           22 |   0.612 |        0.416 |        0.893 | 0.008 |    0.495 |
+| yasa       | ST       | REML    | cqr_ffbs                 |           22 |   1.399 |        1.224 |        1.592 | 0.000 |    0.004 |
+| yasa       | ST       | REML    | norm_entropy_reg         |           22 |   0.952 |        0.900 |        0.994 | 0.034 |    1.000 |
+| yasa       | ST       | REML    | norm_ffbs                |           22 |   0.973 |        0.934 |        1.034 | 0.416 |    1.000 |
+| yasa       | ST       | REML    | norm_reg_plugc           |           22 |   0.943 |        0.713 |        1.242 | 0.599 |    1.000 |
+| yasa       | ST       | REML    | SCALE@calibrated plug-in |           22 |   1.001 |        0.946 |        1.063 | 0.971 |    1.000 |
+| yasa       | ST       | REML    | SCALE@FFBS mean          |           22 |   1.043 |        0.974 |        1.100 | 0.345 |    1.000 |
+| yasa       | ST       | SOL     | ba_loa                   |           22 |   1.924 |        0.927 |        3.960 | 0.163 |    1.000 |
+| yasa       | ST       | SOL     | ba_reg                   |           22 |   1.931 |        0.944 |        3.702 | 0.151 |    1.000 |
+| yasa       | ST       | SOL     | scp_signed               |           22 |   1.986 |        1.042 |        3.744 | 0.059 |    1.000 |
+| yasa       | ST       | SOL     | scp_abs_bc               |           22 |   1.835 |        0.890 |        3.735 | 0.206 |    1.000 |
+| yasa       | ST       | SOL     | scp_abs_cal              |           22 |   1.365 |        0.932 |        1.721 | 0.217 |    1.000 |
+| yasa       | ST       | SOL     | cqr_qr                   |           22 |   1.077 |        0.707 |        1.465 | 0.913 |    1.000 |
+| yasa       | ST       | SOL     | cqr_ffbs                 |           22 |   1.496 |        1.269 |        1.659 | 0.000 |    0.004 |
+| yasa       | ST       | SOL     | norm_entropy_reg         |           22 |   0.830 |        0.730 |        0.917 | 0.000 |    0.004 |
+| yasa       | ST       | SOL     | norm_ffbs                |           22 |   1.156 |        1.104 |        1.258 | 0.000 |    0.004 |
+| yasa       | ST       | SOL     | norm_reg_plugc           |           22 |   1.458 |        1.001 |        1.797 | 0.108 |    1.000 |
+| yasa       | ST       | SOL     | SCALE@calibrated plug-in |           22 |   0.936 |        0.863 |        1.003 | 0.088 |    0.704 |
+| yasa       | ST       | SOL     | SCALE@FFBS mean          |           22 |   0.818 |        0.737 |        0.888 | 0.000 |    0.001 |
+| yasa       | ST       | TST     | ba_loa                   |           22 |   0.582 |        0.525 |        0.677 | 0.000 |    0.004 |
+| yasa       | ST       | TST     | ba_reg                   |           22 |   0.610 |        0.538 |        0.738 | 0.000 |    0.010 |
+| yasa       | ST       | TST     | scp_signed               |           22 |   0.640 |        0.557 |        0.717 | 0.000 |    0.004 |
+| yasa       | ST       | TST     | scp_abs_bc               |           22 |   0.572 |        0.527 |        0.640 | 0.000 |    0.004 |
+| yasa       | ST       | TST     | scp_abs_cal              |           22 |   1.179 |        0.969 |        1.369 | 0.157 |    1.000 |
+| yasa       | ST       | TST     | cqr_qr                   |           22 |   0.631 |        0.483 |        0.830 | 0.001 |    0.048 |
+| yasa       | ST       | TST     | cqr_ffbs                 |           22 |   1.009 |        0.986 |        1.028 | 0.513 |    1.000 |
+| yasa       | ST       | TST     | norm_entropy_reg         |           22 |   0.965 |        0.923 |        1.022 | 0.346 |    1.000 |
+| yasa       | ST       | TST     | norm_ffbs                |           22 |   1.084 |        1.021 |        1.140 | 0.009 |    0.560 |
+| yasa       | ST       | TST     | norm_reg_plugc           |           22 |   1.312 |        1.068 |        1.590 | 0.007 |    0.418 |
+| yasa       | ST       | TST     | SCALE@calibrated plug-in |           22 |   0.899 |        0.841 |        0.969 | 0.009 |    0.111 |
+| yasa       | ST       | TST     | SCALE@FFBS mean          |           22 |   0.917 |        0.871 |        0.982 | 0.021 |    0.210 |
+| yasa       | ST       | WASO    | ba_loa                   |           22 |   1.148 |        0.804 |        1.889 | 0.542 |    1.000 |
+| yasa       | ST       | WASO    | ba_reg                   |           22 |   1.413 |        1.123 |        1.776 | 0.006 |    0.356 |
+| yasa       | ST       | WASO    | scp_signed               |           22 |   1.376 |        1.030 |        2.010 | 0.036 |    1.000 |
+| yasa       | ST       | WASO    | scp_abs_bc               |           22 |   1.176 |        0.791 |        2.113 | 0.509 |    1.000 |
+| yasa       | ST       | WASO    | scp_abs_cal              |           22 |   1.738 |        1.262 |        2.316 | 0.000 |    0.007 |
+| yasa       | ST       | WASO    | cqr_qr                   |           22 |   0.930 |        0.789 |        1.048 | 0.295 |    1.000 |
+| yasa       | ST       | WASO    | cqr_ffbs                 |           22 |   1.049 |        0.977 |        1.124 | 0.250 |    1.000 |
+| yasa       | ST       | WASO    | norm_entropy_reg         |           22 |   0.873 |        0.823 |        0.932 | 0.001 |    0.053 |
+| yasa       | ST       | WASO    | norm_ffbs                |           22 |   1.108 |        1.000 |        1.193 | 0.105 |    1.000 |
+| yasa       | ST       | WASO    | norm_reg_plugc           |           22 |   1.811 |        1.280 |        2.439 | 0.000 |    0.007 |
+| yasa       | ST       | WASO    | SCALE@calibrated plug-in |           22 |   0.960 |        0.887 |        1.041 | 0.460 |    1.000 |
+| yasa       | ST       | WASO    | SCALE@FFBS mean          |           22 |   0.854 |        0.818 |        0.900 | 0.000 |    0.002 |
+| lgbm_sc_s0 | HMC      | N1%     | ba_loa                   |          151 |   0.925 |        0.745 |        1.149 | 0.492 |    1.000 |
+| lgbm_sc_s0 | HMC      | N1%     | ba_reg                   |          151 |   1.078 |        0.972 |        1.176 | 0.157 |    1.000 |
+| lgbm_sc_s0 | HMC      | N1%     | scp_signed               |          151 |   0.930 |        0.764 |        1.131 | 0.500 |    1.000 |
+| lgbm_sc_s0 | HMC      | N1%     | scp_abs_bc               |          151 |   0.911 |        0.730 |        1.134 | 0.422 |    1.000 |
+| lgbm_sc_s0 | HMC      | N1%     | scp_abs_cal              |          151 |   0.955 |        0.876 |        1.027 | 0.315 |    1.000 |
+| lgbm_sc_s0 | HMC      | N1%     | cqr_qr                   |          151 |   1.009 |        0.855 |        1.163 | 0.922 |    1.000 |
+| lgbm_sc_s0 | HMC      | N1%     | cqr_ffbs                 |          151 |   1.000 |        0.985 |        1.013 | 0.972 |    1.000 |
+| lgbm_sc_s0 | HMC      | N1%     | norm_entropy_reg         |          151 |   1.028 |        0.996 |        1.055 | 0.113 |    1.000 |
+| lgbm_sc_s0 | HMC      | N1%     | norm_ffbs                |          151 |   0.992 |        0.971 |        1.016 | 0.500 |    1.000 |
+| lgbm_sc_s0 | HMC      | N1%     | norm_reg_plugc           |          151 |   0.947 |        0.880 |        1.020 | 0.175 |    1.000 |
+| lgbm_sc_s0 | HMC      | N1%     | SCALE@calibrated plug-in |          151 |   1.008 |        0.979 |        1.038 | 0.605 |    1.000 |
+| lgbm_sc_s0 | HMC      | N1%     | SCALE@FFBS mean          |          151 |   0.997 |        0.965 |        1.023 | 0.860 |    1.000 |
+| lgbm_sc_s0 | HMC      | N2%     | ba_loa                   |          151 |   0.912 |        0.766 |        1.065 | 0.300 |    1.000 |
+| lgbm_sc_s0 | HMC      | N2%     | ba_reg                   |          151 |   1.299 |        1.081 |        1.590 | 0.007 |    0.474 |
+| lgbm_sc_s0 | HMC      | N2%     | scp_signed               |          151 |   0.899 |        0.757 |        1.055 | 0.230 |    1.000 |
+| lgbm_sc_s0 | HMC      | N2%     | scp_abs_bc               |          151 |   0.912 |        0.772 |        1.057 | 0.279 |    1.000 |
+| lgbm_sc_s0 | HMC      | N2%     | scp_abs_cal              |          151 |   0.981 |        0.823 |        1.146 | 0.833 |    1.000 |
+| lgbm_sc_s0 | HMC      | N2%     | cqr_qr                   |          151 |   1.145 |        0.995 |        1.329 | 0.080 |    1.000 |
+| lgbm_sc_s0 | HMC      | N2%     | cqr_ffbs                 |          151 |   1.012 |        1.005 |        1.018 | 0.000 |    0.007 |
+| lgbm_sc_s0 | HMC      | N2%     | norm_entropy_reg         |          151 |   1.044 |        1.018 |        1.072 | 0.000 |    0.014 |
+| lgbm_sc_s0 | HMC      | N2%     | norm_ffbs                |          151 |   0.974 |        0.952 |        1.000 | 0.029 |    1.000 |
+| lgbm_sc_s0 | HMC      | N2%     | norm_reg_plugc           |          151 |   0.981 |        0.830 |        1.146 | 0.827 |    1.000 |
+| lgbm_sc_s0 | HMC      | N2%     | SCALE@calibrated plug-in |          151 |   1.000 |        0.970 |        1.031 | 0.998 |    1.000 |
+| lgbm_sc_s0 | HMC      | N2%     | SCALE@FFBS mean          |          151 |   1.022 |        0.995 |        1.049 | 0.094 |    0.846 |
+| lgbm_sc_s0 | HMC      | N3%     | ba_loa                   |          151 |   1.220 |        1.068 |        1.377 | 0.007 |    0.476 |
+| lgbm_sc_s0 | HMC      | N3%     | ba_reg                   |          151 |   1.251 |        1.023 |        1.502 | 0.042 |    1.000 |
+| lgbm_sc_s0 | HMC      | N3%     | scp_signed               |          151 |   1.183 |        1.031 |        1.341 | 0.036 |    1.000 |
+| lgbm_sc_s0 | HMC      | N3%     | scp_abs_bc               |          151 |   1.212 |        1.055 |        1.373 | 0.012 |    0.741 |
+| lgbm_sc_s0 | HMC      | N3%     | scp_abs_cal              |          151 |   0.992 |        0.928 |        1.054 | 0.808 |    1.000 |
+| lgbm_sc_s0 | HMC      | N3%     | cqr_qr                   |          151 |   1.239 |        1.004 |        1.534 | 0.082 |    1.000 |
+| lgbm_sc_s0 | HMC      | N3%     | cqr_ffbs                 |          151 |   0.992 |        0.974 |        1.010 | 0.505 |    1.000 |
+| lgbm_sc_s0 | HMC      | N3%     | norm_entropy_reg         |          151 |   0.983 |        0.950 |        1.014 | 0.358 |    1.000 |
+| lgbm_sc_s0 | HMC      | N3%     | norm_ffbs                |          151 |   1.017 |        0.966 |        1.075 | 0.634 |    1.000 |
+| lgbm_sc_s0 | HMC      | N3%     | norm_reg_plugc           |          151 |   1.026 |        0.953 |        1.103 | 0.534 |    1.000 |
+| lgbm_sc_s0 | HMC      | N3%     | SCALE@calibrated plug-in |          151 |   0.967 |        0.923 |        1.009 | 0.188 |    1.000 |
+| lgbm_sc_s0 | HMC      | N3%     | SCALE@FFBS mean          |          151 |   0.977 |        0.939 |        1.015 | 0.367 |    1.000 |
+| lgbm_sc_s0 | HMC      | REM%    | ba_loa                   |          151 |   1.043 |        0.876 |        1.233 | 0.657 |    1.000 |
+| lgbm_sc_s0 | HMC      | REM%    | ba_reg                   |          151 |   1.155 |        0.964 |        1.371 | 0.101 |    1.000 |
+| lgbm_sc_s0 | HMC      | REM%    | scp_signed               |          151 |   1.035 |        0.871 |        1.220 | 0.718 |    1.000 |
+| lgbm_sc_s0 | HMC      | REM%    | scp_abs_bc               |          151 |   1.049 |        0.877 |        1.249 | 0.615 |    1.000 |
+| lgbm_sc_s0 | HMC      | REM%    | scp_abs_cal              |          151 |   1.138 |        1.001 |        1.304 | 0.045 |    1.000 |
+| lgbm_sc_s0 | HMC      | REM%    | cqr_qr                   |          151 |   1.005 |        0.914 |        1.112 | 0.917 |    1.000 |
+| lgbm_sc_s0 | HMC      | REM%    | cqr_ffbs                 |          151 |   0.993 |        0.987 |        0.998 | 0.003 |    0.175 |
+| lgbm_sc_s0 | HMC      | REM%    | norm_entropy_reg         |          151 |   0.990 |        0.966 |        1.015 | 0.449 |    1.000 |
+| lgbm_sc_s0 | HMC      | REM%    | norm_ffbs                |          151 |   1.018 |        0.990 |        1.047 | 0.207 |    1.000 |
+| lgbm_sc_s0 | HMC      | REM%    | norm_reg_plugc           |          151 |   1.158 |        1.005 |        1.343 | 0.033 |    1.000 |
+| lgbm_sc_s0 | HMC      | REM%    | SCALE@calibrated plug-in |          151 |   0.983 |        0.945 |        1.022 | 0.395 |    1.000 |
+| lgbm_sc_s0 | HMC      | REM%    | SCALE@FFBS mean          |          151 |   0.926 |        0.893 |        0.959 | 0.000 |    0.001 |
+| lgbm_sc_s0 | HMC      | REML    | ba_loa                   |          150 |   1.237 |        1.030 |        1.536 | 0.035 |    1.000 |
+| lgbm_sc_s0 | HMC      | REML    | ba_reg                   |          150 |   1.214 |        1.010 |        1.530 | 0.066 |    1.000 |
+| lgbm_sc_s0 | HMC      | REML    | scp_signed               |          150 |   1.167 |        0.968 |        1.419 | 0.160 |    1.000 |
+| lgbm_sc_s0 | HMC      | REML    | scp_abs_bc               |          150 |   1.239 |        1.036 |        1.528 | 0.029 |    1.000 |
+| lgbm_sc_s0 | HMC      | REML    | scp_abs_cal              |          150 |   1.004 |        0.926 |        1.084 | 0.932 |    1.000 |
+| lgbm_sc_s0 | HMC      | REML    | cqr_qr                   |          150 |   1.205 |        1.026 |        1.412 | 0.040 |    1.000 |
+| lgbm_sc_s0 | HMC      | REML    | cqr_ffbs                 |          150 |   0.984 |        0.932 |        1.048 | 0.630 |    1.000 |
+| lgbm_sc_s0 | HMC      | REML    | norm_entropy_reg         |          150 |   1.014 |        0.953 |        1.080 | 0.716 |    1.000 |
+| lgbm_sc_s0 | HMC      | REML    | norm_ffbs                |          150 |   1.046 |        0.990 |        1.105 | 0.142 |    1.000 |
+| lgbm_sc_s0 | HMC      | REML    | norm_reg_plugc           |          150 |   1.032 |        0.970 |        1.108 | 0.369 |    1.000 |
+| lgbm_sc_s0 | HMC      | REML    | SCALE@calibrated plug-in |          150 |   0.973 |        0.923 |        1.028 | 0.339 |    1.000 |
+| lgbm_sc_s0 | HMC      | REML    | SCALE@FFBS mean          |          150 |   0.980 |        0.928 |        1.035 | 0.481 |    1.000 |
+| lgbm_sc_s0 | HMC      | SOL     | ba_loa                   |          151 |   1.223 |        0.765 |        2.044 | 0.577 |    1.000 |
+| lgbm_sc_s0 | HMC      | SOL     | ba_reg                   |          151 |   1.376 |        0.948 |        2.269 | 0.188 |    1.000 |
+| lgbm_sc_s0 | HMC      | SOL     | scp_signed               |          151 |   1.174 |        0.737 |        1.979 | 0.677 |    1.000 |
+| lgbm_sc_s0 | HMC      | SOL     | scp_abs_bc               |          151 |   1.191 |        0.728 |        2.050 | 0.629 |    1.000 |
+| lgbm_sc_s0 | HMC      | SOL     | scp_abs_cal              |          151 |   1.342 |        0.909 |        2.255 | 0.263 |    1.000 |
+| lgbm_sc_s0 | HMC      | SOL     | cqr_qr                   |          151 |   1.064 |        0.760 |        1.443 | 0.926 |    1.000 |
+| lgbm_sc_s0 | HMC      | SOL     | cqr_ffbs                 |          151 |   1.020 |        0.993 |        1.077 | 0.159 |    1.000 |
+| lgbm_sc_s0 | HMC      | SOL     | norm_entropy_reg         |          151 |   0.927 |        0.834 |        0.988 | 0.013 |    0.820 |
+| lgbm_sc_s0 | HMC      | SOL     | norm_ffbs                |          151 |   1.047 |        1.013 |        1.122 | 0.001 |    0.054 |
+| lgbm_sc_s0 | HMC      | SOL     | norm_reg_plugc           |          151 |   1.378 |        0.944 |        2.328 | 0.199 |    1.000 |
+| lgbm_sc_s0 | HMC      | SOL     | SCALE@calibrated plug-in |          151 |   0.974 |        0.922 |        1.004 | 0.084 |    0.842 |
+| lgbm_sc_s0 | HMC      | SOL     | SCALE@FFBS mean          |          151 |   0.918 |        0.826 |        0.974 | 0.000 |    0.004 |
+| lgbm_sc_s0 | HMC      | TST     | ba_loa                   |          151 |   0.692 |        0.559 |        0.812 | 0.000 |    0.004 |
+| lgbm_sc_s0 | HMC      | TST     | ba_reg                   |          151 |   0.721 |        0.578 |        0.865 | 0.000 |    0.007 |
+| lgbm_sc_s0 | HMC      | TST     | scp_signed               |          151 |   0.657 |        0.535 |        0.767 | 0.000 |    0.004 |
+| lgbm_sc_s0 | HMC      | TST     | scp_abs_bc               |          151 |   0.683 |        0.557 |        0.793 | 0.000 |    0.004 |
+| lgbm_sc_s0 | HMC      | TST     | scp_abs_cal              |          151 |   0.779 |        0.742 |        0.821 | 0.000 |    0.004 |
+| lgbm_sc_s0 | HMC      | TST     | cqr_qr                   |          151 |   1.088 |        0.965 |        1.227 | 0.222 |    1.000 |
+| lgbm_sc_s0 | HMC      | TST     | cqr_ffbs                 |          151 |   0.940 |        0.929 |        0.951 | 0.000 |    0.004 |
+| lgbm_sc_s0 | HMC      | TST     | norm_entropy_reg         |          151 |   0.903 |        0.883 |        0.923 | 0.000 |    0.004 |
+| lgbm_sc_s0 | HMC      | TST     | norm_ffbs                |          151 |   1.114 |        1.086 |        1.144 | 0.000 |    0.004 |
+| lgbm_sc_s0 | HMC      | TST     | norm_reg_plugc           |          151 |   0.905 |        0.850 |        0.967 | 0.005 |    0.299 |
+| lgbm_sc_s0 | HMC      | TST     | SCALE@calibrated plug-in |          151 |   0.861 |        0.831 |        0.888 | 0.000 |    0.001 |
+| lgbm_sc_s0 | HMC      | TST     | SCALE@FFBS mean          |          151 |   0.861 |        0.838 |        0.883 | 0.000 |    0.001 |
+| lgbm_sc_s0 | HMC      | WASO    | ba_loa                   |          151 |   0.773 |        0.565 |        1.023 | 0.105 |    1.000 |
+| lgbm_sc_s0 | HMC      | WASO    | ba_reg                   |          151 |   0.909 |        0.762 |        1.097 | 0.337 |    1.000 |
+| lgbm_sc_s0 | HMC      | WASO    | scp_signed               |          151 |   0.758 |        0.563 |        0.988 | 0.050 |    1.000 |
+| lgbm_sc_s0 | HMC      | WASO    | scp_abs_bc               |          151 |   0.768 |        0.565 |        1.016 | 0.090 |    1.000 |
+| lgbm_sc_s0 | HMC      | WASO    | scp_abs_cal              |          151 |   0.861 |        0.753 |        1.010 | 0.041 |    1.000 |
+| lgbm_sc_s0 | HMC      | WASO    | cqr_qr                   |          151 |   0.972 |        0.870 |        1.089 | 0.650 |    1.000 |
+| lgbm_sc_s0 | HMC      | WASO    | cqr_ffbs                 |          151 |   0.978 |        0.970 |        0.986 | 0.000 |    0.004 |
+| lgbm_sc_s0 | HMC      | WASO    | norm_entropy_reg         |          151 |   0.953 |        0.934 |        0.970 | 0.000 |    0.004 |
+| lgbm_sc_s0 | HMC      | WASO    | norm_ffbs                |          151 |   1.072 |        1.048 |        1.099 | 0.000 |    0.004 |
+| lgbm_sc_s0 | HMC      | WASO    | norm_reg_plugc           |          151 |   0.952 |        0.833 |        1.112 | 0.550 |    1.000 |
+| lgbm_sc_s0 | HMC      | WASO    | SCALE@calibrated plug-in |          151 |   0.904 |        0.880 |        0.929 | 0.000 |    0.001 |
+| lgbm_sc_s0 | HMC      | WASO    | SCALE@FFBS mean          |          151 |   0.915 |        0.887 |        0.942 | 0.000 |    0.001 |
+| lgbm_sc_s0 | SC       | N1%     | ba_loa                   |           78 |   0.932 |        0.765 |        1.108 | 0.461 |    1.000 |
+| lgbm_sc_s0 | SC       | N1%     | ba_reg                   |           78 |   1.095 |        1.015 |        1.176 | 0.028 |    1.000 |
+| lgbm_sc_s0 | SC       | N1%     | scp_signed               |           78 |   0.926 |        0.786 |        1.062 | 0.318 |    1.000 |
+| lgbm_sc_s0 | SC       | N1%     | scp_abs_bc               |           78 |   0.929 |        0.765 |        1.098 | 0.433 |    1.000 |
+| lgbm_sc_s0 | SC       | N1%     | scp_abs_cal              |           78 |   0.902 |        0.835 |        0.965 | 0.004 |    0.231 |
+| lgbm_sc_s0 | SC       | N1%     | cqr_qr                   |           78 |   0.951 |        0.788 |        1.123 | 0.619 |    1.000 |
+| lgbm_sc_s0 | SC       | N1%     | cqr_ffbs                 |           78 |   0.971 |        0.955 |        0.987 | 0.000 |    0.017 |
+| lgbm_sc_s0 | SC       | N1%     | norm_entropy_reg         |           78 |   0.980 |        0.948 |        1.008 | 0.197 |    1.000 |
+| lgbm_sc_s0 | SC       | N1%     | norm_ffbs                |           78 |   1.042 |        1.009 |        1.070 | 0.010 |    0.502 |
+| lgbm_sc_s0 | SC       | N1%     | norm_reg_plugc           |           78 |   0.943 |        0.880 |        1.007 | 0.111 |    1.000 |
+| lgbm_sc_s0 | SC       | N1%     | SCALE@calibrated plug-in |           78 |   0.956 |        0.935 |        0.975 | 0.000 |    0.001 |
+| lgbm_sc_s0 | SC       | N1%     | SCALE@FFBS mean          |           78 |   0.943 |        0.916 |        0.969 | 0.000 |    0.001 |
+| lgbm_sc_s0 | SC       | N2%     | ba_loa                   |           78 |   0.939 |        0.855 |        1.030 | 0.211 |    1.000 |
+| lgbm_sc_s0 | SC       | N2%     | ba_reg                   |           78 |   0.980 |        0.905 |        1.063 | 0.643 |    1.000 |
+| lgbm_sc_s0 | SC       | N2%     | scp_signed               |           78 |   0.883 |        0.797 |        0.984 | 0.013 |    0.648 |
+| lgbm_sc_s0 | SC       | N2%     | scp_abs_bc               |           78 |   0.919 |        0.841 |        1.005 | 0.069 |    1.000 |
+| lgbm_sc_s0 | SC       | N2%     | scp_abs_cal              |           78 |   0.782 |        0.732 |        0.838 | 0.000 |    0.004 |
+| lgbm_sc_s0 | SC       | N2%     | cqr_qr                   |           78 |   0.796 |        0.693 |        0.912 | 0.000 |    0.007 |
+| lgbm_sc_s0 | SC       | N2%     | cqr_ffbs                 |           78 |   0.987 |        0.980 |        0.995 | 0.001 |    0.067 |
+| lgbm_sc_s0 | SC       | N2%     | norm_entropy_reg         |           78 |   1.008 |        0.984 |        1.032 | 0.536 |    1.000 |
+| lgbm_sc_s0 | SC       | N2%     | norm_ffbs                |           78 |   1.034 |        1.008 |        1.061 | 0.019 |    0.842 |
+| lgbm_sc_s0 | SC       | N2%     | norm_reg_plugc           |           78 |   0.810 |        0.756 |        0.866 | 0.000 |    0.004 |
+| lgbm_sc_s0 | SC       | N2%     | SCALE@calibrated plug-in |           78 |   0.966 |        0.945 |        0.988 | 0.003 |    0.018 |
+| lgbm_sc_s0 | SC       | N2%     | SCALE@FFBS mean          |           78 |   0.953 |        0.934 |        0.972 | 0.000 |    0.001 |
+| lgbm_sc_s0 | SC       | N3%     | ba_loa                   |           78 |   0.931 |        0.852 |        1.032 | 0.215 |    1.000 |
+| lgbm_sc_s0 | SC       | N3%     | ba_reg                   |           78 |   0.880 |        0.782 |        1.011 | 0.111 |    1.000 |
+| lgbm_sc_s0 | SC       | N3%     | scp_signed               |           78 |   0.906 |        0.842 |        0.975 | 0.009 |    0.477 |
+| lgbm_sc_s0 | SC       | N3%     | scp_abs_bc               |           78 |   0.928 |        0.860 |        1.007 | 0.101 |    1.000 |
+| lgbm_sc_s0 | SC       | N3%     | scp_abs_cal              |           78 |   0.958 |        0.900 |        1.018 | 0.169 |    1.000 |
+| lgbm_sc_s0 | SC       | N3%     | cqr_qr                   |           78 |   0.753 |        0.663 |        0.848 | 0.000 |    0.004 |
+| lgbm_sc_s0 | SC       | N3%     | cqr_ffbs                 |           78 |   0.975 |        0.957 |        0.995 | 0.004 |    0.252 |
+| lgbm_sc_s0 | SC       | N3%     | norm_entropy_reg         |           78 |   0.954 |        0.900 |        1.017 | 0.152 |    1.000 |
+| lgbm_sc_s0 | SC       | N3%     | norm_ffbs                |           78 |   1.051 |        1.003 |        1.103 | 0.037 |    1.000 |
+| lgbm_sc_s0 | SC       | N3%     | norm_reg_plugc           |           78 |   1.022 |        0.939 |        1.115 | 0.649 |    1.000 |
+| lgbm_sc_s0 | SC       | N3%     | SCALE@calibrated plug-in |           78 |   0.938 |        0.879 |        0.999 | 0.035 |    0.071 |
+| lgbm_sc_s0 | SC       | N3%     | SCALE@FFBS mean          |           78 |   0.924 |        0.878 |        0.976 | 0.002 |    0.011 |
+| lgbm_sc_s0 | SC       | REM%    | ba_loa                   |           78 |   1.050 |        0.841 |        1.321 | 0.731 |    1.000 |
+| lgbm_sc_s0 | SC       | REM%    | ba_reg                   |           78 |   1.102 |        0.857 |        1.454 | 0.546 |    1.000 |
+| lgbm_sc_s0 | SC       | REM%    | scp_signed               |           78 |   1.056 |        0.865 |        1.288 | 0.684 |    1.000 |
+| lgbm_sc_s0 | SC       | REM%    | scp_abs_bc               |           78 |   1.088 |        0.863 |        1.398 | 0.550 |    1.000 |
+| lgbm_sc_s0 | SC       | REM%    | scp_abs_cal              |           78 |   1.070 |        0.861 |        1.356 | 0.615 |    1.000 |
+| lgbm_sc_s0 | SC       | REM%    | cqr_qr                   |           78 |   0.981 |        0.838 |        1.181 | 0.818 |    1.000 |
+| lgbm_sc_s0 | SC       | REM%    | cqr_ffbs                 |           78 |   0.978 |        0.956 |        1.002 | 0.150 |    1.000 |
+| lgbm_sc_s0 | SC       | REM%    | norm_entropy_reg         |           78 |   0.975 |        0.942 |        1.013 | 0.226 |    1.000 |
+| lgbm_sc_s0 | SC       | REM%    | norm_ffbs                |           78 |   1.057 |        1.002 |        1.113 | 0.075 |    1.000 |
+| lgbm_sc_s0 | SC       | REM%    | norm_reg_plugc           |           78 |   1.145 |        0.927 |        1.449 | 0.250 |    1.000 |
+| lgbm_sc_s0 | SC       | REM%    | SCALE@calibrated plug-in |           78 |   0.935 |        0.892 |        0.984 | 0.018 |    0.071 |
+| lgbm_sc_s0 | SC       | REM%    | SCALE@FFBS mean          |           78 |   0.921 |        0.869 |        0.980 | 0.021 |    0.071 |
+| lgbm_sc_s0 | SC       | REML    | ba_loa                   |           78 |   0.747 |        0.515 |        1.021 | 0.121 |    1.000 |
+| lgbm_sc_s0 | SC       | REML    | ba_reg                   |           78 |   0.725 |        0.523 |        0.985 | 0.059 |    1.000 |
+| lgbm_sc_s0 | SC       | REML    | scp_signed               |           78 |   0.752 |        0.531 |        1.008 | 0.074 |    1.000 |
+| lgbm_sc_s0 | SC       | REML    | scp_abs_bc               |           78 |   0.750 |        0.517 |        1.031 | 0.130 |    1.000 |
+| lgbm_sc_s0 | SC       | REML    | scp_abs_cal              |           78 |   0.589 |        0.435 |        0.770 | 0.000 |    0.004 |
+| lgbm_sc_s0 | SC       | REML    | cqr_qr                   |           78 |   0.767 |        0.614 |        0.903 | 0.000 |    0.020 |
+| lgbm_sc_s0 | SC       | REML    | cqr_ffbs                 |           78 |   1.120 |        0.935 |        1.383 | 0.357 |    1.000 |
+| lgbm_sc_s0 | SC       | REML    | norm_entropy_reg         |           78 |   0.788 |        0.704 |        0.868 | 0.000 |    0.004 |
+| lgbm_sc_s0 | SC       | REML    | norm_ffbs                |           78 |   1.110 |        1.045 |        1.187 | 0.001 |    0.067 |
+| lgbm_sc_s0 | SC       | REML    | norm_reg_plugc           |           78 |   0.784 |        0.608 |        0.948 | 0.007 |    0.350 |
+| lgbm_sc_s0 | SC       | REML    | SCALE@calibrated plug-in |           78 |   0.751 |        0.648 |        0.866 | 0.000 |    0.001 |
+| lgbm_sc_s0 | SC       | REML    | SCALE@FFBS mean          |           78 |   0.784 |        0.698 |        0.867 | 0.000 |    0.001 |
+| lgbm_sc_s0 | SC       | SOL     | ba_loa                   |           78 |   0.866 |        0.681 |        1.174 | 0.335 |    1.000 |
+| lgbm_sc_s0 | SC       | SOL     | ba_reg                   |           78 |   0.876 |        0.704 |        1.193 | 0.396 |    1.000 |
+| lgbm_sc_s0 | SC       | SOL     | scp_signed               |           78 |   0.797 |        0.617 |        1.065 | 0.081 |    1.000 |
+| lgbm_sc_s0 | SC       | SOL     | scp_abs_bc               |           78 |   0.888 |        0.703 |        1.244 | 0.472 |    1.000 |
+| lgbm_sc_s0 | SC       | SOL     | scp_abs_cal              |           78 |   0.925 |        0.733 |        1.309 | 0.644 |    1.000 |
+| lgbm_sc_s0 | SC       | SOL     | cqr_qr                   |           78 |   1.145 |        0.919 |        1.309 | 0.239 |    1.000 |
+| lgbm_sc_s0 | SC       | SOL     | cqr_ffbs                 |           78 |   1.574 |        1.231 |        1.937 | 0.001 |    0.056 |
+| lgbm_sc_s0 | SC       | SOL     | norm_entropy_reg         |           78 |   0.699 |        0.607 |        0.804 | 0.000 |    0.004 |
+| lgbm_sc_s0 | SC       | SOL     | norm_ffbs                |           78 |   1.249 |        1.067 |        1.438 | 0.030 |    1.000 |
+| lgbm_sc_s0 | SC       | SOL     | norm_reg_plugc           |           78 |   1.111 |        0.899 |        1.478 | 0.507 |    1.000 |
+| lgbm_sc_s0 | SC       | SOL     | SCALE@calibrated plug-in |           78 |   0.833 |        0.775 |        0.913 | 0.003 |    0.018 |
+| lgbm_sc_s0 | SC       | SOL     | SCALE@FFBS mean          |           78 |   0.696 |        0.610 |        0.787 | 0.000 |    0.001 |
+| lgbm_sc_s0 | SC       | TST     | ba_loa                   |           78 |   0.838 |        0.710 |        0.979 | 0.028 |    1.000 |
+| lgbm_sc_s0 | SC       | TST     | ba_reg                   |           78 |   0.816 |        0.692 |        0.950 | 0.015 |    0.704 |
+| lgbm_sc_s0 | SC       | TST     | scp_signed               |           78 |   0.789 |        0.678 |        0.904 | 0.000 |    0.004 |
+| lgbm_sc_s0 | SC       | TST     | scp_abs_bc               |           78 |   0.819 |        0.694 |        0.956 | 0.007 |    0.390 |
+| lgbm_sc_s0 | SC       | TST     | scp_abs_cal              |           78 |   0.807 |        0.743 |        0.865 | 0.000 |    0.004 |
+| lgbm_sc_s0 | SC       | TST     | cqr_qr                   |           78 |   0.799 |        0.675 |        0.933 | 0.000 |    0.023 |
+| lgbm_sc_s0 | SC       | TST     | cqr_ffbs                 |           78 |   0.987 |        0.975 |        0.996 | 0.005 |    0.291 |
+| lgbm_sc_s0 | SC       | TST     | norm_entropy_reg         |           78 |   0.974 |        0.945 |        1.000 | 0.049 |    1.000 |
+| lgbm_sc_s0 | SC       | TST     | norm_ffbs                |           78 |   1.057 |        1.016 |        1.094 | 0.007 |    0.390 |
+| lgbm_sc_s0 | SC       | TST     | norm_reg_plugc           |           78 |   0.886 |        0.827 |        0.942 | 0.000 |    0.004 |
+| lgbm_sc_s0 | SC       | TST     | SCALE@calibrated plug-in |           78 |   0.912 |        0.879 |        0.941 | 0.000 |    0.001 |
+| lgbm_sc_s0 | SC       | TST     | SCALE@FFBS mean          |           78 |   0.919 |        0.878 |        0.956 | 0.000 |    0.001 |
+| lgbm_sc_s0 | SC       | WASO    | ba_loa                   |           78 |   1.364 |        1.070 |        1.841 | 0.005 |    0.297 |
+| lgbm_sc_s0 | SC       | WASO    | ba_reg                   |           78 |   1.839 |        1.480 |        2.279 | 0.000 |    0.004 |
+| lgbm_sc_s0 | SC       | WASO    | scp_signed               |           78 |   1.498 |        1.154 |        2.098 | 0.001 |    0.038 |
+| lgbm_sc_s0 | SC       | WASO    | scp_abs_bc               |           78 |   1.350 |        1.043 |        1.878 | 0.014 |    0.665 |
+| lgbm_sc_s0 | SC       | WASO    | scp_abs_cal              |           78 |   1.338 |        1.087 |        1.781 | 0.003 |    0.151 |
+| lgbm_sc_s0 | SC       | WASO    | cqr_qr                   |           78 |   1.699 |        1.483 |        1.965 | 0.000 |    0.004 |
+| lgbm_sc_s0 | SC       | WASO    | cqr_ffbs                 |           78 |   1.162 |        1.063 |        1.290 | 0.001 |    0.035 |
+| lgbm_sc_s0 | SC       | WASO    | norm_entropy_reg         |           78 |   0.824 |        0.735 |        0.935 | 0.000 |    0.004 |
+| lgbm_sc_s0 | SC       | WASO    | norm_ffbs                |           78 |   1.024 |        0.963 |        1.099 | 0.508 |    1.000 |
+| lgbm_sc_s0 | SC       | WASO    | norm_reg_plugc           |           78 |   1.331 |        1.096 |        1.743 | 0.002 |    0.112 |
+| lgbm_sc_s0 | SC       | WASO    | SCALE@calibrated plug-in |           78 |   1.005 |        0.971 |        1.063 | 0.805 |    0.805 |
+| lgbm_sc_s0 | SC       | WASO    | SCALE@FFBS mean          |           78 |   0.883 |        0.827 |        0.942 | 0.000 |    0.001 |
+| lgbm_sc_s0 | ST       | N1%     | ba_loa                   |           22 |   1.014 |        0.571 |        1.774 | 0.943 |    1.000 |
+| lgbm_sc_s0 | ST       | N1%     | ba_reg                   |           22 |   1.207 |        0.985 |        1.438 | 0.131 |    1.000 |
+| lgbm_sc_s0 | ST       | N1%     | scp_signed               |           22 |   1.057 |        0.616 |        1.768 | 0.721 |    1.000 |
+| lgbm_sc_s0 | ST       | N1%     | scp_abs_bc               |           22 |   1.035 |        0.577 |        1.872 | 0.892 |    1.000 |
+| lgbm_sc_s0 | ST       | N1%     | scp_abs_cal              |           22 |   1.013 |        0.900 |        1.114 | 0.838 |    1.000 |
+| lgbm_sc_s0 | ST       | N1%     | cqr_qr                   |           22 |   0.767 |        0.579 |        0.998 | 0.049 |    1.000 |
+| lgbm_sc_s0 | ST       | N1%     | cqr_ffbs                 |           22 |   0.967 |        0.941 |        0.987 | 0.002 |    0.102 |
+| lgbm_sc_s0 | ST       | N1%     | norm_entropy_reg         |           22 |   0.984 |        0.956 |        1.005 | 0.182 |    1.000 |
+| lgbm_sc_s0 | ST       | N1%     | norm_ffbs                |           22 |   1.056 |        1.029 |        1.085 | 0.002 |    0.107 |
+| lgbm_sc_s0 | ST       | N1%     | norm_reg_plugc           |           22 |   1.054 |        0.946 |        1.135 | 0.353 |    1.000 |
+| lgbm_sc_s0 | ST       | N1%     | SCALE@calibrated plug-in |           22 |   0.962 |        0.927 |        1.006 | 0.121 |    0.968 |
+| lgbm_sc_s0 | ST       | N1%     | SCALE@FFBS mean          |           22 |   0.937 |        0.885 |        0.980 | 0.004 |    0.044 |
+| lgbm_sc_s0 | ST       | N2%     | ba_loa                   |           22 |   0.961 |        0.780 |        1.183 | 0.781 |    1.000 |
+| lgbm_sc_s0 | ST       | N2%     | ba_reg                   |           22 |   0.917 |        0.711 |        1.129 | 0.831 |    1.000 |
+| lgbm_sc_s0 | ST       | N2%     | scp_signed               |           22 |   0.946 |        0.807 |        1.122 | 0.557 |    1.000 |
+| lgbm_sc_s0 | ST       | N2%     | scp_abs_bc               |           22 |   0.965 |        0.793 |        1.183 | 0.775 |    1.000 |
+| lgbm_sc_s0 | ST       | N2%     | scp_abs_cal              |           22 |   0.915 |        0.717 |        1.147 | 0.626 |    1.000 |
+| lgbm_sc_s0 | ST       | N2%     | cqr_qr                   |           22 |   0.598 |        0.518 |        0.700 | 0.000 |    0.007 |
+| lgbm_sc_s0 | ST       | N2%     | cqr_ffbs                 |           22 |   1.000 |        0.988 |        1.012 | 0.982 |    1.000 |
+| lgbm_sc_s0 | ST       | N2%     | norm_entropy_reg         |           22 |   0.994 |        0.965 |        1.029 | 0.760 |    1.000 |
+| lgbm_sc_s0 | ST       | N2%     | norm_ffbs                |           22 |   0.972 |        0.943 |        1.000 | 0.070 |    1.000 |
+| lgbm_sc_s0 | ST       | N2%     | norm_reg_plugc           |           22 |   0.908 |        0.749 |        1.105 | 0.427 |    1.000 |
+| lgbm_sc_s0 | ST       | N2%     | SCALE@calibrated plug-in |           22 |   1.008 |        0.951 |        1.060 | 0.953 |    1.000 |
+| lgbm_sc_s0 | ST       | N2%     | SCALE@FFBS mean          |           22 |   0.992 |        0.962 |        1.023 | 0.669 |    1.000 |
+| lgbm_sc_s0 | ST       | N3%     | ba_loa                   |           22 |   0.902 |        0.771 |        1.075 | 0.477 |    1.000 |
+| lgbm_sc_s0 | ST       | N3%     | ba_reg                   |           22 |   0.796 |        0.695 |        0.926 | 0.025 |    1.000 |
+| lgbm_sc_s0 | ST       | N3%     | scp_signed               |           22 |   0.942 |        0.872 |        1.021 | 0.232 |    1.000 |
+| lgbm_sc_s0 | ST       | N3%     | scp_abs_bc               |           22 |   0.885 |        0.777 |        1.015 | 0.247 |    1.000 |
+| lgbm_sc_s0 | ST       | N3%     | scp_abs_cal              |           22 |   0.935 |        0.889 |        0.989 | 0.042 |    1.000 |
+| lgbm_sc_s0 | ST       | N3%     | cqr_qr                   |           22 |   0.676 |        0.617 |        0.740 | 0.000 |    0.004 |
+| lgbm_sc_s0 | ST       | N3%     | cqr_ffbs                 |           22 |   0.938 |        0.910 |        0.972 | 0.002 |    0.098 |
+| lgbm_sc_s0 | ST       | N3%     | norm_entropy_reg         |           22 |   0.931 |        0.893 |        0.975 | 0.004 |    0.213 |
+| lgbm_sc_s0 | ST       | N3%     | norm_ffbs                |           22 |   1.069 |        1.010 |        1.119 | 0.021 |    1.000 |
+| lgbm_sc_s0 | ST       | N3%     | norm_reg_plugc           |           22 |   1.030 |        0.985 |        1.078 | 0.232 |    1.000 |
+| lgbm_sc_s0 | ST       | N3%     | SCALE@calibrated plug-in |           22 |   0.908 |        0.856 |        0.974 | 0.010 |    0.099 |
+| lgbm_sc_s0 | ST       | N3%     | SCALE@FFBS mean          |           22 |   0.902 |        0.854 |        0.958 | 0.002 |    0.020 |
+| lgbm_sc_s0 | ST       | REM%    | ba_loa                   |           22 |   1.012 |        0.819 |        1.275 | 0.928 |    1.000 |
+| lgbm_sc_s0 | ST       | REM%    | ba_reg                   |           22 |   1.047 |        0.789 |        1.470 | 0.773 |    1.000 |
+| lgbm_sc_s0 | ST       | REM%    | scp_signed               |           22 |   1.067 |        0.958 |        1.185 | 0.245 |    1.000 |
+| lgbm_sc_s0 | ST       | REM%    | scp_abs_bc               |           22 |   0.979 |        0.829 |        1.165 | 0.833 |    1.000 |
+| lgbm_sc_s0 | ST       | REM%    | scp_abs_cal              |           22 |   0.911 |        0.764 |        1.088 | 0.418 |    1.000 |
+| lgbm_sc_s0 | ST       | REM%    | cqr_qr                   |           22 |   0.763 |        0.665 |        0.863 | 0.000 |    0.004 |
+| lgbm_sc_s0 | ST       | REM%    | cqr_ffbs                 |           22 |   1.018 |        1.006 |        1.030 | 0.013 |    0.750 |
+| lgbm_sc_s0 | ST       | REM%    | norm_entropy_reg         |           22 |   0.971 |        0.947 |        0.998 | 0.059 |    1.000 |
+| lgbm_sc_s0 | ST       | REM%    | norm_ffbs                |           22 |   0.940 |        0.916 |        0.966 | 0.001 |    0.054 |
+| lgbm_sc_s0 | ST       | REM%    | norm_reg_plugc           |           22 |   0.914 |        0.784 |        1.065 | 0.374 |    1.000 |
+| lgbm_sc_s0 | ST       | REM%    | SCALE@calibrated plug-in |           22 |   0.996 |        0.938 |        1.044 | 0.944 |    1.000 |
+| lgbm_sc_s0 | ST       | REM%    | SCALE@FFBS mean          |           22 |   1.000 |        0.964 |        1.038 | 0.998 |    1.000 |
+| lgbm_sc_s0 | ST       | REML    | ba_loa                   |           22 |   0.656 |        0.472 |        0.923 | 0.039 |    1.000 |
+| lgbm_sc_s0 | ST       | REML    | ba_reg                   |           22 |   0.911 |        0.664 |        1.246 | 0.649 |    1.000 |
+| lgbm_sc_s0 | ST       | REML    | scp_signed               |           22 |   0.704 |        0.550 |        0.941 | 0.018 |    0.974 |
+| lgbm_sc_s0 | ST       | REML    | scp_abs_bc               |           22 |   0.698 |        0.551 |        0.916 | 0.012 |    0.675 |
+| lgbm_sc_s0 | ST       | REML    | scp_abs_cal              |           22 |   0.653 |        0.522 |        0.882 | 0.006 |    0.342 |
+| lgbm_sc_s0 | ST       | REML    | cqr_qr                   |           22 |   0.678 |        0.557 |        0.872 | 0.002 |    0.140 |
+| lgbm_sc_s0 | ST       | REML    | cqr_ffbs                 |           22 |   1.239 |        1.063 |        1.525 | 0.003 |    0.201 |
+| lgbm_sc_s0 | ST       | REML    | norm_entropy_reg         |           22 |   0.874 |        0.833 |        0.913 | 0.000 |    0.004 |
+| lgbm_sc_s0 | ST       | REML    | norm_ffbs                |           22 |   1.041 |        0.992 |        1.103 | 0.117 |    1.000 |
+| lgbm_sc_s0 | ST       | REML    | norm_reg_plugc           |           22 |   0.750 |        0.598 |        0.990 | 0.038 |    1.000 |
+| lgbm_sc_s0 | ST       | REML    | SCALE@calibrated plug-in |           22 |   0.871 |        0.796 |        0.940 | 0.002 |    0.020 |
+| lgbm_sc_s0 | ST       | REML    | SCALE@FFBS mean          |           22 |   0.927 |        0.866 |        0.986 | 0.018 |    0.159 |
+| lgbm_sc_s0 | ST       | SOL     | ba_loa                   |           22 |   0.892 |        0.700 |        1.381 | 0.959 |    1.000 |
+| lgbm_sc_s0 | ST       | SOL     | ba_reg                   |           22 |   0.918 |        0.712 |        1.444 | 0.998 |    1.000 |
+| lgbm_sc_s0 | ST       | SOL     | scp_signed               |           22 |   0.730 |        0.631 |        0.953 | 0.030 |    1.000 |
+| lgbm_sc_s0 | ST       | SOL     | scp_abs_bc               |           22 |   0.998 |        0.740 |        1.724 | 1.000 |    1.000 |
+| lgbm_sc_s0 | ST       | SOL     | scp_abs_cal              |           22 |   0.941 |        0.718 |        1.530 | 1.000 |    1.000 |
+| lgbm_sc_s0 | ST       | SOL     | cqr_qr                   |           22 |   0.813 |        0.611 |        0.971 | 0.019 |    1.000 |
+| lgbm_sc_s0 | ST       | SOL     | cqr_ffbs                 |           22 |   1.211 |        1.126 |        1.362 | 0.000 |    0.004 |
+| lgbm_sc_s0 | ST       | SOL     | norm_entropy_reg         |           22 |   0.870 |        0.769 |        0.948 | 0.000 |    0.007 |
+| lgbm_sc_s0 | ST       | SOL     | norm_ffbs                |           22 |   1.086 |        1.030 |        1.182 | 0.000 |    0.014 |
+| lgbm_sc_s0 | ST       | SOL     | norm_reg_plugc           |           22 |   0.950 |        0.754 |        1.402 | 1.000 |    1.000 |
+| lgbm_sc_s0 | ST       | SOL     | SCALE@calibrated plug-in |           22 |   0.990 |        0.949 |        1.101 | 0.979 |    1.000 |
+| lgbm_sc_s0 | ST       | SOL     | SCALE@FFBS mean          |           22 |   0.843 |        0.759 |        0.909 | 0.000 |    0.001 |
+| lgbm_sc_s0 | ST       | TST     | ba_loa                   |           22 |   0.737 |        0.581 |        0.881 | 0.000 |    0.027 |
+| lgbm_sc_s0 | ST       | TST     | ba_reg                   |           22 |   0.643 |        0.488 |        0.805 | 0.000 |    0.004 |
+| lgbm_sc_s0 | ST       | TST     | scp_signed               |           22 |   0.654 |        0.541 |        0.751 | 0.000 |    0.004 |
+| lgbm_sc_s0 | ST       | TST     | scp_abs_bc               |           22 |   0.731 |        0.582 |        0.864 | 0.000 |    0.007 |
+| lgbm_sc_s0 | ST       | TST     | scp_abs_cal              |           22 |   0.848 |        0.566 |        1.311 | 0.579 |    1.000 |
+| lgbm_sc_s0 | ST       | TST     | cqr_qr                   |           22 |   0.520 |        0.410 |        0.667 | 0.000 |    0.004 |
+| lgbm_sc_s0 | ST       | TST     | cqr_ffbs                 |           22 |   1.004 |        0.972 |        1.026 | 0.963 |    1.000 |
+| lgbm_sc_s0 | ST       | TST     | norm_entropy_reg         |           22 |   1.017 |        0.984 |        1.039 | 0.335 |    1.000 |
+| lgbm_sc_s0 | ST       | TST     | norm_ffbs                |           22 |   1.119 |        1.047 |        1.175 | 0.001 |    0.066 |
+| lgbm_sc_s0 | ST       | TST     | norm_reg_plugc           |           22 |   0.963 |        0.646 |        1.537 | 0.962 |    1.000 |
+| lgbm_sc_s0 | ST       | TST     | SCALE@calibrated plug-in |           22 |   0.880 |        0.839 |        0.923 | 0.000 |    0.001 |
+| lgbm_sc_s0 | ST       | TST     | SCALE@FFBS mean          |           22 |   0.896 |        0.867 |        0.924 | 0.000 |    0.001 |
+| lgbm_sc_s0 | ST       | WASO    | ba_loa                   |           22 |   1.193 |        0.889 |        1.660 | 0.350 |    1.000 |
+| lgbm_sc_s0 | ST       | WASO    | ba_reg                   |           22 |   0.962 |        0.692 |        1.305 | 0.825 |    1.000 |
+| lgbm_sc_s0 | ST       | WASO    | scp_signed               |           22 |   1.159 |        0.898 |        1.567 | 0.420 |    1.000 |
+| lgbm_sc_s0 | ST       | WASO    | scp_abs_bc               |           22 |   1.200 |        0.919 |        1.628 | 0.297 |    1.000 |
+| lgbm_sc_s0 | ST       | WASO    | scp_abs_cal              |           22 |   0.930 |        0.702 |        1.342 | 0.753 |    1.000 |
+| lgbm_sc_s0 | ST       | WASO    | cqr_qr                   |           22 |   0.702 |        0.600 |        0.831 | 0.000 |    0.007 |
+| lgbm_sc_s0 | ST       | WASO    | cqr_ffbs                 |           22 |   1.038 |        0.979 |        1.126 | 0.650 |    1.000 |
+| lgbm_sc_s0 | ST       | WASO    | norm_entropy_reg         |           22 |   0.999 |        0.841 |        1.220 | 0.989 |    1.000 |
+| lgbm_sc_s0 | ST       | WASO    | norm_ffbs                |           22 |   1.071 |        1.015 |        1.142 | 0.010 |    0.606 |
+| lgbm_sc_s0 | ST       | WASO    | norm_reg_plugc           |           22 |   0.998 |        0.767 |        1.396 | 0.993 |    1.000 |
+| lgbm_sc_s0 | ST       | WASO    | SCALE@calibrated plug-in |           22 |   0.932 |        0.883 |        1.011 | 0.169 |    1.000 |
+| lgbm_sc_s0 | ST       | WASO    | SCALE@FFBS mean          |           22 |   0.943 |        0.852 |        1.056 | 0.416 |    1.000 |

@@ -105,7 +105,7 @@ The study protocol (above) is held in the study repository together with its ver
 11. *Statistics.* Paired comparisons changed from the Wilcoxon signed-rank test (a test of the pseudo-median) to a two-sided sign-flip permutation test of the mean per-subject difference, so that the reported ratio of means, its subject-bootstrap interval and the p-value come from the same analysis; Holm adjustment within stager × cohort. The comparisons of scaled with constant-width intervals at fixed centres were added after the first results and form a separate Holm family. The AUROC bootstrap used 1000 instead of 2000 resamples.
 12. *Success criteria.* The protocol's criterion for adaptivity was joint: the proposed method counts as better than constant-width intervals (Bland–Altman and split-conformal absolute-residual limits) only if its interval score is lower (Holm-adjusted p < 0.05) and its width–error Spearman correlation is positive with a confidence interval excluding zero. The manuscript reports the two conditions separately and jointly, including the fixed-centre comparators added after the first results.
 13. *Items of the protocol run late.* The Spearman criterion, the number of posterior samples M and the calibration-set size (E13) were run after the first draft. The 50 Hz line-noise corruption was not run, because YASA's band-pass filtering removes it before feature extraction, so the test would not exercise the method.
-14. *New sensitivity analyses.* Montage sensitivity (YASA with F4-M1 on HMC; source-only SC→HMC); clinical decision thresholds (TST < 360 min, SOL > 30 min, WASO > 30 min, REM latency ≤ 15 min; fixed before the analysis was run) and an easier/harder-night stratification; a label-free flag based on the difference between raw and recalibrated plug-in estimates; one-off computational costs and peak memory for a 7 × 24 h recording; subgroups require at least 20 distinct nights; non-finite conformal scores are treated as +∞.
+14. *New sensitivity analyses.* Montage sensitivity (YASA with F4-M1 on HMC; source-only SC→HMC); clinical decision thresholds (TST < 360 min, SOL > 30 min, WASO > 30 min, REM latency ≤ 15 min; fixed before the analysis was run) and an easier/harder-night stratification; a label-free flag based on the difference between raw and recalibrated plug-in estimates; one-off computational costs and peak memory for a 7 × 24 h recording (measured from the stored predictions by a separate script; the per-night timings come from the original timing run); subgroups require at least 20 distinct nights; non-finite conformal scores are treated as +∞.
 15. *Reporting and framing.* The title and the claims were narrowed: the advantage over limits of agreement is specific to TST; the recommendation changed from about ten to at least 20 locally scored nights.
 
 
@@ -10795,7 +10795,14 @@ HMM and BCTS cross-fitted within each cohort (5 subject folds), conformal calibr
 | 1000 |     1028.5 |       1.4222 |     0.0132 |       0.0095 |       1.0285 |
 
 
-*[tableS_efficiency_oneoff not available]*
+| quantity                    |   value |
+|:----------------------------|--------:|
+| fit_source_model_incl_jit_s |   4.295 |
+| fit_source_model_warm_s     |   2.826 |
+| n_source_nights             | 153     |
+| ffbs_first_call_incl_jit_s  |   0.347 |
+| peak_MB_7x24h_M100          |  23.548 |
+| peak_MB_7x24h_M1000         | 184.023 |
 
 
 # S16. Datasets and data-leakage audit

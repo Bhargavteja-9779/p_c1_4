@@ -17337,5 +17337,11 @@
  "conj_lgbm_sc_s0_scp_abs_cal": 3,
  "conj_n_lgbm_sc_s0_scp_abs_cal": 24,
  "conj_lgbm_sc_s0_scp_abs_bc": 2,
- "conj_n_lgbm_sc_s0_scp_abs_bc": 24
+ "conj_n_lgbm_sc_s0_scp_abs_bc": 24,
+ "eff_oneoff_fit_source_model_incl_jit_s": 4.294601048000004,
+ "eff_oneoff_fit_source_model_warm_s": 2.8257540760000666,
+ "eff_oneoff_n_source_nights": 153.0,
+ "eff_oneoff_ffbs_first_call_incl_jit_s": 0.3467423820000022,
+ "eff_oneoff_peak_MB_7x24h_M100": 23.547663,
+ "eff_oneoff_peak_MB_7x24h_M1000": 184.022574
 }

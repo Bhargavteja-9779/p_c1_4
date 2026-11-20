@@ -1,289 +1,290 @@
-    stager cohort param  threshold  primary                   signal   n  n_events    auroc     lo95     hi95
-      yasa    HMC   TST         30     True           proposed_width 151        79 0.679149 0.592481 0.767119
-      yasa    HMC   TST         30     True                  ffbs_sd 151        79 0.684951 0.598281 0.772329
-      yasa    HMC   TST         30     True                   ind_sd 151        79 0.670534 0.578211 0.758283
-      yasa    HMC   TST         30     True             mean_entropy 151        79 0.724684 0.639962 0.807325
-      yasa    HMC   TST         30     True        one_minus_maxprob 151        79 0.713608 0.632407 0.794316
-      yasa    HMC   TST         30     True abs_raw_minus_calibrated 151        79 0.794040 0.717628 0.866046
-      yasa    HMC   SOL         15    False           proposed_width 151        17 0.830553 0.757243 0.897063
-      yasa    HMC   SOL         15    False                  ffbs_sd 151        17 0.879280 0.815179 0.930984
-      yasa    HMC   SOL         15    False                   ind_sd 151        17 0.537313 0.386318 0.681732
-      yasa    HMC   SOL         15    False             mean_entropy 151        17 0.677349 0.524245 0.813797
-      yasa    HMC   SOL         15    False        one_minus_maxprob 151        17 0.669447 0.513355 0.808458
-      yasa    HMC   SOL         15    False abs_raw_minus_calibrated 151        17 0.801361 0.629478 0.940605
-      yasa    HMC  WASO         30    False           proposed_width 151        68 0.623671 0.530454 0.706935
-      yasa    HMC  WASO         30    False                  ffbs_sd 151        68 0.625974 0.533740 0.713007
-      yasa    HMC  WASO         30    False                   ind_sd 151        68 0.548724 0.452615 0.644550
-      yasa    HMC  WASO         30    False             mean_entropy 151        68 0.750177 0.669913 0.828240
-      yasa    HMC  WASO         30    False        one_minus_maxprob 151        68 0.742027 0.660081 0.820170
-      yasa    HMC  WASO         30    False abs_raw_minus_calibrated 151        68 0.865344 0.803675 0.917630
-      yasa    HMC  REML         30     True           proposed_width 150        49 0.681754 0.584553 0.765439
-      yasa    HMC  REML         30     True                  ffbs_sd 150        49 0.696706 0.600908 0.779606
-      yasa    HMC  REML         30     True                   ind_sd 150        49 0.463326 0.363002 0.567358
-      yasa    HMC  REML         30     True             mean_entropy 150        49 0.488381 0.385479 0.583161
-      yasa    HMC  REML         30     True        one_minus_maxprob 150        49 0.485553 0.384227 0.581949
-      yasa    HMC  REML         30     True abs_raw_minus_calibrated 150        49 0.531623 0.423818 0.636831
-      yasa    HMC   N1%          5    False           proposed_width 151        85 0.720143 0.639872 0.791767
-      yasa    HMC   N1%          5    False                  ffbs_sd 151        85 0.704635 0.625938 0.777824
-      yasa    HMC   N1%          5    False                   ind_sd 151        85 0.685383 0.601803 0.765306
-      yasa    HMC   N1%          5    False             mean_entropy 151        85 0.667380 0.581099 0.751456
-      yasa    HMC   N1%          5    False        one_minus_maxprob 151        85 0.646702 0.554428 0.729285
-      yasa    HMC   N1%          5    False abs_raw_minus_calibrated 151        85 0.533155 0.447148 0.623779
-      yasa    HMC   N2%         10    False           proposed_width 151        66 0.772371 0.690011 0.847093
-      yasa    HMC   N2%         10    False                  ffbs_sd 151        66 0.772014 0.689302 0.847279
-      yasa    HMC   N2%         10    False                   ind_sd 151        66 0.775045 0.697341 0.850577
-      yasa    HMC   N2%         10    False             mean_entropy 151        66 0.718895 0.634564 0.799650
-      yasa    HMC   N2%         10    False        one_minus_maxprob 151        66 0.718004 0.631483 0.799434
-      yasa    HMC   N2%         10    False abs_raw_minus_calibrated 151        66 0.651337 0.563058 0.737445
-      yasa    HMC   N3%          5     True           proposed_width 151        70 0.584303 0.485659 0.673656
-      yasa    HMC   N3%          5     True                  ffbs_sd 151        70 0.601940 0.508267 0.690747
-      yasa    HMC   N3%          5     True                   ind_sd 151        70 0.598942 0.508588 0.690352
-      yasa    HMC   N3%          5     True             mean_entropy 151        70 0.520988 0.430686 0.616726
-      yasa    HMC   N3%          5     True        one_minus_maxprob 151        70 0.520988 0.430454 0.615132
-      yasa    HMC   N3%          5     True abs_raw_minus_calibrated 151        70 0.601235 0.511051 0.684435
-      yasa    HMC  REM%          5    False           proposed_width 151        50 0.565941 0.464794 0.659220
-      yasa    HMC  REM%          5    False                  ffbs_sd 151        50 0.599604 0.495268 0.693755
-      yasa    HMC  REM%          5    False                   ind_sd 151        50 0.620198 0.527215 0.714304
-      yasa    HMC  REM%          5    False             mean_entropy 151        50 0.591089 0.490483 0.694318
-      yasa    HMC  REM%          5    False        one_minus_maxprob 151        50 0.589703 0.484708 0.691886
-      yasa    HMC  REM%          5    False abs_raw_minus_calibrated 151        50 0.631089 0.534406 0.724718
-      yasa     SC   TST         30     True           proposed_width 153        50 0.622330 0.526876 0.712001
-      yasa     SC   TST         30     True                  ffbs_sd 153        50 0.635146 0.539882 0.724655
-      yasa     SC   TST         30     True                   ind_sd 153        50 0.649320 0.560179 0.739826
-      yasa     SC   TST         30     True             mean_entropy 153        50 0.580583 0.488033 0.681626
-      yasa     SC   TST         30     True        one_minus_maxprob 153        50 0.575534 0.481273 0.670395
-      yasa     SC   TST         30     True abs_raw_minus_calibrated 153        50 0.637184 0.558169 0.711935
-      yasa     SC   SOL         15    False           proposed_width 153        23 0.858863 0.792851 0.916057
-      yasa     SC   SOL         15    False                  ffbs_sd 153        23 0.861204 0.796076 0.916683
-      yasa     SC   SOL         15    False                   ind_sd 153        23 0.726421 0.614139 0.826921
-      yasa     SC   SOL         15    False             mean_entropy 153        23 0.667224 0.565603 0.770354
-      yasa     SC   SOL         15    False        one_minus_maxprob 153        23 0.678595 0.585826 0.779080
-      yasa     SC   SOL         15    False abs_raw_minus_calibrated 153        23 0.705351 0.589286 0.820339
-      yasa     SC  WASO         30    False           proposed_width 153        56 0.500368 0.402419 0.590708
-      yasa     SC  WASO         30    False                  ffbs_sd 153        56 0.455081 0.358419 0.546225
-      yasa     SC  WASO         30    False                   ind_sd 153        56 0.354566 0.255992 0.458897
-      yasa     SC  WASO         30    False             mean_entropy 153        56 0.662923 0.563281 0.761979
-      yasa     SC  WASO         30    False        one_minus_maxprob 153        56 0.662003 0.559868 0.763685
-      yasa     SC  WASO         30    False abs_raw_minus_calibrated 153        56 0.700203 0.612375 0.780050
-      yasa     SC  REML         30     True           proposed_width 153        29 0.739155 0.647374 0.818158
-      yasa     SC  REML         30     True                  ffbs_sd 153        29 0.740545 0.653008 0.817949
-      yasa     SC  REML         30     True                   ind_sd 153        29 0.610122 0.502030 0.727740
-      yasa     SC  REML         30     True             mean_entropy 153        29 0.572581 0.457066 0.693108
-      yasa     SC  REML         30     True        one_minus_maxprob 153        29 0.596774 0.481254 0.714030
-      yasa     SC  REML         30     True abs_raw_minus_calibrated 153        29 0.610400 0.480634 0.730696
-      yasa     SC   N1%          5    False           proposed_width 153        95 0.708711 0.617700 0.791542
-      yasa     SC   N1%          5    False                  ffbs_sd 153        95 0.715245 0.622798 0.796366
-      yasa     SC   N1%          5    False                   ind_sd 153        95 0.740109 0.654685 0.818955
-      yasa     SC   N1%          5    False             mean_entropy 153        95 0.632849 0.521066 0.718046
-      yasa     SC   N1%          5    False        one_minus_maxprob 153        95 0.617423 0.503260 0.709152
-      yasa     SC   N1%          5    False abs_raw_minus_calibrated 153        95 0.648820 0.554763 0.740268
-      yasa     SC   N2%         10    False           proposed_width 153        51 0.652057 0.558017 0.736105
-      yasa     SC   N2%         10    False                  ffbs_sd 153        51 0.689350 0.598388 0.769137
-      yasa     SC   N2%         10    False                   ind_sd 153        51 0.673779 0.582301 0.756852
-      yasa     SC   N2%         10    False             mean_entropy 153        51 0.684160 0.602533 0.758120
-      yasa     SC   N2%         10    False        one_minus_maxprob 153        51 0.666667 0.588649 0.742099
-      yasa     SC   N2%         10    False abs_raw_minus_calibrated 153        51 0.562476 0.454085 0.672363
-      yasa     SC   N3%          5     True           proposed_width 153        86 0.650642 0.550382 0.748873
-      yasa     SC   N3%          5     True                  ffbs_sd 153        86 0.676328 0.579609 0.769786
-      yasa     SC   N3%          5     True                   ind_sd 153        86 0.662964 0.561484 0.756503
-      yasa     SC   N3%          5     True             mean_entropy 153        86 0.527595 0.427579 0.646131
-      yasa     SC   N3%          5     True        one_minus_maxprob 153        86 0.541826 0.443684 0.660688
-      yasa     SC   N3%          5     True abs_raw_minus_calibrated 153        86 0.739847 0.647361 0.820416
-      yasa     SC  REM%          5    False           proposed_width 153        37 0.746738 0.645105 0.836067
-      yasa     SC  REM%          5    False                  ffbs_sd 153        37 0.750932 0.651394 0.838202
-      yasa     SC  REM%          5    False                   ind_sd 153        37 0.739515 0.644112 0.824223
-      yasa     SC  REM%          5    False             mean_entropy 153        37 0.682665 0.570097 0.787438
-      yasa     SC  REM%          5    False        one_minus_maxprob 153        37 0.687791 0.573449 0.789493
-      yasa     SC  REM%          5    False abs_raw_minus_calibrated 153        37 0.629077 0.497726 0.759604
-      yasa     ST   TST         30     True           proposed_width  44        10 0.800000 0.643665 0.943145
-      yasa     ST   TST         30     True                  ffbs_sd  44        10 0.832353 0.659677 0.960950
-      yasa     ST   TST         30     True                   ind_sd  44        10 0.835294 0.687178 0.961808
-      yasa     ST   TST         30     True             mean_entropy  44        10 0.844118 0.712403 0.944444
-      yasa     ST   TST         30     True        one_minus_maxprob  44        10 0.838235 0.721864 0.942982
-      yasa     ST   TST         30     True abs_raw_minus_calibrated  44        10 0.891176 0.744762 0.995620
-      yasa     ST   SOL         15    False           proposed_width  44         0      NaN      NaN      NaN
-      yasa     ST   SOL         15    False                  ffbs_sd  44         0      NaN      NaN      NaN
-      yasa     ST   SOL         15    False                   ind_sd  44         0      NaN      NaN      NaN
-      yasa     ST   SOL         15    False             mean_entropy  44         0      NaN      NaN      NaN
-      yasa     ST   SOL         15    False        one_minus_maxprob  44         0      NaN      NaN      NaN
-      yasa     ST   SOL         15    False abs_raw_minus_calibrated  44         0      NaN      NaN      NaN
-      yasa     ST  WASO         30    False           proposed_width  44         9      NaN      NaN      NaN
-      yasa     ST  WASO         30    False                  ffbs_sd  44         9      NaN      NaN      NaN
-      yasa     ST  WASO         30    False                   ind_sd  44         9      NaN      NaN      NaN
-      yasa     ST  WASO         30    False             mean_entropy  44         9      NaN      NaN      NaN
-      yasa     ST  WASO         30    False        one_minus_maxprob  44         9      NaN      NaN      NaN
-      yasa     ST  WASO         30    False abs_raw_minus_calibrated  44         9      NaN      NaN      NaN
-      yasa     ST  REML         30     True           proposed_width  44         8      NaN      NaN      NaN
-      yasa     ST  REML         30     True                  ffbs_sd  44         8      NaN      NaN      NaN
-      yasa     ST  REML         30     True                   ind_sd  44         8      NaN      NaN      NaN
-      yasa     ST  REML         30     True             mean_entropy  44         8      NaN      NaN      NaN
-      yasa     ST  REML         30     True        one_minus_maxprob  44         8      NaN      NaN      NaN
-      yasa     ST  REML         30     True abs_raw_minus_calibrated  44         8      NaN      NaN      NaN
-      yasa     ST   N1%          5    False           proposed_width  44        14 0.697619 0.527735 0.857185
-      yasa     ST   N1%          5    False                  ffbs_sd  44        14 0.750000 0.555824 0.892577
-      yasa     ST   N1%          5    False                   ind_sd  44        14 0.764286 0.600537 0.906348
-      yasa     ST   N1%          5    False             mean_entropy  44        14 0.714286 0.528604 0.866022
-      yasa     ST   N1%          5    False        one_minus_maxprob  44        14 0.702381 0.501372 0.862338
-      yasa     ST   N1%          5    False abs_raw_minus_calibrated  44        14 0.704762 0.516470 0.864286
-      yasa     ST   N2%         10    False           proposed_width  44        14 0.378571 0.204721 0.606793
-      yasa     ST   N2%         10    False                  ffbs_sd  44        14 0.409524 0.238183 0.636405
-      yasa     ST   N2%         10    False                   ind_sd  44        14 0.400000 0.206873 0.648774
-      yasa     ST   N2%         10    False             mean_entropy  44        14 0.390476 0.178995 0.636805
-      yasa     ST   N2%         10    False        one_minus_maxprob  44        14 0.385714 0.194136 0.629433
-      yasa     ST   N2%         10    False abs_raw_minus_calibrated  44        14 0.492857 0.294086 0.662024
-      yasa     ST   N3%          5     True           proposed_width  44        19 0.667368 0.480885 0.845337
-      yasa     ST   N3%          5     True                  ffbs_sd  44        19 0.629474 0.447883 0.799245
-      yasa     ST   N3%          5     True                   ind_sd  44        19 0.684211 0.481480 0.862521
-      yasa     ST   N3%          5     True             mean_entropy  44        19 0.532632 0.301224 0.751733
-      yasa     ST   N3%          5     True        one_minus_maxprob  44        19 0.538947 0.312682 0.747875
-      yasa     ST   N3%          5     True abs_raw_minus_calibrated  44        19 0.557895 0.359615 0.756326
-      yasa     ST  REM%          5    False           proposed_width  44        12 0.335938 0.162503 0.531722
-      yasa     ST  REM%          5    False                  ffbs_sd  44        12 0.401042 0.235642 0.585430
-      yasa     ST  REM%          5    False                   ind_sd  44        12 0.424479 0.247613 0.629448
-      yasa     ST  REM%          5    False             mean_entropy  44        12 0.322917 0.167563 0.515651
-      yasa     ST  REM%          5    False        one_minus_maxprob  44        12 0.320312 0.166198 0.501417
-      yasa     ST  REM%          5    False abs_raw_minus_calibrated  44        12 0.382812 0.201365 0.595278
-lgbm_sc_s0    HMC   TST         30     True           proposed_width 151        92 0.613670 0.517991 0.704747
-lgbm_sc_s0    HMC   TST         30     True                  ffbs_sd 151        92 0.614959 0.518973 0.705375
-lgbm_sc_s0    HMC   TST         30     True                   ind_sd 151        92 0.613670 0.519098 0.708985
-lgbm_sc_s0    HMC   TST         30     True             mean_entropy 151        92 0.674097 0.582766 0.761451
-lgbm_sc_s0    HMC   TST         30     True        one_minus_maxprob 151        92 0.666912 0.573866 0.754639
-lgbm_sc_s0    HMC   TST         30     True abs_raw_minus_calibrated 151        92 0.814941 0.736180 0.884318
-lgbm_sc_s0    HMC   SOL         15    False           proposed_width 151        14 0.802920 0.682459 0.915841
-lgbm_sc_s0    HMC   SOL         15    False                  ffbs_sd 151        14 0.828467 0.719094 0.924113
-lgbm_sc_s0    HMC   SOL         15    False                   ind_sd 151        14 0.543796 0.386308 0.700270
-lgbm_sc_s0    HMC   SOL         15    False             mean_entropy 151        14 0.757039 0.625196 0.860851
-lgbm_sc_s0    HMC   SOL         15    False        one_minus_maxprob 151        14 0.735141 0.581859 0.856410
-lgbm_sc_s0    HMC   SOL         15    False abs_raw_minus_calibrated 151        14 0.779458 0.611138 0.942605
-lgbm_sc_s0    HMC  WASO         30    False           proposed_width 151        84 0.529495 0.440573 0.624178
-lgbm_sc_s0    HMC  WASO         30    False                  ffbs_sd 151        84 0.592928 0.496644 0.684091
-lgbm_sc_s0    HMC  WASO         30    False                   ind_sd 151        84 0.586532 0.496550 0.674974
-lgbm_sc_s0    HMC  WASO         30    False             mean_entropy 151        84 0.639659 0.552269 0.732987
-lgbm_sc_s0    HMC  WASO         30    False        one_minus_maxprob 151        84 0.632729 0.541611 0.726353
-lgbm_sc_s0    HMC  WASO         30    False abs_raw_minus_calibrated 151        84 0.809524 0.733267 0.875048
-lgbm_sc_s0    HMC  REML         30     True           proposed_width 150        48 0.606209 0.512785 0.707303
-lgbm_sc_s0    HMC  REML         30     True                  ffbs_sd 150        48 0.663603 0.572601 0.754707
-lgbm_sc_s0    HMC  REML         30     True                   ind_sd 150        48 0.413194 0.306430 0.509056
-lgbm_sc_s0    HMC  REML         30     True             mean_entropy 150        48 0.655433 0.550457 0.757652
-lgbm_sc_s0    HMC  REML         30     True        one_minus_maxprob 150        48 0.654208 0.550813 0.751169
-lgbm_sc_s0    HMC  REML         30     True abs_raw_minus_calibrated 150        48 0.612132 0.516998 0.714240
-lgbm_sc_s0    HMC   N1%          5    False           proposed_width 151       102 0.678071 0.590777 0.769856
-lgbm_sc_s0    HMC   N1%          5    False                  ffbs_sd 151       102 0.690876 0.605534 0.775317
-lgbm_sc_s0    HMC   N1%          5    False                   ind_sd 151       102 0.718487 0.632475 0.801509
-lgbm_sc_s0    HMC   N1%          5    False             mean_entropy 151       102 0.684074 0.590907 0.772545
-lgbm_sc_s0    HMC   N1%          5    False        one_minus_maxprob 151       102 0.690276 0.601551 0.778693
-lgbm_sc_s0    HMC   N1%          5    False abs_raw_minus_calibrated 151       102 0.750100 0.671690 0.830665
-lgbm_sc_s0    HMC   N2%         10    False           proposed_width 151        67 0.547974 0.449910 0.640993
-lgbm_sc_s0    HMC   N2%         10    False                  ffbs_sd 151        67 0.550462 0.453124 0.645478
-lgbm_sc_s0    HMC   N2%         10    False                   ind_sd 151        67 0.538735 0.440830 0.628966
-lgbm_sc_s0    HMC   N2%         10    False             mean_entropy 151        67 0.501244 0.404582 0.599584
-lgbm_sc_s0    HMC   N2%         10    False        one_minus_maxprob 151        67 0.486674 0.390680 0.584144
-lgbm_sc_s0    HMC   N2%         10    False abs_raw_minus_calibrated 151        67 0.466418 0.373491 0.551859
-lgbm_sc_s0    HMC   N3%          5     True           proposed_width 151       123 0.646632 0.548212 0.741571
-lgbm_sc_s0    HMC   N3%          5     True                  ffbs_sd 151       123 0.649245 0.541428 0.758143
-lgbm_sc_s0    HMC   N3%          5     True                   ind_sd 151       123 0.600465 0.497431 0.692644
-lgbm_sc_s0    HMC   N3%          5     True             mean_entropy 151       123 0.589431 0.477033 0.713876
-lgbm_sc_s0    HMC   N3%          5     True        one_minus_maxprob 151       123 0.592044 0.478446 0.710170
-lgbm_sc_s0    HMC   N3%          5     True abs_raw_minus_calibrated 151       123 0.523810 0.407938 0.632643
-lgbm_sc_s0    HMC  REM%          5    False           proposed_width 151        50 0.603762 0.502561 0.700218
-lgbm_sc_s0    HMC  REM%          5    False                  ffbs_sd 151        50 0.617426 0.520670 0.709913
-lgbm_sc_s0    HMC  REM%          5    False                   ind_sd 151        50 0.588713 0.490484 0.683379
-lgbm_sc_s0    HMC  REM%          5    False             mean_entropy 151        50 0.640594 0.537249 0.734292
-lgbm_sc_s0    HMC  REM%          5    False        one_minus_maxprob 151        50 0.638020 0.539060 0.732941
-lgbm_sc_s0    HMC  REM%          5    False abs_raw_minus_calibrated 151        50 0.625545 0.523462 0.726338
-lgbm_sc_s0     SC   TST         30     True           proposed_width 153        33 0.767172 0.678876 0.849027
-lgbm_sc_s0     SC   TST         30     True                  ffbs_sd 153        33 0.786111 0.703244 0.866211
-lgbm_sc_s0     SC   TST         30     True                   ind_sd 153        33 0.763889 0.653901 0.856937
-lgbm_sc_s0     SC   TST         30     True             mean_entropy 153        33 0.755303 0.652909 0.845385
-lgbm_sc_s0     SC   TST         30     True        one_minus_maxprob 153        33 0.763384 0.665302 0.851250
-lgbm_sc_s0     SC   TST         30     True abs_raw_minus_calibrated 153        33 0.784343 0.678803 0.877742
-lgbm_sc_s0     SC   SOL         15    False           proposed_width 153        10 0.920280 0.853601 0.972232
-lgbm_sc_s0     SC   SOL         15    False                  ffbs_sd 153        10 0.919580 0.852867 0.971831
-lgbm_sc_s0     SC   SOL         15    False                   ind_sd 153        10 0.615385 0.460704 0.749043
-lgbm_sc_s0     SC   SOL         15    False             mean_entropy 153        10 0.723077 0.533768 0.866190
-lgbm_sc_s0     SC   SOL         15    False        one_minus_maxprob 153        10 0.723776 0.540886 0.865782
-lgbm_sc_s0     SC   SOL         15    False abs_raw_minus_calibrated 153        10 0.690210 0.488054 0.910307
-lgbm_sc_s0     SC  WASO         30    False           proposed_width 153        23 0.490301 0.367616 0.616293
-lgbm_sc_s0     SC  WASO         30    False                  ffbs_sd 153        23 0.424749 0.303227 0.554737
-lgbm_sc_s0     SC  WASO         30    False                   ind_sd 153        23 0.268562 0.159979 0.399528
-lgbm_sc_s0     SC  WASO         30    False             mean_entropy 153        23 0.660535 0.536627 0.776116
-lgbm_sc_s0     SC  WASO         30    False        one_minus_maxprob 153        23 0.647157 0.529132 0.766444
-lgbm_sc_s0     SC  WASO         30    False abs_raw_minus_calibrated 153        23 0.696488 0.563570 0.812018
-lgbm_sc_s0     SC  REML         30     True           proposed_width 153        26 0.775893 0.680884 0.868630
-lgbm_sc_s0     SC  REML         30     True                  ffbs_sd 153        26 0.774985 0.679685 0.866855
-lgbm_sc_s0     SC  REML         30     True                   ind_sd 153        26 0.526651 0.382671 0.654821
-lgbm_sc_s0     SC  REML         30     True             mean_entropy 153        26 0.534222 0.400687 0.665199
-lgbm_sc_s0     SC  REML         30     True        one_minus_maxprob 153        26 0.538764 0.405772 0.674422
-lgbm_sc_s0     SC  REML         30     True abs_raw_minus_calibrated 153        26 0.560569 0.451945 0.681635
-lgbm_sc_s0     SC   N1%          5    False           proposed_width 153        77 0.714286 0.630781 0.791216
-lgbm_sc_s0     SC   N1%          5    False                  ffbs_sd 153        77 0.698052 0.610460 0.780284
-lgbm_sc_s0     SC   N1%          5    False                   ind_sd 153        77 0.662167 0.574822 0.740119
-lgbm_sc_s0     SC   N1%          5    False             mean_entropy 153        77 0.710355 0.632074 0.776045
-lgbm_sc_s0     SC   N1%          5    False        one_minus_maxprob 153        77 0.713602 0.634220 0.779008
-lgbm_sc_s0     SC   N1%          5    False abs_raw_minus_calibrated 153        77 0.720096 0.638508 0.793636
-lgbm_sc_s0     SC   N2%         10    False           proposed_width 153        46 0.632466 0.527933 0.736525
-lgbm_sc_s0     SC   N2%         10    False                  ffbs_sd 153        46 0.661317 0.560793 0.760392
-lgbm_sc_s0     SC   N2%         10    False                   ind_sd 153        46 0.632263 0.528983 0.734865
-lgbm_sc_s0     SC   N2%         10    False             mean_entropy 153        46 0.711093 0.610374 0.799083
-lgbm_sc_s0     SC   N2%         10    False        one_minus_maxprob 153        46 0.719829 0.624465 0.804862
-lgbm_sc_s0     SC   N2%         10    False abs_raw_minus_calibrated 153        46 0.709671 0.614408 0.797256
-lgbm_sc_s0     SC   N3%          5     True           proposed_width 153        32 0.785124 0.676530 0.869370
-lgbm_sc_s0     SC   N3%          5     True                  ffbs_sd 153        32 0.781508 0.673054 0.865104
-lgbm_sc_s0     SC   N3%          5     True                   ind_sd 153        32 0.770661 0.655885 0.855673
-lgbm_sc_s0     SC   N3%          5     True             mean_entropy 153        32 0.587293 0.476286 0.693013
-lgbm_sc_s0     SC   N3%          5     True        one_minus_maxprob 153        32 0.584711 0.477880 0.691541
-lgbm_sc_s0     SC   N3%          5     True abs_raw_minus_calibrated 153        32 0.702738 0.584732 0.802297
-lgbm_sc_s0     SC  REM%          5    False           proposed_width 153        30 0.604336 0.481622 0.706507
-lgbm_sc_s0     SC  REM%          5    False                  ffbs_sd 153        30 0.615447 0.500516 0.713419
-lgbm_sc_s0     SC  REM%          5    False                   ind_sd 153        30 0.698374 0.584307 0.792146
-lgbm_sc_s0     SC  REM%          5    False             mean_entropy 153        30 0.629810 0.480237 0.751113
-lgbm_sc_s0     SC  REM%          5    False        one_minus_maxprob 153        30 0.628997 0.480711 0.751700
-lgbm_sc_s0     SC  REM%          5    False abs_raw_minus_calibrated 153        30 0.593496 0.462850 0.720540
-lgbm_sc_s0     ST   TST         30     True           proposed_width  44         5      NaN      NaN      NaN
-lgbm_sc_s0     ST   TST         30     True                  ffbs_sd  44         5      NaN      NaN      NaN
-lgbm_sc_s0     ST   TST         30     True                   ind_sd  44         5      NaN      NaN      NaN
-lgbm_sc_s0     ST   TST         30     True             mean_entropy  44         5      NaN      NaN      NaN
-lgbm_sc_s0     ST   TST         30     True        one_minus_maxprob  44         5      NaN      NaN      NaN
-lgbm_sc_s0     ST   TST         30     True abs_raw_minus_calibrated  44         5      NaN      NaN      NaN
-lgbm_sc_s0     ST   SOL         15    False           proposed_width  44         1      NaN      NaN      NaN
-lgbm_sc_s0     ST   SOL         15    False                  ffbs_sd  44         1      NaN      NaN      NaN
-lgbm_sc_s0     ST   SOL         15    False                   ind_sd  44         1      NaN      NaN      NaN
-lgbm_sc_s0     ST   SOL         15    False             mean_entropy  44         1      NaN      NaN      NaN
-lgbm_sc_s0     ST   SOL         15    False        one_minus_maxprob  44         1      NaN      NaN      NaN
-lgbm_sc_s0     ST   SOL         15    False abs_raw_minus_calibrated  44         1      NaN      NaN      NaN
-lgbm_sc_s0     ST  WASO         30    False           proposed_width  44         6      NaN      NaN      NaN
-lgbm_sc_s0     ST  WASO         30    False                  ffbs_sd  44         6      NaN      NaN      NaN
-lgbm_sc_s0     ST  WASO         30    False                   ind_sd  44         6      NaN      NaN      NaN
-lgbm_sc_s0     ST  WASO         30    False             mean_entropy  44         6      NaN      NaN      NaN
-lgbm_sc_s0     ST  WASO         30    False        one_minus_maxprob  44         6      NaN      NaN      NaN
-lgbm_sc_s0     ST  WASO         30    False abs_raw_minus_calibrated  44         6      NaN      NaN      NaN
-lgbm_sc_s0     ST  REML         30     True           proposed_width  44        12 0.734375 0.517897 0.890547
-lgbm_sc_s0     ST  REML         30     True                  ffbs_sd  44        12 0.744792 0.575673 0.885458
-lgbm_sc_s0     ST  REML         30     True                   ind_sd  44        12 0.328125 0.138230 0.540551
-lgbm_sc_s0     ST  REML         30     True             mean_entropy  44        12 0.606771 0.343746 0.827644
-lgbm_sc_s0     ST  REML         30     True        one_minus_maxprob  44        12 0.596354 0.336508 0.821379
-lgbm_sc_s0     ST  REML         30     True abs_raw_minus_calibrated  44        12 0.559896 0.349200 0.776146
-lgbm_sc_s0     ST   N1%          5    False           proposed_width  44        15 0.811494 0.629300 0.942917
-lgbm_sc_s0     ST   N1%          5    False                  ffbs_sd  44        15 0.813793 0.635671 0.941019
-lgbm_sc_s0     ST   N1%          5    False                   ind_sd  44        15 0.832184 0.669046 0.947891
-lgbm_sc_s0     ST   N1%          5    False             mean_entropy  44        15 0.908046 0.791645 0.981613
-lgbm_sc_s0     ST   N1%          5    False        one_minus_maxprob  44        15 0.896552 0.764914 0.978649
-lgbm_sc_s0     ST   N1%          5    False abs_raw_minus_calibrated  44        15 0.857471 0.697898 0.965119
-lgbm_sc_s0     ST   N2%         10    False           proposed_width  44        17 0.509804 0.298817 0.714635
-lgbm_sc_s0     ST   N2%         10    False                  ffbs_sd  44        17 0.538126 0.332506 0.732034
-lgbm_sc_s0     ST   N2%         10    False                   ind_sd  44        17 0.518519 0.308305 0.716711
-lgbm_sc_s0     ST   N2%         10    False             mean_entropy  44        17 0.525054 0.305785 0.728732
-lgbm_sc_s0     ST   N2%         10    False        one_minus_maxprob  44        17 0.531590 0.307288 0.730623
-lgbm_sc_s0     ST   N2%         10    False abs_raw_minus_calibrated  44        17 0.363834 0.195990 0.568184
-lgbm_sc_s0     ST   N3%          5     True           proposed_width  44        21 0.577640 0.357117 0.764974
-lgbm_sc_s0     ST   N3%          5     True                  ffbs_sd  44        21 0.743271 0.572572 0.877927
-lgbm_sc_s0     ST   N3%          5     True                   ind_sd  44        21 0.763975 0.588165 0.896504
-lgbm_sc_s0     ST   N3%          5     True             mean_entropy  44        21 0.559006 0.322917 0.784390
-lgbm_sc_s0     ST   N3%          5     True        one_minus_maxprob  44        21 0.565217 0.333282 0.786484
-lgbm_sc_s0     ST   N3%          5     True abs_raw_minus_calibrated  44        21 0.536232 0.319971 0.731810
-lgbm_sc_s0     ST  REM%          5    False           proposed_width  44        10 0.508824 0.239403 0.758736
-lgbm_sc_s0     ST  REM%          5    False                  ffbs_sd  44        10 0.544118 0.302812 0.766706
-lgbm_sc_s0     ST  REM%          5    False                   ind_sd  44        10 0.576471 0.323004 0.812505
-lgbm_sc_s0     ST  REM%          5    False             mean_entropy  44        10 0.455882 0.167954 0.752933
-lgbm_sc_s0     ST  REM%          5    False        one_minus_maxprob  44        10 0.441176 0.155417 0.736950
-lgbm_sc_s0     ST  REM%          5    False abs_raw_minus_calibrated  44        10 0.650000 0.409517 0.876491
+| stager     | cohort   | param   |   threshold | primary   | signal                   |   n |   n_events |   auroc |    lo95 |    hi95 |
+|:-----------|:---------|:--------|------------:|:----------|:-------------------------|----:|-----------:|--------:|--------:|--------:|
+| yasa       | HMC      | TST     |          30 | True      | proposed_width           | 151 |         79 |   0.679 |   0.592 |   0.767 |
+| yasa       | HMC      | TST     |          30 | True      | ffbs_sd                  | 151 |         79 |   0.685 |   0.598 |   0.772 |
+| yasa       | HMC      | TST     |          30 | True      | ind_sd                   | 151 |         79 |   0.671 |   0.578 |   0.758 |
+| yasa       | HMC      | TST     |          30 | True      | mean_entropy             | 151 |         79 |   0.725 |   0.640 |   0.807 |
+| yasa       | HMC      | TST     |          30 | True      | one_minus_maxprob        | 151 |         79 |   0.714 |   0.632 |   0.794 |
+| yasa       | HMC      | TST     |          30 | True      | abs_raw_minus_calibrated | 151 |         79 |   0.794 |   0.718 |   0.866 |
+| yasa       | HMC      | SOL     |          15 | False     | proposed_width           | 151 |         17 |   0.831 |   0.757 |   0.897 |
+| yasa       | HMC      | SOL     |          15 | False     | ffbs_sd                  | 151 |         17 |   0.879 |   0.815 |   0.931 |
+| yasa       | HMC      | SOL     |          15 | False     | ind_sd                   | 151 |         17 |   0.537 |   0.386 |   0.682 |
+| yasa       | HMC      | SOL     |          15 | False     | mean_entropy             | 151 |         17 |   0.677 |   0.524 |   0.814 |
+| yasa       | HMC      | SOL     |          15 | False     | one_minus_maxprob        | 151 |         17 |   0.669 |   0.513 |   0.808 |
+| yasa       | HMC      | SOL     |          15 | False     | abs_raw_minus_calibrated | 151 |         17 |   0.801 |   0.629 |   0.941 |
+| yasa       | HMC      | WASO    |          30 | False     | proposed_width           | 151 |         68 |   0.624 |   0.530 |   0.707 |
+| yasa       | HMC      | WASO    |          30 | False     | ffbs_sd                  | 151 |         68 |   0.626 |   0.534 |   0.713 |
+| yasa       | HMC      | WASO    |          30 | False     | ind_sd                   | 151 |         68 |   0.549 |   0.453 |   0.645 |
+| yasa       | HMC      | WASO    |          30 | False     | mean_entropy             | 151 |         68 |   0.750 |   0.670 |   0.828 |
+| yasa       | HMC      | WASO    |          30 | False     | one_minus_maxprob        | 151 |         68 |   0.742 |   0.660 |   0.820 |
+| yasa       | HMC      | WASO    |          30 | False     | abs_raw_minus_calibrated | 151 |         68 |   0.865 |   0.804 |   0.918 |
+| yasa       | HMC      | REML    |          30 | True      | proposed_width           | 150 |         49 |   0.682 |   0.585 |   0.765 |
+| yasa       | HMC      | REML    |          30 | True      | ffbs_sd                  | 150 |         49 |   0.697 |   0.601 |   0.780 |
+| yasa       | HMC      | REML    |          30 | True      | ind_sd                   | 150 |         49 |   0.463 |   0.363 |   0.567 |
+| yasa       | HMC      | REML    |          30 | True      | mean_entropy             | 150 |         49 |   0.488 |   0.385 |   0.583 |
+| yasa       | HMC      | REML    |          30 | True      | one_minus_maxprob        | 150 |         49 |   0.486 |   0.384 |   0.582 |
+| yasa       | HMC      | REML    |          30 | True      | abs_raw_minus_calibrated | 150 |         49 |   0.532 |   0.424 |   0.637 |
+| yasa       | HMC      | N1%     |           5 | False     | proposed_width           | 151 |         85 |   0.720 |   0.640 |   0.792 |
+| yasa       | HMC      | N1%     |           5 | False     | ffbs_sd                  | 151 |         85 |   0.705 |   0.626 |   0.778 |
+| yasa       | HMC      | N1%     |           5 | False     | ind_sd                   | 151 |         85 |   0.685 |   0.602 |   0.765 |
+| yasa       | HMC      | N1%     |           5 | False     | mean_entropy             | 151 |         85 |   0.667 |   0.581 |   0.751 |
+| yasa       | HMC      | N1%     |           5 | False     | one_minus_maxprob        | 151 |         85 |   0.647 |   0.554 |   0.729 |
+| yasa       | HMC      | N1%     |           5 | False     | abs_raw_minus_calibrated | 151 |         85 |   0.533 |   0.447 |   0.624 |
+| yasa       | HMC      | N2%     |          10 | False     | proposed_width           | 151 |         66 |   0.772 |   0.690 |   0.847 |
+| yasa       | HMC      | N2%     |          10 | False     | ffbs_sd                  | 151 |         66 |   0.772 |   0.689 |   0.847 |
+| yasa       | HMC      | N2%     |          10 | False     | ind_sd                   | 151 |         66 |   0.775 |   0.697 |   0.851 |
+| yasa       | HMC      | N2%     |          10 | False     | mean_entropy             | 151 |         66 |   0.719 |   0.635 |   0.800 |
+| yasa       | HMC      | N2%     |          10 | False     | one_minus_maxprob        | 151 |         66 |   0.718 |   0.631 |   0.799 |
+| yasa       | HMC      | N2%     |          10 | False     | abs_raw_minus_calibrated | 151 |         66 |   0.651 |   0.563 |   0.737 |
+| yasa       | HMC      | N3%     |           5 | True      | proposed_width           | 151 |         70 |   0.584 |   0.486 |   0.674 |
+| yasa       | HMC      | N3%     |           5 | True      | ffbs_sd                  | 151 |         70 |   0.602 |   0.508 |   0.691 |
+| yasa       | HMC      | N3%     |           5 | True      | ind_sd                   | 151 |         70 |   0.599 |   0.509 |   0.690 |
+| yasa       | HMC      | N3%     |           5 | True      | mean_entropy             | 151 |         70 |   0.521 |   0.431 |   0.617 |
+| yasa       | HMC      | N3%     |           5 | True      | one_minus_maxprob        | 151 |         70 |   0.521 |   0.430 |   0.615 |
+| yasa       | HMC      | N3%     |           5 | True      | abs_raw_minus_calibrated | 151 |         70 |   0.601 |   0.511 |   0.684 |
+| yasa       | HMC      | REM%    |           5 | False     | proposed_width           | 151 |         50 |   0.566 |   0.465 |   0.659 |
+| yasa       | HMC      | REM%    |           5 | False     | ffbs_sd                  | 151 |         50 |   0.600 |   0.495 |   0.694 |
+| yasa       | HMC      | REM%    |           5 | False     | ind_sd                   | 151 |         50 |   0.620 |   0.527 |   0.714 |
+| yasa       | HMC      | REM%    |           5 | False     | mean_entropy             | 151 |         50 |   0.591 |   0.490 |   0.694 |
+| yasa       | HMC      | REM%    |           5 | False     | one_minus_maxprob        | 151 |         50 |   0.590 |   0.485 |   0.692 |
+| yasa       | HMC      | REM%    |           5 | False     | abs_raw_minus_calibrated | 151 |         50 |   0.631 |   0.534 |   0.725 |
+| yasa       | SC       | TST     |          30 | True      | proposed_width           | 153 |         50 |   0.622 |   0.527 |   0.712 |
+| yasa       | SC       | TST     |          30 | True      | ffbs_sd                  | 153 |         50 |   0.635 |   0.540 |   0.725 |
+| yasa       | SC       | TST     |          30 | True      | ind_sd                   | 153 |         50 |   0.649 |   0.560 |   0.740 |
+| yasa       | SC       | TST     |          30 | True      | mean_entropy             | 153 |         50 |   0.581 |   0.488 |   0.682 |
+| yasa       | SC       | TST     |          30 | True      | one_minus_maxprob        | 153 |         50 |   0.576 |   0.481 |   0.670 |
+| yasa       | SC       | TST     |          30 | True      | abs_raw_minus_calibrated | 153 |         50 |   0.637 |   0.558 |   0.712 |
+| yasa       | SC       | SOL     |          15 | False     | proposed_width           | 153 |         23 |   0.859 |   0.793 |   0.916 |
+| yasa       | SC       | SOL     |          15 | False     | ffbs_sd                  | 153 |         23 |   0.861 |   0.796 |   0.917 |
+| yasa       | SC       | SOL     |          15 | False     | ind_sd                   | 153 |         23 |   0.726 |   0.614 |   0.827 |
+| yasa       | SC       | SOL     |          15 | False     | mean_entropy             | 153 |         23 |   0.667 |   0.566 |   0.770 |
+| yasa       | SC       | SOL     |          15 | False     | one_minus_maxprob        | 153 |         23 |   0.679 |   0.586 |   0.779 |
+| yasa       | SC       | SOL     |          15 | False     | abs_raw_minus_calibrated | 153 |         23 |   0.705 |   0.589 |   0.820 |
+| yasa       | SC       | WASO    |          30 | False     | proposed_width           | 153 |         56 |   0.500 |   0.402 |   0.591 |
+| yasa       | SC       | WASO    |          30 | False     | ffbs_sd                  | 153 |         56 |   0.455 |   0.358 |   0.546 |
+| yasa       | SC       | WASO    |          30 | False     | ind_sd                   | 153 |         56 |   0.355 |   0.256 |   0.459 |
+| yasa       | SC       | WASO    |          30 | False     | mean_entropy             | 153 |         56 |   0.663 |   0.563 |   0.762 |
+| yasa       | SC       | WASO    |          30 | False     | one_minus_maxprob        | 153 |         56 |   0.662 |   0.560 |   0.764 |
+| yasa       | SC       | WASO    |          30 | False     | abs_raw_minus_calibrated | 153 |         56 |   0.700 |   0.612 |   0.780 |
+| yasa       | SC       | REML    |          30 | True      | proposed_width           | 153 |         29 |   0.739 |   0.647 |   0.818 |
+| yasa       | SC       | REML    |          30 | True      | ffbs_sd                  | 153 |         29 |   0.741 |   0.653 |   0.818 |
+| yasa       | SC       | REML    |          30 | True      | ind_sd                   | 153 |         29 |   0.610 |   0.502 |   0.728 |
+| yasa       | SC       | REML    |          30 | True      | mean_entropy             | 153 |         29 |   0.573 |   0.457 |   0.693 |
+| yasa       | SC       | REML    |          30 | True      | one_minus_maxprob        | 153 |         29 |   0.597 |   0.481 |   0.714 |
+| yasa       | SC       | REML    |          30 | True      | abs_raw_minus_calibrated | 153 |         29 |   0.610 |   0.481 |   0.731 |
+| yasa       | SC       | N1%     |           5 | False     | proposed_width           | 153 |         95 |   0.709 |   0.618 |   0.792 |
+| yasa       | SC       | N1%     |           5 | False     | ffbs_sd                  | 153 |         95 |   0.715 |   0.623 |   0.796 |
+| yasa       | SC       | N1%     |           5 | False     | ind_sd                   | 153 |         95 |   0.740 |   0.655 |   0.819 |
+| yasa       | SC       | N1%     |           5 | False     | mean_entropy             | 153 |         95 |   0.633 |   0.521 |   0.718 |
+| yasa       | SC       | N1%     |           5 | False     | one_minus_maxprob        | 153 |         95 |   0.617 |   0.503 |   0.709 |
+| yasa       | SC       | N1%     |           5 | False     | abs_raw_minus_calibrated | 153 |         95 |   0.649 |   0.555 |   0.740 |
+| yasa       | SC       | N2%     |          10 | False     | proposed_width           | 153 |         51 |   0.652 |   0.558 |   0.736 |
+| yasa       | SC       | N2%     |          10 | False     | ffbs_sd                  | 153 |         51 |   0.689 |   0.598 |   0.769 |
+| yasa       | SC       | N2%     |          10 | False     | ind_sd                   | 153 |         51 |   0.674 |   0.582 |   0.757 |
+| yasa       | SC       | N2%     |          10 | False     | mean_entropy             | 153 |         51 |   0.684 |   0.603 |   0.758 |
+| yasa       | SC       | N2%     |          10 | False     | one_minus_maxprob        | 153 |         51 |   0.667 |   0.589 |   0.742 |
+| yasa       | SC       | N2%     |          10 | False     | abs_raw_minus_calibrated | 153 |         51 |   0.562 |   0.454 |   0.672 |
+| yasa       | SC       | N3%     |           5 | True      | proposed_width           | 153 |         86 |   0.651 |   0.550 |   0.749 |
+| yasa       | SC       | N3%     |           5 | True      | ffbs_sd                  | 153 |         86 |   0.676 |   0.580 |   0.770 |
+| yasa       | SC       | N3%     |           5 | True      | ind_sd                   | 153 |         86 |   0.663 |   0.561 |   0.757 |
+| yasa       | SC       | N3%     |           5 | True      | mean_entropy             | 153 |         86 |   0.528 |   0.428 |   0.646 |
+| yasa       | SC       | N3%     |           5 | True      | one_minus_maxprob        | 153 |         86 |   0.542 |   0.444 |   0.661 |
+| yasa       | SC       | N3%     |           5 | True      | abs_raw_minus_calibrated | 153 |         86 |   0.740 |   0.647 |   0.820 |
+| yasa       | SC       | REM%    |           5 | False     | proposed_width           | 153 |         37 |   0.747 |   0.645 |   0.836 |
+| yasa       | SC       | REM%    |           5 | False     | ffbs_sd                  | 153 |         37 |   0.751 |   0.651 |   0.838 |
+| yasa       | SC       | REM%    |           5 | False     | ind_sd                   | 153 |         37 |   0.740 |   0.644 |   0.824 |
+| yasa       | SC       | REM%    |           5 | False     | mean_entropy             | 153 |         37 |   0.683 |   0.570 |   0.787 |
+| yasa       | SC       | REM%    |           5 | False     | one_minus_maxprob        | 153 |         37 |   0.688 |   0.573 |   0.789 |
+| yasa       | SC       | REM%    |           5 | False     | abs_raw_minus_calibrated | 153 |         37 |   0.629 |   0.498 |   0.760 |
+| yasa       | ST       | TST     |          30 | True      | proposed_width           |  44 |         10 |   0.800 |   0.644 |   0.943 |
+| yasa       | ST       | TST     |          30 | True      | ffbs_sd                  |  44 |         10 |   0.832 |   0.660 |   0.961 |
+| yasa       | ST       | TST     |          30 | True      | ind_sd                   |  44 |         10 |   0.835 |   0.687 |   0.962 |
+| yasa       | ST       | TST     |          30 | True      | mean_entropy             |  44 |         10 |   0.844 |   0.712 |   0.944 |
+| yasa       | ST       | TST     |          30 | True      | one_minus_maxprob        |  44 |         10 |   0.838 |   0.722 |   0.943 |
+| yasa       | ST       | TST     |          30 | True      | abs_raw_minus_calibrated |  44 |         10 |   0.891 |   0.745 |   0.996 |
+| yasa       | ST       | SOL     |          15 | False     | proposed_width           |  44 |          0 | nan     | nan     | nan     |
+| yasa       | ST       | SOL     |          15 | False     | ffbs_sd                  |  44 |          0 | nan     | nan     | nan     |
+| yasa       | ST       | SOL     |          15 | False     | ind_sd                   |  44 |          0 | nan     | nan     | nan     |
+| yasa       | ST       | SOL     |          15 | False     | mean_entropy             |  44 |          0 | nan     | nan     | nan     |
+| yasa       | ST       | SOL     |          15 | False     | one_minus_maxprob        |  44 |          0 | nan     | nan     | nan     |
+| yasa       | ST       | SOL     |          15 | False     | abs_raw_minus_calibrated |  44 |          0 | nan     | nan     | nan     |
+| yasa       | ST       | WASO    |          30 | False     | proposed_width           |  44 |          9 | nan     | nan     | nan     |
+| yasa       | ST       | WASO    |          30 | False     | ffbs_sd                  |  44 |          9 | nan     | nan     | nan     |
+| yasa       | ST       | WASO    |          30 | False     | ind_sd                   |  44 |          9 | nan     | nan     | nan     |
+| yasa       | ST       | WASO    |          30 | False     | mean_entropy             |  44 |          9 | nan     | nan     | nan     |
+| yasa       | ST       | WASO    |          30 | False     | one_minus_maxprob        |  44 |          9 | nan     | nan     | nan     |
+| yasa       | ST       | WASO    |          30 | False     | abs_raw_minus_calibrated |  44 |          9 | nan     | nan     | nan     |
+| yasa       | ST       | REML    |          30 | True      | proposed_width           |  44 |          8 | nan     | nan     | nan     |
+| yasa       | ST       | REML    |          30 | True      | ffbs_sd                  |  44 |          8 | nan     | nan     | nan     |
+| yasa       | ST       | REML    |          30 | True      | ind_sd                   |  44 |          8 | nan     | nan     | nan     |
+| yasa       | ST       | REML    |          30 | True      | mean_entropy             |  44 |          8 | nan     | nan     | nan     |
+| yasa       | ST       | REML    |          30 | True      | one_minus_maxprob        |  44 |          8 | nan     | nan     | nan     |
+| yasa       | ST       | REML    |          30 | True      | abs_raw_minus_calibrated |  44 |          8 | nan     | nan     | nan     |
+| yasa       | ST       | N1%     |           5 | False     | proposed_width           |  44 |         14 |   0.698 |   0.528 |   0.857 |
+| yasa       | ST       | N1%     |           5 | False     | ffbs_sd                  |  44 |         14 |   0.750 |   0.556 |   0.893 |
+| yasa       | ST       | N1%     |           5 | False     | ind_sd                   |  44 |         14 |   0.764 |   0.601 |   0.906 |
+| yasa       | ST       | N1%     |           5 | False     | mean_entropy             |  44 |         14 |   0.714 |   0.529 |   0.866 |
+| yasa       | ST       | N1%     |           5 | False     | one_minus_maxprob        |  44 |         14 |   0.702 |   0.501 |   0.862 |
+| yasa       | ST       | N1%     |           5 | False     | abs_raw_minus_calibrated |  44 |         14 |   0.705 |   0.516 |   0.864 |
+| yasa       | ST       | N2%     |          10 | False     | proposed_width           |  44 |         14 |   0.379 |   0.205 |   0.607 |
+| yasa       | ST       | N2%     |          10 | False     | ffbs_sd                  |  44 |         14 |   0.410 |   0.238 |   0.636 |
+| yasa       | ST       | N2%     |          10 | False     | ind_sd                   |  44 |         14 |   0.400 |   0.207 |   0.649 |
+| yasa       | ST       | N2%     |          10 | False     | mean_entropy             |  44 |         14 |   0.390 |   0.179 |   0.637 |
+| yasa       | ST       | N2%     |          10 | False     | one_minus_maxprob        |  44 |         14 |   0.386 |   0.194 |   0.629 |
+| yasa       | ST       | N2%     |          10 | False     | abs_raw_minus_calibrated |  44 |         14 |   0.493 |   0.294 |   0.662 |
+| yasa       | ST       | N3%     |           5 | True      | proposed_width           |  44 |         19 |   0.667 |   0.481 |   0.845 |
+| yasa       | ST       | N3%     |           5 | True      | ffbs_sd                  |  44 |         19 |   0.629 |   0.448 |   0.799 |
+| yasa       | ST       | N3%     |           5 | True      | ind_sd                   |  44 |         19 |   0.684 |   0.481 |   0.863 |
+| yasa       | ST       | N3%     |           5 | True      | mean_entropy             |  44 |         19 |   0.533 |   0.301 |   0.752 |
+| yasa       | ST       | N3%     |           5 | True      | one_minus_maxprob        |  44 |         19 |   0.539 |   0.313 |   0.748 |
+| yasa       | ST       | N3%     |           5 | True      | abs_raw_minus_calibrated |  44 |         19 |   0.558 |   0.360 |   0.756 |
+| yasa       | ST       | REM%    |           5 | False     | proposed_width           |  44 |         12 |   0.336 |   0.163 |   0.532 |
+| yasa       | ST       | REM%    |           5 | False     | ffbs_sd                  |  44 |         12 |   0.401 |   0.236 |   0.585 |
+| yasa       | ST       | REM%    |           5 | False     | ind_sd                   |  44 |         12 |   0.424 |   0.248 |   0.629 |
+| yasa       | ST       | REM%    |           5 | False     | mean_entropy             |  44 |         12 |   0.323 |   0.168 |   0.516 |
+| yasa       | ST       | REM%    |           5 | False     | one_minus_maxprob        |  44 |         12 |   0.320 |   0.166 |   0.501 |
+| yasa       | ST       | REM%    |           5 | False     | abs_raw_minus_calibrated |  44 |         12 |   0.383 |   0.201 |   0.595 |
+| lgbm_sc_s0 | HMC      | TST     |          30 | True      | proposed_width           | 151 |         92 |   0.614 |   0.518 |   0.705 |
+| lgbm_sc_s0 | HMC      | TST     |          30 | True      | ffbs_sd                  | 151 |         92 |   0.615 |   0.519 |   0.705 |
+| lgbm_sc_s0 | HMC      | TST     |          30 | True      | ind_sd                   | 151 |         92 |   0.614 |   0.519 |   0.709 |
+| lgbm_sc_s0 | HMC      | TST     |          30 | True      | mean_entropy             | 151 |         92 |   0.674 |   0.583 |   0.761 |
+| lgbm_sc_s0 | HMC      | TST     |          30 | True      | one_minus_maxprob        | 151 |         92 |   0.667 |   0.574 |   0.755 |
+| lgbm_sc_s0 | HMC      | TST     |          30 | True      | abs_raw_minus_calibrated | 151 |         92 |   0.815 |   0.736 |   0.884 |
+| lgbm_sc_s0 | HMC      | SOL     |          15 | False     | proposed_width           | 151 |         14 |   0.803 |   0.682 |   0.916 |
+| lgbm_sc_s0 | HMC      | SOL     |          15 | False     | ffbs_sd                  | 151 |         14 |   0.828 |   0.719 |   0.924 |
+| lgbm_sc_s0 | HMC      | SOL     |          15 | False     | ind_sd                   | 151 |         14 |   0.544 |   0.386 |   0.700 |
+| lgbm_sc_s0 | HMC      | SOL     |          15 | False     | mean_entropy             | 151 |         14 |   0.757 |   0.625 |   0.861 |
+| lgbm_sc_s0 | HMC      | SOL     |          15 | False     | one_minus_maxprob        | 151 |         14 |   0.735 |   0.582 |   0.856 |
+| lgbm_sc_s0 | HMC      | SOL     |          15 | False     | abs_raw_minus_calibrated | 151 |         14 |   0.779 |   0.611 |   0.943 |
+| lgbm_sc_s0 | HMC      | WASO    |          30 | False     | proposed_width           | 151 |         84 |   0.529 |   0.441 |   0.624 |
+| lgbm_sc_s0 | HMC      | WASO    |          30 | False     | ffbs_sd                  | 151 |         84 |   0.593 |   0.497 |   0.684 |
+| lgbm_sc_s0 | HMC      | WASO    |          30 | False     | ind_sd                   | 151 |         84 |   0.587 |   0.497 |   0.675 |
+| lgbm_sc_s0 | HMC      | WASO    |          30 | False     | mean_entropy             | 151 |         84 |   0.640 |   0.552 |   0.733 |
+| lgbm_sc_s0 | HMC      | WASO    |          30 | False     | one_minus_maxprob        | 151 |         84 |   0.633 |   0.542 |   0.726 |
+| lgbm_sc_s0 | HMC      | WASO    |          30 | False     | abs_raw_minus_calibrated | 151 |         84 |   0.810 |   0.733 |   0.875 |
+| lgbm_sc_s0 | HMC      | REML    |          30 | True      | proposed_width           | 150 |         48 |   0.606 |   0.513 |   0.707 |
+| lgbm_sc_s0 | HMC      | REML    |          30 | True      | ffbs_sd                  | 150 |         48 |   0.664 |   0.573 |   0.755 |
+| lgbm_sc_s0 | HMC      | REML    |          30 | True      | ind_sd                   | 150 |         48 |   0.413 |   0.306 |   0.509 |
+| lgbm_sc_s0 | HMC      | REML    |          30 | True      | mean_entropy             | 150 |         48 |   0.655 |   0.550 |   0.758 |
+| lgbm_sc_s0 | HMC      | REML    |          30 | True      | one_minus_maxprob        | 150 |         48 |   0.654 |   0.551 |   0.751 |
+| lgbm_sc_s0 | HMC      | REML    |          30 | True      | abs_raw_minus_calibrated | 150 |         48 |   0.612 |   0.517 |   0.714 |
+| lgbm_sc_s0 | HMC      | N1%     |           5 | False     | proposed_width           | 151 |        102 |   0.678 |   0.591 |   0.770 |
+| lgbm_sc_s0 | HMC      | N1%     |           5 | False     | ffbs_sd                  | 151 |        102 |   0.691 |   0.606 |   0.775 |
+| lgbm_sc_s0 | HMC      | N1%     |           5 | False     | ind_sd                   | 151 |        102 |   0.718 |   0.632 |   0.802 |
+| lgbm_sc_s0 | HMC      | N1%     |           5 | False     | mean_entropy             | 151 |        102 |   0.684 |   0.591 |   0.773 |
+| lgbm_sc_s0 | HMC      | N1%     |           5 | False     | one_minus_maxprob        | 151 |        102 |   0.690 |   0.602 |   0.779 |
+| lgbm_sc_s0 | HMC      | N1%     |           5 | False     | abs_raw_minus_calibrated | 151 |        102 |   0.750 |   0.672 |   0.831 |
+| lgbm_sc_s0 | HMC      | N2%     |          10 | False     | proposed_width           | 151 |         67 |   0.548 |   0.450 |   0.641 |
+| lgbm_sc_s0 | HMC      | N2%     |          10 | False     | ffbs_sd                  | 151 |         67 |   0.550 |   0.453 |   0.645 |
+| lgbm_sc_s0 | HMC      | N2%     |          10 | False     | ind_sd                   | 151 |         67 |   0.539 |   0.441 |   0.629 |
+| lgbm_sc_s0 | HMC      | N2%     |          10 | False     | mean_entropy             | 151 |         67 |   0.501 |   0.405 |   0.600 |
+| lgbm_sc_s0 | HMC      | N2%     |          10 | False     | one_minus_maxprob        | 151 |         67 |   0.487 |   0.391 |   0.584 |
+| lgbm_sc_s0 | HMC      | N2%     |          10 | False     | abs_raw_minus_calibrated | 151 |         67 |   0.466 |   0.373 |   0.552 |
+| lgbm_sc_s0 | HMC      | N3%     |           5 | True      | proposed_width           | 151 |        123 |   0.647 |   0.548 |   0.742 |
+| lgbm_sc_s0 | HMC      | N3%     |           5 | True      | ffbs_sd                  | 151 |        123 |   0.649 |   0.541 |   0.758 |
+| lgbm_sc_s0 | HMC      | N3%     |           5 | True      | ind_sd                   | 151 |        123 |   0.600 |   0.497 |   0.693 |
+| lgbm_sc_s0 | HMC      | N3%     |           5 | True      | mean_entropy             | 151 |        123 |   0.589 |   0.477 |   0.714 |
+| lgbm_sc_s0 | HMC      | N3%     |           5 | True      | one_minus_maxprob        | 151 |        123 |   0.592 |   0.478 |   0.710 |
+| lgbm_sc_s0 | HMC      | N3%     |           5 | True      | abs_raw_minus_calibrated | 151 |        123 |   0.524 |   0.408 |   0.633 |
+| lgbm_sc_s0 | HMC      | REM%    |           5 | False     | proposed_width           | 151 |         50 |   0.604 |   0.503 |   0.700 |
+| lgbm_sc_s0 | HMC      | REM%    |           5 | False     | ffbs_sd                  | 151 |         50 |   0.617 |   0.521 |   0.710 |
+| lgbm_sc_s0 | HMC      | REM%    |           5 | False     | ind_sd                   | 151 |         50 |   0.589 |   0.490 |   0.683 |
+| lgbm_sc_s0 | HMC      | REM%    |           5 | False     | mean_entropy             | 151 |         50 |   0.641 |   0.537 |   0.734 |
+| lgbm_sc_s0 | HMC      | REM%    |           5 | False     | one_minus_maxprob        | 151 |         50 |   0.638 |   0.539 |   0.733 |
+| lgbm_sc_s0 | HMC      | REM%    |           5 | False     | abs_raw_minus_calibrated | 151 |         50 |   0.626 |   0.523 |   0.726 |
+| lgbm_sc_s0 | SC       | TST     |          30 | True      | proposed_width           | 153 |         33 |   0.767 |   0.679 |   0.849 |
+| lgbm_sc_s0 | SC       | TST     |          30 | True      | ffbs_sd                  | 153 |         33 |   0.786 |   0.703 |   0.866 |
+| lgbm_sc_s0 | SC       | TST     |          30 | True      | ind_sd                   | 153 |         33 |   0.764 |   0.654 |   0.857 |
+| lgbm_sc_s0 | SC       | TST     |          30 | True      | mean_entropy             | 153 |         33 |   0.755 |   0.653 |   0.845 |
+| lgbm_sc_s0 | SC       | TST     |          30 | True      | one_minus_maxprob        | 153 |         33 |   0.763 |   0.665 |   0.851 |
+| lgbm_sc_s0 | SC       | TST     |          30 | True      | abs_raw_minus_calibrated | 153 |         33 |   0.784 |   0.679 |   0.878 |
+| lgbm_sc_s0 | SC       | SOL     |          15 | False     | proposed_width           | 153 |         10 |   0.920 |   0.854 |   0.972 |
+| lgbm_sc_s0 | SC       | SOL     |          15 | False     | ffbs_sd                  | 153 |         10 |   0.920 |   0.853 |   0.972 |
+| lgbm_sc_s0 | SC       | SOL     |          15 | False     | ind_sd                   | 153 |         10 |   0.615 |   0.461 |   0.749 |
+| lgbm_sc_s0 | SC       | SOL     |          15 | False     | mean_entropy             | 153 |         10 |   0.723 |   0.534 |   0.866 |
+| lgbm_sc_s0 | SC       | SOL     |          15 | False     | one_minus_maxprob        | 153 |         10 |   0.724 |   0.541 |   0.866 |
+| lgbm_sc_s0 | SC       | SOL     |          15 | False     | abs_raw_minus_calibrated | 153 |         10 |   0.690 |   0.488 |   0.910 |
+| lgbm_sc_s0 | SC       | WASO    |          30 | False     | proposed_width           | 153 |         23 |   0.490 |   0.368 |   0.616 |
+| lgbm_sc_s0 | SC       | WASO    |          30 | False     | ffbs_sd                  | 153 |         23 |   0.425 |   0.303 |   0.555 |
+| lgbm_sc_s0 | SC       | WASO    |          30 | False     | ind_sd                   | 153 |         23 |   0.269 |   0.160 |   0.400 |
+| lgbm_sc_s0 | SC       | WASO    |          30 | False     | mean_entropy             | 153 |         23 |   0.661 |   0.537 |   0.776 |
+| lgbm_sc_s0 | SC       | WASO    |          30 | False     | one_minus_maxprob        | 153 |         23 |   0.647 |   0.529 |   0.766 |
+| lgbm_sc_s0 | SC       | WASO    |          30 | False     | abs_raw_minus_calibrated | 153 |         23 |   0.696 |   0.564 |   0.812 |
+| lgbm_sc_s0 | SC       | REML    |          30 | True      | proposed_width           | 153 |         26 |   0.776 |   0.681 |   0.869 |
+| lgbm_sc_s0 | SC       | REML    |          30 | True      | ffbs_sd                  | 153 |         26 |   0.775 |   0.680 |   0.867 |
+| lgbm_sc_s0 | SC       | REML    |          30 | True      | ind_sd                   | 153 |         26 |   0.527 |   0.383 |   0.655 |
+| lgbm_sc_s0 | SC       | REML    |          30 | True      | mean_entropy             | 153 |         26 |   0.534 |   0.401 |   0.665 |
+| lgbm_sc_s0 | SC       | REML    |          30 | True      | one_minus_maxprob        | 153 |         26 |   0.539 |   0.406 |   0.674 |
+| lgbm_sc_s0 | SC       | REML    |          30 | True      | abs_raw_minus_calibrated | 153 |         26 |   0.561 |   0.452 |   0.682 |
+| lgbm_sc_s0 | SC       | N1%     |           5 | False     | proposed_width           | 153 |         77 |   0.714 |   0.631 |   0.791 |
+| lgbm_sc_s0 | SC       | N1%     |           5 | False     | ffbs_sd                  | 153 |         77 |   0.698 |   0.610 |   0.780 |
+| lgbm_sc_s0 | SC       | N1%     |           5 | False     | ind_sd                   | 153 |         77 |   0.662 |   0.575 |   0.740 |
+| lgbm_sc_s0 | SC       | N1%     |           5 | False     | mean_entropy             | 153 |         77 |   0.710 |   0.632 |   0.776 |
+| lgbm_sc_s0 | SC       | N1%     |           5 | False     | one_minus_maxprob        | 153 |         77 |   0.714 |   0.634 |   0.779 |
+| lgbm_sc_s0 | SC       | N1%     |           5 | False     | abs_raw_minus_calibrated | 153 |         77 |   0.720 |   0.639 |   0.794 |
+| lgbm_sc_s0 | SC       | N2%     |          10 | False     | proposed_width           | 153 |         46 |   0.632 |   0.528 |   0.737 |
+| lgbm_sc_s0 | SC       | N2%     |          10 | False     | ffbs_sd                  | 153 |         46 |   0.661 |   0.561 |   0.760 |
+| lgbm_sc_s0 | SC       | N2%     |          10 | False     | ind_sd                   | 153 |         46 |   0.632 |   0.529 |   0.735 |
+| lgbm_sc_s0 | SC       | N2%     |          10 | False     | mean_entropy             | 153 |         46 |   0.711 |   0.610 |   0.799 |
+| lgbm_sc_s0 | SC       | N2%     |          10 | False     | one_minus_maxprob        | 153 |         46 |   0.720 |   0.624 |   0.805 |
+| lgbm_sc_s0 | SC       | N2%     |          10 | False     | abs_raw_minus_calibrated | 153 |         46 |   0.710 |   0.614 |   0.797 |
+| lgbm_sc_s0 | SC       | N3%     |           5 | True      | proposed_width           | 153 |         32 |   0.785 |   0.677 |   0.869 |
+| lgbm_sc_s0 | SC       | N3%     |           5 | True      | ffbs_sd                  | 153 |         32 |   0.782 |   0.673 |   0.865 |
+| lgbm_sc_s0 | SC       | N3%     |           5 | True      | ind_sd                   | 153 |         32 |   0.771 |   0.656 |   0.856 |
+| lgbm_sc_s0 | SC       | N3%     |           5 | True      | mean_entropy             | 153 |         32 |   0.587 |   0.476 |   0.693 |
+| lgbm_sc_s0 | SC       | N3%     |           5 | True      | one_minus_maxprob        | 153 |         32 |   0.585 |   0.478 |   0.692 |
+| lgbm_sc_s0 | SC       | N3%     |           5 | True      | abs_raw_minus_calibrated | 153 |         32 |   0.703 |   0.585 |   0.802 |
+| lgbm_sc_s0 | SC       | REM%    |           5 | False     | proposed_width           | 153 |         30 |   0.604 |   0.482 |   0.707 |
+| lgbm_sc_s0 | SC       | REM%    |           5 | False     | ffbs_sd                  | 153 |         30 |   0.615 |   0.501 |   0.713 |
+| lgbm_sc_s0 | SC       | REM%    |           5 | False     | ind_sd                   | 153 |         30 |   0.698 |   0.584 |   0.792 |
+| lgbm_sc_s0 | SC       | REM%    |           5 | False     | mean_entropy             | 153 |         30 |   0.630 |   0.480 |   0.751 |
+| lgbm_sc_s0 | SC       | REM%    |           5 | False     | one_minus_maxprob        | 153 |         30 |   0.629 |   0.481 |   0.752 |
+| lgbm_sc_s0 | SC       | REM%    |           5 | False     | abs_raw_minus_calibrated | 153 |         30 |   0.593 |   0.463 |   0.721 |
+| lgbm_sc_s0 | ST       | TST     |          30 | True      | proposed_width           |  44 |          5 | nan     | nan     | nan     |
+| lgbm_sc_s0 | ST       | TST     |          30 | True      | ffbs_sd                  |  44 |          5 | nan     | nan     | nan     |
+| lgbm_sc_s0 | ST       | TST     |          30 | True      | ind_sd                   |  44 |          5 | nan     | nan     | nan     |
+| lgbm_sc_s0 | ST       | TST     |          30 | True      | mean_entropy             |  44 |          5 | nan     | nan     | nan     |
+| lgbm_sc_s0 | ST       | TST     |          30 | True      | one_minus_maxprob        |  44 |          5 | nan     | nan     | nan     |
+| lgbm_sc_s0 | ST       | TST     |          30 | True      | abs_raw_minus_calibrated |  44 |          5 | nan     | nan     | nan     |
+| lgbm_sc_s0 | ST       | SOL     |          15 | False     | proposed_width           |  44 |          1 | nan     | nan     | nan     |
+| lgbm_sc_s0 | ST       | SOL     |          15 | False     | ffbs_sd                  |  44 |          1 | nan     | nan     | nan     |
+| lgbm_sc_s0 | ST       | SOL     |          15 | False     | ind_sd                   |  44 |          1 | nan     | nan     | nan     |
+| lgbm_sc_s0 | ST       | SOL     |          15 | False     | mean_entropy             |  44 |          1 | nan     | nan     | nan     |
+| lgbm_sc_s0 | ST       | SOL     |          15 | False     | one_minus_maxprob        |  44 |          1 | nan     | nan     | nan     |
+| lgbm_sc_s0 | ST       | SOL     |          15 | False     | abs_raw_minus_calibrated |  44 |          1 | nan     | nan     | nan     |
+| lgbm_sc_s0 | ST       | WASO    |          30 | False     | proposed_width           |  44 |          6 | nan     | nan     | nan     |
+| lgbm_sc_s0 | ST       | WASO    |          30 | False     | ffbs_sd                  |  44 |          6 | nan     | nan     | nan     |
+| lgbm_sc_s0 | ST       | WASO    |          30 | False     | ind_sd                   |  44 |          6 | nan     | nan     | nan     |
+| lgbm_sc_s0 | ST       | WASO    |          30 | False     | mean_entropy             |  44 |          6 | nan     | nan     | nan     |
+| lgbm_sc_s0 | ST       | WASO    |          30 | False     | one_minus_maxprob        |  44 |          6 | nan     | nan     | nan     |
+| lgbm_sc_s0 | ST       | WASO    |          30 | False     | abs_raw_minus_calibrated |  44 |          6 | nan     | nan     | nan     |
+| lgbm_sc_s0 | ST       | REML    |          30 | True      | proposed_width           |  44 |         12 |   0.734 |   0.518 |   0.891 |
+| lgbm_sc_s0 | ST       | REML    |          30 | True      | ffbs_sd                  |  44 |         12 |   0.745 |   0.576 |   0.885 |
+| lgbm_sc_s0 | ST       | REML    |          30 | True      | ind_sd                   |  44 |         12 |   0.328 |   0.138 |   0.541 |
+| lgbm_sc_s0 | ST       | REML    |          30 | True      | mean_entropy             |  44 |         12 |   0.607 |   0.344 |   0.828 |
+| lgbm_sc_s0 | ST       | REML    |          30 | True      | one_minus_maxprob        |  44 |         12 |   0.596 |   0.337 |   0.821 |
+| lgbm_sc_s0 | ST       | REML    |          30 | True      | abs_raw_minus_calibrated |  44 |         12 |   0.560 |   0.349 |   0.776 |
+| lgbm_sc_s0 | ST       | N1%     |           5 | False     | proposed_width           |  44 |         15 |   0.811 |   0.629 |   0.943 |
+| lgbm_sc_s0 | ST       | N1%     |           5 | False     | ffbs_sd                  |  44 |         15 |   0.814 |   0.636 |   0.941 |
+| lgbm_sc_s0 | ST       | N1%     |           5 | False     | ind_sd                   |  44 |         15 |   0.832 |   0.669 |   0.948 |
+| lgbm_sc_s0 | ST       | N1%     |           5 | False     | mean_entropy             |  44 |         15 |   0.908 |   0.792 |   0.982 |
+| lgbm_sc_s0 | ST       | N1%     |           5 | False     | one_minus_maxprob        |  44 |         15 |   0.897 |   0.765 |   0.979 |
+| lgbm_sc_s0 | ST       | N1%     |           5 | False     | abs_raw_minus_calibrated |  44 |         15 |   0.857 |   0.698 |   0.965 |
+| lgbm_sc_s0 | ST       | N2%     |          10 | False     | proposed_width           |  44 |         17 |   0.510 |   0.299 |   0.715 |
+| lgbm_sc_s0 | ST       | N2%     |          10 | False     | ffbs_sd                  |  44 |         17 |   0.538 |   0.333 |   0.732 |
+| lgbm_sc_s0 | ST       | N2%     |          10 | False     | ind_sd                   |  44 |         17 |   0.519 |   0.308 |   0.717 |
+| lgbm_sc_s0 | ST       | N2%     |          10 | False     | mean_entropy             |  44 |         17 |   0.525 |   0.306 |   0.729 |
+| lgbm_sc_s0 | ST       | N2%     |          10 | False     | one_minus_maxprob        |  44 |         17 |   0.532 |   0.307 |   0.731 |
+| lgbm_sc_s0 | ST       | N2%     |          10 | False     | abs_raw_minus_calibrated |  44 |         17 |   0.364 |   0.196 |   0.568 |
+| lgbm_sc_s0 | ST       | N3%     |           5 | True      | proposed_width           |  44 |         21 |   0.578 |   0.357 |   0.765 |
+| lgbm_sc_s0 | ST       | N3%     |           5 | True      | ffbs_sd                  |  44 |         21 |   0.743 |   0.573 |   0.878 |
+| lgbm_sc_s0 | ST       | N3%     |           5 | True      | ind_sd                   |  44 |         21 |   0.764 |   0.588 |   0.897 |
+| lgbm_sc_s0 | ST       | N3%     |           5 | True      | mean_entropy             |  44 |         21 |   0.559 |   0.323 |   0.784 |
+| lgbm_sc_s0 | ST       | N3%     |           5 | True      | one_minus_maxprob        |  44 |         21 |   0.565 |   0.333 |   0.786 |
+| lgbm_sc_s0 | ST       | N3%     |           5 | True      | abs_raw_minus_calibrated |  44 |         21 |   0.536 |   0.320 |   0.732 |
+| lgbm_sc_s0 | ST       | REM%    |           5 | False     | proposed_width           |  44 |         10 |   0.509 |   0.239 |   0.759 |
+| lgbm_sc_s0 | ST       | REM%    |           5 | False     | ffbs_sd                  |  44 |         10 |   0.544 |   0.303 |   0.767 |
+| lgbm_sc_s0 | ST       | REM%    |           5 | False     | ind_sd                   |  44 |         10 |   0.576 |   0.323 |   0.813 |
+| lgbm_sc_s0 | ST       | REM%    |           5 | False     | mean_entropy             |  44 |         10 |   0.456 |   0.168 |   0.753 |
+| lgbm_sc_s0 | ST       | REM%    |           5 | False     | one_minus_maxprob        |  44 |         10 |   0.441 |   0.155 |   0.737 |
+| lgbm_sc_s0 | ST       | REM%    |           5 | False     | abs_raw_minus_calibrated |  44 |         10 |   0.650 |   0.410 |   0.876 |
