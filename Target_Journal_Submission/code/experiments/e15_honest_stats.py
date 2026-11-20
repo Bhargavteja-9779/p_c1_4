@@ -110,7 +110,10 @@ def decisions(w, st):
             rows.append(dict(stager=st, cohort=c, param=p, threshold=f"{p} {op} {thr:g}", method=meth,
                              prevalence=gg.ref_pos.mean(), frac_confident=gg.conf.mean(),
                              acc_confident=gg.loc[gg.conf, "correct"].mean() if gg.conf.any() else np.nan,
-                             plugin_accuracy=gg.plug_correct.mean(), n=len(gg)))
+                             plugin_accuracy=gg.plug_correct.mean(),
+                             plug_acc_confident=gg.loc[gg.conf, "plug_correct"].mean() if gg.conf.any() else np.nan,
+                             plug_acc_unconfident=gg.loc[~gg.conf, "plug_correct"].mean() if (~gg.conf).any() else np.nan,
+                             n=len(gg)))
     return pd.DataFrame(rows)
 
 

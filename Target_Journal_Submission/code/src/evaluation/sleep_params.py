@@ -22,8 +22,8 @@ EP_MIN = 0.5
 
 
 def compute_params(H: np.ndarray, mask: np.ndarray | None = None) -> dict[str, np.ndarray]:
-    """H: (M, T) or (T,) integer hypnograms (0=W,1=N1,2=N2,3=N3,4=REM). mask: (T,) bool of epochs
-    to include (scored in the reference). Returns dict param -> (M,) array (scalar if H is 1-D)."""
+    """H: (M, T) or (T,) integer hypnograms (0=W,1=N1,2=N2,3=N3,4=REM). mask: optional (T,) bool of epochs
+    to include; used for reference hypnograms only (automatic hypnograms use all epochs). Returns dict param -> (M,) array (scalar if H is 1-D)."""
     one = H.ndim == 1
     H = np.atleast_2d(H)
     M, T = H.shape

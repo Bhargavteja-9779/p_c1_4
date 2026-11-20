@@ -44,7 +44,8 @@
   "DOI": "10.5664/jcsm.2350",
   "publisher": "Springer Science and Business Media LLC",
   "URL": "http://dx.doi.org/10.5664/jcsm.2350",
-  "id": "rosenberg2013"
+  "id": "rosenberg2013",
+  "container-title-short": "J Clin Sleep Med"
  },
  {
   "type": "journal-article",
@@ -52,7 +53,7 @@
   "author": [
    {
     "given": "Heidi",
-    "family": "Danker‐Hopfe",
+    "family": "Danker-Hopfe",
     "sequence": "first",
     "affiliation": [],
     "role": [
@@ -223,7 +224,8 @@
   "DOI": "10.1111/j.1365-2869.2008.00700.x",
   "publisher": "Wiley",
   "URL": "http://dx.doi.org/10.1111/j.1365-2869.2008.00700.x",
-  "id": "dankerhopfe2009"
+  "id": "dankerhopfe2009",
+  "container-title-short": "J Sleep Res"
  },
  {
   "type": "journal-article",
@@ -611,7 +613,8 @@
   "URL": "http://dx.doi.org/10.1038/s41467-018-07229-3",
   "article-number": "5229",
   "page": "5229",
-  "id": "stephansen2018"
+  "id": "stephansen2018",
+  "container-title-short": "Nat Commun"
  },
  {
   "type": "journal-article",
@@ -711,7 +714,8 @@
   "URL": "http://dx.doi.org/10.1038/s41746-021-00440-5",
   "article-number": "72",
   "page": "72",
-  "id": "perslev2021"
+  "id": "perslev2021",
+  "container-title-short": "<span class=\"nocase\">npj Digit Med</span>"
  },
  {
   "type": "journal-article",
@@ -776,7 +780,8 @@
   "URL": "http://dx.doi.org/10.7554/eLife.70092",
   "article-number": "e70092",
   "page": "e70092",
-  "id": "vallat2021"
+  "id": "vallat2021",
+  "container-title-short": "<span class=\"nocase\">eLife</span>"
  },
  {
   "type": "journal-article",
@@ -835,7 +840,8 @@
   "DOI": "10.1016/j.sleep.2023.04.002",
   "publisher": "Elsevier BV",
   "URL": "http://dx.doi.org/10.1016/j.sleep.2023.04.002",
-  "id": "baumert2023"
+  "id": "baumert2023",
+  "container-title-short": "Sleep Med"
  },
  {
   "type": "journal-article",
@@ -918,7 +924,8 @@
   "DOI": "10.1016/j.sleep.2024.01.020",
   "publisher": "Elsevier BV",
   "URL": "http://dx.doi.org/10.1016/j.sleep.2024.01.020",
-  "id": "svensson2024"
+  "id": "svensson2024",
+  "container-title-short": "Sleep Med"
  },
  {
   "type": "journal-article",
@@ -1002,7 +1009,8 @@
   "publisher": "Elsevier BV",
   "URL": "http://dx.doi.org/10.1016/j.sleep.2025.106698",
   "article-number": "106698",
-  "id": "beau2025"
+  "id": "beau2025",
+  "container-title-short": "Sleep Med"
  },
  {
   "type": "journal-article",
@@ -1096,7 +1104,8 @@
   "publisher": "Elsevier BV",
   "URL": "http://dx.doi.org/10.1016/j.sleep.2026.108828",
   "article-number": "108828",
-  "id": "rohrscheib2026"
+  "id": "rohrscheib2026",
+  "container-title-short": "Sleep Med"
  },
  {
   "type": "journal-article",
@@ -1167,7 +1176,8 @@
   "DOI": "10.1007/s40675-023-00253-w",
   "publisher": "Springer Science and Business Media LLC",
   "URL": "http://dx.doi.org/10.1007/s40675-023-00253-w",
-  "id": "hardarson2023"
+  "id": "hardarson2023",
+  "container-title-short": "Curr Sleep Med Rep"
  },
  {
   "type": "journal-article",
@@ -1229,7 +1239,8 @@
   "DOI": "10.1109/TNSRE.2021.3117970",
   "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
   "URL": "http://dx.doi.org/10.1109/TNSRE.2021.3117970",
-  "id": "fiorillo2021"
+  "id": "fiorillo2021",
+  "container-title-short": "IEEE Trans Neural Syst Rehabil Eng"
  },
  {
   "type": "journal-article",
@@ -1349,7 +1360,8 @@
   "DOI": "10.1109/TBME.2022.3147187",
   "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
   "URL": "http://dx.doi.org/10.1109/TBME.2022.3147187",
-  "id": "phan2022"
+  "id": "phan2022",
+  "container-title-short": "IEEE Trans Biomed Eng"
  },
  {
   "type": "journal-article",
@@ -1449,7 +1461,8 @@
   "publisher": "Elsevier BV",
   "URL": "http://dx.doi.org/10.1016/j.compbiomed.2024.108205",
   "article-number": "108205",
-  "id": "heremans2024"
+  "id": "heremans2024",
+  "container-title-short": "Comput Biol Med"
  },
  {
   "type": "journal-article",
@@ -1572,7 +1585,8 @@
   "DOI": "10.2147/NSS.S455649",
   "publisher": "Informa UK Limited",
   "URL": "http://dx.doi.org/10.2147/NSS.S455649",
-  "id": "bechny2024"
+  "id": "bechny2024",
+  "container-title-short": "Nat Sci Sleep"
  },
  {
   "type": "journal-article",
@@ -1658,7 +1672,8 @@
   "URL": "http://dx.doi.org/10.1038/s41746-021-00515-3",
   "article-number": "142",
   "page": "142",
-  "id": "kang2021"
+  "id": "kang2021",
+  "container-title-short": "<span class=\"nocase\">npj Digit Med</span>"
  },
  {
   "type": "journal-article",
@@ -1800,7 +1815,8 @@
   "URL": "http://dx.doi.org/10.1093/sleep/zsac134",
   "article-number": "zsac134",
   "page": "zsac134",
-  "id": "vangorp2022"
+  "id": "vangorp2022",
+  "container-title-short": "Sleep"
  },
  {
   "type": "journal-article",
@@ -1970,9 +1986,9 @@
   "issued": {
    "date-parts": [
     [
-     2022,
-     7,
-     3
+     2023,
+     2,
+     8
     ]
    ]
   },
@@ -1981,7 +1997,8 @@
   "URL": "http://dx.doi.org/10.1093/sleep/zsac154",
   "article-number": "zsac154",
   "page": "zsac154",
-  "id": "bakker2023"
+  "id": "bakker2023",
+  "container-title-short": "Sleep"
  },
  {
   "type": "journal-article",
@@ -2137,7 +2154,8 @@
   "publisher": "Springer Science and Business Media LLC",
   "URL": "http://dx.doi.org/10.1007/s41666-025-00207-7",
   "id": "li2025conmil",
-  "note": "ConMIL: conformalised multiple-instance learning; arXiv:2501.16215"
+  "note": "ConMIL: conformalised multiple-instance learning; arXiv:2501.16215",
+  "container-title-short": "J Healthc Inform Res"
  },
  {
   "type": "journal-article",
@@ -2358,7 +2376,8 @@
   "URL": "http://dx.doi.org/10.1093/sleep/zsae202",
   "article-number": "zsae202",
   "page": "zsae202",
-  "id": "ganglberger2024"
+  "id": "ganglberger2024",
+  "container-title-short": "Sleep"
  },
  {
   "type": "proceedings-article",
@@ -2470,7 +2489,7 @@
    },
    {
     "given": "J.J.L.",
-    "family": "Oberye",
+    "family": "Oberyé",
     "sequence": "additional",
     "affiliation": [],
     "role": [
@@ -2495,18 +2514,20 @@
   "DOI": "10.1109/10.867928",
   "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
   "URL": "http://dx.doi.org/10.1109/10.867928",
-  "id": "kemp2000"
+  "id": "kemp2000",
+  "container-title-short": "IEEE Trans Biomed Eng"
  },
  {
   "type": "dataset",
-  "title": "The Sleep-EDF Database [Expanded]",
+  "title": "The Sleep-EDF Database [Expanded] (version 1.0.0)",
   "author": [
    {
     "family": "Kemp",
     "given": "Bastiaan"
    },
    {
-    "family": "Aeilko Zwinderman"
+    "family": "Zwinderman",
+    "given": "Aeilko H"
    },
    {
     "family": "Tuk",
@@ -2514,11 +2535,11 @@
    },
    {
     "family": "Kamphuisen",
-    "given": "Hilbert"
+    "given": "Hilbert A C"
    },
    {
     "family": "Oberyé",
-    "given": "Josefien"
+    "given": "Josefien J L"
    }
   ],
   "issued": {
@@ -2529,13 +2550,14 @@
    ]
   },
   "DOI": "10.13026/C2X676",
-  "publisher": "physionet.org",
+  "publisher": "PhysioNet",
   "URL": "https://physionet.org/content/sleep-edfx/",
-  "id": "sleepedf_data"
+  "id": "sleepedf_data",
+  "genre": "dataset"
  },
  {
   "type": "journal-article",
-  "title": "PhysioBank, PhysioToolkit, and PhysioNet",
+  "title": "PhysioBank, PhysioToolkit, and PhysioNet: components of a new research resource for complex physiologic signals",
   "author": [
    {
     "given": "Ary L.",
@@ -2713,7 +2735,9 @@
   "DOI": "10.1161/01.CIR.101.23.e215",
   "publisher": "Ovid Technologies (Wolters Kluwer Health)",
   "URL": "http://dx.doi.org/10.1161/01.CIR.101.23.e215",
-  "id": "goldberger2000"
+  "id": "goldberger2000",
+  "page": "e215-e220",
+  "container-title-short": "Circulation"
  },
  {
   "type": "journal-article",
@@ -2846,7 +2870,8 @@
   "DOI": "10.1038/s44360-026-00096-z",
   "publisher": "Springer Science and Business Media LLC",
   "URL": "http://dx.doi.org/10.1038/s44360-026-00096-z",
-  "id": "pollard2026"
+  "id": "pollard2026",
+  "container-title-short": "Nat Health"
  },
  {
   "type": "journal-article",
@@ -2893,7 +2918,7 @@
     ]
    }
   ],
-  "container-title": "Plos one",
+  "container-title": "PLoS One",
   "volume": "16",
   "issue": "8",
   "page": "e0256111",
@@ -2909,7 +2934,8 @@
   "DOI": "10.1371/journal.pone.0256111",
   "publisher": "Public Library of Science (PLoS)",
   "URL": "http://dx.doi.org/10.1371/journal.pone.0256111",
-  "id": "alvarez2021"
+  "id": "alvarez2021",
+  "container-title-short": "PLoS One"
  },
  {
   "type": "dataset",
@@ -2938,7 +2964,7 @@
  },
  {
   "type": "book",
-  "title": "Connectionist Speech Recognition",
+  "title": "Connectionist Speech Recognition: A Hybrid Approach",
   "author": [
    {
     "given": "Hervé A.",
@@ -3021,7 +3047,8 @@
   "DOI": "10.1093/biomet/81.3.541",
   "publisher": "Oxford University Press (OUP)",
   "URL": "http://dx.doi.org/10.1093/biomet/81.3.541",
-  "id": "carter1994"
+  "id": "carter1994",
+  "container-title-short": "Biometrika"
  },
  {
   "type": "journal-article",
@@ -3029,7 +3056,7 @@
   "author": [
    {
     "given": "Sylvia",
-    "family": "Frühwirth‐Schnatter",
+    "family": "Frühwirth-Schnatter",
     "sequence": "first",
     "affiliation": [],
     "role": [
@@ -3055,7 +3082,8 @@
   "DOI": "10.1111/j.1467-9892.1994.tb00184.x",
   "publisher": "Wiley",
   "URL": "http://dx.doi.org/10.1111/j.1467-9892.1994.tb00184.x",
-  "id": "fruhwirth1994"
+  "id": "fruhwirth1994",
+  "container-title-short": "J Time Ser Anal"
  },
  {
   "type": "book",
@@ -3192,7 +3220,8 @@
   "DOI": "10.1080/01621459.2017.1307116",
   "publisher": "Informa UK Limited",
   "URL": "http://dx.doi.org/10.1080/01621459.2017.1307116",
-  "id": "lei2018"
+  "id": "lei2018",
+  "container-title-short": "J Am Stat Assoc"
  },
  {
   "type": "journal-article",
@@ -3253,7 +3282,8 @@
   "DOI": "10.1561/2200000101",
   "publisher": "Emerald",
   "URL": "http://dx.doi.org/10.1561/2200000101",
-  "id": "angelopoulos2023"
+  "id": "angelopoulos2023",
+  "container-title-short": "Found Trends Mach Learn"
  },
  {
   "type": "journal-article",
@@ -3340,7 +3370,8 @@
   "DOI": "10.1214/23-AOS2276",
   "publisher": "Institute of Mathematical Statistics",
   "URL": "http://dx.doi.org/10.1214/23-AOS2276",
-  "id": "barber2023"
+  "id": "barber2023",
+  "container-title-short": "Ann Stat"
  },
  {
   "type": "journal-article",
@@ -3370,7 +3401,8 @@
   "DOI": "10.1016/S0140-6736(86)90837-8",
   "publisher": "Elsevier BV",
   "URL": "http://dx.doi.org/10.1016/S0140-6736(86)90837-8",
-  "id": "bland1986"
+  "id": "bland1986",
+  "container-title-short": "Lancet"
  },
  {
   "type": "journal-article",
@@ -3416,7 +3448,8 @@
   "DOI": "10.1198/016214506000001437",
   "publisher": "Informa UK Limited",
   "URL": "http://dx.doi.org/10.1198/016214506000001437",
-  "id": "gneiting2007"
+  "id": "gneiting2007",
+  "container-title-short": "J Am Stat Assoc"
  },
  {
   "type": "journal-article",
@@ -3462,7 +3495,8 @@
   "DOI": "10.1037/1082-989X.1.1.30",
   "publisher": "American Psychological Association (APA)",
   "URL": "http://dx.doi.org/10.1037/1082-989X.1.1.30",
-  "id": "mcgraw1996"
+  "id": "mcgraw1996",
+  "container-title-short": "Psychol Methods"
  },
  {
   "type": "journal-article",
@@ -3581,7 +3615,8 @@
   "DOI": "10.5664/jcsm.6576",
   "publisher": "Springer Science and Business Media LLC",
   "URL": "http://dx.doi.org/10.5664/jcsm.6576",
-  "id": "berry2017"
+  "id": "berry2017",
+  "container-title-short": "J Clin Sleep Med"
  },
  {
   "type": "journal-article",
@@ -3614,7 +3649,8 @@
   "DOI": "10.1109/5.18626",
   "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
   "URL": "http://dx.doi.org/10.1109/5.18626",
-  "id": "rabiner1989"
+  "id": "rabiner1989",
+  "container-title-short": "Proc IEEE"
  },
  {
   "type": "journal-article",
@@ -3802,7 +3838,8 @@
   "URL": "http://dx.doi.org/10.1093/sleepadvances/zpag054",
   "article-number": "zpag054",
   "page": "zpag054",
-  "id": "kaneda2026"
+  "id": "kaneda2026",
+  "container-title-short": "Sleep Adv"
  },
  {
   "type": "journal-article",
@@ -3919,9 +3956,7 @@
   "issued": {
    "date-parts": [
     [
-     2025,
-     12,
-     16
+     2026
     ]
    ]
   },
@@ -3930,7 +3965,8 @@
   "URL": "http://dx.doi.org/10.1038/s41746-025-02237-2",
   "article-number": "55",
   "page": "55",
-  "id": "deirossi2025"
+  "id": "deirossi2025",
+  "container-title-short": "<span class=\"nocase\">npj Digit Med</span>"
  },
  {
   "type": "journal-article",
@@ -4045,7 +4081,8 @@
   "DOI": "10.1109/TBME.2025.3623380",
   "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
   "URL": "http://dx.doi.org/10.1109/TBME.2025.3623380",
-  "id": "vainikka2026"
+  "id": "vainikka2026",
+  "container-title-short": "IEEE Trans Biomed Eng"
  },
  {
   "type": "journal-article",
@@ -4157,7 +4194,8 @@
   "DOI": "10.1109/JBHI.2023.3304010",
   "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
   "URL": "http://dx.doi.org/10.1109/JBHI.2023.3304010",
-  "id": "vangorp2023jbhi"
+  "id": "vangorp2023jbhi",
+  "container-title-short": "IEEE J Biomed Health Inform"
  },
  {
   "type": "proceedings-article",
@@ -4317,7 +4355,8 @@
   "DOI": "10.1214/20-AOS1965",
   "publisher": "Institute of Mathematical Statistics",
   "URL": "http://dx.doi.org/10.1214/20-AOS1965",
-  "id": "barber2021"
+  "id": "barber2021",
+  "container-title-short": "Ann Stat"
  },
  {
   "type": "journal-article",
@@ -4371,7 +4410,8 @@
   "DOI": "10.1177/096228029900800204",
   "publisher": "SAGE Publications",
   "URL": "http://dx.doi.org/10.1177/096228029900800204",
-  "id": "bland1999"
+  "id": "bland1999",
+  "container-title-short": "Stat Methods Med Res"
  },
  {
   "type": "journal-article",
@@ -4405,7 +4445,8 @@
   "DOI": "10.1016/0304-4076(95)01770-4",
   "publisher": "Elsevier BV",
   "URL": "http://dx.doi.org/10.1016/0304-4076(95)01770-4",
-  "id": "chib1996"
+  "id": "chib1996",
+  "container-title-short": "J Econom"
  },
  {
   "type": "journal-article",
@@ -4583,7 +4624,8 @@
   "DOI": "10.1093/sleep/32.2.139",
   "publisher": "Oxford University Press (OUP)",
   "URL": "http://dx.doi.org/10.1093/sleep/32.2.139",
-  "id": "moser2009"
+  "id": "moser2009",
+  "container-title-short": "Sleep"
  },
  {
   "id": "philips2024patent",
@@ -4622,7 +4664,7 @@
     ]
    ]
   },
-  "note": "European patent application, published 26 June 2024 (withdrawn)"
+  "note": "European patent application, published 26 June 2024 (withdrawn). Applicant: Koninklijke Philips N.V."
  },
  {
   "id": "alexandari2020",
@@ -4667,7 +4709,7 @@
    },
    {
     "family": "Candès",
-    "given": "E"
+    "given": "Emmanuel J"
    }
   ],
   "container-title": "Advances in Neural Information Processing Systems 32 (NeurIPS 2019)",
@@ -4687,19 +4729,19 @@
   "author": [
    {
     "family": "Tibshirani",
-    "given": "RJ"
+    "given": "Ryan J"
    },
    {
-    "family": "Foygel Barber",
-    "given": "R"
+    "family": "Barber",
+    "given": "Rina Foygel"
    },
    {
     "family": "Candès",
-    "given": "E"
+    "given": "Emmanuel J"
    },
    {
     "family": "Ramdas",
-    "given": "A"
+    "given": "Aaditya"
    }
   ],
   "container-title": "Advances in Neural Information Processing Systems 32 (NeurIPS 2019)",

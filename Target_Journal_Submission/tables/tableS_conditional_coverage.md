@@ -1,890 +1,889 @@
-| stager     | cohort   | method           | subset     | param   |   coverage |   mean_width |   interval_score |    n |
-|:-----------|:---------|:-----------------|:-----------|:--------|-----------:|-------------:|-----------------:|-----:|
-| yasa       | HMC      | dfloa            | Q1 (worst) | all     |      0.757 |       59.676 |          184.186 |  304 |
-| yasa       | HMC      | dfloa            | Q2         | all     |      0.941 |       60.595 |           82.292 |  304 |
-| yasa       | HMC      | dfloa            | Q3         | all     |      0.943 |       60.192 |           90.603 |  296 |
-| yasa       | HMC      | dfloa            | Q4 (best)  | all     |      0.960 |       59.912 |           83.980 |  303 |
-| yasa       | HMC      | mondrian_entropy | Q1 (worst) | all     |      0.836 |       73.183 |          120.957 |  304 |
-| yasa       | HMC      | mondrian_entropy | Q2         | all     |      0.938 |       64.647 |           80.912 |  304 |
-| yasa       | HMC      | mondrian_entropy | Q3         | all     |      0.929 |       56.325 |           80.057 |  296 |
-| yasa       | HMC      | mondrian_entropy | Q4 (best)  | all     |      0.927 |       50.410 |           90.296 |  303 |
-| yasa       | HMC      | mondrian_sd      | Q1 (worst) | all     |      0.839 |       71.319 |          118.207 |  304 |
-| yasa       | HMC      | mondrian_sd      | Q2         | all     |      0.928 |       60.574 |           81.345 |  304 |
-| yasa       | HMC      | mondrian_sd      | Q3         | all     |      0.932 |       59.585 |           77.878 |  296 |
-| yasa       | HMC      | mondrian_sd      | Q4 (best)  | all     |      0.931 |       57.841 |           86.055 |  303 |
-| yasa       | HMC      | proposed         | Q1 (worst) | all     |      0.812 |       58.992 |          135.257 |  304 |
-| yasa       | HMC      | proposed         | Q2         | all     |      0.918 |       55.450 |           87.353 |  304 |
-| yasa       | HMC      | proposed         | Q3         | all     |      0.939 |       55.548 |           82.916 |  296 |
-| yasa       | HMC      | proposed         | Q4 (best)  | all     |      0.934 |       54.665 |           95.260 |  303 |
-| yasa       | SC       | dfloa            | Q1 (worst) | all     |      0.791 |       60.274 |          130.102 |  320 |
-| yasa       | SC       | dfloa            | Q2         | all     |      0.899 |       59.958 |          119.796 |  296 |
-| yasa       | SC       | dfloa            | Q3         | all     |      0.951 |       56.860 |           71.378 |  304 |
-| yasa       | SC       | dfloa            | Q4 (best)  | all     |      0.961 |       56.732 |           89.819 |  304 |
-| yasa       | SC       | mondrian_entropy | Q1 (worst) | all     |      0.844 |       68.660 |          107.754 |  320 |
-| yasa       | SC       | mondrian_entropy | Q2         | all     |      0.912 |       66.814 |          102.897 |  296 |
-| yasa       | SC       | mondrian_entropy | Q3         | all     |      0.944 |       62.514 |           80.315 |  304 |
-| yasa       | SC       | mondrian_entropy | Q4 (best)  | all     |      0.938 |       63.880 |          105.716 |  304 |
-| yasa       | SC       | mondrian_sd      | Q1 (worst) | all     |      0.834 |       68.641 |          108.238 |  320 |
-| yasa       | SC       | mondrian_sd      | Q2         | all     |      0.892 |       68.222 |          105.084 |  296 |
-| yasa       | SC       | mondrian_sd      | Q3         | all     |      0.951 |       64.519 |           78.997 |  304 |
-| yasa       | SC       | mondrian_sd      | Q4 (best)  | all     |      0.957 |       66.327 |           94.026 |  304 |
-| yasa       | SC       | proposed         | Q1 (worst) | all     |      0.809 |       64.119 |          113.939 |  320 |
-| yasa       | SC       | proposed         | Q2         | all     |      0.912 |       64.926 |          103.824 |  296 |
-| yasa       | SC       | proposed         | Q3         | all     |      0.954 |       63.584 |           79.901 |  304 |
-| yasa       | SC       | proposed         | Q4 (best)  | all     |      0.934 |       65.469 |          106.202 |  304 |
-| yasa       | ST       | dfloa            | Q1 (worst) | all     |      0.784 |       45.705 |           89.963 |   88 |
-| yasa       | ST       | dfloa            | Q2         | all     |      0.875 |       44.021 |           61.130 |   88 |
-| yasa       | ST       | dfloa            | Q3         | all     |      0.955 |       46.047 |           52.201 |   88 |
-| yasa       | ST       | dfloa            | Q4 (best)  | all     |      0.989 |       46.855 |           48.349 |   88 |
-| yasa       | ST       | mondrian_entropy | Q1 (worst) | all     |      0.864 |       46.337 |           62.182 |   88 |
-| yasa       | ST       | mondrian_entropy | Q2         | all     |      0.864 |       42.081 |           62.324 |   88 |
-| yasa       | ST       | mondrian_entropy | Q3         | all     |      0.909 |       44.317 |           59.719 |   88 |
-| yasa       | ST       | mondrian_entropy | Q4 (best)  | all     |      0.943 |       44.441 |           55.139 |   88 |
-| yasa       | ST       | mondrian_sd      | Q1 (worst) | all     |      0.830 |       44.555 |           67.403 |   88 |
-| yasa       | ST       | mondrian_sd      | Q2         | all     |      0.920 |       40.683 |           56.967 |   88 |
-| yasa       | ST       | mondrian_sd      | Q3         | all     |      0.920 |       42.235 |           62.784 |   88 |
-| yasa       | ST       | mondrian_sd      | Q4 (best)  | all     |      0.943 |       42.934 |           55.014 |   88 |
-| yasa       | ST       | proposed         | Q1 (worst) | all     |      0.841 |       44.115 |           62.874 |   88 |
-| yasa       | ST       | proposed         | Q2         | all     |      0.909 |       40.370 |           61.220 |   88 |
-| yasa       | ST       | proposed         | Q3         | all     |      0.932 |       42.135 |           61.148 |   88 |
-| yasa       | ST       | proposed         | Q4 (best)  | all     |      0.943 |       42.860 |           52.489 |   88 |
-| yasa       | HMC      | dfloa            | Q1 (worst) | N1%     |      0.737 |       22.941 |           75.878 |   38 |
-| yasa       | HMC      | dfloa            | Q1 (worst) | N2%     |      0.763 |       29.535 |           82.682 |   38 |
-| yasa       | HMC      | dfloa            | Q1 (worst) | N3%     |      0.684 |       22.980 |           51.995 |   38 |
-| yasa       | HMC      | dfloa            | Q1 (worst) | REM%    |      0.737 |       16.780 |           42.576 |   38 |
-| yasa       | HMC      | dfloa            | Q1 (worst) | REML    |      0.895 |      179.226 |          330.554 |   38 |
-| yasa       | HMC      | dfloa            | Q1 (worst) | SOL     |      0.842 |       20.324 |           59.622 |   38 |
-| yasa       | HMC      | dfloa            | Q1 (worst) | TST     |      0.658 |       97.680 |          455.312 |   38 |
-| yasa       | HMC      | dfloa            | Q1 (worst) | WASO    |      0.737 |       87.947 |          374.870 |   38 |
-| yasa       | HMC      | dfloa            | Q2         | N1%     |      0.921 |       23.495 |           28.259 |   38 |
-| yasa       | HMC      | dfloa            | Q2         | N2%     |      0.947 |       29.611 |           36.380 |   38 |
-| yasa       | HMC      | dfloa            | Q2         | N3%     |      0.921 |       23.353 |           31.128 |   38 |
-| yasa       | HMC      | dfloa            | Q2         | REM%    |      0.947 |       17.499 |           19.438 |   38 |
-| yasa       | HMC      | dfloa            | Q2         | REML    |      0.895 |      186.139 |          274.782 |   38 |
-| yasa       | HMC      | dfloa            | Q2         | SOL     |      0.947 |       19.831 |           25.621 |   38 |
-| yasa       | HMC      | dfloa            | Q2         | TST     |      0.974 |      101.303 |          134.198 |   38 |
-| yasa       | HMC      | dfloa            | Q2         | WASO    |      0.974 |       83.527 |          108.527 |   38 |
-| yasa       | HMC      | dfloa            | Q3         | N1%     |      0.973 |       23.694 |           30.990 |   37 |
-| yasa       | HMC      | dfloa            | Q3         | N2%     |      0.919 |       29.580 |           32.559 |   37 |
-| yasa       | HMC      | dfloa            | Q3         | N3%     |      0.973 |       23.891 |           24.614 |   37 |
-| yasa       | HMC      | dfloa            | Q3         | REM%    |      0.946 |       17.781 |           21.754 |   37 |
-| yasa       | HMC      | dfloa            | Q3         | REML    |      0.919 |      183.249 |          309.656 |   37 |
-| yasa       | HMC      | dfloa            | Q3         | SOL     |      0.892 |       19.947 |           65.345 |   37 |
-| yasa       | HMC      | dfloa            | Q3         | TST     |      0.973 |      101.337 |          121.067 |   37 |
-| yasa       | HMC      | dfloa            | Q3         | WASO    |      0.946 |       82.060 |          118.835 |   37 |
-| yasa       | HMC      | dfloa            | Q4 (best)  | N1%     |      0.974 |       22.577 |           23.052 |   38 |
-| yasa       | HMC      | dfloa            | Q4 (best)  | N2%     |      0.974 |       29.574 |           29.794 |   38 |
-| yasa       | HMC      | dfloa            | Q4 (best)  | N3%     |      1.000 |       24.067 |           24.067 |   38 |
-| yasa       | HMC      | dfloa            | Q4 (best)  | REM%    |      0.974 |       17.601 |           17.816 |   38 |
-| yasa       | HMC      | dfloa            | Q4 (best)  | REML    |      0.892 |      189.747 |          329.156 |   37 |
-| yasa       | HMC      | dfloa            | Q4 (best)  | SOL     |      0.921 |       20.857 |           54.015 |   38 |
-| yasa       | HMC      | dfloa            | Q4 (best)  | TST     |      1.000 |      101.818 |          101.818 |   38 |
-| yasa       | HMC      | dfloa            | Q4 (best)  | WASO    |      0.947 |       76.473 |           98.578 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q1 (worst) | N1%     |      0.816 |       26.421 |           56.834 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q1 (worst) | N2%     |      0.868 |       27.823 |           43.652 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q1 (worst) | N3%     |      0.816 |       30.511 |           43.276 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q1 (worst) | REM%    |      0.816 |       24.957 |           34.919 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q1 (worst) | REML    |      0.868 |      207.500 |          325.107 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q1 (worst) | SOL     |      0.947 |       23.051 |           27.115 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q1 (worst) | TST     |      0.763 |      137.789 |          241.772 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q1 (worst) | WASO    |      0.789 |      107.413 |          194.978 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q2         | N1%     |      0.947 |       23.788 |           28.497 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q2         | N2%     |      0.921 |       27.184 |           30.573 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q2         | N3%     |      0.947 |       29.481 |           33.028 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q2         | REM%    |      0.921 |       23.404 |           24.500 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q2         | REML    |      0.947 |      183.264 |          249.955 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q2         | SOL     |      0.947 |       21.233 |           32.811 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q2         | TST     |      0.921 |      117.355 |          136.095 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q2         | WASO    |      0.947 |       91.465 |          111.836 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q3         | N1%     |      0.919 |       20.040 |           25.943 |   37 |
-| yasa       | HMC      | mondrian_entropy | Q3         | N2%     |      0.946 |       26.666 |           27.497 |   37 |
-| yasa       | HMC      | mondrian_entropy | Q3         | N3%     |      0.946 |       29.779 |           32.148 |   37 |
-| yasa       | HMC      | mondrian_entropy | Q3         | REM%    |      0.919 |       21.853 |           25.698 |   37 |
-| yasa       | HMC      | mondrian_entropy | Q3         | REML    |      0.919 |      170.710 |          258.704 |   37 |
-| yasa       | HMC      | mondrian_entropy | Q3         | SOL     |      0.892 |       18.838 |           52.227 |   37 |
-| yasa       | HMC      | mondrian_entropy | Q3         | TST     |      0.946 |       87.788 |          116.091 |   37 |
-| yasa       | HMC      | mondrian_entropy | Q3         | WASO    |      0.946 |       74.926 |          102.147 |   37 |
-| yasa       | HMC      | mondrian_entropy | Q4 (best)  | N1%     |      0.947 |       18.414 |           19.385 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q4 (best)  | N2%     |      0.895 |       27.472 |           37.801 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q4 (best)  | N3%     |      0.921 |       31.341 |           35.086 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q4 (best)  | REM%    |      0.974 |       20.618 |           20.951 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q4 (best)  | REML    |      0.892 |      154.855 |          248.259 |   37 |
-| yasa       | HMC      | mondrian_entropy | Q4 (best)  | SOL     |      0.842 |       16.756 |          154.672 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q4 (best)  | TST     |      1.000 |       72.330 |           72.330 |   38 |
-| yasa       | HMC      | mondrian_entropy | Q4 (best)  | WASO    |      0.947 |       64.239 |          138.041 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q1 (worst) | N1%     |      0.789 |       23.186 |           66.133 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q1 (worst) | N2%     |      0.868 |       28.167 |           44.121 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q1 (worst) | N3%     |      0.816 |       31.004 |           43.472 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q1 (worst) | REM%    |      0.763 |       23.505 |           40.477 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q1 (worst) | REML    |      0.868 |      191.319 |          309.873 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q1 (worst) | SOL     |      0.947 |       24.444 |           25.142 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q1 (worst) | TST     |      0.789 |      131.592 |          239.618 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q1 (worst) | WASO    |      0.868 |      117.340 |          176.822 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q2         | N1%     |      0.921 |       21.885 |           28.355 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q2         | N2%     |      0.947 |       27.441 |           31.059 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q2         | N3%     |      0.947 |       29.890 |           34.007 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q2         | REM%    |      0.974 |       22.759 |           24.630 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q2         | REML    |      0.895 |      161.427 |          269.991 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q2         | SOL     |      0.895 |       23.189 |           26.598 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q2         | TST     |      0.921 |      100.836 |          122.638 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q2         | WASO    |      0.921 |       97.161 |          113.483 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q3         | N1%     |      0.919 |       19.913 |           23.750 |   37 |
-| yasa       | HMC      | mondrian_sd      | Q3         | N2%     |      0.946 |       26.811 |           28.076 |   37 |
-| yasa       | HMC      | mondrian_sd      | Q3         | N3%     |      0.973 |       29.979 |           32.139 |   37 |
-| yasa       | HMC      | mondrian_sd      | Q3         | REM%    |      0.919 |       21.571 |           27.048 |   37 |
-| yasa       | HMC      | mondrian_sd      | Q3         | REML    |      0.946 |      174.684 |          252.949 |   37 |
-| yasa       | HMC      | mondrian_sd      | Q3         | SOL     |      0.865 |       21.542 |           34.625 |   37 |
-| yasa       | HMC      | mondrian_sd      | Q3         | TST     |      0.946 |       95.771 |          116.210 |   37 |
-| yasa       | HMC      | mondrian_sd      | Q3         | WASO    |      0.946 |       86.407 |          108.226 |   37 |
-| yasa       | HMC      | mondrian_sd      | Q4 (best)  | N1%     |      1.000 |       20.137 |           20.137 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q4 (best)  | N2%     |      0.868 |       27.055 |           38.228 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q4 (best)  | N3%     |      0.895 |       31.212 |           36.034 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q4 (best)  | REM%    |      0.974 |       21.056 |           21.154 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q4 (best)  | REML    |      0.919 |      173.076 |          254.229 |   37 |
-| yasa       | HMC      | mondrian_sd      | Q4 (best)  | SOL     |      0.921 |       23.130 |          125.611 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q4 (best)  | TST     |      0.974 |       77.715 |           77.994 |   38 |
-| yasa       | HMC      | mondrian_sd      | Q4 (best)  | WASO    |      0.895 |       92.383 |          119.484 |   38 |
-| yasa       | HMC      | proposed         | Q1 (worst) | N1%     |      0.763 |       22.524 |           68.210 |   38 |
-| yasa       | HMC      | proposed         | Q1 (worst) | N2%     |      0.868 |       27.410 |           43.437 |   38 |
-| yasa       | HMC      | proposed         | Q1 (worst) | N3%     |      0.816 |       30.301 |           42.770 |   38 |
-| yasa       | HMC      | proposed         | Q1 (worst) | REM%    |      0.763 |       22.031 |           38.283 |   38 |
-| yasa       | HMC      | proposed         | Q1 (worst) | REML    |      0.868 |      182.144 |          356.047 |   38 |
-| yasa       | HMC      | proposed         | Q1 (worst) | SOL     |      0.921 |       20.672 |           33.933 |   38 |
-| yasa       | HMC      | proposed         | Q1 (worst) | TST     |      0.763 |       87.127 |          255.340 |   38 |
-| yasa       | HMC      | proposed         | Q1 (worst) | WASO    |      0.737 |       79.727 |          244.037 |   38 |
-| yasa       | HMC      | proposed         | Q2         | N1%     |      0.921 |       21.514 |           27.082 |   38 |
-| yasa       | HMC      | proposed         | Q2         | N2%     |      0.921 |       26.525 |           30.176 |   38 |
-| yasa       | HMC      | proposed         | Q2         | N3%     |      0.947 |       29.063 |           33.126 |   38 |
-| yasa       | HMC      | proposed         | Q2         | REM%    |      0.947 |       21.089 |           22.795 |   38 |
-| yasa       | HMC      | proposed         | Q2         | REML    |      0.842 |      170.844 |          321.993 |   38 |
-| yasa       | HMC      | proposed         | Q2         | SOL     |      0.895 |       20.125 |           44.729 |   38 |
-| yasa       | HMC      | proposed         | Q2         | TST     |      0.921 |       81.461 |          114.425 |   38 |
-| yasa       | HMC      | proposed         | Q2         | WASO    |      0.947 |       72.977 |          104.494 |   38 |
-| yasa       | HMC      | proposed         | Q3         | N1%     |      0.919 |       19.938 |           22.317 |   37 |
-| yasa       | HMC      | proposed         | Q3         | N2%     |      0.946 |       25.587 |           26.852 |   37 |
-| yasa       | HMC      | proposed         | Q3         | N3%     |      0.946 |       29.009 |           31.121 |   37 |
-| yasa       | HMC      | proposed         | Q3         | REM%    |      0.919 |       20.451 |           25.375 |   37 |
-| yasa       | HMC      | proposed         | Q3         | REML    |      0.973 |      178.094 |          272.284 |   37 |
-| yasa       | HMC      | proposed         | Q3         | SOL     |      0.892 |       19.982 |           54.434 |   37 |
-| yasa       | HMC      | proposed         | Q3         | TST     |      0.946 |       78.345 |          123.773 |   37 |
-| yasa       | HMC      | proposed         | Q3         | WASO    |      0.973 |       72.978 |          107.171 |   37 |
-| yasa       | HMC      | proposed         | Q4 (best)  | N1%     |      1.000 |       19.946 |           19.946 |   38 |
-| yasa       | HMC      | proposed         | Q4 (best)  | N2%     |      0.868 |       26.092 |           37.299 |   38 |
-| yasa       | HMC      | proposed         | Q4 (best)  | N3%     |      0.895 |       30.367 |           35.104 |   38 |
-| yasa       | HMC      | proposed         | Q4 (best)  | REM%    |      0.974 |       19.971 |           20.156 |   38 |
-| yasa       | HMC      | proposed         | Q4 (best)  | REML    |      0.919 |      179.105 |          286.814 |   37 |
-| yasa       | HMC      | proposed         | Q4 (best)  | SOL     |      0.895 |       19.750 |          151.497 |   38 |
-| yasa       | HMC      | proposed         | Q4 (best)  | TST     |      0.974 |       75.597 |           85.418 |   38 |
-| yasa       | HMC      | proposed         | Q4 (best)  | WASO    |      0.947 |       69.764 |          130.884 |   38 |
-| yasa       | SC       | dfloa            | Q1 (worst) | N1%     |      0.725 |       25.063 |           83.141 |   40 |
-| yasa       | SC       | dfloa            | Q1 (worst) | N2%     |      0.700 |       35.729 |          103.576 |   40 |
-| yasa       | SC       | dfloa            | Q1 (worst) | N3%     |      0.800 |       12.235 |           45.193 |   40 |
-| yasa       | SC       | dfloa            | Q1 (worst) | REM%    |      0.800 |       18.051 |           62.006 |   40 |
-| yasa       | SC       | dfloa            | Q1 (worst) | REML    |      0.900 |      139.656 |          161.157 |   40 |
-| yasa       | SC       | dfloa            | Q1 (worst) | SOL     |      0.800 |       27.139 |           94.551 |   40 |
-| yasa       | SC       | dfloa            | Q1 (worst) | TST     |      0.725 |       98.828 |          331.812 |   40 |
-| yasa       | SC       | dfloa            | Q1 (worst) | WASO    |      0.875 |      125.495 |          159.380 |   40 |
-| yasa       | SC       | dfloa            | Q2         | N1%     |      0.919 |       25.177 |           27.954 |   37 |
-| yasa       | SC       | dfloa            | Q2         | N2%     |      0.919 |       35.930 |           42.661 |   37 |
-| yasa       | SC       | dfloa            | Q2         | N3%     |      0.892 |       15.408 |           19.699 |   37 |
-| yasa       | SC       | dfloa            | Q2         | REM%    |      0.865 |       18.230 |           25.639 |   37 |
-| yasa       | SC       | dfloa            | Q2         | REML    |      0.838 |      142.645 |          402.068 |   37 |
-| yasa       | SC       | dfloa            | Q2         | SOL     |      0.946 |       24.662 |           42.546 |   37 |
-| yasa       | SC       | dfloa            | Q2         | TST     |      0.919 |       98.971 |          121.631 |   37 |
-| yasa       | SC       | dfloa            | Q2         | WASO    |      0.892 |      118.642 |          276.166 |   37 |
-| yasa       | SC       | dfloa            | Q3         | N1%     |      0.974 |       25.265 |           25.413 |   38 |
-| yasa       | SC       | dfloa            | Q3         | N2%     |      1.000 |       36.125 |           36.125 |   38 |
-| yasa       | SC       | dfloa            | Q3         | N3%     |      0.947 |       14.870 |           18.957 |   38 |
-| yasa       | SC       | dfloa            | Q3         | REM%    |      0.974 |       18.330 |           19.929 |   38 |
-| yasa       | SC       | dfloa            | Q3         | REML    |      0.895 |      138.864 |          168.075 |   38 |
-| yasa       | SC       | dfloa            | Q3         | SOL     |      0.895 |       21.412 |           67.571 |   38 |
-| yasa       | SC       | dfloa            | Q3         | TST     |      1.000 |       99.197 |           99.197 |   38 |
-| yasa       | SC       | dfloa            | Q3         | WASO    |      0.921 |      100.815 |          135.754 |   38 |
-| yasa       | SC       | dfloa            | Q4 (best)  | N1%     |      0.974 |       24.877 |           27.749 |   38 |
-| yasa       | SC       | dfloa            | Q4 (best)  | N2%     |      1.000 |       36.144 |           36.144 |   38 |
-| yasa       | SC       | dfloa            | Q4 (best)  | N3%     |      0.947 |       15.957 |           16.256 |   38 |
-| yasa       | SC       | dfloa            | Q4 (best)  | REM%    |      0.974 |       18.377 |           18.625 |   38 |
-| yasa       | SC       | dfloa            | Q4 (best)  | REML    |      0.947 |      145.364 |          164.969 |   38 |
-| yasa       | SC       | dfloa            | Q4 (best)  | SOL     |      0.947 |       23.980 |           56.474 |   38 |
-| yasa       | SC       | dfloa            | Q4 (best)  | TST     |      1.000 |       98.885 |           98.885 |   38 |
-| yasa       | SC       | dfloa            | Q4 (best)  | WASO    |      0.895 |       90.270 |          299.447 |   38 |
-| yasa       | SC       | mondrian_entropy | Q1 (worst) | N1%     |      0.750 |       31.006 |           78.108 |   40 |
-| yasa       | SC       | mondrian_entropy | Q1 (worst) | N2%     |      0.775 |       35.243 |           65.724 |   40 |
-| yasa       | SC       | mondrian_entropy | Q1 (worst) | N3%     |      0.800 |       14.657 |           28.427 |   40 |
-| yasa       | SC       | mondrian_entropy | Q1 (worst) | REM%    |      0.825 |       26.216 |           49.824 |   40 |
-| yasa       | SC       | mondrian_entropy | Q1 (worst) | REML    |      0.950 |       94.619 |          106.281 |   40 |
-| yasa       | SC       | mondrian_entropy | Q1 (worst) | SOL     |      0.875 |       30.730 |           40.814 |   40 |
-| yasa       | SC       | mondrian_entropy | Q1 (worst) | TST     |      0.800 |      109.539 |          272.718 |   40 |
-| yasa       | SC       | mondrian_entropy | Q1 (worst) | WASO    |      0.975 |      207.271 |          220.139 |   40 |
-| yasa       | SC       | mondrian_entropy | Q2         | N1%     |      0.946 |       27.625 |           28.982 |   37 |
-| yasa       | SC       | mondrian_entropy | Q2         | N2%     |      0.892 |       32.442 |           36.274 |   37 |
-| yasa       | SC       | mondrian_entropy | Q2         | N3%     |      0.946 |       16.517 |           21.311 |   37 |
-| yasa       | SC       | mondrian_entropy | Q2         | REM%    |      0.919 |       23.728 |           33.044 |   37 |
-| yasa       | SC       | mondrian_entropy | Q2         | REML    |      0.865 |       96.459 |          295.635 |   37 |
-| yasa       | SC       | mondrian_entropy | Q2         | SOL     |      0.919 |       28.152 |           40.846 |   37 |
-| yasa       | SC       | mondrian_entropy | Q2         | TST     |      0.892 |       92.703 |          108.701 |   37 |
-| yasa       | SC       | mondrian_entropy | Q2         | WASO    |      0.919 |      216.885 |          258.383 |   37 |
-| yasa       | SC       | mondrian_entropy | Q3         | N1%     |      0.947 |       24.436 |           26.454 |   38 |
-| yasa       | SC       | mondrian_entropy | Q3         | N2%     |      1.000 |       29.401 |           29.401 |   38 |
-| yasa       | SC       | mondrian_entropy | Q3         | N3%     |      0.974 |       15.569 |           18.848 |   38 |
-| yasa       | SC       | mondrian_entropy | Q3         | REM%    |      0.921 |       22.200 |           26.324 |   38 |
-| yasa       | SC       | mondrian_entropy | Q3         | REML    |      0.921 |       89.626 |          126.992 |   38 |
-| yasa       | SC       | mondrian_entropy | Q3         | SOL     |      0.921 |       21.941 |           64.802 |   38 |
-| yasa       | SC       | mondrian_entropy | Q3         | TST     |      0.947 |       70.910 |           77.372 |   38 |
-| yasa       | SC       | mondrian_entropy | Q3         | WASO    |      0.921 |      226.027 |          272.325 |   38 |
-| yasa       | SC       | mondrian_entropy | Q4 (best)  | N1%     |      1.000 |       23.576 |           23.576 |   38 |
-| yasa       | SC       | mondrian_entropy | Q4 (best)  | N2%     |      0.974 |       29.994 |           30.295 |   38 |
-| yasa       | SC       | mondrian_entropy | Q4 (best)  | N3%     |      0.921 |       16.805 |           20.920 |   38 |
-| yasa       | SC       | mondrian_entropy | Q4 (best)  | REM%    |      0.974 |       22.556 |           23.954 |   38 |
-| yasa       | SC       | mondrian_entropy | Q4 (best)  | REML    |      0.895 |       84.774 |          108.746 |   38 |
-| yasa       | SC       | mondrian_entropy | Q4 (best)  | SOL     |      0.921 |       27.916 |           82.355 |   38 |
-| yasa       | SC       | mondrian_entropy | Q4 (best)  | TST     |      1.000 |       65.043 |           65.043 |   38 |
-| yasa       | SC       | mondrian_entropy | Q4 (best)  | WASO    |      0.816 |      240.376 |          490.838 |   38 |
-| yasa       | SC       | mondrian_sd      | Q1 (worst) | N1%     |      0.725 |       32.368 |           66.727 |   40 |
-| yasa       | SC       | mondrian_sd      | Q1 (worst) | N2%     |      0.800 |       39.625 |           60.501 |   40 |
-| yasa       | SC       | mondrian_sd      | Q1 (worst) | N3%     |      0.825 |       14.293 |           26.420 |   40 |
-| yasa       | SC       | mondrian_sd      | Q1 (worst) | REM%    |      0.825 |       27.669 |           49.428 |   40 |
-| yasa       | SC       | mondrian_sd      | Q1 (worst) | REML    |      0.875 |       82.803 |          111.072 |   40 |
-| yasa       | SC       | mondrian_sd      | Q1 (worst) | SOL     |      0.900 |       35.627 |           41.153 |   40 |
-| yasa       | SC       | mondrian_sd      | Q1 (worst) | TST     |      0.800 |      120.497 |          270.459 |   40 |
-| yasa       | SC       | mondrian_sd      | Q1 (worst) | WASO    |      0.925 |      196.245 |          240.146 |   40 |
-| yasa       | SC       | mondrian_sd      | Q2         | N1%     |      0.973 |       28.525 |           28.647 |   37 |
-| yasa       | SC       | mondrian_sd      | Q2         | N2%     |      0.865 |       34.834 |           41.865 |   37 |
-| yasa       | SC       | mondrian_sd      | Q2         | N3%     |      0.892 |       17.268 |           22.678 |   37 |
-| yasa       | SC       | mondrian_sd      | Q2         | REM%    |      0.892 |       24.537 |           33.276 |   37 |
-| yasa       | SC       | mondrian_sd      | Q2         | REML    |      0.838 |       89.503 |          266.022 |   37 |
-| yasa       | SC       | mondrian_sd      | Q2         | SOL     |      0.892 |       29.756 |           35.300 |   37 |
-| yasa       | SC       | mondrian_sd      | Q2         | TST     |      0.865 |      104.983 |          131.325 |   37 |
-| yasa       | SC       | mondrian_sd      | Q2         | WASO    |      0.919 |      216.374 |          281.560 |   37 |
-| yasa       | SC       | mondrian_sd      | Q3         | N1%     |      0.947 |       25.535 |           27.554 |   38 |
-| yasa       | SC       | mondrian_sd      | Q3         | N2%     |      1.000 |       31.030 |           31.030 |   38 |
-| yasa       | SC       | mondrian_sd      | Q3         | N3%     |      0.974 |       17.067 |           19.179 |   38 |
-| yasa       | SC       | mondrian_sd      | Q3         | REM%    |      0.947 |       22.775 |           27.240 |   38 |
-| yasa       | SC       | mondrian_sd      | Q3         | REML    |      0.947 |       84.755 |          122.803 |   38 |
-| yasa       | SC       | mondrian_sd      | Q3         | SOL     |      0.895 |       20.554 |           57.618 |   38 |
-| yasa       | SC       | mondrian_sd      | Q3         | TST     |      0.947 |       76.370 |           81.773 |   38 |
-| yasa       | SC       | mondrian_sd      | Q3         | WASO    |      0.947 |      238.068 |          264.777 |   38 |
-| yasa       | SC       | mondrian_sd      | Q4 (best)  | N1%     |      1.000 |       24.521 |           24.521 |   38 |
-| yasa       | SC       | mondrian_sd      | Q4 (best)  | N2%     |      0.974 |       34.153 |           34.453 |   38 |
-| yasa       | SC       | mondrian_sd      | Q4 (best)  | N3%     |      0.947 |       18.621 |           19.434 |   38 |
-| yasa       | SC       | mondrian_sd      | Q4 (best)  | REM%    |      0.974 |       23.254 |           24.826 |   38 |
-| yasa       | SC       | mondrian_sd      | Q4 (best)  | REML    |      0.974 |       74.113 |           74.769 |   38 |
-| yasa       | SC       | mondrian_sd      | Q4 (best)  | SOL     |      0.947 |       29.753 |           70.691 |   38 |
-| yasa       | SC       | mondrian_sd      | Q4 (best)  | TST     |      1.000 |       60.265 |           60.265 |   38 |
-| yasa       | SC       | mondrian_sd      | Q4 (best)  | WASO    |      0.842 |      265.939 |          443.252 |   38 |
-| yasa       | SC       | proposed         | Q1 (worst) | N1%     |      0.675 |       29.071 |           78.649 |   40 |
-| yasa       | SC       | proposed         | Q1 (worst) | N2%     |      0.750 |       33.965 |           66.815 |   40 |
-| yasa       | SC       | proposed         | Q1 (worst) | N3%     |      0.800 |       14.015 |           29.186 |   40 |
-| yasa       | SC       | proposed         | Q1 (worst) | REM%    |      0.775 |       25.029 |           49.746 |   40 |
-| yasa       | SC       | proposed         | Q1 (worst) | REML    |      0.900 |       90.950 |          104.765 |   40 |
-| yasa       | SC       | proposed         | Q1 (worst) | SOL     |      0.875 |       29.953 |           40.869 |   40 |
-| yasa       | SC       | proposed         | Q1 (worst) | TST     |      0.750 |       86.731 |          316.851 |   40 |
-| yasa       | SC       | proposed         | Q1 (worst) | WASO    |      0.950 |      203.239 |          224.634 |   40 |
-| yasa       | SC       | proposed         | Q2         | N1%     |      0.973 |       26.648 |           28.758 |   37 |
-| yasa       | SC       | proposed         | Q2         | N2%     |      0.892 |       32.957 |           37.803 |   37 |
-| yasa       | SC       | proposed         | Q2         | N3%     |      0.946 |       15.882 |           21.164 |   37 |
-| yasa       | SC       | proposed         | Q2         | REM%    |      0.919 |       23.028 |           32.079 |   37 |
-| yasa       | SC       | proposed         | Q2         | REML    |      0.865 |       94.942 |          294.473 |   37 |
-| yasa       | SC       | proposed         | Q2         | SOL     |      0.919 |       27.296 |           40.340 |   37 |
-| yasa       | SC       | proposed         | Q2         | TST     |      0.892 |       82.460 |          100.837 |   37 |
-| yasa       | SC       | proposed         | Q2         | WASO    |      0.892 |      216.195 |          275.134 |   37 |
-| yasa       | SC       | proposed         | Q3         | N1%     |      0.974 |       24.619 |           25.206 |   38 |
-| yasa       | SC       | proposed         | Q3         | N2%     |      1.000 |       31.682 |           31.682 |   38 |
-| yasa       | SC       | proposed         | Q3         | N3%     |      0.947 |       15.200 |           18.763 |   38 |
-| yasa       | SC       | proposed         | Q3         | REM%    |      0.947 |       21.845 |           25.736 |   38 |
-| yasa       | SC       | proposed         | Q3         | REML    |      0.921 |       89.442 |          122.887 |   38 |
-| yasa       | SC       | proposed         | Q3         | SOL     |      0.895 |       21.171 |           64.593 |   38 |
-| yasa       | SC       | proposed         | Q3         | TST     |      1.000 |       74.121 |           74.121 |   38 |
-| yasa       | SC       | proposed         | Q3         | WASO    |      0.947 |      230.594 |          276.216 |   38 |
-| yasa       | SC       | proposed         | Q4 (best)  | N1%     |      1.000 |       24.077 |           24.077 |   38 |
-| yasa       | SC       | proposed         | Q4 (best)  | N2%     |      0.974 |       32.770 |           33.129 |   38 |
-| yasa       | SC       | proposed         | Q4 (best)  | N3%     |      0.921 |       16.521 |           20.720 |   38 |
-| yasa       | SC       | proposed         | Q4 (best)  | REM%    |      0.947 |       22.267 |           23.640 |   38 |
-| yasa       | SC       | proposed         | Q4 (best)  | REML    |      0.921 |       85.950 |           96.921 |   38 |
-| yasa       | SC       | proposed         | Q4 (best)  | SOL     |      0.921 |       26.876 |           82.061 |   38 |
-| yasa       | SC       | proposed         | Q4 (best)  | TST     |      0.974 |       71.891 |           74.123 |   38 |
-| yasa       | SC       | proposed         | Q4 (best)  | WASO    |      0.816 |      243.404 |          494.945 |   38 |
-| yasa       | ST       | dfloa            | Q1 (worst) | N1%     |      0.818 |       14.982 |           24.484 |   11 |
-| yasa       | ST       | dfloa            | Q1 (worst) | N2%     |      0.727 |       31.775 |           69.350 |   11 |
-| yasa       | ST       | dfloa            | Q1 (worst) | N3%     |      0.818 |       28.430 |           37.697 |   11 |
-| yasa       | ST       | dfloa            | Q1 (worst) | REM%    |      0.818 |       20.611 |           29.242 |   11 |
-| yasa       | ST       | dfloa            | Q1 (worst) | REML    |      1.000 |      169.827 |          169.827 |   11 |
-| yasa       | ST       | dfloa            | Q1 (worst) | SOL     |      0.909 |       12.158 |           23.067 |   11 |
-| yasa       | ST       | dfloa            | Q1 (worst) | TST     |      0.636 |       56.249 |          195.340 |   11 |
-| yasa       | ST       | dfloa            | Q1 (worst) | WASO    |      0.545 |       31.610 |          170.701 |   11 |
-| yasa       | ST       | dfloa            | Q2         | N1%     |      0.818 |       15.261 |           20.837 |   11 |
-| yasa       | ST       | dfloa            | Q2         | N2%     |      0.909 |       32.576 |           39.117 |   11 |
-| yasa       | ST       | dfloa            | Q2         | N3%     |      0.818 |       27.640 |           36.973 |   11 |
-| yasa       | ST       | dfloa            | Q2         | REM%    |      0.818 |       20.585 |           37.776 |   11 |
-| yasa       | ST       | dfloa            | Q2         | REML    |      0.727 |      159.933 |          253.483 |   11 |
-| yasa       | ST       | dfloa            | Q2         | SOL     |      0.909 |       11.346 |           16.022 |   11 |
-| yasa       | ST       | dfloa            | Q2         | TST     |      1.000 |       59.498 |           59.498 |   11 |
-| yasa       | ST       | dfloa            | Q2         | WASO    |      1.000 |       25.331 |           25.331 |   11 |
-| yasa       | ST       | dfloa            | Q3         | N1%     |      0.909 |       15.349 |           16.253 |   11 |
-| yasa       | ST       | dfloa            | Q3         | N2%     |      1.000 |       33.201 |           33.201 |   11 |
-| yasa       | ST       | dfloa            | Q3         | N3%     |      1.000 |       26.585 |           26.585 |   11 |
-| yasa       | ST       | dfloa            | Q3         | REM%    |      0.909 |       20.584 |           27.013 |   11 |
-| yasa       | ST       | dfloa            | Q3         | REML    |      0.909 |      170.779 |          210.866 |   11 |
-| yasa       | ST       | dfloa            | Q3         | SOL     |      0.909 |       11.716 |           13.535 |   11 |
-| yasa       | ST       | dfloa            | Q3         | TST     |      1.000 |       58.662 |           58.662 |   11 |
-| yasa       | ST       | dfloa            | Q3         | WASO    |      1.000 |       31.496 |           31.496 |   11 |
-| yasa       | ST       | dfloa            | Q4 (best)  | N1%     |      1.000 |       15.307 |           15.307 |   11 |
-| yasa       | ST       | dfloa            | Q4 (best)  | N2%     |      1.000 |       33.623 |           33.623 |   11 |
-| yasa       | ST       | dfloa            | Q4 (best)  | N3%     |      1.000 |       29.242 |           29.242 |   11 |
-| yasa       | ST       | dfloa            | Q4 (best)  | REM%    |      1.000 |       21.279 |           21.279 |   11 |
-| yasa       | ST       | dfloa            | Q4 (best)  | REML    |      1.000 |      173.444 |          173.444 |   11 |
-| yasa       | ST       | dfloa            | Q4 (best)  | SOL     |      0.909 |       11.340 |           23.288 |   11 |
-| yasa       | ST       | dfloa            | Q4 (best)  | TST     |      1.000 |       59.409 |           59.409 |   11 |
-| yasa       | ST       | dfloa            | Q4 (best)  | WASO    |      1.000 |       31.199 |           31.199 |   11 |
-| yasa       | ST       | mondrian_entropy | Q1 (worst) | N1%     |      1.000 |       18.933 |           18.933 |   11 |
-| yasa       | ST       | mondrian_entropy | Q1 (worst) | N2%     |      0.727 |       35.077 |           59.384 |   11 |
-| yasa       | ST       | mondrian_entropy | Q1 (worst) | N3%     |      0.727 |       27.282 |           38.622 |   11 |
-| yasa       | ST       | mondrian_entropy | Q1 (worst) | REM%    |      0.818 |       23.808 |           30.887 |   11 |
-| yasa       | ST       | mondrian_entropy | Q1 (worst) | REML    |      0.909 |      123.499 |          134.197 |   11 |
-| yasa       | ST       | mondrian_entropy | Q1 (worst) | SOL     |      1.000 |       23.020 |           23.020 |   11 |
-| yasa       | ST       | mondrian_entropy | Q1 (worst) | TST     |      0.818 |       47.451 |           83.554 |   11 |
-| yasa       | ST       | mondrian_entropy | Q1 (worst) | WASO    |      0.909 |       71.624 |          108.858 |   11 |
-| yasa       | ST       | mondrian_entropy | Q2         | N1%     |      0.818 |       14.540 |           21.654 |   11 |
-| yasa       | ST       | mondrian_entropy | Q2         | N2%     |      0.818 |       31.454 |           36.203 |   11 |
-| yasa       | ST       | mondrian_entropy | Q2         | N3%     |      0.818 |       24.685 |           28.353 |   11 |
-| yasa       | ST       | mondrian_entropy | Q2         | REM%    |      0.909 |       24.903 |           35.466 |   11 |
-| yasa       | ST       | mondrian_entropy | Q2         | REML    |      0.818 |      146.295 |          263.647 |   11 |
-| yasa       | ST       | mondrian_entropy | Q2         | SOL     |      0.909 |       16.621 |           21.450 |   11 |
-| yasa       | ST       | mondrian_entropy | Q2         | TST     |      0.909 |       31.084 |           35.406 |   11 |
-| yasa       | ST       | mondrian_entropy | Q2         | WASO    |      0.909 |       47.062 |           56.412 |   11 |
-| yasa       | ST       | mondrian_entropy | Q3         | N1%     |      0.818 |       15.433 |           32.025 |   11 |
-| yasa       | ST       | mondrian_entropy | Q3         | N2%     |      1.000 |       33.248 |           33.248 |   11 |
-| yasa       | ST       | mondrian_entropy | Q3         | N3%     |      1.000 |       26.340 |           26.340 |   11 |
-| yasa       | ST       | mondrian_entropy | Q3         | REM%    |      0.818 |       22.829 |           26.453 |   11 |
-| yasa       | ST       | mondrian_entropy | Q3         | REML    |      0.909 |      148.096 |          189.292 |   11 |
-| yasa       | ST       | mondrian_entropy | Q3         | SOL     |      0.727 |       18.644 |           80.448 |   11 |
-| yasa       | ST       | mondrian_entropy | Q3         | TST     |      1.000 |       34.328 |           34.328 |   11 |
-| yasa       | ST       | mondrian_entropy | Q3         | WASO    |      1.000 |       55.618 |           55.618 |   11 |
-| yasa       | ST       | mondrian_entropy | Q4 (best)  | N1%     |      1.000 |       16.329 |           16.329 |   11 |
-| yasa       | ST       | mondrian_entropy | Q4 (best)  | N2%     |      1.000 |       33.397 |           33.397 |   11 |
-| yasa       | ST       | mondrian_entropy | Q4 (best)  | N3%     |      1.000 |       26.263 |           26.263 |   11 |
-| yasa       | ST       | mondrian_entropy | Q4 (best)  | REM%    |      1.000 |       25.671 |           25.671 |   11 |
-| yasa       | ST       | mondrian_entropy | Q4 (best)  | REML    |      1.000 |      153.657 |          153.657 |   11 |
-| yasa       | ST       | mondrian_entropy | Q4 (best)  | SOL     |      0.909 |       17.138 |           33.480 |   11 |
-| yasa       | ST       | mondrian_entropy | Q4 (best)  | TST     |      0.909 |       32.645 |           43.320 |   11 |
-| yasa       | ST       | mondrian_entropy | Q4 (best)  | WASO    |      0.727 |       50.427 |          108.994 |   11 |
-| yasa       | ST       | mondrian_sd      | Q1 (worst) | N1%     |      0.818 |       16.869 |           19.801 |   11 |
-| yasa       | ST       | mondrian_sd      | Q1 (worst) | N2%     |      0.818 |       38.111 |           49.133 |   11 |
-| yasa       | ST       | mondrian_sd      | Q1 (worst) | N3%     |      0.727 |       27.339 |           37.103 |   11 |
-| yasa       | ST       | mondrian_sd      | Q1 (worst) | REM%    |      0.818 |       24.225 |           31.489 |   11 |
-| yasa       | ST       | mondrian_sd      | Q1 (worst) | REML    |      1.000 |      127.573 |          127.573 |   11 |
-| yasa       | ST       | mondrian_sd      | Q1 (worst) | SOL     |      1.000 |       22.695 |           22.695 |   11 |
-| yasa       | ST       | mondrian_sd      | Q1 (worst) | TST     |      0.727 |       39.525 |          115.676 |   11 |
-| yasa       | ST       | mondrian_sd      | Q1 (worst) | WASO    |      0.727 |       60.103 |          135.753 |   11 |
-| yasa       | ST       | mondrian_sd      | Q2         | N1%     |      0.909 |       13.514 |           16.513 |   11 |
-| yasa       | ST       | mondrian_sd      | Q2         | N2%     |      0.818 |       33.373 |           35.099 |   11 |
-| yasa       | ST       | mondrian_sd      | Q2         | N3%     |      0.909 |       24.837 |           26.840 |   11 |
-| yasa       | ST       | mondrian_sd      | Q2         | REM%    |      0.909 |       23.504 |           34.067 |   11 |
-| yasa       | ST       | mondrian_sd      | Q2         | REML    |      0.909 |      129.265 |          241.315 |   11 |
-| yasa       | ST       | mondrian_sd      | Q2         | SOL     |      0.909 |       14.105 |           15.036 |   11 |
-| yasa       | ST       | mondrian_sd      | Q2         | TST     |      1.000 |       34.806 |           34.806 |   11 |
-| yasa       | ST       | mondrian_sd      | Q2         | WASO    |      1.000 |       52.059 |           52.059 |   11 |
-| yasa       | ST       | mondrian_sd      | Q3         | N1%     |      0.909 |       15.979 |           25.331 |   11 |
-| yasa       | ST       | mondrian_sd      | Q3         | N2%     |      1.000 |       35.139 |           35.139 |   11 |
-| yasa       | ST       | mondrian_sd      | Q3         | N3%     |      1.000 |       26.581 |           26.581 |   11 |
-| yasa       | ST       | mondrian_sd      | Q3         | REM%    |      0.818 |       22.486 |           26.109 |   11 |
-| yasa       | ST       | mondrian_sd      | Q3         | REML    |      0.909 |      125.901 |          225.133 |   11 |
-| yasa       | ST       | mondrian_sd      | Q3         | SOL     |      0.727 |       15.016 |           67.199 |   11 |
-| yasa       | ST       | mondrian_sd      | Q3         | TST     |      1.000 |       36.536 |           36.536 |   11 |
-| yasa       | ST       | mondrian_sd      | Q3         | WASO    |      1.000 |       60.242 |           60.242 |   11 |
-| yasa       | ST       | mondrian_sd      | Q4 (best)  | N1%     |      1.000 |       16.353 |           16.353 |   11 |
-| yasa       | ST       | mondrian_sd      | Q4 (best)  | N2%     |      1.000 |       35.523 |           35.523 |   11 |
-| yasa       | ST       | mondrian_sd      | Q4 (best)  | N3%     |      1.000 |       26.475 |           26.475 |   11 |
-| yasa       | ST       | mondrian_sd      | Q4 (best)  | REM%    |      1.000 |       23.992 |           23.992 |   11 |
-| yasa       | ST       | mondrian_sd      | Q4 (best)  | REML    |      0.818 |      118.409 |          171.117 |   11 |
-| yasa       | ST       | mondrian_sd      | Q4 (best)  | SOL     |      0.909 |       16.344 |           19.455 |   11 |
-| yasa       | ST       | mondrian_sd      | Q4 (best)  | TST     |      0.909 |       39.562 |           50.237 |   11 |
-| yasa       | ST       | mondrian_sd      | Q4 (best)  | WASO    |      0.909 |       66.814 |           96.964 |   11 |
-| yasa       | ST       | proposed         | Q1 (worst) | N1%     |      0.909 |       17.885 |           20.905 |   11 |
-| yasa       | ST       | proposed         | Q1 (worst) | N2%     |      0.727 |       33.448 |           53.728 |   11 |
-| yasa       | ST       | proposed         | Q1 (worst) | N3%     |      0.727 |       26.725 |           34.708 |   11 |
-| yasa       | ST       | proposed         | Q1 (worst) | REM%    |      0.818 |       24.399 |           31.189 |   11 |
-| yasa       | ST       | proposed         | Q1 (worst) | REML    |      1.000 |      130.787 |          130.787 |   11 |
-| yasa       | ST       | proposed         | Q1 (worst) | SOL     |      1.000 |       23.020 |           23.020 |   11 |
-| yasa       | ST       | proposed         | Q1 (worst) | TST     |      0.727 |       38.894 |          106.927 |   11 |
-| yasa       | ST       | proposed         | Q1 (worst) | WASO    |      0.818 |       57.760 |          101.731 |   11 |
-| yasa       | ST       | proposed         | Q2         | N1%     |      0.818 |       15.495 |           27.210 |   11 |
-| yasa       | ST       | proposed         | Q2         | N2%     |      0.909 |       31.297 |           32.229 |   11 |
-| yasa       | ST       | proposed         | Q2         | N3%     |      0.909 |       24.890 |           25.007 |   11 |
-| yasa       | ST       | proposed         | Q2         | REM%    |      0.909 |       23.579 |           34.142 |   11 |
-| yasa       | ST       | proposed         | Q2         | REML    |      0.909 |      128.371 |          258.272 |   11 |
-| yasa       | ST       | proposed         | Q2         | SOL     |      0.909 |       19.107 |           26.228 |   11 |
-| yasa       | ST       | proposed         | Q2         | TST     |      1.000 |       34.655 |           34.655 |   11 |
-| yasa       | ST       | proposed         | Q2         | WASO    |      0.909 |       45.565 |           52.014 |   11 |
-| yasa       | ST       | proposed         | Q3         | N1%     |      0.909 |       16.725 |           30.922 |   11 |
-| yasa       | ST       | proposed         | Q3         | N2%     |      1.000 |       32.034 |           32.034 |   11 |
-| yasa       | ST       | proposed         | Q3         | N3%     |      1.000 |       25.591 |           25.591 |   11 |
-| yasa       | ST       | proposed         | Q3         | REM%    |      0.909 |       22.198 |           24.362 |   11 |
-| yasa       | ST       | proposed         | Q3         | REML    |      0.818 |      129.778 |          199.095 |   11 |
-| yasa       | ST       | proposed         | Q3         | SOL     |      0.818 |       20.726 |           87.150 |   11 |
-| yasa       | ST       | proposed         | Q3         | TST     |      1.000 |       36.269 |           36.269 |   11 |
-| yasa       | ST       | proposed         | Q3         | WASO    |      1.000 |       53.758 |           53.758 |   11 |
-| yasa       | ST       | proposed         | Q4 (best)  | N1%     |      1.000 |       17.548 |           17.548 |   11 |
-| yasa       | ST       | proposed         | Q4 (best)  | N2%     |      1.000 |       32.218 |           32.218 |   11 |
-| yasa       | ST       | proposed         | Q4 (best)  | N3%     |      1.000 |       25.854 |           25.854 |   11 |
-| yasa       | ST       | proposed         | Q4 (best)  | REM%    |      1.000 |       24.062 |           24.062 |   11 |
-| yasa       | ST       | proposed         | Q4 (best)  | REML    |      0.909 |      127.227 |          154.009 |   11 |
-| yasa       | ST       | proposed         | Q4 (best)  | SOL     |      0.909 |       20.486 |           25.985 |   11 |
-| yasa       | ST       | proposed         | Q4 (best)  | TST     |      0.818 |       36.420 |           44.533 |   11 |
-| yasa       | ST       | proposed         | Q4 (best)  | WASO    |      0.909 |       59.061 |           95.701 |   11 |
-| yasa       | HMC      | dfloa            | all        | all     |      0.900 |       60.093 |          110.417 | 1207 |
-| yasa       | HMC      | mondrian_entropy | all        | all     |      0.907 |       61.182 |           93.144 | 1207 |
-| yasa       | HMC      | mondrian_sd      | all        | all     |      0.907 |       62.352 |           90.962 | 1207 |
-| yasa       | HMC      | proposed         | all        | all     |      0.901 |       56.169 |          100.315 | 1207 |
-| yasa       | SC       | dfloa            | all        | all     |      0.899 |       58.470 |          103.019 | 1224 |
-| yasa       | SC       | mondrian_entropy | all        | all     |      0.908 |       65.500 |           99.258 | 1224 |
-| yasa       | SC       | mondrian_sd      | all        | all     |      0.908 |       66.942 |           96.683 | 1224 |
-| yasa       | SC       | proposed         | all        | all     |      0.901 |       64.517 |          101.117 | 1224 |
-| yasa       | ST       | dfloa            | all        | all     |      0.901 |       45.657 |           62.911 |  352 |
-| yasa       | ST       | mondrian_entropy | all        | all     |      0.895 |       44.294 |           59.841 |  352 |
-| yasa       | ST       | mondrian_sd      | all        | all     |      0.903 |       42.602 |           60.542 |  352 |
-| yasa       | ST       | proposed         | all        | all     |      0.906 |       42.370 |           59.433 |  352 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q1 (worst) | all     |      0.799 |       75.055 |          159.589 |  304 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q2         | all     |      0.901 |       74.918 |          117.506 |  304 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q3         | all     |      0.915 |       74.527 |          115.813 |  295 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q4 (best)  | all     |      0.980 |       74.647 |           81.597 |  304 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q1 (worst) | all     |      0.891 |       83.007 |          124.516 |  304 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q2         | all     |      0.914 |       73.336 |           97.939 |  304 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q3         | all     |      0.915 |       65.325 |           95.662 |  295 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q4 (best)  | all     |      0.908 |       57.817 |           86.586 |  304 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q1 (worst) | all     |      0.875 |       72.063 |          132.546 |  304 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q2         | all     |      0.908 |       67.852 |           88.112 |  304 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q3         | all     |      0.912 |       67.402 |           96.940 |  295 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q4 (best)  | all     |      0.934 |       72.876 |           89.695 |  304 |
-| lgbm_sc_s0 | HMC      | proposed         | Q1 (worst) | all     |      0.836 |       67.656 |          133.683 |  304 |
-| lgbm_sc_s0 | HMC      | proposed         | Q2         | all     |      0.921 |       67.087 |          110.877 |  304 |
-| lgbm_sc_s0 | HMC      | proposed         | Q3         | all     |      0.905 |       66.874 |          124.489 |  295 |
-| lgbm_sc_s0 | HMC      | proposed         | Q4 (best)  | all     |      0.941 |       69.291 |           95.695 |  304 |
-| lgbm_sc_s0 | SC       | dfloa            | Q1 (worst) | all     |      0.756 |       48.250 |          106.697 |  312 |
-| lgbm_sc_s0 | SC       | dfloa            | Q2         | all     |      0.908 |       48.227 |          103.507 |  304 |
-| lgbm_sc_s0 | SC       | dfloa            | Q3         | all     |      0.954 |       46.813 |           58.013 |  304 |
-| lgbm_sc_s0 | SC       | dfloa            | Q4 (best)  | all     |      0.980 |       46.135 |           86.221 |  304 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q1 (worst) | all     |      0.862 |       60.073 |           92.901 |  312 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q2         | all     |      0.911 |       56.879 |           93.975 |  304 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q3         | all     |      0.905 |       52.127 |           74.045 |  304 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q4 (best)  | all     |      0.947 |       50.736 |           80.121 |  304 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q1 (worst) | all     |      0.856 |       60.911 |           90.207 |  312 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q2         | all     |      0.895 |       55.709 |           89.030 |  304 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q3         | all     |      0.928 |       53.929 |           70.546 |  304 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q4 (best)  | all     |      0.954 |       50.281 |           78.819 |  304 |
-| lgbm_sc_s0 | SC       | proposed         | Q1 (worst) | all     |      0.830 |       55.240 |           97.410 |  312 |
-| lgbm_sc_s0 | SC       | proposed         | Q2         | all     |      0.891 |       53.372 |           90.209 |  304 |
-| lgbm_sc_s0 | SC       | proposed         | Q3         | all     |      0.931 |       53.753 |           72.143 |  304 |
-| lgbm_sc_s0 | SC       | proposed         | Q4 (best)  | all     |      0.957 |       53.065 |           83.560 |  304 |
-| lgbm_sc_s0 | ST       | dfloa            | Q1 (worst) | all     |      0.773 |       47.758 |           82.776 |   88 |
-| lgbm_sc_s0 | ST       | dfloa            | Q2         | all     |      0.920 |       49.589 |           60.465 |   88 |
-| lgbm_sc_s0 | ST       | dfloa            | Q3         | all     |      0.920 |       50.584 |           75.078 |   88 |
-| lgbm_sc_s0 | ST       | dfloa            | Q4 (best)  | all     |      0.943 |       50.753 |           53.615 |   88 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q1 (worst) | all     |      0.830 |       44.837 |           68.496 |   88 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q2         | all     |      0.898 |       39.864 |           53.248 |   88 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q3         | all     |      0.955 |       44.711 |           53.578 |   88 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q4 (best)  | all     |      0.875 |       40.970 |           63.178 |   88 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q1 (worst) | all     |      0.852 |       44.142 |           66.407 |   88 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q2         | all     |      0.932 |       39.617 |           49.037 |   88 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q3         | all     |      0.943 |       44.645 |           52.015 |   88 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q4 (best)  | all     |      0.864 |       40.606 |           55.683 |   88 |
-| lgbm_sc_s0 | ST       | proposed         | Q1 (worst) | all     |      0.864 |       45.312 |           66.096 |   88 |
-| lgbm_sc_s0 | ST       | proposed         | Q2         | all     |      0.920 |       41.376 |           51.401 |   88 |
-| lgbm_sc_s0 | ST       | proposed         | Q3         | all     |      0.920 |       44.627 |           58.152 |   88 |
-| lgbm_sc_s0 | ST       | proposed         | Q4 (best)  | all     |      0.909 |       42.427 |           59.522 |   88 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q1 (worst) | N1%     |      0.789 |       27.571 |           63.756 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q1 (worst) | N2%     |      0.816 |       39.316 |           65.842 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q1 (worst) | N3%     |      0.737 |       33.404 |           69.996 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q1 (worst) | REM%    |      0.737 |       17.663 |           39.479 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q1 (worst) | REML    |      0.921 |      181.744 |          327.102 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q1 (worst) | SOL     |      0.763 |       22.315 |           75.209 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q1 (worst) | TST     |      0.816 |      165.602 |          334.072 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q1 (worst) | WASO    |      0.816 |      112.828 |          301.253 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q2         | N1%     |      0.895 |       26.506 |           50.582 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q2         | N2%     |      0.921 |       39.933 |           51.507 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q2         | N3%     |      0.921 |       34.015 |           40.290 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q2         | REM%    |      0.895 |       17.819 |           22.713 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q2         | REML    |      0.868 |      186.641 |          359.963 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q2         | SOL     |      0.921 |       20.343 |           52.449 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q2         | TST     |      0.895 |      165.434 |          221.925 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q2         | WASO    |      0.895 |      108.653 |          140.618 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q3         | N1%     |      0.919 |       26.125 |           36.459 |   37 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q3         | N2%     |      0.892 |       39.887 |           49.501 |   37 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q3         | N3%     |      0.946 |       34.255 |           40.534 |   37 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q3         | REM%    |      0.946 |       17.527 |           19.326 |   37 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q3         | REML    |      0.861 |      183.489 |          305.745 |   36 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q3         | SOL     |      0.946 |       21.116 |           89.102 |   37 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q3         | TST     |      0.892 |      165.150 |          232.667 |   37 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q3         | WASO    |      0.919 |      111.614 |          158.302 |   37 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q4 (best)  | N1%     |      1.000 |       21.596 |           21.596 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q4 (best)  | N2%     |      0.947 |       39.954 |           41.960 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q4 (best)  | N3%     |      1.000 |       34.614 |           34.614 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q4 (best)  | REM%    |      1.000 |       18.050 |           18.050 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q4 (best)  | REML    |      0.947 |      190.907 |          236.304 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q4 (best)  | SOL     |      0.974 |       21.058 |           21.848 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q4 (best)  | TST     |      1.000 |      165.713 |          165.713 |   38 |
-| lgbm_sc_s0 | HMC      | dfloa            | Q4 (best)  | WASO    |      0.974 |      105.281 |          112.695 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q1 (worst) | N1%     |      0.895 |       25.510 |           59.261 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q1 (worst) | N2%     |      0.842 |       44.256 |           64.776 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q1 (worst) | N3%     |      0.842 |       42.023 |           94.942 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q1 (worst) | REM%    |      0.816 |       24.960 |           35.883 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q1 (worst) | REML    |      0.921 |      235.203 |          378.438 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q1 (worst) | SOL     |      0.947 |       32.129 |           42.199 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q1 (worst) | TST     |      0.947 |      145.099 |          181.357 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q1 (worst) | WASO    |      0.921 |      114.879 |          139.269 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q2         | N1%     |      0.895 |       23.861 |           40.406 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q2         | N2%     |      1.000 |       41.687 |           41.687 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q2         | N3%     |      0.921 |       40.118 |           48.550 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q2         | REM%    |      0.895 |       22.415 |           27.602 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q2         | REML    |      0.895 |      211.869 |          292.847 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q2         | SOL     |      0.974 |       26.530 |           36.673 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q2         | TST     |      0.895 |      121.019 |          156.732 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q2         | WASO    |      0.842 |       99.187 |          139.018 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q3         | N1%     |      0.919 |       22.996 |           36.398 |   37 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q3         | N2%     |      0.946 |       37.648 |           44.412 |   37 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q3         | N3%     |      0.946 |       36.012 |           43.131 |   37 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q3         | REM%    |      0.946 |       20.512 |           22.056 |   37 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q3         | REML    |      0.917 |      189.638 |          298.006 |   36 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q3         | SOL     |      0.892 |       23.759 |           85.683 |   37 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q3         | TST     |      0.838 |      105.551 |          126.914 |   37 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q3         | WASO    |      0.919 |       89.843 |          114.162 |   37 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q4 (best)  | N1%     |      0.921 |       20.084 |           24.949 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q4 (best)  | N2%     |      0.842 |       34.514 |           50.109 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q4 (best)  | N3%     |      0.921 |       37.191 |           45.540 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q4 (best)  | REM%    |      0.974 |       18.635 |           19.363 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q4 (best)  | REML    |      0.895 |      178.657 |          226.929 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q4 (best)  | SOL     |      0.816 |       22.837 |          120.515 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q4 (best)  | TST     |      0.947 |       79.509 |           90.157 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | Q4 (best)  | WASO    |      0.947 |       71.110 |          115.124 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q1 (worst) | N1%     |      0.842 |       21.365 |           64.650 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q1 (worst) | N2%     |      0.842 |       36.701 |           60.180 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q1 (worst) | N3%     |      0.868 |       41.434 |           92.199 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q1 (worst) | REM%    |      0.816 |       24.663 |           34.810 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q1 (worst) | REML    |      0.868 |      194.498 |          455.520 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q1 (worst) | SOL     |      0.921 |       26.659 |           46.505 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q1 (worst) | TST     |      0.921 |      125.101 |          186.164 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q1 (worst) | WASO    |      0.921 |      106.081 |          120.342 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q2         | N1%     |      0.868 |       21.533 |           40.253 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q2         | N2%     |      0.947 |       37.481 |           40.239 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q2         | N3%     |      0.947 |       39.015 |           48.360 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q2         | REM%    |      0.921 |       21.306 |           27.377 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q2         | REML    |      0.921 |      206.162 |          263.651 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q2         | SOL     |      0.895 |       21.473 |           34.879 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q2         | TST     |      0.921 |      104.882 |          133.558 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q2         | WASO    |      0.842 |       90.969 |          116.581 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q3         | N1%     |      0.946 |       21.599 |           34.445 |   37 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q3         | N2%     |      0.973 |       37.752 |           45.172 |   37 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q3         | N3%     |      0.919 |       34.239 |           42.025 |   37 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q3         | REM%    |      0.946 |       19.464 |           20.752 |   37 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q3         | REML    |      0.861 |      212.330 |          325.258 |   36 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q3         | SOL     |      0.892 |       22.827 |           90.947 |   37 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q3         | TST     |      0.838 |      102.524 |          113.633 |   37 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q3         | WASO    |      0.919 |       92.401 |          109.459 |   37 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q4 (best)  | N1%     |      0.974 |       20.714 |           21.847 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q4 (best)  | N2%     |      0.868 |       37.068 |           46.328 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q4 (best)  | N3%     |      0.895 |       39.171 |           47.202 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q4 (best)  | REM%    |      0.947 |       17.893 |           18.660 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q4 (best)  | REML    |      0.974 |      266.623 |          290.338 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q4 (best)  | SOL     |      0.921 |       26.245 |           89.028 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q4 (best)  | TST     |      0.947 |       85.114 |           90.400 |   38 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | Q4 (best)  | WASO    |      0.947 |       90.180 |          113.759 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q1 (worst) | N1%     |      0.816 |       22.859 |           61.412 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q1 (worst) | N2%     |      0.816 |       35.219 |           60.499 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q1 (worst) | N3%     |      0.816 |       36.851 |           94.654 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q1 (worst) | REM%    |      0.737 |       23.154 |           36.921 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q1 (worst) | REML    |      0.868 |      186.275 |          445.522 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q1 (worst) | SOL     |      0.921 |       25.966 |           48.243 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q1 (worst) | TST     |      0.842 |      112.999 |          173.721 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q1 (worst) | WASO    |      0.868 |       97.923 |          148.495 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q2         | N1%     |      0.895 |       22.627 |           37.639 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q2         | N2%     |      0.974 |       34.371 |           35.423 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q2         | N3%     |      0.921 |       36.086 |           45.266 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q2         | REM%    |      0.921 |       21.636 |           26.666 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q2         | REML    |      0.895 |      196.113 |          384.069 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q2         | SOL     |      0.974 |       23.733 |           39.770 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q2         | TST     |      0.921 |      108.971 |          171.417 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q2         | WASO    |      0.868 |       93.160 |          146.769 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q3         | N1%     |      0.946 |       22.442 |           33.718 |   37 |
-| lgbm_sc_s0 | HMC      | proposed         | Q3         | N2%     |      0.946 |       33.436 |           41.139 |   37 |
-| lgbm_sc_s0 | HMC      | proposed         | Q3         | N3%     |      0.946 |       33.598 |           41.712 |   37 |
-| lgbm_sc_s0 | HMC      | proposed         | Q3         | REM%    |      0.946 |       21.036 |           21.711 |   37 |
-| lgbm_sc_s0 | HMC      | proposed         | Q3         | REML    |      0.861 |      197.402 |          432.326 |   36 |
-| lgbm_sc_s0 | HMC      | proposed         | Q3         | SOL     |      0.865 |       23.545 |           94.793 |   37 |
-| lgbm_sc_s0 | HMC      | proposed         | Q3         | TST     |      0.838 |      110.123 |          191.430 |   37 |
-| lgbm_sc_s0 | HMC      | proposed         | Q3         | WASO    |      0.892 |       96.934 |          147.405 |   37 |
-| lgbm_sc_s0 | HMC      | proposed         | Q4 (best)  | N1%     |      0.947 |       21.034 |           22.285 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q4 (best)  | N2%     |      0.868 |       33.145 |           48.749 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q4 (best)  | N3%     |      0.921 |       36.045 |           45.281 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q4 (best)  | REM%    |      1.000 |       20.211 |           20.211 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q4 (best)  | REML    |      0.974 |      223.155 |          291.685 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q4 (best)  | SOL     |      0.842 |       25.398 |          108.638 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q4 (best)  | TST     |      1.000 |      102.217 |          102.217 |   38 |
-| lgbm_sc_s0 | HMC      | proposed         | Q4 (best)  | WASO    |      0.974 |       93.122 |          126.498 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q1 (worst) | N1%     |      0.667 |       30.813 |           85.555 |   39 |
-| lgbm_sc_s0 | SC       | dfloa            | Q1 (worst) | N2%     |      0.615 |       29.816 |           83.727 |   39 |
-| lgbm_sc_s0 | SC       | dfloa            | Q1 (worst) | N3%     |      0.795 |       11.315 |           27.598 |   39 |
-| lgbm_sc_s0 | SC       | dfloa            | Q1 (worst) | REM%    |      0.744 |       15.473 |           61.176 |   39 |
-| lgbm_sc_s0 | SC       | dfloa            | Q1 (worst) | REML    |      0.923 |      104.239 |          142.444 |   39 |
-| lgbm_sc_s0 | SC       | dfloa            | Q1 (worst) | SOL     |      0.744 |       25.418 |           61.899 |   39 |
-| lgbm_sc_s0 | SC       | dfloa            | Q1 (worst) | TST     |      0.641 |       86.389 |          283.321 |   39 |
-| lgbm_sc_s0 | SC       | dfloa            | Q1 (worst) | WASO    |      0.923 |       82.538 |          107.860 |   39 |
-| lgbm_sc_s0 | SC       | dfloa            | Q2         | N1%     |      0.947 |       30.030 |           31.074 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q2         | N2%     |      0.947 |       29.955 |           30.508 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q2         | N3%     |      0.868 |       12.208 |           20.063 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q2         | REM%    |      0.921 |       15.615 |           17.165 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q2         | REML    |      0.868 |      104.506 |          342.947 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q2         | SOL     |      0.895 |       25.236 |           96.837 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q2         | TST     |      0.974 |       87.165 |           96.353 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q2         | WASO    |      0.842 |       81.100 |          193.108 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q3         | N1%     |      1.000 |       27.383 |           27.383 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q3         | N2%     |      1.000 |       29.921 |           29.921 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q3         | N3%     |      0.947 |       12.349 |           13.908 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q3         | REM%    |      0.921 |       15.572 |           17.564 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q3         | REML    |      0.895 |      105.671 |          136.724 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q3         | SOL     |      0.974 |       23.324 |           24.376 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q3         | TST     |      1.000 |       87.361 |           87.361 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q3         | WASO    |      0.895 |       72.921 |          126.868 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q4 (best)  | N1%     |      1.000 |       24.045 |           24.045 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q4 (best)  | N2%     |      1.000 |       29.919 |           29.919 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q4 (best)  | N3%     |      1.000 |       13.326 |           13.326 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q4 (best)  | REM%    |      1.000 |       15.675 |           15.675 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q4 (best)  | REML    |      0.921 |      106.135 |          159.030 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q4 (best)  | SOL     |      0.974 |       23.727 |           58.891 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q4 (best)  | TST     |      1.000 |       87.424 |           87.424 |   38 |
-| lgbm_sc_s0 | SC       | dfloa            | Q4 (best)  | WASO    |      0.947 |       68.829 |          301.461 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q1 (worst) | N1%     |      0.846 |       34.203 |           69.660 |   39 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q1 (worst) | N2%     |      0.744 |       35.398 |           68.114 |   39 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q1 (worst) | N3%     |      0.846 |       12.786 |           23.932 |   39 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q1 (worst) | REM%    |      0.846 |       28.499 |           51.812 |   39 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q1 (worst) | REML    |      0.923 |       75.275 |           97.831 |   39 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q1 (worst) | SOL     |      0.923 |       32.509 |           45.889 |   39 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q1 (worst) | TST     |      0.795 |      102.002 |          216.159 |   39 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q1 (worst) | WASO    |      0.974 |      159.907 |          169.813 |   39 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q2         | N1%     |      0.947 |       29.929 |           35.001 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q2         | N2%     |      0.974 |       31.754 |           32.519 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q2         | N3%     |      0.895 |       12.577 |           19.134 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q2         | REM%    |      0.947 |       25.152 |           27.192 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q2         | REML    |      0.842 |       88.122 |          286.860 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q2         | SOL     |      0.868 |       26.693 |           71.371 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q2         | TST     |      0.947 |       86.176 |          103.719 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q2         | WASO    |      0.868 |      154.624 |          176.003 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q3         | N1%     |      0.895 |       22.467 |           28.889 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q3         | N2%     |      0.921 |       23.117 |           30.325 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q3         | N3%     |      0.895 |       11.370 |           15.847 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q3         | REM%    |      0.895 |       21.465 |           25.950 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q3         | REML    |      0.921 |       76.427 |          105.640 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q3         | SOL     |      0.895 |       19.102 |           53.790 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q3         | TST     |      0.895 |       51.691 |           70.635 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q3         | WASO    |      0.921 |      191.377 |          261.283 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q4 (best)  | N1%     |      0.947 |       19.817 |           24.065 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q4 (best)  | N2%     |      1.000 |       21.087 |           21.087 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q4 (best)  | N3%     |      1.000 |       11.584 |           11.584 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q4 (best)  | REM%    |      0.947 |       20.017 |           20.809 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q4 (best)  | REML    |      0.947 |       70.879 |           80.825 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q4 (best)  | SOL     |      0.921 |       19.006 |           54.128 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q4 (best)  | TST     |      0.974 |       44.595 |           44.678 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | Q4 (best)  | WASO    |      0.842 |      198.901 |          383.787 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q1 (worst) | N1%     |      0.821 |       34.334 |           62.326 |   39 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q1 (worst) | N2%     |      0.795 |       38.579 |           67.187 |   39 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q1 (worst) | N3%     |      0.872 |       12.258 |           23.758 |   39 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q1 (worst) | REM%    |      0.846 |       27.775 |           52.018 |   39 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q1 (worst) | REML    |      0.923 |       80.582 |           97.026 |   39 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q1 (worst) | SOL     |      0.846 |       35.407 |           43.924 |   39 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q1 (worst) | TST     |      0.821 |      102.932 |          202.850 |   39 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q1 (worst) | WASO    |      0.923 |      155.417 |          172.566 |   39 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q2         | N1%     |      0.921 |       27.694 |           34.135 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q2         | N2%     |      0.895 |       31.796 |           37.910 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q2         | N3%     |      0.842 |       11.646 |           18.371 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q2         | REM%    |      0.921 |       21.937 |           26.836 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q2         | REML    |      0.816 |       94.505 |          257.810 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q2         | SOL     |      0.895 |       27.889 |           64.404 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q2         | TST     |      0.947 |       81.177 |           99.341 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q2         | WASO    |      0.921 |      149.026 |          173.435 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q3         | N1%     |      0.947 |       23.014 |           25.400 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q3         | N2%     |      0.947 |       28.989 |           32.540 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q3         | N3%     |      0.921 |       12.837 |           15.033 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q3         | REM%    |      0.921 |       20.579 |           26.446 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q3         | REML    |      0.947 |       77.178 |          100.852 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q3         | SOL     |      0.921 |       22.650 |           38.999 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q3         | TST     |      0.895 |       59.059 |           68.034 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q3         | WASO    |      0.921 |      187.130 |          257.062 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q4 (best)  | N1%     |      0.947 |       19.099 |           23.073 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q4 (best)  | N2%     |      1.000 |       25.923 |           25.923 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q4 (best)  | N3%     |      1.000 |       13.069 |           13.069 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q4 (best)  | REM%    |      0.947 |       18.087 |           19.418 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q4 (best)  | REML    |      0.947 |       63.966 |           75.435 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q4 (best)  | SOL     |      0.974 |       23.402 |           39.347 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q4 (best)  | TST     |      0.974 |       44.933 |           45.321 |   38 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | Q4 (best)  | WASO    |      0.842 |      193.770 |          388.968 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q1 (worst) | N1%     |      0.821 |       30.056 |           70.992 |   39 |
-| lgbm_sc_s0 | SC       | proposed         | Q1 (worst) | N2%     |      0.744 |       32.471 |           70.312 |   39 |
-| lgbm_sc_s0 | SC       | proposed         | Q1 (worst) | N3%     |      0.795 |       10.926 |           23.300 |   39 |
-| lgbm_sc_s0 | SC       | proposed         | Q1 (worst) | REM%    |      0.795 |       24.730 |           52.212 |   39 |
-| lgbm_sc_s0 | SC       | proposed         | Q1 (worst) | REML    |      0.923 |       75.098 |           97.654 |   39 |
-| lgbm_sc_s0 | SC       | proposed         | Q1 (worst) | SOL     |      0.872 |       26.319 |           44.937 |   39 |
-| lgbm_sc_s0 | SC       | proposed         | Q1 (worst) | TST     |      0.718 |       75.007 |          245.417 |   39 |
-| lgbm_sc_s0 | SC       | proposed         | Q1 (worst) | WASO    |      0.974 |      167.310 |          174.455 |   39 |
-| lgbm_sc_s0 | SC       | proposed         | Q2         | N1%     |      0.842 |       26.541 |           38.363 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q2         | N2%     |      0.921 |       30.826 |           32.577 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q2         | N3%     |      0.895 |       10.890 |           18.417 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q2         | REM%    |      0.895 |       22.304 |           25.040 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q2         | REML    |      0.842 |       87.783 |          287.354 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q2         | SOL     |      0.868 |       22.288 |           74.611 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q2         | TST     |      0.947 |       66.475 |           76.725 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q2         | WASO    |      0.921 |      159.870 |          168.584 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q3         | N1%     |      0.974 |       23.686 |           24.993 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q3         | N2%     |      0.947 |       30.096 |           31.622 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q3         | N3%     |      0.921 |       11.413 |           14.905 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q3         | REM%    |      0.921 |       21.813 |           24.028 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q3         | REML    |      0.921 |       74.869 |          105.701 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q3         | SOL     |      0.947 |       19.568 |           48.135 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q3         | TST     |      0.947 |       59.471 |           66.989 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q3         | WASO    |      0.868 |      189.109 |          260.774 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q4 (best)  | N1%     |      0.974 |       21.538 |           22.782 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q4 (best)  | N2%     |      1.000 |       29.302 |           29.302 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q4 (best)  | N3%     |      1.000 |       11.930 |           11.930 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q4 (best)  | REM%    |      1.000 |       20.869 |           20.869 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q4 (best)  | REML    |      0.921 |       69.126 |           80.230 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q4 (best)  | SOL     |      0.921 |       19.967 |           52.654 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q4 (best)  | TST     |      1.000 |       56.574 |           56.574 |   38 |
-| lgbm_sc_s0 | SC       | proposed         | Q4 (best)  | WASO    |      0.842 |      195.215 |          394.142 |   38 |
-| lgbm_sc_s0 | ST       | dfloa            | Q1 (worst) | N1%     |      0.545 |       13.694 |           43.760 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q1 (worst) | N2%     |      0.818 |       35.886 |           54.246 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q1 (worst) | N3%     |      0.727 |       24.770 |           64.356 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q1 (worst) | REM%    |      0.818 |       19.461 |           33.937 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q1 (worst) | REML    |      0.818 |      155.835 |          226.745 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q1 (worst) | SOL     |      1.000 |       16.580 |           16.580 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q1 (worst) | TST     |      0.727 |       63.024 |          122.288 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q1 (worst) | WASO    |      0.727 |       52.812 |          100.301 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q2         | N1%     |      0.909 |       12.667 |           12.954 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q2         | N2%     |      0.818 |       35.797 |           50.471 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q2         | N3%     |      0.818 |       26.392 |           36.419 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q2         | REM%    |      0.909 |       19.732 |           30.927 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q2         | REML    |      0.909 |      172.119 |          222.942 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q2         | SOL     |      1.000 |       16.385 |           16.385 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q2         | TST     |      1.000 |       64.115 |           64.115 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q2         | WASO    |      1.000 |       49.504 |           49.504 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q3         | N1%     |      1.000 |       14.354 |           14.354 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q3         | N2%     |      1.000 |       36.300 |           36.300 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q3         | N3%     |      1.000 |       28.510 |           28.510 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q3         | REM%    |      0.909 |       19.735 |           23.346 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q3         | REML    |      0.909 |      175.353 |          244.444 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q3         | SOL     |      0.727 |       15.128 |          106.037 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q3         | TST     |      0.909 |       64.952 |           81.316 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q3         | WASO    |      0.909 |       50.342 |           66.316 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q4 (best)  | N1%     |      0.909 |       13.876 |           15.082 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q4 (best)  | N2%     |      1.000 |       37.471 |           37.471 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q4 (best)  | N3%     |      1.000 |       26.622 |           26.622 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q4 (best)  | REM%    |      1.000 |       19.713 |           19.713 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q4 (best)  | REML    |      0.909 |      176.483 |          183.755 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q4 (best)  | SOL     |      0.909 |       16.255 |           20.801 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q4 (best)  | TST     |      0.909 |       64.727 |           68.364 |   11 |
-| lgbm_sc_s0 | ST       | dfloa            | Q4 (best)  | WASO    |      0.909 |       50.879 |           57.113 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q1 (worst) | N1%     |      0.909 |       20.139 |           23.030 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q1 (worst) | N2%     |      0.818 |       30.111 |           55.091 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q1 (worst) | N3%     |      0.727 |       24.115 |           66.063 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q1 (worst) | REM%    |      0.727 |       23.752 |           32.097 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q1 (worst) | REML    |      1.000 |      125.583 |          125.583 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q1 (worst) | SOL     |      0.818 |       21.090 |           22.800 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q1 (worst) | TST     |      0.818 |       48.510 |          114.642 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q1 (worst) | WASO    |      0.818 |       65.394 |          108.664 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q2         | N1%     |      1.000 |       14.719 |           14.719 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q2         | N2%     |      0.818 |       29.241 |           35.126 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q2         | N3%     |      0.818 |       25.913 |           35.601 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q2         | REM%    |      0.909 |       23.528 |           31.639 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q2         | REML    |      0.818 |      122.536 |          198.682 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q2         | SOL     |      0.909 |       17.893 |           22.374 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q2         | TST     |      1.000 |       36.598 |           36.598 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q2         | WASO    |      0.909 |       48.484 |           51.245 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q3         | N1%     |      1.000 |       18.612 |           18.612 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q3         | N2%     |      1.000 |       29.480 |           29.480 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q3         | N3%     |      1.000 |       28.237 |           28.237 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q3         | REM%    |      1.000 |       23.069 |           23.069 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q3         | REML    |      0.909 |      120.777 |          143.016 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q3         | SOL     |      0.727 |       24.016 |           72.711 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q3         | TST     |      1.000 |       47.553 |           47.553 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q3         | WASO    |      1.000 |       65.941 |           65.941 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q4 (best)  | N1%     |      0.636 |       15.688 |           40.394 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q4 (best)  | N2%     |      1.000 |       29.698 |           29.698 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q4 (best)  | N3%     |      1.000 |       27.025 |           27.025 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q4 (best)  | REM%    |      0.909 |       23.166 |           25.096 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q4 (best)  | REML    |      0.909 |      115.306 |          162.688 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q4 (best)  | SOL     |      1.000 |       17.077 |           17.077 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q4 (best)  | TST     |      0.818 |       39.080 |           50.383 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | Q4 (best)  | WASO    |      0.727 |       60.721 |          153.068 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q1 (worst) | N1%     |      0.909 |       19.485 |           23.234 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q1 (worst) | N2%     |      0.727 |       31.576 |           52.973 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q1 (worst) | N3%     |      0.818 |       24.881 |           28.681 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q1 (worst) | REM%    |      0.818 |       23.977 |           30.989 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q1 (worst) | REML    |      0.909 |      117.020 |          156.245 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q1 (worst) | SOL     |      1.000 |       18.700 |           18.700 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q1 (worst) | TST     |      0.818 |       52.044 |          118.927 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q1 (worst) | WASO    |      0.818 |       65.457 |          101.504 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q2         | N1%     |      1.000 |       14.694 |           14.694 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q2         | N2%     |      0.909 |       31.516 |           34.629 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q2         | N3%     |      0.818 |       21.179 |           36.372 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q2         | REM%    |      0.909 |       22.906 |           37.029 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q2         | REML    |      0.909 |      121.922 |          160.275 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q2         | SOL     |      1.000 |       14.527 |           14.527 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q2         | TST     |      1.000 |       43.415 |           43.415 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q2         | WASO    |      0.909 |       46.780 |           51.355 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q3         | N1%     |      1.000 |       18.020 |           18.020 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q3         | N2%     |      1.000 |       32.567 |           32.567 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q3         | N3%     |      1.000 |       26.029 |           26.029 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q3         | REM%    |      0.909 |       22.618 |           28.276 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q3         | REML    |      0.909 |      120.405 |          125.011 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q3         | SOL     |      0.727 |       25.303 |           73.999 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q3         | TST     |      1.000 |       49.722 |           49.722 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q3         | WASO    |      1.000 |       62.499 |           62.499 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q4 (best)  | N1%     |      0.727 |       17.216 |           40.973 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q4 (best)  | N2%     |      1.000 |       33.102 |           33.102 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q4 (best)  | N3%     |      0.909 |       20.912 |           21.177 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q4 (best)  | REM%    |      0.909 |       23.728 |           25.167 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q4 (best)  | REML    |      0.818 |       96.561 |          125.908 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q4 (best)  | SOL     |      0.818 |       12.550 |           18.199 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q4 (best)  | TST     |      0.818 |       45.751 |           76.576 |   11 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | Q4 (best)  | WASO    |      0.909 |       75.031 |          104.359 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q1 (worst) | N1%     |      0.909 |       17.024 |           18.248 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q1 (worst) | N2%     |      0.818 |       32.019 |           50.093 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q1 (worst) | N3%     |      0.727 |       25.414 |           50.863 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q1 (worst) | REM%    |      0.818 |       23.434 |           30.027 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q1 (worst) | REML    |      1.000 |      133.306 |          133.306 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q1 (worst) | SOL     |      1.000 |       24.041 |           24.041 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q1 (worst) | TST     |      0.818 |       41.673 |          108.556 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q1 (worst) | WASO    |      0.818 |       65.585 |          113.636 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q2         | N1%     |      1.000 |       14.253 |           14.253 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q2         | N2%     |      0.818 |       30.328 |           31.207 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q2         | N3%     |      0.818 |       25.478 |           35.166 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q2         | REM%    |      0.909 |       22.480 |           30.591 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q2         | REML    |      0.818 |      125.093 |          186.615 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q2         | SOL     |      1.000 |       22.415 |           22.415 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q2         | TST     |      1.000 |       36.162 |           36.162 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q2         | WASO    |      1.000 |       54.796 |           54.796 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q3         | N1%     |      0.909 |       15.985 |           16.631 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q3         | N2%     |      1.000 |       30.853 |           30.853 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q3         | N3%     |      1.000 |       28.587 |           28.587 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q3         | REM%    |      1.000 |       22.413 |           22.413 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q3         | REML    |      0.818 |      128.923 |          166.855 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q3         | SOL     |      0.636 |       26.039 |           95.661 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q3         | TST     |      1.000 |       38.495 |           38.495 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q3         | WASO    |      1.000 |       65.718 |           65.718 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q4 (best)  | N1%     |      0.818 |       16.064 |           42.337 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q4 (best)  | N2%     |      1.000 |       30.264 |           30.264 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q4 (best)  | N3%     |      1.000 |       26.045 |           26.045 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q4 (best)  | REM%    |      0.909 |       22.094 |           23.533 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q4 (best)  | REML    |      0.909 |      116.613 |          147.283 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q4 (best)  | SOL     |      1.000 |       21.597 |           21.597 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q4 (best)  | TST     |      0.818 |       39.018 |           42.754 |   11 |
-| lgbm_sc_s0 | ST       | proposed         | Q4 (best)  | WASO    |      0.818 |       67.719 |          142.362 |   11 |
-| lgbm_sc_s0 | HMC      | dfloa            | all        | all     |      0.899 |       74.789 |          118.647 | 1207 |
-| lgbm_sc_s0 | HMC      | mondrian_entropy | all        | all     |      0.907 |       69.905 |          101.217 | 1207 |
-| lgbm_sc_s0 | HMC      | mondrian_sd      | all        | all     |      0.907 |       70.068 |          101.860 | 1207 |
-| lgbm_sc_s0 | HMC      | proposed         | all        | all     |      0.901 |       67.733 |          116.124 | 1207 |
-| lgbm_sc_s0 | SC       | dfloa            | all        | all     |      0.899 |       47.362 |           88.728 | 1224 |
-| lgbm_sc_s0 | SC       | mondrian_entropy | all        | all     |      0.906 |       54.987 |           85.310 | 1224 |
-| lgbm_sc_s0 | SC       | mondrian_sd      | all        | all     |      0.908 |       55.245 |           82.203 | 1224 |
-| lgbm_sc_s0 | SC       | proposed         | all        | all     |      0.902 |       53.867 |           85.906 | 1224 |
-| lgbm_sc_s0 | ST       | dfloa            | all        | all     |      0.889 |       49.671 |           67.984 |  352 |
-| lgbm_sc_s0 | ST       | mondrian_entropy | all        | all     |      0.889 |       42.595 |           59.625 |  352 |
-| lgbm_sc_s0 | ST       | mondrian_sd      | all        | all     |      0.898 |       42.253 |           55.785 |  352 |
-| lgbm_sc_s0 | ST       | proposed         | all        | all     |      0.903 |       43.435 |           58.793 |  352 |
+    stager cohort           method     subset param  coverage  mean_width  interval_score    n
+      yasa    HMC            dfloa Q1 (worst)   all    0.7566     59.6764        184.1860  304
+      yasa    HMC            dfloa         Q2   all    0.9408     60.5950         82.2918  304
+      yasa    HMC            dfloa         Q3   all    0.9426     60.1924         90.6025  296
+      yasa    HMC            dfloa  Q4 (best)   all    0.9604     59.9120         83.9804  303
+      yasa    HMC mondrian_entropy Q1 (worst)   all    0.8355     73.1832        120.9567  304
+      yasa    HMC mondrian_entropy         Q2   all    0.9375     64.6467         80.9119  304
+      yasa    HMC mondrian_entropy         Q3   all    0.9291     56.3251         80.0568  296
+      yasa    HMC mondrian_entropy  Q4 (best)   all    0.9274     50.4095         90.2960  303
+      yasa    HMC      mondrian_sd Q1 (worst)   all    0.8388     71.3194        118.2071  304
+      yasa    HMC      mondrian_sd         Q2   all    0.9276     60.5736         81.3449  304
+      yasa    HMC      mondrian_sd         Q3   all    0.9324     59.5846         77.8779  296
+      yasa    HMC      mondrian_sd  Q4 (best)   all    0.9307     57.8414         86.0555  303
+      yasa    HMC         proposed Q1 (worst)   all    0.8125     58.9921        135.2573  304
+      yasa    HMC         proposed         Q2   all    0.9178     55.4495         87.3525  304
+      yasa    HMC         proposed         Q3   all    0.9392     55.5481         82.9160  296
+      yasa    HMC         proposed  Q4 (best)   all    0.9340     54.6646         95.2596  303
+      yasa     SC            dfloa Q1 (worst)   all    0.7906     60.2742        130.1020  320
+      yasa     SC            dfloa         Q2   all    0.8986     59.9580        119.7956  296
+      yasa     SC            dfloa         Q3   all    0.9507     56.8599         71.3777  304
+      yasa     SC            dfloa  Q4 (best)   all    0.9605     56.7319         89.8187  304
+      yasa     SC mondrian_entropy Q1 (worst)   all    0.8438     68.6602        107.7543  320
+      yasa     SC mondrian_entropy         Q2   all    0.9122     66.8138        102.8969  296
+      yasa     SC mondrian_entropy         Q3   all    0.9441     62.5137         80.3146  304
+      yasa     SC mondrian_entropy  Q4 (best)   all    0.9375     63.8802        105.7160  304
+      yasa     SC      mondrian_sd Q1 (worst)   all    0.8344     68.6409        108.2382  320
+      yasa     SC      mondrian_sd         Q2   all    0.8919     68.2225        105.0842  296
+      yasa     SC      mondrian_sd         Q3   all    0.9507     64.5194         78.9967  304
+      yasa     SC      mondrian_sd  Q4 (best)   all    0.9572     66.3274         94.0265  304
+      yasa     SC         proposed Q1 (worst)   all    0.8094     64.1192        113.9395  320
+      yasa     SC         proposed         Q2   all    0.9122     64.9262        103.8236  296
+      yasa     SC         proposed         Q3   all    0.9539     63.5844         79.9006  304
+      yasa     SC         proposed  Q4 (best)   all    0.9342     65.4694        106.2018  304
+      yasa     ST            dfloa Q1 (worst)   all    0.7841     45.7054         89.9635   88
+      yasa     ST            dfloa         Q2   all    0.8750     44.0212         61.1295   88
+      yasa     ST            dfloa         Q3   all    0.9545     46.0465         52.2012   88
+      yasa     ST            dfloa  Q4 (best)   all    0.9886     46.8554         48.3490   88
+      yasa     ST mondrian_entropy Q1 (worst)   all    0.8636     46.3367         62.1819   88
+      yasa     ST mondrian_entropy         Q2   all    0.8636     42.0805         62.3241   88
+      yasa     ST mondrian_entropy         Q3   all    0.9091     44.3170         59.7190   88
+      yasa     ST mondrian_entropy  Q4 (best)   all    0.9432     44.4408         55.1388   88
+      yasa     ST      mondrian_sd Q1 (worst)   all    0.8295     44.5551         67.4029   88
+      yasa     ST      mondrian_sd         Q2   all    0.9205     40.6828         56.9669   88
+      yasa     ST      mondrian_sd         Q3   all    0.9205     42.2348         62.7836   88
+      yasa     ST      mondrian_sd  Q4 (best)   all    0.9432     42.9340         55.0143   88
+      yasa     ST         proposed Q1 (worst)   all    0.8409     44.1147         62.8744   88
+      yasa     ST         proposed         Q2   all    0.9091     40.3700         61.2197   88
+      yasa     ST         proposed         Q3   all    0.9318     42.1349         61.1477   88
+      yasa     ST         proposed  Q4 (best)   all    0.9432     42.8596         52.4890   88
+      yasa    HMC            dfloa Q1 (worst)   N1%    0.7368     22.9405         75.8779   38
+      yasa    HMC            dfloa Q1 (worst)   N2%    0.7632     29.5347         82.6820   38
+      yasa    HMC            dfloa Q1 (worst)   N3%    0.6842     22.9796         51.9945   38
+      yasa    HMC            dfloa Q1 (worst)  REM%    0.7368     16.7798         42.5759   38
+      yasa    HMC            dfloa Q1 (worst)  REML    0.8947    179.2259        330.5540   38
+      yasa    HMC            dfloa Q1 (worst)   SOL    0.8421     20.3239         59.6221   38
+      yasa    HMC            dfloa Q1 (worst)   TST    0.6579     97.6804        455.3119   38
+      yasa    HMC            dfloa Q1 (worst)  WASO    0.7368     87.9467        374.8695   38
+      yasa    HMC            dfloa         Q2   N1%    0.9211     23.4954         28.2590   38
+      yasa    HMC            dfloa         Q2   N2%    0.9474     29.6115         36.3805   38
+      yasa    HMC            dfloa         Q2   N3%    0.9211     23.3534         31.1283   38
+      yasa    HMC            dfloa         Q2  REM%    0.9474     17.4992         19.4382   38
+      yasa    HMC            dfloa         Q2  REML    0.8947    186.1387        274.7823   38
+      yasa    HMC            dfloa         Q2   SOL    0.9474     19.8314         25.6209   38
+      yasa    HMC            dfloa         Q2   TST    0.9737    101.3030        134.1977   38
+      yasa    HMC            dfloa         Q2  WASO    0.9737     83.5274        108.5274   38
+      yasa    HMC            dfloa         Q3   N1%    0.9730     23.6940         30.9899   37
+      yasa    HMC            dfloa         Q3   N2%    0.9189     29.5799         32.5590   37
+      yasa    HMC            dfloa         Q3   N3%    0.9730     23.8909         24.6145   37
+      yasa    HMC            dfloa         Q3  REM%    0.9459     17.7807         21.7536   37
+      yasa    HMC            dfloa         Q3  REML    0.9189    183.2492        309.6559   37
+      yasa    HMC            dfloa         Q3   SOL    0.8919     19.9472         65.3454   37
+      yasa    HMC            dfloa         Q3   TST    0.9730    101.3371        121.0668   37
+      yasa    HMC            dfloa         Q3  WASO    0.9459     82.0600        118.8348   37
+      yasa    HMC            dfloa  Q4 (best)   N1%    0.9737     22.5769         23.0522   38
+      yasa    HMC            dfloa  Q4 (best)   N2%    0.9737     29.5740         29.7945   38
+      yasa    HMC            dfloa  Q4 (best)   N3%    1.0000     24.0665         24.0665   38
+      yasa    HMC            dfloa  Q4 (best)  REM%    0.9737     17.6010         17.8155   38
+      yasa    HMC            dfloa  Q4 (best)  REML    0.8919    189.7472        329.1559   37
+      yasa    HMC            dfloa  Q4 (best)   SOL    0.9211     20.8567         54.0146   38
+      yasa    HMC            dfloa  Q4 (best)   TST    1.0000    101.8179        101.8179   38
+      yasa    HMC            dfloa  Q4 (best)  WASO    0.9474     76.4726         98.5779   38
+      yasa    HMC mondrian_entropy Q1 (worst)   N1%    0.8158     26.4214         56.8345   38
+      yasa    HMC mondrian_entropy Q1 (worst)   N2%    0.8684     27.8234         43.6524   38
+      yasa    HMC mondrian_entropy Q1 (worst)   N3%    0.8158     30.5106         43.2764   38
+      yasa    HMC mondrian_entropy Q1 (worst)  REM%    0.8158     24.9570         34.9195   38
+      yasa    HMC mondrian_entropy Q1 (worst)  REML    0.8684    207.4999        325.1066   38
+      yasa    HMC mondrian_entropy Q1 (worst)   SOL    0.9474     23.0511         27.1147   38
+      yasa    HMC mondrian_entropy Q1 (worst)   TST    0.7632    137.7889        241.7716   38
+      yasa    HMC mondrian_entropy Q1 (worst)  WASO    0.7895    107.4131        194.9781   38
+      yasa    HMC mondrian_entropy         Q2   N1%    0.9474     23.7877         28.4972   38
+      yasa    HMC mondrian_entropy         Q2   N2%    0.9211     27.1845         30.5733   38
+      yasa    HMC mondrian_entropy         Q2   N3%    0.9474     29.4810         33.0276   38
+      yasa    HMC mondrian_entropy         Q2  REM%    0.9211     23.4045         24.5002   38
+      yasa    HMC mondrian_entropy         Q2  REML    0.9474    183.2638        249.9547   38
+      yasa    HMC mondrian_entropy         Q2   SOL    0.9474     21.2327         32.8107   38
+      yasa    HMC mondrian_entropy         Q2   TST    0.9211    117.3545        136.0952   38
+      yasa    HMC mondrian_entropy         Q2  WASO    0.9474     91.4646        111.8362   38
+      yasa    HMC mondrian_entropy         Q3   N1%    0.9189     20.0399         25.9426   37
+      yasa    HMC mondrian_entropy         Q3   N2%    0.9459     26.6663         27.4975   37
+      yasa    HMC mondrian_entropy         Q3   N3%    0.9459     29.7788         32.1476   37
+      yasa    HMC mondrian_entropy         Q3  REM%    0.9189     21.8529         25.6975   37
+      yasa    HMC mondrian_entropy         Q3  REML    0.9189    170.7101        258.7036   37
+      yasa    HMC mondrian_entropy         Q3   SOL    0.8919     18.8385         52.2267   37
+      yasa    HMC mondrian_entropy         Q3   TST    0.9459     87.7882        116.0913   37
+      yasa    HMC mondrian_entropy         Q3  WASO    0.9459     74.9262        102.1473   37
+      yasa    HMC mondrian_entropy  Q4 (best)   N1%    0.9474     18.4140         19.3849   38
+      yasa    HMC mondrian_entropy  Q4 (best)   N2%    0.8947     27.4717         37.8008   38
+      yasa    HMC mondrian_entropy  Q4 (best)   N3%    0.9211     31.3408         35.0856   38
+      yasa    HMC mondrian_entropy  Q4 (best)  REM%    0.9737     20.6179         20.9510   38
+      yasa    HMC mondrian_entropy  Q4 (best)  REML    0.8919    154.8546        248.2593   37
+      yasa    HMC mondrian_entropy  Q4 (best)   SOL    0.8421     16.7565        154.6715   38
+      yasa    HMC mondrian_entropy  Q4 (best)   TST    1.0000     72.3303         72.3303   38
+      yasa    HMC mondrian_entropy  Q4 (best)  WASO    0.9474     64.2385        138.0412   38
+      yasa    HMC      mondrian_sd Q1 (worst)   N1%    0.7895     23.1857         66.1328   38
+      yasa    HMC      mondrian_sd Q1 (worst)   N2%    0.8684     28.1667         44.1208   38
+      yasa    HMC      mondrian_sd Q1 (worst)   N3%    0.8158     31.0038         43.4716   38
+      yasa    HMC      mondrian_sd Q1 (worst)  REM%    0.7632     23.5047         40.4773   38
+      yasa    HMC      mondrian_sd Q1 (worst)  REML    0.8684    191.3186        309.8731   38
+      yasa    HMC      mondrian_sd Q1 (worst)   SOL    0.9474     24.4439         25.1415   38
+      yasa    HMC      mondrian_sd Q1 (worst)   TST    0.7895    131.5921        239.6180   38
+      yasa    HMC      mondrian_sd Q1 (worst)  WASO    0.8684    117.3402        176.8220   38
+      yasa    HMC      mondrian_sd         Q2   N1%    0.9211     21.8850         28.3547   38
+      yasa    HMC      mondrian_sd         Q2   N2%    0.9474     27.4412         31.0588   38
+      yasa    HMC      mondrian_sd         Q2   N3%    0.9474     29.8903         34.0067   38
+      yasa    HMC      mondrian_sd         Q2  REM%    0.9737     22.7588         24.6298   38
+      yasa    HMC      mondrian_sd         Q2  REML    0.8947    161.4272        269.9908   38
+      yasa    HMC      mondrian_sd         Q2   SOL    0.8947     23.1895         26.5980   38
+      yasa    HMC      mondrian_sd         Q2   TST    0.9211    100.8358        122.6377   38
+      yasa    HMC      mondrian_sd         Q2  WASO    0.9211     97.1614        113.4830   38
+      yasa    HMC      mondrian_sd         Q3   N1%    0.9189     19.9125         23.7502   37
+      yasa    HMC      mondrian_sd         Q3   N2%    0.9459     26.8109         28.0755   37
+      yasa    HMC      mondrian_sd         Q3   N3%    0.9730     29.9790         32.1395   37
+      yasa    HMC      mondrian_sd         Q3  REM%    0.9189     21.5707         27.0478   37
+      yasa    HMC      mondrian_sd         Q3  REML    0.9459    174.6835        252.9491   37
+      yasa    HMC      mondrian_sd         Q3   SOL    0.8649     21.5417         34.6246   37
+      yasa    HMC      mondrian_sd         Q3   TST    0.9459     95.7712        116.2103   37
+      yasa    HMC      mondrian_sd         Q3  WASO    0.9459     86.4075        108.2261   37
+      yasa    HMC      mondrian_sd  Q4 (best)   N1%    1.0000     20.1366         20.1366   38
+      yasa    HMC      mondrian_sd  Q4 (best)   N2%    0.8684     27.0554         38.2276   38
+      yasa    HMC      mondrian_sd  Q4 (best)   N3%    0.8947     31.2120         36.0340   38
+      yasa    HMC      mondrian_sd  Q4 (best)  REM%    0.9737     21.0559         21.1541   38
+      yasa    HMC      mondrian_sd  Q4 (best)  REML    0.9189    173.0763        254.2287   37
+      yasa    HMC      mondrian_sd  Q4 (best)   SOL    0.9211     23.1296        125.6106   38
+      yasa    HMC      mondrian_sd  Q4 (best)   TST    0.9737     77.7150         77.9937   38
+      yasa    HMC      mondrian_sd  Q4 (best)  WASO    0.8947     92.3828        119.4841   38
+      yasa    HMC         proposed Q1 (worst)   N1%    0.7632     22.5242         68.2104   38
+      yasa    HMC         proposed Q1 (worst)   N2%    0.8684     27.4100         43.4367   38
+      yasa    HMC         proposed Q1 (worst)   N3%    0.8158     30.3012         42.7703   38
+      yasa    HMC         proposed Q1 (worst)  REM%    0.7632     22.0308         38.2831   38
+      yasa    HMC         proposed Q1 (worst)  REML    0.8684    182.1443        356.0474   38
+      yasa    HMC         proposed Q1 (worst)   SOL    0.9211     20.6724         33.9326   38
+      yasa    HMC         proposed Q1 (worst)   TST    0.7632     87.1272        255.3405   38
+      yasa    HMC         proposed Q1 (worst)  WASO    0.7368     79.7269        244.0375   38
+      yasa    HMC         proposed         Q2   N1%    0.9211     21.5135         27.0816   38
+      yasa    HMC         proposed         Q2   N2%    0.9211     26.5246         30.1759   38
+      yasa    HMC         proposed         Q2   N3%    0.9474     29.0627         33.1259   38
+      yasa    HMC         proposed         Q2  REM%    0.9474     21.0886         22.7951   38
+      yasa    HMC         proposed         Q2  REML    0.8421    170.8443        321.9927   38
+      yasa    HMC         proposed         Q2   SOL    0.8947     20.1253         44.7294   38
+      yasa    HMC         proposed         Q2   TST    0.9211     81.4606        114.4251   38
+      yasa    HMC         proposed         Q2  WASO    0.9474     72.9768        104.4941   38
+      yasa    HMC         proposed         Q3   N1%    0.9189     19.9381         22.3166   37
+      yasa    HMC         proposed         Q3   N2%    0.9459     25.5873         26.8520   37
+      yasa    HMC         proposed         Q3   N3%    0.9459     29.0088         31.1210   37
+      yasa    HMC         proposed         Q3  REM%    0.9189     20.4506         25.3753   37
+      yasa    HMC         proposed         Q3  REML    0.9730    178.0938        272.2839   37
+      yasa    HMC         proposed         Q3   SOL    0.8919     19.9824         54.4343   37
+      yasa    HMC         proposed         Q3   TST    0.9459     78.3452        123.7734   37
+      yasa    HMC         proposed         Q3  WASO    0.9730     72.9784        107.1714   37
+      yasa    HMC         proposed  Q4 (best)   N1%    1.0000     19.9462         19.9462   38
+      yasa    HMC         proposed  Q4 (best)   N2%    0.8684     26.0916         37.2987   38
+      yasa    HMC         proposed  Q4 (best)   N3%    0.8947     30.3673         35.1037   38
+      yasa    HMC         proposed  Q4 (best)  REM%    0.9737     19.9711         20.1561   38
+      yasa    HMC         proposed  Q4 (best)  REML    0.9189    179.1048        286.8144   37
+      yasa    HMC         proposed  Q4 (best)   SOL    0.8947     19.7500        151.4966   38
+      yasa    HMC         proposed  Q4 (best)   TST    0.9737     75.5965         85.4178   38
+      yasa    HMC         proposed  Q4 (best)  WASO    0.9474     69.7642        130.8842   38
+      yasa     SC            dfloa Q1 (worst)   N1%    0.7250     25.0626         83.1411   40
+      yasa     SC            dfloa Q1 (worst)   N2%    0.7000     35.7286        103.5758   40
+      yasa     SC            dfloa Q1 (worst)   N3%    0.8000     12.2345         45.1925   40
+      yasa     SC            dfloa Q1 (worst)  REM%    0.8000     18.0511         62.0062   40
+      yasa     SC            dfloa Q1 (worst)  REML    0.9000    139.6558        161.1575   40
+      yasa     SC            dfloa Q1 (worst)   SOL    0.8000     27.1386         94.5508   40
+      yasa     SC            dfloa Q1 (worst)   TST    0.7250     98.8281        331.8116   40
+      yasa     SC            dfloa Q1 (worst)  WASO    0.8750    125.4945        159.3802   40
+      yasa     SC            dfloa         Q2   N1%    0.9189     25.1767         27.9541   37
+      yasa     SC            dfloa         Q2   N2%    0.9189     35.9297         42.6611   37
+      yasa     SC            dfloa         Q2   N3%    0.8919     15.4079         19.6994   37
+      yasa     SC            dfloa         Q2  REM%    0.8649     18.2301         25.6391   37
+      yasa     SC            dfloa         Q2  REML    0.8378    142.6449        402.0685   37
+      yasa     SC            dfloa         Q2   SOL    0.9459     24.6615         42.5459   37
+      yasa     SC            dfloa         Q2   TST    0.9189     98.9711        121.6309   37
+      yasa     SC            dfloa         Q2  WASO    0.8919    118.6421        276.1656   37
+      yasa     SC            dfloa         Q3   N1%    0.9737     25.2652         25.4133   38
+      yasa     SC            dfloa         Q3   N2%    1.0000     36.1247         36.1247   38
+      yasa     SC            dfloa         Q3   N3%    0.9474     14.8705         18.9574   38
+      yasa     SC            dfloa         Q3  REM%    0.9737     18.3300         19.9288   38
+      yasa     SC            dfloa         Q3  REML    0.8947    138.8640        168.0745   38
+      yasa     SC            dfloa         Q3   SOL    0.8947     21.4123         67.5712   38
+      yasa     SC            dfloa         Q3   TST    1.0000     99.1971         99.1971   38
+      yasa     SC            dfloa         Q3  WASO    0.9211    100.8154        135.7544   38
+      yasa     SC            dfloa  Q4 (best)   N1%    0.9737     24.8769         27.7490   38
+      yasa     SC            dfloa  Q4 (best)   N2%    1.0000     36.1442         36.1442   38
+      yasa     SC            dfloa  Q4 (best)   N3%    0.9474     15.9575         16.2562   38
+      yasa     SC            dfloa  Q4 (best)  REM%    0.9737     18.3766         18.6251   38
+      yasa     SC            dfloa  Q4 (best)  REML    0.9474    145.3641        164.9685   38
+      yasa     SC            dfloa  Q4 (best)   SOL    0.9474     23.9796         56.4735   38
+      yasa     SC            dfloa  Q4 (best)   TST    1.0000     98.8855         98.8855   38
+      yasa     SC            dfloa  Q4 (best)  WASO    0.8947     90.2705        299.4474   38
+      yasa     SC mondrian_entropy Q1 (worst)   N1%    0.7500     31.0058         78.1079   40
+      yasa     SC mondrian_entropy Q1 (worst)   N2%    0.7750     35.2432         65.7237   40
+      yasa     SC mondrian_entropy Q1 (worst)   N3%    0.8000     14.6574         28.4272   40
+      yasa     SC mondrian_entropy Q1 (worst)  REM%    0.8250     26.2158         49.8240   40
+      yasa     SC mondrian_entropy Q1 (worst)  REML    0.9500     94.6188        106.2806   40
+      yasa     SC mondrian_entropy Q1 (worst)   SOL    0.8750     30.7298         40.8140   40
+      yasa     SC mondrian_entropy Q1 (worst)   TST    0.8000    109.5393        272.7183   40
+      yasa     SC mondrian_entropy Q1 (worst)  WASO    0.9750    207.2711        220.1387   40
+      yasa     SC mondrian_entropy         Q2   N1%    0.9459     27.6252         28.9815   37
+      yasa     SC mondrian_entropy         Q2   N2%    0.8919     32.4416         36.2738   37
+      yasa     SC mondrian_entropy         Q2   N3%    0.9459     16.5171         21.3105   37
+      yasa     SC mondrian_entropy         Q2  REM%    0.9189     23.7276         33.0437   37
+      yasa     SC mondrian_entropy         Q2  REML    0.8649     96.4590        295.6353   37
+      yasa     SC mondrian_entropy         Q2   SOL    0.9189     28.1520         40.8461   37
+      yasa     SC mondrian_entropy         Q2   TST    0.8919     92.7031        108.7015   37
+      yasa     SC mondrian_entropy         Q2  WASO    0.9189    216.8849        258.3829   37
+      yasa     SC mondrian_entropy         Q3   N1%    0.9474     24.4358         26.4542   38
+      yasa     SC mondrian_entropy         Q3   N2%    1.0000     29.4007         29.4007   38
+      yasa     SC mondrian_entropy         Q3   N3%    0.9737     15.5695         18.8477   38
+      yasa     SC mondrian_entropy         Q3  REM%    0.9211     22.2003         26.3237   38
+      yasa     SC mondrian_entropy         Q3  REML    0.9211     89.6258        126.9920   38
+      yasa     SC mondrian_entropy         Q3   SOL    0.9211     21.9409         64.8015   38
+      yasa     SC mondrian_entropy         Q3   TST    0.9474     70.9098         77.3724   38
+      yasa     SC mondrian_entropy         Q3  WASO    0.9211    226.0273        272.3249   38
+      yasa     SC mondrian_entropy  Q4 (best)   N1%    1.0000     23.5764         23.5764   38
+      yasa     SC mondrian_entropy  Q4 (best)   N2%    0.9737     29.9942         30.2950   38
+      yasa     SC mondrian_entropy  Q4 (best)   N3%    0.9211     16.8054         20.9200   38
+      yasa     SC mondrian_entropy  Q4 (best)  REM%    0.9737     22.5560         23.9543   38
+      yasa     SC mondrian_entropy  Q4 (best)  REML    0.8947     84.7738        108.7463   38
+      yasa     SC mondrian_entropy  Q4 (best)   SOL    0.9211     27.9163         82.3554   38
+      yasa     SC mondrian_entropy  Q4 (best)   TST    1.0000     65.0430         65.0430   38
+      yasa     SC mondrian_entropy  Q4 (best)  WASO    0.8158    240.3764        490.8379   38
+      yasa     SC      mondrian_sd Q1 (worst)   N1%    0.7250     32.3681         66.7274   40
+      yasa     SC      mondrian_sd Q1 (worst)   N2%    0.8000     39.6252         60.5009   40
+      yasa     SC      mondrian_sd Q1 (worst)   N3%    0.8250     14.2934         26.4197   40
+      yasa     SC      mondrian_sd Q1 (worst)  REM%    0.8250     27.6686         49.4283   40
+      yasa     SC      mondrian_sd Q1 (worst)  REML    0.8750     82.8034        111.0715   40
+      yasa     SC      mondrian_sd Q1 (worst)   SOL    0.9000     35.6266         41.1531   40
+      yasa     SC      mondrian_sd Q1 (worst)   TST    0.8000    120.4966        270.4588   40
+      yasa     SC      mondrian_sd Q1 (worst)  WASO    0.9250    196.2453        240.1460   40
+      yasa     SC      mondrian_sd         Q2   N1%    0.9730     28.5251         28.6471   37
+      yasa     SC      mondrian_sd         Q2   N2%    0.8649     34.8339         41.8655   37
+      yasa     SC      mondrian_sd         Q2   N3%    0.8919     17.2681         22.6776   37
+      yasa     SC      mondrian_sd         Q2  REM%    0.8919     24.5370         33.2756   37
+      yasa     SC      mondrian_sd         Q2  REML    0.8378     89.5026        266.0222   37
+      yasa     SC      mondrian_sd         Q2   SOL    0.8919     29.7560         35.3001   37
+      yasa     SC      mondrian_sd         Q2   TST    0.8649    104.9829        131.3252   37
+      yasa     SC      mondrian_sd         Q2  WASO    0.9189    216.3741        281.5605   37
+      yasa     SC      mondrian_sd         Q3   N1%    0.9474     25.5353         27.5537   38
+      yasa     SC      mondrian_sd         Q3   N2%    1.0000     31.0296         31.0296   38
+      yasa     SC      mondrian_sd         Q3   N3%    0.9737     17.0675         19.1787   38
+      yasa     SC      mondrian_sd         Q3  REM%    0.9474     22.7754         27.2404   38
+      yasa     SC      mondrian_sd         Q3  REML    0.9474     84.7555        122.8033   38
+      yasa     SC      mondrian_sd         Q3   SOL    0.8947     20.5538         57.6176   38
+      yasa     SC      mondrian_sd         Q3   TST    0.9474     76.3696         81.7735   38
+      yasa     SC      mondrian_sd         Q3  WASO    0.9474    238.0683        264.7771   38
+      yasa     SC      mondrian_sd  Q4 (best)   N1%    1.0000     24.5213         24.5213   38
+      yasa     SC      mondrian_sd  Q4 (best)   N2%    0.9737     34.1528         34.4535   38
+      yasa     SC      mondrian_sd  Q4 (best)   N3%    0.9474     18.6207         19.4336   38
+      yasa     SC      mondrian_sd  Q4 (best)  REM%    0.9737     23.2539         24.8264   38
+      yasa     SC      mondrian_sd  Q4 (best)  REML    0.9737     74.1131         74.7695   38
+      yasa     SC      mondrian_sd  Q4 (best)   SOL    0.9474     29.7533         70.6914   38
+      yasa     SC      mondrian_sd  Q4 (best)   TST    1.0000     60.2648         60.2648   38
+      yasa     SC      mondrian_sd  Q4 (best)  WASO    0.8421    265.9390        443.2517   38
+      yasa     SC         proposed Q1 (worst)   N1%    0.6750     29.0708         78.6491   40
+      yasa     SC         proposed Q1 (worst)   N2%    0.7500     33.9653         66.8153   40
+      yasa     SC         proposed Q1 (worst)   N3%    0.8000     14.0152         29.1864   40
+      yasa     SC         proposed Q1 (worst)  REM%    0.7750     25.0287         49.7456   40
+      yasa     SC         proposed Q1 (worst)  REML    0.9000     90.9502        104.7650   40
+      yasa     SC         proposed Q1 (worst)   SOL    0.8750     29.9533         40.8693   40
+      yasa     SC         proposed Q1 (worst)   TST    0.7500     86.7309        316.8515   40
+      yasa     SC         proposed Q1 (worst)  WASO    0.9500    203.2391        224.6336   40
+      yasa     SC         proposed         Q2   N1%    0.9730     26.6485         28.7583   37
+      yasa     SC         proposed         Q2   N2%    0.8919     32.9573         37.8028   37
+      yasa     SC         proposed         Q2   N3%    0.9459     15.8824         21.1642   37
+      yasa     SC         proposed         Q2  REM%    0.9189     23.0283         32.0793   37
+      yasa     SC         proposed         Q2  REML    0.8649     94.9421        294.4725   37
+      yasa     SC         proposed         Q2   SOL    0.9189     27.2963         40.3402   37
+      yasa     SC         proposed         Q2   TST    0.8919     82.4598        100.8367   37
+      yasa     SC         proposed         Q2  WASO    0.8919    216.1947        275.1344   37
+      yasa     SC         proposed         Q3   N1%    0.9737     24.6194         25.2060   38
+      yasa     SC         proposed         Q3   N2%    1.0000     31.6819         31.6819   38
+      yasa     SC         proposed         Q3   N3%    0.9474     15.2005         18.7634   38
+      yasa     SC         proposed         Q3  REM%    0.9474     21.8449         25.7357   38
+      yasa     SC         proposed         Q3  REML    0.9211     89.4419        122.8869   38
+      yasa     SC         proposed         Q3   SOL    0.8947     21.1711         64.5927   38
+      yasa     SC         proposed         Q3   TST    1.0000     74.1215         74.1215   38
+      yasa     SC         proposed         Q3  WASO    0.9474    230.5940        276.2165   38
+      yasa     SC         proposed  Q4 (best)   N1%    1.0000     24.0768         24.0768   38
+      yasa     SC         proposed  Q4 (best)   N2%    0.9737     32.7698         33.1288   38
+      yasa     SC         proposed  Q4 (best)   N3%    0.9211     16.5211         20.7196   38
+      yasa     SC         proposed  Q4 (best)  REM%    0.9474     22.2670         23.6396   38
+      yasa     SC         proposed  Q4 (best)  REML    0.9211     85.9500         96.9210   38
+      yasa     SC         proposed  Q4 (best)   SOL    0.9211     26.8758         82.0609   38
+      yasa     SC         proposed  Q4 (best)   TST    0.9737     71.8911         74.1229   38
+      yasa     SC         proposed  Q4 (best)  WASO    0.8158    243.4036        494.9447   38
+      yasa     ST            dfloa Q1 (worst)   N1%    0.8182     14.9819         24.4841   11
+      yasa     ST            dfloa Q1 (worst)   N2%    0.7273     31.7752         69.3504   11
+      yasa     ST            dfloa Q1 (worst)   N3%    0.8182     28.4304         37.6966   11
+      yasa     ST            dfloa Q1 (worst)  REM%    0.8182     20.6113         29.2421   11
+      yasa     ST            dfloa Q1 (worst)  REML    1.0000    169.8268        169.8268   11
+      yasa     ST            dfloa Q1 (worst)   SOL    0.9091     12.1580         23.0671   11
+      yasa     ST            dfloa Q1 (worst)   TST    0.6364     56.2489        195.3398   11
+      yasa     ST            dfloa Q1 (worst)  WASO    0.5455     31.6104        170.7013   11
+      yasa     ST            dfloa         Q2   N1%    0.8182     15.2607         20.8372   11
+      yasa     ST            dfloa         Q2   N2%    0.9091     32.5756         39.1169   11
+      yasa     ST            dfloa         Q2   N3%    0.8182     27.6399         36.9729   11
+      yasa     ST            dfloa         Q2  REM%    0.8182     20.5849         37.7761   11
+      yasa     ST            dfloa         Q2  REML    0.7273    159.9329        253.4827   11
+      yasa     ST            dfloa         Q2   SOL    0.9091     11.3463         16.0216   11
+      yasa     ST            dfloa         Q2   TST    1.0000     59.4978         59.4978   11
+      yasa     ST            dfloa         Q2  WASO    1.0000     25.3312         25.3312   11
+      yasa     ST            dfloa         Q3   N1%    0.9091     15.3489         16.2527   11
+      yasa     ST            dfloa         Q3   N2%    1.0000     33.2008         33.2008   11
+      yasa     ST            dfloa         Q3   N3%    1.0000     26.5848         26.5848   11
+      yasa     ST            dfloa         Q3  REM%    0.9091     20.5841         27.0127   11
+      yasa     ST            dfloa         Q3  REML    0.9091    170.7792        210.8658   11
+      yasa     ST            dfloa         Q3   SOL    0.9091     11.7165         13.5346   11
+      yasa     ST            dfloa         Q3   TST    1.0000     58.6623         58.6623   11
+      yasa     ST            dfloa         Q3  WASO    1.0000     31.4957         31.4957   11
+      yasa     ST            dfloa  Q4 (best)   N1%    1.0000     15.3070         15.3070   11
+      yasa     ST            dfloa  Q4 (best)   N2%    1.0000     33.6229         33.6229   11
+      yasa     ST            dfloa  Q4 (best)   N3%    1.0000     29.2424         29.2424   11
+      yasa     ST            dfloa  Q4 (best)  REM%    1.0000     21.2795         21.2795   11
+      yasa     ST            dfloa  Q4 (best)  REML    1.0000    173.4437        173.4437   11
+      yasa     ST            dfloa  Q4 (best)   SOL    0.9091     11.3398         23.2879   11
+      yasa     ST            dfloa  Q4 (best)   TST    1.0000     59.4091         59.4091   11
+      yasa     ST            dfloa  Q4 (best)  WASO    1.0000     31.1991         31.1991   11
+      yasa     ST mondrian_entropy Q1 (worst)   N1%    1.0000     18.9331         18.9331   11
+      yasa     ST mondrian_entropy Q1 (worst)   N2%    0.7273     35.0772         59.3840   11
+      yasa     ST mondrian_entropy Q1 (worst)   N3%    0.7273     27.2818         38.6218   11
+      yasa     ST mondrian_entropy Q1 (worst)  REM%    0.8182     23.8075         30.8867   11
+      yasa     ST mondrian_entropy Q1 (worst)  REML    0.9091    123.4987        134.1966   11
+      yasa     ST mondrian_entropy Q1 (worst)   SOL    1.0000     23.0203         23.0203   11
+      yasa     ST mondrian_entropy Q1 (worst)   TST    0.8182     47.4507         83.5540   11
+      yasa     ST mondrian_entropy Q1 (worst)  WASO    0.9091     71.6243        108.8583   11
+      yasa     ST mondrian_entropy         Q2   N1%    0.8182     14.5395         21.6544   11
+      yasa     ST mondrian_entropy         Q2   N2%    0.8182     31.4539         36.2032   11
+      yasa     ST mondrian_entropy         Q2   N3%    0.8182     24.6848         28.3533   11
+      yasa     ST mondrian_entropy         Q2  REM%    0.9091     24.9026         35.4663   11
+      yasa     ST mondrian_entropy         Q2  REML    0.8182    146.2950        263.6469   11
+      yasa     ST mondrian_entropy         Q2   SOL    0.9091     16.6214         21.4503   11
+      yasa     ST mondrian_entropy         Q2   TST    0.9091     31.0842         35.4062   11
+      yasa     ST mondrian_entropy         Q2  WASO    0.9091     47.0622         56.4122   11
+      yasa     ST mondrian_entropy         Q3   N1%    0.8182     15.4333         32.0253   11
+      yasa     ST mondrian_entropy         Q3   N2%    1.0000     33.2475         33.2475   11
+      yasa     ST mondrian_entropy         Q3   N3%    1.0000     26.3403         26.3403   11
+      yasa     ST mondrian_entropy         Q3  REM%    0.8182     22.8292         26.4525   11
+      yasa     ST mondrian_entropy         Q3  REML    0.9091    148.0956        189.2919   11
+      yasa     ST mondrian_entropy         Q3   SOL    0.7273     18.6437         80.4484   11
+      yasa     ST mondrian_entropy         Q3   TST    1.0000     34.3279         34.3279   11
+      yasa     ST mondrian_entropy         Q3  WASO    1.0000     55.6183         55.6183   11
+      yasa     ST mondrian_entropy  Q4 (best)   N1%    1.0000     16.3287         16.3287   11
+      yasa     ST mondrian_entropy  Q4 (best)   N2%    1.0000     33.3967         33.3967   11
+      yasa     ST mondrian_entropy  Q4 (best)   N3%    1.0000     26.2629         26.2629   11
+      yasa     ST mondrian_entropy  Q4 (best)  REM%    1.0000     25.6710         25.6710   11
+      yasa     ST mondrian_entropy  Q4 (best)  REML    1.0000    153.6572        153.6572   11
+      yasa     ST mondrian_entropy  Q4 (best)   SOL    0.9091     17.1384         33.4804   11
+      yasa     ST mondrian_entropy  Q4 (best)   TST    0.9091     32.6446         43.3198   11
+      yasa     ST mondrian_entropy  Q4 (best)  WASO    0.7273     50.4272        108.9939   11
+      yasa     ST      mondrian_sd Q1 (worst)   N1%    0.8182     16.8686         19.8014   11
+      yasa     ST      mondrian_sd Q1 (worst)   N2%    0.8182     38.1113         49.1332   11
+      yasa     ST      mondrian_sd Q1 (worst)   N3%    0.7273     27.3391         37.1030   11
+      yasa     ST      mondrian_sd Q1 (worst)  REM%    0.8182     24.2253         31.4887   11
+      yasa     ST      mondrian_sd Q1 (worst)  REML    1.0000    127.5733        127.5733   11
+      yasa     ST      mondrian_sd Q1 (worst)   SOL    1.0000     22.6952         22.6952   11
+      yasa     ST      mondrian_sd Q1 (worst)   TST    0.7273     39.5248        115.6756   11
+      yasa     ST      mondrian_sd Q1 (worst)  WASO    0.7273     60.1028        135.7530   11
+      yasa     ST      mondrian_sd         Q2   N1%    0.9091     13.5141         16.5129   11
+      yasa     ST      mondrian_sd         Q2   N2%    0.8182     33.3726         35.0991   11
+      yasa     ST      mondrian_sd         Q2   N3%    0.9091     24.8372         26.8399   11
+      yasa     ST      mondrian_sd         Q2  REM%    0.9091     23.5036         34.0672   11
+      yasa     ST      mondrian_sd         Q2  REML    0.9091    129.2647        241.3152   11
+      yasa     ST      mondrian_sd         Q2   SOL    0.9091     14.1048         15.0357   11
+      yasa     ST      mondrian_sd         Q2   TST    1.0000     34.8062         34.8062   11
+      yasa     ST      mondrian_sd         Q2  WASO    1.0000     52.0591         52.0591   11
+      yasa     ST      mondrian_sd         Q3   N1%    0.9091     15.9787         25.3306   11
+      yasa     ST      mondrian_sd         Q3   N2%    1.0000     35.1388         35.1388   11
+      yasa     ST      mondrian_sd         Q3   N3%    1.0000     26.5810         26.5810   11
+      yasa     ST      mondrian_sd         Q3  REM%    0.8182     22.4856         26.1089   11
+      yasa     ST      mondrian_sd         Q3  REML    0.9091    125.9014        225.1334   11
+      yasa     ST      mondrian_sd         Q3   SOL    0.7273     15.0159         67.1988   11
+      yasa     ST      mondrian_sd         Q3   TST    1.0000     36.5357         36.5357   11
+      yasa     ST      mondrian_sd         Q3  WASO    1.0000     60.2417         60.2417   11
+      yasa     ST      mondrian_sd  Q4 (best)   N1%    1.0000     16.3529         16.3529   11
+      yasa     ST      mondrian_sd  Q4 (best)   N2%    1.0000     35.5225         35.5225   11
+      yasa     ST      mondrian_sd  Q4 (best)   N3%    1.0000     26.4747         26.4747   11
+      yasa     ST      mondrian_sd  Q4 (best)  REM%    1.0000     23.9920         23.9920   11
+      yasa     ST      mondrian_sd  Q4 (best)  REML    0.8182    118.4094        171.1167   11
+      yasa     ST      mondrian_sd  Q4 (best)   SOL    0.9091     16.3443         19.4547   11
+      yasa     ST      mondrian_sd  Q4 (best)   TST    0.9091     39.5622         50.2374   11
+      yasa     ST      mondrian_sd  Q4 (best)  WASO    0.9091     66.8143         96.9637   11
+      yasa     ST         proposed Q1 (worst)   N1%    0.9091     17.8852         20.9052   11
+      yasa     ST         proposed Q1 (worst)   N2%    0.7273     33.4478         53.7284   11
+      yasa     ST         proposed Q1 (worst)   N3%    0.7273     26.7248         34.7078   11
+      yasa     ST         proposed Q1 (worst)  REM%    0.8182     24.3986         31.1888   11
+      yasa     ST         proposed Q1 (worst)  REML    1.0000    130.7868        130.7868   11
+      yasa     ST         proposed Q1 (worst)   SOL    1.0000     23.0199         23.0199   11
+      yasa     ST         proposed Q1 (worst)   TST    0.7273     38.8942        106.9270   11
+      yasa     ST         proposed Q1 (worst)  WASO    0.8182     57.7604        101.7313   11
+      yasa     ST         proposed         Q2   N1%    0.8182     15.4954         27.2096   11
+      yasa     ST         proposed         Q2   N2%    0.9091     31.2969         32.2288   11
+      yasa     ST         proposed         Q2   N3%    0.9091     24.8904         25.0074   11
+      yasa     ST         proposed         Q2  REM%    0.9091     23.5787         34.1424   11
+      yasa     ST         proposed         Q2  REML    0.9091    128.3709        258.2719   11
+      yasa     ST         proposed         Q2   SOL    0.9091     19.1073         26.2280   11
+      yasa     ST         proposed         Q2   TST    1.0000     34.6553         34.6553   11
+      yasa     ST         proposed         Q2  WASO    0.9091     45.5653         52.0141   11
+      yasa     ST         proposed         Q3   N1%    0.9091     16.7250         30.9219   11
+      yasa     ST         proposed         Q3   N2%    1.0000     32.0340         32.0340   11
+      yasa     ST         proposed         Q3   N3%    1.0000     25.5908         25.5908   11
+      yasa     ST         proposed         Q3  REM%    0.9091     22.1978         24.3623   11
+      yasa     ST         proposed         Q3  REML    0.8182    129.7778        199.0948   11
+      yasa     ST         proposed         Q3   SOL    0.8182     20.7262         87.1500   11
+      yasa     ST         proposed         Q3   TST    1.0000     36.2692         36.2692   11
+      yasa     ST         proposed         Q3  WASO    1.0000     53.7585         53.7585   11
+      yasa     ST         proposed  Q4 (best)   N1%    1.0000     17.5479         17.5479   11
+      yasa     ST         proposed  Q4 (best)   N2%    1.0000     32.2180         32.2180   11
+      yasa     ST         proposed  Q4 (best)   N3%    1.0000     25.8539         25.8539   11
+      yasa     ST         proposed  Q4 (best)  REM%    1.0000     24.0624         24.0624   11
+      yasa     ST         proposed  Q4 (best)  REML    0.9091    127.2273        154.0092   11
+      yasa     ST         proposed  Q4 (best)   SOL    0.9091     20.4861         25.9854   11
+      yasa     ST         proposed  Q4 (best)   TST    0.8182     36.4202         44.5335   11
+      yasa     ST         proposed  Q4 (best)  WASO    0.9091     59.0608         95.7013   11
+      yasa    HMC            dfloa        all   all    0.8998     60.0935        110.4173 1207
+      yasa    HMC mondrian_entropy        all   all    0.9072     61.1819         93.1438 1207
+      yasa    HMC      mondrian_sd        all   all    0.9072     62.3517         90.9615 1207
+      yasa    HMC         proposed        all   all    0.9006     56.1689        100.3150 1207
+      yasa     SC            dfloa        all   all    0.8987     58.4699        103.0194 1224
+      yasa     SC mondrian_entropy        all   all    0.9085     65.4999         99.2583 1224
+      yasa     SC      mondrian_sd        all   all    0.9077     66.9415         96.6832 1224
+      yasa     SC         proposed        all   all    0.9011     64.5169        101.1173 1224
+      yasa     ST            dfloa        all   all    0.9006     45.6571         62.9108  352
+      yasa     ST mondrian_entropy        all   all    0.8949     44.2937         59.8409  352
+      yasa     ST      mondrian_sd        all   all    0.9034     42.6017         60.5419  352
+      yasa     ST         proposed        all   all    0.9062     42.3698         59.4327  352
+lgbm_sc_s0    HMC            dfloa Q1 (worst)   all    0.7993     75.0553        159.5887  304
+lgbm_sc_s0    HMC            dfloa         Q2   all    0.9013     74.9179        117.5057  304
+lgbm_sc_s0    HMC            dfloa         Q3   all    0.9153     74.5273        115.8129  295
+lgbm_sc_s0    HMC            dfloa  Q4 (best)   all    0.9803     74.6466         81.5975  304
+lgbm_sc_s0    HMC mondrian_entropy Q1 (worst)   all    0.8914     83.0073        124.5156  304
+lgbm_sc_s0    HMC mondrian_entropy         Q2   all    0.9145     73.3358         97.9394  304
+lgbm_sc_s0    HMC mondrian_entropy         Q3   all    0.9153     65.3249         95.6617  295
+lgbm_sc_s0    HMC mondrian_entropy  Q4 (best)   all    0.9079     57.8170         86.5857  304
+lgbm_sc_s0    HMC      mondrian_sd Q1 (worst)   all    0.8750     72.0627        132.5464  304
+lgbm_sc_s0    HMC      mondrian_sd         Q2   all    0.9079     67.8524         88.1124  304
+lgbm_sc_s0    HMC      mondrian_sd         Q3   all    0.9119     67.4023         96.9400  295
+lgbm_sc_s0    HMC      mondrian_sd  Q4 (best)   all    0.9342     72.8761         89.6954  304
+lgbm_sc_s0    HMC         proposed Q1 (worst)   all    0.8355     67.6557        133.6832  304
+lgbm_sc_s0    HMC         proposed         Q2   all    0.9211     67.0872        110.8771  304
+lgbm_sc_s0    HMC         proposed         Q3   all    0.9051     66.8736        124.4892  295
+lgbm_sc_s0    HMC         proposed  Q4 (best)   all    0.9408     69.2910         95.6954  304
+lgbm_sc_s0     SC            dfloa Q1 (worst)   all    0.7564     48.2500        106.6974  312
+lgbm_sc_s0     SC            dfloa         Q2   all    0.9079     48.2269        103.5069  304
+lgbm_sc_s0     SC            dfloa         Q3   all    0.9539     46.8127         58.0132  304
+lgbm_sc_s0     SC            dfloa  Q4 (best)   all    0.9803     46.1349         86.2212  304
+lgbm_sc_s0     SC mondrian_entropy Q1 (worst)   all    0.8622     60.0726         92.9012  312
+lgbm_sc_s0     SC mondrian_entropy         Q2   all    0.9112     56.8785         93.9748  304
+lgbm_sc_s0     SC mondrian_entropy         Q3   all    0.9046     52.1270         74.0446  304
+lgbm_sc_s0     SC mondrian_entropy  Q4 (best)   all    0.9474     50.7356         80.1205  304
+lgbm_sc_s0     SC      mondrian_sd Q1 (worst)   all    0.8558     60.9106         90.2068  312
+lgbm_sc_s0     SC      mondrian_sd         Q2   all    0.8947     55.7088         89.0300  304
+lgbm_sc_s0     SC      mondrian_sd         Q3   all    0.9276     53.9295         70.5458  304
+lgbm_sc_s0     SC      mondrian_sd  Q4 (best)   all    0.9539     50.2811         78.8190  304
+lgbm_sc_s0     SC         proposed Q1 (worst)   all    0.8301     55.2396         97.4098  312
+lgbm_sc_s0     SC         proposed         Q2   all    0.8914     53.3722         90.2089  304
+lgbm_sc_s0     SC         proposed         Q3   all    0.9309     53.7533         72.1433  304
+lgbm_sc_s0     SC         proposed  Q4 (best)   all    0.9572     53.0650         83.5602  304
+lgbm_sc_s0     ST            dfloa Q1 (worst)   all    0.7727     47.7577         82.7765   88
+lgbm_sc_s0     ST            dfloa         Q2   all    0.9205     49.5889         60.4647   88
+lgbm_sc_s0     ST            dfloa         Q3   all    0.9205     50.5841         75.0777   88
+lgbm_sc_s0     ST            dfloa  Q4 (best)   all    0.9432     50.7533         53.6151   88
+lgbm_sc_s0     ST mondrian_entropy Q1 (worst)   all    0.8295     44.8365         68.4961   88
+lgbm_sc_s0     ST mondrian_entropy         Q2   all    0.8977     39.8640         53.2481   88
+lgbm_sc_s0     ST mondrian_entropy         Q3   all    0.9545     44.7106         53.5775   88
+lgbm_sc_s0     ST mondrian_entropy  Q4 (best)   all    0.8750     40.9700         63.1785   88
+lgbm_sc_s0     ST      mondrian_sd Q1 (worst)   all    0.8523     44.1424         66.4067   88
+lgbm_sc_s0     ST      mondrian_sd         Q2   all    0.9318     39.6171         49.0369   88
+lgbm_sc_s0     ST      mondrian_sd         Q3   all    0.9432     44.6455         52.0154   88
+lgbm_sc_s0     ST      mondrian_sd  Q4 (best)   all    0.8636     40.6064         55.6827   88
+lgbm_sc_s0     ST         proposed Q1 (worst)   all    0.8636     45.3120         66.0962   88
+lgbm_sc_s0     ST         proposed         Q2   all    0.9205     41.3756         51.4008   88
+lgbm_sc_s0     ST         proposed         Q3   all    0.9205     44.6267         58.1518   88
+lgbm_sc_s0     ST         proposed  Q4 (best)   all    0.9091     42.4268         59.5218   88
+lgbm_sc_s0    HMC            dfloa Q1 (worst)   N1%    0.7895     27.5706         63.7559   38
+lgbm_sc_s0    HMC            dfloa Q1 (worst)   N2%    0.8158     39.3163         65.8418   38
+lgbm_sc_s0    HMC            dfloa Q1 (worst)   N3%    0.7368     33.4038         69.9961   38
+lgbm_sc_s0    HMC            dfloa Q1 (worst)  REM%    0.7368     17.6633         39.4792   38
+lgbm_sc_s0    HMC            dfloa Q1 (worst)  REML    0.9211    181.7438        327.1023   38
+lgbm_sc_s0    HMC            dfloa Q1 (worst)   SOL    0.7632     22.3146         75.2093   38
+lgbm_sc_s0    HMC            dfloa Q1 (worst)   TST    0.8158    165.6019        334.0721   38
+lgbm_sc_s0    HMC            dfloa Q1 (worst)  WASO    0.8158    112.8281        301.2526   38
+lgbm_sc_s0    HMC            dfloa         Q2   N1%    0.8947     26.5060         50.5819   38
+lgbm_sc_s0    HMC            dfloa         Q2   N2%    0.9211     39.9329         51.5067   38
+lgbm_sc_s0    HMC            dfloa         Q2   N3%    0.9211     34.0148         40.2897   38
+lgbm_sc_s0    HMC            dfloa         Q2  REM%    0.8947     17.8187         22.7129   38
+lgbm_sc_s0    HMC            dfloa         Q2  REML    0.8684    186.6412        359.9634   38
+lgbm_sc_s0    HMC            dfloa         Q2   SOL    0.9211     20.3433         52.4486   38
+lgbm_sc_s0    HMC            dfloa         Q2   TST    0.8947    165.4337        221.9249   38
+lgbm_sc_s0    HMC            dfloa         Q2  WASO    0.8947    108.6528        140.6177   38
+lgbm_sc_s0    HMC            dfloa         Q3   N1%    0.9189     26.1251         36.4595   37
+lgbm_sc_s0    HMC            dfloa         Q3   N2%    0.8919     39.8872         49.5005   37
+lgbm_sc_s0    HMC            dfloa         Q3   N3%    0.9459     34.2551         40.5343   37
+lgbm_sc_s0    HMC            dfloa         Q3  REM%    0.9459     17.5270         19.3262   37
+lgbm_sc_s0    HMC            dfloa         Q3  REML    0.8611    183.4893        305.7451   36
+lgbm_sc_s0    HMC            dfloa         Q3   SOL    0.9459     21.1160         89.1016   37
+lgbm_sc_s0    HMC            dfloa         Q3   TST    0.8919    165.1497        232.6668   37
+lgbm_sc_s0    HMC            dfloa         Q3  WASO    0.9189    111.6141        158.3023   37
+lgbm_sc_s0    HMC            dfloa  Q4 (best)   N1%    1.0000     21.5957         21.5957   38
+lgbm_sc_s0    HMC            dfloa  Q4 (best)   N2%    0.9474     39.9543         41.9603   38
+lgbm_sc_s0    HMC            dfloa  Q4 (best)   N3%    1.0000     34.6136         34.6136   38
+lgbm_sc_s0    HMC            dfloa  Q4 (best)  REM%    1.0000     18.0502         18.0502   38
+lgbm_sc_s0    HMC            dfloa  Q4 (best)  REML    0.9474    190.9069        236.3043   38
+lgbm_sc_s0    HMC            dfloa  Q4 (best)   SOL    0.9737     21.0581         21.8475   38
+lgbm_sc_s0    HMC            dfloa  Q4 (best)   TST    1.0000    165.7133        165.7133   38
+lgbm_sc_s0    HMC            dfloa  Q4 (best)  WASO    0.9737    105.2811        112.6951   38
+lgbm_sc_s0    HMC mondrian_entropy Q1 (worst)   N1%    0.8947     25.5096         59.2605   38
+lgbm_sc_s0    HMC mondrian_entropy Q1 (worst)   N2%    0.8421     44.2557         64.7760   38
+lgbm_sc_s0    HMC mondrian_entropy Q1 (worst)   N3%    0.8421     42.0231         94.9422   38
+lgbm_sc_s0    HMC mondrian_entropy Q1 (worst)  REM%    0.8158     24.9601         35.8831   38
+lgbm_sc_s0    HMC mondrian_entropy Q1 (worst)  REML    0.9211    235.2029        378.4379   38
+lgbm_sc_s0    HMC mondrian_entropy Q1 (worst)   SOL    0.9474     32.1293         42.1989   38
+lgbm_sc_s0    HMC mondrian_entropy Q1 (worst)   TST    0.9474    145.0987        181.3570   38
+lgbm_sc_s0    HMC mondrian_entropy Q1 (worst)  WASO    0.9211    114.8786        139.2695   38
+lgbm_sc_s0    HMC mondrian_entropy         Q2   N1%    0.8947     23.8607         40.4058   38
+lgbm_sc_s0    HMC mondrian_entropy         Q2   N2%    1.0000     41.6874         41.6874   38
+lgbm_sc_s0    HMC mondrian_entropy         Q2   N3%    0.9211     40.1178         48.5497   38
+lgbm_sc_s0    HMC mondrian_entropy         Q2  REM%    0.8947     22.4153         27.6019   38
+lgbm_sc_s0    HMC mondrian_entropy         Q2  REML    0.8947    211.8690        292.8471   38
+lgbm_sc_s0    HMC mondrian_entropy         Q2   SOL    0.9737     26.5296         36.6732   38
+lgbm_sc_s0    HMC mondrian_entropy         Q2   TST    0.8947    121.0193        156.7316   38
+lgbm_sc_s0    HMC mondrian_entropy         Q2  WASO    0.8421     99.1873        139.0184   38
+lgbm_sc_s0    HMC mondrian_entropy         Q3   N1%    0.9189     22.9958         36.3978   37
+lgbm_sc_s0    HMC mondrian_entropy         Q3   N2%    0.9459     37.6484         44.4117   37
+lgbm_sc_s0    HMC mondrian_entropy         Q3   N3%    0.9459     36.0116         43.1311   37
+lgbm_sc_s0    HMC mondrian_entropy         Q3  REM%    0.9459     20.5123         22.0557   37
+lgbm_sc_s0    HMC mondrian_entropy         Q3  REML    0.9167    189.6378        298.0059   36
+lgbm_sc_s0    HMC mondrian_entropy         Q3   SOL    0.8919     23.7595         85.6834   37
+lgbm_sc_s0    HMC mondrian_entropy         Q3   TST    0.8378    105.5509        126.9144   37
+lgbm_sc_s0    HMC mondrian_entropy         Q3  WASO    0.9189     89.8427        114.1622   37
+lgbm_sc_s0    HMC mondrian_entropy  Q4 (best)   N1%    0.9211     20.0836         24.9491   38
+lgbm_sc_s0    HMC mondrian_entropy  Q4 (best)   N2%    0.8421     34.5136         50.1093   38
+lgbm_sc_s0    HMC mondrian_entropy  Q4 (best)   N3%    0.9211     37.1907         45.5396   38
+lgbm_sc_s0    HMC mondrian_entropy  Q4 (best)  REM%    0.9737     18.6352         19.3633   38
+lgbm_sc_s0    HMC mondrian_entropy  Q4 (best)  REML    0.8947    178.6569        226.9287   38
+lgbm_sc_s0    HMC mondrian_entropy  Q4 (best)   SOL    0.8158     22.8373        120.5147   38
+lgbm_sc_s0    HMC mondrian_entropy  Q4 (best)   TST    0.9474     79.5092         90.1573   38
+lgbm_sc_s0    HMC mondrian_entropy  Q4 (best)  WASO    0.9474     71.1098        115.1236   38
+lgbm_sc_s0    HMC      mondrian_sd Q1 (worst)   N1%    0.8421     21.3648         64.6504   38
+lgbm_sc_s0    HMC      mondrian_sd Q1 (worst)   N2%    0.8421     36.7006         60.1804   38
+lgbm_sc_s0    HMC      mondrian_sd Q1 (worst)   N3%    0.8684     41.4345         92.1990   38
+lgbm_sc_s0    HMC      mondrian_sd Q1 (worst)  REM%    0.8158     24.6629         34.8100   38
+lgbm_sc_s0    HMC      mondrian_sd Q1 (worst)  REML    0.8684    194.4982        455.5200   38
+lgbm_sc_s0    HMC      mondrian_sd Q1 (worst)   SOL    0.9211     26.6586         46.5052   38
+lgbm_sc_s0    HMC      mondrian_sd Q1 (worst)   TST    0.9211    125.1008        186.1641   38
+lgbm_sc_s0    HMC      mondrian_sd Q1 (worst)  WASO    0.9211    106.0812        120.3418   38
+lgbm_sc_s0    HMC      mondrian_sd         Q2   N1%    0.8684     21.5326         40.2534   38
+lgbm_sc_s0    HMC      mondrian_sd         Q2   N2%    0.9474     37.4808         40.2385   38
+lgbm_sc_s0    HMC      mondrian_sd         Q2   N3%    0.9474     39.0151         48.3599   38
+lgbm_sc_s0    HMC      mondrian_sd         Q2  REM%    0.9211     21.3058         27.3774   38
+lgbm_sc_s0    HMC      mondrian_sd         Q2  REML    0.9211    206.1617        263.6512   38
+lgbm_sc_s0    HMC      mondrian_sd         Q2   SOL    0.8947     21.4725         34.8790   38
+lgbm_sc_s0    HMC      mondrian_sd         Q2   TST    0.9211    104.8816        133.5582   38
+lgbm_sc_s0    HMC      mondrian_sd         Q2  WASO    0.8421     90.9690        116.5812   38
+lgbm_sc_s0    HMC      mondrian_sd         Q3   N1%    0.9459     21.5993         34.4446   37
+lgbm_sc_s0    HMC      mondrian_sd         Q3   N2%    0.9730     37.7521         45.1716   37
+lgbm_sc_s0    HMC      mondrian_sd         Q3   N3%    0.9189     34.2389         42.0248   37
+lgbm_sc_s0    HMC      mondrian_sd         Q3  REM%    0.9459     19.4641         20.7524   37
+lgbm_sc_s0    HMC      mondrian_sd         Q3  REML    0.8611    212.3302        325.2580   36
+lgbm_sc_s0    HMC      mondrian_sd         Q3   SOL    0.8919     22.8266         90.9472   37
+lgbm_sc_s0    HMC      mondrian_sd         Q3   TST    0.8378    102.5237        113.6329   37
+lgbm_sc_s0    HMC      mondrian_sd         Q3  WASO    0.9189     92.4006        109.4591   37
+lgbm_sc_s0    HMC      mondrian_sd  Q4 (best)   N1%    0.9737     20.7141         21.8473   38
+lgbm_sc_s0    HMC      mondrian_sd  Q4 (best)   N2%    0.8684     37.0678         46.3279   38
+lgbm_sc_s0    HMC      mondrian_sd  Q4 (best)   N3%    0.8947     39.1713         47.2023   38
+lgbm_sc_s0    HMC      mondrian_sd  Q4 (best)  REM%    0.9474     17.8931         18.6603   38
+lgbm_sc_s0    HMC      mondrian_sd  Q4 (best)  REML    0.9737    266.6229        290.3379   38
+lgbm_sc_s0    HMC      mondrian_sd  Q4 (best)   SOL    0.9211     26.2454         89.0281   38
+lgbm_sc_s0    HMC      mondrian_sd  Q4 (best)   TST    0.9474     85.1139         90.4001   38
+lgbm_sc_s0    HMC      mondrian_sd  Q4 (best)  WASO    0.9474     90.1801        113.7592   38
+lgbm_sc_s0    HMC         proposed Q1 (worst)   N1%    0.8158     22.8593         61.4117   38
+lgbm_sc_s0    HMC         proposed Q1 (worst)   N2%    0.8158     35.2195         60.4988   38
+lgbm_sc_s0    HMC         proposed Q1 (worst)   N3%    0.8158     36.8506         94.6536   38
+lgbm_sc_s0    HMC         proposed Q1 (worst)  REM%    0.7368     23.1535         36.9211   38
+lgbm_sc_s0    HMC         proposed Q1 (worst)  REML    0.8684    186.2750        445.5221   38
+lgbm_sc_s0    HMC         proposed Q1 (worst)   SOL    0.9211     25.9661         48.2427   38
+lgbm_sc_s0    HMC         proposed Q1 (worst)   TST    0.8421    112.9986        173.7206   38
+lgbm_sc_s0    HMC         proposed Q1 (worst)  WASO    0.8684     97.9230        148.4954   38
+lgbm_sc_s0    HMC         proposed         Q2   N1%    0.8947     22.6269         37.6386   38
+lgbm_sc_s0    HMC         proposed         Q2   N2%    0.9737     34.3710         35.4228   38
+lgbm_sc_s0    HMC         proposed         Q2   N3%    0.9211     36.0862         45.2664   38
+lgbm_sc_s0    HMC         proposed         Q2  REM%    0.9211     21.6357         26.6655   38
+lgbm_sc_s0    HMC         proposed         Q2  REML    0.8947    196.1127        384.0689   38
+lgbm_sc_s0    HMC         proposed         Q2   SOL    0.9737     23.7335         39.7695   38
+lgbm_sc_s0    HMC         proposed         Q2   TST    0.9211    108.9711        171.4166   38
+lgbm_sc_s0    HMC         proposed         Q2  WASO    0.8684     93.1604        146.7690   38
+lgbm_sc_s0    HMC         proposed         Q3   N1%    0.9459     22.4417         33.7177   37
+lgbm_sc_s0    HMC         proposed         Q3   N2%    0.9459     33.4361         41.1389   37
+lgbm_sc_s0    HMC         proposed         Q3   N3%    0.9459     33.5980         41.7116   37
+lgbm_sc_s0    HMC         proposed         Q3  REM%    0.9459     21.0358         21.7112   37
+lgbm_sc_s0    HMC         proposed         Q3  REML    0.8611    197.4020        432.3259   36
+lgbm_sc_s0    HMC         proposed         Q3   SOL    0.8649     23.5454         94.7935   37
+lgbm_sc_s0    HMC         proposed         Q3   TST    0.8378    110.1232        191.4299   37
+lgbm_sc_s0    HMC         proposed         Q3  WASO    0.8919     96.9342        147.4047   37
+lgbm_sc_s0    HMC         proposed  Q4 (best)   N1%    0.9474     21.0344         22.2854   38
+lgbm_sc_s0    HMC         proposed  Q4 (best)   N2%    0.8684     33.1454         48.7488   38
+lgbm_sc_s0    HMC         proposed  Q4 (best)   N3%    0.9211     36.0452         45.2805   38
+lgbm_sc_s0    HMC         proposed  Q4 (best)  REM%    1.0000     20.2107         20.2107   38
+lgbm_sc_s0    HMC         proposed  Q4 (best)  REML    0.9737    223.1546        291.6845   38
+lgbm_sc_s0    HMC         proposed  Q4 (best)   SOL    0.8421     25.3984        108.6376   38
+lgbm_sc_s0    HMC         proposed  Q4 (best)   TST    1.0000    102.2174        102.2174   38
+lgbm_sc_s0    HMC         proposed  Q4 (best)  WASO    0.9737     93.1217        126.4979   38
+lgbm_sc_s0     SC            dfloa Q1 (worst)   N1%    0.6667     30.8134         85.5548   39
+lgbm_sc_s0     SC            dfloa Q1 (worst)   N2%    0.6154     29.8161         83.7273   39
+lgbm_sc_s0     SC            dfloa Q1 (worst)   N3%    0.7949     11.3149         27.5980   39
+lgbm_sc_s0     SC            dfloa Q1 (worst)  REM%    0.7436     15.4725         61.1760   39
+lgbm_sc_s0     SC            dfloa Q1 (worst)  REML    0.9231    104.2387        142.4438   39
+lgbm_sc_s0     SC            dfloa Q1 (worst)   SOL    0.7436     25.4176         61.8991   39
+lgbm_sc_s0     SC            dfloa Q1 (worst)   TST    0.6410     86.3890        283.3206   39
+lgbm_sc_s0     SC            dfloa Q1 (worst)  WASO    0.9231     82.5379        107.8597   39
+lgbm_sc_s0     SC            dfloa         Q2   N1%    0.9474     30.0298         31.0744   38
+lgbm_sc_s0     SC            dfloa         Q2   N2%    0.9474     29.9548         30.5080   38
+lgbm_sc_s0     SC            dfloa         Q2   N3%    0.8684     12.2077         20.0632   38
+lgbm_sc_s0     SC            dfloa         Q2  REM%    0.9211     15.6152         17.1646   38
+lgbm_sc_s0     SC            dfloa         Q2  REML    0.8684    104.5063        342.9465   38
+lgbm_sc_s0     SC            dfloa         Q2   SOL    0.8947     25.2358         96.8374   38
+lgbm_sc_s0     SC            dfloa         Q2   TST    0.9737     87.1652         96.3531   38
+lgbm_sc_s0     SC            dfloa         Q2  WASO    0.8421     81.1002        193.1079   38
+lgbm_sc_s0     SC            dfloa         Q3   N1%    1.0000     27.3833         27.3833   38
+lgbm_sc_s0     SC            dfloa         Q3   N2%    1.0000     29.9211         29.9211   38
+lgbm_sc_s0     SC            dfloa         Q3   N3%    0.9474     12.3494         13.9084   38
+lgbm_sc_s0     SC            dfloa         Q3  REM%    0.9211     15.5718         17.5639   38
+lgbm_sc_s0     SC            dfloa         Q3  REML    0.8947    105.6714        136.7241   38
+lgbm_sc_s0     SC            dfloa         Q3   SOL    0.9737     23.3236         24.3763   38
+lgbm_sc_s0     SC            dfloa         Q3   TST    1.0000     87.3607         87.3607   38
+lgbm_sc_s0     SC            dfloa         Q3  WASO    0.8947     72.9205        126.8679   38
+lgbm_sc_s0     SC            dfloa  Q4 (best)   N1%    1.0000     24.0453         24.0453   38
+lgbm_sc_s0     SC            dfloa  Q4 (best)   N2%    1.0000     29.9185         29.9185   38
+lgbm_sc_s0     SC            dfloa  Q4 (best)   N3%    1.0000     13.3256         13.3256   38
+lgbm_sc_s0     SC            dfloa  Q4 (best)  REM%    1.0000     15.6752         15.6752   38
+lgbm_sc_s0     SC            dfloa  Q4 (best)  REML    0.9211    106.1350        159.0297   38
+lgbm_sc_s0     SC            dfloa  Q4 (best)   SOL    0.9737     23.7266         58.8905   38
+lgbm_sc_s0     SC            dfloa  Q4 (best)   TST    1.0000     87.4238         87.4238   38
+lgbm_sc_s0     SC            dfloa  Q4 (best)  WASO    0.9474     68.8294        301.4610   38
+lgbm_sc_s0     SC mondrian_entropy Q1 (worst)   N1%    0.8462     34.2035         69.6597   39
+lgbm_sc_s0     SC mondrian_entropy Q1 (worst)   N2%    0.7436     35.3985         68.1143   39
+lgbm_sc_s0     SC mondrian_entropy Q1 (worst)   N3%    0.8462     12.7859         23.9320   39
+lgbm_sc_s0     SC mondrian_entropy Q1 (worst)  REM%    0.8462     28.4994         51.8121   39
+lgbm_sc_s0     SC mondrian_entropy Q1 (worst)  REML    0.9231     75.2753         97.8306   39
+lgbm_sc_s0     SC mondrian_entropy Q1 (worst)   SOL    0.9231     32.5087         45.8887   39
+lgbm_sc_s0     SC mondrian_entropy Q1 (worst)   TST    0.7949    102.0019        216.1592   39
+lgbm_sc_s0     SC mondrian_entropy Q1 (worst)  WASO    0.9744    159.9073        169.8130   39
+lgbm_sc_s0     SC mondrian_entropy         Q2   N1%    0.9474     29.9287         35.0012   38
+lgbm_sc_s0     SC mondrian_entropy         Q2   N2%    0.9737     31.7543         32.5191   38
+lgbm_sc_s0     SC mondrian_entropy         Q2   N3%    0.8947     12.5769         19.1339   38
+lgbm_sc_s0     SC mondrian_entropy         Q2  REM%    0.9474     25.1519         27.1916   38
+lgbm_sc_s0     SC mondrian_entropy         Q2  REML    0.8421     88.1224        286.8602   38
+lgbm_sc_s0     SC mondrian_entropy         Q2   SOL    0.8684     26.6931         71.3705   38
+lgbm_sc_s0     SC mondrian_entropy         Q2   TST    0.9474     86.1763        103.7192   38
+lgbm_sc_s0     SC mondrian_entropy         Q2  WASO    0.8684    154.6243        176.0029   38
+lgbm_sc_s0     SC mondrian_entropy         Q3   N1%    0.8947     22.4674         28.8887   38
+lgbm_sc_s0     SC mondrian_entropy         Q3   N2%    0.9211     23.1172         30.3246   38
+lgbm_sc_s0     SC mondrian_entropy         Q3   N3%    0.8947     11.3695         15.8467   38
+lgbm_sc_s0     SC mondrian_entropy         Q3  REM%    0.8947     21.4651         25.9497   38
+lgbm_sc_s0     SC mondrian_entropy         Q3  REML    0.9211     76.4270        105.6396   38
+lgbm_sc_s0     SC mondrian_entropy         Q3   SOL    0.8947     19.1020         53.7897   38
+lgbm_sc_s0     SC mondrian_entropy         Q3   TST    0.8947     51.6905         70.6350   38
+lgbm_sc_s0     SC mondrian_entropy         Q3  WASO    0.9211    191.3775        261.2825   38
+lgbm_sc_s0     SC mondrian_entropy  Q4 (best)   N1%    0.9474     19.8171         24.0654   38
+lgbm_sc_s0     SC mondrian_entropy  Q4 (best)   N2%    1.0000     21.0872         21.0872   38
+lgbm_sc_s0     SC mondrian_entropy  Q4 (best)   N3%    1.0000     11.5837         11.5837   38
+lgbm_sc_s0     SC mondrian_entropy  Q4 (best)  REM%    0.9474     20.0166         20.8089   38
+lgbm_sc_s0     SC mondrian_entropy  Q4 (best)  REML    0.9474     70.8791         80.8253   38
+lgbm_sc_s0     SC mondrian_entropy  Q4 (best)   SOL    0.9211     19.0057         54.1280   38
+lgbm_sc_s0     SC mondrian_entropy  Q4 (best)   TST    0.9737     44.5951         44.6783   38
+lgbm_sc_s0     SC mondrian_entropy  Q4 (best)  WASO    0.8421    198.9007        383.7874   38
+lgbm_sc_s0     SC      mondrian_sd Q1 (worst)   N1%    0.8205     34.3337         62.3257   39
+lgbm_sc_s0     SC      mondrian_sd Q1 (worst)   N2%    0.7949     38.5792         67.1866   39
+lgbm_sc_s0     SC      mondrian_sd Q1 (worst)   N3%    0.8718     12.2579         23.7582   39
+lgbm_sc_s0     SC      mondrian_sd Q1 (worst)  REM%    0.8462     27.7754         52.0179   39
+lgbm_sc_s0     SC      mondrian_sd Q1 (worst)  REML    0.9231     80.5820         97.0262   39
+lgbm_sc_s0     SC      mondrian_sd Q1 (worst)   SOL    0.8462     35.4072         43.9242   39
+lgbm_sc_s0     SC      mondrian_sd Q1 (worst)   TST    0.8205    102.9320        202.8499   39
+lgbm_sc_s0     SC      mondrian_sd Q1 (worst)  WASO    0.9231    155.4171        172.5657   39
+lgbm_sc_s0     SC      mondrian_sd         Q2   N1%    0.9211     27.6941         34.1348   38
+lgbm_sc_s0     SC      mondrian_sd         Q2   N2%    0.8947     31.7962         37.9102   38
+lgbm_sc_s0     SC      mondrian_sd         Q2   N3%    0.8421     11.6462         18.3708   38
+lgbm_sc_s0     SC      mondrian_sd         Q2  REM%    0.9211     21.9366         26.8360   38
+lgbm_sc_s0     SC      mondrian_sd         Q2  REML    0.8158     94.5055        257.8095   38
+lgbm_sc_s0     SC      mondrian_sd         Q2   SOL    0.8947     27.8885         64.4039   38
+lgbm_sc_s0     SC      mondrian_sd         Q2   TST    0.9474     81.1775         99.3406   38
+lgbm_sc_s0     SC      mondrian_sd         Q2  WASO    0.9211    149.0256        173.4345   38
+lgbm_sc_s0     SC      mondrian_sd         Q3   N1%    0.9474     23.0143         25.4003   38
+lgbm_sc_s0     SC      mondrian_sd         Q3   N2%    0.9474     28.9892         32.5404   38
+lgbm_sc_s0     SC      mondrian_sd         Q3   N3%    0.9211     12.8368         15.0330   38
+lgbm_sc_s0     SC      mondrian_sd         Q3  REM%    0.9211     20.5790         26.4459   38
+lgbm_sc_s0     SC      mondrian_sd         Q3  REML    0.9474     77.1781        100.8520   38
+lgbm_sc_s0     SC      mondrian_sd         Q3   SOL    0.9211     22.6503         38.9986   38
+lgbm_sc_s0     SC      mondrian_sd         Q3   TST    0.8947     59.0587         68.0336   38
+lgbm_sc_s0     SC      mondrian_sd         Q3  WASO    0.9211    187.1297        257.0621   38
+lgbm_sc_s0     SC      mondrian_sd  Q4 (best)   N1%    0.9474     19.0994         23.0725   38
+lgbm_sc_s0     SC      mondrian_sd  Q4 (best)   N2%    1.0000     25.9226         25.9226   38
+lgbm_sc_s0     SC      mondrian_sd  Q4 (best)   N3%    1.0000     13.0686         13.0686   38
+lgbm_sc_s0     SC      mondrian_sd  Q4 (best)  REM%    0.9474     18.0866         19.4183   38
+lgbm_sc_s0     SC      mondrian_sd  Q4 (best)  REML    0.9474     63.9656         75.4347   38
+lgbm_sc_s0     SC      mondrian_sd  Q4 (best)   SOL    0.9737     23.4022         39.3467   38
+lgbm_sc_s0     SC      mondrian_sd  Q4 (best)   TST    0.9737     44.9331         45.3207   38
+lgbm_sc_s0     SC      mondrian_sd  Q4 (best)  WASO    0.8421    193.7705        388.9677   38
+lgbm_sc_s0     SC         proposed Q1 (worst)   N1%    0.8205     30.0565         70.9920   39
+lgbm_sc_s0     SC         proposed Q1 (worst)   N2%    0.7436     32.4707         70.3116   39
+lgbm_sc_s0     SC         proposed Q1 (worst)   N3%    0.7949     10.9256         23.3000   39
+lgbm_sc_s0     SC         proposed Q1 (worst)  REM%    0.7949     24.7304         52.2121   39
+lgbm_sc_s0     SC         proposed Q1 (worst)  REML    0.9231     75.0983         97.6536   39
+lgbm_sc_s0     SC         proposed Q1 (worst)   SOL    0.8718     26.3193         44.9371   39
+lgbm_sc_s0     SC         proposed Q1 (worst)   TST    0.7179     75.0065        245.4172   39
+lgbm_sc_s0     SC         proposed Q1 (worst)  WASO    0.9744    167.3099        174.4548   39
+lgbm_sc_s0     SC         proposed         Q2   N1%    0.8421     26.5411         38.3628   38
+lgbm_sc_s0     SC         proposed         Q2   N2%    0.9211     30.8261         32.5773   38
+lgbm_sc_s0     SC         proposed         Q2   N3%    0.8947     10.8904         18.4166   38
+lgbm_sc_s0     SC         proposed         Q2  REM%    0.8947     22.3039         25.0395   38
+lgbm_sc_s0     SC         proposed         Q2  REML    0.8421     87.7830        287.3542   38
+lgbm_sc_s0     SC         proposed         Q2   SOL    0.8684     22.2882         74.6113   38
+lgbm_sc_s0     SC         proposed         Q2   TST    0.9474     66.4747         76.7255   38
+lgbm_sc_s0     SC         proposed         Q2  WASO    0.9211    159.8702        168.5839   38
+lgbm_sc_s0     SC         proposed         Q3   N1%    0.9737     23.6863         24.9929   38
+lgbm_sc_s0     SC         proposed         Q3   N2%    0.9474     30.0961         31.6219   38
+lgbm_sc_s0     SC         proposed         Q3   N3%    0.9211     11.4127         14.9045   38
+lgbm_sc_s0     SC         proposed         Q3  REM%    0.9211     21.8133         24.0278   38
+lgbm_sc_s0     SC         proposed         Q3  REML    0.9211     74.8694        105.7014   38
+lgbm_sc_s0     SC         proposed         Q3   SOL    0.9474     19.5684         48.1347   38
+lgbm_sc_s0     SC         proposed         Q3   TST    0.9474     59.4711         66.9886   38
+lgbm_sc_s0     SC         proposed         Q3  WASO    0.8684    189.1094        260.7745   38
+lgbm_sc_s0     SC         proposed  Q4 (best)   N1%    0.9737     21.5380         22.7821   38
+lgbm_sc_s0     SC         proposed  Q4 (best)   N2%    1.0000     29.3016         29.3016   38
+lgbm_sc_s0     SC         proposed  Q4 (best)   N3%    1.0000     11.9304         11.9304   38
+lgbm_sc_s0     SC         proposed  Q4 (best)  REM%    1.0000     20.8687         20.8687   38
+lgbm_sc_s0     SC         proposed  Q4 (best)  REML    0.9211     69.1255         80.2295   38
+lgbm_sc_s0     SC         proposed  Q4 (best)   SOL    0.9211     19.9673         52.6537   38
+lgbm_sc_s0     SC         proposed  Q4 (best)   TST    1.0000     56.5738         56.5738   38
+lgbm_sc_s0     SC         proposed  Q4 (best)  WASO    0.8421    195.2148        394.1416   38
+lgbm_sc_s0     ST            dfloa Q1 (worst)   N1%    0.5455     13.6944         43.7596   11
+lgbm_sc_s0     ST            dfloa Q1 (worst)   N2%    0.8182     35.8855         54.2464   11
+lgbm_sc_s0     ST            dfloa Q1 (worst)   N3%    0.7273     24.7699         64.3557   11
+lgbm_sc_s0     ST            dfloa Q1 (worst)  REM%    0.8182     19.4609         33.9371   11
+lgbm_sc_s0     ST            dfloa Q1 (worst)  REML    0.8182    155.8355        226.7446   11
+lgbm_sc_s0     ST            dfloa Q1 (worst)   SOL    1.0000     16.5801         16.5801   11
+lgbm_sc_s0     ST            dfloa Q1 (worst)   TST    0.7273     63.0238        122.2879   11
+lgbm_sc_s0     ST            dfloa Q1 (worst)  WASO    0.7273     52.8117        100.3009   11
+lgbm_sc_s0     ST            dfloa         Q2   N1%    0.9091     12.6667         12.9537   11
+lgbm_sc_s0     ST            dfloa         Q2   N2%    0.8182     35.7971         50.4713   11
+lgbm_sc_s0     ST            dfloa         Q2   N3%    0.8182     26.3921         36.4191   11
+lgbm_sc_s0     ST            dfloa         Q2  REM%    0.9091     19.7322         30.9274   11
+lgbm_sc_s0     ST            dfloa         Q2  REML    0.9091    172.1190        222.9416   11
+lgbm_sc_s0     ST            dfloa         Q2   SOL    1.0000     16.3853         16.3853   11
+lgbm_sc_s0     ST            dfloa         Q2   TST    1.0000     64.1147         64.1147   11
+lgbm_sc_s0     ST            dfloa         Q2  WASO    1.0000     49.5043         49.5043   11
+lgbm_sc_s0     ST            dfloa         Q3   N1%    1.0000     14.3535         14.3535   11
+lgbm_sc_s0     ST            dfloa         Q3   N2%    1.0000     36.3003         36.3003   11
+lgbm_sc_s0     ST            dfloa         Q3   N3%    1.0000     28.5096         28.5096   11
+lgbm_sc_s0     ST            dfloa         Q3  REM%    0.9091     19.7345         23.3460   11
+lgbm_sc_s0     ST            dfloa         Q3  REML    0.9091    175.3528        244.4437   11
+lgbm_sc_s0     ST            dfloa         Q3   SOL    0.7273     15.1277        106.0368   11
+lgbm_sc_s0     ST            dfloa         Q3   TST    0.9091     64.9524         81.3160   11
+lgbm_sc_s0     ST            dfloa         Q3  WASO    0.9091     50.3420         66.3160   11
+lgbm_sc_s0     ST            dfloa  Q4 (best)   N1%    0.9091     13.8759         15.0822   11
+lgbm_sc_s0     ST            dfloa  Q4 (best)   N2%    1.0000     37.4711         37.4711   11
+lgbm_sc_s0     ST            dfloa  Q4 (best)   N3%    1.0000     26.6225         26.6225   11
+lgbm_sc_s0     ST            dfloa  Q4 (best)  REM%    1.0000     19.7129         19.7129   11
+lgbm_sc_s0     ST            dfloa  Q4 (best)  REML    0.9091    176.4827        183.7554   11
+lgbm_sc_s0     ST            dfloa  Q4 (best)   SOL    0.9091     16.2554         20.8009   11
+lgbm_sc_s0     ST            dfloa  Q4 (best)   TST    0.9091     64.7273         68.3636   11
+lgbm_sc_s0     ST            dfloa  Q4 (best)  WASO    0.9091     50.8788         57.1126   11
+lgbm_sc_s0     ST mondrian_entropy Q1 (worst)   N1%    0.9091     20.1388         23.0299   11
+lgbm_sc_s0     ST mondrian_entropy Q1 (worst)   N2%    0.8182     30.1107         55.0906   11
+lgbm_sc_s0     ST mondrian_entropy Q1 (worst)   N3%    0.7273     24.1148         66.0626   11
+lgbm_sc_s0     ST mondrian_entropy Q1 (worst)  REM%    0.7273     23.7517         32.0973   11
+lgbm_sc_s0     ST mondrian_entropy Q1 (worst)  REML    1.0000    125.5828        125.5828   11
+lgbm_sc_s0     ST mondrian_entropy Q1 (worst)   SOL    0.8182     21.0900         22.7996   11
+lgbm_sc_s0     ST mondrian_entropy Q1 (worst)   TST    0.8182     48.5095        114.6421   11
+lgbm_sc_s0     ST mondrian_entropy Q1 (worst)  WASO    0.8182     65.3935        108.6639   11
+lgbm_sc_s0     ST mondrian_entropy         Q2   N1%    1.0000     14.7188         14.7188   11
+lgbm_sc_s0     ST mondrian_entropy         Q2   N2%    0.8182     29.2414         35.1259   11
+lgbm_sc_s0     ST mondrian_entropy         Q2   N3%    0.8182     25.9130         35.6011   11
+lgbm_sc_s0     ST mondrian_entropy         Q2  REM%    0.9091     23.5280         31.6392   11
+lgbm_sc_s0     ST mondrian_entropy         Q2  REML    0.8182    122.5358        198.6824   11
+lgbm_sc_s0     ST mondrian_entropy         Q2   SOL    0.9091     17.8931         22.3742   11
+lgbm_sc_s0     ST mondrian_entropy         Q2   TST    1.0000     36.5979         36.5979   11
+lgbm_sc_s0     ST mondrian_entropy         Q2  WASO    0.9091     48.4837         51.2453   11
+lgbm_sc_s0     ST mondrian_entropy         Q3   N1%    1.0000     18.6123         18.6123   11
+lgbm_sc_s0     ST mondrian_entropy         Q3   N2%    1.0000     29.4803         29.4803   11
+lgbm_sc_s0     ST mondrian_entropy         Q3   N3%    1.0000     28.2370         28.2370   11
+lgbm_sc_s0     ST mondrian_entropy         Q3  REM%    1.0000     23.0690         23.0690   11
+lgbm_sc_s0     ST mondrian_entropy         Q3  REML    0.9091    120.7767        143.0161   11
+lgbm_sc_s0     ST mondrian_entropy         Q3   SOL    0.7273     24.0157         72.7112   11
+lgbm_sc_s0     ST mondrian_entropy         Q3   TST    1.0000     47.5533         47.5533   11
+lgbm_sc_s0     ST mondrian_entropy         Q3  WASO    1.0000     65.9405         65.9405   11
+lgbm_sc_s0     ST mondrian_entropy  Q4 (best)   N1%    0.6364     15.6876         40.3936   11
+lgbm_sc_s0     ST mondrian_entropy  Q4 (best)   N2%    1.0000     29.6976         29.6976   11
+lgbm_sc_s0     ST mondrian_entropy  Q4 (best)   N3%    1.0000     27.0251         27.0251   11
+lgbm_sc_s0     ST mondrian_entropy  Q4 (best)  REM%    0.9091     23.1662         25.0963   11
+lgbm_sc_s0     ST mondrian_entropy  Q4 (best)  REML    0.9091    115.3061        162.6878   11
+lgbm_sc_s0     ST mondrian_entropy  Q4 (best)   SOL    1.0000     17.0766         17.0766   11
+lgbm_sc_s0     ST mondrian_entropy  Q4 (best)   TST    0.8182     39.0802         50.3833   11
+lgbm_sc_s0     ST mondrian_entropy  Q4 (best)  WASO    0.7273     60.7205        153.0676   11
+lgbm_sc_s0     ST      mondrian_sd Q1 (worst)   N1%    0.9091     19.4846         23.2342   11
+lgbm_sc_s0     ST      mondrian_sd Q1 (worst)   N2%    0.7273     31.5761         52.9726   11
+lgbm_sc_s0     ST      mondrian_sd Q1 (worst)   N3%    0.8182     24.8806         28.6811   11
+lgbm_sc_s0     ST      mondrian_sd Q1 (worst)  REM%    0.8182     23.9774         30.9890   11
+lgbm_sc_s0     ST      mondrian_sd Q1 (worst)  REML    0.9091    117.0197        156.2452   11
+lgbm_sc_s0     ST      mondrian_sd Q1 (worst)   SOL    1.0000     18.7000         18.7000   11
+lgbm_sc_s0     ST      mondrian_sd Q1 (worst)   TST    0.8182     52.0442        118.9272   11
+lgbm_sc_s0     ST      mondrian_sd Q1 (worst)  WASO    0.8182     65.4567        101.5042   11
+lgbm_sc_s0     ST      mondrian_sd         Q2   N1%    1.0000     14.6941         14.6941   11
+lgbm_sc_s0     ST      mondrian_sd         Q2   N2%    0.9091     31.5158         34.6288   11
+lgbm_sc_s0     ST      mondrian_sd         Q2   N3%    0.8182     21.1790         36.3717   11
+lgbm_sc_s0     ST      mondrian_sd         Q2  REM%    0.9091     22.9058         37.0291   11
+lgbm_sc_s0     ST      mondrian_sd         Q2  REML    0.9091    121.9216        160.2751   11
+lgbm_sc_s0     ST      mondrian_sd         Q2   SOL    1.0000     14.5265         14.5265   11
+lgbm_sc_s0     ST      mondrian_sd         Q2   TST    1.0000     43.4147         43.4147   11
+lgbm_sc_s0     ST      mondrian_sd         Q2  WASO    0.9091     46.7796         51.3554   11
+lgbm_sc_s0     ST      mondrian_sd         Q3   N1%    1.0000     18.0199         18.0199   11
+lgbm_sc_s0     ST      mondrian_sd         Q3   N2%    1.0000     32.5667         32.5667   11
+lgbm_sc_s0     ST      mondrian_sd         Q3   N3%    1.0000     26.0288         26.0288   11
+lgbm_sc_s0     ST      mondrian_sd         Q3  REM%    0.9091     22.6183         28.2759   11
+lgbm_sc_s0     ST      mondrian_sd         Q3  REML    0.9091    120.4053        125.0114   11
+lgbm_sc_s0     ST      mondrian_sd         Q3   SOL    0.7273     25.3033         73.9988   11
+lgbm_sc_s0     ST      mondrian_sd         Q3   TST    1.0000     49.7225         49.7225   11
+lgbm_sc_s0     ST      mondrian_sd         Q3  WASO    1.0000     62.4990         62.4990   11
+lgbm_sc_s0     ST      mondrian_sd  Q4 (best)   N1%    0.7273     17.2159         40.9728   11
+lgbm_sc_s0     ST      mondrian_sd  Q4 (best)   N2%    1.0000     33.1023         33.1023   11
+lgbm_sc_s0     ST      mondrian_sd  Q4 (best)   N3%    0.9091     20.9121         21.1769   11
+lgbm_sc_s0     ST      mondrian_sd  Q4 (best)  REM%    0.9091     23.7278         25.1666   11
+lgbm_sc_s0     ST      mondrian_sd  Q4 (best)  REML    0.8182     96.5608        125.9080   11
+lgbm_sc_s0     ST      mondrian_sd  Q4 (best)   SOL    0.8182     12.5499         18.1994   11
+lgbm_sc_s0     ST      mondrian_sd  Q4 (best)   TST    0.8182     45.7513         76.5762   11
+lgbm_sc_s0     ST      mondrian_sd  Q4 (best)  WASO    0.9091     75.0311        104.3593   11
+lgbm_sc_s0     ST         proposed Q1 (worst)   N1%    0.9091     17.0241         18.2482   11
+lgbm_sc_s0     ST         proposed Q1 (worst)   N2%    0.8182     32.0187         50.0932   11
+lgbm_sc_s0     ST         proposed Q1 (worst)   N3%    0.7273     25.4139         50.8630   11
+lgbm_sc_s0     ST         proposed Q1 (worst)  REM%    0.8182     23.4344         30.0267   11
+lgbm_sc_s0     ST         proposed Q1 (worst)  REML    1.0000    133.3057        133.3057   11
+lgbm_sc_s0     ST         proposed Q1 (worst)   SOL    1.0000     24.0409         24.0409   11
+lgbm_sc_s0     ST         proposed Q1 (worst)   TST    0.8182     41.6734        108.5563   11
+lgbm_sc_s0     ST         proposed Q1 (worst)  WASO    0.8182     65.5849        113.6359   11
+lgbm_sc_s0     ST         proposed         Q2   N1%    1.0000     14.2533         14.2533   11
+lgbm_sc_s0     ST         proposed         Q2   N2%    0.8182     30.3275         31.2067   11
+lgbm_sc_s0     ST         proposed         Q2   N3%    0.8182     25.4779         35.1660   11
+lgbm_sc_s0     ST         proposed         Q2  REM%    0.9091     22.4797         30.5909   11
+lgbm_sc_s0     ST         proposed         Q2  REML    0.8182    125.0928        186.6154   11
+lgbm_sc_s0     ST         proposed         Q2   SOL    1.0000     22.4154         22.4154   11
+lgbm_sc_s0     ST         proposed         Q2   TST    1.0000     36.1621         36.1621   11
+lgbm_sc_s0     ST         proposed         Q2  WASO    1.0000     54.7963         54.7963   11
+lgbm_sc_s0     ST         proposed         Q3   N1%    0.9091     15.9853         16.6312   11
+lgbm_sc_s0     ST         proposed         Q3   N2%    1.0000     30.8529         30.8529   11
+lgbm_sc_s0     ST         proposed         Q3   N3%    1.0000     28.5872         28.5872   11
+lgbm_sc_s0     ST         proposed         Q3  REM%    1.0000     22.4125         22.4125   11
+lgbm_sc_s0     ST         proposed         Q3  REML    0.8182    128.9225        166.8549   11
+lgbm_sc_s0     ST         proposed         Q3   SOL    0.6364     26.0393         95.6614   11
+lgbm_sc_s0     ST         proposed         Q3   TST    1.0000     38.4955         38.4955   11
+lgbm_sc_s0     ST         proposed         Q3  WASO    1.0000     65.7183         65.7183   11
+lgbm_sc_s0     ST         proposed  Q4 (best)   N1%    0.8182     16.0635         42.3369   11
+lgbm_sc_s0     ST         proposed  Q4 (best)   N2%    1.0000     30.2643         30.2643   11
+lgbm_sc_s0     ST         proposed  Q4 (best)   N3%    1.0000     26.0453         26.0453   11
+lgbm_sc_s0     ST         proposed  Q4 (best)  REM%    0.9091     22.0943         23.5331   11
+lgbm_sc_s0     ST         proposed  Q4 (best)  REML    0.9091    116.6130        147.2827   11
+lgbm_sc_s0     ST         proposed  Q4 (best)   SOL    1.0000     21.5966         21.5966   11
+lgbm_sc_s0     ST         proposed  Q4 (best)   TST    0.8182     39.0181         42.7535   11
+lgbm_sc_s0     ST         proposed  Q4 (best)  WASO    0.8182     67.7192        142.3624   11
+lgbm_sc_s0    HMC            dfloa        all   all    0.8989     74.7887        118.6472 1207
+lgbm_sc_s0    HMC mondrian_entropy        all   all    0.9072     69.9052        101.2167 1207
+lgbm_sc_s0    HMC      mondrian_sd        all   all    0.9072     70.0681        101.8599 1207
+lgbm_sc_s0    HMC         proposed        all   all    0.9006     67.7332        116.1243 1207
+lgbm_sc_s0     SC            dfloa        all   all    0.8987     47.3620         88.7279 1224
+lgbm_sc_s0     SC mondrian_entropy        all   all    0.9060     54.9869         85.3102 1224
+lgbm_sc_s0     SC      mondrian_sd        all   all    0.9077     55.2448         82.2031 1224
+lgbm_sc_s0     SC         proposed        all   all    0.9020     53.8666         85.9062 1224
+lgbm_sc_s0     ST            dfloa        all   all    0.8892     49.6710         67.9835  352
+lgbm_sc_s0     ST mondrian_entropy        all   all    0.8892     42.5953         59.6250  352
+lgbm_sc_s0     ST      mondrian_sd        all   all    0.8977     42.2529         55.7854  352
+lgbm_sc_s0     ST         proposed        all   all    0.9034     43.4353         58.7927  352

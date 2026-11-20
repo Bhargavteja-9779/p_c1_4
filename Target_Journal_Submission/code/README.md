@@ -72,7 +72,7 @@ python -m pytest -q tests
 
 ## Design safeguards
 Subject-grouped splitting everywhere; label-free analysis windows; HMM parameters never fitted on the
-evaluated night; pre-registered protocol (`../supplementary/PREREGISTERED_PROTOCOL.md`) and change log
+evaluated night; pre-specified protocol (`../supplementary/PROTOCOL.md`) and change log
 (`../../CHANGELOG.md`).
 
 ## Licence

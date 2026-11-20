@@ -8,7 +8,7 @@
 
 <<TABLE:table2_display>>
 
-**Table 3.** Bias (mean absolute error) of night-level point estimates on test nights (YASA stager). Within cohort: same 50 splits as Table 2. Plug-in: parameter of the stager's own hypnogram (no labels used); calibrated plug-in: hypnogram of the probabilities recalibrated on the calibration nights; posterior mean: mean over 1000 sampled hypnograms. Ten local nights: all components fitted on ten manually scored nights of the same cohort, remaining nights tested (50 repetitions; not applicable to SC, the source of the in-domain stager). Units as in Table 2. In-domain LightGBM stager in Supplementary S4.
+**Table 3.** Bias (mean absolute error) of night-level point estimates on test nights (YASA stager). Within cohort: same 50 splits as Table 2. Plug-in: parameter of the stager's own hypnogram (no labels used); calibrated plug-in: hypnogram of the probabilities recalibrated on the calibration nights; posterior mean: mean over 1000 sampled hypnograms. Ten local nights: all components fitted on ten manually scored nights of the same cohort, remaining nights tested (50 repetitions; evaluated on ST and HMC only). Units as in Table 2. In-domain LightGBM stager in Supplementary S4.
 
 <<TABLE:table3_display>>
 

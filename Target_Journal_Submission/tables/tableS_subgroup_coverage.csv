@@ -1,46 +1,46 @@
 stager,cohort,method,level,coverage,count,n_nights,factor,param
 yasa,HMC,ba_loa,Q1 (worst),0.8092105263157895,304,38,acc_quartile,all
-yasa,HMC,ba_loa,Q2,0.950657894736842,304,38,acc_quartile,all
-yasa,HMC,ba_loa,Q3,0.9527027027027029,296,37,acc_quartile,all
+yasa,HMC,ba_loa,Q2,0.9506578947368421,304,38,acc_quartile,all
+yasa,HMC,ba_loa,Q3,0.9527027027027027,296,37,acc_quartile,all
 yasa,HMC,ba_loa,Q4 (best),0.976897689768977,303,38,acc_quartile,all
 yasa,HMC,norm_reg_ffbs,Q1 (worst),0.8125,304,38,acc_quartile,all
 yasa,HMC,norm_reg_ffbs,Q2,0.9177631578947368,304,38,acc_quartile,all
-yasa,HMC,norm_reg_ffbs,Q3,0.9391891891891893,296,37,acc_quartile,all
+yasa,HMC,norm_reg_ffbs,Q3,0.9391891891891891,296,37,acc_quartile,all
 yasa,HMC,norm_reg_ffbs,Q4 (best),0.933993399339934,303,38,acc_quartile,all
 yasa,HMC,scp_abs,Q1 (worst),0.75,304,38,acc_quartile,all
 yasa,HMC,scp_abs,Q2,0.930921052631579,304,38,acc_quartile,all
 yasa,HMC,scp_abs,Q3,0.956081081081081,296,37,acc_quartile,all
 yasa,HMC,scp_abs,Q4 (best),0.966996699669967,303,38,acc_quartile,all
 yasa,HMC,scp_abs_bc,Q1 (worst),0.756578947368421,304,38,acc_quartile,all
-yasa,HMC,scp_abs_bc,Q2,0.9407894736842104,304,38,acc_quartile,all
-yasa,HMC,scp_abs_bc,Q3,0.9425675675675677,296,37,acc_quartile,all
+yasa,HMC,scp_abs_bc,Q2,0.9407894736842105,304,38,acc_quartile,all
+yasa,HMC,scp_abs_bc,Q3,0.9425675675675675,296,37,acc_quartile,all
 yasa,HMC,scp_abs_bc,Q4 (best),0.9603960396039604,303,38,acc_quartile,all
 yasa,SC,ba_loa,Q1 (worst),0.83125,320,40,acc_quartile,all
-yasa,SC,ba_loa,Q2,0.9324324324324323,296,37,acc_quartile,all
+yasa,SC,ba_loa,Q2,0.9324324324324325,296,37,acc_quartile,all
 yasa,SC,ba_loa,Q3,0.9572368421052632,304,38,acc_quartile,all
 yasa,SC,ba_loa,Q4 (best),0.9736842105263158,304,38,acc_quartile,all
 yasa,SC,norm_reg_ffbs,Q1 (worst),0.809375,320,40,acc_quartile,all
 yasa,SC,norm_reg_ffbs,Q2,0.9121621621621622,296,37,acc_quartile,all
-yasa,SC,norm_reg_ffbs,Q3,0.9539473684210528,304,38,acc_quartile,all
-yasa,SC,norm_reg_ffbs,Q4 (best),0.9342105263157896,304,38,acc_quartile,all
+yasa,SC,norm_reg_ffbs,Q3,0.9539473684210527,304,38,acc_quartile,all
+yasa,SC,norm_reg_ffbs,Q4 (best),0.9342105263157895,304,38,acc_quartile,all
 yasa,SC,scp_abs,Q1 (worst),0.775,320,40,acc_quartile,all
 yasa,SC,scp_abs,Q2,0.902027027027027,296,37,acc_quartile,all
-yasa,SC,scp_abs,Q3,0.9605263157894736,304,38,acc_quartile,all
-yasa,SC,scp_abs,Q4 (best),0.9703947368421052,304,38,acc_quartile,all
+yasa,SC,scp_abs,Q3,0.9605263157894737,304,38,acc_quartile,all
+yasa,SC,scp_abs,Q4 (best),0.9703947368421053,304,38,acc_quartile,all
 yasa,SC,scp_abs_bc,Q1 (worst),0.790625,320,40,acc_quartile,all
 yasa,SC,scp_abs_bc,Q2,0.8986486486486487,296,37,acc_quartile,all
-yasa,SC,scp_abs_bc,Q3,0.950657894736842,304,38,acc_quartile,all
-yasa,SC,scp_abs_bc,Q4 (best),0.9605263157894736,304,38,acc_quartile,all
+yasa,SC,scp_abs_bc,Q3,0.9506578947368421,304,38,acc_quartile,all
+yasa,SC,scp_abs_bc,Q4 (best),0.9605263157894737,304,38,acc_quartile,all
 yasa,ST,ba_loa,Q1 (worst),0.7840909090909091,88,11,acc_quartile,all
 yasa,ST,ba_loa,Q2,0.8636363636363636,88,11,acc_quartile,all
 yasa,ST,ba_loa,Q3,0.9318181818181818,88,11,acc_quartile,all
-yasa,ST,ba_loa,Q4 (best),0.9772727272727272,88,11,acc_quartile,all
+yasa,ST,ba_loa,Q4 (best),0.9772727272727273,88,11,acc_quartile,all
 yasa,ST,norm_reg_ffbs,Q1 (worst),0.8409090909090909,88,11,acc_quartile,all
-yasa,ST,norm_reg_ffbs,Q2,0.9090909090909092,88,11,acc_quartile,all
+yasa,ST,norm_reg_ffbs,Q2,0.9090909090909091,88,11,acc_quartile,all
 yasa,ST,norm_reg_ffbs,Q3,0.9318181818181818,88,11,acc_quartile,all
 yasa,ST,norm_reg_ffbs,Q4 (best),0.9431818181818182,88,11,acc_quartile,all
 yasa,ST,scp_abs,Q1 (worst),0.7613636363636364,88,11,acc_quartile,all
-yasa,ST,scp_abs,Q2,0.9090909090909092,88,11,acc_quartile,all
+yasa,ST,scp_abs,Q2,0.9090909090909091,88,11,acc_quartile,all
 yasa,ST,scp_abs,Q3,0.9545454545454546,88,11,acc_quartile,all
 yasa,ST,scp_abs,Q4 (best),0.9886363636363636,88,11,acc_quartile,all
 yasa,ST,scp_abs_bc,Q1 (worst),0.7840909090909091,88,11,acc_quartile,all
@@ -55,18 +55,18 @@ yasa,HMC,ba_loa,Q1 (worst),0.8947368421052632,38,38,acc_quartile,REML
 yasa,HMC,ba_loa,Q1 (worst),0.8947368421052632,38,38,acc_quartile,SOL
 yasa,HMC,ba_loa,Q1 (worst),0.7894736842105263,38,38,acc_quartile,TST
 yasa,HMC,ba_loa,Q1 (worst),0.8157894736842105,38,38,acc_quartile,WASO
-yasa,HMC,ba_loa,Q2,0.9473684210526316,38,38,acc_quartile,N1%
-yasa,HMC,ba_loa,Q2,0.9473684210526316,38,38,acc_quartile,N2%
-yasa,HMC,ba_loa,Q2,0.9473684210526316,38,38,acc_quartile,N3%
-yasa,HMC,ba_loa,Q2,0.9473684210526316,38,38,acc_quartile,REM%
-yasa,HMC,ba_loa,Q2,0.9210526315789472,38,38,acc_quartile,REML
-yasa,HMC,ba_loa,Q2,0.9473684210526316,38,38,acc_quartile,SOL
+yasa,HMC,ba_loa,Q2,0.9473684210526315,38,38,acc_quartile,N1%
+yasa,HMC,ba_loa,Q2,0.9473684210526315,38,38,acc_quartile,N2%
+yasa,HMC,ba_loa,Q2,0.9473684210526315,38,38,acc_quartile,N3%
+yasa,HMC,ba_loa,Q2,0.9473684210526315,38,38,acc_quartile,REM%
+yasa,HMC,ba_loa,Q2,0.9210526315789473,38,38,acc_quartile,REML
+yasa,HMC,ba_loa,Q2,0.9473684210526315,38,38,acc_quartile,SOL
 yasa,HMC,ba_loa,Q2,0.9736842105263158,38,38,acc_quartile,TST
 yasa,HMC,ba_loa,Q2,0.9736842105263158,38,38,acc_quartile,WASO
 yasa,HMC,ba_loa,Q3,0.972972972972973,37,37,acc_quartile,N1%
 yasa,HMC,ba_loa,Q3,0.972972972972973,37,37,acc_quartile,N2%
 yasa,HMC,ba_loa,Q3,0.972972972972973,37,37,acc_quartile,N3%
-yasa,HMC,ba_loa,Q3,0.945945945945946,37,37,acc_quartile,REM%
+yasa,HMC,ba_loa,Q3,0.9459459459459459,37,37,acc_quartile,REM%
 yasa,HMC,ba_loa,Q3,0.918918918918919,37,37,acc_quartile,REML
 yasa,HMC,ba_loa,Q3,0.8918918918918919,37,37,acc_quartile,SOL
 yasa,HMC,ba_loa,Q3,0.972972972972973,37,37,acc_quartile,TST
@@ -76,7 +76,7 @@ yasa,HMC,ba_loa,Q4 (best),1.0,38,38,acc_quartile,N2%
 yasa,HMC,ba_loa,Q4 (best),1.0,38,38,acc_quartile,N3%
 yasa,HMC,ba_loa,Q4 (best),1.0,38,38,acc_quartile,REM%
 yasa,HMC,ba_loa,Q4 (best),0.918918918918919,37,37,acc_quartile,REML
-yasa,HMC,ba_loa,Q4 (best),0.9210526315789472,38,38,acc_quartile,SOL
+yasa,HMC,ba_loa,Q4 (best),0.9210526315789473,38,38,acc_quartile,SOL
 yasa,HMC,ba_loa,Q4 (best),1.0,38,38,acc_quartile,TST
 yasa,HMC,ba_loa,Q4 (best),0.9736842105263158,38,38,acc_quartile,WASO
 yasa,HMC,norm_reg_ffbs,Q1 (worst),0.7631578947368421,38,38,acc_quartile,N1%
@@ -84,24 +84,24 @@ yasa,HMC,norm_reg_ffbs,Q1 (worst),0.868421052631579,38,38,acc_quartile,N2%
 yasa,HMC,norm_reg_ffbs,Q1 (worst),0.8157894736842105,38,38,acc_quartile,N3%
 yasa,HMC,norm_reg_ffbs,Q1 (worst),0.7631578947368421,38,38,acc_quartile,REM%
 yasa,HMC,norm_reg_ffbs,Q1 (worst),0.868421052631579,38,38,acc_quartile,REML
-yasa,HMC,norm_reg_ffbs,Q1 (worst),0.9210526315789472,38,38,acc_quartile,SOL
+yasa,HMC,norm_reg_ffbs,Q1 (worst),0.9210526315789473,38,38,acc_quartile,SOL
 yasa,HMC,norm_reg_ffbs,Q1 (worst),0.7631578947368421,38,38,acc_quartile,TST
 yasa,HMC,norm_reg_ffbs,Q1 (worst),0.7368421052631579,38,38,acc_quartile,WASO
-yasa,HMC,norm_reg_ffbs,Q2,0.9210526315789472,38,38,acc_quartile,N1%
-yasa,HMC,norm_reg_ffbs,Q2,0.9210526315789472,38,38,acc_quartile,N2%
-yasa,HMC,norm_reg_ffbs,Q2,0.9473684210526316,38,38,acc_quartile,N3%
-yasa,HMC,norm_reg_ffbs,Q2,0.9473684210526316,38,38,acc_quartile,REM%
+yasa,HMC,norm_reg_ffbs,Q2,0.9210526315789473,38,38,acc_quartile,N1%
+yasa,HMC,norm_reg_ffbs,Q2,0.9210526315789473,38,38,acc_quartile,N2%
+yasa,HMC,norm_reg_ffbs,Q2,0.9473684210526315,38,38,acc_quartile,N3%
+yasa,HMC,norm_reg_ffbs,Q2,0.9473684210526315,38,38,acc_quartile,REM%
 yasa,HMC,norm_reg_ffbs,Q2,0.8421052631578947,38,38,acc_quartile,REML
 yasa,HMC,norm_reg_ffbs,Q2,0.8947368421052632,38,38,acc_quartile,SOL
-yasa,HMC,norm_reg_ffbs,Q2,0.9210526315789472,38,38,acc_quartile,TST
-yasa,HMC,norm_reg_ffbs,Q2,0.9473684210526316,38,38,acc_quartile,WASO
+yasa,HMC,norm_reg_ffbs,Q2,0.9210526315789473,38,38,acc_quartile,TST
+yasa,HMC,norm_reg_ffbs,Q2,0.9473684210526315,38,38,acc_quartile,WASO
 yasa,HMC,norm_reg_ffbs,Q3,0.918918918918919,37,37,acc_quartile,N1%
-yasa,HMC,norm_reg_ffbs,Q3,0.945945945945946,37,37,acc_quartile,N2%
-yasa,HMC,norm_reg_ffbs,Q3,0.945945945945946,37,37,acc_quartile,N3%
+yasa,HMC,norm_reg_ffbs,Q3,0.9459459459459459,37,37,acc_quartile,N2%
+yasa,HMC,norm_reg_ffbs,Q3,0.9459459459459459,37,37,acc_quartile,N3%
 yasa,HMC,norm_reg_ffbs,Q3,0.918918918918919,37,37,acc_quartile,REM%
 yasa,HMC,norm_reg_ffbs,Q3,0.972972972972973,37,37,acc_quartile,REML
 yasa,HMC,norm_reg_ffbs,Q3,0.8918918918918919,37,37,acc_quartile,SOL
-yasa,HMC,norm_reg_ffbs,Q3,0.945945945945946,37,37,acc_quartile,TST
+yasa,HMC,norm_reg_ffbs,Q3,0.9459459459459459,37,37,acc_quartile,TST
 yasa,HMC,norm_reg_ffbs,Q3,0.972972972972973,37,37,acc_quartile,WASO
 yasa,HMC,norm_reg_ffbs,Q4 (best),1.0,38,38,acc_quartile,N1%
 yasa,HMC,norm_reg_ffbs,Q4 (best),0.868421052631579,38,38,acc_quartile,N2%
@@ -110,7 +110,7 @@ yasa,HMC,norm_reg_ffbs,Q4 (best),0.9736842105263158,38,38,acc_quartile,REM%
 yasa,HMC,norm_reg_ffbs,Q4 (best),0.918918918918919,37,37,acc_quartile,REML
 yasa,HMC,norm_reg_ffbs,Q4 (best),0.8947368421052632,38,38,acc_quartile,SOL
 yasa,HMC,norm_reg_ffbs,Q4 (best),0.9736842105263158,38,38,acc_quartile,TST
-yasa,HMC,norm_reg_ffbs,Q4 (best),0.9473684210526316,38,38,acc_quartile,WASO
+yasa,HMC,norm_reg_ffbs,Q4 (best),0.9473684210526315,38,38,acc_quartile,WASO
 yasa,HMC,scp_abs,Q1 (worst),0.7894736842105263,38,38,acc_quartile,N1%
 yasa,HMC,scp_abs,Q1 (worst),0.7368421052631579,38,38,acc_quartile,N2%
 yasa,HMC,scp_abs,Q1 (worst),0.7368421052631579,38,38,acc_quartile,N3%
@@ -119,28 +119,28 @@ yasa,HMC,scp_abs,Q1 (worst),0.868421052631579,38,38,acc_quartile,REML
 yasa,HMC,scp_abs,Q1 (worst),0.8421052631578947,38,38,acc_quartile,SOL
 yasa,HMC,scp_abs,Q1 (worst),0.631578947368421,38,38,acc_quartile,TST
 yasa,HMC,scp_abs,Q1 (worst),0.6578947368421053,38,38,acc_quartile,WASO
-yasa,HMC,scp_abs,Q2,0.9210526315789472,38,38,acc_quartile,N1%
-yasa,HMC,scp_abs,Q2,0.9210526315789472,38,38,acc_quartile,N2%
+yasa,HMC,scp_abs,Q2,0.9210526315789473,38,38,acc_quartile,N1%
+yasa,HMC,scp_abs,Q2,0.9210526315789473,38,38,acc_quartile,N2%
 yasa,HMC,scp_abs,Q2,0.8947368421052632,38,38,acc_quartile,N3%
-yasa,HMC,scp_abs,Q2,0.9473684210526316,38,38,acc_quartile,REM%
+yasa,HMC,scp_abs,Q2,0.9473684210526315,38,38,acc_quartile,REM%
 yasa,HMC,scp_abs,Q2,0.868421052631579,38,38,acc_quartile,REML
-yasa,HMC,scp_abs,Q2,0.9473684210526316,38,38,acc_quartile,SOL
+yasa,HMC,scp_abs,Q2,0.9473684210526315,38,38,acc_quartile,SOL
 yasa,HMC,scp_abs,Q2,0.9736842105263158,38,38,acc_quartile,TST
 yasa,HMC,scp_abs,Q2,0.9736842105263158,38,38,acc_quartile,WASO
-yasa,HMC,scp_abs,Q3,0.945945945945946,37,37,acc_quartile,N1%
+yasa,HMC,scp_abs,Q3,0.9459459459459459,37,37,acc_quartile,N1%
 yasa,HMC,scp_abs,Q3,0.972972972972973,37,37,acc_quartile,N2%
 yasa,HMC,scp_abs,Q3,0.972972972972973,37,37,acc_quartile,N3%
-yasa,HMC,scp_abs,Q3,0.945945945945946,37,37,acc_quartile,REM%
-yasa,HMC,scp_abs,Q3,0.945945945945946,37,37,acc_quartile,REML
+yasa,HMC,scp_abs,Q3,0.9459459459459459,37,37,acc_quartile,REM%
+yasa,HMC,scp_abs,Q3,0.9459459459459459,37,37,acc_quartile,REML
 yasa,HMC,scp_abs,Q3,0.8918918918918919,37,37,acc_quartile,SOL
 yasa,HMC,scp_abs,Q3,1.0,37,37,acc_quartile,TST
 yasa,HMC,scp_abs,Q3,0.972972972972973,37,37,acc_quartile,WASO
-yasa,HMC,scp_abs,Q4 (best),0.9473684210526316,38,38,acc_quartile,N1%
+yasa,HMC,scp_abs,Q4 (best),0.9473684210526315,38,38,acc_quartile,N1%
 yasa,HMC,scp_abs,Q4 (best),0.9736842105263158,38,38,acc_quartile,N2%
 yasa,HMC,scp_abs,Q4 (best),1.0,38,38,acc_quartile,N3%
 yasa,HMC,scp_abs,Q4 (best),0.9736842105263158,38,38,acc_quartile,REM%
 yasa,HMC,scp_abs,Q4 (best),0.918918918918919,37,37,acc_quartile,REML
-yasa,HMC,scp_abs,Q4 (best),0.9210526315789472,38,38,acc_quartile,SOL
+yasa,HMC,scp_abs,Q4 (best),0.9210526315789473,38,38,acc_quartile,SOL
 yasa,HMC,scp_abs,Q4 (best),1.0,38,38,acc_quartile,TST
 yasa,HMC,scp_abs,Q4 (best),1.0,38,38,acc_quartile,WASO
 yasa,HMC,scp_abs_bc,Q1 (worst),0.7368421052631579,38,38,acc_quartile,N1%
@@ -151,30 +151,30 @@ yasa,HMC,scp_abs_bc,Q1 (worst),0.8947368421052632,38,38,acc_quartile,REML
 yasa,HMC,scp_abs_bc,Q1 (worst),0.8421052631578947,38,38,acc_quartile,SOL
 yasa,HMC,scp_abs_bc,Q1 (worst),0.6578947368421053,38,38,acc_quartile,TST
 yasa,HMC,scp_abs_bc,Q1 (worst),0.7368421052631579,38,38,acc_quartile,WASO
-yasa,HMC,scp_abs_bc,Q2,0.9210526315789472,38,38,acc_quartile,N1%
-yasa,HMC,scp_abs_bc,Q2,0.9473684210526316,38,38,acc_quartile,N2%
-yasa,HMC,scp_abs_bc,Q2,0.9210526315789472,38,38,acc_quartile,N3%
-yasa,HMC,scp_abs_bc,Q2,0.9473684210526316,38,38,acc_quartile,REM%
+yasa,HMC,scp_abs_bc,Q2,0.9210526315789473,38,38,acc_quartile,N1%
+yasa,HMC,scp_abs_bc,Q2,0.9473684210526315,38,38,acc_quartile,N2%
+yasa,HMC,scp_abs_bc,Q2,0.9210526315789473,38,38,acc_quartile,N3%
+yasa,HMC,scp_abs_bc,Q2,0.9473684210526315,38,38,acc_quartile,REM%
 yasa,HMC,scp_abs_bc,Q2,0.8947368421052632,38,38,acc_quartile,REML
-yasa,HMC,scp_abs_bc,Q2,0.9473684210526316,38,38,acc_quartile,SOL
+yasa,HMC,scp_abs_bc,Q2,0.9473684210526315,38,38,acc_quartile,SOL
 yasa,HMC,scp_abs_bc,Q2,0.9736842105263158,38,38,acc_quartile,TST
 yasa,HMC,scp_abs_bc,Q2,0.9736842105263158,38,38,acc_quartile,WASO
 yasa,HMC,scp_abs_bc,Q3,0.972972972972973,37,37,acc_quartile,N1%
 yasa,HMC,scp_abs_bc,Q3,0.918918918918919,37,37,acc_quartile,N2%
 yasa,HMC,scp_abs_bc,Q3,0.972972972972973,37,37,acc_quartile,N3%
-yasa,HMC,scp_abs_bc,Q3,0.945945945945946,37,37,acc_quartile,REM%
+yasa,HMC,scp_abs_bc,Q3,0.9459459459459459,37,37,acc_quartile,REM%
 yasa,HMC,scp_abs_bc,Q3,0.918918918918919,37,37,acc_quartile,REML
 yasa,HMC,scp_abs_bc,Q3,0.8918918918918919,37,37,acc_quartile,SOL
 yasa,HMC,scp_abs_bc,Q3,0.972972972972973,37,37,acc_quartile,TST
-yasa,HMC,scp_abs_bc,Q3,0.945945945945946,37,37,acc_quartile,WASO
+yasa,HMC,scp_abs_bc,Q3,0.9459459459459459,37,37,acc_quartile,WASO
 yasa,HMC,scp_abs_bc,Q4 (best),0.9736842105263158,38,38,acc_quartile,N1%
 yasa,HMC,scp_abs_bc,Q4 (best),0.9736842105263158,38,38,acc_quartile,N2%
 yasa,HMC,scp_abs_bc,Q4 (best),1.0,38,38,acc_quartile,N3%
 yasa,HMC,scp_abs_bc,Q4 (best),0.9736842105263158,38,38,acc_quartile,REM%
 yasa,HMC,scp_abs_bc,Q4 (best),0.8918918918918919,37,37,acc_quartile,REML
-yasa,HMC,scp_abs_bc,Q4 (best),0.9210526315789472,38,38,acc_quartile,SOL
+yasa,HMC,scp_abs_bc,Q4 (best),0.9210526315789473,38,38,acc_quartile,SOL
 yasa,HMC,scp_abs_bc,Q4 (best),1.0,38,38,acc_quartile,TST
-yasa,HMC,scp_abs_bc,Q4 (best),0.9473684210526316,38,38,acc_quartile,WASO
+yasa,HMC,scp_abs_bc,Q4 (best),0.9473684210526315,38,38,acc_quartile,WASO
 yasa,SC,ba_loa,Q1 (worst),0.775,40,40,acc_quartile,N1%
 yasa,SC,ba_loa,Q1 (worst),0.7,40,40,acc_quartile,N2%
 yasa,SC,ba_loa,Q1 (worst),0.8,40,40,acc_quartile,N3%
@@ -184,29 +184,29 @@ yasa,SC,ba_loa,Q1 (worst),0.9,40,40,acc_quartile,SOL
 yasa,SC,ba_loa,Q1 (worst),0.775,40,40,acc_quartile,TST
 yasa,SC,ba_loa,Q1 (worst),0.95,40,40,acc_quartile,WASO
 yasa,SC,ba_loa,Q2,0.972972972972973,37,37,acc_quartile,N1%
-yasa,SC,ba_loa,Q2,0.945945945945946,37,37,acc_quartile,N2%
+yasa,SC,ba_loa,Q2,0.9459459459459459,37,37,acc_quartile,N2%
 yasa,SC,ba_loa,Q2,0.972972972972973,37,37,acc_quartile,N3%
 yasa,SC,ba_loa,Q2,0.918918918918919,37,37,acc_quartile,REM%
 yasa,SC,ba_loa,Q2,0.8378378378378378,37,37,acc_quartile,REML
 yasa,SC,ba_loa,Q2,0.972972972972973,37,37,acc_quartile,SOL
-yasa,SC,ba_loa,Q2,0.945945945945946,37,37,acc_quartile,TST
+yasa,SC,ba_loa,Q2,0.9459459459459459,37,37,acc_quartile,TST
 yasa,SC,ba_loa,Q2,0.8918918918918919,37,37,acc_quartile,WASO
 yasa,SC,ba_loa,Q3,1.0,38,38,acc_quartile,N1%
 yasa,SC,ba_loa,Q3,1.0,38,38,acc_quartile,N2%
-yasa,SC,ba_loa,Q3,0.9473684210526316,38,38,acc_quartile,N3%
+yasa,SC,ba_loa,Q3,0.9473684210526315,38,38,acc_quartile,N3%
 yasa,SC,ba_loa,Q3,0.9736842105263158,38,38,acc_quartile,REM%
 yasa,SC,ba_loa,Q3,0.8421052631578947,38,38,acc_quartile,REML
-yasa,SC,ba_loa,Q3,0.9473684210526316,38,38,acc_quartile,SOL
+yasa,SC,ba_loa,Q3,0.9473684210526315,38,38,acc_quartile,SOL
 yasa,SC,ba_loa,Q3,1.0,38,38,acc_quartile,TST
-yasa,SC,ba_loa,Q3,0.9473684210526316,38,38,acc_quartile,WASO
+yasa,SC,ba_loa,Q3,0.9473684210526315,38,38,acc_quartile,WASO
 yasa,SC,ba_loa,Q4 (best),0.9736842105263158,38,38,acc_quartile,N1%
 yasa,SC,ba_loa,Q4 (best),1.0,38,38,acc_quartile,N2%
 yasa,SC,ba_loa,Q4 (best),1.0,38,38,acc_quartile,N3%
 yasa,SC,ba_loa,Q4 (best),1.0,38,38,acc_quartile,REM%
-yasa,SC,ba_loa,Q4 (best),0.9210526315789472,38,38,acc_quartile,REML
+yasa,SC,ba_loa,Q4 (best),0.9210526315789473,38,38,acc_quartile,REML
 yasa,SC,ba_loa,Q4 (best),0.9736842105263158,38,38,acc_quartile,SOL
 yasa,SC,ba_loa,Q4 (best),1.0,38,38,acc_quartile,TST
-yasa,SC,ba_loa,Q4 (best),0.9210526315789472,38,38,acc_quartile,WASO
+yasa,SC,ba_loa,Q4 (best),0.9210526315789473,38,38,acc_quartile,WASO
 yasa,SC,norm_reg_ffbs,Q1 (worst),0.675,40,40,acc_quartile,N1%
 yasa,SC,norm_reg_ffbs,Q1 (worst),0.75,40,40,acc_quartile,N2%
 yasa,SC,norm_reg_ffbs,Q1 (worst),0.8,40,40,acc_quartile,N3%
@@ -217,7 +217,7 @@ yasa,SC,norm_reg_ffbs,Q1 (worst),0.75,40,40,acc_quartile,TST
 yasa,SC,norm_reg_ffbs,Q1 (worst),0.95,40,40,acc_quartile,WASO
 yasa,SC,norm_reg_ffbs,Q2,0.972972972972973,37,37,acc_quartile,N1%
 yasa,SC,norm_reg_ffbs,Q2,0.8918918918918919,37,37,acc_quartile,N2%
-yasa,SC,norm_reg_ffbs,Q2,0.945945945945946,37,37,acc_quartile,N3%
+yasa,SC,norm_reg_ffbs,Q2,0.9459459459459459,37,37,acc_quartile,N3%
 yasa,SC,norm_reg_ffbs,Q2,0.918918918918919,37,37,acc_quartile,REM%
 yasa,SC,norm_reg_ffbs,Q2,0.8648648648648649,37,37,acc_quartile,REML
 yasa,SC,norm_reg_ffbs,Q2,0.918918918918919,37,37,acc_quartile,SOL
@@ -225,18 +225,18 @@ yasa,SC,norm_reg_ffbs,Q2,0.8918918918918919,37,37,acc_quartile,TST
 yasa,SC,norm_reg_ffbs,Q2,0.8918918918918919,37,37,acc_quartile,WASO
 yasa,SC,norm_reg_ffbs,Q3,0.9736842105263158,38,38,acc_quartile,N1%
 yasa,SC,norm_reg_ffbs,Q3,1.0,38,38,acc_quartile,N2%
-yasa,SC,norm_reg_ffbs,Q3,0.9473684210526316,38,38,acc_quartile,N3%
-yasa,SC,norm_reg_ffbs,Q3,0.9473684210526316,38,38,acc_quartile,REM%
-yasa,SC,norm_reg_ffbs,Q3,0.9210526315789472,38,38,acc_quartile,REML
+yasa,SC,norm_reg_ffbs,Q3,0.9473684210526315,38,38,acc_quartile,N3%
+yasa,SC,norm_reg_ffbs,Q3,0.9473684210526315,38,38,acc_quartile,REM%
+yasa,SC,norm_reg_ffbs,Q3,0.9210526315789473,38,38,acc_quartile,REML
 yasa,SC,norm_reg_ffbs,Q3,0.8947368421052632,38,38,acc_quartile,SOL
 yasa,SC,norm_reg_ffbs,Q3,1.0,38,38,acc_quartile,TST
-yasa,SC,norm_reg_ffbs,Q3,0.9473684210526316,38,38,acc_quartile,WASO
+yasa,SC,norm_reg_ffbs,Q3,0.9473684210526315,38,38,acc_quartile,WASO
 yasa,SC,norm_reg_ffbs,Q4 (best),1.0,38,38,acc_quartile,N1%
 yasa,SC,norm_reg_ffbs,Q4 (best),0.9736842105263158,38,38,acc_quartile,N2%
-yasa,SC,norm_reg_ffbs,Q4 (best),0.9210526315789472,38,38,acc_quartile,N3%
-yasa,SC,norm_reg_ffbs,Q4 (best),0.9473684210526316,38,38,acc_quartile,REM%
-yasa,SC,norm_reg_ffbs,Q4 (best),0.9210526315789472,38,38,acc_quartile,REML
-yasa,SC,norm_reg_ffbs,Q4 (best),0.9210526315789472,38,38,acc_quartile,SOL
+yasa,SC,norm_reg_ffbs,Q4 (best),0.9210526315789473,38,38,acc_quartile,N3%
+yasa,SC,norm_reg_ffbs,Q4 (best),0.9473684210526315,38,38,acc_quartile,REM%
+yasa,SC,norm_reg_ffbs,Q4 (best),0.9210526315789473,38,38,acc_quartile,REML
+yasa,SC,norm_reg_ffbs,Q4 (best),0.9210526315789473,38,38,acc_quartile,SOL
 yasa,SC,norm_reg_ffbs,Q4 (best),0.9736842105263158,38,38,acc_quartile,TST
 yasa,SC,norm_reg_ffbs,Q4 (best),0.8157894736842105,38,38,acc_quartile,WASO
 yasa,SC,scp_abs,Q1 (worst),0.725,40,40,acc_quartile,N1%
@@ -248,29 +248,29 @@ yasa,SC,scp_abs,Q1 (worst),0.8,40,40,acc_quartile,SOL
 yasa,SC,scp_abs,Q1 (worst),0.65,40,40,acc_quartile,TST
 yasa,SC,scp_abs,Q1 (worst),0.925,40,40,acc_quartile,WASO
 yasa,SC,scp_abs,Q2,0.8918918918918919,37,37,acc_quartile,N1%
-yasa,SC,scp_abs,Q2,0.945945945945946,37,37,acc_quartile,N2%
+yasa,SC,scp_abs,Q2,0.9459459459459459,37,37,acc_quartile,N2%
 yasa,SC,scp_abs,Q2,0.8918918918918919,37,37,acc_quartile,N3%
 yasa,SC,scp_abs,Q2,0.8918918918918919,37,37,acc_quartile,REM%
 yasa,SC,scp_abs,Q2,0.8378378378378378,37,37,acc_quartile,REML
-yasa,SC,scp_abs,Q2,0.945945945945946,37,37,acc_quartile,SOL
-yasa,SC,scp_abs,Q2,0.945945945945946,37,37,acc_quartile,TST
+yasa,SC,scp_abs,Q2,0.9459459459459459,37,37,acc_quartile,SOL
+yasa,SC,scp_abs,Q2,0.9459459459459459,37,37,acc_quartile,TST
 yasa,SC,scp_abs,Q2,0.8648648648648649,37,37,acc_quartile,WASO
 yasa,SC,scp_abs,Q3,1.0,38,38,acc_quartile,N1%
 yasa,SC,scp_abs,Q3,1.0,38,38,acc_quartile,N2%
 yasa,SC,scp_abs,Q3,1.0,38,38,acc_quartile,N3%
 yasa,SC,scp_abs,Q3,0.9736842105263158,38,38,acc_quartile,REM%
 yasa,SC,scp_abs,Q3,0.8947368421052632,38,38,acc_quartile,REML
-yasa,SC,scp_abs,Q3,0.9210526315789472,38,38,acc_quartile,SOL
+yasa,SC,scp_abs,Q3,0.9210526315789473,38,38,acc_quartile,SOL
 yasa,SC,scp_abs,Q3,1.0,38,38,acc_quartile,TST
 yasa,SC,scp_abs,Q3,0.8947368421052632,38,38,acc_quartile,WASO
 yasa,SC,scp_abs,Q4 (best),1.0,38,38,acc_quartile,N1%
 yasa,SC,scp_abs,Q4 (best),1.0,38,38,acc_quartile,N2%
 yasa,SC,scp_abs,Q4 (best),0.9736842105263158,38,38,acc_quartile,N3%
 yasa,SC,scp_abs,Q4 (best),0.9736842105263158,38,38,acc_quartile,REM%
-yasa,SC,scp_abs,Q4 (best),0.9473684210526316,38,38,acc_quartile,REML
-yasa,SC,scp_abs,Q4 (best),0.9473684210526316,38,38,acc_quartile,SOL
+yasa,SC,scp_abs,Q4 (best),0.9473684210526315,38,38,acc_quartile,REML
+yasa,SC,scp_abs,Q4 (best),0.9473684210526315,38,38,acc_quartile,SOL
 yasa,SC,scp_abs,Q4 (best),1.0,38,38,acc_quartile,TST
-yasa,SC,scp_abs,Q4 (best),0.9210526315789472,38,38,acc_quartile,WASO
+yasa,SC,scp_abs,Q4 (best),0.9210526315789473,38,38,acc_quartile,WASO
 yasa,SC,scp_abs_bc,Q1 (worst),0.725,40,40,acc_quartile,N1%
 yasa,SC,scp_abs_bc,Q1 (worst),0.7,40,40,acc_quartile,N2%
 yasa,SC,scp_abs_bc,Q1 (worst),0.8,40,40,acc_quartile,N3%
@@ -284,31 +284,31 @@ yasa,SC,scp_abs_bc,Q2,0.918918918918919,37,37,acc_quartile,N2%
 yasa,SC,scp_abs_bc,Q2,0.8918918918918919,37,37,acc_quartile,N3%
 yasa,SC,scp_abs_bc,Q2,0.8648648648648649,37,37,acc_quartile,REM%
 yasa,SC,scp_abs_bc,Q2,0.8378378378378378,37,37,acc_quartile,REML
-yasa,SC,scp_abs_bc,Q2,0.945945945945946,37,37,acc_quartile,SOL
+yasa,SC,scp_abs_bc,Q2,0.9459459459459459,37,37,acc_quartile,SOL
 yasa,SC,scp_abs_bc,Q2,0.918918918918919,37,37,acc_quartile,TST
 yasa,SC,scp_abs_bc,Q2,0.8918918918918919,37,37,acc_quartile,WASO
 yasa,SC,scp_abs_bc,Q3,0.9736842105263158,38,38,acc_quartile,N1%
 yasa,SC,scp_abs_bc,Q3,1.0,38,38,acc_quartile,N2%
-yasa,SC,scp_abs_bc,Q3,0.9473684210526316,38,38,acc_quartile,N3%
+yasa,SC,scp_abs_bc,Q3,0.9473684210526315,38,38,acc_quartile,N3%
 yasa,SC,scp_abs_bc,Q3,0.9736842105263158,38,38,acc_quartile,REM%
 yasa,SC,scp_abs_bc,Q3,0.8947368421052632,38,38,acc_quartile,REML
 yasa,SC,scp_abs_bc,Q3,0.8947368421052632,38,38,acc_quartile,SOL
 yasa,SC,scp_abs_bc,Q3,1.0,38,38,acc_quartile,TST
-yasa,SC,scp_abs_bc,Q3,0.9210526315789472,38,38,acc_quartile,WASO
+yasa,SC,scp_abs_bc,Q3,0.9210526315789473,38,38,acc_quartile,WASO
 yasa,SC,scp_abs_bc,Q4 (best),0.9736842105263158,38,38,acc_quartile,N1%
 yasa,SC,scp_abs_bc,Q4 (best),1.0,38,38,acc_quartile,N2%
-yasa,SC,scp_abs_bc,Q4 (best),0.9473684210526316,38,38,acc_quartile,N3%
+yasa,SC,scp_abs_bc,Q4 (best),0.9473684210526315,38,38,acc_quartile,N3%
 yasa,SC,scp_abs_bc,Q4 (best),0.9736842105263158,38,38,acc_quartile,REM%
-yasa,SC,scp_abs_bc,Q4 (best),0.9473684210526316,38,38,acc_quartile,REML
-yasa,SC,scp_abs_bc,Q4 (best),0.9473684210526316,38,38,acc_quartile,SOL
+yasa,SC,scp_abs_bc,Q4 (best),0.9473684210526315,38,38,acc_quartile,REML
+yasa,SC,scp_abs_bc,Q4 (best),0.9473684210526315,38,38,acc_quartile,SOL
 yasa,SC,scp_abs_bc,Q4 (best),1.0,38,38,acc_quartile,TST
 yasa,SC,scp_abs_bc,Q4 (best),0.8947368421052632,38,38,acc_quartile,WASO
 yasa,ST,ba_loa,Q1 (worst),0.8181818181818182,11,11,acc_quartile,N1%
 yasa,ST,ba_loa,Q1 (worst),0.7272727272727273,11,11,acc_quartile,N2%
 yasa,ST,ba_loa,Q1 (worst),0.7272727272727273,11,11,acc_quartile,N3%
 yasa,ST,ba_loa,Q1 (worst),0.8181818181818182,11,11,acc_quartile,REM%
-yasa,ST,ba_loa,Q1 (worst),0.9090909090909092,11,11,acc_quartile,REML
-yasa,ST,ba_loa,Q1 (worst),0.9090909090909092,11,11,acc_quartile,SOL
+yasa,ST,ba_loa,Q1 (worst),0.9090909090909091,11,11,acc_quartile,REML
+yasa,ST,ba_loa,Q1 (worst),0.9090909090909091,11,11,acc_quartile,SOL
 yasa,ST,ba_loa,Q1 (worst),0.6363636363636364,11,11,acc_quartile,TST
 yasa,ST,ba_loa,Q1 (worst),0.7272727272727273,11,11,acc_quartile,WASO
 yasa,ST,ba_loa,Q2,0.8181818181818182,11,11,acc_quartile,N1%
@@ -316,26 +316,26 @@ yasa,ST,ba_loa,Q2,0.8181818181818182,11,11,acc_quartile,N2%
 yasa,ST,ba_loa,Q2,0.8181818181818182,11,11,acc_quartile,N3%
 yasa,ST,ba_loa,Q2,0.8181818181818182,11,11,acc_quartile,REM%
 yasa,ST,ba_loa,Q2,0.7272727272727273,11,11,acc_quartile,REML
-yasa,ST,ba_loa,Q2,0.9090909090909092,11,11,acc_quartile,SOL
+yasa,ST,ba_loa,Q2,0.9090909090909091,11,11,acc_quartile,SOL
 yasa,ST,ba_loa,Q2,1.0,11,11,acc_quartile,TST
 yasa,ST,ba_loa,Q2,1.0,11,11,acc_quartile,WASO
 yasa,ST,ba_loa,Q3,0.8181818181818182,11,11,acc_quartile,N1%
 yasa,ST,ba_loa,Q3,1.0,11,11,acc_quartile,N2%
 yasa,ST,ba_loa,Q3,1.0,11,11,acc_quartile,N3%
-yasa,ST,ba_loa,Q3,0.9090909090909092,11,11,acc_quartile,REM%
+yasa,ST,ba_loa,Q3,0.9090909090909091,11,11,acc_quartile,REM%
 yasa,ST,ba_loa,Q3,0.8181818181818182,11,11,acc_quartile,REML
-yasa,ST,ba_loa,Q3,0.9090909090909092,11,11,acc_quartile,SOL
+yasa,ST,ba_loa,Q3,0.9090909090909091,11,11,acc_quartile,SOL
 yasa,ST,ba_loa,Q3,1.0,11,11,acc_quartile,TST
 yasa,ST,ba_loa,Q3,1.0,11,11,acc_quartile,WASO
 yasa,ST,ba_loa,Q4 (best),1.0,11,11,acc_quartile,N1%
 yasa,ST,ba_loa,Q4 (best),1.0,11,11,acc_quartile,N2%
 yasa,ST,ba_loa,Q4 (best),1.0,11,11,acc_quartile,N3%
 yasa,ST,ba_loa,Q4 (best),1.0,11,11,acc_quartile,REM%
-yasa,ST,ba_loa,Q4 (best),0.9090909090909092,11,11,acc_quartile,REML
-yasa,ST,ba_loa,Q4 (best),0.9090909090909092,11,11,acc_quartile,SOL
+yasa,ST,ba_loa,Q4 (best),0.9090909090909091,11,11,acc_quartile,REML
+yasa,ST,ba_loa,Q4 (best),0.9090909090909091,11,11,acc_quartile,SOL
 yasa,ST,ba_loa,Q4 (best),1.0,11,11,acc_quartile,TST
 yasa,ST,ba_loa,Q4 (best),1.0,11,11,acc_quartile,WASO
-yasa,ST,norm_reg_ffbs,Q1 (worst),0.9090909090909092,11,11,acc_quartile,N1%
+yasa,ST,norm_reg_ffbs,Q1 (worst),0.9090909090909091,11,11,acc_quartile,N1%
 yasa,ST,norm_reg_ffbs,Q1 (worst),0.7272727272727273,11,11,acc_quartile,N2%
 yasa,ST,norm_reg_ffbs,Q1 (worst),0.7272727272727273,11,11,acc_quartile,N3%
 yasa,ST,norm_reg_ffbs,Q1 (worst),0.8181818181818182,11,11,acc_quartile,REM%
@@ -344,17 +344,17 @@ yasa,ST,norm_reg_ffbs,Q1 (worst),1.0,11,11,acc_quartile,SOL
 yasa,ST,norm_reg_ffbs,Q1 (worst),0.7272727272727273,11,11,acc_quartile,TST
 yasa,ST,norm_reg_ffbs,Q1 (worst),0.8181818181818182,11,11,acc_quartile,WASO
 yasa,ST,norm_reg_ffbs,Q2,0.8181818181818182,11,11,acc_quartile,N1%
-yasa,ST,norm_reg_ffbs,Q2,0.9090909090909092,11,11,acc_quartile,N2%
-yasa,ST,norm_reg_ffbs,Q2,0.9090909090909092,11,11,acc_quartile,N3%
-yasa,ST,norm_reg_ffbs,Q2,0.9090909090909092,11,11,acc_quartile,REM%
-yasa,ST,norm_reg_ffbs,Q2,0.9090909090909092,11,11,acc_quartile,REML
-yasa,ST,norm_reg_ffbs,Q2,0.9090909090909092,11,11,acc_quartile,SOL
+yasa,ST,norm_reg_ffbs,Q2,0.9090909090909091,11,11,acc_quartile,N2%
+yasa,ST,norm_reg_ffbs,Q2,0.9090909090909091,11,11,acc_quartile,N3%
+yasa,ST,norm_reg_ffbs,Q2,0.9090909090909091,11,11,acc_quartile,REM%
+yasa,ST,norm_reg_ffbs,Q2,0.9090909090909091,11,11,acc_quartile,REML
+yasa,ST,norm_reg_ffbs,Q2,0.9090909090909091,11,11,acc_quartile,SOL
 yasa,ST,norm_reg_ffbs,Q2,1.0,11,11,acc_quartile,TST
-yasa,ST,norm_reg_ffbs,Q2,0.9090909090909092,11,11,acc_quartile,WASO
-yasa,ST,norm_reg_ffbs,Q3,0.9090909090909092,11,11,acc_quartile,N1%
+yasa,ST,norm_reg_ffbs,Q2,0.9090909090909091,11,11,acc_quartile,WASO
+yasa,ST,norm_reg_ffbs,Q3,0.9090909090909091,11,11,acc_quartile,N1%
 yasa,ST,norm_reg_ffbs,Q3,1.0,11,11,acc_quartile,N2%
 yasa,ST,norm_reg_ffbs,Q3,1.0,11,11,acc_quartile,N3%
-yasa,ST,norm_reg_ffbs,Q3,0.9090909090909092,11,11,acc_quartile,REM%
+yasa,ST,norm_reg_ffbs,Q3,0.9090909090909091,11,11,acc_quartile,REM%
 yasa,ST,norm_reg_ffbs,Q3,0.8181818181818182,11,11,acc_quartile,REML
 yasa,ST,norm_reg_ffbs,Q3,0.8181818181818182,11,11,acc_quartile,SOL
 yasa,ST,norm_reg_ffbs,Q3,1.0,11,11,acc_quartile,TST
@@ -363,31 +363,31 @@ yasa,ST,norm_reg_ffbs,Q4 (best),1.0,11,11,acc_quartile,N1%
 yasa,ST,norm_reg_ffbs,Q4 (best),1.0,11,11,acc_quartile,N2%
 yasa,ST,norm_reg_ffbs,Q4 (best),1.0,11,11,acc_quartile,N3%
 yasa,ST,norm_reg_ffbs,Q4 (best),1.0,11,11,acc_quartile,REM%
-yasa,ST,norm_reg_ffbs,Q4 (best),0.9090909090909092,11,11,acc_quartile,REML
-yasa,ST,norm_reg_ffbs,Q4 (best),0.9090909090909092,11,11,acc_quartile,SOL
+yasa,ST,norm_reg_ffbs,Q4 (best),0.9090909090909091,11,11,acc_quartile,REML
+yasa,ST,norm_reg_ffbs,Q4 (best),0.9090909090909091,11,11,acc_quartile,SOL
 yasa,ST,norm_reg_ffbs,Q4 (best),0.8181818181818182,11,11,acc_quartile,TST
-yasa,ST,norm_reg_ffbs,Q4 (best),0.9090909090909092,11,11,acc_quartile,WASO
+yasa,ST,norm_reg_ffbs,Q4 (best),0.9090909090909091,11,11,acc_quartile,WASO
 yasa,ST,scp_abs,Q1 (worst),0.8181818181818182,11,11,acc_quartile,N1%
 yasa,ST,scp_abs,Q1 (worst),0.7272727272727273,11,11,acc_quartile,N2%
 yasa,ST,scp_abs,Q1 (worst),0.6363636363636364,11,11,acc_quartile,N3%
-yasa,ST,scp_abs,Q1 (worst),0.9090909090909092,11,11,acc_quartile,REM%
+yasa,ST,scp_abs,Q1 (worst),0.9090909090909091,11,11,acc_quartile,REM%
 yasa,ST,scp_abs,Q1 (worst),1.0,11,11,acc_quartile,REML
 yasa,ST,scp_abs,Q1 (worst),0.8181818181818182,11,11,acc_quartile,SOL
 yasa,ST,scp_abs,Q1 (worst),0.6363636363636364,11,11,acc_quartile,TST
 yasa,ST,scp_abs,Q1 (worst),0.5454545454545454,11,11,acc_quartile,WASO
-yasa,ST,scp_abs,Q2,0.9090909090909092,11,11,acc_quartile,N1%
-yasa,ST,scp_abs,Q2,0.9090909090909092,11,11,acc_quartile,N2%
+yasa,ST,scp_abs,Q2,0.9090909090909091,11,11,acc_quartile,N1%
+yasa,ST,scp_abs,Q2,0.9090909090909091,11,11,acc_quartile,N2%
 yasa,ST,scp_abs,Q2,1.0,11,11,acc_quartile,N3%
 yasa,ST,scp_abs,Q2,0.8181818181818182,11,11,acc_quartile,REM%
 yasa,ST,scp_abs,Q2,0.7272727272727273,11,11,acc_quartile,REML
-yasa,ST,scp_abs,Q2,0.9090909090909092,11,11,acc_quartile,SOL
+yasa,ST,scp_abs,Q2,0.9090909090909091,11,11,acc_quartile,SOL
 yasa,ST,scp_abs,Q2,1.0,11,11,acc_quartile,TST
 yasa,ST,scp_abs,Q2,1.0,11,11,acc_quartile,WASO
 yasa,ST,scp_abs,Q3,0.8181818181818182,11,11,acc_quartile,N1%
 yasa,ST,scp_abs,Q3,1.0,11,11,acc_quartile,N2%
 yasa,ST,scp_abs,Q3,1.0,11,11,acc_quartile,N3%
-yasa,ST,scp_abs,Q3,0.9090909090909092,11,11,acc_quartile,REM%
-yasa,ST,scp_abs,Q3,0.9090909090909092,11,11,acc_quartile,REML
+yasa,ST,scp_abs,Q3,0.9090909090909091,11,11,acc_quartile,REM%
+yasa,ST,scp_abs,Q3,0.9090909090909091,11,11,acc_quartile,REML
 yasa,ST,scp_abs,Q3,1.0,11,11,acc_quartile,SOL
 yasa,ST,scp_abs,Q3,1.0,11,11,acc_quartile,TST
 yasa,ST,scp_abs,Q3,1.0,11,11,acc_quartile,WASO
@@ -396,7 +396,7 @@ yasa,ST,scp_abs,Q4 (best),1.0,11,11,acc_quartile,N2%
 yasa,ST,scp_abs,Q4 (best),1.0,11,11,acc_quartile,N3%
 yasa,ST,scp_abs,Q4 (best),1.0,11,11,acc_quartile,REM%
 yasa,ST,scp_abs,Q4 (best),1.0,11,11,acc_quartile,REML
-yasa,ST,scp_abs,Q4 (best),0.9090909090909092,11,11,acc_quartile,SOL
+yasa,ST,scp_abs,Q4 (best),0.9090909090909091,11,11,acc_quartile,SOL
 yasa,ST,scp_abs,Q4 (best),1.0,11,11,acc_quartile,TST
 yasa,ST,scp_abs,Q4 (best),1.0,11,11,acc_quartile,WASO
 yasa,ST,scp_abs_bc,Q1 (worst),0.8181818181818182,11,11,acc_quartile,N1%
@@ -404,23 +404,23 @@ yasa,ST,scp_abs_bc,Q1 (worst),0.7272727272727273,11,11,acc_quartile,N2%
 yasa,ST,scp_abs_bc,Q1 (worst),0.8181818181818182,11,11,acc_quartile,N3%
 yasa,ST,scp_abs_bc,Q1 (worst),0.8181818181818182,11,11,acc_quartile,REM%
 yasa,ST,scp_abs_bc,Q1 (worst),1.0,11,11,acc_quartile,REML
-yasa,ST,scp_abs_bc,Q1 (worst),0.9090909090909092,11,11,acc_quartile,SOL
+yasa,ST,scp_abs_bc,Q1 (worst),0.9090909090909091,11,11,acc_quartile,SOL
 yasa,ST,scp_abs_bc,Q1 (worst),0.6363636363636364,11,11,acc_quartile,TST
 yasa,ST,scp_abs_bc,Q1 (worst),0.5454545454545454,11,11,acc_quartile,WASO
 yasa,ST,scp_abs_bc,Q2,0.8181818181818182,11,11,acc_quartile,N1%
-yasa,ST,scp_abs_bc,Q2,0.9090909090909092,11,11,acc_quartile,N2%
+yasa,ST,scp_abs_bc,Q2,0.9090909090909091,11,11,acc_quartile,N2%
 yasa,ST,scp_abs_bc,Q2,0.8181818181818182,11,11,acc_quartile,N3%
 yasa,ST,scp_abs_bc,Q2,0.8181818181818182,11,11,acc_quartile,REM%
 yasa,ST,scp_abs_bc,Q2,0.7272727272727273,11,11,acc_quartile,REML
-yasa,ST,scp_abs_bc,Q2,0.9090909090909092,11,11,acc_quartile,SOL
+yasa,ST,scp_abs_bc,Q2,0.9090909090909091,11,11,acc_quartile,SOL
 yasa,ST,scp_abs_bc,Q2,1.0,11,11,acc_quartile,TST
 yasa,ST,scp_abs_bc,Q2,1.0,11,11,acc_quartile,WASO
-yasa,ST,scp_abs_bc,Q3,0.9090909090909092,11,11,acc_quartile,N1%
+yasa,ST,scp_abs_bc,Q3,0.9090909090909091,11,11,acc_quartile,N1%
 yasa,ST,scp_abs_bc,Q3,1.0,11,11,acc_quartile,N2%
 yasa,ST,scp_abs_bc,Q3,1.0,11,11,acc_quartile,N3%
-yasa,ST,scp_abs_bc,Q3,0.9090909090909092,11,11,acc_quartile,REM%
-yasa,ST,scp_abs_bc,Q3,0.9090909090909092,11,11,acc_quartile,REML
-yasa,ST,scp_abs_bc,Q3,0.9090909090909092,11,11,acc_quartile,SOL
+yasa,ST,scp_abs_bc,Q3,0.9090909090909091,11,11,acc_quartile,REM%
+yasa,ST,scp_abs_bc,Q3,0.9090909090909091,11,11,acc_quartile,REML
+yasa,ST,scp_abs_bc,Q3,0.9090909090909091,11,11,acc_quartile,SOL
 yasa,ST,scp_abs_bc,Q3,1.0,11,11,acc_quartile,TST
 yasa,ST,scp_abs_bc,Q3,1.0,11,11,acc_quartile,WASO
 yasa,ST,scp_abs_bc,Q4 (best),1.0,11,11,acc_quartile,N1%
@@ -428,20 +428,20 @@ yasa,ST,scp_abs_bc,Q4 (best),1.0,11,11,acc_quartile,N2%
 yasa,ST,scp_abs_bc,Q4 (best),1.0,11,11,acc_quartile,N3%
 yasa,ST,scp_abs_bc,Q4 (best),1.0,11,11,acc_quartile,REM%
 yasa,ST,scp_abs_bc,Q4 (best),1.0,11,11,acc_quartile,REML
-yasa,ST,scp_abs_bc,Q4 (best),0.9090909090909092,11,11,acc_quartile,SOL
+yasa,ST,scp_abs_bc,Q4 (best),0.9090909090909091,11,11,acc_quartile,SOL
 yasa,ST,scp_abs_bc,Q4 (best),1.0,11,11,acc_quartile,TST
 yasa,ST,scp_abs_bc,Q4 (best),1.0,11,11,acc_quartile,WASO
-yasa,SC,ba_loa,<40,0.9423076923076924,312,39,age_group,all
+yasa,SC,ba_loa,<40,0.9423076923076923,312,39,age_group,all
 yasa,SC,ba_loa,40-59,0.9476744186046512,344,43,age_group,all
 yasa,SC,ba_loa,>=60,0.8961267605633803,568,71,age_group,all
-yasa,SC,norm_reg_ffbs,<40,0.9230769230769232,312,39,age_group,all
-yasa,SC,norm_reg_ffbs,40-59,0.9302325581395348,344,43,age_group,all
+yasa,SC,norm_reg_ffbs,<40,0.9230769230769231,312,39,age_group,all
+yasa,SC,norm_reg_ffbs,40-59,0.9302325581395349,344,43,age_group,all
 yasa,SC,norm_reg_ffbs,>=60,0.8714788732394366,568,71,age_group,all
-yasa,SC,scp_abs,<40,0.9423076923076924,312,39,age_group,all
-yasa,SC,scp_abs,40-59,0.9186046511627908,344,43,age_group,all
+yasa,SC,scp_abs,<40,0.9423076923076923,312,39,age_group,all
+yasa,SC,scp_abs,40-59,0.9186046511627907,344,43,age_group,all
 yasa,SC,scp_abs,>=60,0.8661971830985915,568,71,age_group,all
-yasa,SC,scp_abs_bc,<40,0.9230769230769232,312,39,age_group,all
-yasa,SC,scp_abs_bc,40-59,0.9418604651162792,344,43,age_group,all
+yasa,SC,scp_abs_bc,<40,0.9230769230769231,312,39,age_group,all
+yasa,SC,scp_abs_bc,40-59,0.9418604651162791,344,43,age_group,all
 yasa,SC,scp_abs_bc,>=60,0.8591549295774648,568,71,age_group,all
 yasa,ST,ba_loa,<40,0.890625,192,24,age_group,all
 yasa,ST,ba_loa,40-59,0.8839285714285714,112,14,age_group,all
@@ -455,45 +455,45 @@ yasa,ST,scp_abs,>=60,0.8958333333333334,48,6,age_group,all
 yasa,ST,scp_abs_bc,<40,0.90625,192,24,age_group,all
 yasa,ST,scp_abs_bc,40-59,0.8928571428571429,112,14,age_group,all
 yasa,ST,scp_abs_bc,>=60,0.8958333333333334,48,6,age_group,all
-yasa,SC,ba_loa,<40,0.9743589743589745,39,39,age_group,N1%
-yasa,SC,ba_loa,<40,0.9743589743589745,39,39,age_group,N2%
-yasa,SC,ba_loa,<40,0.9743589743589745,39,39,age_group,N3%
-yasa,SC,ba_loa,<40,0.9487179487179488,39,39,age_group,REM%
+yasa,SC,ba_loa,<40,0.9743589743589743,39,39,age_group,N1%
+yasa,SC,ba_loa,<40,0.9743589743589743,39,39,age_group,N2%
+yasa,SC,ba_loa,<40,0.9743589743589743,39,39,age_group,N3%
+yasa,SC,ba_loa,<40,0.9487179487179487,39,39,age_group,REM%
 yasa,SC,ba_loa,<40,0.8461538461538461,39,39,age_group,REML
-yasa,SC,ba_loa,<40,0.9487179487179488,39,39,age_group,SOL
-yasa,SC,ba_loa,<40,0.9743589743589745,39,39,age_group,TST
+yasa,SC,ba_loa,<40,0.9487179487179487,39,39,age_group,SOL
+yasa,SC,ba_loa,<40,0.9743589743589743,39,39,age_group,TST
 yasa,SC,ba_loa,<40,0.8974358974358975,39,39,age_group,WASO
 yasa,SC,ba_loa,40-59,0.9767441860465116,43,43,age_group,N1%
-yasa,SC,ba_loa,40-59,0.9534883720930232,43,43,age_group,N2%
-yasa,SC,ba_loa,40-59,0.9534883720930232,43,43,age_group,N3%
+yasa,SC,ba_loa,40-59,0.9534883720930233,43,43,age_group,N2%
+yasa,SC,ba_loa,40-59,0.9534883720930233,43,43,age_group,N3%
 yasa,SC,ba_loa,40-59,1.0,43,43,age_group,REM%
 yasa,SC,ba_loa,40-59,0.8604651162790697,43,43,age_group,REML
-yasa,SC,ba_loa,40-59,0.9534883720930232,43,43,age_group,SOL
-yasa,SC,ba_loa,40-59,0.9534883720930232,43,43,age_group,TST
-yasa,SC,ba_loa,40-59,0.9302325581395348,43,43,age_group,WASO
+yasa,SC,ba_loa,40-59,0.9534883720930233,43,43,age_group,SOL
+yasa,SC,ba_loa,40-59,0.9534883720930233,43,43,age_group,TST
+yasa,SC,ba_loa,40-59,0.9302325581395349,43,43,age_group,WASO
 yasa,SC,ba_loa,>=60,0.8732394366197183,71,71,age_group,N1%
 yasa,SC,ba_loa,>=60,0.8450704225352113,71,71,age_group,N2%
 yasa,SC,ba_loa,>=60,0.8873239436619719,71,71,age_group,N3%
 yasa,SC,ba_loa,>=60,0.9014084507042254,71,71,age_group,REM%
 yasa,SC,ba_loa,>=60,0.8873239436619719,71,71,age_group,REML
-yasa,SC,ba_loa,>=60,0.943661971830986,71,71,age_group,SOL
+yasa,SC,ba_loa,>=60,0.9436619718309859,71,71,age_group,SOL
 yasa,SC,ba_loa,>=60,0.8873239436619719,71,71,age_group,TST
-yasa,SC,ba_loa,>=60,0.943661971830986,71,71,age_group,WASO
-yasa,SC,norm_reg_ffbs,<40,0.9743589743589745,39,39,age_group,N1%
-yasa,SC,norm_reg_ffbs,<40,0.9487179487179488,39,39,age_group,N2%
-yasa,SC,norm_reg_ffbs,<40,0.9487179487179488,39,39,age_group,N3%
+yasa,SC,ba_loa,>=60,0.9436619718309859,71,71,age_group,WASO
+yasa,SC,norm_reg_ffbs,<40,0.9743589743589743,39,39,age_group,N1%
+yasa,SC,norm_reg_ffbs,<40,0.9487179487179487,39,39,age_group,N2%
+yasa,SC,norm_reg_ffbs,<40,0.9487179487179487,39,39,age_group,N3%
 yasa,SC,norm_reg_ffbs,<40,0.8974358974358975,39,39,age_group,REM%
 yasa,SC,norm_reg_ffbs,<40,0.8461538461538461,39,39,age_group,REML
-yasa,SC,norm_reg_ffbs,<40,0.9230769230769232,39,39,age_group,SOL
-yasa,SC,norm_reg_ffbs,<40,0.9743589743589745,39,39,age_group,TST
+yasa,SC,norm_reg_ffbs,<40,0.9230769230769231,39,39,age_group,SOL
+yasa,SC,norm_reg_ffbs,<40,0.9743589743589743,39,39,age_group,TST
 yasa,SC,norm_reg_ffbs,<40,0.8717948717948718,39,39,age_group,WASO
-yasa,SC,norm_reg_ffbs,40-59,0.9534883720930232,43,43,age_group,N1%
+yasa,SC,norm_reg_ffbs,40-59,0.9534883720930233,43,43,age_group,N1%
 yasa,SC,norm_reg_ffbs,40-59,0.9767441860465116,43,43,age_group,N2%
-yasa,SC,norm_reg_ffbs,40-59,0.9302325581395348,43,43,age_group,N3%
-yasa,SC,norm_reg_ffbs,40-59,0.9534883720930232,43,43,age_group,REM%
-yasa,SC,norm_reg_ffbs,40-59,0.9534883720930232,43,43,age_group,REML
+yasa,SC,norm_reg_ffbs,40-59,0.9302325581395349,43,43,age_group,N3%
+yasa,SC,norm_reg_ffbs,40-59,0.9534883720930233,43,43,age_group,REM%
+yasa,SC,norm_reg_ffbs,40-59,0.9534883720930233,43,43,age_group,REML
 yasa,SC,norm_reg_ffbs,40-59,0.8837209302325582,43,43,age_group,SOL
-yasa,SC,norm_reg_ffbs,40-59,0.9069767441860463,43,43,age_group,TST
+yasa,SC,norm_reg_ffbs,40-59,0.9069767441860465,43,43,age_group,TST
 yasa,SC,norm_reg_ffbs,40-59,0.8837209302325582,43,43,age_group,WASO
 yasa,SC,norm_reg_ffbs,>=60,0.8309859154929577,71,71,age_group,N1%
 yasa,SC,norm_reg_ffbs,>=60,0.8309859154929577,71,71,age_group,N2%
@@ -504,45 +504,45 @@ yasa,SC,norm_reg_ffbs,>=60,0.9014084507042254,71,71,age_group,SOL
 yasa,SC,norm_reg_ffbs,>=60,0.8591549295774648,71,71,age_group,TST
 yasa,SC,norm_reg_ffbs,>=60,0.9295774647887324,71,71,age_group,WASO
 yasa,SC,scp_abs,<40,1.0,39,39,age_group,N1%
-yasa,SC,scp_abs,<40,0.9743589743589745,39,39,age_group,N2%
-yasa,SC,scp_abs,<40,0.9487179487179488,39,39,age_group,N3%
-yasa,SC,scp_abs,<40,0.9230769230769232,39,39,age_group,REM%
+yasa,SC,scp_abs,<40,0.9743589743589743,39,39,age_group,N2%
+yasa,SC,scp_abs,<40,0.9487179487179487,39,39,age_group,N3%
+yasa,SC,scp_abs,<40,0.9230769230769231,39,39,age_group,REM%
 yasa,SC,scp_abs,<40,0.8974358974358975,39,39,age_group,REML
-yasa,SC,scp_abs,<40,0.9230769230769232,39,39,age_group,SOL
+yasa,SC,scp_abs,<40,0.9230769230769231,39,39,age_group,SOL
 yasa,SC,scp_abs,<40,1.0,39,39,age_group,TST
 yasa,SC,scp_abs,<40,0.8717948717948718,39,39,age_group,WASO
 yasa,SC,scp_abs,40-59,0.9767441860465116,43,43,age_group,N1%
-yasa,SC,scp_abs,40-59,0.9534883720930232,43,43,age_group,N2%
+yasa,SC,scp_abs,40-59,0.9534883720930233,43,43,age_group,N2%
 yasa,SC,scp_abs,40-59,0.8372093023255814,43,43,age_group,N3%
 yasa,SC,scp_abs,40-59,0.9767441860465116,43,43,age_group,REM%
-yasa,SC,scp_abs,40-59,0.9069767441860463,43,43,age_group,REML
-yasa,SC,scp_abs,40-59,0.9069767441860463,43,43,age_group,SOL
-yasa,SC,scp_abs,40-59,0.9069767441860463,43,43,age_group,TST
+yasa,SC,scp_abs,40-59,0.9069767441860465,43,43,age_group,REML
+yasa,SC,scp_abs,40-59,0.9069767441860465,43,43,age_group,SOL
+yasa,SC,scp_abs,40-59,0.9069767441860465,43,43,age_group,TST
 yasa,SC,scp_abs,40-59,0.8837209302325582,43,43,age_group,WASO
 yasa,SC,scp_abs,>=60,0.8028169014084507,71,71,age_group,N1%
 yasa,SC,scp_abs,>=60,0.8309859154929577,71,71,age_group,N2%
-yasa,SC,scp_abs,>=60,0.9154929577464788,71,71,age_group,N3%
+yasa,SC,scp_abs,>=60,0.9154929577464789,71,71,age_group,N3%
 yasa,SC,scp_abs,>=60,0.8450704225352113,71,71,age_group,REM%
 yasa,SC,scp_abs,>=60,0.8873239436619719,71,71,age_group,REML
 yasa,SC,scp_abs,>=60,0.8873239436619719,71,71,age_group,SOL
 yasa,SC,scp_abs,>=60,0.8309859154929577,71,71,age_group,TST
 yasa,SC,scp_abs,>=60,0.9295774647887324,71,71,age_group,WASO
-yasa,SC,scp_abs_bc,<40,0.9230769230769232,39,39,age_group,N1%
-yasa,SC,scp_abs_bc,<40,0.9743589743589745,39,39,age_group,N2%
+yasa,SC,scp_abs_bc,<40,0.9230769230769231,39,39,age_group,N1%
+yasa,SC,scp_abs_bc,<40,0.9743589743589743,39,39,age_group,N2%
 yasa,SC,scp_abs_bc,<40,0.8974358974358975,39,39,age_group,N3%
 yasa,SC,scp_abs_bc,<40,0.8974358974358975,39,39,age_group,REM%
 yasa,SC,scp_abs_bc,<40,0.8974358974358975,39,39,age_group,REML
-yasa,SC,scp_abs_bc,<40,0.9230769230769232,39,39,age_group,SOL
-yasa,SC,scp_abs_bc,<40,0.9743589743589745,39,39,age_group,TST
+yasa,SC,scp_abs_bc,<40,0.9230769230769231,39,39,age_group,SOL
+yasa,SC,scp_abs_bc,<40,0.9743589743589743,39,39,age_group,TST
 yasa,SC,scp_abs_bc,<40,0.8974358974358975,39,39,age_group,WASO
 yasa,SC,scp_abs_bc,40-59,0.9767441860465116,43,43,age_group,N1%
-yasa,SC,scp_abs_bc,40-59,0.9302325581395348,43,43,age_group,N2%
-yasa,SC,scp_abs_bc,40-59,0.9302325581395348,43,43,age_group,N3%
+yasa,SC,scp_abs_bc,40-59,0.9302325581395349,43,43,age_group,N2%
+yasa,SC,scp_abs_bc,40-59,0.9302325581395349,43,43,age_group,N3%
 yasa,SC,scp_abs_bc,40-59,1.0,43,43,age_group,REM%
-yasa,SC,scp_abs_bc,40-59,0.9069767441860463,43,43,age_group,REML
-yasa,SC,scp_abs_bc,40-59,0.9069767441860463,43,43,age_group,SOL
-yasa,SC,scp_abs_bc,40-59,0.9534883720930232,43,43,age_group,TST
-yasa,SC,scp_abs_bc,40-59,0.9302325581395348,43,43,age_group,WASO
+yasa,SC,scp_abs_bc,40-59,0.9069767441860465,43,43,age_group,REML
+yasa,SC,scp_abs_bc,40-59,0.9069767441860465,43,43,age_group,SOL
+yasa,SC,scp_abs_bc,40-59,0.9534883720930233,43,43,age_group,TST
+yasa,SC,scp_abs_bc,40-59,0.9302325581395349,43,43,age_group,WASO
 yasa,SC,scp_abs_bc,>=60,0.8309859154929577,71,71,age_group,N1%
 yasa,SC,scp_abs_bc,>=60,0.8450704225352113,71,71,age_group,N2%
 yasa,SC,scp_abs_bc,>=60,0.8732394366197183,71,71,age_group,N3%
@@ -647,7 +647,7 @@ yasa,ST,scp_abs_bc,>=60,1.0,6,6,age_group,REML
 yasa,ST,scp_abs_bc,>=60,0.8333333333333334,6,6,age_group,SOL
 yasa,ST,scp_abs_bc,>=60,0.8333333333333334,6,6,age_group,TST
 yasa,ST,scp_abs_bc,>=60,0.8333333333333334,6,6,age_group,WASO
-yasa,SC,ba_loa,F,0.9329268292682928,656,82,sex,all
+yasa,SC,ba_loa,F,0.9329268292682927,656,82,sex,all
 yasa,SC,ba_loa,M,0.9102112676056338,568,71,sex,all
 yasa,SC,norm_reg_ffbs,F,0.9070121951219512,656,82,sex,all
 yasa,SC,norm_reg_ffbs,M,0.8943661971830986,568,71,sex,all
@@ -656,75 +656,75 @@ yasa,SC,scp_abs,M,0.8943661971830986,568,71,sex,all
 yasa,SC,scp_abs_bc,F,0.9161585365853658,656,82,sex,all
 yasa,SC,scp_abs_bc,M,0.8785211267605634,568,71,sex,all
 yasa,ST,ba_loa,F,0.8791666666666667,240,30,sex,all
-yasa,ST,ba_loa,M,0.9107142857142856,112,14,sex,all
+yasa,ST,ba_loa,M,0.9107142857142857,112,14,sex,all
 yasa,ST,norm_reg_ffbs,F,0.9,240,30,sex,all
-yasa,ST,norm_reg_ffbs,M,0.9196428571428572,112,14,sex,all
+yasa,ST,norm_reg_ffbs,M,0.9196428571428571,112,14,sex,all
 yasa,ST,scp_abs,F,0.8958333333333334,240,30,sex,all
-yasa,ST,scp_abs,M,0.9196428571428572,112,14,sex,all
+yasa,ST,scp_abs,M,0.9196428571428571,112,14,sex,all
 yasa,ST,scp_abs_bc,F,0.8916666666666667,240,30,sex,all
-yasa,ST,scp_abs_bc,M,0.9196428571428572,112,14,sex,all
+yasa,ST,scp_abs_bc,M,0.9196428571428571,112,14,sex,all
 yasa,SC,ba_loa,F,0.9390243902439024,82,82,sex,N1%
-yasa,SC,ba_loa,F,0.951219512195122,82,82,sex,N2%
+yasa,SC,ba_loa,F,0.9512195121951219,82,82,sex,N2%
 yasa,SC,ba_loa,F,0.926829268292683,82,82,sex,N3%
 yasa,SC,ba_loa,F,0.9390243902439024,82,82,sex,REM%
 yasa,SC,ba_loa,F,0.8902439024390244,82,82,sex,REML
 yasa,SC,ba_loa,F,0.926829268292683,82,82,sex,SOL
-yasa,SC,ba_loa,F,0.951219512195122,82,82,sex,TST
+yasa,SC,ba_loa,F,0.9512195121951219,82,82,sex,TST
 yasa,SC,ba_loa,F,0.9390243902439024,82,82,sex,WASO
-yasa,SC,ba_loa,M,0.9154929577464788,71,71,sex,N1%
+yasa,SC,ba_loa,M,0.9154929577464789,71,71,sex,N1%
 yasa,SC,ba_loa,M,0.8591549295774648,71,71,sex,N2%
 yasa,SC,ba_loa,M,0.9295774647887324,71,71,sex,N3%
-yasa,SC,ba_loa,M,0.943661971830986,71,71,sex,REM%
+yasa,SC,ba_loa,M,0.9436619718309859,71,71,sex,REM%
 yasa,SC,ba_loa,M,0.8450704225352113,71,71,sex,REML
 yasa,SC,ba_loa,M,0.971830985915493,71,71,sex,SOL
 yasa,SC,ba_loa,M,0.9014084507042254,71,71,sex,TST
-yasa,SC,ba_loa,M,0.9154929577464788,71,71,sex,WASO
+yasa,SC,ba_loa,M,0.9154929577464789,71,71,sex,WASO
 yasa,SC,norm_reg_ffbs,F,0.8902439024390244,82,82,sex,N1%
 yasa,SC,norm_reg_ffbs,F,0.9146341463414634,82,82,sex,N2%
 yasa,SC,norm_reg_ffbs,F,0.8536585365853658,82,82,sex,N3%
 yasa,SC,norm_reg_ffbs,F,0.9390243902439024,82,82,sex,REM%
 yasa,SC,norm_reg_ffbs,F,0.8902439024390244,82,82,sex,REML
 yasa,SC,norm_reg_ffbs,F,0.9146341463414634,82,82,sex,SOL
-yasa,SC,norm_reg_ffbs,F,0.951219512195122,82,82,sex,TST
-yasa,SC,norm_reg_ffbs,F,0.902439024390244,82,82,sex,WASO
-yasa,SC,norm_reg_ffbs,M,0.9154929577464788,71,71,sex,N1%
+yasa,SC,norm_reg_ffbs,F,0.9512195121951219,82,82,sex,TST
+yasa,SC,norm_reg_ffbs,F,0.9024390243902439,82,82,sex,WASO
+yasa,SC,norm_reg_ffbs,M,0.9154929577464789,71,71,sex,N1%
 yasa,SC,norm_reg_ffbs,M,0.8873239436619719,71,71,sex,N2%
 yasa,SC,norm_reg_ffbs,M,0.9577464788732394,71,71,sex,N3%
 yasa,SC,norm_reg_ffbs,M,0.8450704225352113,71,71,sex,REM%
-yasa,SC,norm_reg_ffbs,M,0.9154929577464788,71,71,sex,REML
+yasa,SC,norm_reg_ffbs,M,0.9154929577464789,71,71,sex,REML
 yasa,SC,norm_reg_ffbs,M,0.8873239436619719,71,71,sex,SOL
 yasa,SC,norm_reg_ffbs,M,0.8450704225352113,71,71,sex,TST
 yasa,SC,norm_reg_ffbs,M,0.9014084507042254,71,71,sex,WASO
-yasa,SC,scp_abs,F,0.902439024390244,82,82,sex,N1%
-yasa,SC,scp_abs,F,0.951219512195122,82,82,sex,N2%
+yasa,SC,scp_abs,F,0.9024390243902439,82,82,sex,N1%
+yasa,SC,scp_abs,F,0.9512195121951219,82,82,sex,N2%
 yasa,SC,scp_abs,F,0.8536585365853658,82,82,sex,N3%
-yasa,SC,scp_abs,F,0.902439024390244,82,82,sex,REM%
+yasa,SC,scp_abs,F,0.9024390243902439,82,82,sex,REM%
 yasa,SC,scp_abs,F,0.926829268292683,82,82,sex,REML
 yasa,SC,scp_abs,F,0.8658536585365854,82,82,sex,SOL
 yasa,SC,scp_abs,F,0.9390243902439024,82,82,sex,TST
-yasa,SC,scp_abs,F,0.902439024390244,82,82,sex,WASO
+yasa,SC,scp_abs,F,0.9024390243902439,82,82,sex,WASO
 yasa,SC,scp_abs,M,0.9014084507042254,71,71,sex,N1%
 yasa,SC,scp_abs,M,0.8450704225352113,71,71,sex,N2%
 yasa,SC,scp_abs,M,0.9577464788732394,71,71,sex,N3%
 yasa,SC,scp_abs,M,0.9014084507042254,71,71,sex,REM%
 yasa,SC,scp_abs,M,0.8591549295774648,71,71,sex,REML
-yasa,SC,scp_abs,M,0.943661971830986,71,71,sex,SOL
+yasa,SC,scp_abs,M,0.9436619718309859,71,71,sex,SOL
 yasa,SC,scp_abs,M,0.8450704225352113,71,71,sex,TST
 yasa,SC,scp_abs,M,0.9014084507042254,71,71,sex,WASO
 yasa,SC,scp_abs_bc,F,0.926829268292683,82,82,sex,N1%
 yasa,SC,scp_abs_bc,F,0.9390243902439024,82,82,sex,N2%
 yasa,SC,scp_abs_bc,F,0.8902439024390244,82,82,sex,N3%
-yasa,SC,scp_abs_bc,F,0.902439024390244,82,82,sex,REM%
+yasa,SC,scp_abs_bc,F,0.9024390243902439,82,82,sex,REM%
 yasa,SC,scp_abs_bc,F,0.9146341463414634,82,82,sex,REML
 yasa,SC,scp_abs_bc,F,0.8780487804878049,82,82,sex,SOL
-yasa,SC,scp_abs_bc,F,0.951219512195122,82,82,sex,TST
+yasa,SC,scp_abs_bc,F,0.9512195121951219,82,82,sex,TST
 yasa,SC,scp_abs_bc,F,0.926829268292683,82,82,sex,WASO
 yasa,SC,scp_abs_bc,M,0.8591549295774648,71,71,sex,N1%
 yasa,SC,scp_abs_bc,M,0.8591549295774648,71,71,sex,N2%
 yasa,SC,scp_abs_bc,M,0.9014084507042254,71,71,sex,N3%
 yasa,SC,scp_abs_bc,M,0.9014084507042254,71,71,sex,REM%
 yasa,SC,scp_abs_bc,M,0.8732394366197183,71,71,sex,REML
-yasa,SC,scp_abs_bc,M,0.9154929577464788,71,71,sex,SOL
+yasa,SC,scp_abs_bc,M,0.9154929577464789,71,71,sex,SOL
 yasa,SC,scp_abs_bc,M,0.8591549295774648,71,71,sex,TST
 yasa,SC,scp_abs_bc,M,0.8591549295774648,71,71,sex,WASO
 yasa,ST,ba_loa,F,0.8333333333333334,30,30,sex,N1%
@@ -733,8 +733,8 @@ yasa,ST,ba_loa,F,0.8666666666666667,30,30,sex,N3%
 yasa,ST,ba_loa,F,0.9,30,30,sex,REM%
 yasa,ST,ba_loa,F,0.8,30,30,sex,REML
 yasa,ST,ba_loa,F,0.8666666666666667,30,30,sex,SOL
-yasa,ST,ba_loa,F,0.9333333333333332,30,30,sex,TST
-yasa,ST,ba_loa,F,0.9666666666666668,30,30,sex,WASO
+yasa,ST,ba_loa,F,0.9333333333333333,30,30,sex,TST
+yasa,ST,ba_loa,F,0.9666666666666667,30,30,sex,WASO
 yasa,ST,ba_loa,M,0.9285714285714286,14,14,sex,N1%
 yasa,ST,ba_loa,M,0.9285714285714286,14,14,sex,N2%
 yasa,ST,ba_loa,M,0.9285714285714286,14,14,sex,N3%
@@ -743,14 +743,14 @@ yasa,ST,ba_loa,M,0.9285714285714286,14,14,sex,REML
 yasa,ST,ba_loa,M,1.0,14,14,sex,SOL
 yasa,ST,ba_loa,M,0.8571428571428571,14,14,sex,TST
 yasa,ST,ba_loa,M,0.8571428571428571,14,14,sex,WASO
-yasa,ST,norm_reg_ffbs,F,0.9333333333333332,30,30,sex,N1%
+yasa,ST,norm_reg_ffbs,F,0.9333333333333333,30,30,sex,N1%
 yasa,ST,norm_reg_ffbs,F,0.9,30,30,sex,N2%
 yasa,ST,norm_reg_ffbs,F,0.9,30,30,sex,N3%
-yasa,ST,norm_reg_ffbs,F,0.9333333333333332,30,30,sex,REM%
+yasa,ST,norm_reg_ffbs,F,0.9333333333333333,30,30,sex,REM%
 yasa,ST,norm_reg_ffbs,F,0.8666666666666667,30,30,sex,REML
 yasa,ST,norm_reg_ffbs,F,0.8666666666666667,30,30,sex,SOL
 yasa,ST,norm_reg_ffbs,F,0.8666666666666667,30,30,sex,TST
-yasa,ST,norm_reg_ffbs,F,0.9333333333333332,30,30,sex,WASO
+yasa,ST,norm_reg_ffbs,F,0.9333333333333333,30,30,sex,WASO
 yasa,ST,norm_reg_ffbs,M,0.8571428571428571,14,14,sex,N1%
 yasa,ST,norm_reg_ffbs,M,0.9285714285714286,14,14,sex,N2%
 yasa,ST,norm_reg_ffbs,M,0.9285714285714286,14,14,sex,N3%
@@ -765,7 +765,7 @@ yasa,ST,scp_abs,F,0.9,30,30,sex,N3%
 yasa,ST,scp_abs,F,0.9,30,30,sex,REM%
 yasa,ST,scp_abs,F,0.9,30,30,sex,REML
 yasa,ST,scp_abs,F,0.8666666666666667,30,30,sex,SOL
-yasa,ST,scp_abs,F,0.9333333333333332,30,30,sex,TST
+yasa,ST,scp_abs,F,0.9333333333333333,30,30,sex,TST
 yasa,ST,scp_abs,F,0.9,30,30,sex,WASO
 yasa,ST,scp_abs,M,0.9285714285714286,14,14,sex,N1%
 yasa,ST,scp_abs,M,0.9285714285714286,14,14,sex,N2%
@@ -781,7 +781,7 @@ yasa,ST,scp_abs_bc,F,0.8666666666666667,30,30,sex,N3%
 yasa,ST,scp_abs_bc,F,0.9,30,30,sex,REM%
 yasa,ST,scp_abs_bc,F,0.9,30,30,sex,REML
 yasa,ST,scp_abs_bc,F,0.8666666666666667,30,30,sex,SOL
-yasa,ST,scp_abs_bc,F,0.9333333333333332,30,30,sex,TST
+yasa,ST,scp_abs_bc,F,0.9333333333333333,30,30,sex,TST
 yasa,ST,scp_abs_bc,F,0.9,30,30,sex,WASO
 yasa,ST,scp_abs_bc,M,0.9285714285714286,14,14,sex,N1%
 yasa,ST,scp_abs_bc,M,0.9285714285714286,14,14,sex,N2%
@@ -795,86 +795,86 @@ yasa,ST,ba_loa,placebo,0.8806818181818182,176,22,condition,all
 yasa,ST,ba_loa,temazepam,0.8977272727272727,176,22,condition,all
 yasa,ST,norm_reg_ffbs,placebo,0.8920454545454546,176,22,condition,all
 yasa,ST,norm_reg_ffbs,temazepam,0.9204545454545454,176,22,condition,all
-yasa,ST,scp_abs,placebo,0.9034090909090908,176,22,condition,all
-yasa,ST,scp_abs,temazepam,0.9034090909090908,176,22,condition,all
+yasa,ST,scp_abs,placebo,0.9034090909090909,176,22,condition,all
+yasa,ST,scp_abs,temazepam,0.9034090909090909,176,22,condition,all
 yasa,ST,scp_abs_bc,placebo,0.8863636363636364,176,22,condition,all
-yasa,ST,scp_abs_bc,temazepam,0.9147727272727272,176,22,condition,all
+yasa,ST,scp_abs_bc,temazepam,0.9147727272727273,176,22,condition,all
 yasa,ST,ba_loa,placebo,0.8181818181818182,22,22,condition,N1%
-yasa,ST,ba_loa,placebo,0.9090909090909092,22,22,condition,N2%
+yasa,ST,ba_loa,placebo,0.9090909090909091,22,22,condition,N2%
 yasa,ST,ba_loa,placebo,0.7727272727272727,22,22,condition,N3%
 yasa,ST,ba_loa,placebo,0.9545454545454546,22,22,condition,REM%
 yasa,ST,ba_loa,placebo,0.8636363636363636,22,22,condition,REML
 yasa,ST,ba_loa,placebo,0.8636363636363636,22,22,condition,SOL
-yasa,ST,ba_loa,placebo,0.9090909090909092,22,22,condition,TST
+yasa,ST,ba_loa,placebo,0.9090909090909091,22,22,condition,TST
 yasa,ST,ba_loa,placebo,0.9545454545454546,22,22,condition,WASO
-yasa,ST,ba_loa,temazepam,0.9090909090909092,22,22,condition,N1%
+yasa,ST,ba_loa,temazepam,0.9090909090909091,22,22,condition,N1%
 yasa,ST,ba_loa,temazepam,0.8636363636363636,22,22,condition,N2%
 yasa,ST,ba_loa,temazepam,1.0,22,22,condition,N3%
 yasa,ST,ba_loa,temazepam,0.8181818181818182,22,22,condition,REM%
 yasa,ST,ba_loa,temazepam,0.8181818181818182,22,22,condition,REML
 yasa,ST,ba_loa,temazepam,0.9545454545454546,22,22,condition,SOL
-yasa,ST,ba_loa,temazepam,0.9090909090909092,22,22,condition,TST
-yasa,ST,ba_loa,temazepam,0.9090909090909092,22,22,condition,WASO
-yasa,ST,norm_reg_ffbs,placebo,0.9090909090909092,22,22,condition,N1%
-yasa,ST,norm_reg_ffbs,placebo,0.9090909090909092,22,22,condition,N2%
+yasa,ST,ba_loa,temazepam,0.9090909090909091,22,22,condition,TST
+yasa,ST,ba_loa,temazepam,0.9090909090909091,22,22,condition,WASO
+yasa,ST,norm_reg_ffbs,placebo,0.9090909090909091,22,22,condition,N1%
+yasa,ST,norm_reg_ffbs,placebo,0.9090909090909091,22,22,condition,N2%
 yasa,ST,norm_reg_ffbs,placebo,0.8181818181818182,22,22,condition,N3%
 yasa,ST,norm_reg_ffbs,placebo,0.9545454545454546,22,22,condition,REM%
-yasa,ST,norm_reg_ffbs,placebo,0.9090909090909092,22,22,condition,REML
+yasa,ST,norm_reg_ffbs,placebo,0.9090909090909091,22,22,condition,REML
 yasa,ST,norm_reg_ffbs,placebo,0.9545454545454546,22,22,condition,SOL
 yasa,ST,norm_reg_ffbs,placebo,0.8181818181818182,22,22,condition,TST
 yasa,ST,norm_reg_ffbs,placebo,0.8636363636363636,22,22,condition,WASO
-yasa,ST,norm_reg_ffbs,temazepam,0.9090909090909092,22,22,condition,N1%
-yasa,ST,norm_reg_ffbs,temazepam,0.9090909090909092,22,22,condition,N2%
+yasa,ST,norm_reg_ffbs,temazepam,0.9090909090909091,22,22,condition,N1%
+yasa,ST,norm_reg_ffbs,temazepam,0.9090909090909091,22,22,condition,N2%
 yasa,ST,norm_reg_ffbs,temazepam,1.0,22,22,condition,N3%
 yasa,ST,norm_reg_ffbs,temazepam,0.8636363636363636,22,22,condition,REM%
-yasa,ST,norm_reg_ffbs,temazepam,0.9090909090909092,22,22,condition,REML
+yasa,ST,norm_reg_ffbs,temazepam,0.9090909090909091,22,22,condition,REML
 yasa,ST,norm_reg_ffbs,temazepam,0.8636363636363636,22,22,condition,SOL
 yasa,ST,norm_reg_ffbs,temazepam,0.9545454545454546,22,22,condition,TST
 yasa,ST,norm_reg_ffbs,temazepam,0.9545454545454546,22,22,condition,WASO
-yasa,ST,scp_abs,placebo,0.9090909090909092,22,22,condition,N1%
-yasa,ST,scp_abs,placebo,0.9090909090909092,22,22,condition,N2%
+yasa,ST,scp_abs,placebo,0.9090909090909091,22,22,condition,N1%
+yasa,ST,scp_abs,placebo,0.9090909090909091,22,22,condition,N2%
 yasa,ST,scp_abs,placebo,0.8636363636363636,22,22,condition,N3%
 yasa,ST,scp_abs,placebo,0.9545454545454546,22,22,condition,REM%
-yasa,ST,scp_abs,placebo,0.9090909090909092,22,22,condition,REML
-yasa,ST,scp_abs,placebo,0.9090909090909092,22,22,condition,SOL
-yasa,ST,scp_abs,placebo,0.9090909090909092,22,22,condition,TST
+yasa,ST,scp_abs,placebo,0.9090909090909091,22,22,condition,REML
+yasa,ST,scp_abs,placebo,0.9090909090909091,22,22,condition,SOL
+yasa,ST,scp_abs,placebo,0.9090909090909091,22,22,condition,TST
 yasa,ST,scp_abs,placebo,0.8636363636363636,22,22,condition,WASO
 yasa,ST,scp_abs,temazepam,0.8636363636363636,22,22,condition,N1%
-yasa,ST,scp_abs,temazepam,0.9090909090909092,22,22,condition,N2%
+yasa,ST,scp_abs,temazepam,0.9090909090909091,22,22,condition,N2%
 yasa,ST,scp_abs,temazepam,0.9545454545454546,22,22,condition,N3%
 yasa,ST,scp_abs,temazepam,0.8636363636363636,22,22,condition,REM%
-yasa,ST,scp_abs,temazepam,0.9090909090909092,22,22,condition,REML
-yasa,ST,scp_abs,temazepam,0.9090909090909092,22,22,condition,SOL
-yasa,ST,scp_abs,temazepam,0.9090909090909092,22,22,condition,TST
-yasa,ST,scp_abs,temazepam,0.9090909090909092,22,22,condition,WASO
+yasa,ST,scp_abs,temazepam,0.9090909090909091,22,22,condition,REML
+yasa,ST,scp_abs,temazepam,0.9090909090909091,22,22,condition,SOL
+yasa,ST,scp_abs,temazepam,0.9090909090909091,22,22,condition,TST
+yasa,ST,scp_abs,temazepam,0.9090909090909091,22,22,condition,WASO
 yasa,ST,scp_abs_bc,placebo,0.8636363636363636,22,22,condition,N1%
-yasa,ST,scp_abs_bc,placebo,0.9090909090909092,22,22,condition,N2%
+yasa,ST,scp_abs_bc,placebo,0.9090909090909091,22,22,condition,N2%
 yasa,ST,scp_abs_bc,placebo,0.8181818181818182,22,22,condition,N3%
 yasa,ST,scp_abs_bc,placebo,0.9545454545454546,22,22,condition,REM%
-yasa,ST,scp_abs_bc,placebo,0.9090909090909092,22,22,condition,REML
+yasa,ST,scp_abs_bc,placebo,0.9090909090909091,22,22,condition,REML
 yasa,ST,scp_abs_bc,placebo,0.8636363636363636,22,22,condition,SOL
-yasa,ST,scp_abs_bc,placebo,0.9090909090909092,22,22,condition,TST
+yasa,ST,scp_abs_bc,placebo,0.9090909090909091,22,22,condition,TST
 yasa,ST,scp_abs_bc,placebo,0.8636363636363636,22,22,condition,WASO
-yasa,ST,scp_abs_bc,temazepam,0.9090909090909092,22,22,condition,N1%
-yasa,ST,scp_abs_bc,temazepam,0.9090909090909092,22,22,condition,N2%
+yasa,ST,scp_abs_bc,temazepam,0.9090909090909091,22,22,condition,N1%
+yasa,ST,scp_abs_bc,temazepam,0.9090909090909091,22,22,condition,N2%
 yasa,ST,scp_abs_bc,temazepam,1.0,22,22,condition,N3%
 yasa,ST,scp_abs_bc,temazepam,0.8181818181818182,22,22,condition,REM%
-yasa,ST,scp_abs_bc,temazepam,0.9090909090909092,22,22,condition,REML
+yasa,ST,scp_abs_bc,temazepam,0.9090909090909091,22,22,condition,REML
 yasa,ST,scp_abs_bc,temazepam,0.9545454545454546,22,22,condition,SOL
-yasa,ST,scp_abs_bc,temazepam,0.9090909090909092,22,22,condition,TST
-yasa,ST,scp_abs_bc,temazepam,0.9090909090909092,22,22,condition,WASO
+yasa,ST,scp_abs_bc,temazepam,0.9090909090909091,22,22,condition,TST
+yasa,ST,scp_abs_bc,temazepam,0.9090909090909091,22,22,condition,WASO
 lgbm_sc_s0,HMC,ba_loa,Q1 (worst),0.8157894736842105,304,38,acc_quartile,all
 lgbm_sc_s0,HMC,ba_loa,Q2,0.9111842105263158,304,38,acc_quartile,all
-lgbm_sc_s0,HMC,ba_loa,Q3,0.9254237288135592,295,37,acc_quartile,all
+lgbm_sc_s0,HMC,ba_loa,Q3,0.9254237288135593,295,37,acc_quartile,all
 lgbm_sc_s0,HMC,ba_loa,Q4 (best),0.9802631578947368,304,38,acc_quartile,all
 lgbm_sc_s0,HMC,norm_reg_ffbs,Q1 (worst),0.8355263157894737,304,38,acc_quartile,all
-lgbm_sc_s0,HMC,norm_reg_ffbs,Q2,0.9210526315789472,304,38,acc_quartile,all
-lgbm_sc_s0,HMC,norm_reg_ffbs,Q3,0.905084745762712,295,37,acc_quartile,all
-lgbm_sc_s0,HMC,norm_reg_ffbs,Q4 (best),0.9407894736842104,304,38,acc_quartile,all
+lgbm_sc_s0,HMC,norm_reg_ffbs,Q2,0.9210526315789473,304,38,acc_quartile,all
+lgbm_sc_s0,HMC,norm_reg_ffbs,Q3,0.9050847457627119,295,37,acc_quartile,all
+lgbm_sc_s0,HMC,norm_reg_ffbs,Q4 (best),0.9407894736842105,304,38,acc_quartile,all
 lgbm_sc_s0,HMC,scp_abs,Q1 (worst),0.7861842105263158,304,38,acc_quartile,all
 lgbm_sc_s0,HMC,scp_abs,Q2,0.8980263157894737,304,38,acc_quartile,all
 lgbm_sc_s0,HMC,scp_abs,Q3,0.9457627118644067,295,37,acc_quartile,all
-lgbm_sc_s0,HMC,scp_abs,Q4 (best),0.9769736842105264,304,38,acc_quartile,all
+lgbm_sc_s0,HMC,scp_abs,Q4 (best),0.9769736842105263,304,38,acc_quartile,all
 lgbm_sc_s0,HMC,scp_abs_bc,Q1 (worst),0.7993421052631579,304,38,acc_quartile,all
 lgbm_sc_s0,HMC,scp_abs_bc,Q2,0.9013157894736842,304,38,acc_quartile,all
 lgbm_sc_s0,HMC,scp_abs_bc,Q3,0.9152542372881356,295,37,acc_quartile,all
@@ -889,24 +889,24 @@ lgbm_sc_s0,SC,norm_reg_ffbs,Q3,0.930921052631579,304,38,acc_quartile,all
 lgbm_sc_s0,SC,norm_reg_ffbs,Q4 (best),0.9572368421052632,304,38,acc_quartile,all
 lgbm_sc_s0,SC,scp_abs,Q1 (worst),0.7756410256410257,312,39,acc_quartile,all
 lgbm_sc_s0,SC,scp_abs,Q2,0.9013157894736842,304,38,acc_quartile,all
-lgbm_sc_s0,SC,scp_abs,Q3,0.9539473684210528,304,38,acc_quartile,all
-lgbm_sc_s0,SC,scp_abs,Q4 (best),0.9769736842105264,304,38,acc_quartile,all
+lgbm_sc_s0,SC,scp_abs,Q3,0.9539473684210527,304,38,acc_quartile,all
+lgbm_sc_s0,SC,scp_abs,Q4 (best),0.9769736842105263,304,38,acc_quartile,all
 lgbm_sc_s0,SC,scp_abs_bc,Q1 (worst),0.7564102564102564,312,39,acc_quartile,all
-lgbm_sc_s0,SC,scp_abs_bc,Q2,0.9078947368421052,304,38,acc_quartile,all
-lgbm_sc_s0,SC,scp_abs_bc,Q3,0.9539473684210528,304,38,acc_quartile,all
+lgbm_sc_s0,SC,scp_abs_bc,Q2,0.9078947368421053,304,38,acc_quartile,all
+lgbm_sc_s0,SC,scp_abs_bc,Q3,0.9539473684210527,304,38,acc_quartile,all
 lgbm_sc_s0,SC,scp_abs_bc,Q4 (best),0.9802631578947368,304,38,acc_quartile,all
 lgbm_sc_s0,ST,ba_loa,Q1 (worst),0.75,88,11,acc_quartile,all
-lgbm_sc_s0,ST,ba_loa,Q2,0.9090909090909092,88,11,acc_quartile,all
-lgbm_sc_s0,ST,ba_loa,Q3,0.9090909090909092,88,11,acc_quartile,all
-lgbm_sc_s0,ST,ba_loa,Q4 (best),0.9659090909090908,88,11,acc_quartile,all
+lgbm_sc_s0,ST,ba_loa,Q2,0.9090909090909091,88,11,acc_quartile,all
+lgbm_sc_s0,ST,ba_loa,Q3,0.9090909090909091,88,11,acc_quartile,all
+lgbm_sc_s0,ST,ba_loa,Q4 (best),0.9659090909090909,88,11,acc_quartile,all
 lgbm_sc_s0,ST,norm_reg_ffbs,Q1 (worst),0.8636363636363636,88,11,acc_quartile,all
 lgbm_sc_s0,ST,norm_reg_ffbs,Q2,0.9204545454545454,88,11,acc_quartile,all
 lgbm_sc_s0,ST,norm_reg_ffbs,Q3,0.9204545454545454,88,11,acc_quartile,all
-lgbm_sc_s0,ST,norm_reg_ffbs,Q4 (best),0.9090909090909092,88,11,acc_quartile,all
+lgbm_sc_s0,ST,norm_reg_ffbs,Q4 (best),0.9090909090909091,88,11,acc_quartile,all
 lgbm_sc_s0,ST,scp_abs,Q1 (worst),0.7727272727272727,88,11,acc_quartile,all
 lgbm_sc_s0,ST,scp_abs,Q2,0.9545454545454546,88,11,acc_quartile,all
 lgbm_sc_s0,ST,scp_abs,Q3,0.9318181818181818,88,11,acc_quartile,all
-lgbm_sc_s0,ST,scp_abs,Q4 (best),0.9659090909090908,88,11,acc_quartile,all
+lgbm_sc_s0,ST,scp_abs,Q4 (best),0.9659090909090909,88,11,acc_quartile,all
 lgbm_sc_s0,ST,scp_abs_bc,Q1 (worst),0.7727272727272727,88,11,acc_quartile,all
 lgbm_sc_s0,ST,scp_abs_bc,Q2,0.9204545454545454,88,11,acc_quartile,all
 lgbm_sc_s0,ST,scp_abs_bc,Q3,0.9204545454545454,88,11,acc_quartile,all
@@ -915,31 +915,31 @@ lgbm_sc_s0,HMC,ba_loa,Q1 (worst),0.8421052631578947,38,38,acc_quartile,N1%
 lgbm_sc_s0,HMC,ba_loa,Q1 (worst),0.7894736842105263,38,38,acc_quartile,N2%
 lgbm_sc_s0,HMC,ba_loa,Q1 (worst),0.7105263157894737,38,38,acc_quartile,N3%
 lgbm_sc_s0,HMC,ba_loa,Q1 (worst),0.7631578947368421,38,38,acc_quartile,REM%
-lgbm_sc_s0,HMC,ba_loa,Q1 (worst),0.9210526315789472,38,38,acc_quartile,REML
+lgbm_sc_s0,HMC,ba_loa,Q1 (worst),0.9210526315789473,38,38,acc_quartile,REML
 lgbm_sc_s0,HMC,ba_loa,Q1 (worst),0.868421052631579,38,38,acc_quartile,SOL
 lgbm_sc_s0,HMC,ba_loa,Q1 (worst),0.7894736842105263,38,38,acc_quartile,TST
 lgbm_sc_s0,HMC,ba_loa,Q1 (worst),0.8421052631578947,38,38,acc_quartile,WASO
 lgbm_sc_s0,HMC,ba_loa,Q2,0.8947368421052632,38,38,acc_quartile,N1%
-lgbm_sc_s0,HMC,ba_loa,Q2,0.9210526315789472,38,38,acc_quartile,N2%
-lgbm_sc_s0,HMC,ba_loa,Q2,0.9210526315789472,38,38,acc_quartile,N3%
-lgbm_sc_s0,HMC,ba_loa,Q2,0.9210526315789472,38,38,acc_quartile,REM%
+lgbm_sc_s0,HMC,ba_loa,Q2,0.9210526315789473,38,38,acc_quartile,N2%
+lgbm_sc_s0,HMC,ba_loa,Q2,0.9210526315789473,38,38,acc_quartile,N3%
+lgbm_sc_s0,HMC,ba_loa,Q2,0.9210526315789473,38,38,acc_quartile,REM%
 lgbm_sc_s0,HMC,ba_loa,Q2,0.868421052631579,38,38,acc_quartile,REML
-lgbm_sc_s0,HMC,ba_loa,Q2,0.9473684210526316,38,38,acc_quartile,SOL
+lgbm_sc_s0,HMC,ba_loa,Q2,0.9473684210526315,38,38,acc_quartile,SOL
 lgbm_sc_s0,HMC,ba_loa,Q2,0.8947368421052632,38,38,acc_quartile,TST
-lgbm_sc_s0,HMC,ba_loa,Q2,0.9210526315789472,38,38,acc_quartile,WASO
+lgbm_sc_s0,HMC,ba_loa,Q2,0.9210526315789473,38,38,acc_quartile,WASO
 lgbm_sc_s0,HMC,ba_loa,Q3,0.918918918918919,37,37,acc_quartile,N1%
 lgbm_sc_s0,HMC,ba_loa,Q3,0.8918918918918919,37,37,acc_quartile,N2%
-lgbm_sc_s0,HMC,ba_loa,Q3,0.945945945945946,37,37,acc_quartile,N3%
+lgbm_sc_s0,HMC,ba_loa,Q3,0.9459459459459459,37,37,acc_quartile,N3%
 lgbm_sc_s0,HMC,ba_loa,Q3,0.972972972972973,37,37,acc_quartile,REM%
 lgbm_sc_s0,HMC,ba_loa,Q3,0.9166666666666666,36,36,acc_quartile,REML
-lgbm_sc_s0,HMC,ba_loa,Q3,0.945945945945946,37,37,acc_quartile,SOL
+lgbm_sc_s0,HMC,ba_loa,Q3,0.9459459459459459,37,37,acc_quartile,SOL
 lgbm_sc_s0,HMC,ba_loa,Q3,0.8918918918918919,37,37,acc_quartile,TST
 lgbm_sc_s0,HMC,ba_loa,Q3,0.918918918918919,37,37,acc_quartile,WASO
 lgbm_sc_s0,HMC,ba_loa,Q4 (best),1.0,38,38,acc_quartile,N1%
-lgbm_sc_s0,HMC,ba_loa,Q4 (best),0.9473684210526316,38,38,acc_quartile,N2%
+lgbm_sc_s0,HMC,ba_loa,Q4 (best),0.9473684210526315,38,38,acc_quartile,N2%
 lgbm_sc_s0,HMC,ba_loa,Q4 (best),0.9736842105263158,38,38,acc_quartile,N3%
 lgbm_sc_s0,HMC,ba_loa,Q4 (best),1.0,38,38,acc_quartile,REM%
-lgbm_sc_s0,HMC,ba_loa,Q4 (best),0.9473684210526316,38,38,acc_quartile,REML
+lgbm_sc_s0,HMC,ba_loa,Q4 (best),0.9473684210526315,38,38,acc_quartile,REML
 lgbm_sc_s0,HMC,ba_loa,Q4 (best),1.0,38,38,acc_quartile,SOL
 lgbm_sc_s0,HMC,ba_loa,Q4 (best),1.0,38,38,acc_quartile,TST
 lgbm_sc_s0,HMC,ba_loa,Q4 (best),0.9736842105263158,38,38,acc_quartile,WASO
@@ -948,28 +948,28 @@ lgbm_sc_s0,HMC,norm_reg_ffbs,Q1 (worst),0.8157894736842105,38,38,acc_quartile,N2
 lgbm_sc_s0,HMC,norm_reg_ffbs,Q1 (worst),0.8157894736842105,38,38,acc_quartile,N3%
 lgbm_sc_s0,HMC,norm_reg_ffbs,Q1 (worst),0.7368421052631579,38,38,acc_quartile,REM%
 lgbm_sc_s0,HMC,norm_reg_ffbs,Q1 (worst),0.868421052631579,38,38,acc_quartile,REML
-lgbm_sc_s0,HMC,norm_reg_ffbs,Q1 (worst),0.9210526315789472,38,38,acc_quartile,SOL
+lgbm_sc_s0,HMC,norm_reg_ffbs,Q1 (worst),0.9210526315789473,38,38,acc_quartile,SOL
 lgbm_sc_s0,HMC,norm_reg_ffbs,Q1 (worst),0.8421052631578947,38,38,acc_quartile,TST
 lgbm_sc_s0,HMC,norm_reg_ffbs,Q1 (worst),0.868421052631579,38,38,acc_quartile,WASO
 lgbm_sc_s0,HMC,norm_reg_ffbs,Q2,0.8947368421052632,38,38,acc_quartile,N1%
 lgbm_sc_s0,HMC,norm_reg_ffbs,Q2,0.9736842105263158,38,38,acc_quartile,N2%
-lgbm_sc_s0,HMC,norm_reg_ffbs,Q2,0.9210526315789472,38,38,acc_quartile,N3%
-lgbm_sc_s0,HMC,norm_reg_ffbs,Q2,0.9210526315789472,38,38,acc_quartile,REM%
+lgbm_sc_s0,HMC,norm_reg_ffbs,Q2,0.9210526315789473,38,38,acc_quartile,N3%
+lgbm_sc_s0,HMC,norm_reg_ffbs,Q2,0.9210526315789473,38,38,acc_quartile,REM%
 lgbm_sc_s0,HMC,norm_reg_ffbs,Q2,0.8947368421052632,38,38,acc_quartile,REML
 lgbm_sc_s0,HMC,norm_reg_ffbs,Q2,0.9736842105263158,38,38,acc_quartile,SOL
-lgbm_sc_s0,HMC,norm_reg_ffbs,Q2,0.9210526315789472,38,38,acc_quartile,TST
+lgbm_sc_s0,HMC,norm_reg_ffbs,Q2,0.9210526315789473,38,38,acc_quartile,TST
 lgbm_sc_s0,HMC,norm_reg_ffbs,Q2,0.868421052631579,38,38,acc_quartile,WASO
-lgbm_sc_s0,HMC,norm_reg_ffbs,Q3,0.945945945945946,37,37,acc_quartile,N1%
-lgbm_sc_s0,HMC,norm_reg_ffbs,Q3,0.945945945945946,37,37,acc_quartile,N2%
-lgbm_sc_s0,HMC,norm_reg_ffbs,Q3,0.945945945945946,37,37,acc_quartile,N3%
-lgbm_sc_s0,HMC,norm_reg_ffbs,Q3,0.945945945945946,37,37,acc_quartile,REM%
+lgbm_sc_s0,HMC,norm_reg_ffbs,Q3,0.9459459459459459,37,37,acc_quartile,N1%
+lgbm_sc_s0,HMC,norm_reg_ffbs,Q3,0.9459459459459459,37,37,acc_quartile,N2%
+lgbm_sc_s0,HMC,norm_reg_ffbs,Q3,0.9459459459459459,37,37,acc_quartile,N3%
+lgbm_sc_s0,HMC,norm_reg_ffbs,Q3,0.9459459459459459,37,37,acc_quartile,REM%
 lgbm_sc_s0,HMC,norm_reg_ffbs,Q3,0.8611111111111112,36,36,acc_quartile,REML
 lgbm_sc_s0,HMC,norm_reg_ffbs,Q3,0.8648648648648649,37,37,acc_quartile,SOL
 lgbm_sc_s0,HMC,norm_reg_ffbs,Q3,0.8378378378378378,37,37,acc_quartile,TST
 lgbm_sc_s0,HMC,norm_reg_ffbs,Q3,0.8918918918918919,37,37,acc_quartile,WASO
-lgbm_sc_s0,HMC,norm_reg_ffbs,Q4 (best),0.9473684210526316,38,38,acc_quartile,N1%
+lgbm_sc_s0,HMC,norm_reg_ffbs,Q4 (best),0.9473684210526315,38,38,acc_quartile,N1%
 lgbm_sc_s0,HMC,norm_reg_ffbs,Q4 (best),0.868421052631579,38,38,acc_quartile,N2%
-lgbm_sc_s0,HMC,norm_reg_ffbs,Q4 (best),0.9210526315789472,38,38,acc_quartile,N3%
+lgbm_sc_s0,HMC,norm_reg_ffbs,Q4 (best),0.9210526315789473,38,38,acc_quartile,N3%
 lgbm_sc_s0,HMC,norm_reg_ffbs,Q4 (best),1.0,38,38,acc_quartile,REM%
 lgbm_sc_s0,HMC,norm_reg_ffbs,Q4 (best),0.9736842105263158,38,38,acc_quartile,REML
 lgbm_sc_s0,HMC,norm_reg_ffbs,Q4 (best),0.8421052631578947,38,38,acc_quartile,SOL
@@ -979,16 +979,16 @@ lgbm_sc_s0,HMC,scp_abs,Q1 (worst),0.8157894736842105,38,38,acc_quartile,N1%
 lgbm_sc_s0,HMC,scp_abs,Q1 (worst),0.8157894736842105,38,38,acc_quartile,N2%
 lgbm_sc_s0,HMC,scp_abs,Q1 (worst),0.7368421052631579,38,38,acc_quartile,N3%
 lgbm_sc_s0,HMC,scp_abs,Q1 (worst),0.7631578947368421,38,38,acc_quartile,REM%
-lgbm_sc_s0,HMC,scp_abs,Q1 (worst),0.9210526315789472,38,38,acc_quartile,REML
+lgbm_sc_s0,HMC,scp_abs,Q1 (worst),0.9210526315789473,38,38,acc_quartile,REML
 lgbm_sc_s0,HMC,scp_abs,Q1 (worst),0.7894736842105263,38,38,acc_quartile,SOL
 lgbm_sc_s0,HMC,scp_abs,Q1 (worst),0.7105263157894737,38,38,acc_quartile,TST
 lgbm_sc_s0,HMC,scp_abs,Q1 (worst),0.7368421052631579,38,38,acc_quartile,WASO
 lgbm_sc_s0,HMC,scp_abs,Q2,0.868421052631579,38,38,acc_quartile,N1%
 lgbm_sc_s0,HMC,scp_abs,Q2,0.8947368421052632,38,38,acc_quartile,N2%
 lgbm_sc_s0,HMC,scp_abs,Q2,0.8947368421052632,38,38,acc_quartile,N3%
-lgbm_sc_s0,HMC,scp_abs,Q2,0.9210526315789472,38,38,acc_quartile,REM%
+lgbm_sc_s0,HMC,scp_abs,Q2,0.9210526315789473,38,38,acc_quartile,REM%
 lgbm_sc_s0,HMC,scp_abs,Q2,0.8947368421052632,38,38,acc_quartile,REML
-lgbm_sc_s0,HMC,scp_abs,Q2,0.9210526315789472,38,38,acc_quartile,SOL
+lgbm_sc_s0,HMC,scp_abs,Q2,0.9210526315789473,38,38,acc_quartile,SOL
 lgbm_sc_s0,HMC,scp_abs,Q2,0.8947368421052632,38,38,acc_quartile,TST
 lgbm_sc_s0,HMC,scp_abs,Q2,0.8947368421052632,38,38,acc_quartile,WASO
 lgbm_sc_s0,HMC,scp_abs,Q3,0.918918918918919,37,37,acc_quartile,N1%
@@ -996,46 +996,46 @@ lgbm_sc_s0,HMC,scp_abs,Q3,0.918918918918919,37,37,acc_quartile,N2%
 lgbm_sc_s0,HMC,scp_abs,Q3,1.0,37,37,acc_quartile,N3%
 lgbm_sc_s0,HMC,scp_abs,Q3,0.918918918918919,37,37,acc_quartile,REM%
 lgbm_sc_s0,HMC,scp_abs,Q3,0.8611111111111112,36,36,acc_quartile,REML
-lgbm_sc_s0,HMC,scp_abs,Q3,0.945945945945946,37,37,acc_quartile,SOL
+lgbm_sc_s0,HMC,scp_abs,Q3,0.9459459459459459,37,37,acc_quartile,SOL
 lgbm_sc_s0,HMC,scp_abs,Q3,1.0,37,37,acc_quartile,TST
 lgbm_sc_s0,HMC,scp_abs,Q3,1.0,37,37,acc_quartile,WASO
 lgbm_sc_s0,HMC,scp_abs,Q4 (best),1.0,38,38,acc_quartile,N1%
 lgbm_sc_s0,HMC,scp_abs,Q4 (best),0.9736842105263158,38,38,acc_quartile,N2%
 lgbm_sc_s0,HMC,scp_abs,Q4 (best),0.9736842105263158,38,38,acc_quartile,N3%
 lgbm_sc_s0,HMC,scp_abs,Q4 (best),1.0,38,38,acc_quartile,REM%
-lgbm_sc_s0,HMC,scp_abs,Q4 (best),0.9210526315789472,38,38,acc_quartile,REML
-lgbm_sc_s0,HMC,scp_abs,Q4 (best),0.9473684210526316,38,38,acc_quartile,SOL
+lgbm_sc_s0,HMC,scp_abs,Q4 (best),0.9210526315789473,38,38,acc_quartile,REML
+lgbm_sc_s0,HMC,scp_abs,Q4 (best),0.9473684210526315,38,38,acc_quartile,SOL
 lgbm_sc_s0,HMC,scp_abs,Q4 (best),1.0,38,38,acc_quartile,TST
 lgbm_sc_s0,HMC,scp_abs,Q4 (best),1.0,38,38,acc_quartile,WASO
 lgbm_sc_s0,HMC,scp_abs_bc,Q1 (worst),0.7894736842105263,38,38,acc_quartile,N1%
 lgbm_sc_s0,HMC,scp_abs_bc,Q1 (worst),0.8157894736842105,38,38,acc_quartile,N2%
 lgbm_sc_s0,HMC,scp_abs_bc,Q1 (worst),0.7368421052631579,38,38,acc_quartile,N3%
 lgbm_sc_s0,HMC,scp_abs_bc,Q1 (worst),0.7368421052631579,38,38,acc_quartile,REM%
-lgbm_sc_s0,HMC,scp_abs_bc,Q1 (worst),0.9210526315789472,38,38,acc_quartile,REML
+lgbm_sc_s0,HMC,scp_abs_bc,Q1 (worst),0.9210526315789473,38,38,acc_quartile,REML
 lgbm_sc_s0,HMC,scp_abs_bc,Q1 (worst),0.7631578947368421,38,38,acc_quartile,SOL
 lgbm_sc_s0,HMC,scp_abs_bc,Q1 (worst),0.8157894736842105,38,38,acc_quartile,TST
 lgbm_sc_s0,HMC,scp_abs_bc,Q1 (worst),0.8157894736842105,38,38,acc_quartile,WASO
 lgbm_sc_s0,HMC,scp_abs_bc,Q2,0.8947368421052632,38,38,acc_quartile,N1%
-lgbm_sc_s0,HMC,scp_abs_bc,Q2,0.9210526315789472,38,38,acc_quartile,N2%
-lgbm_sc_s0,HMC,scp_abs_bc,Q2,0.9210526315789472,38,38,acc_quartile,N3%
+lgbm_sc_s0,HMC,scp_abs_bc,Q2,0.9210526315789473,38,38,acc_quartile,N2%
+lgbm_sc_s0,HMC,scp_abs_bc,Q2,0.9210526315789473,38,38,acc_quartile,N3%
 lgbm_sc_s0,HMC,scp_abs_bc,Q2,0.8947368421052632,38,38,acc_quartile,REM%
 lgbm_sc_s0,HMC,scp_abs_bc,Q2,0.868421052631579,38,38,acc_quartile,REML
-lgbm_sc_s0,HMC,scp_abs_bc,Q2,0.9210526315789472,38,38,acc_quartile,SOL
+lgbm_sc_s0,HMC,scp_abs_bc,Q2,0.9210526315789473,38,38,acc_quartile,SOL
 lgbm_sc_s0,HMC,scp_abs_bc,Q2,0.8947368421052632,38,38,acc_quartile,TST
 lgbm_sc_s0,HMC,scp_abs_bc,Q2,0.8947368421052632,38,38,acc_quartile,WASO
 lgbm_sc_s0,HMC,scp_abs_bc,Q3,0.918918918918919,37,37,acc_quartile,N1%
 lgbm_sc_s0,HMC,scp_abs_bc,Q3,0.8918918918918919,37,37,acc_quartile,N2%
-lgbm_sc_s0,HMC,scp_abs_bc,Q3,0.945945945945946,37,37,acc_quartile,N3%
-lgbm_sc_s0,HMC,scp_abs_bc,Q3,0.945945945945946,37,37,acc_quartile,REM%
+lgbm_sc_s0,HMC,scp_abs_bc,Q3,0.9459459459459459,37,37,acc_quartile,N3%
+lgbm_sc_s0,HMC,scp_abs_bc,Q3,0.9459459459459459,37,37,acc_quartile,REM%
 lgbm_sc_s0,HMC,scp_abs_bc,Q3,0.8611111111111112,36,36,acc_quartile,REML
-lgbm_sc_s0,HMC,scp_abs_bc,Q3,0.945945945945946,37,37,acc_quartile,SOL
+lgbm_sc_s0,HMC,scp_abs_bc,Q3,0.9459459459459459,37,37,acc_quartile,SOL
 lgbm_sc_s0,HMC,scp_abs_bc,Q3,0.8918918918918919,37,37,acc_quartile,TST
 lgbm_sc_s0,HMC,scp_abs_bc,Q3,0.918918918918919,37,37,acc_quartile,WASO
 lgbm_sc_s0,HMC,scp_abs_bc,Q4 (best),1.0,38,38,acc_quartile,N1%
-lgbm_sc_s0,HMC,scp_abs_bc,Q4 (best),0.9473684210526316,38,38,acc_quartile,N2%
+lgbm_sc_s0,HMC,scp_abs_bc,Q4 (best),0.9473684210526315,38,38,acc_quartile,N2%
 lgbm_sc_s0,HMC,scp_abs_bc,Q4 (best),1.0,38,38,acc_quartile,N3%
 lgbm_sc_s0,HMC,scp_abs_bc,Q4 (best),1.0,38,38,acc_quartile,REM%
-lgbm_sc_s0,HMC,scp_abs_bc,Q4 (best),0.9473684210526316,38,38,acc_quartile,REML
+lgbm_sc_s0,HMC,scp_abs_bc,Q4 (best),0.9473684210526315,38,38,acc_quartile,REML
 lgbm_sc_s0,HMC,scp_abs_bc,Q4 (best),0.9736842105263158,38,38,acc_quartile,SOL
 lgbm_sc_s0,HMC,scp_abs_bc,Q4 (best),1.0,38,38,acc_quartile,TST
 lgbm_sc_s0,HMC,scp_abs_bc,Q4 (best),0.9736842105263158,38,38,acc_quartile,WASO
@@ -1043,86 +1043,86 @@ lgbm_sc_s0,SC,ba_loa,Q1 (worst),0.6666666666666666,39,39,acc_quartile,N1%
 lgbm_sc_s0,SC,ba_loa,Q1 (worst),0.6666666666666666,39,39,acc_quartile,N2%
 lgbm_sc_s0,SC,ba_loa,Q1 (worst),0.7435897435897436,39,39,acc_quartile,N3%
 lgbm_sc_s0,SC,ba_loa,Q1 (worst),0.7948717948717948,39,39,acc_quartile,REM%
-lgbm_sc_s0,SC,ba_loa,Q1 (worst),0.9487179487179488,39,39,acc_quartile,REML
-lgbm_sc_s0,SC,ba_loa,Q1 (worst),0.9230769230769232,39,39,acc_quartile,SOL
+lgbm_sc_s0,SC,ba_loa,Q1 (worst),0.9487179487179487,39,39,acc_quartile,REML
+lgbm_sc_s0,SC,ba_loa,Q1 (worst),0.9230769230769231,39,39,acc_quartile,SOL
 lgbm_sc_s0,SC,ba_loa,Q1 (worst),0.6666666666666666,39,39,acc_quartile,TST
-lgbm_sc_s0,SC,ba_loa,Q1 (worst),0.9743589743589745,39,39,acc_quartile,WASO
-lgbm_sc_s0,SC,ba_loa,Q2,0.9210526315789472,38,38,acc_quartile,N1%
+lgbm_sc_s0,SC,ba_loa,Q1 (worst),0.9743589743589743,39,39,acc_quartile,WASO
+lgbm_sc_s0,SC,ba_loa,Q2,0.9210526315789473,38,38,acc_quartile,N1%
 lgbm_sc_s0,SC,ba_loa,Q2,0.9736842105263158,38,38,acc_quartile,N2%
 lgbm_sc_s0,SC,ba_loa,Q2,0.868421052631579,38,38,acc_quartile,N3%
 lgbm_sc_s0,SC,ba_loa,Q2,1.0,38,38,acc_quartile,REM%
 lgbm_sc_s0,SC,ba_loa,Q2,0.868421052631579,38,38,acc_quartile,REML
-lgbm_sc_s0,SC,ba_loa,Q2,0.9473684210526316,38,38,acc_quartile,SOL
+lgbm_sc_s0,SC,ba_loa,Q2,0.9473684210526315,38,38,acc_quartile,SOL
 lgbm_sc_s0,SC,ba_loa,Q2,0.9736842105263158,38,38,acc_quartile,TST
 lgbm_sc_s0,SC,ba_loa,Q2,0.8947368421052632,38,38,acc_quartile,WASO
 lgbm_sc_s0,SC,ba_loa,Q3,1.0,38,38,acc_quartile,N1%
 lgbm_sc_s0,SC,ba_loa,Q3,1.0,38,38,acc_quartile,N2%
-lgbm_sc_s0,SC,ba_loa,Q3,0.9473684210526316,38,38,acc_quartile,N3%
+lgbm_sc_s0,SC,ba_loa,Q3,0.9473684210526315,38,38,acc_quartile,N3%
 lgbm_sc_s0,SC,ba_loa,Q3,0.9736842105263158,38,38,acc_quartile,REM%
-lgbm_sc_s0,SC,ba_loa,Q3,0.9210526315789472,38,38,acc_quartile,REML
+lgbm_sc_s0,SC,ba_loa,Q3,0.9210526315789473,38,38,acc_quartile,REML
 lgbm_sc_s0,SC,ba_loa,Q3,1.0,38,38,acc_quartile,SOL
 lgbm_sc_s0,SC,ba_loa,Q3,1.0,38,38,acc_quartile,TST
-lgbm_sc_s0,SC,ba_loa,Q3,0.9473684210526316,38,38,acc_quartile,WASO
+lgbm_sc_s0,SC,ba_loa,Q3,0.9473684210526315,38,38,acc_quartile,WASO
 lgbm_sc_s0,SC,ba_loa,Q4 (best),1.0,38,38,acc_quartile,N1%
 lgbm_sc_s0,SC,ba_loa,Q4 (best),1.0,38,38,acc_quartile,N2%
 lgbm_sc_s0,SC,ba_loa,Q4 (best),1.0,38,38,acc_quartile,N3%
 lgbm_sc_s0,SC,ba_loa,Q4 (best),1.0,38,38,acc_quartile,REM%
-lgbm_sc_s0,SC,ba_loa,Q4 (best),0.9210526315789472,38,38,acc_quartile,REML
+lgbm_sc_s0,SC,ba_loa,Q4 (best),0.9210526315789473,38,38,acc_quartile,REML
 lgbm_sc_s0,SC,ba_loa,Q4 (best),0.9736842105263158,38,38,acc_quartile,SOL
 lgbm_sc_s0,SC,ba_loa,Q4 (best),1.0,38,38,acc_quartile,TST
-lgbm_sc_s0,SC,ba_loa,Q4 (best),0.9473684210526316,38,38,acc_quartile,WASO
+lgbm_sc_s0,SC,ba_loa,Q4 (best),0.9473684210526315,38,38,acc_quartile,WASO
 lgbm_sc_s0,SC,norm_reg_ffbs,Q1 (worst),0.8205128205128205,39,39,acc_quartile,N1%
 lgbm_sc_s0,SC,norm_reg_ffbs,Q1 (worst),0.7435897435897436,39,39,acc_quartile,N2%
 lgbm_sc_s0,SC,norm_reg_ffbs,Q1 (worst),0.7948717948717948,39,39,acc_quartile,N3%
 lgbm_sc_s0,SC,norm_reg_ffbs,Q1 (worst),0.7948717948717948,39,39,acc_quartile,REM%
-lgbm_sc_s0,SC,norm_reg_ffbs,Q1 (worst),0.9230769230769232,39,39,acc_quartile,REML
+lgbm_sc_s0,SC,norm_reg_ffbs,Q1 (worst),0.9230769230769231,39,39,acc_quartile,REML
 lgbm_sc_s0,SC,norm_reg_ffbs,Q1 (worst),0.8717948717948718,39,39,acc_quartile,SOL
 lgbm_sc_s0,SC,norm_reg_ffbs,Q1 (worst),0.717948717948718,39,39,acc_quartile,TST
-lgbm_sc_s0,SC,norm_reg_ffbs,Q1 (worst),0.9743589743589745,39,39,acc_quartile,WASO
+lgbm_sc_s0,SC,norm_reg_ffbs,Q1 (worst),0.9743589743589743,39,39,acc_quartile,WASO
 lgbm_sc_s0,SC,norm_reg_ffbs,Q2,0.8421052631578947,38,38,acc_quartile,N1%
-lgbm_sc_s0,SC,norm_reg_ffbs,Q2,0.9210526315789472,38,38,acc_quartile,N2%
+lgbm_sc_s0,SC,norm_reg_ffbs,Q2,0.9210526315789473,38,38,acc_quartile,N2%
 lgbm_sc_s0,SC,norm_reg_ffbs,Q2,0.8947368421052632,38,38,acc_quartile,N3%
 lgbm_sc_s0,SC,norm_reg_ffbs,Q2,0.8947368421052632,38,38,acc_quartile,REM%
 lgbm_sc_s0,SC,norm_reg_ffbs,Q2,0.8421052631578947,38,38,acc_quartile,REML
 lgbm_sc_s0,SC,norm_reg_ffbs,Q2,0.868421052631579,38,38,acc_quartile,SOL
-lgbm_sc_s0,SC,norm_reg_ffbs,Q2,0.9473684210526316,38,38,acc_quartile,TST
-lgbm_sc_s0,SC,norm_reg_ffbs,Q2,0.9210526315789472,38,38,acc_quartile,WASO
+lgbm_sc_s0,SC,norm_reg_ffbs,Q2,0.9473684210526315,38,38,acc_quartile,TST
+lgbm_sc_s0,SC,norm_reg_ffbs,Q2,0.9210526315789473,38,38,acc_quartile,WASO
 lgbm_sc_s0,SC,norm_reg_ffbs,Q3,0.9736842105263158,38,38,acc_quartile,N1%
-lgbm_sc_s0,SC,norm_reg_ffbs,Q3,0.9473684210526316,38,38,acc_quartile,N2%
-lgbm_sc_s0,SC,norm_reg_ffbs,Q3,0.9210526315789472,38,38,acc_quartile,N3%
-lgbm_sc_s0,SC,norm_reg_ffbs,Q3,0.9210526315789472,38,38,acc_quartile,REM%
-lgbm_sc_s0,SC,norm_reg_ffbs,Q3,0.9210526315789472,38,38,acc_quartile,REML
-lgbm_sc_s0,SC,norm_reg_ffbs,Q3,0.9473684210526316,38,38,acc_quartile,SOL
-lgbm_sc_s0,SC,norm_reg_ffbs,Q3,0.9473684210526316,38,38,acc_quartile,TST
+lgbm_sc_s0,SC,norm_reg_ffbs,Q3,0.9473684210526315,38,38,acc_quartile,N2%
+lgbm_sc_s0,SC,norm_reg_ffbs,Q3,0.9210526315789473,38,38,acc_quartile,N3%
+lgbm_sc_s0,SC,norm_reg_ffbs,Q3,0.9210526315789473,38,38,acc_quartile,REM%
+lgbm_sc_s0,SC,norm_reg_ffbs,Q3,0.9210526315789473,38,38,acc_quartile,REML
+lgbm_sc_s0,SC,norm_reg_ffbs,Q3,0.9473684210526315,38,38,acc_quartile,SOL
+lgbm_sc_s0,SC,norm_reg_ffbs,Q3,0.9473684210526315,38,38,acc_quartile,TST
 lgbm_sc_s0,SC,norm_reg_ffbs,Q3,0.868421052631579,38,38,acc_quartile,WASO
 lgbm_sc_s0,SC,norm_reg_ffbs,Q4 (best),0.9736842105263158,38,38,acc_quartile,N1%
 lgbm_sc_s0,SC,norm_reg_ffbs,Q4 (best),1.0,38,38,acc_quartile,N2%
 lgbm_sc_s0,SC,norm_reg_ffbs,Q4 (best),1.0,38,38,acc_quartile,N3%
 lgbm_sc_s0,SC,norm_reg_ffbs,Q4 (best),1.0,38,38,acc_quartile,REM%
-lgbm_sc_s0,SC,norm_reg_ffbs,Q4 (best),0.9210526315789472,38,38,acc_quartile,REML
-lgbm_sc_s0,SC,norm_reg_ffbs,Q4 (best),0.9210526315789472,38,38,acc_quartile,SOL
+lgbm_sc_s0,SC,norm_reg_ffbs,Q4 (best),0.9210526315789473,38,38,acc_quartile,REML
+lgbm_sc_s0,SC,norm_reg_ffbs,Q4 (best),0.9210526315789473,38,38,acc_quartile,SOL
 lgbm_sc_s0,SC,norm_reg_ffbs,Q4 (best),1.0,38,38,acc_quartile,TST
 lgbm_sc_s0,SC,norm_reg_ffbs,Q4 (best),0.8421052631578947,38,38,acc_quartile,WASO
 lgbm_sc_s0,SC,scp_abs,Q1 (worst),0.6923076923076923,39,39,acc_quartile,N1%
 lgbm_sc_s0,SC,scp_abs,Q1 (worst),0.717948717948718,39,39,acc_quartile,N2%
 lgbm_sc_s0,SC,scp_abs,Q1 (worst),0.7692307692307693,39,39,acc_quartile,N3%
 lgbm_sc_s0,SC,scp_abs,Q1 (worst),0.7435897435897436,39,39,acc_quartile,REM%
-lgbm_sc_s0,SC,scp_abs,Q1 (worst),0.9230769230769232,39,39,acc_quartile,REML
+lgbm_sc_s0,SC,scp_abs,Q1 (worst),0.9230769230769231,39,39,acc_quartile,REML
 lgbm_sc_s0,SC,scp_abs,Q1 (worst),0.7692307692307693,39,39,acc_quartile,SOL
 lgbm_sc_s0,SC,scp_abs,Q1 (worst),0.6666666666666666,39,39,acc_quartile,TST
-lgbm_sc_s0,SC,scp_abs,Q1 (worst),0.9230769230769232,39,39,acc_quartile,WASO
-lgbm_sc_s0,SC,scp_abs,Q2,0.9210526315789472,38,38,acc_quartile,N1%
-lgbm_sc_s0,SC,scp_abs,Q2,0.9210526315789472,38,38,acc_quartile,N2%
+lgbm_sc_s0,SC,scp_abs,Q1 (worst),0.9230769230769231,39,39,acc_quartile,WASO
+lgbm_sc_s0,SC,scp_abs,Q2,0.9210526315789473,38,38,acc_quartile,N1%
+lgbm_sc_s0,SC,scp_abs,Q2,0.9210526315789473,38,38,acc_quartile,N2%
 lgbm_sc_s0,SC,scp_abs,Q2,0.868421052631579,38,38,acc_quartile,N3%
-lgbm_sc_s0,SC,scp_abs,Q2,0.9210526315789472,38,38,acc_quartile,REM%
+lgbm_sc_s0,SC,scp_abs,Q2,0.9210526315789473,38,38,acc_quartile,REM%
 lgbm_sc_s0,SC,scp_abs,Q2,0.868421052631579,38,38,acc_quartile,REML
 lgbm_sc_s0,SC,scp_abs,Q2,0.8947368421052632,38,38,acc_quartile,SOL
 lgbm_sc_s0,SC,scp_abs,Q2,0.9736842105263158,38,38,acc_quartile,TST
 lgbm_sc_s0,SC,scp_abs,Q2,0.8421052631578947,38,38,acc_quartile,WASO
 lgbm_sc_s0,SC,scp_abs,Q3,1.0,38,38,acc_quartile,N1%
 lgbm_sc_s0,SC,scp_abs,Q3,1.0,38,38,acc_quartile,N2%
-lgbm_sc_s0,SC,scp_abs,Q3,0.9473684210526316,38,38,acc_quartile,N3%
-lgbm_sc_s0,SC,scp_abs,Q3,0.9473684210526316,38,38,acc_quartile,REM%
+lgbm_sc_s0,SC,scp_abs,Q3,0.9473684210526315,38,38,acc_quartile,N3%
+lgbm_sc_s0,SC,scp_abs,Q3,0.9473684210526315,38,38,acc_quartile,REM%
 lgbm_sc_s0,SC,scp_abs,Q3,0.8947368421052632,38,38,acc_quartile,REML
 lgbm_sc_s0,SC,scp_abs,Q3,0.9736842105263158,38,38,acc_quartile,SOL
 lgbm_sc_s0,SC,scp_abs,Q3,0.9736842105263158,38,38,acc_quartile,TST
@@ -1131,30 +1131,30 @@ lgbm_sc_s0,SC,scp_abs,Q4 (best),1.0,38,38,acc_quartile,N1%
 lgbm_sc_s0,SC,scp_abs,Q4 (best),0.9736842105263158,38,38,acc_quartile,N2%
 lgbm_sc_s0,SC,scp_abs,Q4 (best),1.0,38,38,acc_quartile,N3%
 lgbm_sc_s0,SC,scp_abs,Q4 (best),1.0,38,38,acc_quartile,REM%
-lgbm_sc_s0,SC,scp_abs,Q4 (best),0.9210526315789472,38,38,acc_quartile,REML
+lgbm_sc_s0,SC,scp_abs,Q4 (best),0.9210526315789473,38,38,acc_quartile,REML
 lgbm_sc_s0,SC,scp_abs,Q4 (best),0.9736842105263158,38,38,acc_quartile,SOL
 lgbm_sc_s0,SC,scp_abs,Q4 (best),1.0,38,38,acc_quartile,TST
-lgbm_sc_s0,SC,scp_abs,Q4 (best),0.9473684210526316,38,38,acc_quartile,WASO
+lgbm_sc_s0,SC,scp_abs,Q4 (best),0.9473684210526315,38,38,acc_quartile,WASO
 lgbm_sc_s0,SC,scp_abs_bc,Q1 (worst),0.6666666666666666,39,39,acc_quartile,N1%
 lgbm_sc_s0,SC,scp_abs_bc,Q1 (worst),0.6153846153846154,39,39,acc_quartile,N2%
 lgbm_sc_s0,SC,scp_abs_bc,Q1 (worst),0.7948717948717948,39,39,acc_quartile,N3%
 lgbm_sc_s0,SC,scp_abs_bc,Q1 (worst),0.7435897435897436,39,39,acc_quartile,REM%
-lgbm_sc_s0,SC,scp_abs_bc,Q1 (worst),0.9230769230769232,39,39,acc_quartile,REML
+lgbm_sc_s0,SC,scp_abs_bc,Q1 (worst),0.9230769230769231,39,39,acc_quartile,REML
 lgbm_sc_s0,SC,scp_abs_bc,Q1 (worst),0.7435897435897436,39,39,acc_quartile,SOL
 lgbm_sc_s0,SC,scp_abs_bc,Q1 (worst),0.6410256410256411,39,39,acc_quartile,TST
-lgbm_sc_s0,SC,scp_abs_bc,Q1 (worst),0.9230769230769232,39,39,acc_quartile,WASO
-lgbm_sc_s0,SC,scp_abs_bc,Q2,0.9473684210526316,38,38,acc_quartile,N1%
-lgbm_sc_s0,SC,scp_abs_bc,Q2,0.9473684210526316,38,38,acc_quartile,N2%
+lgbm_sc_s0,SC,scp_abs_bc,Q1 (worst),0.9230769230769231,39,39,acc_quartile,WASO
+lgbm_sc_s0,SC,scp_abs_bc,Q2,0.9473684210526315,38,38,acc_quartile,N1%
+lgbm_sc_s0,SC,scp_abs_bc,Q2,0.9473684210526315,38,38,acc_quartile,N2%
 lgbm_sc_s0,SC,scp_abs_bc,Q2,0.868421052631579,38,38,acc_quartile,N3%
-lgbm_sc_s0,SC,scp_abs_bc,Q2,0.9210526315789472,38,38,acc_quartile,REM%
+lgbm_sc_s0,SC,scp_abs_bc,Q2,0.9210526315789473,38,38,acc_quartile,REM%
 lgbm_sc_s0,SC,scp_abs_bc,Q2,0.868421052631579,38,38,acc_quartile,REML
 lgbm_sc_s0,SC,scp_abs_bc,Q2,0.8947368421052632,38,38,acc_quartile,SOL
 lgbm_sc_s0,SC,scp_abs_bc,Q2,0.9736842105263158,38,38,acc_quartile,TST
 lgbm_sc_s0,SC,scp_abs_bc,Q2,0.8421052631578947,38,38,acc_quartile,WASO
 lgbm_sc_s0,SC,scp_abs_bc,Q3,1.0,38,38,acc_quartile,N1%
 lgbm_sc_s0,SC,scp_abs_bc,Q3,1.0,38,38,acc_quartile,N2%
-lgbm_sc_s0,SC,scp_abs_bc,Q3,0.9473684210526316,38,38,acc_quartile,N3%
-lgbm_sc_s0,SC,scp_abs_bc,Q3,0.9210526315789472,38,38,acc_quartile,REM%
+lgbm_sc_s0,SC,scp_abs_bc,Q3,0.9473684210526315,38,38,acc_quartile,N3%
+lgbm_sc_s0,SC,scp_abs_bc,Q3,0.9210526315789473,38,38,acc_quartile,REM%
 lgbm_sc_s0,SC,scp_abs_bc,Q3,0.8947368421052632,38,38,acc_quartile,REML
 lgbm_sc_s0,SC,scp_abs_bc,Q3,0.9736842105263158,38,38,acc_quartile,SOL
 lgbm_sc_s0,SC,scp_abs_bc,Q3,1.0,38,38,acc_quartile,TST
@@ -1163,10 +1163,10 @@ lgbm_sc_s0,SC,scp_abs_bc,Q4 (best),1.0,38,38,acc_quartile,N1%
 lgbm_sc_s0,SC,scp_abs_bc,Q4 (best),1.0,38,38,acc_quartile,N2%
 lgbm_sc_s0,SC,scp_abs_bc,Q4 (best),1.0,38,38,acc_quartile,N3%
 lgbm_sc_s0,SC,scp_abs_bc,Q4 (best),1.0,38,38,acc_quartile,REM%
-lgbm_sc_s0,SC,scp_abs_bc,Q4 (best),0.9210526315789472,38,38,acc_quartile,REML
+lgbm_sc_s0,SC,scp_abs_bc,Q4 (best),0.9210526315789473,38,38,acc_quartile,REML
 lgbm_sc_s0,SC,scp_abs_bc,Q4 (best),0.9736842105263158,38,38,acc_quartile,SOL
 lgbm_sc_s0,SC,scp_abs_bc,Q4 (best),1.0,38,38,acc_quartile,TST
-lgbm_sc_s0,SC,scp_abs_bc,Q4 (best),0.9473684210526316,38,38,acc_quartile,WASO
+lgbm_sc_s0,SC,scp_abs_bc,Q4 (best),0.9473684210526315,38,38,acc_quartile,WASO
 lgbm_sc_s0,ST,ba_loa,Q1 (worst),0.8181818181818182,11,11,acc_quartile,N1%
 lgbm_sc_s0,ST,ba_loa,Q1 (worst),0.6363636363636364,11,11,acc_quartile,N2%
 lgbm_sc_s0,ST,ba_loa,Q1 (worst),0.7272727272727273,11,11,acc_quartile,N3%
@@ -1175,10 +1175,10 @@ lgbm_sc_s0,ST,ba_loa,Q1 (worst),0.7272727272727273,11,11,acc_quartile,REML
 lgbm_sc_s0,ST,ba_loa,Q1 (worst),1.0,11,11,acc_quartile,SOL
 lgbm_sc_s0,ST,ba_loa,Q1 (worst),0.7272727272727273,11,11,acc_quartile,TST
 lgbm_sc_s0,ST,ba_loa,Q1 (worst),0.7272727272727273,11,11,acc_quartile,WASO
-lgbm_sc_s0,ST,ba_loa,Q2,0.9090909090909092,11,11,acc_quartile,N1%
+lgbm_sc_s0,ST,ba_loa,Q2,0.9090909090909091,11,11,acc_quartile,N1%
 lgbm_sc_s0,ST,ba_loa,Q2,0.8181818181818182,11,11,acc_quartile,N2%
 lgbm_sc_s0,ST,ba_loa,Q2,0.8181818181818182,11,11,acc_quartile,N3%
-lgbm_sc_s0,ST,ba_loa,Q2,0.9090909090909092,11,11,acc_quartile,REM%
+lgbm_sc_s0,ST,ba_loa,Q2,0.9090909090909091,11,11,acc_quartile,REM%
 lgbm_sc_s0,ST,ba_loa,Q2,0.8181818181818182,11,11,acc_quartile,REML
 lgbm_sc_s0,ST,ba_loa,Q2,1.0,11,11,acc_quartile,SOL
 lgbm_sc_s0,ST,ba_loa,Q2,1.0,11,11,acc_quartile,TST
@@ -1186,20 +1186,20 @@ lgbm_sc_s0,ST,ba_loa,Q2,1.0,11,11,acc_quartile,WASO
 lgbm_sc_s0,ST,ba_loa,Q3,1.0,11,11,acc_quartile,N1%
 lgbm_sc_s0,ST,ba_loa,Q3,1.0,11,11,acc_quartile,N2%
 lgbm_sc_s0,ST,ba_loa,Q3,1.0,11,11,acc_quartile,N3%
-lgbm_sc_s0,ST,ba_loa,Q3,0.9090909090909092,11,11,acc_quartile,REM%
-lgbm_sc_s0,ST,ba_loa,Q3,0.9090909090909092,11,11,acc_quartile,REML
+lgbm_sc_s0,ST,ba_loa,Q3,0.9090909090909091,11,11,acc_quartile,REM%
+lgbm_sc_s0,ST,ba_loa,Q3,0.9090909090909091,11,11,acc_quartile,REML
 lgbm_sc_s0,ST,ba_loa,Q3,0.8181818181818182,11,11,acc_quartile,SOL
 lgbm_sc_s0,ST,ba_loa,Q3,0.7272727272727273,11,11,acc_quartile,TST
-lgbm_sc_s0,ST,ba_loa,Q3,0.9090909090909092,11,11,acc_quartile,WASO
+lgbm_sc_s0,ST,ba_loa,Q3,0.9090909090909091,11,11,acc_quartile,WASO
 lgbm_sc_s0,ST,ba_loa,Q4 (best),1.0,11,11,acc_quartile,N1%
 lgbm_sc_s0,ST,ba_loa,Q4 (best),1.0,11,11,acc_quartile,N2%
 lgbm_sc_s0,ST,ba_loa,Q4 (best),1.0,11,11,acc_quartile,N3%
 lgbm_sc_s0,ST,ba_loa,Q4 (best),1.0,11,11,acc_quartile,REM%
-lgbm_sc_s0,ST,ba_loa,Q4 (best),0.9090909090909092,11,11,acc_quartile,REML
+lgbm_sc_s0,ST,ba_loa,Q4 (best),0.9090909090909091,11,11,acc_quartile,REML
 lgbm_sc_s0,ST,ba_loa,Q4 (best),1.0,11,11,acc_quartile,SOL
-lgbm_sc_s0,ST,ba_loa,Q4 (best),0.9090909090909092,11,11,acc_quartile,TST
-lgbm_sc_s0,ST,ba_loa,Q4 (best),0.9090909090909092,11,11,acc_quartile,WASO
-lgbm_sc_s0,ST,norm_reg_ffbs,Q1 (worst),0.9090909090909092,11,11,acc_quartile,N1%
+lgbm_sc_s0,ST,ba_loa,Q4 (best),0.9090909090909091,11,11,acc_quartile,TST
+lgbm_sc_s0,ST,ba_loa,Q4 (best),0.9090909090909091,11,11,acc_quartile,WASO
+lgbm_sc_s0,ST,norm_reg_ffbs,Q1 (worst),0.9090909090909091,11,11,acc_quartile,N1%
 lgbm_sc_s0,ST,norm_reg_ffbs,Q1 (worst),0.8181818181818182,11,11,acc_quartile,N2%
 lgbm_sc_s0,ST,norm_reg_ffbs,Q1 (worst),0.7272727272727273,11,11,acc_quartile,N3%
 lgbm_sc_s0,ST,norm_reg_ffbs,Q1 (worst),0.8181818181818182,11,11,acc_quartile,REM%
@@ -1210,12 +1210,12 @@ lgbm_sc_s0,ST,norm_reg_ffbs,Q1 (worst),0.8181818181818182,11,11,acc_quartile,WAS
 lgbm_sc_s0,ST,norm_reg_ffbs,Q2,1.0,11,11,acc_quartile,N1%
 lgbm_sc_s0,ST,norm_reg_ffbs,Q2,0.8181818181818182,11,11,acc_quartile,N2%
 lgbm_sc_s0,ST,norm_reg_ffbs,Q2,0.8181818181818182,11,11,acc_quartile,N3%
-lgbm_sc_s0,ST,norm_reg_ffbs,Q2,0.9090909090909092,11,11,acc_quartile,REM%
+lgbm_sc_s0,ST,norm_reg_ffbs,Q2,0.9090909090909091,11,11,acc_quartile,REM%
 lgbm_sc_s0,ST,norm_reg_ffbs,Q2,0.8181818181818182,11,11,acc_quartile,REML
 lgbm_sc_s0,ST,norm_reg_ffbs,Q2,1.0,11,11,acc_quartile,SOL
 lgbm_sc_s0,ST,norm_reg_ffbs,Q2,1.0,11,11,acc_quartile,TST
 lgbm_sc_s0,ST,norm_reg_ffbs,Q2,1.0,11,11,acc_quartile,WASO
-lgbm_sc_s0,ST,norm_reg_ffbs,Q3,0.9090909090909092,11,11,acc_quartile,N1%
+lgbm_sc_s0,ST,norm_reg_ffbs,Q3,0.9090909090909091,11,11,acc_quartile,N1%
 lgbm_sc_s0,ST,norm_reg_ffbs,Q3,1.0,11,11,acc_quartile,N2%
 lgbm_sc_s0,ST,norm_reg_ffbs,Q3,1.0,11,11,acc_quartile,N3%
 lgbm_sc_s0,ST,norm_reg_ffbs,Q3,1.0,11,11,acc_quartile,REM%
@@ -1226,8 +1226,8 @@ lgbm_sc_s0,ST,norm_reg_ffbs,Q3,1.0,11,11,acc_quartile,WASO
 lgbm_sc_s0,ST,norm_reg_ffbs,Q4 (best),0.8181818181818182,11,11,acc_quartile,N1%
 lgbm_sc_s0,ST,norm_reg_ffbs,Q4 (best),1.0,11,11,acc_quartile,N2%
 lgbm_sc_s0,ST,norm_reg_ffbs,Q4 (best),1.0,11,11,acc_quartile,N3%
-lgbm_sc_s0,ST,norm_reg_ffbs,Q4 (best),0.9090909090909092,11,11,acc_quartile,REM%
-lgbm_sc_s0,ST,norm_reg_ffbs,Q4 (best),0.9090909090909092,11,11,acc_quartile,REML
+lgbm_sc_s0,ST,norm_reg_ffbs,Q4 (best),0.9090909090909091,11,11,acc_quartile,REM%
+lgbm_sc_s0,ST,norm_reg_ffbs,Q4 (best),0.9090909090909091,11,11,acc_quartile,REML
 lgbm_sc_s0,ST,norm_reg_ffbs,Q4 (best),1.0,11,11,acc_quartile,SOL
 lgbm_sc_s0,ST,norm_reg_ffbs,Q4 (best),0.8181818181818182,11,11,acc_quartile,TST
 lgbm_sc_s0,ST,norm_reg_ffbs,Q4 (best),0.8181818181818182,11,11,acc_quartile,WASO
@@ -1235,23 +1235,23 @@ lgbm_sc_s0,ST,scp_abs,Q1 (worst),0.6363636363636364,11,11,acc_quartile,N1%
 lgbm_sc_s0,ST,scp_abs,Q1 (worst),0.6363636363636364,11,11,acc_quartile,N2%
 lgbm_sc_s0,ST,scp_abs,Q1 (worst),0.7272727272727273,11,11,acc_quartile,N3%
 lgbm_sc_s0,ST,scp_abs,Q1 (worst),0.8181818181818182,11,11,acc_quartile,REM%
-lgbm_sc_s0,ST,scp_abs,Q1 (worst),0.9090909090909092,11,11,acc_quartile,REML
+lgbm_sc_s0,ST,scp_abs,Q1 (worst),0.9090909090909091,11,11,acc_quartile,REML
 lgbm_sc_s0,ST,scp_abs,Q1 (worst),1.0,11,11,acc_quartile,SOL
 lgbm_sc_s0,ST,scp_abs,Q1 (worst),0.8181818181818182,11,11,acc_quartile,TST
 lgbm_sc_s0,ST,scp_abs,Q1 (worst),0.6363636363636364,11,11,acc_quartile,WASO
-lgbm_sc_s0,ST,scp_abs,Q2,0.9090909090909092,11,11,acc_quartile,N1%
+lgbm_sc_s0,ST,scp_abs,Q2,0.9090909090909091,11,11,acc_quartile,N1%
 lgbm_sc_s0,ST,scp_abs,Q2,1.0,11,11,acc_quartile,N2%
-lgbm_sc_s0,ST,scp_abs,Q2,0.9090909090909092,11,11,acc_quartile,N3%
-lgbm_sc_s0,ST,scp_abs,Q2,0.9090909090909092,11,11,acc_quartile,REM%
-lgbm_sc_s0,ST,scp_abs,Q2,0.9090909090909092,11,11,acc_quartile,REML
+lgbm_sc_s0,ST,scp_abs,Q2,0.9090909090909091,11,11,acc_quartile,N3%
+lgbm_sc_s0,ST,scp_abs,Q2,0.9090909090909091,11,11,acc_quartile,REM%
+lgbm_sc_s0,ST,scp_abs,Q2,0.9090909090909091,11,11,acc_quartile,REML
 lgbm_sc_s0,ST,scp_abs,Q2,1.0,11,11,acc_quartile,SOL
 lgbm_sc_s0,ST,scp_abs,Q2,1.0,11,11,acc_quartile,TST
 lgbm_sc_s0,ST,scp_abs,Q2,1.0,11,11,acc_quartile,WASO
 lgbm_sc_s0,ST,scp_abs,Q3,1.0,11,11,acc_quartile,N1%
 lgbm_sc_s0,ST,scp_abs,Q3,1.0,11,11,acc_quartile,N2%
 lgbm_sc_s0,ST,scp_abs,Q3,1.0,11,11,acc_quartile,N3%
-lgbm_sc_s0,ST,scp_abs,Q3,0.9090909090909092,11,11,acc_quartile,REM%
-lgbm_sc_s0,ST,scp_abs,Q3,0.9090909090909092,11,11,acc_quartile,REML
+lgbm_sc_s0,ST,scp_abs,Q3,0.9090909090909091,11,11,acc_quartile,REM%
+lgbm_sc_s0,ST,scp_abs,Q3,0.9090909090909091,11,11,acc_quartile,REML
 lgbm_sc_s0,ST,scp_abs,Q3,0.8181818181818182,11,11,acc_quartile,SOL
 lgbm_sc_s0,ST,scp_abs,Q3,0.8181818181818182,11,11,acc_quartile,TST
 lgbm_sc_s0,ST,scp_abs,Q3,1.0,11,11,acc_quartile,WASO
@@ -1259,7 +1259,7 @@ lgbm_sc_s0,ST,scp_abs,Q4 (best),1.0,11,11,acc_quartile,N1%
 lgbm_sc_s0,ST,scp_abs,Q4 (best),1.0,11,11,acc_quartile,N2%
 lgbm_sc_s0,ST,scp_abs,Q4 (best),1.0,11,11,acc_quartile,N3%
 lgbm_sc_s0,ST,scp_abs,Q4 (best),1.0,11,11,acc_quartile,REM%
-lgbm_sc_s0,ST,scp_abs,Q4 (best),0.9090909090909092,11,11,acc_quartile,REML
+lgbm_sc_s0,ST,scp_abs,Q4 (best),0.9090909090909091,11,11,acc_quartile,REML
 lgbm_sc_s0,ST,scp_abs,Q4 (best),0.8181818181818182,11,11,acc_quartile,SOL
 lgbm_sc_s0,ST,scp_abs,Q4 (best),1.0,11,11,acc_quartile,TST
 lgbm_sc_s0,ST,scp_abs,Q4 (best),1.0,11,11,acc_quartile,WASO
@@ -1271,40 +1271,40 @@ lgbm_sc_s0,ST,scp_abs_bc,Q1 (worst),0.8181818181818182,11,11,acc_quartile,REML
 lgbm_sc_s0,ST,scp_abs_bc,Q1 (worst),1.0,11,11,acc_quartile,SOL
 lgbm_sc_s0,ST,scp_abs_bc,Q1 (worst),0.7272727272727273,11,11,acc_quartile,TST
 lgbm_sc_s0,ST,scp_abs_bc,Q1 (worst),0.7272727272727273,11,11,acc_quartile,WASO
-lgbm_sc_s0,ST,scp_abs_bc,Q2,0.9090909090909092,11,11,acc_quartile,N1%
+lgbm_sc_s0,ST,scp_abs_bc,Q2,0.9090909090909091,11,11,acc_quartile,N1%
 lgbm_sc_s0,ST,scp_abs_bc,Q2,0.8181818181818182,11,11,acc_quartile,N2%
 lgbm_sc_s0,ST,scp_abs_bc,Q2,0.8181818181818182,11,11,acc_quartile,N3%
-lgbm_sc_s0,ST,scp_abs_bc,Q2,0.9090909090909092,11,11,acc_quartile,REM%
-lgbm_sc_s0,ST,scp_abs_bc,Q2,0.9090909090909092,11,11,acc_quartile,REML
+lgbm_sc_s0,ST,scp_abs_bc,Q2,0.9090909090909091,11,11,acc_quartile,REM%
+lgbm_sc_s0,ST,scp_abs_bc,Q2,0.9090909090909091,11,11,acc_quartile,REML
 lgbm_sc_s0,ST,scp_abs_bc,Q2,1.0,11,11,acc_quartile,SOL
 lgbm_sc_s0,ST,scp_abs_bc,Q2,1.0,11,11,acc_quartile,TST
 lgbm_sc_s0,ST,scp_abs_bc,Q2,1.0,11,11,acc_quartile,WASO
 lgbm_sc_s0,ST,scp_abs_bc,Q3,1.0,11,11,acc_quartile,N1%
 lgbm_sc_s0,ST,scp_abs_bc,Q3,1.0,11,11,acc_quartile,N2%
 lgbm_sc_s0,ST,scp_abs_bc,Q3,1.0,11,11,acc_quartile,N3%
-lgbm_sc_s0,ST,scp_abs_bc,Q3,0.9090909090909092,11,11,acc_quartile,REM%
-lgbm_sc_s0,ST,scp_abs_bc,Q3,0.9090909090909092,11,11,acc_quartile,REML
+lgbm_sc_s0,ST,scp_abs_bc,Q3,0.9090909090909091,11,11,acc_quartile,REM%
+lgbm_sc_s0,ST,scp_abs_bc,Q3,0.9090909090909091,11,11,acc_quartile,REML
 lgbm_sc_s0,ST,scp_abs_bc,Q3,0.7272727272727273,11,11,acc_quartile,SOL
-lgbm_sc_s0,ST,scp_abs_bc,Q3,0.9090909090909092,11,11,acc_quartile,TST
-lgbm_sc_s0,ST,scp_abs_bc,Q3,0.9090909090909092,11,11,acc_quartile,WASO
-lgbm_sc_s0,ST,scp_abs_bc,Q4 (best),0.9090909090909092,11,11,acc_quartile,N1%
+lgbm_sc_s0,ST,scp_abs_bc,Q3,0.9090909090909091,11,11,acc_quartile,TST
+lgbm_sc_s0,ST,scp_abs_bc,Q3,0.9090909090909091,11,11,acc_quartile,WASO
+lgbm_sc_s0,ST,scp_abs_bc,Q4 (best),0.9090909090909091,11,11,acc_quartile,N1%
 lgbm_sc_s0,ST,scp_abs_bc,Q4 (best),1.0,11,11,acc_quartile,N2%
 lgbm_sc_s0,ST,scp_abs_bc,Q4 (best),1.0,11,11,acc_quartile,N3%
 lgbm_sc_s0,ST,scp_abs_bc,Q4 (best),1.0,11,11,acc_quartile,REM%
-lgbm_sc_s0,ST,scp_abs_bc,Q4 (best),0.9090909090909092,11,11,acc_quartile,REML
-lgbm_sc_s0,ST,scp_abs_bc,Q4 (best),0.9090909090909092,11,11,acc_quartile,SOL
-lgbm_sc_s0,ST,scp_abs_bc,Q4 (best),0.9090909090909092,11,11,acc_quartile,TST
-lgbm_sc_s0,ST,scp_abs_bc,Q4 (best),0.9090909090909092,11,11,acc_quartile,WASO
-lgbm_sc_s0,SC,ba_loa,<40,0.9519230769230768,312,39,age_group,all
-lgbm_sc_s0,SC,ba_loa,40-59,0.9447674418604652,344,43,age_group,all
+lgbm_sc_s0,ST,scp_abs_bc,Q4 (best),0.9090909090909091,11,11,acc_quartile,REML
+lgbm_sc_s0,ST,scp_abs_bc,Q4 (best),0.9090909090909091,11,11,acc_quartile,SOL
+lgbm_sc_s0,ST,scp_abs_bc,Q4 (best),0.9090909090909091,11,11,acc_quartile,TST
+lgbm_sc_s0,ST,scp_abs_bc,Q4 (best),0.9090909090909091,11,11,acc_quartile,WASO
+lgbm_sc_s0,SC,ba_loa,<40,0.9519230769230769,312,39,age_group,all
+lgbm_sc_s0,SC,ba_loa,40-59,0.9447674418604651,344,43,age_group,all
 lgbm_sc_s0,SC,ba_loa,>=60,0.8873239436619719,568,71,age_group,all
-lgbm_sc_s0,SC,norm_reg_ffbs,<40,0.9262820512820512,312,39,age_group,all
-lgbm_sc_s0,SC,norm_reg_ffbs,40-59,0.9302325581395348,344,43,age_group,all
+lgbm_sc_s0,SC,norm_reg_ffbs,<40,0.9262820512820513,312,39,age_group,all
+lgbm_sc_s0,SC,norm_reg_ffbs,40-59,0.9302325581395349,344,43,age_group,all
 lgbm_sc_s0,SC,norm_reg_ffbs,>=60,0.8714788732394366,568,71,age_group,all
-lgbm_sc_s0,SC,scp_abs,<40,0.939102564102564,312,39,age_group,all
-lgbm_sc_s0,SC,scp_abs,40-59,0.9215116279069768,344,43,age_group,all
+lgbm_sc_s0,SC,scp_abs,<40,0.9391025641025641,312,39,age_group,all
+lgbm_sc_s0,SC,scp_abs,40-59,0.9215116279069767,344,43,age_group,all
 lgbm_sc_s0,SC,scp_abs,>=60,0.8679577464788732,568,71,age_group,all
-lgbm_sc_s0,SC,scp_abs_bc,<40,0.9423076923076924,312,39,age_group,all
+lgbm_sc_s0,SC,scp_abs_bc,<40,0.9423076923076923,312,39,age_group,all
 lgbm_sc_s0,SC,scp_abs_bc,40-59,0.9273255813953488,344,43,age_group,all
 lgbm_sc_s0,SC,scp_abs_bc,>=60,0.8573943661971831,568,71,age_group,all
 lgbm_sc_s0,ST,ba_loa,<40,0.921875,192,24,age_group,all
@@ -1319,22 +1319,22 @@ lgbm_sc_s0,ST,scp_abs,>=60,0.8958333333333334,48,6,age_group,all
 lgbm_sc_s0,ST,scp_abs_bc,<40,0.921875,192,24,age_group,all
 lgbm_sc_s0,ST,scp_abs_bc,40-59,0.8660714285714286,112,14,age_group,all
 lgbm_sc_s0,ST,scp_abs_bc,>=60,0.8125,48,6,age_group,all
-lgbm_sc_s0,SC,ba_loa,<40,0.9743589743589745,39,39,age_group,N1%
-lgbm_sc_s0,SC,ba_loa,<40,0.9743589743589745,39,39,age_group,N2%
-lgbm_sc_s0,SC,ba_loa,<40,0.9230769230769232,39,39,age_group,N3%
-lgbm_sc_s0,SC,ba_loa,<40,0.9743589743589745,39,39,age_group,REM%
+lgbm_sc_s0,SC,ba_loa,<40,0.9743589743589743,39,39,age_group,N1%
+lgbm_sc_s0,SC,ba_loa,<40,0.9743589743589743,39,39,age_group,N2%
+lgbm_sc_s0,SC,ba_loa,<40,0.9230769230769231,39,39,age_group,N3%
+lgbm_sc_s0,SC,ba_loa,<40,0.9743589743589743,39,39,age_group,REM%
 lgbm_sc_s0,SC,ba_loa,<40,0.8717948717948718,39,39,age_group,REML
-lgbm_sc_s0,SC,ba_loa,<40,0.9487179487179488,39,39,age_group,SOL
+lgbm_sc_s0,SC,ba_loa,<40,0.9487179487179487,39,39,age_group,SOL
 lgbm_sc_s0,SC,ba_loa,<40,1.0,39,39,age_group,TST
-lgbm_sc_s0,SC,ba_loa,<40,0.9487179487179488,39,39,age_group,WASO
-lgbm_sc_s0,SC,ba_loa,40-59,0.9069767441860463,43,43,age_group,N1%
-lgbm_sc_s0,SC,ba_loa,40-59,0.9302325581395348,43,43,age_group,N2%
-lgbm_sc_s0,SC,ba_loa,40-59,0.9534883720930232,43,43,age_group,N3%
+lgbm_sc_s0,SC,ba_loa,<40,0.9487179487179487,39,39,age_group,WASO
+lgbm_sc_s0,SC,ba_loa,40-59,0.9069767441860465,43,43,age_group,N1%
+lgbm_sc_s0,SC,ba_loa,40-59,0.9302325581395349,43,43,age_group,N2%
+lgbm_sc_s0,SC,ba_loa,40-59,0.9534883720930233,43,43,age_group,N3%
 lgbm_sc_s0,SC,ba_loa,40-59,1.0,43,43,age_group,REM%
 lgbm_sc_s0,SC,ba_loa,40-59,0.8837209302325582,43,43,age_group,REML
 lgbm_sc_s0,SC,ba_loa,40-59,0.9767441860465116,43,43,age_group,SOL
 lgbm_sc_s0,SC,ba_loa,40-59,0.9767441860465116,43,43,age_group,TST
-lgbm_sc_s0,SC,ba_loa,40-59,0.9302325581395348,43,43,age_group,WASO
+lgbm_sc_s0,SC,ba_loa,40-59,0.9302325581395349,43,43,age_group,WASO
 lgbm_sc_s0,SC,ba_loa,>=60,0.8450704225352113,71,71,age_group,N1%
 lgbm_sc_s0,SC,ba_loa,>=60,0.8591549295774648,71,71,age_group,N2%
 lgbm_sc_s0,SC,ba_loa,>=60,0.8309859154929577,71,71,age_group,N3%
@@ -1342,22 +1342,22 @@ lgbm_sc_s0,SC,ba_loa,>=60,0.8873239436619719,71,71,age_group,REM%
 lgbm_sc_s0,SC,ba_loa,>=60,0.9577464788732394,71,71,age_group,REML
 lgbm_sc_s0,SC,ba_loa,>=60,0.9577464788732394,71,71,age_group,SOL
 lgbm_sc_s0,SC,ba_loa,>=60,0.8169014084507042,71,71,age_group,TST
-lgbm_sc_s0,SC,ba_loa,>=60,0.943661971830986,71,71,age_group,WASO
-lgbm_sc_s0,SC,norm_reg_ffbs,<40,0.9743589743589745,39,39,age_group,N1%
-lgbm_sc_s0,SC,norm_reg_ffbs,<40,0.9743589743589745,39,39,age_group,N2%
-lgbm_sc_s0,SC,norm_reg_ffbs,<40,0.9487179487179488,39,39,age_group,N3%
-lgbm_sc_s0,SC,norm_reg_ffbs,<40,0.9230769230769232,39,39,age_group,REM%
+lgbm_sc_s0,SC,ba_loa,>=60,0.9436619718309859,71,71,age_group,WASO
+lgbm_sc_s0,SC,norm_reg_ffbs,<40,0.9743589743589743,39,39,age_group,N1%
+lgbm_sc_s0,SC,norm_reg_ffbs,<40,0.9743589743589743,39,39,age_group,N2%
+lgbm_sc_s0,SC,norm_reg_ffbs,<40,0.9487179487179487,39,39,age_group,N3%
+lgbm_sc_s0,SC,norm_reg_ffbs,<40,0.9230769230769231,39,39,age_group,REM%
 lgbm_sc_s0,SC,norm_reg_ffbs,<40,0.8717948717948718,39,39,age_group,REML
 lgbm_sc_s0,SC,norm_reg_ffbs,<40,0.8974358974358975,39,39,age_group,SOL
-lgbm_sc_s0,SC,norm_reg_ffbs,<40,0.9487179487179488,39,39,age_group,TST
+lgbm_sc_s0,SC,norm_reg_ffbs,<40,0.9487179487179487,39,39,age_group,TST
 lgbm_sc_s0,SC,norm_reg_ffbs,<40,0.8717948717948718,39,39,age_group,WASO
-lgbm_sc_s0,SC,norm_reg_ffbs,40-59,0.9069767441860463,43,43,age_group,N1%
-lgbm_sc_s0,SC,norm_reg_ffbs,40-59,0.9534883720930232,43,43,age_group,N2%
-lgbm_sc_s0,SC,norm_reg_ffbs,40-59,0.9069767441860463,43,43,age_group,N3%
-lgbm_sc_s0,SC,norm_reg_ffbs,40-59,0.9302325581395348,43,43,age_group,REM%
-lgbm_sc_s0,SC,norm_reg_ffbs,40-59,0.9534883720930232,43,43,age_group,REML
-lgbm_sc_s0,SC,norm_reg_ffbs,40-59,0.9534883720930232,43,43,age_group,SOL
-lgbm_sc_s0,SC,norm_reg_ffbs,40-59,0.9534883720930232,43,43,age_group,TST
+lgbm_sc_s0,SC,norm_reg_ffbs,40-59,0.9069767441860465,43,43,age_group,N1%
+lgbm_sc_s0,SC,norm_reg_ffbs,40-59,0.9534883720930233,43,43,age_group,N2%
+lgbm_sc_s0,SC,norm_reg_ffbs,40-59,0.9069767441860465,43,43,age_group,N3%
+lgbm_sc_s0,SC,norm_reg_ffbs,40-59,0.9302325581395349,43,43,age_group,REM%
+lgbm_sc_s0,SC,norm_reg_ffbs,40-59,0.9534883720930233,43,43,age_group,REML
+lgbm_sc_s0,SC,norm_reg_ffbs,40-59,0.9534883720930233,43,43,age_group,SOL
+lgbm_sc_s0,SC,norm_reg_ffbs,40-59,0.9534883720930233,43,43,age_group,TST
 lgbm_sc_s0,SC,norm_reg_ffbs,40-59,0.8837209302325582,43,43,age_group,WASO
 lgbm_sc_s0,SC,norm_reg_ffbs,>=60,0.8591549295774648,71,71,age_group,N1%
 lgbm_sc_s0,SC,norm_reg_ffbs,>=60,0.8309859154929577,71,71,age_group,N2%
@@ -1367,22 +1367,22 @@ lgbm_sc_s0,SC,norm_reg_ffbs,>=60,0.8873239436619719,71,71,age_group,REML
 lgbm_sc_s0,SC,norm_reg_ffbs,>=60,0.8732394366197183,71,71,age_group,SOL
 lgbm_sc_s0,SC,norm_reg_ffbs,>=60,0.8450704225352113,71,71,age_group,TST
 lgbm_sc_s0,SC,norm_reg_ffbs,>=60,0.9295774647887324,71,71,age_group,WASO
-lgbm_sc_s0,SC,scp_abs,<40,0.9743589743589745,39,39,age_group,N1%
-lgbm_sc_s0,SC,scp_abs,<40,0.9743589743589745,39,39,age_group,N2%
-lgbm_sc_s0,SC,scp_abs,<40,0.9230769230769232,39,39,age_group,N3%
-lgbm_sc_s0,SC,scp_abs,<40,0.9230769230769232,39,39,age_group,REM%
+lgbm_sc_s0,SC,scp_abs,<40,0.9743589743589743,39,39,age_group,N1%
+lgbm_sc_s0,SC,scp_abs,<40,0.9743589743589743,39,39,age_group,N2%
+lgbm_sc_s0,SC,scp_abs,<40,0.9230769230769231,39,39,age_group,N3%
+lgbm_sc_s0,SC,scp_abs,<40,0.9230769230769231,39,39,age_group,REM%
 lgbm_sc_s0,SC,scp_abs,<40,0.8717948717948718,39,39,age_group,REML
-lgbm_sc_s0,SC,scp_abs,<40,0.9487179487179488,39,39,age_group,SOL
+lgbm_sc_s0,SC,scp_abs,<40,0.9487179487179487,39,39,age_group,SOL
 lgbm_sc_s0,SC,scp_abs,<40,1.0,39,39,age_group,TST
 lgbm_sc_s0,SC,scp_abs,<40,0.8974358974358975,39,39,age_group,WASO
-lgbm_sc_s0,SC,scp_abs,40-59,0.9069767441860463,43,43,age_group,N1%
-lgbm_sc_s0,SC,scp_abs,40-59,0.9069767441860463,43,43,age_group,N2%
-lgbm_sc_s0,SC,scp_abs,40-59,0.9534883720930232,43,43,age_group,N3%
+lgbm_sc_s0,SC,scp_abs,40-59,0.9069767441860465,43,43,age_group,N1%
+lgbm_sc_s0,SC,scp_abs,40-59,0.9069767441860465,43,43,age_group,N2%
+lgbm_sc_s0,SC,scp_abs,40-59,0.9534883720930233,43,43,age_group,N3%
 lgbm_sc_s0,SC,scp_abs,40-59,0.9767441860465116,43,43,age_group,REM%
 lgbm_sc_s0,SC,scp_abs,40-59,0.8372093023255814,43,43,age_group,REML
-lgbm_sc_s0,SC,scp_abs,40-59,0.9069767441860463,43,43,age_group,SOL
-lgbm_sc_s0,SC,scp_abs,40-59,0.9534883720930232,43,43,age_group,TST
-lgbm_sc_s0,SC,scp_abs,40-59,0.9302325581395348,43,43,age_group,WASO
+lgbm_sc_s0,SC,scp_abs,40-59,0.9069767441860465,43,43,age_group,SOL
+lgbm_sc_s0,SC,scp_abs,40-59,0.9534883720930233,43,43,age_group,TST
+lgbm_sc_s0,SC,scp_abs,40-59,0.9302325581395349,43,43,age_group,WASO
 lgbm_sc_s0,SC,scp_abs,>=60,0.8591549295774648,71,71,age_group,N1%
 lgbm_sc_s0,SC,scp_abs,>=60,0.8591549295774648,71,71,age_group,N2%
 lgbm_sc_s0,SC,scp_abs,>=60,0.8450704225352113,71,71,age_group,N3%
@@ -1391,22 +1391,22 @@ lgbm_sc_s0,SC,scp_abs,>=60,0.9577464788732394,71,71,age_group,REML
 lgbm_sc_s0,SC,scp_abs,>=60,0.8732394366197183,71,71,age_group,SOL
 lgbm_sc_s0,SC,scp_abs,>=60,0.8169014084507042,71,71,age_group,TST
 lgbm_sc_s0,SC,scp_abs,>=60,0.8873239436619719,71,71,age_group,WASO
-lgbm_sc_s0,SC,scp_abs_bc,<40,0.9743589743589745,39,39,age_group,N1%
-lgbm_sc_s0,SC,scp_abs_bc,<40,0.9743589743589745,39,39,age_group,N2%
-lgbm_sc_s0,SC,scp_abs_bc,<40,0.9487179487179488,39,39,age_group,N3%
-lgbm_sc_s0,SC,scp_abs_bc,<40,0.9230769230769232,39,39,age_group,REM%
+lgbm_sc_s0,SC,scp_abs_bc,<40,0.9743589743589743,39,39,age_group,N1%
+lgbm_sc_s0,SC,scp_abs_bc,<40,0.9743589743589743,39,39,age_group,N2%
+lgbm_sc_s0,SC,scp_abs_bc,<40,0.9487179487179487,39,39,age_group,N3%
+lgbm_sc_s0,SC,scp_abs_bc,<40,0.9230769230769231,39,39,age_group,REM%
 lgbm_sc_s0,SC,scp_abs_bc,<40,0.8717948717948718,39,39,age_group,REML
-lgbm_sc_s0,SC,scp_abs_bc,<40,0.9487179487179488,39,39,age_group,SOL
+lgbm_sc_s0,SC,scp_abs_bc,<40,0.9487179487179487,39,39,age_group,SOL
 lgbm_sc_s0,SC,scp_abs_bc,<40,1.0,39,39,age_group,TST
 lgbm_sc_s0,SC,scp_abs_bc,<40,0.8974358974358975,39,39,age_group,WASO
-lgbm_sc_s0,SC,scp_abs_bc,40-59,0.9302325581395348,43,43,age_group,N1%
-lgbm_sc_s0,SC,scp_abs_bc,40-59,0.9302325581395348,43,43,age_group,N2%
+lgbm_sc_s0,SC,scp_abs_bc,40-59,0.9302325581395349,43,43,age_group,N1%
+lgbm_sc_s0,SC,scp_abs_bc,40-59,0.9302325581395349,43,43,age_group,N2%
 lgbm_sc_s0,SC,scp_abs_bc,40-59,0.9767441860465116,43,43,age_group,N3%
-lgbm_sc_s0,SC,scp_abs_bc,40-59,0.9534883720930232,43,43,age_group,REM%
+lgbm_sc_s0,SC,scp_abs_bc,40-59,0.9534883720930233,43,43,age_group,REM%
 lgbm_sc_s0,SC,scp_abs_bc,40-59,0.8372093023255814,43,43,age_group,REML
 lgbm_sc_s0,SC,scp_abs_bc,40-59,0.8837209302325582,43,43,age_group,SOL
 lgbm_sc_s0,SC,scp_abs_bc,40-59,0.9767441860465116,43,43,age_group,TST
-lgbm_sc_s0,SC,scp_abs_bc,40-59,0.9302325581395348,43,43,age_group,WASO
+lgbm_sc_s0,SC,scp_abs_bc,40-59,0.9302325581395349,43,43,age_group,WASO
 lgbm_sc_s0,SC,scp_abs_bc,>=60,0.8450704225352113,71,71,age_group,N1%
 lgbm_sc_s0,SC,scp_abs_bc,>=60,0.8169014084507042,71,71,age_group,N2%
 lgbm_sc_s0,SC,scp_abs_bc,>=60,0.8309859154929577,71,71,age_group,N3%
@@ -1511,17 +1511,17 @@ lgbm_sc_s0,ST,scp_abs_bc,>=60,0.8333333333333334,6,6,age_group,REML
 lgbm_sc_s0,ST,scp_abs_bc,>=60,1.0,6,6,age_group,SOL
 lgbm_sc_s0,ST,scp_abs_bc,>=60,0.6666666666666666,6,6,age_group,TST
 lgbm_sc_s0,ST,scp_abs_bc,>=60,0.6666666666666666,6,6,age_group,WASO
-lgbm_sc_s0,SC,ba_loa,F,0.9344512195121952,656,82,sex,all
+lgbm_sc_s0,SC,ba_loa,F,0.9344512195121951,656,82,sex,all
 lgbm_sc_s0,SC,ba_loa,M,0.903169014084507,568,71,sex,all
 lgbm_sc_s0,SC,norm_reg_ffbs,F,0.9161585365853658,656,82,sex,all
 lgbm_sc_s0,SC,norm_reg_ffbs,M,0.8855633802816901,568,71,sex,all
-lgbm_sc_s0,SC,scp_abs,F,0.9192073170731708,656,82,sex,all
+lgbm_sc_s0,SC,scp_abs,F,0.9192073170731707,656,82,sex,all
 lgbm_sc_s0,SC,scp_abs,M,0.8802816901408451,568,71,sex,all
 lgbm_sc_s0,SC,scp_abs_bc,F,0.9161585365853658,656,82,sex,all
 lgbm_sc_s0,SC,scp_abs_bc,M,0.8785211267605634,568,71,sex,all
 lgbm_sc_s0,ST,ba_loa,F,0.8666666666666667,240,30,sex,all
-lgbm_sc_s0,ST,ba_loa,M,0.9196428571428572,112,14,sex,all
-lgbm_sc_s0,ST,norm_reg_ffbs,F,0.9083333333333332,240,30,sex,all
+lgbm_sc_s0,ST,ba_loa,M,0.9196428571428571,112,14,sex,all
+lgbm_sc_s0,ST,norm_reg_ffbs,F,0.9083333333333333,240,30,sex,all
 lgbm_sc_s0,ST,norm_reg_ffbs,M,0.8928571428571429,112,14,sex,all
 lgbm_sc_s0,ST,scp_abs,F,0.8916666666666667,240,30,sex,all
 lgbm_sc_s0,ST,scp_abs,M,0.9375,112,14,sex,all
@@ -1530,24 +1530,24 @@ lgbm_sc_s0,ST,scp_abs_bc,M,0.9285714285714286,112,14,sex,all
 lgbm_sc_s0,SC,ba_loa,F,0.9146341463414634,82,82,sex,N1%
 lgbm_sc_s0,SC,ba_loa,F,0.9146341463414634,82,82,sex,N2%
 lgbm_sc_s0,SC,ba_loa,F,0.8902439024390244,82,82,sex,N3%
-lgbm_sc_s0,SC,ba_loa,F,0.951219512195122,82,82,sex,REM%
+lgbm_sc_s0,SC,ba_loa,F,0.9512195121951219,82,82,sex,REM%
 lgbm_sc_s0,SC,ba_loa,F,0.9390243902439024,82,82,sex,REML
 lgbm_sc_s0,SC,ba_loa,F,0.975609756097561,82,82,sex,SOL
 lgbm_sc_s0,SC,ba_loa,F,0.9390243902439024,82,82,sex,TST
-lgbm_sc_s0,SC,ba_loa,F,0.951219512195122,82,82,sex,WASO
+lgbm_sc_s0,SC,ba_loa,F,0.9512195121951219,82,82,sex,WASO
 lgbm_sc_s0,SC,ba_loa,M,0.8732394366197183,71,71,sex,N1%
 lgbm_sc_s0,SC,ba_loa,M,0.9014084507042254,71,71,sex,N2%
 lgbm_sc_s0,SC,ba_loa,M,0.8873239436619719,71,71,sex,N3%
 lgbm_sc_s0,SC,ba_loa,M,0.9295774647887324,71,71,sex,REM%
 lgbm_sc_s0,SC,ba_loa,M,0.8873239436619719,71,71,sex,REML
-lgbm_sc_s0,SC,ba_loa,M,0.943661971830986,71,71,sex,SOL
+lgbm_sc_s0,SC,ba_loa,M,0.9436619718309859,71,71,sex,SOL
 lgbm_sc_s0,SC,ba_loa,M,0.8732394366197183,71,71,sex,TST
 lgbm_sc_s0,SC,ba_loa,M,0.9295774647887324,71,71,sex,WASO
 lgbm_sc_s0,SC,norm_reg_ffbs,F,0.9146341463414634,82,82,sex,N1%
 lgbm_sc_s0,SC,norm_reg_ffbs,F,0.9146341463414634,82,82,sex,N2%
-lgbm_sc_s0,SC,norm_reg_ffbs,F,0.902439024390244,82,82,sex,N3%
+lgbm_sc_s0,SC,norm_reg_ffbs,F,0.9024390243902439,82,82,sex,N3%
 lgbm_sc_s0,SC,norm_reg_ffbs,F,0.926829268292683,82,82,sex,REM%
-lgbm_sc_s0,SC,norm_reg_ffbs,F,0.902439024390244,82,82,sex,REML
+lgbm_sc_s0,SC,norm_reg_ffbs,F,0.9024390243902439,82,82,sex,REML
 lgbm_sc_s0,SC,norm_reg_ffbs,F,0.9146341463414634,82,82,sex,SOL
 lgbm_sc_s0,SC,norm_reg_ffbs,F,0.9390243902439024,82,82,sex,TST
 lgbm_sc_s0,SC,norm_reg_ffbs,F,0.9146341463414634,82,82,sex,WASO
@@ -1561,12 +1561,12 @@ lgbm_sc_s0,SC,norm_reg_ffbs,M,0.8591549295774648,71,71,sex,TST
 lgbm_sc_s0,SC,norm_reg_ffbs,M,0.8873239436619719,71,71,sex,WASO
 lgbm_sc_s0,SC,scp_abs,F,0.9146341463414634,82,82,sex,N1%
 lgbm_sc_s0,SC,scp_abs,F,0.9146341463414634,82,82,sex,N2%
-lgbm_sc_s0,SC,scp_abs,F,0.902439024390244,82,82,sex,N3%
+lgbm_sc_s0,SC,scp_abs,F,0.9024390243902439,82,82,sex,N3%
 lgbm_sc_s0,SC,scp_abs,F,0.926829268292683,82,82,sex,REM%
 lgbm_sc_s0,SC,scp_abs,F,0.9146341463414634,82,82,sex,REML
-lgbm_sc_s0,SC,scp_abs,F,0.902439024390244,82,82,sex,SOL
+lgbm_sc_s0,SC,scp_abs,F,0.9024390243902439,82,82,sex,SOL
 lgbm_sc_s0,SC,scp_abs,F,0.926829268292683,82,82,sex,TST
-lgbm_sc_s0,SC,scp_abs,F,0.951219512195122,82,82,sex,WASO
+lgbm_sc_s0,SC,scp_abs,F,0.9512195121951219,82,82,sex,WASO
 lgbm_sc_s0,SC,scp_abs,M,0.8873239436619719,71,71,sex,N1%
 lgbm_sc_s0,SC,scp_abs,M,0.8873239436619719,71,71,sex,N2%
 lgbm_sc_s0,SC,scp_abs,M,0.8873239436619719,71,71,sex,N3%
@@ -1576,13 +1576,13 @@ lgbm_sc_s0,SC,scp_abs,M,0.9014084507042254,71,71,sex,SOL
 lgbm_sc_s0,SC,scp_abs,M,0.8732394366197183,71,71,sex,TST
 lgbm_sc_s0,SC,scp_abs,M,0.8450704225352113,71,71,sex,WASO
 lgbm_sc_s0,SC,scp_abs_bc,F,0.9146341463414634,82,82,sex,N1%
-lgbm_sc_s0,SC,scp_abs_bc,F,0.902439024390244,82,82,sex,N2%
-lgbm_sc_s0,SC,scp_abs_bc,F,0.902439024390244,82,82,sex,N3%
+lgbm_sc_s0,SC,scp_abs_bc,F,0.9024390243902439,82,82,sex,N2%
+lgbm_sc_s0,SC,scp_abs_bc,F,0.9024390243902439,82,82,sex,N3%
 lgbm_sc_s0,SC,scp_abs_bc,F,0.926829268292683,82,82,sex,REM%
 lgbm_sc_s0,SC,scp_abs_bc,F,0.9146341463414634,82,82,sex,REML
 lgbm_sc_s0,SC,scp_abs_bc,F,0.8902439024390244,82,82,sex,SOL
 lgbm_sc_s0,SC,scp_abs_bc,F,0.926829268292683,82,82,sex,TST
-lgbm_sc_s0,SC,scp_abs_bc,F,0.951219512195122,82,82,sex,WASO
+lgbm_sc_s0,SC,scp_abs_bc,F,0.9512195121951219,82,82,sex,WASO
 lgbm_sc_s0,SC,scp_abs_bc,M,0.8873239436619719,71,71,sex,N1%
 lgbm_sc_s0,SC,scp_abs_bc,M,0.8732394366197183,71,71,sex,N2%
 lgbm_sc_s0,SC,scp_abs_bc,M,0.9014084507042254,71,71,sex,N3%
@@ -1591,12 +1591,12 @@ lgbm_sc_s0,SC,scp_abs_bc,M,0.8873239436619719,71,71,sex,REML
 lgbm_sc_s0,SC,scp_abs_bc,M,0.9014084507042254,71,71,sex,SOL
 lgbm_sc_s0,SC,scp_abs_bc,M,0.8732394366197183,71,71,sex,TST
 lgbm_sc_s0,SC,scp_abs_bc,M,0.8450704225352113,71,71,sex,WASO
-lgbm_sc_s0,ST,ba_loa,F,0.9333333333333332,30,30,sex,N1%
+lgbm_sc_s0,ST,ba_loa,F,0.9333333333333333,30,30,sex,N1%
 lgbm_sc_s0,ST,ba_loa,F,0.8333333333333334,30,30,sex,N2%
 lgbm_sc_s0,ST,ba_loa,F,0.9,30,30,sex,N3%
 lgbm_sc_s0,ST,ba_loa,F,0.8666666666666667,30,30,sex,REM%
 lgbm_sc_s0,ST,ba_loa,F,0.8,30,30,sex,REML
-lgbm_sc_s0,ST,ba_loa,F,0.9333333333333332,30,30,sex,SOL
+lgbm_sc_s0,ST,ba_loa,F,0.9333333333333333,30,30,sex,SOL
 lgbm_sc_s0,ST,ba_loa,F,0.8,30,30,sex,TST
 lgbm_sc_s0,ST,ba_loa,F,0.8666666666666667,30,30,sex,WASO
 lgbm_sc_s0,ST,ba_loa,M,0.9285714285714286,14,14,sex,N1%
@@ -1607,10 +1607,10 @@ lgbm_sc_s0,ST,ba_loa,M,0.9285714285714286,14,14,sex,REML
 lgbm_sc_s0,ST,ba_loa,M,1.0,14,14,sex,SOL
 lgbm_sc_s0,ST,ba_loa,M,0.9285714285714286,14,14,sex,TST
 lgbm_sc_s0,ST,ba_loa,M,0.9285714285714286,14,14,sex,WASO
-lgbm_sc_s0,ST,norm_reg_ffbs,F,0.9333333333333332,30,30,sex,N1%
-lgbm_sc_s0,ST,norm_reg_ffbs,F,0.9333333333333332,30,30,sex,N2%
+lgbm_sc_s0,ST,norm_reg_ffbs,F,0.9333333333333333,30,30,sex,N1%
+lgbm_sc_s0,ST,norm_reg_ffbs,F,0.9333333333333333,30,30,sex,N2%
 lgbm_sc_s0,ST,norm_reg_ffbs,F,0.9,30,30,sex,N3%
-lgbm_sc_s0,ST,norm_reg_ffbs,F,0.9666666666666668,30,30,sex,REM%
+lgbm_sc_s0,ST,norm_reg_ffbs,F,0.9666666666666667,30,30,sex,REM%
 lgbm_sc_s0,ST,norm_reg_ffbs,F,0.9,30,30,sex,REML
 lgbm_sc_s0,ST,norm_reg_ffbs,F,0.8666666666666667,30,30,sex,SOL
 lgbm_sc_s0,ST,norm_reg_ffbs,F,0.8666666666666667,30,30,sex,TST
@@ -1625,7 +1625,7 @@ lgbm_sc_s0,ST,norm_reg_ffbs,M,1.0,14,14,sex,TST
 lgbm_sc_s0,ST,norm_reg_ffbs,M,0.9285714285714286,14,14,sex,WASO
 lgbm_sc_s0,ST,scp_abs,F,0.8666666666666667,30,30,sex,N1%
 lgbm_sc_s0,ST,scp_abs,F,0.9,30,30,sex,N2%
-lgbm_sc_s0,ST,scp_abs,F,0.9333333333333332,30,30,sex,N3%
+lgbm_sc_s0,ST,scp_abs,F,0.9333333333333333,30,30,sex,N3%
 lgbm_sc_s0,ST,scp_abs,F,0.9,30,30,sex,REM%
 lgbm_sc_s0,ST,scp_abs,F,0.8666666666666667,30,30,sex,REML
 lgbm_sc_s0,ST,scp_abs,F,0.8666666666666667,30,30,sex,SOL
@@ -1659,15 +1659,15 @@ lgbm_sc_s0,ST,ba_loa,placebo,0.875,176,22,condition,all
 lgbm_sc_s0,ST,ba_loa,temazepam,0.8920454545454546,176,22,condition,all
 lgbm_sc_s0,ST,norm_reg_ffbs,placebo,0.9204545454545454,176,22,condition,all
 lgbm_sc_s0,ST,norm_reg_ffbs,temazepam,0.8863636363636364,176,22,condition,all
-lgbm_sc_s0,ST,scp_abs,placebo,0.9034090909090908,176,22,condition,all
-lgbm_sc_s0,ST,scp_abs,temazepam,0.9090909090909092,176,22,condition,all
+lgbm_sc_s0,ST,scp_abs,placebo,0.9034090909090909,176,22,condition,all
+lgbm_sc_s0,ST,scp_abs,temazepam,0.9090909090909091,176,22,condition,all
 lgbm_sc_s0,ST,scp_abs_bc,placebo,0.8693181818181818,176,22,condition,all
-lgbm_sc_s0,ST,scp_abs_bc,temazepam,0.9090909090909092,176,22,condition,all
-lgbm_sc_s0,ST,ba_loa,placebo,0.9090909090909092,22,22,condition,N1%
+lgbm_sc_s0,ST,scp_abs_bc,temazepam,0.9090909090909091,176,22,condition,all
+lgbm_sc_s0,ST,ba_loa,placebo,0.9090909090909091,22,22,condition,N1%
 lgbm_sc_s0,ST,ba_loa,placebo,0.8636363636363636,22,22,condition,N2%
 lgbm_sc_s0,ST,ba_loa,placebo,0.8181818181818182,22,22,condition,N3%
 lgbm_sc_s0,ST,ba_loa,placebo,0.9545454545454546,22,22,condition,REM%
-lgbm_sc_s0,ST,ba_loa,placebo,0.9090909090909092,22,22,condition,REML
+lgbm_sc_s0,ST,ba_loa,placebo,0.9090909090909091,22,22,condition,REML
 lgbm_sc_s0,ST,ba_loa,placebo,0.9545454545454546,22,22,condition,SOL
 lgbm_sc_s0,ST,ba_loa,placebo,0.7727272727272727,22,22,condition,TST
 lgbm_sc_s0,ST,ba_loa,placebo,0.8181818181818182,22,22,condition,WASO
@@ -1677,34 +1677,34 @@ lgbm_sc_s0,ST,ba_loa,temazepam,0.9545454545454546,22,22,condition,N3%
 lgbm_sc_s0,ST,ba_loa,temazepam,0.7727272727272727,22,22,condition,REM%
 lgbm_sc_s0,ST,ba_loa,temazepam,0.7727272727272727,22,22,condition,REML
 lgbm_sc_s0,ST,ba_loa,temazepam,0.9545454545454546,22,22,condition,SOL
-lgbm_sc_s0,ST,ba_loa,temazepam,0.9090909090909092,22,22,condition,TST
+lgbm_sc_s0,ST,ba_loa,temazepam,0.9090909090909091,22,22,condition,TST
 lgbm_sc_s0,ST,ba_loa,temazepam,0.9545454545454546,22,22,condition,WASO
-lgbm_sc_s0,ST,norm_reg_ffbs,placebo,0.9090909090909092,22,22,condition,N1%
+lgbm_sc_s0,ST,norm_reg_ffbs,placebo,0.9090909090909091,22,22,condition,N1%
 lgbm_sc_s0,ST,norm_reg_ffbs,placebo,0.9545454545454546,22,22,condition,N2%
 lgbm_sc_s0,ST,norm_reg_ffbs,placebo,0.8181818181818182,22,22,condition,N3%
 lgbm_sc_s0,ST,norm_reg_ffbs,placebo,1.0,22,22,condition,REM%
-lgbm_sc_s0,ST,norm_reg_ffbs,placebo,0.9090909090909092,22,22,condition,REML
+lgbm_sc_s0,ST,norm_reg_ffbs,placebo,0.9090909090909091,22,22,condition,REML
 lgbm_sc_s0,ST,norm_reg_ffbs,placebo,0.9545454545454546,22,22,condition,SOL
-lgbm_sc_s0,ST,norm_reg_ffbs,placebo,0.9090909090909092,22,22,condition,TST
-lgbm_sc_s0,ST,norm_reg_ffbs,placebo,0.9090909090909092,22,22,condition,WASO
-lgbm_sc_s0,ST,norm_reg_ffbs,temazepam,0.9090909090909092,22,22,condition,N1%
+lgbm_sc_s0,ST,norm_reg_ffbs,placebo,0.9090909090909091,22,22,condition,TST
+lgbm_sc_s0,ST,norm_reg_ffbs,placebo,0.9090909090909091,22,22,condition,WASO
+lgbm_sc_s0,ST,norm_reg_ffbs,temazepam,0.9090909090909091,22,22,condition,N1%
 lgbm_sc_s0,ST,norm_reg_ffbs,temazepam,0.8636363636363636,22,22,condition,N2%
 lgbm_sc_s0,ST,norm_reg_ffbs,temazepam,0.9545454545454546,22,22,condition,N3%
 lgbm_sc_s0,ST,norm_reg_ffbs,temazepam,0.8181818181818182,22,22,condition,REM%
 lgbm_sc_s0,ST,norm_reg_ffbs,temazepam,0.8636363636363636,22,22,condition,REML
 lgbm_sc_s0,ST,norm_reg_ffbs,temazepam,0.8636363636363636,22,22,condition,SOL
-lgbm_sc_s0,ST,norm_reg_ffbs,temazepam,0.9090909090909092,22,22,condition,TST
-lgbm_sc_s0,ST,norm_reg_ffbs,temazepam,0.9090909090909092,22,22,condition,WASO
+lgbm_sc_s0,ST,norm_reg_ffbs,temazepam,0.9090909090909091,22,22,condition,TST
+lgbm_sc_s0,ST,norm_reg_ffbs,temazepam,0.9090909090909091,22,22,condition,WASO
 lgbm_sc_s0,ST,scp_abs,placebo,0.8636363636363636,22,22,condition,N1%
-lgbm_sc_s0,ST,scp_abs,placebo,0.9090909090909092,22,22,condition,N2%
+lgbm_sc_s0,ST,scp_abs,placebo,0.9090909090909091,22,22,condition,N2%
 lgbm_sc_s0,ST,scp_abs,placebo,0.8636363636363636,22,22,condition,N3%
 lgbm_sc_s0,ST,scp_abs,placebo,0.9545454545454546,22,22,condition,REM%
 lgbm_sc_s0,ST,scp_abs,placebo,0.9545454545454546,22,22,condition,REML
 lgbm_sc_s0,ST,scp_abs,placebo,0.9545454545454546,22,22,condition,SOL
 lgbm_sc_s0,ST,scp_abs,placebo,0.8636363636363636,22,22,condition,TST
 lgbm_sc_s0,ST,scp_abs,placebo,0.8636363636363636,22,22,condition,WASO
-lgbm_sc_s0,ST,scp_abs,temazepam,0.9090909090909092,22,22,condition,N1%
-lgbm_sc_s0,ST,scp_abs,temazepam,0.9090909090909092,22,22,condition,N2%
+lgbm_sc_s0,ST,scp_abs,temazepam,0.9090909090909091,22,22,condition,N1%
+lgbm_sc_s0,ST,scp_abs,temazepam,0.9090909090909091,22,22,condition,N2%
 lgbm_sc_s0,ST,scp_abs,temazepam,0.9545454545454546,22,22,condition,N3%
 lgbm_sc_s0,ST,scp_abs,temazepam,0.8636363636363636,22,22,condition,REM%
 lgbm_sc_s0,ST,scp_abs,temazepam,0.8636363636363636,22,22,condition,REML
@@ -1712,18 +1712,18 @@ lgbm_sc_s0,ST,scp_abs,temazepam,0.8636363636363636,22,22,condition,SOL
 lgbm_sc_s0,ST,scp_abs,temazepam,0.9545454545454546,22,22,condition,TST
 lgbm_sc_s0,ST,scp_abs,temazepam,0.9545454545454546,22,22,condition,WASO
 lgbm_sc_s0,ST,scp_abs_bc,placebo,0.7727272727272727,22,22,condition,N1%
-lgbm_sc_s0,ST,scp_abs_bc,placebo,0.9090909090909092,22,22,condition,N2%
+lgbm_sc_s0,ST,scp_abs_bc,placebo,0.9090909090909091,22,22,condition,N2%
 lgbm_sc_s0,ST,scp_abs_bc,placebo,0.8181818181818182,22,22,condition,N3%
 lgbm_sc_s0,ST,scp_abs_bc,placebo,0.9545454545454546,22,22,condition,REM%
 lgbm_sc_s0,ST,scp_abs_bc,placebo,0.9545454545454546,22,22,condition,REML
-lgbm_sc_s0,ST,scp_abs_bc,placebo,0.9090909090909092,22,22,condition,SOL
+lgbm_sc_s0,ST,scp_abs_bc,placebo,0.9090909090909091,22,22,condition,SOL
 lgbm_sc_s0,ST,scp_abs_bc,placebo,0.8181818181818182,22,22,condition,TST
 lgbm_sc_s0,ST,scp_abs_bc,placebo,0.8181818181818182,22,22,condition,WASO
-lgbm_sc_s0,ST,scp_abs_bc,temazepam,0.9090909090909092,22,22,condition,N1%
-lgbm_sc_s0,ST,scp_abs_bc,temazepam,0.9090909090909092,22,22,condition,N2%
+lgbm_sc_s0,ST,scp_abs_bc,temazepam,0.9090909090909091,22,22,condition,N1%
+lgbm_sc_s0,ST,scp_abs_bc,temazepam,0.9090909090909091,22,22,condition,N2%
 lgbm_sc_s0,ST,scp_abs_bc,temazepam,0.9545454545454546,22,22,condition,N3%
 lgbm_sc_s0,ST,scp_abs_bc,temazepam,0.8636363636363636,22,22,condition,REM%
 lgbm_sc_s0,ST,scp_abs_bc,temazepam,0.8181818181818182,22,22,condition,REML
-lgbm_sc_s0,ST,scp_abs_bc,temazepam,0.9090909090909092,22,22,condition,SOL
+lgbm_sc_s0,ST,scp_abs_bc,temazepam,0.9090909090909091,22,22,condition,SOL
 lgbm_sc_s0,ST,scp_abs_bc,temazepam,0.9545454545454546,22,22,condition,TST
 lgbm_sc_s0,ST,scp_abs_bc,temazepam,0.9545454545454546,22,22,condition,WASO

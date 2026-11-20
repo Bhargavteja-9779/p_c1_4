@@ -1,7 +1,7 @@
 """Assemble the Supplementary Material (Markdown -> DOCX) from machine-generated tables.
 
 Numbering (referenced in the manuscript; revision 1):
-  S1  Pre-registered protocol and all deviations (CHANGELOG)
+  S1  Pre-specified protocol and all deviations (CHANGELOG)
   S2  Honest end-to-end protocol: all methods (coverage, width, interval score; 50 splits)
   S3  Honest protocol: paired comparisons (permutation test of mean difference; Holm) incl. scale-at-fixed-centre
   S4  In-domain LightGBM stager: within-cohort table (as Table 2) and point estimates (as Table 3)
@@ -9,8 +9,8 @@ Numbering (referenced in the manuscript; revision 1):
   S6  Local deployment with few labelled nights (E12) and pooled recalibration (E06)
   S7  Transport of SC-calibrated intervals (E06) and montage sensitivity (E14)
   S8  Clinical decision thresholds
-  S9  Pre-registered cross-fitted analysis (E04/E07): all methods, paired tests, point estimates, ablations, LOSO
-  S10 Pre-registered sensitivity analyses: Spearman criterion, M, calibration size, alpha, stager seeds
+  S9  Pre-specified cross-fitted analysis (E04/E07): all methods, paired tests, point estimates, ablations, LOSO
+  S10 Pre-specified sensitivity analyses: Spearman criterion, M, calibration size, alpha, stager seeds
   S11 Subgroup coverage
   S12 Error analysis: cohort-specific bias, confusion, covered vs non-covered nights, WASO mechanism
   S13 Robustness to signal corruption
@@ -54,14 +54,14 @@ def csv_tbl(path, round_=3):
 
 def main():
     parts = ["---\ntitle: \"Supplementary Material\"\n---\n",
-             "Supplementary material for: *Per-night prediction intervals for automatically scored polysomnography: "
-             "conformal calibration of posterior hypnogram samples with external validation*.\n",
+             "Supplementary material for: *Per-night prediction intervals for automatically scored sleep parameters: "
+             "conformal calibration of posterior hypnogram samples compared with limits of agreement*.\n",
              "All tables were generated automatically from the result files of the analysis code "
              "(`code/run_all.py`).\n"]
-    parts.append("# S1. Pre-registered protocol and deviations\n")
-    parts.append((ROOT_DIR / "supplementary" / "PREREGISTERED_PROTOCOL.md").read_text().replace("# ", "## ", 1))
-    parts.append("\n## Deviations and additions (chronological change log)\n")
-    parts.append((ROOT_DIR.parent / "CHANGELOG.md").read_text().split("\n", 2)[2])
+    parts.append("# S1. Pre-specified protocol and deviations\n")
+    parts.append((ROOT_DIR / "supplementary" / "PROTOCOL.md").read_text().replace("# ", "## ", 1))
+    parts.append("\n## Deviations from the protocol and additions\n")
+    parts.append((ROOT_DIR / "supplementary" / "DEVIATIONS.md").read_text())
     parts.append("\n# S2. Honest end-to-end protocol: all interval methods (α = 0.10; 50 subject-grouped 50/50 splits; "
                  "all label-dependent components fitted on the calibration half)\n")
     parts.append(tbl("tableS_honest_all_methods", None, ["stager", "cohort", "param", "method", "coverage", "cov_p025",
@@ -82,7 +82,7 @@ def main():
     parts.append("\n**Coverage in the quartile of nights with the lowest plug-in accuracy (Q1) and in the other nights "
                  "(honest protocol; accuracy used only for evaluation)**\n\n")
     parts.append(tbl("tableS_honest_q1coverage", "method in ['ba_loa','ba_reg','scp_signed','cqr_qr','norm_ffbs','norm_reg_ffbs']"))
-    parts.append("\n**Exploratory Mondrian calibration by mean epoch entropy (pre-registered cross-fitted summaries, LOSO)**\n\n")
+    parts.append("\n**Exploratory Mondrian calibration by mean epoch entropy (pre-specified cross-fitted summaries, LOSO)**\n\n")
     parts.append(tbl("tableS_conditional_coverage", round_=3))
     parts.append("\n# S6. Local deployment with a few labelled nights\n\n**Every component (BCTS, prior, transitions, τ, conformal "
                  "quantile) fitted only on n_t labelled local nights; 50 repetitions; P(site coverage < 0.80) = fraction of "
@@ -101,7 +101,7 @@ def main():
                  "plug-in accuracy = agreement of the uncorrected automatic value with the reference (honest protocol)**\n\n")
     parts.append(tbl("tableS_decisions", "method in ['ba_loa','ba_reg','scp_signed','cqr_qr','norm_ffbs','norm_reg_ffbs']",
                      ["stager", "cohort", "threshold", "method", "n", "prevalence", "plugin_accuracy", "frac_confident", "acc_confident"]))
-    parts.append("\n# S9. Pre-registered cross-fitted analysis\n\nHMM and BCTS cross-fitted within each cohort (5 subject folds), "
+    parts.append("\n# S9. Pre-specified cross-fitted analysis\n\nHMM and BCTS cross-fitted within each cohort (5 subject folds), "
                  "conformal calibration on subject-grouped 50/50 splits (500 repetitions) and leave-one-subject-out. Unlike the "
                  "primary analysis, the HMM/BCTS of a test night used labels of other test-half subjects (see S1).\n\n"
                  "**All methods (α = 0.10; mean ± SD over 500 splits)**\n\n")
@@ -109,11 +109,11 @@ def main():
                      ["stager", "cohort", "param", "method", "coverage_mean", "coverage_std", "mean_width_mean",
                       "interval_score_mean", "spearman_mean"]))
     parts.append("\n**Proposed method versus comparators (LOSO; permutation test of mean per-subject difference; Holm)**\n\n")
-    parts.append(tbl("tableS_preregistered_within"))
+    parts.append(tbl("tableS_prespecified_within"))
     parts.append("\n" + tbl("tableS_paired_tests", None, ["stager", "cohort", "param", "baseline", "n_subjects", "mean_is_proposed",
                                                           "mean_is_baseline", "ratio", "ratio_lo95", "ratio_hi95", "p", "p_holm", "p_wilcoxon"]))
-    parts.append("\n**Point estimates (bias, MAE, ICC)**\n\n" + tbl("tableS_preregistered_point_estimates"))
-    parts.append("\n" + tbl("tableS_preregistered_point_estimates_lgbm", round_=2))
+    parts.append("\n**Point estimates (bias, MAE, ICC)**\n\n" + tbl("tableS_prespecified_point_estimates"))
+    parts.append("\n" + tbl("tableS_prespecified_point_estimates_lgbm", round_=2))
     parts.append("\n**Centre × scale factorial and ablations (median ratio of interval score to the proposed method over cohorts; >1 = worse than proposed)**\n\n")
     parts.append(tbl("tableS_ablation_summary", round_=2))
     parts.append("\n**FFBS-SD scale versus constant width with the centre held fixed (LOSO; permutation test; Holm)**\n\n")
@@ -122,16 +122,16 @@ def main():
     parts.append("\n**Leave-one-subject-out coverage (descriptive; nominal by construction)**\n\n")
     parts.append(tbl("tableS_loso_coverage", "method in ['ba_loa','scp_signed','scp_abs_bc','cqr_ffbs','norm_reg_ffbs']",
                      ["stager", "cohort", "param", "method", "n_nights", "coverage", "mean_width"]))
-    parts.append("\n# S10. Pre-registered sensitivity analyses\n\n**Pre-specified success criterion: Spearman correlation between "
+    parts.append("\n# S10. Pre-specified sensitivity analyses\n\n**Pre-specified success criterion: Spearman correlation between "
                  "interval width and absolute error of the point estimate > 0 with 95% CI excluding 0**\n\n")
     parts.append(tbl("tableS_spearman_criterion"))
     parts.append("\n**Number of posterior samples M**\n\n" + tbl("tableS_M_sensitivity", round_=4))
     parts.append("\n**Size of the calibration set (fraction of subjects)**\n\n" + tbl("tableS_calsize_sensitivity", round_=4))
-    parts.append("\n**Miscoverage level α (pre-registered analysis)**\n\n")
+    parts.append("\n**Miscoverage level α (pre-specified analysis)**\n\n")
     parts.append(tbl("tableS_all_methods_within", "alpha != 0.1 and method in ['ba_loa','scp_signed','cqr_ffbs','norm_reg_ffbs']",
                      ["stager", "alpha", "cohort", "param", "method", "coverage_mean", "mean_width_mean", "interval_score_mean"]))
     parts.append("\n**Seed variability of the in-domain stager (seeds 0, 1, 2)**\n\n" + tbl("tableS_seed_variability", round_=4))
-    parts.append("\n# S11. Coverage by subgroup (pre-registered analysis, LOSO; subgroups with ≥ 20 nights)\n")
+    parts.append("\n# S11. Coverage by subgroup (pre-specified analysis, LOSO; subgroups with ≥ 20 nights)\n")
     parts.append(tbl("tableS_subgroup_coverage", "n_nights >= 20"))
     parts.append("\n# S12. Error analysis\n")
     for st in ["yasa", "lgbm_sc_s0"]:

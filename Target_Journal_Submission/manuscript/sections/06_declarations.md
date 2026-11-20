@@ -1,22 +1,22 @@
 ## Declaration of generative AI and AI-assisted technologies in the research and writing process
 
-During the preparation of this work the author(s) used Claude (Anthropic), an AI system, to search and screen the literature, design and implement the analysis code, run the experiments and draft the manuscript text. After using this tool, the author(s) reviewed, verified and edited all content, re-ran the analysis pipeline, and take(s) full responsibility for the content of the publication. [AUTHOR ACTION REQUIRED: confirm or edit this statement so that it accurately describes how AI was used, as required by the journal's policy.]
+During the preparation of this work the authors used Claude (Anthropic) in order to search and screen the literature, write and run the analysis code, and draft the manuscript text. After using this tool, the authors reviewed and edited the content as needed and take full responsibility for the content of the publication.
 
 ## CRediT authorship contribution statement
 
-[AUTHOR NAME(S)]: Conceptualization, Methodology, Software, Validation, Formal analysis, Data curation, Writing – original draft, Writing – review & editing, Visualization. [Complete according to actual contributions.]
+**P. N. Bhargav Teja:** Conceptualization, Methodology, Software, Validation, Formal analysis, Data curation, Writing – original draft, Writing – review & editing, Visualization. **[Second author name]:** [roles to be completed].
 
 ## Declaration of competing interest
 
-The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper. [AUTHOR ACTION REQUIRED: confirm.]
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
 
 ## Funding
 
-This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors. [AUTHOR ACTION REQUIRED: confirm.]
+This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
 
 ## Ethics statement
 
-This secondary analysis used only de-identified, openly available PSG recordings distributed through PhysioNet [@goldberger2000; @pollard2026]: Sleep-EDF Expanded (Open Data Commons Attribution Licence v1.0) and the HMC Sleep Staging Database (CC BY 4.0). For the HMC database, the data descriptor and PhysioNet record state that the recordings were acquired in routine clinical care, fully anonymised, and that their reuse was approved by the institutional review board of Zuid-West Holland (METC-19-065) [@alvarez2021; @hmc_data]. The Sleep-EDF Expanded record [@sleepedf_data] does not document the approvals obtained by the original studies [@kemp2000]. No new data were collected and no one was contacted. [AUTHOR ACTION REQUIRED: state your institution's determination that this analysis of public, de-identified data does not require further ethical review, as required by the journal.]
+This secondary analysis used only de-identified, openly available PSG recordings distributed through PhysioNet [@goldberger2000; @pollard2026]: Sleep-EDF Expanded (Open Data Commons Attribution Licence v1.0) and the HMC Sleep Staging Database (CC BY 4.0). For the HMC database, the data descriptor and PhysioNet record state that the recordings were acquired in routine clinical care, fully anonymised, and that their reuse was approved by the institutional review board of Zuid-West Holland (METC-19-065) [@alvarez2021; @hmc_data]. The Sleep-EDF Expanded record [@sleepedf_data] does not document the approvals obtained by the original studies [@kemp2000]. No new data were collected and no participants were contacted.
 
 ## Data availability
 
@@ -24,7 +24,7 @@ The datasets analysed are publicly available from PhysioNet: Sleep-EDF Expanded 
 
 ## Code availability
 
-All code needed to reproduce every result, table and figure (data download with checksum verification, preprocessing, both stagers, posterior sampling, conformal calibration, statistics and figure generation, with unit tests and a one-command pipeline) is provided as supplementary material and will be deposited in a public repository with a persistent identifier upon acceptance [AUTHOR ACTION REQUIRED: insert repository URL/DOI].
+All code needed to reproduce every result, table and figure (data download with checksum verification, preprocessing, both stagers, posterior sampling, conformal calibration, statistics and figure generation, with unit tests and a one-command pipeline) is provided as supplementary material and will be deposited in a public repository with a persistent identifier upon acceptance.
 
 ## Acknowledgements
 

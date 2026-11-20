@@ -133,7 +133,7 @@ def table2():
         NUM[f"n_sig_better_vs_const_{st}"] = NUM[f"n_sig_better_vs_scp_abs_{st}"]
         NUM[f"n_sig_worse_vs_const_{st}"] = NUM[f"n_sig_worse_vs_scp_abs_{st}"]
     t2 = pd.DataFrame(rows)
-    md(t2, TABLES_DIR / "tableS_preregistered_within")      # pre-registered cross-fitted analysis (supplement)
+    md(t2, TABLES_DIR / "tableS_prespecified_within")      # pre-specified cross-fitted analysis (supplement)
 
 
 def table3():
@@ -168,8 +168,8 @@ def table3():
                      "Posterior mean": f"{r['Posterior mean bias']:+.1f} ({r['Posterior mean MAE']:.1f}); {r['Posterior mean ICC']:.2f}",
                      "p vs plug-in": r.get("p (MAE, posterior mean vs plug-in)", ""),
                      "p vs calibrated": r.get("p (MAE, posterior mean vs calibrated)", "")})
-    md(pd.DataFrame(disp), TABLES_DIR / "tableS_preregistered_point_estimates")
-    md(t[t.Stager != STAGERS["yasa"]], TABLES_DIR / "tableS_preregistered_point_estimates_lgbm")
+    md(pd.DataFrame(disp), TABLES_DIR / "tableS_prespecified_point_estimates")
+    md(t[t.Stager != STAGERS["yasa"]], TABLES_DIR / "tableS_prespecified_point_estimates_lgbm")
 
 
 # ----------------------------------------------------------------------------- honest protocol (primary; E12/E15)
@@ -341,6 +341,14 @@ def honest_tables():
         wc = (g.frac_confident * g.n)[ok]
         NUM[f"h_dec_{st}_{p}_{m}_acc"] = float(np.average(g.acc_confident[ok], weights=wc)) if wc.sum() > 0 else None
         NUM[f"h_dec_{st}_{p}_plugacc"] = float(np.average(g.plugin_accuracy, weights=w))
+        # like-for-like plug-in accuracy on the nights this method decided / left undecided
+        if "plug_acc_confident" in g:
+            okc = g.plug_acc_confident.notna()
+            wcc = (g.frac_confident * g.n)[okc]
+            NUM[f"h_dec_{st}_{p}_{m}_plugacc_conf"] = float(np.average(g.plug_acc_confident[okc], weights=wcc)) if wcc.sum() > 0 else None
+            oku = g.plug_acc_unconfident.notna()
+            wuu = ((1 - g.frac_confident) * g.n)[oku]
+            NUM[f"h_dec_{st}_{p}_{m}_plugacc_unconf"] = float(np.average(g.plug_acc_unconfident[oku], weights=wuu)) if wuu.sum() > 0 else None
         NUM[f"h_dec_{st}_{p}_prev"] = float(np.average(g.prevalence, weights=w))
         for _, r in g.iterrows():
             NUM[f"h_dec_{st}_{r.cohort}_{p}_{m}_frac"] = float(r.frac_confident)
@@ -348,7 +356,7 @@ def honest_tables():
 
 
 def sensitivity_tables():
-    """Pre-registered sensitivity analyses (E13), montage sensitivity (E14), one-off costs (E10 meta)."""
+    """Pre-specified sensitivity analyses (E13), montage sensitivity (E14), one-off costs (E10 meta)."""
     S = RESULTS_DIR / "statistics"
     f = S / "e13_spearman.csv"
     if f.exists():
@@ -360,6 +368,17 @@ def sensitivity_tables():
         for p, g in sp.groupby("param"):
             NUM[f"e13_spearman_met_{p}"] = int(g.criterion_met.sum())
             NUM[f"e13_spearman_n_{p}"] = int(len(g))
+        # conjunctive pre-specified criterion (protocol, Evaluation): interval score lower with Holm p < 0.05
+        # AND positive width-error Spearman correlation (95 % CI excluding 0), per comparator
+        pf = S / "e15_paired.csv"
+        if pf.exists():
+            pp = pd.read_csv(pf).merge(sp[["stager", "cohort", "param", "criterion_met"]], on=["stager", "cohort", "param"])
+            for st in pp.stager.unique():
+                for comp, key in {"SCALE@FFBS mean": "SCALEmu", "ba_loa": "ba_loa", "scp_signed": "scp_signed",
+                                  "scp_abs_cal": "scp_abs_cal", "scp_abs_bc": "scp_abs_bc"}.items():
+                    g = pp[(pp.stager == st) & (pp.comparator == comp)]
+                    NUM[f"conj_{st}_{key}"] = int(((g.ratio < 1) & (g.p_holm < 0.05) & g.criterion_met).sum())
+                    NUM[f"conj_n_{st}_{key}"] = int(len(g))
         NUM["e13_spearman_min"], NUM["e13_spearman_max"] = float(sp.spearman.min()), float(sp.spearman.max())
         NUM["e13_spearman_median"] = float(sp.spearman.median())
     f = S / "e13_M.csv"
@@ -692,7 +711,15 @@ def export_manifest_files():
 
 
 if __name__ == "__main__":
-    table1()
+    try:
+        table1()
+    except (KeyError, FileNotFoundError) as e:
+        # the per-night metadata cache (build_sleep_cache.py, needs the raw PSG downloads) is not shipped;
+        # keep the committed Table 1 and its numbers and regenerate everything else
+        print("table1 skipped (cache metadata unavailable):", e)
+        _old = TABLES_DIR / "manuscript_numbers.json"
+        if _old.exists():
+            NUM.update(json.loads(_old.read_text()))
     for fn in (table2, table3, honest_tables, sensitivity_tables, supp_tables, export_manifest_files):
         try:
             fn()

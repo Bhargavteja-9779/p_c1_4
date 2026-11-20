@@ -2,11 +2,11 @@
 title: "Supplementary Material"
 ---
 
-Supplementary material for: *Per-night prediction intervals for automatically scored polysomnography: conformal calibration of posterior hypnogram samples with external validation*.
+Supplementary material for: *Per-night prediction intervals for automatically scored sleep parameters: conformal calibration of posterior hypnogram samples compared with limits of agreement*.
 
 All tables were generated automatically from the result files of the analysis code (`code/run_all.py`).
 
-# S1. Pre-registered protocol and deviations
+# S1. Pre-specified protocol and deviations
 
 ## Pre-specified study protocol (written 2026-11-15, BEFORE any interval/coverage result was computed)
 
@@ -80,85 +80,33 @@ absolute residual), for any base stager.
   excluding 0.  Failure to meet these criteria will be reported as such.
 
 
-## Deviations and additions (chronological change log)
+## Deviations from the protocol and additions
 
-## 2026-11-15
-* [Topic] ECG label-shift direction abandoned after negative DS1 pilot (EXPERIMENT_LOG E0); topic
-  re-targeted to night-level uncertainty for automated sleep scoring (journal: Sleep Medicine).
-* [Protocol, before any interval result] Emission-temperature grid extended from [0.10, 1.50] to
-  [0.02, 1.50]. Reason: in a 12-night/cohort smoke test the fitted tau was at the lower boundary (0.10–0.15),
-  i.e. the original grid could not contain the optimum. tau is fitted only on labelled source nights.
-* [Protocol extension, after first E04/E07 results] Added comparators to separate *local calibration*
-  from *posterior averaging*: (i) plug-in of the locally calibrated probabilities ("plugc") and (ii)
-  plug-in of HMM-smoothed marginals ("plugh") as point estimates; (iii) constant-width split conformal
-  around the calibrated plug-in ("scp_abs_cal"). Reason: the FFBS posterior mean uses within-cohort
-  calibration, whereas the original plug-in uses raw stager output, so the TST improvement could be
-  partly attributable to calibration alone (anticipated reviewer objection). Primary method unchanged.
-* [Statistics] cluster_bootstrap now returns no CI when the statistic is undefined in >50% of resamples
-  (e.g. AUROC with zero events); AUROCs with <10 events are flagged as not interpretable.
-* [Comparators, after calibrated-plug-in results] The calibrated plug-in reproduced most of the TST
-  bias reduction attributed earlier to the posterior mean, showing that the original constant-width
-  comparators (centred on the raw, biased plug-in) conflated calibration with adaptivity. Added
-  (i) `scp_abs_bc`: bias-corrected constant-width split conformal (distribution-free analogue of
-  Bland–Altman LoA; strongest simple competitor) and (ii) a centre × scale factorial
-  (`norm_reg_plug`, `norm_reg_plugc` = FFBS-SD scale with raw/calibrated plug-in centres). Manuscript
-  claims about point estimates and efficiency rewritten accordingly. Primary method unchanged.
-* [Method correction for exact validity] The regulariser of normalised scores (median scale) is now
-  computed from calibration AND test nights (label-free), making the score a symmetric function of all
-  nights' features so that the finite-sample guarantee is exact (previously calibration-only;
-  numerically negligible difference). All E04/E06/E07/E09 conformal evaluations re-run.
-* [Exploratory experiment E11, added after E07] LOSO coverage of the proposed intervals was 81–85 % in the
-  quartile of nights with the lowest plug-in accuracy (marginal coverage nominal). Added Mondrian
-  (group-conditional) conformal calibration with K=2 bins defined by label-free difficulty proxies (mean epoch
-  entropy; FFBS SD) to test whether conditional coverage of difficult nights can be improved. Reported as
-  exploratory; the pre-specified method is unchanged.
-* [Reporting] Few-night recalibration: report the probability that a site's realised coverage falls below
-  0.80 (variability across repetitions), not only mean coverage.
+The study protocol (above) is held in the study repository together with its version history; it was not registered in an external registry. Changes to the analysis after the protocol was fixed are listed here in the order in which they were made, with the reason for each. Unless stated otherwise the proposed method itself was not changed.
 
-## Revision 1 (after review cycle 1; 10 independent reviewers; see Target_Journal_Submission/REVIEW/review_01.md)
-* [Primary analysis changed — deviation from protocol] The honest end-to-end protocol E12 (every
-  label-dependent component — BCTS, prior, transitions, tau, conformal quantile — fitted only on the
-  calibration half of 50/50 subject-grouped splits, calibration scores cross-fitted inside the calibration
-  set) is now the PRIMARY within-cohort analysis. Reason: in the pre-registered analysis the HMM/BCTS were
-  cross-fitted on ~80 % of each cohort, including labels of test-half subjects, whereas the comparators used
-  only the 50 % calibration half (unequal use of labelled data; reviewers 2, 3, 5, 10). The pre-registered
-  cross-fitted analysis (E04/E07) is retained in the supplement. Validity guarantee for cross-fitted scores
-  stated as CV+-type (>= 1 - 2 alpha; Barber et al. 2021).
-* [Leakage fix] Automatic hypnograms are now evaluated on all analysis-window epochs; the reference
-  "unscored" mask is no longer applied to automatic hypnograms (it is label information). Reference unscored
-  epochs are treated as wake. All night summaries (E03) and downstream evaluations re-run.
-* [Comparators added] Regression-based Bland–Altman limits (`ba_reg`; Bland & Altman 1999) and an exactly
-  valid signed-residual distribution-free LoA (`scp_signed`). Parametric LoA now a t-based prediction
-  interval (previously z-based). CQR-QR features extended (plug-in, calibrated plug-in, FFBS mean/SD,
-  entropy, max-probability) with a quantile-crossing guard.
-* [Ablations] Scale-only ablations at a fixed centre (`norm_reg_ind_s`, `norm_reg_ffbs1_s`) added; earlier
-  ablations changed centre and scale together.
-* [Statistics] Paired tests changed from Wilcoxon signed-rank (tests the pseudo-median) to a two-sided
-  sign-flip permutation test of the mean per-subject difference, so that the reported ratio of means,
-  its subject-bootstrap CI and the p-value come from the same analysis; Holm within stager x cohort.
-  Wilcoxon p kept as a secondary column. LOSO coverage CIs no longer used for claims.
-* [Pre-registered items now run] E13: Spearman success criterion, number of posterior samples M, calibration
-  size. 50 Hz line-noise corruption NOT run (deviation): YASA band-pass filtering removes it before feature
-  extraction, so the test would not exercise the method.
-* [New sensitivity analyses] E14 montage sensitivity (YASA with F4-M1 on HMC; source-only SC->HMC);
-  E15 clinical decision thresholds (TST < 360, SOL > 30, WASO > 30, REML <= 15 min) and easier/harder-night
-  stratification; label-free flag |raw - calibrated plug-in| added to the flagging analysis.
-* [Efficiency] E10 extended: one-off costs (source-model fit incl. JIT compilation, first FFBS call), peak
-  memory for a 7 x 24 h recording, single-thread setting.
-* [Reporting] Subgroups require >= 20 distinct nights; per-parameter coverage ranges reported; non-finite
-  conformal scores treated as +inf.
-* [Literature] Closest prior art (van Gorp et al. 2023 JBHI/ICASSP; Philips patent application EP4388985A1)
-  added; novelty restricted to calibrated (conformal) per-night coverage, transport and local recalibration.
-  Misattributed citations corrected. Ethics statement corrected (only HMC documents an approval, METC-19-065).
-* [Manuscript, after the E12/E15 results] Title changed to "...compared with limits of agreement"; Abstract,
-  Highlights, Results (3.1–3.8), Discussion, Conclusion and cover letter rewritten around the end-to-end protocol.
-  Claims NARROWED: the advantage over limits of agreement is specific to TST (significant against distribution-free
-  LoA in 6/6 stager-cohort combinations; against regression-based LoA in 3/6); no consistent gain for other
-  parameters; WASO-SC significantly worse; the pre-specified regulariser is suboptimal (unregularised score better in
-  20/24); regression-based LoA is competitive in interval score but under-covers. Recommendation changed from
-  "about ten local nights" to "at least 20 local nights". Cover letter no longer states that no ethics approval was
-  required. Fig. 3 no longer plots unbounded distribution-free LoA (n_t = 10). Per-night E12 files (>85 MB) are
-  regenerated rather than versioned.
+**Before any interval result**
+
+1. *Emission-temperature grid.* The grid for τ was extended from [0.10, 1.50] to [0.02, 1.50] because, in a smoke test on 12 nights per cohort, the fitted τ lay on the lower boundary. τ is fitted on labelled source nights only.
+
+**After the first within-cohort results (pre-specified design, E04/E07)**
+
+2. *Comparators that separate local calibration from posterior averaging.* The plug-in of the locally recalibrated probabilities and the plug-in of HMM-smoothed marginals were added as point estimates, and a constant-width conformal interval around the calibrated plug-in was added as a comparator. Reason: the posterior mean uses within-cohort calibration whereas the original plug-in uses raw stager output, so part of the TST improvement could be due to calibration alone.
+3. *Bias-corrected comparators and a centre × scale factorial.* The calibrated plug-in reproduced most of the TST bias reduction first attributed to the posterior mean, so the original constant-width comparators (centred on the raw, biased plug-in) conflated calibration with adaptivity. We added bias-corrected constant-width split-conformal limits (a distribution-free analogue of Bland–Altman limits) and a factorial of centres (raw plug-in, calibrated plug-in, posterior mean) crossed with scales (constant, posterior SD). Claims about point estimates and efficiency were rewritten accordingly.
+4. *Definition of σ̄.* The regulariser of the normalised score, the median of the posterior SD, was originally computed on the calibration nights only. It is now computed over calibration and test nights (it requires no labels), so that the score is a symmetric function of all nights' features and the split-conformal guarantee is exact when scores are not cross-fitted. The numerical difference was negligible; all conformal evaluations were re-run.
+5. *Exploratory conditional coverage.* Coverage of the proposed intervals was 81–85 % in the quartile of nights with the lowest plug-in accuracy. Mondrian (group-conditional) calibration with two bins defined by label-free difficulty proxies (mean epoch entropy; posterior SD) was added as an exploratory analysis.
+6. *Reporting.* For few-night recalibration we report the probability that a site's realised coverage falls below 0.80, not only mean coverage. The bootstrap returns no confidence interval when a statistic is undefined in more than half of the resamples; AUROCs based on fewer than 10 events are flagged as not interpretable.
+
+**Primary analysis changed after an internal critical review of the first manuscript draft**
+
+7. *End-to-end protocol as the primary within-cohort analysis (deviation from the protocol).* In the pre-specified design the HMM and recalibration components were cross-fitted over about 80 % of each cohort, including labels of subjects in the test half, whereas the comparators used only the 50 % calibration half (unequal use of labelled data). In the end-to-end protocol every label-dependent component (recalibration, prior, transitions, τ, conformal quantile) is fitted on the calibration half of 50 subject-grouped 50/50 splits only, with calibration scores cross-fitted inside the calibration half. The pre-specified analysis is retained in Supplementary S9 and leads to the same qualitative conclusions.
+8. *Validity guarantee.* Because calibration scores are cross-fitted while test nights use the model fitted on all calibration nights, the design corresponds to the cross-validation variant of Barber et al. (2021), for which no distribution-free guarantee is available. Validity is therefore assessed empirically (coverage over 50 splits), not claimed as a finite-sample guarantee.
+9. *Leakage fix.* Automatic hypnograms are evaluated on all epochs of the analysis window; the reference "unscored" mask is no longer applied to them because it is label information. Unscored reference epochs are treated as wake. All night summaries and downstream evaluations were re-run.
+10. *Comparators added.* Regression-based limits of agreement (after Bland and Altman 1999, with the automatic value as regressor) and exactly valid distribution-free limits from signed residuals; parametric limits became a t-based prediction interval (previously z-based); the CQR features were extended; scale-only ablations at a fixed centre were added (earlier ablations changed centre and scale together).
+11. *Statistics.* Paired comparisons changed from the Wilcoxon signed-rank test (a test of the pseudo-median) to a two-sided sign-flip permutation test of the mean per-subject difference, so that the reported ratio of means, its subject-bootstrap interval and the p-value come from the same analysis; Holm adjustment within stager × cohort. The comparisons of scaled with constant-width intervals at fixed centres were added after the first results and form a separate Holm family. The AUROC bootstrap used 1000 instead of 2000 resamples.
+12. *Success criteria.* The protocol's criterion for adaptivity was joint: the proposed method counts as better than constant-width intervals (Bland–Altman and split-conformal absolute-residual limits) only if its interval score is lower (Holm-adjusted p < 0.05) and its width–error Spearman correlation is positive with a confidence interval excluding zero. The manuscript reports the two conditions separately and jointly, including the fixed-centre comparators added after the first results.
+13. *Items of the protocol run late.* The Spearman criterion, the number of posterior samples M and the calibration-set size (E13) were run after the first draft. The 50 Hz line-noise corruption was not run, because YASA's band-pass filtering removes it before feature extraction, so the test would not exercise the method.
+14. *New sensitivity analyses.* Montage sensitivity (YASA with F4-M1 on HMC; source-only SC→HMC); clinical decision thresholds (TST < 360 min, SOL > 30 min, WASO > 30 min, REM latency ≤ 15 min; fixed before the analysis was run) and an easier/harder-night stratification; a label-free flag based on the difference between raw and recalibrated plug-in estimates; one-off computational costs and peak memory for a 7 × 24 h recording; subgroups require at least 20 distinct nights; non-finite conformal scores are treated as +∞.
+15. *Reporting and framing.* The title and the claims were narrowed: the advantage over limits of agreement is specific to TST; the recommendation changed from about ten to at least 20 locally scored nights.
 
 
 # S2. Honest end-to-end protocol: all interval methods (α = 0.10; 50 subject-grouped 50/50 splits; all label-dependent components fitted on the calibration half)
@@ -1365,30 +1313,30 @@ Per-subject mean interval score (averaged over the splits in which the subject w
 
 | Parameter   | Cohort   | Plug-in      | Calibrated plug-in   | Posterior mean   | Calibrated plug-in, 10 local nights   | Posterior mean, 10 local nights   |
 |:------------|:---------|:-------------|:---------------------|:-----------------|:--------------------------------------|:----------------------------------|
-| TST (min)   | SC       | +10.8 (20.0) | -2.3 (17.4)          | -0.6 (16.4)      | –                                     | –                                 |
-| TST (min)   | ST       | -11.5 (17.5) | +1.3 (12.6)          | -0.8 (9.9)       | +1.1 (13.7)                           | -1.3 (10.9)                       |
-| TST (min)   | HMC      | -37.6 (47.2) | -9.9 (30.1)          | -3.2 (25.4)      | -7.1 (31.4)                           | -0.9 (27.1)                       |
-| SOL (min)   | SC       | -3.5 (6.0)   | -1.3 (5.7)           | -2.8 (7.3)       | –                                     | –                                 |
-| SOL (min)   | ST       | -1.9 (3.5)   | -2.5 (3.9)           | -5.8 (6.2)       | -2.7 (4.0)                            | -5.2 (5.8)                        |
-| SOL (min)   | HMC      | +2.4 (5.9)   | -0.3 (5.0)           | -5.0 (7.7)       | -1.1 (6.0)                            | -5.6 (8.1)                        |
+| TST (min)   | SC       | +10.8 (20.0) | −2.3 (17.4)          | −0.6 (16.4)      | –                                     | –                                 |
+| TST (min)   | ST       | −11.5 (17.5) | +1.3 (12.6)          | −0.8 (9.9)       | +1.1 (13.7)                           | −1.3 (10.9)                       |
+| TST (min)   | HMC      | −37.6 (47.2) | −9.9 (30.1)          | −3.2 (25.4)      | −7.1 (31.4)                           | −0.9 (27.1)                       |
+| SOL (min)   | SC       | −3.5 (6.0)   | −1.3 (5.7)           | −2.8 (7.3)       | –                                     | –                                 |
+| SOL (min)   | ST       | −1.9 (3.5)   | −2.5 (3.9)           | −5.8 (6.2)       | −2.7 (4.0)                            | −5.2 (5.8)                        |
+| SOL (min)   | HMC      | +2.4 (5.9)   | −0.3 (5.0)           | −5.0 (7.7)       | −1.1 (6.0)                            | −5.6 (8.1)                        |
 | WASO (min)  | SC       | +3.0 (20.7)  | +11.1 (20.4)         | +55.4 (56.9)     | –                                     | –                                 |
 | WASO (min)  | ST       | +12.5 (16.8) | +3.9 (13.0)          | +12.9 (16.3)     | +3.8 (13.1)                           | +11.7 (15.5)                      |
 | WASO (min)  | HMC      | +34.7 (41.7) | +11.5 (26.0)         | +10.3 (23.9)     | +9.5 (26.6)                           | +8.9 (24.8)                       |
-| REML (min)  | SC       | -11.6 (18.9) | -12.7 (23.7)         | -4.3 (22.4)      | –                                     | –                                 |
-| REML (min)  | ST       | +8.0 (24.4)  | -12.5 (39.7)         | +4.9 (28.2)      | -15.5 (41.5)                          | +4.4 (28.9)                       |
-| REML (min)  | HMC      | -21.2 (36.0) | -40.9 (52.0)         | -49.3 (57.1)     | -40.9 (52.8)                          | -50.4 (59.1)                      |
-| N1% (pp)    | SC       | +3.9 (7.1)   | -4.6 (7.0)           | -5.5 (6.9)       | –                                     | –                                 |
-| N1% (pp)    | ST       | +3.4 (4.7)   | -3.0 (4.0)           | -3.0 (3.7)       | -2.7 (3.9)                            | -2.9 (3.8)                        |
-| N1% (pp)    | HMC      | +8.0 (10.3)  | -6.0 (7.6)           | -3.5 (5.4)       | -5.6 (7.7)                            | -3.4 (5.7)                        |
-| N2% (pp)    | SC       | -4.2 (7.8)   | +4.6 (7.9)           | +0.8 (6.7)       | –                                     | –                                 |
-| N2% (pp)    | ST       | -2.6 (8.0)   | +3.3 (8.6)           | -1.0 (7.7)       | +2.2 (8.5)                            | -1.8 (8.1)                        |
-| N2% (pp)    | HMC      | +5.4 (10.4)  | +7.0 (10.2)          | -4.5 (8.0)       | +7.1 (10.6)                           | -4.2 (8.3)                        |
-| N3% (pp)    | SC       | +0.5 (2.9)   | -0.4 (2.7)           | +0.5 (3.0)       | –                                     | –                                 |
-| N3% (pp)    | ST       | +1.7 (5.5)   | -0.5 (6.0)           | +0.4 (6.2)       | +0.3 (6.2)                            | +1.4 (6.3)                        |
-| N3% (pp)    | HMC      | -10.9 (12.4) | -1.0 (8.8)           | +3.8 (8.9)       | -1.2 (9.2)                            | +3.6 (9.4)                        |
-| REM% (pp)   | SC       | -0.2 (3.6)   | +0.4 (3.7)           | +4.2 (5.8)       | –                                     | –                                 |
-| REM% (pp)   | ST       | -2.4 (3.9)   | +0.1 (4.2)           | +3.5 (6.0)       | +0.1 (4.4)                            | +3.3 (6.0)                        |
-| REM% (pp)   | HMC      | -2.6 (4.6)   | -0.0 (3.9)           | +4.1 (5.7)       | -0.2 (4.3)                            | +3.9 (5.8)                        |
+| REML (min)  | SC       | −11.6 (18.9) | −12.7 (23.7)         | −4.3 (22.4)      | –                                     | –                                 |
+| REML (min)  | ST       | +8.0 (24.4)  | −12.5 (39.7)         | +4.9 (28.2)      | −15.5 (41.5)                          | +4.4 (28.9)                       |
+| REML (min)  | HMC      | −21.2 (36.0) | −40.9 (52.0)         | −49.3 (57.1)     | −40.9 (52.8)                          | −50.4 (59.1)                      |
+| N1% (pp)    | SC       | +3.9 (7.1)   | −4.6 (7.0)           | −5.5 (6.9)       | –                                     | –                                 |
+| N1% (pp)    | ST       | +3.4 (4.7)   | −3.0 (4.0)           | −3.0 (3.7)       | −2.7 (3.9)                            | −2.9 (3.8)                        |
+| N1% (pp)    | HMC      | +8.0 (10.3)  | −6.0 (7.6)           | −3.5 (5.4)       | −5.6 (7.7)                            | −3.4 (5.7)                        |
+| N2% (pp)    | SC       | −4.2 (7.8)   | +4.6 (7.9)           | +0.8 (6.7)       | –                                     | –                                 |
+| N2% (pp)    | ST       | −2.6 (8.0)   | +3.3 (8.6)           | −1.0 (7.7)       | +2.2 (8.5)                            | −1.8 (8.1)                        |
+| N2% (pp)    | HMC      | +5.4 (10.4)  | +7.0 (10.2)          | −4.5 (8.0)       | +7.1 (10.6)                           | −4.2 (8.3)                        |
+| N3% (pp)    | SC       | +0.5 (2.9)   | −0.4 (2.7)           | +0.5 (3.0)       | –                                     | –                                 |
+| N3% (pp)    | ST       | +1.7 (5.5)   | −0.5 (6.0)           | +0.4 (6.2)       | +0.3 (6.2)                            | +1.4 (6.3)                        |
+| N3% (pp)    | HMC      | −10.9 (12.4) | −1.0 (8.8)           | +3.8 (8.9)       | −1.2 (9.2)                            | +3.6 (9.4)                        |
+| REM% (pp)   | SC       | −0.2 (3.6)   | +0.4 (3.7)           | +4.2 (5.8)       | –                                     | –                                 |
+| REM% (pp)   | ST       | −2.4 (3.9)   | +0.1 (4.2)           | +3.5 (6.0)       | +0.1 (4.4)                            | +3.3 (6.0)                        |
+| REM% (pp)   | HMC      | −2.6 (4.6)   | −0.0 (3.9)           | +4.1 (5.7)       | −0.2 (4.3)                            | +3.9 (5.8)                        |
 
 
 # S5. Difficulty of nights
@@ -2079,7 +2027,7 @@ Per-subject mean interval score (averaged over the splits in which the subject w
 | lgbm_sc_s0 | ST       | WASO    | scp_signed    |      0.764 |         11 | Q1_lowest_accuracy |
 
 
-**Exploratory Mondrian calibration by mean epoch entropy (pre-registered cross-fitted summaries, LOSO)**
+**Exploratory Mondrian calibration by mean epoch entropy (pre-specified cross-fitted summaries, LOSO)**
 
 
 | stager     | cohort   | method           | subset     | param   |   coverage |   mean_width |   interval_score |    n |
@@ -4527,7 +4475,7 @@ Per-subject mean interval score (averaged over the splits in which the subject w
 | yasa       | HMC      | REML    | scp_abs        |     153 |      150 |      0.827 |      146.373 |          331.373 |
 | yasa       | HMC      | REML    | scp_signed     |     153 |      150 |      0.827 |      144.53  |          329.663 |
 | yasa       | HMC      | REML    | scp_abs_cal    |     153 |      150 |      0.827 |      140.65  |          331.05  |
-| yasa       | HMC      | REML    | cqr_ffbs       |     153 |      150 |      0.88  |      135.214 |          222.114 |
+| yasa       | HMC      | REML    | cqr_ffbs       |     153 |      150 |      0.88  |      135.214 |          222.113 |
 | yasa       | HMC      | REML    | norm_reg_ffbs  |     153 |      150 |      0.813 |      103.94  |          282.144 |
 | yasa       | HMC      | REML    | norm_reg_plugc |     153 |      150 |      0.833 |      134.626 |          299.035 |
 | yasa       | ST       | N1%     | ba_loa         |     153 |       44 |      1     |       29.103 |           29.103 |
@@ -4980,7 +4928,7 @@ Per-subject mean interval score (averaged over the splits in which the subject w
 | lgbm_sc_s0 | ST       | REML <= 15  | scp_signed    | 1100 |        0     |             0.981 |            0.326 |           1     |
 
 
-# S9. Pre-registered cross-fitted analysis
+# S9. Pre-specified cross-fitted analysis
 
 HMM and BCTS cross-fitted within each cohort (5 subject folds), conformal calibration on subject-grouped 50/50 splits (500 repetitions) and leave-one-subject-out. Unlike the primary analysis, the HMM/BCTS of a test night used labels of other test-half subjects (see S1).
 
@@ -7065,7 +7013,7 @@ HMM and BCTS cross-fitted within each cohort (5 subject folds), conformal calibr
 | lgbm_sc_s0 | ST       | WASO    | scp_signed    |         44 |      0.909 |       52.898 |
 
 
-# S10. Pre-registered sensitivity analyses
+# S10. Pre-specified sensitivity analyses
 
 **Pre-specified success criterion: Spearman correlation between interval width and absolute error of the point estimate > 0 with 95% CI excluding 0**
 
@@ -7998,7 +7946,7 @@ HMM and BCTS cross-fitted within each cohort (5 subject folds), conformal calibr
 | yasa       | ST       | WASO    |       0.75 | scp_signed    |     0.9212 |      38.396  |          58.8502 |  32     |
 
 
-**Miscoverage level α (pre-registered analysis)**
+**Miscoverage level α (pre-specified analysis)**
 
 
 | stager     |   alpha | cohort   | param   | method        |   coverage_mean |   mean_width_mean |   interval_score_mean |
@@ -8393,105 +8341,105 @@ HMM and BCTS cross-fitted within each cohort (5 subject folds), conformal calibr
 
 | cohort   | param   | method        |   cov_mean |   cov_range |   width_mean |   width_cv |
 |:---------|:--------|:--------------|-----------:|------------:|-------------:|-----------:|
-| HMC      | N1%     | ba_loa        |     0.9146 |      0.0118 |      28.3534 |     0.0106 |
+| HMC      | N1%     | ba_loa        |     0.917  |      0.0099 |      28.641  |     0.0057 |
 | HMC      | N1%     | norm_reg_ffbs |     0.9054 |      0.0006 |      22.7329 |     0.0057 |
 | HMC      | N1%     | scp_abs       |     0.9106 |      0.0013 |      40.6825 |     0.0147 |
 | HMC      | N1%     | scp_abs_bc    |     0.9077 |      0.0014 |      27.835  |     0.0246 |
-| HMC      | N2%     | ba_loa        |     0.8965 |      0.0081 |      38.6077 |     0.0079 |
+| HMC      | N2%     | ba_loa        |     0.8997 |      0.013  |      39.0965 |     0.01   |
 | HMC      | N2%     | norm_reg_ffbs |     0.9058 |      0.0006 |      36.8146 |     0.0016 |
 | HMC      | N2%     | scp_abs       |     0.9073 |      0.0009 |      42.903  |     0.0165 |
 | HMC      | N2%     | scp_abs_bc    |     0.9034 |      0.001  |      39.9374 |     0.0172 |
-| HMC      | N3%     | ba_loa        |     0.8947 |      0.0082 |      33.0254 |     0.0136 |
+| HMC      | N3%     | ba_loa        |     0.8973 |      0.0094 |      33.4052 |     0.0113 |
 | HMC      | N3%     | norm_reg_ffbs |     0.9044 |      0.0004 |      37.1175 |     0.0102 |
 | HMC      | N3%     | scp_abs       |     0.9079 |      0.0006 |      37.332  |     0.0052 |
 | HMC      | N3%     | scp_abs_bc    |     0.9044 |      0.0018 |      34.6069 |     0.0212 |
-| HMC      | REM%    | ba_loa        |     0.9063 |      0.0166 |      19.1473 |     0.0205 |
+| HMC      | REM%    | ba_loa        |     0.9103 |      0.0156 |      19.3815 |     0.0269 |
 | HMC      | REM%    | norm_reg_ffbs |     0.9086 |      0.0015 |      22.2425 |     0.0108 |
 | HMC      | REM%    | scp_abs       |     0.9076 |      0.0009 |      21.4361 |     0.0071 |
 | HMC      | REM%    | scp_abs_bc    |     0.902  |      0.0045 |      18.786  |     0.0138 |
-| HMC      | REML    | ba_loa        |     0.8976 |      0.0194 |     191.02   |     0.0236 |
+| HMC      | REML    | ba_loa        |     0.899  |      0.0182 |     192.968  |     0.0212 |
 | HMC      | REML    | norm_reg_ffbs |     0.9079 |      0.0005 |     219.599  |     0.0066 |
 | HMC      | REML    | scp_abs       |     0.908  |      0.0004 |     188.417  |     0.052  |
 | HMC      | REML    | scp_abs_bc    |     0.907  |      0.0019 |     202.223  |     0.048  |
-| HMC      | SOL     | ba_loa        |     0.9405 |      0.0038 |      30.4212 |     0.0179 |
+| HMC      | SOL     | ba_loa        |     0.9414 |      0.0051 |      30.7378 |     0.0107 |
 | HMC      | SOL     | norm_reg_ffbs |     0.9104 |      0.0004 |      25.632  |     0.0073 |
 | HMC      | SOL     | scp_abs       |     0.9115 |      0.0026 |      25.3728 |     0.0053 |
 | HMC      | SOL     | scp_abs_bc    |     0.9089 |      0.0027 |      22.0243 |     0.0311 |
-| HMC      | TST     | ba_loa        |     0.8967 |      0.0015 |     159.975  |     0.0094 |
+| HMC      | TST     | ba_loa        |     0.8986 |      0.0024 |     162.025  |     0.0161 |
 | HMC      | TST     | norm_reg_ffbs |     0.9104 |      0.0021 |     115.492  |     0.0145 |
 | HMC      | TST     | scp_abs       |     0.9096 |      0.0015 |     203.143  |     0.0058 |
 | HMC      | TST     | scp_abs_bc    |     0.9074 |      0.0011 |     170.76   |     0.0167 |
-| HMC      | WASO    | ba_loa        |     0.901  |      0.0039 |     114.242  |     0.0104 |
+| HMC      | WASO    | ba_loa        |     0.9036 |      0.0022 |     115.401  |     0.0148 |
 | HMC      | WASO    | norm_reg_ffbs |     0.9108 |      0.0003 |      96.1954 |     0.0096 |
 | HMC      | WASO    | scp_abs       |     0.9086 |      0.0015 |     166.403  |     0.0054 |
 | HMC      | WASO    | scp_abs_bc    |     0.9042 |      0.0017 |     116.363  |     0.0235 |
-| SC       | N1%     | ba_loa        |     0.8945 |      0.0067 |      26.8011 |     0.0042 |
-| SC       | N1%     | norm_reg_ffbs |     0.9067 |      0.0007 |      26.0881 |     0.0027 |
-| SC       | N1%     | scp_abs       |     0.9053 |      0.0007 |      33.7776 |     0.0051 |
-| SC       | N1%     | scp_abs_bc    |     0.9024 |      0.0022 |      27.96   |     0.0135 |
-| SC       | N2%     | ba_loa        |     0.8933 |      0.009  |      30.5604 |     0.0059 |
-| SC       | N2%     | norm_reg_ffbs |     0.9066 |      0.0006 |      30.9796 |     0.0057 |
-| SC       | N2%     | scp_abs       |     0.9073 |      0.0011 |      34.1197 |     0.0103 |
-| SC       | N2%     | scp_abs_bc    |     0.9004 |      0.0023 |      33.0509 |     0.0136 |
-| SC       | N3%     | ba_loa        |     0.8904 |      0.0062 |      11.4901 |     0.0243 |
-| SC       | N3%     | norm_reg_ffbs |     0.9141 |      0.0003 |      12.0582 |     0.0239 |
-| SC       | N3%     | scp_abs       |     0.9092 |      0.0016 |      12.7347 |     0.0313 |
-| SC       | N3%     | scp_abs_bc    |     0.9079 |      0.0015 |      12.5895 |     0.0327 |
-| SC       | REM%    | ba_loa        |     0.9257 |      0.003  |      19.1069 |     0.014  |
-| SC       | REM%    | norm_reg_ffbs |     0.9081 |      0.0001 |      22.9325 |     0.0073 |
-| SC       | REM%    | scp_abs       |     0.9029 |      0.0007 |      16.6238 |     0.0138 |
-| SC       | REM%    | scp_abs_bc    |     0.8995 |      0.0013 |      16.5237 |     0.0141 |
-| SC       | REML    | ba_loa        |     0.9181 |      0.0104 |     126.141  |     0.0697 |
-| SC       | REML    | norm_reg_ffbs |     0.9069 |      0.0017 |      79.6654 |     0.009  |
-| SC       | REML    | scp_abs       |     0.9139 |      0.002  |     131.374  |     0.0295 |
-| SC       | REML    | scp_abs_bc    |     0.9139 |      0.0017 |     123.578  |     0.0463 |
-| SC       | SOL     | ba_loa        |     0.9497 |      0.0087 |      35.4979 |     0.0029 |
+| SC       | N1%     | ba_loa        |     0.895  |      0.0073 |      26.8879 |     0.0052 |
+| SC       | N1%     | norm_reg_ffbs |     0.9067 |      0.0007 |      26.0765 |     0.0029 |
+| SC       | N1%     | scp_abs       |     0.9053 |      0.0007 |      33.7847 |     0.005  |
+| SC       | N1%     | scp_abs_bc    |     0.9023 |      0.0022 |      27.9806 |     0.0129 |
+| SC       | N2%     | ba_loa        |     0.8958 |      0.0092 |      30.9303 |     0.0035 |
+| SC       | N2%     | norm_reg_ffbs |     0.9066 |      0.0005 |      31.0007 |     0.0063 |
+| SC       | N2%     | scp_abs       |     0.9073 |      0.001  |      34.1307 |     0.01   |
+| SC       | N2%     | scp_abs_bc    |     0.9005 |      0.0023 |      33.0527 |     0.0136 |
+| SC       | N3%     | ba_loa        |     0.8926 |      0.0084 |      11.6962 |     0.0118 |
+| SC       | N3%     | norm_reg_ffbs |     0.9136 |      0.001  |      12.0839 |     0.0233 |
+| SC       | N3%     | scp_abs       |     0.9091 |      0.0016 |      12.9365 |     0.0212 |
+| SC       | N3%     | scp_abs_bc    |     0.908  |      0.0013 |      12.8233 |     0.0202 |
+| SC       | REM%    | ba_loa        |     0.9269 |      0.0017 |      19.2365 |     0.0193 |
+| SC       | REM%    | norm_reg_ffbs |     0.9082 |      0.0003 |      22.9355 |     0.0075 |
+| SC       | REM%    | scp_abs       |     0.903  |      0.0008 |      16.6329 |     0.0141 |
+| SC       | REM%    | scp_abs_bc    |     0.8995 |      0.0012 |      16.5316 |     0.0144 |
+| SC       | REML    | ba_loa        |     0.9196 |      0.0104 |     127.977  |     0.0736 |
+| SC       | REML    | norm_reg_ffbs |     0.9071 |      0.0015 |      79.583  |     0.009  |
+| SC       | REML    | scp_abs       |     0.9139 |      0.0016 |     132.154  |     0.0301 |
+| SC       | REML    | scp_abs_bc    |     0.9138 |      0.0016 |     123.834  |     0.0475 |
+| SC       | SOL     | ba_loa        |     0.9508 |      0.0069 |      35.8413 |     0.008  |
 | SC       | SOL     | norm_reg_ffbs |     0.9058 |      0.0015 |      23.0824 |     0.0068 |
 | SC       | SOL     | scp_abs       |     0.9075 |      0.0059 |      23.335  |     0.0447 |
 | SC       | SOL     | scp_abs_bc    |     0.9048 |      0.0015 |      26.2834 |     0.0403 |
-| SC       | TST     | ba_loa        |     0.906  |      0.0065 |      88.0719 |     0.0286 |
-| SC       | TST     | norm_reg_ffbs |     0.9077 |      0.0015 |      70.5339 |     0.0041 |
-| SC       | TST     | scp_abs       |     0.9065 |      0.0034 |      98.57   |     0.047  |
-| SC       | TST     | scp_abs_bc    |     0.903  |      0.0007 |      88.5056 |     0.0494 |
-| SC       | WASO    | ba_loa        |     0.942  |      0.0141 |     101.025  |     0.0243 |
-| SC       | WASO    | norm_reg_ffbs |     0.9066 |      0.0018 |     180.355  |     0.0065 |
-| SC       | WASO    | scp_abs       |     0.9072 |      0.0004 |      78.003  |     0.0711 |
-| SC       | WASO    | scp_abs_bc    |     0.9059 |      0.0017 |      74.8482 |     0.0716 |
-| ST       | N1%     | ba_loa        |     0.8921 |      0.0212 |      15.1731 |     0.0345 |
-| ST       | N1%     | norm_reg_ffbs |     0.9136 |      0.0029 |      18.0832 |     0.0168 |
-| ST       | N1%     | scp_abs       |     0.9001 |      0.0057 |      20.4553 |     0.0179 |
-| ST       | N1%     | scp_abs_bc    |     0.8795 |      0.0077 |      14.5367 |     0.0113 |
-| ST       | N2%     | ba_loa        |     0.8418 |      0.0251 |      31.8745 |     0.0284 |
-| ST       | N2%     | norm_reg_ffbs |     0.8996 |      0.0015 |      31.4002 |     0.0101 |
-| ST       | N2%     | scp_abs       |     0.9005 |      0.0005 |      35.4043 |     0.0042 |
-| ST       | N2%     | scp_abs_bc    |     0.8665 |      0.0068 |      33.8689 |     0.0028 |
-| ST       | N3%     | ba_loa        |     0.8617 |      0.0225 |      23.3366 |     0.026  |
-| ST       | N3%     | norm_reg_ffbs |     0.9042 |      0.0005 |      25.6369 |     0.0014 |
-| ST       | N3%     | scp_abs       |     0.899  |      0.0048 |      29.3701 |     0.0107 |
-| ST       | N3%     | scp_abs_bc    |     0.8869 |      0.0051 |      26.3274 |     0.0087 |
-| ST       | REM%    | ba_loa        |     0.8745 |      0.0082 |      17.5245 |     0.0436 |
-| ST       | REM%    | norm_reg_ffbs |     0.8978 |      0.0033 |      23.1467 |     0.0006 |
-| ST       | REM%    | scp_abs       |     0.9017 |      0.0012 |      25.0047 |     0.0261 |
-| ST       | REM%    | scp_abs_bc    |     0.8932 |      0.0032 |      20.4357 |     0.0218 |
-| ST       | REML    | ba_loa        |     0.8559 |      0.0109 |     139.97   |     0.0593 |
-| ST       | REML    | norm_reg_ffbs |     0.9135 |      0.0146 |     126.919  |     0.0203 |
-| ST       | REML    | scp_abs       |     0.9197 |      0.0009 |     190.897  |     0.0102 |
-| ST       | REML    | scp_abs_bc    |     0.9082 |      0.0041 |     174.19   |     0.056  |
-| ST       | SOL     | ba_loa        |     0.902  |      0.0068 |      20.1354 |     0.0359 |
-| ST       | SOL     | norm_reg_ffbs |     0.9009 |      0.0005 |      21.8378 |     0.025  |
-| ST       | SOL     | scp_abs       |     0.9163 |      0.0155 |      16.191  |     0.1144 |
-| ST       | SOL     | scp_abs_bc    |     0.8994 |      0.0153 |      15.7561 |     0.0606 |
-| ST       | TST     | ba_loa        |     0.8667 |      0.0247 |      61.5608 |     0.0255 |
-| ST       | TST     | norm_reg_ffbs |     0.9164 |      0.0037 |      47.076  |     0.0112 |
-| ST       | TST     | scp_abs       |     0.925  |      0.0016 |      77.7433 |     0.0652 |
-| ST       | TST     | scp_abs_bc    |     0.8863 |      0.0172 |      64.7401 |     0.0239 |
-| ST       | WASO    | ba_loa        |     0.8717 |      0.0055 |      45.0315 |     0.0301 |
-| ST       | WASO    | norm_reg_ffbs |     0.9035 |      0.0055 |      59.0654 |     0.041  |
-| ST       | WASO    | scp_abs       |     0.9199 |      0.0025 |      70.4576 |     0.0355 |
-| ST       | WASO    | scp_abs_bc    |     0.896  |      0.0125 |      49.751  |     0.0195 |
+| SC       | TST     | ba_loa        |     0.9055 |      0.0052 |      90.1353 |     0.0119 |
+| SC       | TST     | norm_reg_ffbs |     0.9079 |      0.001  |      70.5169 |     0.006  |
+| SC       | TST     | scp_abs       |     0.9055 |      0.002  |     101.131  |     0.0282 |
+| SC       | TST     | scp_abs_bc    |     0.9029 |      0.0008 |      90.8995 |     0.0295 |
+| SC       | WASO    | ba_loa        |     0.9404 |      0.0126 |     103.019  |     0.0124 |
+| SC       | WASO    | norm_reg_ffbs |     0.9066 |      0.002  |     179.933  |     0.0049 |
+| SC       | WASO    | scp_abs       |     0.9065 |      0.0015 |      80.1233 |     0.0528 |
+| SC       | WASO    | scp_abs_bc    |     0.9049 |      0.0011 |      76.9534 |     0.0563 |
+| ST       | N1%     | ba_loa        |     0.9044 |      0.0064 |      15.7883 |     0.0152 |
+| ST       | N1%     | norm_reg_ffbs |     0.9132 |      0.0017 |      17.7602 |     0.0102 |
+| ST       | N1%     | scp_abs       |     0.9001 |      0.0057 |      20.5036 |     0.0173 |
+| ST       | N1%     | scp_abs_bc    |     0.8794 |      0.0076 |      14.5568 |     0.012  |
+| ST       | N2%     | ba_loa        |     0.8558 |      0.0053 |      33.3922 |     0.007  |
+| ST       | N2%     | norm_reg_ffbs |     0.8996 |      0.0015 |      31.5869 |     0.0096 |
+| ST       | N2%     | scp_abs       |     0.9005 |      0.0005 |      35.6271 |     0.0067 |
+| ST       | N2%     | scp_abs_bc    |     0.8657 |      0.0072 |      33.9335 |     0.0022 |
+| ST       | N3%     | ba_loa        |     0.8734 |      0.0051 |      24.2884 |     0.006  |
+| ST       | N3%     | norm_reg_ffbs |     0.9044 |      0.0002 |      25.6044 |     0.001  |
+| ST       | N3%     | scp_abs       |     0.899  |      0.0048 |      29.2699 |     0.0087 |
+| ST       | N3%     | scp_abs_bc    |     0.8869 |      0.005  |      26.2628 |     0.0073 |
+| ST       | REM%    | ba_loa        |     0.8824 |      0.0085 |      18.3131 |     0.0143 |
+| ST       | REM%    | norm_reg_ffbs |     0.897  |      0.0033 |      23.1293 |     0.0012 |
+| ST       | REM%    | scp_abs       |     0.9017 |      0.0012 |      24.9944 |     0.0263 |
+| ST       | REM%    | scp_abs_bc    |     0.8929 |      0.0026 |      20.4224 |     0.0221 |
+| ST       | REML    | ba_loa        |     0.863  |      0.0085 |     145.099  |     0.0376 |
+| ST       | REML    | norm_reg_ffbs |     0.9135 |      0.0145 |     127.363  |     0.0224 |
+| ST       | REML    | scp_abs       |     0.9197 |      0.0009 |     191.089  |     0.0095 |
+| ST       | REML    | scp_abs_bc    |     0.908  |      0.0048 |     174.135  |     0.0567 |
+| ST       | SOL     | ba_loa        |     0.9021 |      0.0095 |      21.1878 |     0.0023 |
+| ST       | SOL     | norm_reg_ffbs |     0.9014 |      0.001  |      22.6758 |     0.0056 |
+| ST       | SOL     | scp_abs       |     0.9143 |      0.0129 |      16.3816 |     0.1048 |
+| ST       | SOL     | scp_abs_bc    |     0.8955 |      0.0215 |      16.2048 |     0.0381 |
+| ST       | TST     | ba_loa        |     0.883  |      0.0168 |      63.8303 |     0.0011 |
+| ST       | TST     | norm_reg_ffbs |     0.9157 |      0.0048 |      47.255  |     0.0105 |
+| ST       | TST     | scp_abs       |     0.9255 |      0.0015 |      77.1033 |     0.0594 |
+| ST       | TST     | scp_abs_bc    |     0.8877 |      0.0145 |      64.0971 |     0.0288 |
+| ST       | WASO    | ba_loa        |     0.8823 |      0.0135 |      47.1095 |     0.0029 |
+| ST       | WASO    | norm_reg_ffbs |     0.9016 |      0.0035 |      61.8444 |     0.0075 |
+| ST       | WASO    | scp_abs       |     0.9216 |      0.0049 |      70.9275 |     0.0388 |
+| ST       | WASO    | scp_abs_bc    |     0.8966 |      0.0133 |      50.1736 |     0.0195 |
 
 
-# S11. Coverage by subgroup (pre-registered analysis, LOSO; subgroups with ≥ 20 nights)
+# S11. Coverage by subgroup (pre-specified analysis, LOSO; subgroups with ≥ 20 nights)
 
 | stager     | cohort   | method        | level      |   coverage |   count |   n_nights | factor       | param   |
 |:-----------|:---------|:--------------|:-----------|-----------:|--------:|-----------:|:-------------|:--------|
@@ -9981,7 +9929,7 @@ HMM and BCTS cross-fitted within each cohort (5 subject folds), conformal calibr
 | art10        | HMC      | WASO    | cqr_ffbs      |      0.879 |       88.278 |          160.839 |
 | art10        | HMC      | WASO    | norm_reg_ffbs |      0.881 |       88.849 |          162.039 |
 | art10        | HMC      | WASO    | scp_abs_cal   |      0.872 |       94.185 |          176.45  |
-| art10        | HMC      | WASO    | scp_signed    |      0.874 |      116.266 |          207.798 |
+| art10        | HMC      | WASO    | scp_signed    |      0.874 |      116.265 |          207.798 |
 | art10        | SC       | N1%     | ba_loa        |      0.892 |       29.86  |           45.75  |
 | art10        | SC       | N1%     | cqr_ffbs      |      0.931 |       29.46  |           39.061 |
 | art10        | SC       | N1%     | norm_reg_ffbs |      0.937 |       30.125 |           38.25  |
@@ -10216,7 +10164,7 @@ HMM and BCTS cross-fitted within each cohort (5 subject folds), conformal calibr
 | clean        | HMC      | TST     | cqr_ffbs      |      0.91  |       94.803 |          151.953 |
 | clean        | HMC      | TST     | norm_reg_ffbs |      0.908 |       88.407 |          143.114 |
 | clean        | HMC      | TST     | scp_abs_cal   |      0.914 |      107.855 |          169.004 |
-| clean        | HMC      | TST     | scp_signed    |      0.922 |      125.112 |          196.756 |
+| clean        | HMC      | TST     | scp_signed    |      0.922 |      125.112 |          196.757 |
 | clean        | HMC      | WASO    | ba_loa        |      0.931 |      104.481 |          173.993 |
 | clean        | HMC      | WASO    | cqr_ffbs      |      0.912 |       81.809 |          146.897 |
 | clean        | HMC      | WASO    | norm_reg_ffbs |      0.911 |       81.718 |          146.639 |
@@ -10874,7 +10822,7 @@ HMM and BCTS cross-fitted within each cohort (5 subject folds), conformal calibr
 | Leakage through HMM parameters | Transition matrix, prior, calibration and tau use labels | Fitted only on labelled nights that exclude the evaluated night: within-cohort 5-fold cross-fitting by subject; cross-cohort uses SC only. |
 | Leakage into the base stagers | S2 trained on SC | SC predictions are out-of-fold (subject-grouped 5-fold); S1 (YASA) never saw any of the three cohorts. |
 | Pre-processing leakage | YASA features normalise within each night | Per-night normalisation uses only that night's signal (unsupervised, test-time permissible); no cross-night statistics. |
-| Test contamination via hyper-parameter tuning | Possible if tuned on evaluation nights | Stager hyper-parameters fixed a priori; the only fitted HMM quantity (tau) is fitted on source/training-fold nights; conformal methods and all thresholds pre-specified (PREREGISTERED_PROTOCOL.md). |
+| Test contamination via hyper-parameter tuning | Possible if tuned on evaluation nights | Stager hyper-parameters fixed a priori; the only fitted HMM quantity (tau) is fitted on source/training-fold nights; conformal methods and all thresholds pre-specified (PROTOCOL.md). |
 | Duplicate / near-duplicate nights | None expected; each PSG file is a distinct night | File-level uniqueness checked via PhysioNet SHA256 manifests. |
 | Label leakage via unscored epochs | "?"/movement epochs | Marked −1 and excluded identically from reference and automatic parameters. |
 | Temporal leakage | Not applicable (no longitudinal prediction) | – |

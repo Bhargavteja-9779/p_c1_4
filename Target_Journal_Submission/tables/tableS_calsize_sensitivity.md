@@ -1,722 +1,721 @@
-| stager     | cohort   | param   |   cal_frac | method        |   coverage |   mean_width |   interval_score |   n_cal |
-|:-----------|:---------|:--------|-----------:|:--------------|-----------:|-------------:|-----------------:|--------:|
-| lgbm_sc_s0 | HMC      | N1%     |      0.250 | ba_loa        |      0.916 |       29.172 |           43.124 |  38.000 |
-| lgbm_sc_s0 | HMC      | N1%     |      0.250 | ba_reg        |      0.882 |       21.114 |           37.827 |  38.000 |
-| lgbm_sc_s0 | HMC      | N1%     |      0.250 | norm_reg_ffbs |      0.917 |       24.923 |           39.962 |  38.000 |
-| lgbm_sc_s0 | HMC      | N1%     |      0.250 | scp_abs_bc    |      0.920 |       30.168 |           43.697 |  38.000 |
-| lgbm_sc_s0 | HMC      | N1%     |      0.250 | scp_signed    |      0.949 |       42.262 |           51.463 |  38.000 |
-| lgbm_sc_s0 | HMC      | N1%     |      0.500 | ba_loa        |      0.919 |       28.789 |           42.842 |  76.000 |
-| lgbm_sc_s0 | HMC      | N1%     |      0.500 | ba_reg        |      0.903 |       21.338 |           36.370 |  76.000 |
-| lgbm_sc_s0 | HMC      | N1%     |      0.500 | norm_reg_ffbs |      0.904 |       22.713 |           39.902 |  76.000 |
-| lgbm_sc_s0 | HMC      | N1%     |      0.500 | scp_abs_bc    |      0.908 |       27.647 |           43.616 |  76.000 |
-| lgbm_sc_s0 | HMC      | N1%     |      0.500 | scp_signed    |      0.921 |       28.751 |           42.864 |  76.000 |
-| lgbm_sc_s0 | HMC      | N1%     |      0.750 | ba_loa        |      0.919 |       28.727 |           42.904 | 113.000 |
-| lgbm_sc_s0 | HMC      | N1%     |      0.750 | ba_reg        |      0.912 |       21.537 |           36.018 | 113.000 |
-| lgbm_sc_s0 | HMC      | N1%     |      0.750 | norm_reg_ffbs |      0.906 |       22.396 |           39.903 | 113.000 |
-| lgbm_sc_s0 | HMC      | N1%     |      0.750 | scp_abs_bc    |      0.902 |       26.596 |           44.134 | 113.000 |
-| lgbm_sc_s0 | HMC      | N1%     |      0.750 | scp_signed    |      0.912 |       26.281 |           42.172 | 113.000 |
-| lgbm_sc_s0 | HMC      | N2%     |      0.250 | ba_loa        |      0.895 |       39.299 |           53.726 |  38.000 |
-| lgbm_sc_s0 | HMC      | N2%     |      0.250 | ba_reg        |      0.866 |       26.326 |           38.514 |  38.000 |
-| lgbm_sc_s0 | HMC      | N2%     |      0.250 | norm_reg_ffbs |      0.919 |       39.709 |           49.494 |  38.000 |
-| lgbm_sc_s0 | HMC      | N2%     |      0.250 | scp_abs_bc    |      0.913 |       43.119 |           54.835 |  38.000 |
-| lgbm_sc_s0 | HMC      | N2%     |      0.250 | scp_signed    |      0.949 |       54.091 |           60.829 |  38.000 |
-| lgbm_sc_s0 | HMC      | N2%     |      0.500 | ba_loa        |      0.895 |       38.793 |           52.935 |  76.000 |
-| lgbm_sc_s0 | HMC      | N2%     |      0.500 | ba_reg        |      0.889 |       26.748 |           37.153 |  76.000 |
-| lgbm_sc_s0 | HMC      | N2%     |      0.500 | norm_reg_ffbs |      0.903 |       36.706 |           48.413 |  76.000 |
-| lgbm_sc_s0 | HMC      | N2%     |      0.500 | scp_abs_bc    |      0.906 |       40.488 |           53.137 |  76.000 |
-| lgbm_sc_s0 | HMC      | N2%     |      0.500 | scp_signed    |      0.920 |       43.600 |           53.797 |  76.000 |
-| lgbm_sc_s0 | HMC      | N2%     |      0.750 | ba_loa        |      0.891 |       38.652 |           52.868 | 113.000 |
-| lgbm_sc_s0 | HMC      | N2%     |      0.750 | ba_reg        |      0.897 |       26.978 |           36.899 | 113.000 |
-| lgbm_sc_s0 | HMC      | N2%     |      0.750 | norm_reg_ffbs |      0.898 |       35.479 |           47.821 | 113.000 |
-| lgbm_sc_s0 | HMC      | N2%     |      0.750 | scp_abs_bc    |      0.899 |       39.766 |           53.054 | 113.000 |
-| lgbm_sc_s0 | HMC      | N2%     |      0.750 | scp_signed    |      0.909 |       41.382 |           53.297 | 113.000 |
-| lgbm_sc_s0 | HMC      | N3%     |      0.250 | ba_loa        |      0.896 |       33.657 |           47.441 |  38.000 |
-| lgbm_sc_s0 | HMC      | N3%     |      0.250 | ba_reg        |      0.849 |       27.910 |           47.066 |  38.000 |
-| lgbm_sc_s0 | HMC      | N3%     |      0.250 | norm_reg_ffbs |      0.920 |       41.590 |           58.870 |  38.000 |
-| lgbm_sc_s0 | HMC      | N3%     |      0.250 | scp_abs_bc    |      0.918 |       37.069 |           47.949 |  38.000 |
-| lgbm_sc_s0 | HMC      | N3%     |      0.250 | scp_signed    |      0.950 |       42.607 |           49.012 |  38.000 |
-| lgbm_sc_s0 | HMC      | N3%     |      0.500 | ba_loa        |      0.896 |       33.471 |           46.968 |  76.000 |
-| lgbm_sc_s0 | HMC      | N3%     |      0.500 | ba_reg        |      0.868 |       28.361 |           45.297 |  76.000 |
-| lgbm_sc_s0 | HMC      | N3%     |      0.500 | norm_reg_ffbs |      0.905 |       37.289 |           57.350 |  76.000 |
-| lgbm_sc_s0 | HMC      | N3%     |      0.500 | scp_abs_bc    |      0.905 |       34.799 |           47.355 |  76.000 |
-| lgbm_sc_s0 | HMC      | N3%     |      0.500 | scp_signed    |      0.921 |       37.631 |           48.258 |  76.000 |
-| lgbm_sc_s0 | HMC      | N3%     |      0.750 | ba_loa        |      0.890 |       33.336 |           47.345 | 113.000 |
-| lgbm_sc_s0 | HMC      | N3%     |      0.750 | ba_reg        |      0.871 |       28.465 |           45.582 | 113.000 |
-| lgbm_sc_s0 | HMC      | N3%     |      0.750 | norm_reg_ffbs |      0.902 |       36.594 |           57.825 | 113.000 |
-| lgbm_sc_s0 | HMC      | N3%     |      0.750 | scp_abs_bc    |      0.897 |       34.161 |           47.279 | 113.000 |
-| lgbm_sc_s0 | HMC      | N3%     |      0.750 | scp_signed    |      0.907 |       35.597 |           47.522 | 113.000 |
-| lgbm_sc_s0 | HMC      | REM%    |      0.250 | ba_loa        |      0.901 |       18.961 |           26.155 |  38.000 |
-| lgbm_sc_s0 | HMC      | REM%    |      0.250 | ba_reg        |      0.857 |       14.723 |           24.061 |  38.000 |
-| lgbm_sc_s0 | HMC      | REM%    |      0.250 | norm_reg_ffbs |      0.919 |       23.109 |           27.474 |  38.000 |
-| lgbm_sc_s0 | HMC      | REM%    |      0.250 | scp_abs_bc    |      0.911 |       19.706 |           26.306 |  38.000 |
-| lgbm_sc_s0 | HMC      | REM%    |      0.250 | scp_signed    |      0.945 |       25.784 |           30.510 |  38.000 |
-| lgbm_sc_s0 | HMC      | REM%    |      0.500 | ba_loa        |      0.910 |       18.883 |           25.428 |  76.000 |
-| lgbm_sc_s0 | HMC      | REM%    |      0.500 | ba_reg        |      0.876 |       15.009 |           23.211 |  76.000 |
-| lgbm_sc_s0 | HMC      | REM%    |      0.500 | norm_reg_ffbs |      0.908 |       21.972 |           26.816 |  76.000 |
-| lgbm_sc_s0 | HMC      | REM%    |      0.500 | scp_abs_bc    |      0.904 |       18.453 |           25.288 |  76.000 |
-| lgbm_sc_s0 | HMC      | REM%    |      0.500 | scp_signed    |      0.921 |       19.277 |           25.639 |  76.000 |
-| lgbm_sc_s0 | HMC      | REM%    |      0.750 | ba_loa        |      0.914 |       18.860 |           25.010 | 113.000 |
-| lgbm_sc_s0 | HMC      | REM%    |      0.750 | ba_reg        |      0.885 |       15.172 |           22.759 | 113.000 |
-| lgbm_sc_s0 | HMC      | REM%    |      0.750 | norm_reg_ffbs |      0.906 |       21.587 |           26.396 | 113.000 |
-| lgbm_sc_s0 | HMC      | REM%    |      0.750 | scp_abs_bc    |      0.903 |       18.122 |           24.985 | 113.000 |
-| lgbm_sc_s0 | HMC      | REM%    |      0.750 | scp_signed    |      0.912 |       18.030 |           24.708 | 113.000 |
-| lgbm_sc_s0 | HMC      | REML    |      0.250 | ba_loa        |      0.897 |      191.942 |          316.692 |  38.000 |
-| lgbm_sc_s0 | HMC      | REML    |      0.250 | ba_reg        |      0.862 |      166.208 |          344.246 |  38.000 |
-| lgbm_sc_s0 | HMC      | REML    |      0.250 | norm_reg_ffbs |      0.917 |      235.858 |          387.656 |  38.000 |
-| lgbm_sc_s0 | HMC      | REML    |      0.250 | scp_abs_bc    |      0.919 |      212.725 |          314.599 |  38.000 |
-| lgbm_sc_s0 | HMC      | REML    |      0.250 | scp_signed    |      0.948 |      302.472 |          352.921 |  38.000 |
-| lgbm_sc_s0 | HMC      | REML    |      0.500 | ba_loa        |      0.902 |      192.172 |          316.555 |  75.000 |
-| lgbm_sc_s0 | HMC      | REML    |      0.500 | ba_reg        |      0.883 |      169.463 |          324.560 |  75.000 |
-| lgbm_sc_s0 | HMC      | REML    |      0.500 | norm_reg_ffbs |      0.905 |      217.121 |          398.000 |  75.000 |
-| lgbm_sc_s0 | HMC      | REML    |      0.500 | scp_abs_bc    |      0.904 |      197.178 |          317.346 |  75.000 |
-| lgbm_sc_s0 | HMC      | REML    |      0.500 | scp_signed    |      0.922 |      246.289 |          331.992 |  75.000 |
-| lgbm_sc_s0 | HMC      | REML    |      0.750 | ba_loa        |      0.903 |      192.300 |          315.602 | 112.000 |
-| lgbm_sc_s0 | HMC      | REML    |      0.750 | ba_reg        |      0.890 |      169.383 |          320.863 | 112.000 |
-| lgbm_sc_s0 | HMC      | REML    |      0.750 | norm_reg_ffbs |      0.902 |      207.083 |          403.189 | 112.000 |
-| lgbm_sc_s0 | HMC      | REML    |      0.750 | scp_abs_bc    |      0.896 |      189.362 |          319.147 | 112.000 |
-| lgbm_sc_s0 | HMC      | REML    |      0.750 | scp_signed    |      0.910 |      230.306 |          325.431 | 112.000 |
-| lgbm_sc_s0 | HMC      | SOL     |      0.250 | ba_loa        |      0.927 |       29.703 |           61.089 |  38.000 |
-| lgbm_sc_s0 | HMC      | SOL     |      0.250 | ba_reg        |      0.874 |       22.332 |           57.414 |  38.000 |
-| lgbm_sc_s0 | HMC      | SOL     |      0.250 | norm_reg_ffbs |      0.922 |       30.061 |           71.075 |  38.000 |
-| lgbm_sc_s0 | HMC      | SOL     |      0.250 | scp_abs_bc    |      0.921 |       29.021 |           61.881 |  38.000 |
-| lgbm_sc_s0 | HMC      | SOL     |      0.250 | scp_signed    |      0.949 |       55.307 |           79.356 |  38.000 |
-| lgbm_sc_s0 | HMC      | SOL     |      0.500 | ba_loa        |      0.939 |       30.772 |           59.633 |  76.000 |
-| lgbm_sc_s0 | HMC      | SOL     |      0.500 | ba_reg        |      0.909 |       22.974 |           53.323 |  76.000 |
-| lgbm_sc_s0 | HMC      | SOL     |      0.500 | norm_reg_ffbs |      0.911 |       25.912 |           71.778 |  76.000 |
-| lgbm_sc_s0 | HMC      | SOL     |      0.500 | scp_abs_bc    |      0.908 |       23.253 |           60.567 |  76.000 |
-| lgbm_sc_s0 | HMC      | SOL     |      0.500 | scp_signed    |      0.922 |       26.399 |           60.559 |  76.000 |
-| lgbm_sc_s0 | HMC      | SOL     |      0.750 | ba_loa        |      0.939 |       31.143 |           59.532 | 113.000 |
-| lgbm_sc_s0 | HMC      | SOL     |      0.750 | ba_reg        |      0.918 |       23.249 |           53.195 | 113.000 |
-| lgbm_sc_s0 | HMC      | SOL     |      0.750 | norm_reg_ffbs |      0.897 |       24.333 |           76.497 | 113.000 |
-| lgbm_sc_s0 | HMC      | SOL     |      0.750 | scp_abs_bc    |      0.900 |       21.248 |           60.641 | 113.000 |
-| lgbm_sc_s0 | HMC      | SOL     |      0.750 | scp_signed    |      0.912 |       22.133 |           60.754 | 113.000 |
-| lgbm_sc_s0 | HMC      | TST     |      0.250 | ba_loa        |      0.894 |      159.070 |          246.661 |  38.000 |
-| lgbm_sc_s0 | HMC      | TST     |      0.250 | ba_reg        |      0.837 |      129.499 |          242.960 |  38.000 |
-| lgbm_sc_s0 | HMC      | TST     |      0.250 | norm_reg_ffbs |      0.919 |      126.783 |          166.617 |  38.000 |
-| lgbm_sc_s0 | HMC      | TST     |      0.250 | scp_abs_bc    |      0.916 |      181.169 |          252.348 |  38.000 |
-| lgbm_sc_s0 | HMC      | TST     |      0.250 | scp_signed    |      0.945 |      255.165 |          304.286 |  38.000 |
-| lgbm_sc_s0 | HMC      | TST     |      0.500 | ba_loa        |      0.899 |      159.304 |          240.716 |  76.000 |
-| lgbm_sc_s0 | HMC      | TST     |      0.500 | ba_reg        |      0.856 |      131.248 |          231.576 |  76.000 |
-| lgbm_sc_s0 | HMC      | TST     |      0.500 | norm_reg_ffbs |      0.906 |      116.998 |          163.096 |  76.000 |
-| lgbm_sc_s0 | HMC      | TST     |      0.500 | scp_abs_bc    |      0.907 |      167.646 |          242.682 |  76.000 |
-| lgbm_sc_s0 | HMC      | TST     |      0.500 | scp_signed    |      0.923 |      188.975 |          252.150 |  76.000 |
-| lgbm_sc_s0 | HMC      | TST     |      0.750 | ba_loa        |      0.899 |      159.166 |          239.021 | 113.000 |
-| lgbm_sc_s0 | HMC      | TST     |      0.750 | ba_reg        |      0.867 |      132.067 |          227.549 | 113.000 |
-| lgbm_sc_s0 | HMC      | TST     |      0.750 | norm_reg_ffbs |      0.906 |      111.550 |          160.732 | 113.000 |
-| lgbm_sc_s0 | HMC      | TST     |      0.750 | scp_abs_bc    |      0.904 |      163.996 |          241.104 | 113.000 |
-| lgbm_sc_s0 | HMC      | TST     |      0.750 | scp_signed    |      0.915 |      177.150 |          246.234 | 113.000 |
-| lgbm_sc_s0 | HMC      | WASO    |      0.250 | ba_loa        |      0.895 |      112.515 |          186.049 |  38.000 |
-| lgbm_sc_s0 | HMC      | WASO    |      0.250 | ba_reg        |      0.890 |      107.053 |          162.903 |  38.000 |
-| lgbm_sc_s0 | HMC      | WASO    |      0.250 | norm_reg_ffbs |      0.919 |      104.945 |          139.541 |  38.000 |
-| lgbm_sc_s0 | HMC      | WASO    |      0.250 | scp_abs_bc    |      0.912 |      120.139 |          184.128 |  38.000 |
-| lgbm_sc_s0 | HMC      | WASO    |      0.250 | scp_signed    |      0.944 |      149.333 |          196.586 |  38.000 |
-| lgbm_sc_s0 | HMC      | WASO    |      0.500 | ba_loa        |      0.905 |      114.029 |          180.733 |  76.000 |
-| lgbm_sc_s0 | HMC      | WASO    |      0.500 | ba_reg        |      0.912 |      112.009 |          151.695 |  76.000 |
-| lgbm_sc_s0 | HMC      | WASO    |      0.500 | norm_reg_ffbs |      0.907 |       96.421 |          137.588 |  76.000 |
-| lgbm_sc_s0 | HMC      | WASO    |      0.500 | scp_abs_bc    |      0.904 |      113.458 |          181.175 |  76.000 |
-| lgbm_sc_s0 | HMC      | WASO    |      0.500 | scp_signed    |      0.918 |      123.188 |          184.259 |  76.000 |
-| lgbm_sc_s0 | HMC      | WASO    |      0.750 | ba_loa        |      0.911 |      114.413 |          177.559 | 113.000 |
-| lgbm_sc_s0 | HMC      | WASO    |      0.750 | ba_reg        |      0.917 |      114.479 |          148.404 | 113.000 |
-| lgbm_sc_s0 | HMC      | WASO    |      0.750 | norm_reg_ffbs |      0.902 |       94.695 |          137.306 | 113.000 |
-| lgbm_sc_s0 | HMC      | WASO    |      0.750 | scp_abs_bc    |      0.906 |      111.657 |          179.367 | 113.000 |
-| lgbm_sc_s0 | HMC      | WASO    |      0.750 | scp_signed    |      0.914 |      118.058 |          180.555 | 113.000 |
-| lgbm_sc_s0 | SC       | N1%     |      0.250 | ba_loa        |      0.892 |       26.911 |           42.768 |  39.265 |
-| lgbm_sc_s0 | SC       | N1%     |      0.250 | ba_reg        |      0.875 |       23.843 |           37.640 |  39.265 |
-| lgbm_sc_s0 | SC       | N1%     |      0.250 | norm_reg_ffbs |      0.901 |       26.259 |           40.545 |  39.265 |
-| lgbm_sc_s0 | SC       | N1%     |      0.250 | scp_abs_bc    |      0.897 |       28.247 |           43.226 |  39.265 |
-| lgbm_sc_s0 | SC       | N1%     |      0.250 | scp_signed    |      0.903 |       29.996 |           43.645 |  39.265 |
-| lgbm_sc_s0 | SC       | N1%     |      0.500 | ba_loa        |      0.890 |       26.757 |           42.682 |  76.505 |
-| lgbm_sc_s0 | SC       | N1%     |      0.500 | ba_reg        |      0.891 |       24.141 |           36.448 |  76.505 |
-| lgbm_sc_s0 | SC       | N1%     |      0.500 | norm_reg_ffbs |      0.904 |       26.133 |           40.241 |  76.505 |
-| lgbm_sc_s0 | SC       | N1%     |      0.500 | scp_abs_bc    |      0.901 |       28.468 |           42.800 |  76.505 |
-| lgbm_sc_s0 | SC       | N1%     |      0.500 | scp_signed    |      0.916 |       31.143 |           42.976 |  76.505 |
-| lgbm_sc_s0 | SC       | N1%     |      0.750 | ba_loa        |      0.894 |       26.886 |           42.223 | 113.765 |
-| lgbm_sc_s0 | SC       | N1%     |      0.750 | ba_reg        |      0.904 |       24.227 |           35.999 | 113.765 |
-| lgbm_sc_s0 | SC       | N1%     |      0.750 | norm_reg_ffbs |      0.900 |       25.626 |           40.601 | 113.765 |
-| lgbm_sc_s0 | SC       | N1%     |      0.750 | scp_abs_bc    |      0.901 |       27.852 |           42.303 | 113.765 |
-| lgbm_sc_s0 | SC       | N1%     |      0.750 | scp_signed    |      0.911 |       28.288 |           41.720 | 113.765 |
-| lgbm_sc_s0 | SC       | N2%     |      0.250 | ba_loa        |      0.892 |       30.939 |           45.043 |  39.265 |
-| lgbm_sc_s0 | SC       | N2%     |      0.250 | ba_reg        |      0.862 |       27.192 |           43.870 |  39.265 |
-| lgbm_sc_s0 | SC       | N2%     |      0.250 | norm_reg_ffbs |      0.899 |       30.105 |           42.244 |  39.265 |
-| lgbm_sc_s0 | SC       | N2%     |      0.250 | scp_abs_bc    |      0.889 |       31.718 |           46.201 |  39.265 |
-| lgbm_sc_s0 | SC       | N2%     |      0.250 | scp_signed    |      0.896 |       35.293 |           48.789 |  39.265 |
-| lgbm_sc_s0 | SC       | N2%     |      0.500 | ba_loa        |      0.889 |       30.522 |           45.070 |  76.505 |
-| lgbm_sc_s0 | SC       | N2%     |      0.500 | ba_reg        |      0.871 |       27.598 |           43.304 |  76.505 |
-| lgbm_sc_s0 | SC       | N2%     |      0.500 | norm_reg_ffbs |      0.904 |       30.520 |           42.032 |  76.505 |
-| lgbm_sc_s0 | SC       | N2%     |      0.500 | scp_abs_bc    |      0.894 |       32.140 |           45.935 |  76.505 |
-| lgbm_sc_s0 | SC       | N2%     |      0.500 | scp_signed    |      0.911 |       36.256 |           47.647 |  76.505 |
-| lgbm_sc_s0 | SC       | N2%     |      0.750 | ba_loa        |      0.895 |       30.772 |           44.503 | 113.765 |
-| lgbm_sc_s0 | SC       | N2%     |      0.750 | ba_reg        |      0.877 |       28.124 |           42.362 | 113.765 |
-| lgbm_sc_s0 | SC       | N2%     |      0.750 | norm_reg_ffbs |      0.898 |       30.173 |           42.081 | 113.765 |
-| lgbm_sc_s0 | SC       | N2%     |      0.750 | scp_abs_bc    |      0.892 |       30.914 |           44.995 | 113.765 |
-| lgbm_sc_s0 | SC       | N2%     |      0.750 | scp_signed    |      0.902 |       33.753 |           46.402 | 113.765 |
-| lgbm_sc_s0 | SC       | N3%     |      0.250 | ba_loa        |      0.878 |       11.800 |           19.596 |  39.265 |
-| lgbm_sc_s0 | SC       | N3%     |      0.250 | ba_reg        |      0.840 |       10.731 |           21.253 |  39.265 |
-| lgbm_sc_s0 | SC       | N3%     |      0.250 | norm_reg_ffbs |      0.904 |       12.227 |           17.746 |  39.265 |
-| lgbm_sc_s0 | SC       | N3%     |      0.250 | scp_abs_bc    |      0.893 |       12.883 |           19.699 |  39.265 |
-| lgbm_sc_s0 | SC       | N3%     |      0.250 | scp_signed    |      0.899 |       14.102 |           20.673 |  39.265 |
-| lgbm_sc_s0 | SC       | N3%     |      0.500 | ba_loa        |      0.887 |       11.860 |           19.038 |  76.505 |
-| lgbm_sc_s0 | SC       | N3%     |      0.500 | ba_reg        |      0.853 |       10.980 |           20.274 |  76.505 |
-| lgbm_sc_s0 | SC       | N3%     |      0.500 | norm_reg_ffbs |      0.915 |       12.421 |           17.353 |  76.505 |
-| lgbm_sc_s0 | SC       | N3%     |      0.500 | scp_abs_bc    |      0.910 |       13.194 |           18.986 |  76.505 |
-| lgbm_sc_s0 | SC       | N3%     |      0.500 | scp_signed    |      0.923 |       14.458 |           19.364 |  76.505 |
-| lgbm_sc_s0 | SC       | N3%     |      0.750 | ba_loa        |      0.886 |       11.835 |           19.128 | 113.765 |
-| lgbm_sc_s0 | SC       | N3%     |      0.750 | ba_reg        |      0.854 |       11.089 |           20.299 | 113.765 |
-| lgbm_sc_s0 | SC       | N3%     |      0.750 | norm_reg_ffbs |      0.903 |       11.740 |           17.807 | 113.765 |
-| lgbm_sc_s0 | SC       | N3%     |      0.750 | scp_abs_bc    |      0.899 |       12.585 |           19.062 | 113.765 |
-| lgbm_sc_s0 | SC       | N3%     |      0.750 | scp_signed    |      0.912 |       13.811 |           19.655 | 113.765 |
-| lgbm_sc_s0 | SC       | REM%    |      0.250 | ba_loa        |      0.916 |       18.916 |           30.266 |  39.265 |
-| lgbm_sc_s0 | SC       | REM%    |      0.250 | ba_reg        |      0.854 |       14.569 |           29.963 |  39.265 |
-| lgbm_sc_s0 | SC       | REM%    |      0.250 | norm_reg_ffbs |      0.901 |       22.881 |           31.724 |  39.265 |
-| lgbm_sc_s0 | SC       | REM%    |      0.250 | scp_abs_bc    |      0.891 |       16.317 |           29.273 |  39.265 |
-| lgbm_sc_s0 | SC       | REM%    |      0.250 | scp_signed    |      0.897 |       20.019 |           32.207 |  39.265 |
-| lgbm_sc_s0 | SC       | REM%    |      0.500 | ba_loa        |      0.929 |       18.918 |           29.383 |  76.505 |
-| lgbm_sc_s0 | SC       | REM%    |      0.500 | ba_reg        |      0.879 |       14.567 |           28.371 |  76.505 |
-| lgbm_sc_s0 | SC       | REM%    |      0.500 | norm_reg_ffbs |      0.908 |       22.850 |           31.251 |  76.505 |
-| lgbm_sc_s0 | SC       | REM%    |      0.500 | scp_abs_bc    |      0.901 |       16.271 |           28.562 |  76.505 |
-| lgbm_sc_s0 | SC       | REM%    |      0.500 | scp_signed    |      0.920 |       18.716 |           29.465 |  76.505 |
-| lgbm_sc_s0 | SC       | REM%    |      0.750 | ba_loa        |      0.944 |       19.214 |           28.556 | 113.765 |
-| lgbm_sc_s0 | SC       | REM%    |      0.750 | ba_reg        |      0.903 |       14.750 |           26.869 | 113.765 |
-| lgbm_sc_s0 | SC       | REM%    |      0.750 | norm_reg_ffbs |      0.909 |       22.657 |           30.588 | 113.765 |
-| lgbm_sc_s0 | SC       | REM%    |      0.750 | scp_abs_bc    |      0.906 |       16.116 |           27.638 | 113.765 |
-| lgbm_sc_s0 | SC       | REM%    |      0.750 | scp_signed    |      0.920 |       17.625 |           27.919 | 113.765 |
-| lgbm_sc_s0 | SC       | REML    |      0.250 | ba_loa        |      0.908 |      118.117 |          204.114 |  39.265 |
-| lgbm_sc_s0 | SC       | REML    |      0.250 | ba_reg        |      0.842 |       89.874 |          227.163 |  39.265 |
-| lgbm_sc_s0 | SC       | REML    |      0.250 | norm_reg_ffbs |      0.901 |       81.016 |          149.386 |  39.265 |
-| lgbm_sc_s0 | SC       | REML    |      0.250 | scp_abs_bc    |      0.900 |      111.643 |          204.427 |  39.265 |
-| lgbm_sc_s0 | SC       | REML    |      0.250 | scp_signed    |      0.903 |      132.663 |          202.398 |  39.265 |
-| lgbm_sc_s0 | SC       | REML    |      0.500 | ba_loa        |      0.913 |      119.252 |          201.059 |  76.505 |
-| lgbm_sc_s0 | SC       | REML    |      0.500 | ba_reg        |      0.846 |       90.054 |          214.227 |  76.505 |
-| lgbm_sc_s0 | SC       | REML    |      0.500 | norm_reg_ffbs |      0.903 |       79.249 |          148.149 |  76.505 |
-| lgbm_sc_s0 | SC       | REML    |      0.500 | scp_abs_bc    |      0.907 |      115.552 |          201.204 |  76.505 |
-| lgbm_sc_s0 | SC       | REML    |      0.500 | scp_signed    |      0.915 |      131.458 |          195.810 |  76.505 |
-| lgbm_sc_s0 | SC       | REML    |      0.750 | ba_loa        |      0.912 |      119.986 |          202.930 | 113.765 |
-| lgbm_sc_s0 | SC       | REML    |      0.750 | ba_reg        |      0.850 |       90.751 |          211.872 | 113.765 |
-| lgbm_sc_s0 | SC       | REML    |      0.750 | norm_reg_ffbs |      0.903 |       78.435 |          148.986 | 113.765 |
-| lgbm_sc_s0 | SC       | REML    |      0.750 | scp_abs_bc    |      0.900 |      109.483 |          204.169 | 113.765 |
-| lgbm_sc_s0 | SC       | REML    |      0.750 | scp_signed    |      0.909 |      117.974 |          189.371 | 113.765 |
-| lgbm_sc_s0 | SC       | SOL     |      0.250 | ba_loa        |      0.924 |       32.158 |           66.346 |  39.265 |
-| lgbm_sc_s0 | SC       | SOL     |      0.250 | ba_reg        |      0.879 |       25.036 |           67.265 |  39.265 |
-| lgbm_sc_s0 | SC       | SOL     |      0.250 | norm_reg_ffbs |      0.905 |       23.333 |           55.804 |  39.265 |
-| lgbm_sc_s0 | SC       | SOL     |      0.250 | scp_abs_bc    |      0.893 |       24.257 |           64.394 |  39.265 |
-| lgbm_sc_s0 | SC       | SOL     |      0.250 | scp_signed    |      0.902 |       38.633 |           72.915 |  39.265 |
-| lgbm_sc_s0 | SC       | SOL     |      0.500 | ba_loa        |      0.949 |       34.627 |           64.786 |  76.505 |
-| lgbm_sc_s0 | SC       | SOL     |      0.500 | ba_reg        |      0.898 |       24.819 |           64.313 |  76.505 |
-| lgbm_sc_s0 | SC       | SOL     |      0.500 | norm_reg_ffbs |      0.911 |       23.022 |           55.464 |  76.505 |
-| lgbm_sc_s0 | SC       | SOL     |      0.500 | scp_abs_bc    |      0.903 |       24.890 |           63.346 |  76.505 |
-| lgbm_sc_s0 | SC       | SOL     |      0.500 | scp_signed    |      0.918 |       38.401 |           70.352 |  76.505 |
-| lgbm_sc_s0 | SC       | SOL     |      0.750 | ba_loa        |      0.958 |       35.376 |           65.416 | 113.765 |
-| lgbm_sc_s0 | SC       | SOL     |      0.750 | ba_reg        |      0.898 |       24.648 |           64.681 | 113.765 |
-| lgbm_sc_s0 | SC       | SOL     |      0.750 | norm_reg_ffbs |      0.896 |       22.095 |           57.024 | 113.765 |
-| lgbm_sc_s0 | SC       | SOL     |      0.750 | scp_abs_bc    |      0.893 |       24.219 |           64.188 | 113.765 |
-| lgbm_sc_s0 | SC       | SOL     |      0.750 | scp_signed    |      0.905 |       30.417 |           66.967 | 113.765 |
-| lgbm_sc_s0 | SC       | TST     |      0.250 | ba_loa        |      0.896 |       90.745 |          143.319 |  39.265 |
-| lgbm_sc_s0 | SC       | TST     |      0.250 | ba_reg        |      0.850 |       75.808 |          149.427 |  39.265 |
-| lgbm_sc_s0 | SC       | TST     |      0.250 | norm_reg_ffbs |      0.905 |       71.800 |          117.773 |  39.265 |
-| lgbm_sc_s0 | SC       | TST     |      0.250 | scp_abs_bc    |      0.897 |       94.838 |          146.857 |  39.265 |
-| lgbm_sc_s0 | SC       | TST     |      0.250 | scp_signed    |      0.904 |      104.907 |          152.951 |  39.265 |
-| lgbm_sc_s0 | SC       | TST     |      0.500 | ba_loa        |      0.901 |       90.900 |          140.896 |  76.505 |
-| lgbm_sc_s0 | SC       | TST     |      0.500 | ba_reg        |      0.860 |       76.101 |          144.874 |  76.505 |
-| lgbm_sc_s0 | SC       | TST     |      0.500 | norm_reg_ffbs |      0.907 |       70.608 |          117.493 |  76.505 |
-| lgbm_sc_s0 | SC       | TST     |      0.500 | scp_abs_bc    |      0.903 |       94.347 |          143.827 |  76.505 |
-| lgbm_sc_s0 | SC       | TST     |      0.500 | scp_signed    |      0.918 |      108.832 |          149.464 |  76.505 |
-| lgbm_sc_s0 | SC       | TST     |      0.750 | ba_loa        |      0.905 |       91.070 |          141.468 | 113.765 |
-| lgbm_sc_s0 | SC       | TST     |      0.750 | ba_reg        |      0.871 |       76.849 |          144.167 | 113.765 |
-| lgbm_sc_s0 | SC       | TST     |      0.750 | norm_reg_ffbs |      0.904 |       66.809 |          117.869 | 113.765 |
-| lgbm_sc_s0 | SC       | TST     |      0.750 | scp_abs_bc    |      0.901 |       90.314 |          143.499 | 113.765 |
-| lgbm_sc_s0 | SC       | TST     |      0.750 | scp_signed    |      0.909 |       99.293 |          145.012 | 113.765 |
-| lgbm_sc_s0 | SC       | WASO    |      0.250 | ba_loa        |      0.928 |      101.765 |          186.483 |  39.265 |
-| lgbm_sc_s0 | SC       | WASO    |      0.250 | ba_reg        |      0.859 |       84.735 |          144.992 |  39.265 |
-| lgbm_sc_s0 | SC       | WASO    |      0.250 | norm_reg_ffbs |      0.905 |      180.697 |          251.611 |  39.265 |
-| lgbm_sc_s0 | SC       | WASO    |      0.250 | scp_abs_bc    |      0.903 |       82.751 |          184.962 |  39.265 |
-| lgbm_sc_s0 | SC       | WASO    |      0.250 | scp_signed    |      0.911 |       85.311 |          173.071 |  39.265 |
-| lgbm_sc_s0 | SC       | WASO    |      0.500 | ba_loa        |      0.934 |      104.444 |          183.855 |  76.505 |
-| lgbm_sc_s0 | SC       | WASO    |      0.500 | ba_reg        |      0.858 |       90.322 |          135.657 |  76.505 |
-| lgbm_sc_s0 | SC       | WASO    |      0.500 | norm_reg_ffbs |      0.903 |      178.364 |          250.758 |  76.505 |
-| lgbm_sc_s0 | SC       | WASO    |      0.500 | scp_abs_bc    |      0.902 |       80.781 |          185.066 |  76.505 |
-| lgbm_sc_s0 | SC       | WASO    |      0.500 | scp_signed    |      0.924 |       87.036 |          170.174 |  76.505 |
-| lgbm_sc_s0 | SC       | WASO    |      0.750 | ba_loa        |      0.935 |      105.331 |          187.622 | 113.765 |
-| lgbm_sc_s0 | SC       | WASO    |      0.750 | ba_reg        |      0.847 |       92.143 |          132.809 | 113.765 |
-| lgbm_sc_s0 | SC       | WASO    |      0.750 | norm_reg_ffbs |      0.897 |      177.064 |          254.723 | 113.765 |
-| lgbm_sc_s0 | SC       | WASO    |      0.750 | scp_abs_bc    |      0.900 |       77.916 |          188.785 | 113.765 |
-| lgbm_sc_s0 | SC       | WASO    |      0.750 | scp_signed    |      0.915 |       79.041 |          175.173 | 113.765 |
-| lgbm_sc_s0 | ST       | N1%     |      0.250 | ba_loa        |      0.878 |       15.794 |           25.699 |  12.000 |
-| lgbm_sc_s0 | ST       | N1%     |      0.250 | ba_reg        |      0.744 |       11.787 |           26.866 |  12.000 |
-| lgbm_sc_s0 | ST       | N1%     |      0.250 | norm_reg_ffbs |      0.902 |       17.271 |           24.890 |  12.000 |
-| lgbm_sc_s0 | ST       | N1%     |      0.250 | scp_abs_bc    |      0.864 |       16.582 |           27.761 |  12.000 |
-| lgbm_sc_s0 | ST       | N1%     |      0.250 | scp_signed    |      1.000 |      100.000 |          100.000 |  12.000 |
-| lgbm_sc_s0 | ST       | N1%     |      0.500 | ba_loa        |      0.903 |       15.817 |           23.575 |  22.000 |
-| lgbm_sc_s0 | ST       | N1%     |      0.500 | ba_reg        |      0.823 |       13.067 |           19.746 |  22.000 |
-| lgbm_sc_s0 | ST       | N1%     |      0.500 | norm_reg_ffbs |      0.910 |       17.670 |           25.313 |  22.000 |
-| lgbm_sc_s0 | ST       | N1%     |      0.500 | scp_abs_bc    |      0.879 |       14.423 |           23.124 |  22.000 |
-| lgbm_sc_s0 | ST       | N1%     |      0.500 | scp_signed    |      0.895 |       15.130 |           22.530 |  22.000 |
-| lgbm_sc_s0 | ST       | N1%     |      0.750 | ba_loa        |      0.929 |       15.871 |           22.623 |  32.000 |
-| lgbm_sc_s0 | ST       | N1%     |      0.750 | ba_reg        |      0.860 |       13.653 |           17.762 |  32.000 |
-| lgbm_sc_s0 | ST       | N1%     |      0.750 | norm_reg_ffbs |      0.911 |       15.697 |           22.951 |  32.000 |
-| lgbm_sc_s0 | ST       | N1%     |      0.750 | scp_abs_bc    |      0.864 |       13.786 |           22.496 |  32.000 |
-| lgbm_sc_s0 | ST       | N1%     |      0.750 | scp_signed    |      0.938 |       16.262 |           20.501 |  32.000 |
-| lgbm_sc_s0 | ST       | N2%     |      0.250 | ba_loa        |      0.865 |       34.142 |           45.666 |  12.000 |
-| lgbm_sc_s0 | ST       | N2%     |      0.250 | ba_reg        |      0.742 |       27.555 |           55.178 |  12.000 |
-| lgbm_sc_s0 | ST       | N2%     |      0.250 | norm_reg_ffbs |      0.899 |       34.275 |           41.875 |  12.000 |
-| lgbm_sc_s0 | ST       | N2%     |      0.250 | scp_abs_bc    |      0.859 |       33.743 |           46.076 |  12.000 |
-| lgbm_sc_s0 | ST       | N2%     |      0.250 | scp_signed    |      1.000 |      100.000 |          100.000 |  12.000 |
-| lgbm_sc_s0 | ST       | N2%     |      0.500 | ba_loa        |      0.860 |       33.160 |           44.464 |  22.000 |
-| lgbm_sc_s0 | ST       | N2%     |      0.500 | ba_reg        |      0.821 |       29.651 |           46.613 |  22.000 |
-| lgbm_sc_s0 | ST       | N2%     |      0.500 | norm_reg_ffbs |      0.905 |       31.636 |           38.118 |  22.000 |
-| lgbm_sc_s0 | ST       | N2%     |      0.500 | scp_abs_bc    |      0.872 |       33.977 |           44.602 |  22.000 |
-| lgbm_sc_s0 | ST       | N2%     |      0.500 | scp_signed    |      0.879 |       35.734 |           45.201 |  22.000 |
-| lgbm_sc_s0 | ST       | N2%     |      0.750 | ba_loa        |      0.863 |       33.014 |           43.581 |  32.000 |
-| lgbm_sc_s0 | ST       | N2%     |      0.750 | ba_reg        |      0.851 |       30.695 |           44.009 |  32.000 |
-| lgbm_sc_s0 | ST       | N2%     |      0.750 | norm_reg_ffbs |      0.896 |       30.636 |           36.738 |  32.000 |
-| lgbm_sc_s0 | ST       | N2%     |      0.750 | scp_abs_bc    |      0.877 |       34.188 |           43.678 |  32.000 |
-| lgbm_sc_s0 | ST       | N2%     |      0.750 | scp_signed    |      0.914 |       38.780 |           43.514 |  32.000 |
-| lgbm_sc_s0 | ST       | N3%     |      0.250 | ba_loa        |      0.849 |       24.097 |           38.850 |  12.000 |
-| lgbm_sc_s0 | ST       | N3%     |      0.250 | ba_reg        |      0.698 |       19.611 |           53.305 |  12.000 |
-| lgbm_sc_s0 | ST       | N3%     |      0.250 | norm_reg_ffbs |      0.907 |       25.791 |           32.061 |  12.000 |
-| lgbm_sc_s0 | ST       | N3%     |      0.250 | scp_abs_bc    |      0.878 |       26.733 |           39.511 |  12.000 |
-| lgbm_sc_s0 | ST       | N3%     |      0.250 | scp_signed    |      1.000 |      100.000 |          100.000 |  12.000 |
-| lgbm_sc_s0 | ST       | N3%     |      0.500 | ba_loa        |      0.876 |       24.097 |           36.644 |  22.000 |
-| lgbm_sc_s0 | ST       | N3%     |      0.500 | ba_reg        |      0.767 |       21.815 |           40.603 |  22.000 |
-| lgbm_sc_s0 | ST       | N3%     |      0.500 | norm_reg_ffbs |      0.903 |       25.643 |           32.035 |  22.000 |
-| lgbm_sc_s0 | ST       | N3%     |      0.500 | scp_abs_bc    |      0.891 |       26.193 |           37.480 |  22.000 |
-| lgbm_sc_s0 | ST       | N3%     |      0.500 | scp_signed    |      0.906 |       26.940 |           35.079 |  22.000 |
-| lgbm_sc_s0 | ST       | N3%     |      0.750 | ba_loa        |      0.892 |       24.236 |           35.173 |  32.000 |
-| lgbm_sc_s0 | ST       | N3%     |      0.750 | ba_reg        |      0.812 |       23.206 |           33.576 |  32.000 |
-| lgbm_sc_s0 | ST       | N3%     |      0.750 | norm_reg_ffbs |      0.905 |       25.816 |           32.175 |  32.000 |
-| lgbm_sc_s0 | ST       | N3%     |      0.750 | scp_abs_bc    |      0.894 |       25.733 |           36.559 |  32.000 |
-| lgbm_sc_s0 | ST       | N3%     |      0.750 | scp_signed    |      0.947 |       29.481 |           32.746 |  32.000 |
-| lgbm_sc_s0 | ST       | REM%    |      0.250 | ba_loa        |      0.869 |       19.091 |           29.411 |  12.000 |
-| lgbm_sc_s0 | ST       | REM%    |      0.250 | ba_reg        |      0.777 |       14.554 |           31.271 |  12.000 |
-| lgbm_sc_s0 | ST       | REM%    |      0.250 | norm_reg_ffbs |      0.910 |       24.932 |           29.411 |  12.000 |
-| lgbm_sc_s0 | ST       | REM%    |      0.250 | scp_abs_bc    |      0.892 |       21.290 |           29.830 |  12.000 |
-| lgbm_sc_s0 | ST       | REM%    |      0.250 | scp_signed    |      1.000 |      100.000 |          100.000 |  12.000 |
-| lgbm_sc_s0 | ST       | REM%    |      0.500 | ba_loa        |      0.882 |       18.704 |           27.425 |  22.000 |
-| lgbm_sc_s0 | ST       | REM%    |      0.500 | ba_reg        |      0.851 |       15.273 |           26.713 |  22.000 |
-| lgbm_sc_s0 | ST       | REM%    |      0.500 | norm_reg_ffbs |      0.899 |       23.124 |           27.326 |  22.000 |
-| lgbm_sc_s0 | ST       | REM%    |      0.500 | scp_abs_bc    |      0.897 |       20.941 |           28.813 |  22.000 |
-| lgbm_sc_s0 | ST       | REM%    |      0.500 | scp_signed    |      0.874 |       20.630 |           26.141 |  22.000 |
-| lgbm_sc_s0 | ST       | REM%    |      0.750 | ba_loa        |      0.882 |       18.476 |           26.929 |  32.000 |
-| lgbm_sc_s0 | ST       | REM%    |      0.750 | ba_reg        |      0.877 |       15.466 |           25.750 |  32.000 |
-| lgbm_sc_s0 | ST       | REM%    |      0.750 | norm_reg_ffbs |      0.897 |       22.954 |           26.847 |  32.000 |
-| lgbm_sc_s0 | ST       | REM%    |      0.750 | scp_abs_bc    |      0.900 |       20.368 |           27.912 |  32.000 |
-| lgbm_sc_s0 | ST       | REM%    |      0.750 | scp_signed    |      0.927 |       22.483 |           24.688 |  32.000 |
-| lgbm_sc_s0 | ST       | REML    |      0.250 | ba_loa        |      0.860 |      151.639 |          256.391 |  12.000 |
-| lgbm_sc_s0 | ST       | REML    |      0.250 | ba_reg        |      0.772 |       87.740 |          234.494 |  12.000 |
-| lgbm_sc_s0 | ST       | REML    |      0.250 | norm_reg_ffbs |      0.908 |      130.921 |          157.829 |  12.000 |
-| lgbm_sc_s0 | ST       | REML    |      0.250 | scp_abs_bc    |      0.904 |      180.316 |          239.860 |  12.000 |
-| lgbm_sc_s0 | ST       | REML    |      0.250 | scp_signed    |      1.000 |      inf     |          nan     |  12.000 |
-| lgbm_sc_s0 | ST       | REML    |      0.500 | ba_loa        |      0.856 |      150.159 |          245.610 |  22.000 |
-| lgbm_sc_s0 | ST       | REML    |      0.500 | ba_reg        |      0.836 |       97.751 |          179.554 |  22.000 |
-| lgbm_sc_s0 | ST       | REML    |      0.500 | norm_reg_ffbs |      0.912 |      124.689 |          148.596 |  22.000 |
-| lgbm_sc_s0 | ST       | REML    |      0.500 | scp_abs_bc    |      0.908 |      182.051 |          231.125 |  22.000 |
-| lgbm_sc_s0 | ST       | REML    |      0.500 | scp_signed    |      0.913 |      180.675 |          229.645 |  22.000 |
-| lgbm_sc_s0 | ST       | REML    |      0.750 | ba_loa        |      0.857 |      149.889 |          238.057 |  32.000 |
-| lgbm_sc_s0 | ST       | REML    |      0.750 | ba_reg        |      0.871 |      100.141 |          163.010 |  32.000 |
-| lgbm_sc_s0 | ST       | REML    |      0.750 | norm_reg_ffbs |      0.912 |      124.063 |          150.314 |  32.000 |
-| lgbm_sc_s0 | ST       | REML    |      0.750 | scp_abs_bc    |      0.914 |      181.017 |          228.214 |  32.000 |
-| lgbm_sc_s0 | ST       | REML    |      0.750 | scp_signed    |      0.943 |      195.676 |          218.243 |  32.000 |
-| lgbm_sc_s0 | ST       | SOL     |      0.250 | ba_loa        |      0.874 |       19.044 |           43.939 |  12.000 |
-| lgbm_sc_s0 | ST       | SOL     |      0.250 | ba_reg        |      0.772 |       13.675 |           47.546 |  12.000 |
-| lgbm_sc_s0 | ST       | SOL     |      0.250 | norm_reg_ffbs |      0.900 |       27.789 |           46.915 |  12.000 |
-| lgbm_sc_s0 | ST       | SOL     |      0.250 | scp_abs_bc    |      0.891 |       23.918 |           47.791 |  12.000 |
-| lgbm_sc_s0 | ST       | SOL     |      0.250 | scp_signed    |      1.000 |      inf     |          nan     |  12.000 |
-| lgbm_sc_s0 | ST       | SOL     |      0.500 | ba_loa        |      0.900 |       20.897 |           45.282 |  22.000 |
-| lgbm_sc_s0 | ST       | SOL     |      0.500 | ba_reg        |      0.839 |       14.525 |           44.175 |  22.000 |
-| lgbm_sc_s0 | ST       | SOL     |      0.500 | norm_reg_ffbs |      0.901 |       22.609 |           41.356 |  22.000 |
-| lgbm_sc_s0 | ST       | SOL     |      0.500 | scp_abs_bc    |      0.908 |       17.005 |           40.480 |  22.000 |
-| lgbm_sc_s0 | ST       | SOL     |      0.500 | scp_signed    |      0.889 |       30.892 |           55.357 |  22.000 |
-| lgbm_sc_s0 | ST       | SOL     |      0.750 | ba_loa        |      0.931 |       22.831 |           44.305 |  32.000 |
-| lgbm_sc_s0 | ST       | SOL     |      0.750 | ba_reg        |      0.863 |       15.457 |           40.565 |  32.000 |
-| lgbm_sc_s0 | ST       | SOL     |      0.750 | norm_reg_ffbs |      0.915 |       23.003 |           39.674 |  32.000 |
-| lgbm_sc_s0 | ST       | SOL     |      0.750 | scp_abs_bc    |      0.905 |       16.095 |           37.761 |  32.000 |
-| lgbm_sc_s0 | ST       | SOL     |      0.750 | scp_signed    |      0.914 |       41.560 |           62.639 |  32.000 |
-| lgbm_sc_s0 | ST       | TST     |      0.250 | ba_loa        |      0.865 |       65.627 |           95.901 |  12.000 |
-| lgbm_sc_s0 | ST       | TST     |      0.250 | ba_reg        |      0.718 |       52.868 |          128.223 |  12.000 |
-| lgbm_sc_s0 | ST       | TST     |      0.250 | norm_reg_ffbs |      0.894 |       49.885 |           70.664 |  12.000 |
-| lgbm_sc_s0 | ST       | TST     |      0.250 | scp_abs_bc    |      0.879 |       71.114 |          101.055 |  12.000 |
-| lgbm_sc_s0 | ST       | TST     |      0.250 | scp_signed    |      1.000 |      inf     |          nan     |  12.000 |
-| lgbm_sc_s0 | ST       | TST     |      0.500 | ba_loa        |      0.877 |       63.952 |           89.627 |  22.000 |
-| lgbm_sc_s0 | ST       | TST     |      0.500 | ba_reg        |      0.794 |       57.708 |          103.227 |  22.000 |
-| lgbm_sc_s0 | ST       | TST     |      0.500 | norm_reg_ffbs |      0.925 |       47.990 |           66.867 |  22.000 |
-| lgbm_sc_s0 | ST       | TST     |      0.500 | scp_abs_bc    |      0.895 |       64.935 |           91.018 |  22.000 |
-| lgbm_sc_s0 | ST       | TST     |      0.500 | scp_signed    |      0.902 |       75.043 |          100.406 |  22.000 |
-| lgbm_sc_s0 | ST       | TST     |      0.750 | ba_loa        |      0.872 |       63.314 |           85.050 |  32.000 |
-| lgbm_sc_s0 | ST       | TST     |      0.750 | ba_reg        |      0.826 |       58.974 |           92.600 |  32.000 |
-| lgbm_sc_s0 | ST       | TST     |      0.750 | norm_reg_ffbs |      0.895 |       39.821 |           57.245 |  32.000 |
-| lgbm_sc_s0 | ST       | TST     |      0.750 | scp_abs_bc    |      0.907 |       62.961 |           83.246 |  32.000 |
-| lgbm_sc_s0 | ST       | TST     |      0.750 | scp_signed    |      0.933 |       85.300 |          104.104 |  32.000 |
-| lgbm_sc_s0 | ST       | WASO    |      0.250 | ba_loa        |      0.862 |       48.102 |           71.841 |  12.000 |
-| lgbm_sc_s0 | ST       | WASO    |      0.250 | ba_reg        |      0.768 |       39.740 |           96.601 |  12.000 |
-| lgbm_sc_s0 | ST       | WASO    |      0.250 | norm_reg_ffbs |      0.918 |       68.132 |           89.838 |  12.000 |
-| lgbm_sc_s0 | ST       | WASO    |      0.250 | scp_abs_bc    |      0.873 |       49.223 |           71.752 |  12.000 |
-| lgbm_sc_s0 | ST       | WASO    |      0.250 | scp_signed    |      1.000 |      inf     |          nan     |  12.000 |
-| lgbm_sc_s0 | ST       | WASO    |      0.500 | ba_loa        |      0.877 |       47.115 |           68.537 |  22.000 |
-| lgbm_sc_s0 | ST       | WASO    |      0.500 | ba_reg        |      0.814 |       43.291 |           83.771 |  22.000 |
-| lgbm_sc_s0 | ST       | WASO    |      0.500 | norm_reg_ffbs |      0.901 |       62.838 |           88.709 |  22.000 |
-| lgbm_sc_s0 | ST       | WASO    |      0.500 | scp_abs_bc    |      0.892 |       50.242 |           68.785 |  22.000 |
-| lgbm_sc_s0 | ST       | WASO    |      0.500 | scp_signed    |      0.899 |       53.054 |           71.115 |  22.000 |
-| lgbm_sc_s0 | ST       | WASO    |      0.750 | ba_loa        |      0.887 |       46.636 |           67.421 |  32.000 |
-| lgbm_sc_s0 | ST       | WASO    |      0.750 | ba_reg        |      0.835 |       43.925 |           79.166 |  32.000 |
-| lgbm_sc_s0 | ST       | WASO    |      0.750 | norm_reg_ffbs |      0.906 |       63.356 |           89.890 |  32.000 |
-| lgbm_sc_s0 | ST       | WASO    |      0.750 | scp_abs_bc    |      0.900 |       50.624 |           67.042 |  32.000 |
-| lgbm_sc_s0 | ST       | WASO    |      0.750 | scp_signed    |      0.925 |       56.882 |           69.053 |  32.000 |
-| yasa       | HMC      | N1%     |      0.250 | ba_loa        |      0.915 |       25.422 |           39.392 |  38.000 |
-| yasa       | HMC      | N1%     |      0.250 | ba_reg        |      0.875 |       21.744 |           41.115 |  38.000 |
-| yasa       | HMC      | N1%     |      0.250 | norm_reg_ffbs |      0.916 |       23.221 |           35.376 |  38.000 |
-| yasa       | HMC      | N1%     |      0.250 | scp_abs_bc    |      0.916 |       25.640 |           39.373 |  38.000 |
-| yasa       | HMC      | N1%     |      0.250 | scp_signed    |      0.948 |       40.333 |           47.766 |  38.000 |
-| yasa       | HMC      | N1%     |      0.500 | ba_loa        |      0.923 |       25.606 |           38.613 |  76.000 |
-| yasa       | HMC      | N1%     |      0.500 | ba_reg        |      0.900 |       22.497 |           38.895 |  76.000 |
-| yasa       | HMC      | N1%     |      0.500 | norm_reg_ffbs |      0.905 |       21.470 |           35.224 |  76.000 |
-| yasa       | HMC      | N1%     |      0.500 | scp_abs_bc    |      0.906 |       24.237 |           38.924 |  76.000 |
-| yasa       | HMC      | N1%     |      0.500 | scp_signed    |      0.922 |       29.449 |           40.440 |  76.000 |
-| yasa       | HMC      | N1%     |      0.750 | ba_loa        |      0.920 |       25.682 |           38.550 | 113.000 |
-| yasa       | HMC      | N1%     |      0.750 | ba_reg        |      0.908 |       22.830 |           38.071 | 113.000 |
-| yasa       | HMC      | N1%     |      0.750 | norm_reg_ffbs |      0.905 |       21.366 |           35.031 | 113.000 |
-| yasa       | HMC      | N1%     |      0.750 | scp_abs_bc    |      0.898 |       23.699 |           39.502 | 113.000 |
-| yasa       | HMC      | N1%     |      0.750 | scp_signed    |      0.907 |       26.738 |           39.645 | 113.000 |
-| yasa       | HMC      | N2%     |      0.250 | ba_loa        |      0.918 |       33.548 |           47.959 |  38.000 |
-| yasa       | HMC      | N2%     |      0.250 | ba_reg        |      0.844 |       22.562 |           37.271 |  38.000 |
-| yasa       | HMC      | N2%     |      0.250 | norm_reg_ffbs |      0.921 |       29.948 |           36.118 |  38.000 |
-| yasa       | HMC      | N2%     |      0.250 | scp_abs_bc    |      0.912 |       33.550 |           48.352 |  38.000 |
-| yasa       | HMC      | N2%     |      0.250 | scp_signed    |      0.948 |       46.589 |           54.820 |  38.000 |
-| yasa       | HMC      | N2%     |      0.500 | ba_loa        |      0.927 |       33.599 |           47.052 |  76.000 |
-| yasa       | HMC      | N2%     |      0.500 | ba_reg        |      0.855 |       22.994 |           35.924 |  76.000 |
-| yasa       | HMC      | N2%     |      0.500 | norm_reg_ffbs |      0.911 |       28.057 |           35.342 |  76.000 |
-| yasa       | HMC      | N2%     |      0.500 | scp_abs_bc    |      0.907 |       30.862 |           46.259 |  76.000 |
-| yasa       | HMC      | N2%     |      0.500 | scp_signed    |      0.924 |       35.082 |           48.025 |  76.000 |
-| yasa       | HMC      | N2%     |      0.750 | ba_loa        |      0.933 |       33.515 |           46.539 | 113.000 |
-| yasa       | HMC      | N2%     |      0.750 | ba_reg        |      0.861 |       23.219 |           34.982 | 113.000 |
-| yasa       | HMC      | N2%     |      0.750 | norm_reg_ffbs |      0.907 |       26.967 |           34.825 | 113.000 |
-| yasa       | HMC      | N2%     |      0.750 | scp_abs_bc    |      0.902 |       29.910 |           45.574 | 113.000 |
-| yasa       | HMC      | N2%     |      0.750 | scp_signed    |      0.914 |       31.192 |           45.378 | 113.000 |
-| yasa       | HMC      | N3%     |      0.250 | ba_loa        |      0.905 |       25.106 |           34.047 |  38.000 |
-| yasa       | HMC      | N3%     |      0.250 | ba_reg        |      0.862 |       21.376 |           36.049 |  38.000 |
-| yasa       | HMC      | N3%     |      0.250 | norm_reg_ffbs |      0.925 |       32.029 |           36.801 |  38.000 |
-| yasa       | HMC      | N3%     |      0.250 | scp_abs_bc    |      0.917 |       26.632 |           34.618 |  38.000 |
-| yasa       | HMC      | N3%     |      0.250 | scp_signed    |      0.949 |       33.732 |           38.000 |  38.000 |
-| yasa       | HMC      | N3%     |      0.500 | ba_loa        |      0.908 |       24.840 |           33.428 |  76.000 |
-| yasa       | HMC      | N3%     |      0.500 | ba_reg        |      0.884 |       21.748 |           34.504 |  76.000 |
-| yasa       | HMC      | N3%     |      0.500 | norm_reg_ffbs |      0.912 |       30.436 |           35.922 |  76.000 |
-| yasa       | HMC      | N3%     |      0.500 | scp_abs_bc    |      0.905 |       24.619 |           33.565 |  76.000 |
-| yasa       | HMC      | N3%     |      0.500 | scp_signed    |      0.922 |       27.498 |           33.754 |  76.000 |
-| yasa       | HMC      | N3%     |      0.750 | ba_loa        |      0.906 |       24.695 |           32.889 | 113.000 |
-| yasa       | HMC      | N3%     |      0.750 | ba_reg        |      0.889 |       21.907 |           33.903 | 113.000 |
-| yasa       | HMC      | N3%     |      0.750 | norm_reg_ffbs |      0.903 |       30.073 |           35.925 | 113.000 |
-| yasa       | HMC      | N3%     |      0.750 | scp_abs_bc    |      0.896 |       24.062 |           33.031 | 113.000 |
-| yasa       | HMC      | N3%     |      0.750 | scp_signed    |      0.912 |       26.103 |           32.740 | 113.000 |
-| yasa       | HMC      | REM%    |      0.250 | ba_loa        |      0.914 |       18.672 |           25.747 |  38.000 |
-| yasa       | HMC      | REM%    |      0.250 | ba_reg        |      0.867 |       14.935 |           22.579 |  38.000 |
-| yasa       | HMC      | REM%    |      0.250 | norm_reg_ffbs |      0.926 |       23.480 |           27.316 |  38.000 |
-| yasa       | HMC      | REM%    |      0.250 | scp_abs_bc    |      0.917 |       19.065 |           25.772 |  38.000 |
-| yasa       | HMC      | REM%    |      0.250 | scp_signed    |      0.947 |       26.841 |           31.015 |  38.000 |
-| yasa       | HMC      | REM%    |      0.500 | ba_loa        |      0.915 |       18.469 |           25.278 |  76.000 |
-| yasa       | HMC      | REM%    |      0.500 | ba_reg        |      0.893 |       15.204 |           21.436 |  76.000 |
-| yasa       | HMC      | REM%    |      0.500 | norm_reg_ffbs |      0.909 |       21.967 |           26.925 |  76.000 |
-| yasa       | HMC      | REM%    |      0.500 | scp_abs_bc    |      0.905 |       17.835 |           25.278 |  76.000 |
-| yasa       | HMC      | REM%    |      0.500 | scp_signed    |      0.921 |       19.303 |           25.547 |  76.000 |
-| yasa       | HMC      | REM%    |      0.750 | ba_loa        |      0.912 |       18.449 |           24.981 | 113.000 |
-| yasa       | HMC      | REM%    |      0.750 | ba_reg        |      0.904 |       15.338 |           21.058 | 113.000 |
-| yasa       | HMC      | REM%    |      0.750 | norm_reg_ffbs |      0.907 |       21.555 |           26.781 | 113.000 |
-| yasa       | HMC      | REM%    |      0.750 | scp_abs_bc    |      0.900 |       17.658 |           25.181 | 113.000 |
-| yasa       | HMC      | REM%    |      0.750 | scp_signed    |      0.914 |       18.247 |           24.934 | 113.000 |
-| yasa       | HMC      | REML    |      0.250 | ba_loa        |      0.895 |      185.994 |          325.493 |  38.000 |
-| yasa       | HMC      | REML    |      0.250 | ba_reg        |      0.848 |      156.257 |          353.079 |  38.000 |
-| yasa       | HMC      | REML    |      0.250 | norm_reg_ffbs |      0.915 |      195.852 |          316.348 |  38.000 |
-| yasa       | HMC      | REML    |      0.250 | scp_abs_bc    |      0.917 |      203.774 |          322.425 |  38.000 |
-| yasa       | HMC      | REML    |      0.250 | scp_signed    |      0.947 |      301.346 |          365.448 |  38.000 |
-| yasa       | HMC      | REML    |      0.500 | ba_loa        |      0.904 |      190.381 |          320.550 |  75.000 |
-| yasa       | HMC      | REML    |      0.500 | ba_reg        |      0.867 |      161.387 |          335.585 |  75.000 |
-| yasa       | HMC      | REML    |      0.500 | norm_reg_ffbs |      0.905 |      182.944 |          316.953 |  75.000 |
-| yasa       | HMC      | REML    |      0.500 | scp_abs_bc    |      0.903 |      189.059 |          320.932 |  75.000 |
-| yasa       | HMC      | REML    |      0.500 | scp_signed    |      0.919 |      238.693 |          342.307 |  75.000 |
-| yasa       | HMC      | REML    |      0.750 | ba_loa        |      0.906 |      192.173 |          318.893 | 112.000 |
-| yasa       | HMC      | REML    |      0.750 | ba_reg        |      0.869 |      163.177 |          327.367 | 112.000 |
-| yasa       | HMC      | REML    |      0.750 | norm_reg_ffbs |      0.905 |      179.256 |          314.827 | 112.000 |
-| yasa       | HMC      | REML    |      0.750 | scp_abs_bc    |      0.898 |      185.377 |          320.790 | 112.000 |
-| yasa       | HMC      | REML    |      0.750 | scp_signed    |      0.908 |      221.333 |          347.149 | 112.000 |
-| yasa       | HMC      | SOL     |      0.250 | ba_loa        |      0.915 |       24.681 |           48.831 |  38.000 |
-| yasa       | HMC      | SOL     |      0.250 | ba_reg        |      0.882 |       19.384 |           39.002 |  38.000 |
-| yasa       | HMC      | SOL     |      0.250 | norm_reg_ffbs |      0.922 |       25.439 |           65.491 |  38.000 |
-| yasa       | HMC      | SOL     |      0.250 | scp_abs_bc    |      0.918 |       26.518 |           50.255 |  38.000 |
-| yasa       | HMC      | SOL     |      0.250 | scp_signed    |      0.949 |       34.430 |           49.468 |  38.000 |
-| yasa       | HMC      | SOL     |      0.500 | ba_loa        |      0.918 |       25.107 |           48.097 |  76.000 |
-| yasa       | HMC      | SOL     |      0.500 | ba_reg        |      0.913 |       19.604 |           36.514 |  76.000 |
-| yasa       | HMC      | SOL     |      0.500 | norm_reg_ffbs |      0.909 |       21.975 |           67.238 |  76.000 |
-| yasa       | HMC      | SOL     |      0.500 | scp_abs_bc    |      0.903 |       22.294 |           50.236 |  76.000 |
-| yasa       | HMC      | SOL     |      0.500 | scp_signed    |      0.925 |       18.127 |           38.471 |  76.000 |
-| yasa       | HMC      | SOL     |      0.750 | ba_loa        |      0.916 |       24.958 |           49.351 | 113.000 |
-| yasa       | HMC      | SOL     |      0.750 | ba_reg        |      0.926 |       19.688 |           37.086 | 113.000 |
-| yasa       | HMC      | SOL     |      0.750 | norm_reg_ffbs |      0.895 |       20.773 |           73.161 | 113.000 |
-| yasa       | HMC      | SOL     |      0.750 | scp_abs_bc    |      0.899 |       21.370 |           52.428 | 113.000 |
-| yasa       | HMC      | SOL     |      0.750 | scp_signed    |      0.912 |       16.535 |           40.393 | 113.000 |
-| yasa       | HMC      | TST     |      0.250 | ba_loa        |      0.924 |      132.806 |          215.291 |  38.000 |
-| yasa       | HMC      | TST     |      0.250 | ba_reg        |      0.847 |      100.866 |          205.971 |  38.000 |
-| yasa       | HMC      | TST     |      0.250 | norm_reg_ffbs |      0.923 |      107.427 |          150.779 |  38.000 |
-| yasa       | HMC      | TST     |      0.250 | scp_abs_bc    |      0.921 |      129.247 |          211.142 |  38.000 |
-| yasa       | HMC      | TST     |      0.250 | scp_signed    |      0.949 |      222.782 |          277.944 |  38.000 |
-| yasa       | HMC      | TST     |      0.500 | ba_loa        |      0.935 |      135.657 |          208.056 |  76.000 |
-| yasa       | HMC      | TST     |      0.500 | ba_reg        |      0.858 |      101.682 |          194.129 |  76.000 |
-| yasa       | HMC      | TST     |      0.500 | norm_reg_ffbs |      0.908 |       88.407 |          143.114 |  76.000 |
-| yasa       | HMC      | TST     |      0.500 | scp_abs_bc    |      0.909 |      107.739 |          200.803 |  76.000 |
-| yasa       | HMC      | TST     |      0.500 | scp_signed    |      0.922 |      125.112 |          196.756 |  76.000 |
-| yasa       | HMC      | TST     |      0.750 | ba_loa        |      0.934 |      136.253 |          207.823 | 113.000 |
-| yasa       | HMC      | TST     |      0.750 | ba_reg        |      0.868 |      101.916 |          190.068 | 113.000 |
-| yasa       | HMC      | TST     |      0.750 | norm_reg_ffbs |      0.906 |       83.455 |          141.528 | 113.000 |
-| yasa       | HMC      | TST     |      0.750 | scp_abs_bc    |      0.905 |       99.669 |          198.636 | 113.000 |
-| yasa       | HMC      | TST     |      0.750 | scp_signed    |      0.909 |      115.805 |          195.208 | 113.000 |
-| yasa       | HMC      | WASO    |      0.250 | ba_loa        |      0.916 |      101.885 |          179.895 |  38.000 |
-| yasa       | HMC      | WASO    |      0.250 | ba_reg        |      0.859 |       86.911 |          146.130 |  38.000 |
-| yasa       | HMC      | WASO    |      0.250 | norm_reg_ffbs |      0.924 |       99.228 |          148.916 |  38.000 |
-| yasa       | HMC      | WASO    |      0.250 | scp_abs_bc    |      0.918 |      100.640 |          176.894 |  38.000 |
-| yasa       | HMC      | WASO    |      0.250 | scp_signed    |      0.949 |      116.936 |          167.736 |  38.000 |
-| yasa       | HMC      | WASO    |      0.500 | ba_loa        |      0.931 |      104.481 |          173.993 |  76.000 |
-| yasa       | HMC      | WASO    |      0.500 | ba_reg        |      0.867 |       91.522 |          135.726 |  76.000 |
-| yasa       | HMC      | WASO    |      0.500 | norm_reg_ffbs |      0.910 |       81.718 |          146.638 |  76.000 |
-| yasa       | HMC      | WASO    |      0.500 | scp_abs_bc    |      0.910 |       91.782 |          174.372 |  76.000 |
-| yasa       | HMC      | WASO    |      0.500 | scp_signed    |      0.923 |       96.457 |          164.654 |  76.000 |
-| yasa       | HMC      | WASO    |      0.750 | ba_loa        |      0.936 |      105.700 |          173.243 | 113.000 |
-| yasa       | HMC      | WASO    |      0.750 | ba_reg        |      0.864 |       93.418 |          133.871 | 113.000 |
-| yasa       | HMC      | WASO    |      0.750 | norm_reg_ffbs |      0.906 |       75.338 |          145.611 | 113.000 |
-| yasa       | HMC      | WASO    |      0.750 | scp_abs_bc    |      0.905 |       86.572 |          176.519 | 113.000 |
-| yasa       | HMC      | WASO    |      0.750 | scp_signed    |      0.911 |       89.272 |          169.280 | 113.000 |
-| yasa       | SC       | N1%     |      0.250 | ba_loa        |      0.919 |       29.633 |           43.358 |  39.265 |
-| yasa       | SC       | N1%     |      0.250 | ba_reg        |      0.884 |       27.259 |           46.232 |  39.265 |
-| yasa       | SC       | N1%     |      0.250 | norm_reg_ffbs |      0.900 |       26.774 |           40.681 |  39.265 |
-| yasa       | SC       | N1%     |      0.250 | scp_abs_bc    |      0.890 |       26.689 |           43.766 |  39.265 |
-| yasa       | SC       | N1%     |      0.250 | scp_signed    |      0.901 |       32.096 |           43.212 |  39.265 |
-| yasa       | SC       | N1%     |      0.500 | ba_loa        |      0.922 |       29.613 |           43.248 |  76.505 |
-| yasa       | SC       | N1%     |      0.500 | ba_reg        |      0.904 |       27.824 |           44.773 |  76.505 |
-| yasa       | SC       | N1%     |      0.500 | norm_reg_ffbs |      0.903 |       26.808 |           40.267 |  76.505 |
-| yasa       | SC       | N1%     |      0.500 | scp_abs_bc    |      0.897 |       26.806 |           43.907 |  76.505 |
-| yasa       | SC       | N1%     |      0.500 | scp_signed    |      0.913 |       32.853 |           42.727 |  76.505 |
-| yasa       | SC       | N1%     |      0.750 | ba_loa        |      0.924 |       29.747 |           43.505 | 113.765 |
-| yasa       | SC       | N1%     |      0.750 | ba_reg        |      0.910 |       28.204 |           44.427 | 113.765 |
-| yasa       | SC       | N1%     |      0.750 | norm_reg_ffbs |      0.897 |       26.395 |           40.769 | 113.765 |
-| yasa       | SC       | N1%     |      0.750 | scp_abs_bc    |      0.895 |       25.644 |           43.789 | 113.765 |
-| yasa       | SC       | N1%     |      0.750 | scp_signed    |      0.909 |       30.401 |           41.409 | 113.765 |
-| yasa       | SC       | N2%     |      0.250 | ba_loa        |      0.907 |       40.099 |           56.652 |  39.265 |
-| yasa       | SC       | N2%     |      0.250 | ba_reg        |      0.870 |       31.307 |           47.981 |  39.265 |
-| yasa       | SC       | N2%     |      0.250 | norm_reg_ffbs |      0.898 |       32.817 |           43.651 |  39.265 |
-| yasa       | SC       | N2%     |      0.250 | scp_abs_bc    |      0.896 |       38.903 |           57.653 |  39.265 |
-| yasa       | SC       | N2%     |      0.250 | scp_signed    |      0.902 |       42.703 |           58.074 |  39.265 |
-| yasa       | SC       | N2%     |      0.500 | ba_loa        |      0.906 |       39.428 |           56.432 |  76.505 |
-| yasa       | SC       | N2%     |      0.500 | ba_reg        |      0.877 |       31.358 |           47.108 |  76.505 |
-| yasa       | SC       | N2%     |      0.500 | norm_reg_ffbs |      0.905 |       33.130 |           43.008 |  76.505 |
-| yasa       | SC       | N2%     |      0.500 | scp_abs_bc    |      0.901 |       38.922 |           57.347 |  76.505 |
-| yasa       | SC       | N2%     |      0.500 | scp_signed    |      0.917 |       42.805 |           56.238 |  76.505 |
-| yasa       | SC       | N2%     |      0.750 | ba_loa        |      0.909 |       39.628 |           56.033 | 113.765 |
-| yasa       | SC       | N2%     |      0.750 | ba_reg        |      0.882 |       31.613 |           46.302 | 113.765 |
-| yasa       | SC       | N2%     |      0.750 | norm_reg_ffbs |      0.899 |       32.664 |           43.120 | 113.765 |
-| yasa       | SC       | N2%     |      0.750 | scp_abs_bc    |      0.900 |       37.566 |           56.912 | 113.765 |
-| yasa       | SC       | N2%     |      0.750 | scp_signed    |      0.908 |       39.442 |           53.735 | 113.765 |
-| yasa       | SC       | N3%     |      0.250 | ba_loa        |      0.901 |       16.035 |           26.439 |  39.265 |
-| yasa       | SC       | N3%     |      0.250 | ba_reg        |      0.861 |       15.394 |           24.635 |  39.265 |
-| yasa       | SC       | N3%     |      0.250 | norm_reg_ffbs |      0.901 |       16.273 |           23.453 |  39.265 |
-| yasa       | SC       | N3%     |      0.250 | scp_abs_bc    |      0.896 |       15.967 |           26.823 |  39.265 |
-| yasa       | SC       | N3%     |      0.250 | scp_signed    |      0.902 |       16.551 |           26.028 |  39.265 |
-| yasa       | SC       | N3%     |      0.500 | ba_loa        |      0.921 |       16.359 |           25.278 |  76.505 |
-| yasa       | SC       | N3%     |      0.500 | ba_reg        |      0.891 |       16.118 |           22.988 |  76.505 |
-| yasa       | SC       | N3%     |      0.500 | norm_reg_ffbs |      0.913 |       16.563 |           22.737 |  76.505 |
-| yasa       | SC       | N3%     |      0.500 | scp_abs_bc    |      0.910 |       15.808 |           25.511 |  76.505 |
-| yasa       | SC       | N3%     |      0.500 | scp_signed    |      0.924 |       17.066 |           24.935 |  76.505 |
-| yasa       | SC       | N3%     |      0.750 | ba_loa        |      0.922 |       16.303 |           25.021 | 113.765 |
-| yasa       | SC       | N3%     |      0.750 | ba_reg        |      0.897 |       16.206 |           22.935 | 113.765 |
-| yasa       | SC       | N3%     |      0.750 | norm_reg_ffbs |      0.901 |       15.918 |           22.913 | 113.765 |
-| yasa       | SC       | N3%     |      0.750 | scp_abs_bc    |      0.900 |       14.928 |           25.109 | 113.765 |
-| yasa       | SC       | N3%     |      0.750 | scp_signed    |      0.912 |       16.065 |           25.098 | 113.765 |
-| yasa       | SC       | REM%    |      0.250 | ba_loa        |      0.917 |       22.229 |           35.128 |  39.265 |
-| yasa       | SC       | REM%    |      0.250 | ba_reg        |      0.841 |       16.489 |           33.000 |  39.265 |
-| yasa       | SC       | REM%    |      0.250 | norm_reg_ffbs |      0.902 |       25.670 |           34.790 |  39.265 |
-| yasa       | SC       | REM%    |      0.250 | scp_abs_bc    |      0.889 |       18.286 |           33.405 |  39.265 |
-| yasa       | SC       | REM%    |      0.250 | scp_signed    |      0.895 |       22.483 |           36.672 |  39.265 |
-| yasa       | SC       | REM%    |      0.500 | ba_loa        |      0.932 |       22.425 |           34.146 |  76.505 |
-| yasa       | SC       | REM%    |      0.500 | ba_reg        |      0.865 |       16.707 |           30.792 |  76.505 |
-| yasa       | SC       | REM%    |      0.500 | norm_reg_ffbs |      0.908 |       25.038 |           34.250 |  76.505 |
-| yasa       | SC       | REM%    |      0.500 | scp_abs_bc    |      0.903 |       18.707 |           32.700 |  76.505 |
-| yasa       | SC       | REM%    |      0.500 | scp_signed    |      0.917 |       21.017 |           34.163 |  76.505 |
-| yasa       | SC       | REM%    |      0.750 | ba_loa        |      0.941 |       22.738 |           33.218 | 113.765 |
-| yasa       | SC       | REM%    |      0.750 | ba_reg        |      0.884 |       17.055 |           29.237 | 113.765 |
-| yasa       | SC       | REM%    |      0.750 | norm_reg_ffbs |      0.905 |       23.982 |           33.474 | 113.765 |
-| yasa       | SC       | REM%    |      0.750 | scp_abs_bc    |      0.905 |       18.324 |           31.622 | 113.765 |
-| yasa       | SC       | REM%    |      0.750 | scp_signed    |      0.917 |       18.823 |           31.835 | 113.765 |
-| yasa       | SC       | REML    |      0.250 | ba_loa        |      0.888 |      130.291 |          238.825 |  39.265 |
-| yasa       | SC       | REML    |      0.250 | ba_reg        |      0.841 |       96.042 |          225.845 |  39.265 |
-| yasa       | SC       | REML    |      0.250 | norm_reg_ffbs |      0.904 |       96.078 |          158.088 |  39.265 |
-| yasa       | SC       | REML    |      0.250 | scp_abs_bc    |      0.893 |      136.680 |          236.950 |  39.265 |
-| yasa       | SC       | REML    |      0.250 | scp_signed    |      0.905 |      151.999 |          249.942 |  39.265 |
-| yasa       | SC       | REML    |      0.500 | ba_loa        |      0.882 |      131.943 |          237.484 |  76.505 |
-| yasa       | SC       | REML    |      0.500 | ba_reg        |      0.860 |       97.566 |          218.461 |  76.505 |
-| yasa       | SC       | REML    |      0.500 | norm_reg_ffbs |      0.909 |       94.367 |          157.122 |  76.505 |
-| yasa       | SC       | REML    |      0.500 | scp_abs_bc    |      0.901 |      143.251 |          231.608 |  76.505 |
-| yasa       | SC       | REML    |      0.500 | scp_signed    |      0.918 |      152.817 |          234.685 |  76.505 |
-| yasa       | SC       | REML    |      0.750 | ba_loa        |      0.879 |      133.961 |          237.316 | 113.765 |
-| yasa       | SC       | REML    |      0.750 | ba_reg        |      0.877 |       99.625 |          213.349 | 113.765 |
-| yasa       | SC       | REML    |      0.750 | norm_reg_ffbs |      0.900 |       91.445 |          158.129 | 113.765 |
-| yasa       | SC       | REML    |      0.750 | scp_abs_bc    |      0.898 |      142.110 |          231.322 | 113.765 |
-| yasa       | SC       | REML    |      0.750 | scp_signed    |      0.911 |      147.314 |          233.376 | 113.765 |
-| yasa       | SC       | SOL     |      0.250 | ba_loa        |      0.926 |       33.373 |           68.144 |  39.265 |
-| yasa       | SC       | SOL     |      0.250 | ba_reg        |      0.868 |       26.214 |           60.567 |  39.265 |
-| yasa       | SC       | SOL     |      0.250 | norm_reg_ffbs |      0.903 |       26.801 |           57.200 |  39.265 |
-| yasa       | SC       | SOL     |      0.250 | scp_abs_bc    |      0.908 |       27.789 |           68.227 |  39.265 |
-| yasa       | SC       | SOL     |      0.250 | scp_signed    |      0.915 |       32.124 |           70.245 |  39.265 |
-| yasa       | SC       | SOL     |      0.500 | ba_loa        |      0.937 |       34.511 |           67.895 |  76.505 |
-| yasa       | SC       | SOL     |      0.500 | ba_reg        |      0.881 |       26.989 |           56.758 |  76.505 |
-| yasa       | SC       | SOL     |      0.500 | norm_reg_ffbs |      0.912 |       27.058 |           55.974 |  76.505 |
-| yasa       | SC       | SOL     |      0.500 | scp_abs_bc    |      0.908 |       26.470 |           68.359 |  76.505 |
-| yasa       | SC       | SOL     |      0.500 | scp_signed    |      0.924 |       28.674 |           67.165 |  76.505 |
-| yasa       | SC       | SOL     |      0.750 | ba_loa        |      0.941 |       35.151 |           67.851 | 113.765 |
-| yasa       | SC       | SOL     |      0.750 | ba_reg        |      0.895 |       27.569 |           55.898 | 113.765 |
-| yasa       | SC       | SOL     |      0.750 | norm_reg_ffbs |      0.900 |       26.333 |           57.479 | 113.765 |
-| yasa       | SC       | SOL     |      0.750 | scp_abs_bc    |      0.900 |       24.808 |           68.702 | 113.765 |
-| yasa       | SC       | SOL     |      0.750 | scp_signed    |      0.913 |       23.863 |           66.759 | 113.765 |
-| yasa       | SC       | TST     |      0.250 | ba_loa        |      0.901 |      110.258 |          174.999 |  39.265 |
-| yasa       | SC       | TST     |      0.250 | ba_reg        |      0.840 |       87.221 |          175.197 |  39.265 |
-| yasa       | SC       | TST     |      0.250 | norm_reg_ffbs |      0.899 |       85.927 |          149.026 |  39.265 |
-| yasa       | SC       | TST     |      0.250 | scp_abs_bc    |      0.893 |      105.605 |          174.668 |  39.265 |
-| yasa       | SC       | TST     |      0.250 | scp_signed    |      0.901 |      120.407 |          183.903 |  39.265 |
-| yasa       | SC       | TST     |      0.500 | ba_loa        |      0.907 |      110.939 |          172.886 |  76.505 |
-| yasa       | SC       | TST     |      0.500 | ba_reg        |      0.853 |       87.849 |          168.941 |  76.505 |
-| yasa       | SC       | TST     |      0.500 | norm_reg_ffbs |      0.903 |       85.511 |          148.971 |  76.505 |
-| yasa       | SC       | TST     |      0.500 | scp_abs_bc    |      0.899 |      105.959 |          172.905 |  76.505 |
-| yasa       | SC       | TST     |      0.500 | scp_signed    |      0.915 |      120.535 |          176.264 |  76.505 |
-| yasa       | SC       | TST     |      0.750 | ba_loa        |      0.910 |      111.175 |          174.432 | 113.765 |
-| yasa       | SC       | TST     |      0.750 | ba_reg        |      0.855 |       87.994 |          170.963 | 113.765 |
-| yasa       | SC       | TST     |      0.750 | norm_reg_ffbs |      0.896 |       80.490 |          151.488 | 113.765 |
-| yasa       | SC       | TST     |      0.750 | scp_abs_bc    |      0.895 |      101.285 |          174.068 | 113.765 |
-| yasa       | SC       | TST     |      0.750 | scp_signed    |      0.904 |      111.412 |          174.299 | 113.765 |
-| yasa       | SC       | WASO    |      0.250 | ba_loa        |      0.916 |      117.108 |          210.125 |  39.265 |
-| yasa       | SC       | WASO    |      0.250 | ba_reg        |      0.855 |       97.363 |          147.095 |  39.265 |
-| yasa       | SC       | WASO    |      0.250 | norm_reg_ffbs |      0.905 |      231.416 |          310.681 |  39.265 |
-| yasa       | SC       | WASO    |      0.250 | scp_abs_bc    |      0.900 |      108.845 |          215.214 |  39.265 |
-| yasa       | SC       | WASO    |      0.250 | scp_signed    |      0.901 |      100.855 |          181.764 |  39.265 |
-| yasa       | SC       | WASO    |      0.500 | ba_loa        |      0.920 |      117.444 |          207.946 |  76.505 |
-| yasa       | SC       | WASO    |      0.500 | ba_reg        |      0.878 |      102.371 |          135.677 |  76.505 |
-| yasa       | SC       | WASO    |      0.500 | norm_reg_ffbs |      0.904 |      229.355 |          311.568 |  76.505 |
-| yasa       | SC       | WASO    |      0.500 | scp_abs_bc    |      0.903 |      108.556 |          211.810 |  76.505 |
-| yasa       | SC       | WASO    |      0.500 | scp_signed    |      0.919 |      104.961 |          173.402 |  76.505 |
-| yasa       | SC       | WASO    |      0.750 | ba_loa        |      0.921 |      117.769 |          210.595 | 113.765 |
-| yasa       | SC       | WASO    |      0.750 | ba_reg        |      0.886 |      104.820 |          131.534 | 113.765 |
-| yasa       | SC       | WASO    |      0.750 | norm_reg_ffbs |      0.897 |      223.402 |          315.564 | 113.765 |
-| yasa       | SC       | WASO    |      0.750 | scp_abs_bc    |      0.897 |      107.733 |          215.477 | 113.765 |
-| yasa       | SC       | WASO    |      0.750 | scp_signed    |      0.913 |       98.582 |          178.454 | 113.765 |
-| yasa       | ST       | N1%     |      0.250 | ba_loa        |      0.873 |       16.002 |           21.927 |  12.000 |
-| yasa       | ST       | N1%     |      0.250 | ba_reg        |      0.782 |       13.055 |           27.048 |  12.000 |
-| yasa       | ST       | N1%     |      0.250 | norm_reg_ffbs |      0.902 |       17.460 |           24.565 |  12.000 |
-| yasa       | ST       | N1%     |      0.250 | scp_abs_bc    |      0.901 |       16.792 |           21.156 |  12.000 |
-| yasa       | ST       | N1%     |      0.250 | scp_signed    |      1.000 |      100.000 |          100.000 |  12.000 |
-| yasa       | ST       | N1%     |      0.500 | ba_loa        |      0.869 |       15.496 |           20.865 |  22.000 |
-| yasa       | ST       | N1%     |      0.500 | ba_reg        |      0.828 |       13.674 |           23.032 |  22.000 |
-| yasa       | ST       | N1%     |      0.500 | norm_reg_ffbs |      0.911 |       16.777 |           24.103 |  22.000 |
-| yasa       | ST       | N1%     |      0.500 | scp_abs_bc    |      0.888 |       16.015 |           20.373 |  22.000 |
-| yasa       | ST       | N1%     |      0.500 | scp_signed    |      0.906 |       17.026 |           21.066 |  22.000 |
-| yasa       | ST       | N1%     |      0.750 | ba_loa        |      0.884 |       15.369 |           19.922 |  32.000 |
-| yasa       | ST       | N1%     |      0.750 | ba_reg        |      0.844 |       13.932 |           21.388 |  32.000 |
-| yasa       | ST       | N1%     |      0.750 | norm_reg_ffbs |      0.912 |       16.588 |           23.294 |  32.000 |
-| yasa       | ST       | N1%     |      0.750 | scp_abs_bc    |      0.898 |       15.827 |           19.558 |  32.000 |
-| yasa       | ST       | N1%     |      0.750 | scp_signed    |      0.942 |       18.483 |           20.478 |  32.000 |
-| yasa       | ST       | N2%     |      0.250 | ba_loa        |      0.849 |       33.789 |           46.493 |  12.000 |
-| yasa       | ST       | N2%     |      0.250 | ba_reg        |      0.743 |       28.291 |           56.424 |  12.000 |
-| yasa       | ST       | N2%     |      0.250 | norm_reg_ffbs |      0.896 |       35.466 |           42.664 |  12.000 |
-| yasa       | ST       | N2%     |      0.250 | scp_abs_bc    |      0.842 |       33.626 |           47.583 |  12.000 |
-| yasa       | ST       | N2%     |      0.250 | scp_signed    |      1.000 |      100.000 |          100.000 |  12.000 |
-| yasa       | ST       | N2%     |      0.500 | ba_loa        |      0.859 |       32.858 |           44.133 |  22.000 |
-| yasa       | ST       | N2%     |      0.500 | ba_reg        |      0.812 |       30.306 |           46.769 |  22.000 |
-| yasa       | ST       | N2%     |      0.500 | norm_reg_ffbs |      0.890 |       33.471 |           40.380 |  22.000 |
-| yasa       | ST       | N2%     |      0.500 | scp_abs_bc    |      0.854 |       32.707 |           45.060 |  22.000 |
-| yasa       | ST       | N2%     |      0.500 | scp_signed    |      0.868 |       35.560 |           46.823 |  22.000 |
-| yasa       | ST       | N2%     |      0.750 | ba_loa        |      0.880 |       32.908 |           43.185 |  32.000 |
-| yasa       | ST       | N2%     |      0.750 | ba_reg        |      0.852 |       31.593 |           43.606 |  32.000 |
-| yasa       | ST       | N2%     |      0.750 | norm_reg_ffbs |      0.888 |       32.947 |           39.417 |  32.000 |
-| yasa       | ST       | N2%     |      0.750 | scp_abs_bc    |      0.880 |       33.331 |           44.356 |  32.000 |
-| yasa       | ST       | N2%     |      0.750 | scp_signed    |      0.908 |       39.371 |           46.151 |  32.000 |
-| yasa       | ST       | N3%     |      0.250 | ba_loa        |      0.872 |       25.802 |           34.936 |  12.000 |
-| yasa       | ST       | N3%     |      0.250 | ba_reg        |      0.743 |       21.902 |           48.220 |  12.000 |
-| yasa       | ST       | N3%     |      0.250 | norm_reg_ffbs |      0.930 |       26.947 |           29.524 |  12.000 |
-| yasa       | ST       | N3%     |      0.250 | scp_abs_bc    |      0.882 |       26.811 |           35.543 |  12.000 |
-| yasa       | ST       | N3%     |      0.250 | scp_signed    |      1.000 |      100.000 |          100.000 |  12.000 |
-| yasa       | ST       | N3%     |      0.500 | ba_loa        |      0.863 |       25.217 |           34.280 |  22.000 |
-| yasa       | ST       | N3%     |      0.500 | ba_reg        |      0.790 |       23.568 |           39.428 |  22.000 |
-| yasa       | ST       | N3%     |      0.500 | norm_reg_ffbs |      0.910 |       26.057 |           29.105 |  22.000 |
-| yasa       | ST       | N3%     |      0.500 | scp_abs_bc    |      0.876 |       26.285 |           34.030 |  22.000 |
-| yasa       | ST       | N3%     |      0.500 | scp_signed    |      0.898 |       27.338 |           34.495 |  22.000 |
-| yasa       | ST       | N3%     |      0.750 | ba_loa        |      0.875 |       25.227 |           33.008 |  32.000 |
-| yasa       | ST       | N3%     |      0.750 | ba_reg        |      0.826 |       24.575 |           34.252 |  32.000 |
-| yasa       | ST       | N3%     |      0.750 | norm_reg_ffbs |      0.912 |       26.140 |           28.680 |  32.000 |
-| yasa       | ST       | N3%     |      0.750 | scp_abs_bc    |      0.890 |       26.886 |           32.942 |  32.000 |
-| yasa       | ST       | N3%     |      0.750 | scp_signed    |      0.940 |       29.462 |           32.574 |  32.000 |
-| yasa       | ST       | REM%    |      0.250 | ba_loa        |      0.868 |       18.821 |           28.843 |  12.000 |
-| yasa       | ST       | REM%    |      0.250 | ba_reg        |      0.780 |       14.640 |           31.330 |  12.000 |
-| yasa       | ST       | REM%    |      0.250 | norm_reg_ffbs |      0.913 |       26.549 |           30.960 |  12.000 |
-| yasa       | ST       | REM%    |      0.250 | scp_abs_bc    |      0.891 |       20.779 |           29.795 |  12.000 |
-| yasa       | ST       | REM%    |      0.250 | scp_signed    |      1.000 |      100.000 |          100.000 |  12.000 |
-| yasa       | ST       | REM%    |      0.500 | ba_loa        |      0.884 |       18.519 |           27.557 |  22.000 |
-| yasa       | ST       | REM%    |      0.500 | ba_reg        |      0.866 |       15.437 |           26.691 |  22.000 |
-| yasa       | ST       | REM%    |      0.500 | norm_reg_ffbs |      0.900 |       24.116 |           28.691 |  22.000 |
-| yasa       | ST       | REM%    |      0.500 | scp_abs_bc    |      0.894 |       19.936 |           28.279 |  22.000 |
-| yasa       | ST       | REM%    |      0.500 | scp_signed    |      0.908 |       21.770 |           28.390 |  22.000 |
-| yasa       | ST       | REM%    |      0.750 | ba_loa        |      0.886 |       18.362 |           27.333 |  32.000 |
-| yasa       | ST       | REM%    |      0.750 | ba_reg        |      0.886 |       15.553 |           26.328 |  32.000 |
-| yasa       | ST       | REM%    |      0.750 | norm_reg_ffbs |      0.893 |       23.692 |           28.291 |  32.000 |
-| yasa       | ST       | REM%    |      0.750 | scp_abs_bc    |      0.890 |       19.913 |           27.734 |  32.000 |
-| yasa       | ST       | REM%    |      0.750 | scp_signed    |      0.938 |       24.206 |           27.650 |  32.000 |
-| yasa       | ST       | REML    |      0.250 | ba_loa        |      0.857 |      128.386 |          238.524 |  12.000 |
-| yasa       | ST       | REML    |      0.250 | ba_reg        |      0.759 |       80.074 |          254.246 |  12.000 |
-| yasa       | ST       | REML    |      0.250 | norm_reg_ffbs |      0.900 |      154.464 |          207.540 |  12.000 |
-| yasa       | ST       | REML    |      0.250 | scp_abs_bc    |      0.887 |      154.330 |          218.853 |  12.000 |
-| yasa       | ST       | REML    |      0.250 | scp_signed    |      1.000 |      inf     |          nan     |  12.000 |
-| yasa       | ST       | REML    |      0.500 | ba_loa        |      0.856 |      130.694 |          228.921 |  22.000 |
-| yasa       | ST       | REML    |      0.500 | ba_reg        |      0.834 |       89.502 |          204.778 |  22.000 |
-| yasa       | ST       | REML    |      0.500 | norm_reg_ffbs |      0.926 |      151.097 |          197.208 |  22.000 |
-| yasa       | ST       | REML    |      0.500 | scp_abs_bc    |      0.901 |      158.474 |          209.953 |  22.000 |
-| yasa       | ST       | REML    |      0.500 | scp_signed    |      0.899 |      159.451 |          221.322 |  22.000 |
-| yasa       | ST       | REML    |      0.750 | ba_loa        |      0.856 |      130.344 |          227.552 |  32.000 |
-| yasa       | ST       | REML    |      0.750 | ba_reg        |      0.841 |       91.180 |          190.430 |  32.000 |
-| yasa       | ST       | REML    |      0.750 | norm_reg_ffbs |      0.911 |      133.304 |          185.261 |  32.000 |
-| yasa       | ST       | REML    |      0.750 | scp_abs_bc    |      0.909 |      164.790 |          202.605 |  32.000 |
-| yasa       | ST       | REML    |      0.750 | scp_signed    |      0.919 |      181.515 |          216.327 |  32.000 |
-| yasa       | ST       | SOL     |      0.250 | ba_loa        |      0.887 |       12.369 |           19.276 |  12.000 |
-| yasa       | ST       | SOL     |      0.250 | ba_reg        |      0.761 |        9.659 |           22.007 |  12.000 |
-| yasa       | ST       | SOL     |      0.250 | norm_reg_ffbs |      0.900 |       25.202 |           44.008 |  12.000 |
-| yasa       | ST       | SOL     |      0.250 | scp_abs_bc    |      0.907 |       13.866 |           20.160 |  12.000 |
-| yasa       | ST       | SOL     |      0.250 | scp_signed    |      1.000 |      inf     |          nan     |  12.000 |
-| yasa       | ST       | SOL     |      0.500 | ba_loa        |      0.909 |       12.286 |           18.239 |  22.000 |
-| yasa       | ST       | SOL     |      0.500 | ba_reg        |      0.841 |       10.420 |           17.765 |  22.000 |
-| yasa       | ST       | SOL     |      0.500 | norm_reg_ffbs |      0.895 |       20.254 |           38.936 |  22.000 |
-| yasa       | ST       | SOL     |      0.500 | scp_abs_bc    |      0.904 |       12.842 |           19.520 |  22.000 |
-| yasa       | ST       | SOL     |      0.500 | scp_signed    |      0.908 |       13.281 |           17.983 |  22.000 |
-| yasa       | ST       | SOL     |      0.750 | ba_loa        |      0.911 |       12.130 |           18.404 |  32.000 |
-| yasa       | ST       | SOL     |      0.750 | ba_reg        |      0.844 |       10.615 |           17.121 |  32.000 |
-| yasa       | ST       | SOL     |      0.750 | norm_reg_ffbs |      0.911 |       20.549 |           37.710 |  32.000 |
-| yasa       | ST       | SOL     |      0.750 | scp_abs_bc    |      0.905 |       11.509 |           18.719 |  32.000 |
-| yasa       | ST       | SOL     |      0.750 | scp_signed    |      0.943 |       14.608 |           17.275 |  32.000 |
-| yasa       | ST       | TST     |      0.250 | ba_loa        |      0.899 |       62.022 |          101.834 |  12.000 |
-| yasa       | ST       | TST     |      0.250 | ba_reg        |      0.777 |       45.904 |          111.876 |  12.000 |
-| yasa       | ST       | TST     |      0.250 | norm_reg_ffbs |      0.928 |       48.373 |           63.340 |  12.000 |
-| yasa       | ST       | TST     |      0.250 | scp_abs_bc    |      0.915 |       77.083 |          108.871 |  12.000 |
-| yasa       | ST       | TST     |      0.250 | scp_signed    |      1.000 |      inf     |          nan     |  12.000 |
-| yasa       | ST       | TST     |      0.500 | ba_loa        |      0.899 |       59.153 |           98.712 |  22.000 |
-| yasa       | ST       | TST     |      0.500 | ba_reg        |      0.845 |       49.551 |           91.964 |  22.000 |
-| yasa       | ST       | TST     |      0.500 | norm_reg_ffbs |      0.912 |       40.235 |           58.502 |  22.000 |
-| yasa       | ST       | TST     |      0.500 | scp_abs_bc    |      0.901 |       62.884 |          100.193 |  22.000 |
-| yasa       | ST       | TST     |      0.500 | scp_signed    |      0.895 |       66.797 |           89.772 |  22.000 |
-| yasa       | ST       | TST     |      0.750 | ba_loa        |      0.910 |       59.159 |           97.621 |  32.000 |
-| yasa       | ST       | TST     |      0.750 | ba_reg        |      0.871 |       51.451 |           85.469 |  32.000 |
-| yasa       | ST       | TST     |      0.750 | norm_reg_ffbs |      0.895 |       38.141 |           59.156 |  32.000 |
-| yasa       | ST       | TST     |      0.750 | scp_abs_bc    |      0.910 |       61.494 |           99.000 |  32.000 |
-| yasa       | ST       | TST     |      0.750 | scp_signed    |      0.925 |       75.338 |           91.896 |  32.000 |
-| yasa       | ST       | WASO    |      0.250 | ba_loa        |      0.900 |       40.849 |           74.808 |  12.000 |
-| yasa       | ST       | WASO    |      0.250 | ba_reg        |      0.755 |       28.175 |           70.265 |  12.000 |
-| yasa       | ST       | WASO    |      0.250 | norm_reg_ffbs |      0.933 |       64.284 |           83.150 |  12.000 |
-| yasa       | ST       | WASO    |      0.250 | scp_abs_bc    |      0.910 |       49.721 |           79.697 |  12.000 |
-| yasa       | ST       | WASO    |      0.250 | scp_signed    |      1.000 |      inf     |          nan     |  12.000 |
-| yasa       | ST       | WASO    |      0.500 | ba_loa        |      0.909 |       39.855 |           73.270 |  22.000 |
-| yasa       | ST       | WASO    |      0.500 | ba_reg        |      0.785 |       31.018 |           57.148 |  22.000 |
-| yasa       | ST       | WASO    |      0.500 | norm_reg_ffbs |      0.906 |       57.085 |           84.757 |  22.000 |
-| yasa       | ST       | WASO    |      0.500 | scp_abs_bc    |      0.898 |       35.829 |           71.077 |  22.000 |
-| yasa       | ST       | WASO    |      0.500 | scp_signed    |      0.875 |       34.632 |           61.257 |  22.000 |
-| yasa       | ST       | WASO    |      0.750 | ba_loa        |      0.915 |       40.510 |           73.542 |  32.000 |
-| yasa       | ST       | WASO    |      0.750 | ba_reg        |      0.794 |       32.768 |           51.632 |  32.000 |
-| yasa       | ST       | WASO    |      0.750 | norm_reg_ffbs |      0.905 |       54.640 |           83.940 |  32.000 |
-| yasa       | ST       | WASO    |      0.750 | scp_abs_bc    |      0.907 |       31.612 |           67.261 |  32.000 |
-| yasa       | ST       | WASO    |      0.750 | scp_signed    |      0.921 |       38.396 |           58.850 |  32.000 |
+    stager cohort param  cal_frac        method  coverage  mean_width  interval_score   n_cal
+lgbm_sc_s0    HMC   N1%      0.25        ba_loa    0.9159     29.1720         43.1244  38.000
+lgbm_sc_s0    HMC   N1%      0.25        ba_reg    0.8817     21.1141         37.8273  38.000
+lgbm_sc_s0    HMC   N1%      0.25 norm_reg_ffbs    0.9175     24.9228         39.9620  38.000
+lgbm_sc_s0    HMC   N1%      0.25    scp_abs_bc    0.9197     30.1680         43.6972  38.000
+lgbm_sc_s0    HMC   N1%      0.25    scp_signed    0.9491     42.2619         51.4626  38.000
+lgbm_sc_s0    HMC   N1%      0.50        ba_loa    0.9193     28.7887         42.8422  76.000
+lgbm_sc_s0    HMC   N1%      0.50        ba_reg    0.9027     21.3381         36.3695  76.000
+lgbm_sc_s0    HMC   N1%      0.50 norm_reg_ffbs    0.9040     22.7131         39.9021  76.000
+lgbm_sc_s0    HMC   N1%      0.50    scp_abs_bc    0.9076     27.6468         43.6158  76.000
+lgbm_sc_s0    HMC   N1%      0.50    scp_signed    0.9212     28.7512         42.8637  76.000
+lgbm_sc_s0    HMC   N1%      0.75        ba_loa    0.9186     28.7275         42.9044 113.000
+lgbm_sc_s0    HMC   N1%      0.75        ba_reg    0.9118     21.5368         36.0181 113.000
+lgbm_sc_s0    HMC   N1%      0.75 norm_reg_ffbs    0.9057     22.3965         39.9034 113.000
+lgbm_sc_s0    HMC   N1%      0.75    scp_abs_bc    0.9020     26.5963         44.1338 113.000
+lgbm_sc_s0    HMC   N1%      0.75    scp_signed    0.9121     26.2810         42.1718 113.000
+lgbm_sc_s0    HMC   N2%      0.25        ba_loa    0.8952     39.2993         53.7261  38.000
+lgbm_sc_s0    HMC   N2%      0.25        ba_reg    0.8659     26.3264         38.5139  38.000
+lgbm_sc_s0    HMC   N2%      0.25 norm_reg_ffbs    0.9187     39.7087         49.4943  38.000
+lgbm_sc_s0    HMC   N2%      0.25    scp_abs_bc    0.9131     43.1187         54.8350  38.000
+lgbm_sc_s0    HMC   N2%      0.25    scp_signed    0.9485     54.0910         60.8293  38.000
+lgbm_sc_s0    HMC   N2%      0.50        ba_loa    0.8950     38.7934         52.9350  76.000
+lgbm_sc_s0    HMC   N2%      0.50        ba_reg    0.8890     26.7482         37.1534  76.000
+lgbm_sc_s0    HMC   N2%      0.50 norm_reg_ffbs    0.9035     36.7059         48.4125  76.000
+lgbm_sc_s0    HMC   N2%      0.50    scp_abs_bc    0.9061     40.4883         53.1370  76.000
+lgbm_sc_s0    HMC   N2%      0.50    scp_signed    0.9205     43.6000         53.7970  76.000
+lgbm_sc_s0    HMC   N2%      0.75        ba_loa    0.8907     38.6520         52.8677 113.000
+lgbm_sc_s0    HMC   N2%      0.75        ba_reg    0.8970     26.9780         36.8991 113.000
+lgbm_sc_s0    HMC   N2%      0.75 norm_reg_ffbs    0.8982     35.4793         47.8208 113.000
+lgbm_sc_s0    HMC   N2%      0.75    scp_abs_bc    0.8987     39.7660         53.0542 113.000
+lgbm_sc_s0    HMC   N2%      0.75    scp_signed    0.9087     41.3816         53.2968 113.000
+lgbm_sc_s0    HMC   N3%      0.25        ba_loa    0.8960     33.6569         47.4405  38.000
+lgbm_sc_s0    HMC   N3%      0.25        ba_reg    0.8494     27.9098         47.0663  38.000
+lgbm_sc_s0    HMC   N3%      0.25 norm_reg_ffbs    0.9203     41.5901         58.8700  38.000
+lgbm_sc_s0    HMC   N3%      0.25    scp_abs_bc    0.9182     37.0693         47.9491  38.000
+lgbm_sc_s0    HMC   N3%      0.25    scp_signed    0.9501     42.6072         49.0116  38.000
+lgbm_sc_s0    HMC   N3%      0.50        ba_loa    0.8963     33.4713         46.9677  76.000
+lgbm_sc_s0    HMC   N3%      0.50        ba_reg    0.8684     28.3611         45.2973  76.000
+lgbm_sc_s0    HMC   N3%      0.50 norm_reg_ffbs    0.9055     37.2889         57.3502  76.000
+lgbm_sc_s0    HMC   N3%      0.50    scp_abs_bc    0.9048     34.7988         47.3554  76.000
+lgbm_sc_s0    HMC   N3%      0.50    scp_signed    0.9207     37.6312         48.2585  76.000
+lgbm_sc_s0    HMC   N3%      0.75        ba_loa    0.8899     33.3355         47.3446 113.000
+lgbm_sc_s0    HMC   N3%      0.75        ba_reg    0.8705     28.4647         45.5820 113.000
+lgbm_sc_s0    HMC   N3%      0.75 norm_reg_ffbs    0.9016     36.5943         57.8250 113.000
+lgbm_sc_s0    HMC   N3%      0.75    scp_abs_bc    0.8972     34.1608         47.2788 113.000
+lgbm_sc_s0    HMC   N3%      0.75    scp_signed    0.9068     35.5968         47.5221 113.000
+lgbm_sc_s0    HMC  REM%      0.25        ba_loa    0.9012     18.9611         26.1549  38.000
+lgbm_sc_s0    HMC  REM%      0.25        ba_reg    0.8569     14.7230         24.0607  38.000
+lgbm_sc_s0    HMC  REM%      0.25 norm_reg_ffbs    0.9192     23.1087         27.4742  38.000
+lgbm_sc_s0    HMC  REM%      0.25    scp_abs_bc    0.9111     19.7059         26.3057  38.000
+lgbm_sc_s0    HMC  REM%      0.25    scp_signed    0.9445     25.7838         30.5096  38.000
+lgbm_sc_s0    HMC  REM%      0.50        ba_loa    0.9097     18.8828         25.4280  76.000
+lgbm_sc_s0    HMC  REM%      0.50        ba_reg    0.8763     15.0087         23.2107  76.000
+lgbm_sc_s0    HMC  REM%      0.50 norm_reg_ffbs    0.9085     21.9719         26.8155  76.000
+lgbm_sc_s0    HMC  REM%      0.50    scp_abs_bc    0.9043     18.4527         25.2882  76.000
+lgbm_sc_s0    HMC  REM%      0.50    scp_signed    0.9213     19.2770         25.6388  76.000
+lgbm_sc_s0    HMC  REM%      0.75        ba_loa    0.9137     18.8603         25.0096 113.000
+lgbm_sc_s0    HMC  REM%      0.75        ba_reg    0.8854     15.1717         22.7585 113.000
+lgbm_sc_s0    HMC  REM%      0.75 norm_reg_ffbs    0.9061     21.5869         26.3960 113.000
+lgbm_sc_s0    HMC  REM%      0.75    scp_abs_bc    0.9029     18.1221         24.9852 113.000
+lgbm_sc_s0    HMC  REM%      0.75    scp_signed    0.9122     18.0301         24.7081 113.000
+lgbm_sc_s0    HMC  REML      0.25        ba_loa    0.8968    191.9419        316.6915  38.000
+lgbm_sc_s0    HMC  REML      0.25        ba_reg    0.8622    166.2085        344.2460  38.000
+lgbm_sc_s0    HMC  REML      0.25 norm_reg_ffbs    0.9166    235.8579        387.6563  38.000
+lgbm_sc_s0    HMC  REML      0.25    scp_abs_bc    0.9195    212.7254        314.5990  38.000
+lgbm_sc_s0    HMC  REML      0.25    scp_signed    0.9475    302.4717        352.9208  38.000
+lgbm_sc_s0    HMC  REML      0.50        ba_loa    0.9018    192.1718        316.5554  75.000
+lgbm_sc_s0    HMC  REML      0.50        ba_reg    0.8833    169.4634        324.5599  75.000
+lgbm_sc_s0    HMC  REML      0.50 norm_reg_ffbs    0.9050    217.1211        398.0005  75.000
+lgbm_sc_s0    HMC  REML      0.50    scp_abs_bc    0.9044    197.1780        317.3457  75.000
+lgbm_sc_s0    HMC  REML      0.50    scp_signed    0.9217    246.2887        331.9920  75.000
+lgbm_sc_s0    HMC  REML      0.75        ba_loa    0.9030    192.3002        315.6023 112.000
+lgbm_sc_s0    HMC  REML      0.75        ba_reg    0.8900    169.3829        320.8626 112.000
+lgbm_sc_s0    HMC  REML      0.75 norm_reg_ffbs    0.9018    207.0826        403.1891 112.000
+lgbm_sc_s0    HMC  REML      0.75    scp_abs_bc    0.8958    189.3620        319.1471 112.000
+lgbm_sc_s0    HMC  REML      0.75    scp_signed    0.9099    230.3064        325.4314 112.000
+lgbm_sc_s0    HMC   SOL      0.25        ba_loa    0.9270     29.7031         61.0894  38.000
+lgbm_sc_s0    HMC   SOL      0.25        ba_reg    0.8744     22.3317         57.4138  38.000
+lgbm_sc_s0    HMC   SOL      0.25 norm_reg_ffbs    0.9219     30.0612         71.0752  38.000
+lgbm_sc_s0    HMC   SOL      0.25    scp_abs_bc    0.9207     29.0212         61.8810  38.000
+lgbm_sc_s0    HMC   SOL      0.25    scp_signed    0.9492     55.3074         79.3557  38.000
+lgbm_sc_s0    HMC   SOL      0.50        ba_loa    0.9386     30.7717         59.6329  76.000
+lgbm_sc_s0    HMC   SOL      0.50        ba_reg    0.9089     22.9737         53.3226  76.000
+lgbm_sc_s0    HMC   SOL      0.50 norm_reg_ffbs    0.9112     25.9124         71.7780  76.000
+lgbm_sc_s0    HMC   SOL      0.50    scp_abs_bc    0.9085     23.2533         60.5669  76.000
+lgbm_sc_s0    HMC   SOL      0.50    scp_signed    0.9225     26.3993         60.5593  76.000
+lgbm_sc_s0    HMC   SOL      0.75        ba_loa    0.9386     31.1428         59.5320 113.000
+lgbm_sc_s0    HMC   SOL      0.75        ba_reg    0.9179     23.2490         53.1948 113.000
+lgbm_sc_s0    HMC   SOL      0.75 norm_reg_ffbs    0.8966     24.3328         76.4973 113.000
+lgbm_sc_s0    HMC   SOL      0.75    scp_abs_bc    0.9003     21.2485         60.6409 113.000
+lgbm_sc_s0    HMC   SOL      0.75    scp_signed    0.9116     22.1332         60.7542 113.000
+lgbm_sc_s0    HMC   TST      0.25        ba_loa    0.8943    159.0703        246.6605  38.000
+lgbm_sc_s0    HMC   TST      0.25        ba_reg    0.8373    129.4990        242.9597  38.000
+lgbm_sc_s0    HMC   TST      0.25 norm_reg_ffbs    0.9195    126.7828        166.6173  38.000
+lgbm_sc_s0    HMC   TST      0.25    scp_abs_bc    0.9164    181.1686        252.3477  38.000
+lgbm_sc_s0    HMC   TST      0.25    scp_signed    0.9454    255.1650        304.2862  38.000
+lgbm_sc_s0    HMC   TST      0.50        ba_loa    0.8987    159.3039        240.7158  76.000
+lgbm_sc_s0    HMC   TST      0.50        ba_reg    0.8561    131.2480        231.5756  76.000
+lgbm_sc_s0    HMC   TST      0.50 norm_reg_ffbs    0.9063    116.9981        163.0961  76.000
+lgbm_sc_s0    HMC   TST      0.50    scp_abs_bc    0.9075    167.6456        242.6820  76.000
+lgbm_sc_s0    HMC   TST      0.50    scp_signed    0.9233    188.9750        252.1497  76.000
+lgbm_sc_s0    HMC   TST      0.75        ba_loa    0.8986    159.1657        239.0214 113.000
+lgbm_sc_s0    HMC   TST      0.75        ba_reg    0.8668    132.0671        227.5488 113.000
+lgbm_sc_s0    HMC   TST      0.75 norm_reg_ffbs    0.9064    111.5498        160.7324 113.000
+lgbm_sc_s0    HMC   TST      0.75    scp_abs_bc    0.9041    163.9963        241.1040 113.000
+lgbm_sc_s0    HMC   TST      0.75    scp_signed    0.9149    177.1500        246.2342 113.000
+lgbm_sc_s0    HMC  WASO      0.25        ba_loa    0.8948    112.5146        186.0486  38.000
+lgbm_sc_s0    HMC  WASO      0.25        ba_reg    0.8905    107.0534        162.9031  38.000
+lgbm_sc_s0    HMC  WASO      0.25 norm_reg_ffbs    0.9192    104.9451        139.5414  38.000
+lgbm_sc_s0    HMC  WASO      0.25    scp_abs_bc    0.9119    120.1394        184.1279  38.000
+lgbm_sc_s0    HMC  WASO      0.25    scp_signed    0.9436    149.3330        196.5861  38.000
+lgbm_sc_s0    HMC  WASO      0.50        ba_loa    0.9048    114.0286        180.7326  76.000
+lgbm_sc_s0    HMC  WASO      0.50        ba_reg    0.9125    112.0086        151.6949  76.000
+lgbm_sc_s0    HMC  WASO      0.50 norm_reg_ffbs    0.9075     96.4214        137.5875  76.000
+lgbm_sc_s0    HMC  WASO      0.50    scp_abs_bc    0.9039    113.4581        181.1746  76.000
+lgbm_sc_s0    HMC  WASO      0.50    scp_signed    0.9182    123.1878        184.2591  76.000
+lgbm_sc_s0    HMC  WASO      0.75        ba_loa    0.9108    114.4131        177.5587 113.000
+lgbm_sc_s0    HMC  WASO      0.75        ba_reg    0.9170    114.4793        148.4044 113.000
+lgbm_sc_s0    HMC  WASO      0.75 norm_reg_ffbs    0.9025     94.6945        137.3063 113.000
+lgbm_sc_s0    HMC  WASO      0.75    scp_abs_bc    0.9057    111.6572        179.3671 113.000
+lgbm_sc_s0    HMC  WASO      0.75    scp_signed    0.9137    118.0575        180.5549 113.000
+lgbm_sc_s0     SC   N1%      0.25        ba_loa    0.8920     26.9112         42.7677  39.265
+lgbm_sc_s0     SC   N1%      0.25        ba_reg    0.8750     23.8433         37.6402  39.265
+lgbm_sc_s0     SC   N1%      0.25 norm_reg_ffbs    0.9006     26.2587         40.5453  39.265
+lgbm_sc_s0     SC   N1%      0.25    scp_abs_bc    0.8967     28.2467         43.2264  39.265
+lgbm_sc_s0     SC   N1%      0.25    scp_signed    0.9032     29.9959         43.6451  39.265
+lgbm_sc_s0     SC   N1%      0.50        ba_loa    0.8900     26.7568         42.6821  76.505
+lgbm_sc_s0     SC   N1%      0.50        ba_reg    0.8906     24.1414         36.4482  76.505
+lgbm_sc_s0     SC   N1%      0.50 norm_reg_ffbs    0.9037     26.1332         40.2409  76.505
+lgbm_sc_s0     SC   N1%      0.50    scp_abs_bc    0.9009     28.4675         42.7995  76.505
+lgbm_sc_s0     SC   N1%      0.50    scp_signed    0.9160     31.1431         42.9756  76.505
+lgbm_sc_s0     SC   N1%      0.75        ba_loa    0.8936     26.8859         42.2226 113.765
+lgbm_sc_s0     SC   N1%      0.75        ba_reg    0.9044     24.2273         35.9993 113.765
+lgbm_sc_s0     SC   N1%      0.75 norm_reg_ffbs    0.9003     25.6261         40.6009 113.765
+lgbm_sc_s0     SC   N1%      0.75    scp_abs_bc    0.9007     27.8515         42.3026 113.765
+lgbm_sc_s0     SC   N1%      0.75    scp_signed    0.9113     28.2876         41.7196 113.765
+lgbm_sc_s0     SC   N2%      0.25        ba_loa    0.8920     30.9390         45.0426  39.265
+lgbm_sc_s0     SC   N2%      0.25        ba_reg    0.8624     27.1925         43.8700  39.265
+lgbm_sc_s0     SC   N2%      0.25 norm_reg_ffbs    0.8993     30.1048         42.2444  39.265
+lgbm_sc_s0     SC   N2%      0.25    scp_abs_bc    0.8891     31.7180         46.2012  39.265
+lgbm_sc_s0     SC   N2%      0.25    scp_signed    0.8965     35.2926         48.7891  39.265
+lgbm_sc_s0     SC   N2%      0.50        ba_loa    0.8894     30.5221         45.0703  76.505
+lgbm_sc_s0     SC   N2%      0.50        ba_reg    0.8705     27.5975         43.3042  76.505
+lgbm_sc_s0     SC   N2%      0.50 norm_reg_ffbs    0.9036     30.5195         42.0319  76.505
+lgbm_sc_s0     SC   N2%      0.50    scp_abs_bc    0.8944     32.1402         45.9347  76.505
+lgbm_sc_s0     SC   N2%      0.50    scp_signed    0.9110     36.2562         47.6470  76.505
+lgbm_sc_s0     SC   N2%      0.75        ba_loa    0.8948     30.7720         44.5027 113.765
+lgbm_sc_s0     SC   N2%      0.75        ba_reg    0.8775     28.1241         42.3619 113.765
+lgbm_sc_s0     SC   N2%      0.75 norm_reg_ffbs    0.8985     30.1727         42.0808 113.765
+lgbm_sc_s0     SC   N2%      0.75    scp_abs_bc    0.8920     30.9143         44.9946 113.765
+lgbm_sc_s0     SC   N2%      0.75    scp_signed    0.9017     33.7531         46.4018 113.765
+lgbm_sc_s0     SC   N3%      0.25        ba_loa    0.8781     11.7996         19.5956  39.265
+lgbm_sc_s0     SC   N3%      0.25        ba_reg    0.8396     10.7310         21.2534  39.265
+lgbm_sc_s0     SC   N3%      0.25 norm_reg_ffbs    0.9039     12.2273         17.7458  39.265
+lgbm_sc_s0     SC   N3%      0.25    scp_abs_bc    0.8933     12.8831         19.6990  39.265
+lgbm_sc_s0     SC   N3%      0.25    scp_signed    0.8993     14.1021         20.6733  39.265
+lgbm_sc_s0     SC   N3%      0.50        ba_loa    0.8874     11.8597         19.0384  76.505
+lgbm_sc_s0     SC   N3%      0.50        ba_reg    0.8534     10.9802         20.2740  76.505
+lgbm_sc_s0     SC   N3%      0.50 norm_reg_ffbs    0.9151     12.4205         17.3532  76.505
+lgbm_sc_s0     SC   N3%      0.50    scp_abs_bc    0.9097     13.1940         18.9859  76.505
+lgbm_sc_s0     SC   N3%      0.50    scp_signed    0.9231     14.4581         19.3637  76.505
+lgbm_sc_s0     SC   N3%      0.75        ba_loa    0.8856     11.8345         19.1283 113.765
+lgbm_sc_s0     SC   N3%      0.75        ba_reg    0.8537     11.0890         20.2988 113.765
+lgbm_sc_s0     SC   N3%      0.75 norm_reg_ffbs    0.9028     11.7396         17.8072 113.765
+lgbm_sc_s0     SC   N3%      0.75    scp_abs_bc    0.8994     12.5850         19.0625 113.765
+lgbm_sc_s0     SC   N3%      0.75    scp_signed    0.9123     13.8109         19.6548 113.765
+lgbm_sc_s0     SC  REM%      0.25        ba_loa    0.9165     18.9162         30.2659  39.265
+lgbm_sc_s0     SC  REM%      0.25        ba_reg    0.8543     14.5688         29.9631  39.265
+lgbm_sc_s0     SC  REM%      0.25 norm_reg_ffbs    0.9011     22.8813         31.7235  39.265
+lgbm_sc_s0     SC  REM%      0.25    scp_abs_bc    0.8913     16.3169         29.2727  39.265
+lgbm_sc_s0     SC  REM%      0.25    scp_signed    0.8972     20.0189         32.2071  39.265
+lgbm_sc_s0     SC  REM%      0.50        ba_loa    0.9295     18.9182         29.3826  76.505
+lgbm_sc_s0     SC  REM%      0.50        ba_reg    0.8787     14.5674         28.3713  76.505
+lgbm_sc_s0     SC  REM%      0.50 norm_reg_ffbs    0.9082     22.8496         31.2514  76.505
+lgbm_sc_s0     SC  REM%      0.50    scp_abs_bc    0.9009     16.2707         28.5621  76.505
+lgbm_sc_s0     SC  REM%      0.50    scp_signed    0.9196     18.7165         29.4654  76.505
+lgbm_sc_s0     SC  REM%      0.75        ba_loa    0.9438     19.2141         28.5562 113.765
+lgbm_sc_s0     SC  REM%      0.75        ba_reg    0.9028     14.7504         26.8688 113.765
+lgbm_sc_s0     SC  REM%      0.75 norm_reg_ffbs    0.9091     22.6565         30.5884 113.765
+lgbm_sc_s0     SC  REM%      0.75    scp_abs_bc    0.9063     16.1157         27.6376 113.765
+lgbm_sc_s0     SC  REM%      0.75    scp_signed    0.9198     17.6251         27.9195 113.765
+lgbm_sc_s0     SC  REML      0.25        ba_loa    0.9082    118.1174        204.1136  39.265
+lgbm_sc_s0     SC  REML      0.25        ba_reg    0.8417     89.8735        227.1631  39.265
+lgbm_sc_s0     SC  REML      0.25 norm_reg_ffbs    0.9008     81.0156        149.3862  39.265
+lgbm_sc_s0     SC  REML      0.25    scp_abs_bc    0.8999    111.6432        204.4268  39.265
+lgbm_sc_s0     SC  REML      0.25    scp_signed    0.9029    132.6629        202.3979  39.265
+lgbm_sc_s0     SC  REML      0.50        ba_loa    0.9131    119.2523        201.0592  76.505
+lgbm_sc_s0     SC  REML      0.50        ba_reg    0.8462     90.0540        214.2273  76.505
+lgbm_sc_s0     SC  REML      0.50 norm_reg_ffbs    0.9028     79.2486        148.1491  76.505
+lgbm_sc_s0     SC  REML      0.50    scp_abs_bc    0.9070    115.5515        201.2037  76.505
+lgbm_sc_s0     SC  REML      0.50    scp_signed    0.9153    131.4584        195.8104  76.505
+lgbm_sc_s0     SC  REML      0.75        ba_loa    0.9116    119.9858        202.9302 113.765
+lgbm_sc_s0     SC  REML      0.75        ba_reg    0.8502     90.7513        211.8720 113.765
+lgbm_sc_s0     SC  REML      0.75 norm_reg_ffbs    0.9032     78.4347        148.9858 113.765
+lgbm_sc_s0     SC  REML      0.75    scp_abs_bc    0.8999    109.4827        204.1692 113.765
+lgbm_sc_s0     SC  REML      0.75    scp_signed    0.9091    117.9742        189.3713 113.765
+lgbm_sc_s0     SC   SOL      0.25        ba_loa    0.9243     32.1579         66.3459  39.265
+lgbm_sc_s0     SC   SOL      0.25        ba_reg    0.8786     25.0358         67.2649  39.265
+lgbm_sc_s0     SC   SOL      0.25 norm_reg_ffbs    0.9048     23.3334         55.8043  39.265
+lgbm_sc_s0     SC   SOL      0.25    scp_abs_bc    0.8930     24.2573         64.3937  39.265
+lgbm_sc_s0     SC   SOL      0.25    scp_signed    0.9017     38.6326         72.9148  39.265
+lgbm_sc_s0     SC   SOL      0.50        ba_loa    0.9490     34.6266         64.7863  76.505
+lgbm_sc_s0     SC   SOL      0.50        ba_reg    0.8981     24.8187         64.3129  76.505
+lgbm_sc_s0     SC   SOL      0.50 norm_reg_ffbs    0.9106     23.0223         55.4637  76.505
+lgbm_sc_s0     SC   SOL      0.50    scp_abs_bc    0.9027     24.8899         63.3457  76.505
+lgbm_sc_s0     SC   SOL      0.50    scp_signed    0.9179     38.4005         70.3515  76.505
+lgbm_sc_s0     SC   SOL      0.75        ba_loa    0.9582     35.3764         65.4164 113.765
+lgbm_sc_s0     SC   SOL      0.75        ba_reg    0.8982     24.6481         64.6812 113.765
+lgbm_sc_s0     SC   SOL      0.75 norm_reg_ffbs    0.8965     22.0950         57.0239 113.765
+lgbm_sc_s0     SC   SOL      0.75    scp_abs_bc    0.8930     24.2194         64.1878 113.765
+lgbm_sc_s0     SC   SOL      0.75    scp_signed    0.9049     30.4172         66.9670 113.765
+lgbm_sc_s0     SC   TST      0.25        ba_loa    0.8960     90.7446        143.3188  39.265
+lgbm_sc_s0     SC   TST      0.25        ba_reg    0.8497     75.8075        149.4267  39.265
+lgbm_sc_s0     SC   TST      0.25 norm_reg_ffbs    0.9054     71.8002        117.7730  39.265
+lgbm_sc_s0     SC   TST      0.25    scp_abs_bc    0.8974     94.8380        146.8566  39.265
+lgbm_sc_s0     SC   TST      0.25    scp_signed    0.9045    104.9075        152.9513  39.265
+lgbm_sc_s0     SC   TST      0.50        ba_loa    0.9006     90.9003        140.8956  76.505
+lgbm_sc_s0     SC   TST      0.50        ba_reg    0.8595     76.1010        144.8742  76.505
+lgbm_sc_s0     SC   TST      0.50 norm_reg_ffbs    0.9070     70.6080        117.4934  76.505
+lgbm_sc_s0     SC   TST      0.50    scp_abs_bc    0.9027     94.3473        143.8273  76.505
+lgbm_sc_s0     SC   TST      0.50    scp_signed    0.9179    108.8325        149.4644  76.505
+lgbm_sc_s0     SC   TST      0.75        ba_loa    0.9046     91.0700        141.4681 113.765
+lgbm_sc_s0     SC   TST      0.75        ba_reg    0.8711     76.8488        144.1670 113.765
+lgbm_sc_s0     SC   TST      0.75 norm_reg_ffbs    0.9039     66.8088        117.8694 113.765
+lgbm_sc_s0     SC   TST      0.75    scp_abs_bc    0.9010     90.3135        143.4992 113.765
+lgbm_sc_s0     SC   TST      0.75    scp_signed    0.9092     99.2925        145.0115 113.765
+lgbm_sc_s0     SC  WASO      0.25        ba_loa    0.9280    101.7649        186.4831  39.265
+lgbm_sc_s0     SC  WASO      0.25        ba_reg    0.8592     84.7354        144.9924  39.265
+lgbm_sc_s0     SC  WASO      0.25 norm_reg_ffbs    0.9055    180.6971        251.6113  39.265
+lgbm_sc_s0     SC  WASO      0.25    scp_abs_bc    0.9031     82.7509        184.9618  39.265
+lgbm_sc_s0     SC  WASO      0.25    scp_signed    0.9114     85.3107        173.0707  39.265
+lgbm_sc_s0     SC  WASO      0.50        ba_loa    0.9342    104.4441        183.8546  76.505
+lgbm_sc_s0     SC  WASO      0.50        ba_reg    0.8576     90.3222        135.6574  76.505
+lgbm_sc_s0     SC  WASO      0.50 norm_reg_ffbs    0.9034    178.3637        250.7584  76.505
+lgbm_sc_s0     SC  WASO      0.50    scp_abs_bc    0.9017     80.7810        185.0656  76.505
+lgbm_sc_s0     SC  WASO      0.50    scp_signed    0.9242     87.0361        170.1742  76.505
+lgbm_sc_s0     SC  WASO      0.75        ba_loa    0.9351    105.3312        187.6221 113.765
+lgbm_sc_s0     SC  WASO      0.75        ba_reg    0.8470     92.1432        132.8087 113.765
+lgbm_sc_s0     SC  WASO      0.75 norm_reg_ffbs    0.8970    177.0641        254.7234 113.765
+lgbm_sc_s0     SC  WASO      0.75    scp_abs_bc    0.9005     77.9157        188.7850 113.765
+lgbm_sc_s0     SC  WASO      0.75    scp_signed    0.9154     79.0410        175.1725 113.765
+lgbm_sc_s0     ST   N1%      0.25        ba_loa    0.8781     15.7939         25.6991  12.000
+lgbm_sc_s0     ST   N1%      0.25        ba_reg    0.7436     11.7873         26.8664  12.000
+lgbm_sc_s0     ST   N1%      0.25 norm_reg_ffbs    0.9023     17.2715         24.8904  12.000
+lgbm_sc_s0     ST   N1%      0.25    scp_abs_bc    0.8639     16.5818         27.7613  12.000
+lgbm_sc_s0     ST   N1%      0.25    scp_signed    1.0000    100.0000        100.0000  12.000
+lgbm_sc_s0     ST   N1%      0.50        ba_loa    0.9027     15.8173         23.5751  22.000
+lgbm_sc_s0     ST   N1%      0.50        ba_reg    0.8234     13.0666         19.7462  22.000
+lgbm_sc_s0     ST   N1%      0.50 norm_reg_ffbs    0.9105     17.6697         25.3130  22.000
+lgbm_sc_s0     ST   N1%      0.50    scp_abs_bc    0.8791     14.4229         23.1240  22.000
+lgbm_sc_s0     ST   N1%      0.50    scp_signed    0.8950     15.1296         22.5304  22.000
+lgbm_sc_s0     ST   N1%      0.75        ba_loa    0.9288     15.8712         22.6230  32.000
+lgbm_sc_s0     ST   N1%      0.75        ba_reg    0.8596     13.6528         17.7618  32.000
+lgbm_sc_s0     ST   N1%      0.75 norm_reg_ffbs    0.9112     15.6966         22.9513  32.000
+lgbm_sc_s0     ST   N1%      0.75    scp_abs_bc    0.8638     13.7864         22.4962  32.000
+lgbm_sc_s0     ST   N1%      0.75    scp_signed    0.9375     16.2615         20.5012  32.000
+lgbm_sc_s0     ST   N2%      0.25        ba_loa    0.8653     34.1421         45.6659  12.000
+lgbm_sc_s0     ST   N2%      0.25        ba_reg    0.7416     27.5551         55.1776  12.000
+lgbm_sc_s0     ST   N2%      0.25 norm_reg_ffbs    0.8989     34.2745         41.8753  12.000
+lgbm_sc_s0     ST   N2%      0.25    scp_abs_bc    0.8592     33.7429         46.0760  12.000
+lgbm_sc_s0     ST   N2%      0.25    scp_signed    1.0000    100.0000        100.0000  12.000
+lgbm_sc_s0     ST   N2%      0.50        ba_loa    0.8602     33.1598         44.4640  22.000
+lgbm_sc_s0     ST   N2%      0.50        ba_reg    0.8214     29.6508         46.6132  22.000
+lgbm_sc_s0     ST   N2%      0.50 norm_reg_ffbs    0.9052     31.6357         38.1185  22.000
+lgbm_sc_s0     ST   N2%      0.50    scp_abs_bc    0.8720     33.9774         44.6021  22.000
+lgbm_sc_s0     ST   N2%      0.50    scp_signed    0.8793     35.7345         45.2007  22.000
+lgbm_sc_s0     ST   N2%      0.75        ba_loa    0.8633     33.0137         43.5808  32.000
+lgbm_sc_s0     ST   N2%      0.75        ba_reg    0.8508     30.6949         44.0092  32.000
+lgbm_sc_s0     ST   N2%      0.75 norm_reg_ffbs    0.8962     30.6359         36.7383  32.000
+lgbm_sc_s0     ST   N2%      0.75    scp_abs_bc    0.8771     34.1882         43.6776  32.000
+lgbm_sc_s0     ST   N2%      0.75    scp_signed    0.9138     38.7802         43.5137  32.000
+lgbm_sc_s0     ST   N3%      0.25        ba_loa    0.8488     24.0971         38.8505  12.000
+lgbm_sc_s0     ST   N3%      0.25        ba_reg    0.6980     19.6115         53.3050  12.000
+lgbm_sc_s0     ST   N3%      0.25 norm_reg_ffbs    0.9070     25.7909         32.0607  12.000
+lgbm_sc_s0     ST   N3%      0.25    scp_abs_bc    0.8780     26.7327         39.5110  12.000
+lgbm_sc_s0     ST   N3%      0.25    scp_signed    1.0000    100.0000        100.0000  12.000
+lgbm_sc_s0     ST   N3%      0.50        ba_loa    0.8761     24.0966         36.6438  22.000
+lgbm_sc_s0     ST   N3%      0.50        ba_reg    0.7670     21.8152         40.6035  22.000
+lgbm_sc_s0     ST   N3%      0.50 norm_reg_ffbs    0.9032     25.6433         32.0350  22.000
+lgbm_sc_s0     ST   N3%      0.50    scp_abs_bc    0.8911     26.1933         37.4804  22.000
+lgbm_sc_s0     ST   N3%      0.50    scp_signed    0.9061     26.9398         35.0789  22.000
+lgbm_sc_s0     ST   N3%      0.75        ba_loa    0.8921     24.2365         35.1731  32.000
+lgbm_sc_s0     ST   N3%      0.75        ba_reg    0.8117     23.2056         33.5760  32.000
+lgbm_sc_s0     ST   N3%      0.75 norm_reg_ffbs    0.9046     25.8164         32.1745  32.000
+lgbm_sc_s0     ST   N3%      0.75    scp_abs_bc    0.8938     25.7332         36.5586  32.000
+lgbm_sc_s0     ST   N3%      0.75    scp_signed    0.9471     29.4813         32.7459  32.000
+lgbm_sc_s0     ST  REM%      0.25        ba_loa    0.8689     19.0910         29.4112  12.000
+lgbm_sc_s0     ST  REM%      0.25        ba_reg    0.7772     14.5540         31.2712  12.000
+lgbm_sc_s0     ST  REM%      0.25 norm_reg_ffbs    0.9103     24.9319         29.4109  12.000
+lgbm_sc_s0     ST  REM%      0.25    scp_abs_bc    0.8925     21.2902         29.8301  12.000
+lgbm_sc_s0     ST  REM%      0.25    scp_signed    1.0000    100.0000        100.0000  12.000
+lgbm_sc_s0     ST  REM%      0.50        ba_loa    0.8823     18.7036         27.4250  22.000
+lgbm_sc_s0     ST  REM%      0.50        ba_reg    0.8511     15.2727         26.7130  22.000
+lgbm_sc_s0     ST  REM%      0.50 norm_reg_ffbs    0.8989     23.1240         27.3262  22.000
+lgbm_sc_s0     ST  REM%      0.50    scp_abs_bc    0.8973     20.9406         28.8130  22.000
+lgbm_sc_s0     ST  REM%      0.50    scp_signed    0.8743     20.6295         26.1412  22.000
+lgbm_sc_s0     ST  REM%      0.75        ba_loa    0.8821     18.4760         26.9293  32.000
+lgbm_sc_s0     ST  REM%      0.75        ba_reg    0.8767     15.4665         25.7503  32.000
+lgbm_sc_s0     ST  REM%      0.75 norm_reg_ffbs    0.8971     22.9542         26.8474  32.000
+lgbm_sc_s0     ST  REM%      0.75    scp_abs_bc    0.9004     20.3676         27.9124  32.000
+lgbm_sc_s0     ST  REM%      0.75    scp_signed    0.9271     22.4829         24.6884  32.000
+lgbm_sc_s0     ST  REML      0.25        ba_loa    0.8597    151.6390        256.3910  12.000
+lgbm_sc_s0     ST  REML      0.25        ba_reg    0.7719     87.7401        234.4943  12.000
+lgbm_sc_s0     ST  REML      0.25 norm_reg_ffbs    0.9077    130.9205        157.8291  12.000
+lgbm_sc_s0     ST  REML      0.25    scp_abs_bc    0.9045    180.3161        239.8596  12.000
+lgbm_sc_s0     ST  REML      0.25    scp_signed    1.0000         inf             NaN  12.000
+lgbm_sc_s0     ST  REML      0.50        ba_loa    0.8564    150.1590        245.6103  22.000
+lgbm_sc_s0     ST  REML      0.50        ba_reg    0.8364     97.7508        179.5537  22.000
+lgbm_sc_s0     ST  REML      0.50 norm_reg_ffbs    0.9116    124.6890        148.5962  22.000
+lgbm_sc_s0     ST  REML      0.50    scp_abs_bc    0.9077    182.0511        231.1245  22.000
+lgbm_sc_s0     ST  REML      0.50    scp_signed    0.9134    180.6748        229.6452  22.000
+lgbm_sc_s0     ST  REML      0.75        ba_loa    0.8571    149.8890        238.0570  32.000
+lgbm_sc_s0     ST  REML      0.75        ba_reg    0.8708    100.1415        163.0099  32.000
+lgbm_sc_s0     ST  REML      0.75 norm_reg_ffbs    0.9117    124.0633        150.3140  32.000
+lgbm_sc_s0     ST  REML      0.75    scp_abs_bc    0.9138    181.0171        228.2139  32.000
+lgbm_sc_s0     ST  REML      0.75    scp_signed    0.9429    195.6760        218.2427  32.000
+lgbm_sc_s0     ST   SOL      0.25        ba_loa    0.8738     19.0444         43.9391  12.000
+lgbm_sc_s0     ST   SOL      0.25        ba_reg    0.7722     13.6752         47.5457  12.000
+lgbm_sc_s0     ST   SOL      0.25 norm_reg_ffbs    0.9003     27.7887         46.9147  12.000
+lgbm_sc_s0     ST   SOL      0.25    scp_abs_bc    0.8906     23.9182         47.7909  12.000
+lgbm_sc_s0     ST   SOL      0.25    scp_signed    1.0000         inf             NaN  12.000
+lgbm_sc_s0     ST   SOL      0.50        ba_loa    0.9000     20.8970         45.2819  22.000
+lgbm_sc_s0     ST   SOL      0.50        ba_reg    0.8386     14.5251         44.1755  22.000
+lgbm_sc_s0     ST   SOL      0.50 norm_reg_ffbs    0.9007     22.6091         41.3557  22.000
+lgbm_sc_s0     ST   SOL      0.50    scp_abs_bc    0.9082     17.0049         40.4797  22.000
+lgbm_sc_s0     ST   SOL      0.50    scp_signed    0.8889     30.8915         55.3574  22.000
+lgbm_sc_s0     ST   SOL      0.75        ba_loa    0.9312     22.8311         44.3047  32.000
+lgbm_sc_s0     ST   SOL      0.75        ba_reg    0.8633     15.4570         40.5649  32.000
+lgbm_sc_s0     ST   SOL      0.75 norm_reg_ffbs    0.9150     23.0026         39.6739  32.000
+lgbm_sc_s0     ST   SOL      0.75    scp_abs_bc    0.9054     16.0953         37.7612  32.000
+lgbm_sc_s0     ST   SOL      0.75    scp_signed    0.9142     41.5600         62.6392  32.000
+lgbm_sc_s0     ST   TST      0.25        ba_loa    0.8653     65.6271         95.9006  12.000
+lgbm_sc_s0     ST   TST      0.25        ba_reg    0.7183     52.8678        128.2228  12.000
+lgbm_sc_s0     ST   TST      0.25 norm_reg_ffbs    0.8942     49.8848         70.6636  12.000
+lgbm_sc_s0     ST   TST      0.25    scp_abs_bc    0.8788     71.1142        101.0545  12.000
+lgbm_sc_s0     ST   TST      0.25    scp_signed    1.0000         inf             NaN  12.000
+lgbm_sc_s0     ST   TST      0.50        ba_loa    0.8768     63.9521         89.6268  22.000
+lgbm_sc_s0     ST   TST      0.50        ba_reg    0.7941     57.7076        103.2265  22.000
+lgbm_sc_s0     ST   TST      0.50 norm_reg_ffbs    0.9252     47.9900         66.8674  22.000
+lgbm_sc_s0     ST   TST      0.50    scp_abs_bc    0.8952     64.9350         91.0179  22.000
+lgbm_sc_s0     ST   TST      0.50    scp_signed    0.9023     75.0425        100.4061  22.000
+lgbm_sc_s0     ST   TST      0.75        ba_loa    0.8721     63.3142         85.0498  32.000
+lgbm_sc_s0     ST   TST      0.75        ba_reg    0.8258     58.9744         92.5999  32.000
+lgbm_sc_s0     ST   TST      0.75 norm_reg_ffbs    0.8950     39.8210         57.2452  32.000
+lgbm_sc_s0     ST   TST      0.75    scp_abs_bc    0.9071     62.9605         83.2459  32.000
+lgbm_sc_s0     ST   TST      0.75    scp_signed    0.9329     85.3000        104.1042  32.000
+lgbm_sc_s0     ST  WASO      0.25        ba_loa    0.8619     48.1015         71.8409  12.000
+lgbm_sc_s0     ST  WASO      0.25        ba_reg    0.7681     39.7401         96.6013  12.000
+lgbm_sc_s0     ST  WASO      0.25 norm_reg_ffbs    0.9180     68.1325         89.8381  12.000
+lgbm_sc_s0     ST  WASO      0.25    scp_abs_bc    0.8728     49.2234         71.7525  12.000
+lgbm_sc_s0     ST  WASO      0.25    scp_signed    1.0000         inf             NaN  12.000
+lgbm_sc_s0     ST  WASO      0.50        ba_loa    0.8775     47.1153         68.5372  22.000
+lgbm_sc_s0     ST  WASO      0.50        ba_reg    0.8143     43.2914         83.7712  22.000
+lgbm_sc_s0     ST  WASO      0.50 norm_reg_ffbs    0.9014     62.8376         88.7088  22.000
+lgbm_sc_s0     ST  WASO      0.50    scp_abs_bc    0.8925     50.2416         68.7846  22.000
+lgbm_sc_s0     ST  WASO      0.50    scp_signed    0.8995     53.0540         71.1153  22.000
+lgbm_sc_s0     ST  WASO      0.75        ba_loa    0.8875     46.6365         67.4207  32.000
+lgbm_sc_s0     ST  WASO      0.75        ba_reg    0.8346     43.9253         79.1657  32.000
+lgbm_sc_s0     ST  WASO      0.75 norm_reg_ffbs    0.9058     63.3557         89.8898  32.000
+lgbm_sc_s0     ST  WASO      0.75    scp_abs_bc    0.9004     50.6237         67.0417  32.000
+lgbm_sc_s0     ST  WASO      0.75    scp_signed    0.9254     56.8819         69.0527  32.000
+      yasa    HMC   N1%      0.25        ba_loa    0.9155     25.4224         39.3924  38.000
+      yasa    HMC   N1%      0.25        ba_reg    0.8747     21.7444         41.1148  38.000
+      yasa    HMC   N1%      0.25 norm_reg_ffbs    0.9161     23.2205         35.3755  38.000
+      yasa    HMC   N1%      0.25    scp_abs_bc    0.9159     25.6402         39.3735  38.000
+      yasa    HMC   N1%      0.25    scp_signed    0.9477     40.3325         47.7656  38.000
+      yasa    HMC   N1%      0.50        ba_loa    0.9226     25.6064         38.6131  76.000
+      yasa    HMC   N1%      0.50        ba_reg    0.9005     22.4975         38.8955  76.000
+      yasa    HMC   N1%      0.50 norm_reg_ffbs    0.9049     21.4698         35.2236  76.000
+      yasa    HMC   N1%      0.50    scp_abs_bc    0.9065     24.2374         38.9240  76.000
+      yasa    HMC   N1%      0.50    scp_signed    0.9219     29.4488         40.4397  76.000
+      yasa    HMC   N1%      0.75        ba_loa    0.9196     25.6819         38.5495 113.000
+      yasa    HMC   N1%      0.75        ba_reg    0.9084     22.8303         38.0712 113.000
+      yasa    HMC   N1%      0.75 norm_reg_ffbs    0.9053     21.3661         35.0309 113.000
+      yasa    HMC   N1%      0.75    scp_abs_bc    0.8980     23.6989         39.5019 113.000
+      yasa    HMC   N1%      0.75    scp_signed    0.9075     26.7377         39.6454 113.000
+      yasa    HMC   N2%      0.25        ba_loa    0.9181     33.5482         47.9585  38.000
+      yasa    HMC   N2%      0.25        ba_reg    0.8440     22.5620         37.2711  38.000
+      yasa    HMC   N2%      0.25 norm_reg_ffbs    0.9212     29.9476         36.1181  38.000
+      yasa    HMC   N2%      0.25    scp_abs_bc    0.9121     33.5495         48.3522  38.000
+      yasa    HMC   N2%      0.25    scp_signed    0.9480     46.5887         54.8203  38.000
+      yasa    HMC   N2%      0.50        ba_loa    0.9272     33.5989         47.0524  76.000
+      yasa    HMC   N2%      0.50        ba_reg    0.8552     22.9935         35.9244  76.000
+      yasa    HMC   N2%      0.50 norm_reg_ffbs    0.9111     28.0574         35.3420  76.000
+      yasa    HMC   N2%      0.50    scp_abs_bc    0.9068     30.8618         46.2593  76.000
+      yasa    HMC   N2%      0.50    scp_signed    0.9242     35.0819         48.0254  76.000
+      yasa    HMC   N2%      0.75        ba_loa    0.9329     33.5152         46.5395 113.000
+      yasa    HMC   N2%      0.75        ba_reg    0.8607     23.2191         34.9824 113.000
+      yasa    HMC   N2%      0.75 norm_reg_ffbs    0.9075     26.9673         34.8245 113.000
+      yasa    HMC   N2%      0.75    scp_abs_bc    0.9025     29.9096         45.5737 113.000
+      yasa    HMC   N2%      0.75    scp_signed    0.9141     31.1924         45.3784 113.000
+      yasa    HMC   N3%      0.25        ba_loa    0.9048     25.1060         34.0467  38.000
+      yasa    HMC   N3%      0.25        ba_reg    0.8624     21.3756         36.0488  38.000
+      yasa    HMC   N3%      0.25 norm_reg_ffbs    0.9246     32.0286         36.8011  38.000
+      yasa    HMC   N3%      0.25    scp_abs_bc    0.9174     26.6322         34.6176  38.000
+      yasa    HMC   N3%      0.25    scp_signed    0.9491     33.7319         38.0003  38.000
+      yasa    HMC   N3%      0.50        ba_loa    0.9078     24.8402         33.4278  76.000
+      yasa    HMC   N3%      0.50        ba_reg    0.8845     21.7479         34.5044  76.000
+      yasa    HMC   N3%      0.50 norm_reg_ffbs    0.9121     30.4356         35.9215  76.000
+      yasa    HMC   N3%      0.50    scp_abs_bc    0.9047     24.6191         33.5649  76.000
+      yasa    HMC   N3%      0.50    scp_signed    0.9222     27.4976         33.7540  76.000
+      yasa    HMC   N3%      0.75        ba_loa    0.9061     24.6946         32.8894 113.000
+      yasa    HMC   N3%      0.75        ba_reg    0.8895     21.9065         33.9034 113.000
+      yasa    HMC   N3%      0.75 norm_reg_ffbs    0.9029     30.0729         35.9246 113.000
+      yasa    HMC   N3%      0.75    scp_abs_bc    0.8963     24.0621         33.0313 113.000
+      yasa    HMC   N3%      0.75    scp_signed    0.9118     26.1032         32.7401 113.000
+      yasa    HMC  REM%      0.25        ba_loa    0.9138     18.6720         25.7469  38.000
+      yasa    HMC  REM%      0.25        ba_reg    0.8671     14.9348         22.5786  38.000
+      yasa    HMC  REM%      0.25 norm_reg_ffbs    0.9265     23.4797         27.3163  38.000
+      yasa    HMC  REM%      0.25    scp_abs_bc    0.9168     19.0648         25.7717  38.000
+      yasa    HMC  REM%      0.25    scp_signed    0.9474     26.8406         31.0153  38.000
+      yasa    HMC  REM%      0.50        ba_loa    0.9149     18.4692         25.2784  76.000
+      yasa    HMC  REM%      0.50        ba_reg    0.8931     15.2040         21.4361  76.000
+      yasa    HMC  REM%      0.50 norm_reg_ffbs    0.9094     21.9670         26.9250  76.000
+      yasa    HMC  REM%      0.50    scp_abs_bc    0.9047     17.8354         25.2784  76.000
+      yasa    HMC  REM%      0.50    scp_signed    0.9211     19.3033         25.5470  76.000
+      yasa    HMC  REM%      0.75        ba_loa    0.9124     18.4490         24.9808 113.000
+      yasa    HMC  REM%      0.75        ba_reg    0.9039     15.3377         21.0579 113.000
+      yasa    HMC  REM%      0.75 norm_reg_ffbs    0.9071     21.5550         26.7812 113.000
+      yasa    HMC  REM%      0.75    scp_abs_bc    0.9001     17.6582         25.1815 113.000
+      yasa    HMC  REM%      0.75    scp_signed    0.9137     18.2472         24.9343 113.000
+      yasa    HMC  REML      0.25        ba_loa    0.8950    185.9944        325.4934  38.000
+      yasa    HMC  REML      0.25        ba_reg    0.8476    156.2575        353.0791  38.000
+      yasa    HMC  REML      0.25 norm_reg_ffbs    0.9154    195.8519        316.3482  38.000
+      yasa    HMC  REML      0.25    scp_abs_bc    0.9169    203.7736        322.4248  38.000
+      yasa    HMC  REML      0.25    scp_signed    0.9467    301.3462        365.4480  38.000
+      yasa    HMC  REML      0.50        ba_loa    0.9042    190.3812        320.5498  75.000
+      yasa    HMC  REML      0.50        ba_reg    0.8669    161.3871        335.5848  75.000
+      yasa    HMC  REML      0.50 norm_reg_ffbs    0.9051    182.9438        316.9529  75.000
+      yasa    HMC  REML      0.50    scp_abs_bc    0.9033    189.0585        320.9318  75.000
+      yasa    HMC  REML      0.50    scp_signed    0.9190    238.6929        342.3069  75.000
+      yasa    HMC  REML      0.75        ba_loa    0.9063    192.1731        318.8926 112.000
+      yasa    HMC  REML      0.75        ba_reg    0.8689    163.1766        327.3673 112.000
+      yasa    HMC  REML      0.75 norm_reg_ffbs    0.9054    179.2562        314.8267 112.000
+      yasa    HMC  REML      0.75    scp_abs_bc    0.8980    185.3770        320.7897 112.000
+      yasa    HMC  REML      0.75    scp_signed    0.9076    221.3329        347.1487 112.000
+      yasa    HMC   SOL      0.25        ba_loa    0.9155     24.6806         48.8312  38.000
+      yasa    HMC   SOL      0.25        ba_reg    0.8823     19.3838         39.0024  38.000
+      yasa    HMC   SOL      0.25 norm_reg_ffbs    0.9220     25.4387         65.4914  38.000
+      yasa    HMC   SOL      0.25    scp_abs_bc    0.9181     26.5181         50.2553  38.000
+      yasa    HMC   SOL      0.25    scp_signed    0.9493     34.4302         49.4679  38.000
+      yasa    HMC   SOL      0.50        ba_loa    0.9184     25.1072         48.0975  76.000
+      yasa    HMC   SOL      0.50        ba_reg    0.9127     19.6036         36.5145  76.000
+      yasa    HMC   SOL      0.50 norm_reg_ffbs    0.9088     21.9750         67.2381  76.000
+      yasa    HMC   SOL      0.50    scp_abs_bc    0.9028     22.2936         50.2362  76.000
+      yasa    HMC   SOL      0.50    scp_signed    0.9255     18.1266         38.4706  76.000
+      yasa    HMC   SOL      0.75        ba_loa    0.9162     24.9577         49.3513 113.000
+      yasa    HMC   SOL      0.75        ba_reg    0.9263     19.6875         37.0858 113.000
+      yasa    HMC   SOL      0.75 norm_reg_ffbs    0.8955     20.7732         73.1610 113.000
+      yasa    HMC   SOL      0.75    scp_abs_bc    0.8992     21.3697         52.4284 113.000
+      yasa    HMC   SOL      0.75    scp_signed    0.9125     16.5347         40.3926 113.000
+      yasa    HMC   TST      0.25        ba_loa    0.9240    132.8057        215.2914  38.000
+      yasa    HMC   TST      0.25        ba_reg    0.8465    100.8664        205.9706  38.000
+      yasa    HMC   TST      0.25 norm_reg_ffbs    0.9227    107.4270        150.7785  38.000
+      yasa    HMC   TST      0.25    scp_abs_bc    0.9212    129.2468        211.1423  38.000
+      yasa    HMC   TST      0.25    scp_signed    0.9489    222.7825        277.9440  38.000
+      yasa    HMC   TST      0.50        ba_loa    0.9352    135.6573        208.0559  76.000
+      yasa    HMC   TST      0.50        ba_reg    0.8584    101.6818        194.1289  76.000
+      yasa    HMC   TST      0.50 norm_reg_ffbs    0.9083     88.4075        143.1142  76.000
+      yasa    HMC   TST      0.50    scp_abs_bc    0.9095    107.7391        200.8025  76.000
+      yasa    HMC   TST      0.50    scp_signed    0.9225    125.1125        196.7565  76.000
+      yasa    HMC   TST      0.75        ba_loa    0.9336    136.2533        207.8235 113.000
+      yasa    HMC   TST      0.75        ba_reg    0.8683    101.9159        190.0678 113.000
+      yasa    HMC   TST      0.75 norm_reg_ffbs    0.9058     83.4548        141.5276 113.000
+      yasa    HMC   TST      0.75    scp_abs_bc    0.9049     99.6692        198.6361 113.000
+      yasa    HMC   TST      0.75    scp_signed    0.9087    115.8050        195.2076 113.000
+      yasa    HMC  WASO      0.25        ba_loa    0.9158    101.8848        179.8946  38.000
+      yasa    HMC  WASO      0.25        ba_reg    0.8588     86.9114        146.1298  38.000
+      yasa    HMC  WASO      0.25 norm_reg_ffbs    0.9244     99.2276        148.9160  38.000
+      yasa    HMC  WASO      0.25    scp_abs_bc    0.9184    100.6397        176.8943  38.000
+      yasa    HMC  WASO      0.25    scp_signed    0.9487    116.9360        167.7364  38.000
+      yasa    HMC  WASO      0.50        ba_loa    0.9313    104.4811        173.9931  76.000
+      yasa    HMC  WASO      0.50        ba_reg    0.8672     91.5224        135.7259  76.000
+      yasa    HMC  WASO      0.50 norm_reg_ffbs    0.9105     81.7176        146.6385  76.000
+      yasa    HMC  WASO      0.50    scp_abs_bc    0.9097     91.7819        174.3721  76.000
+      yasa    HMC  WASO      0.50    scp_signed    0.9232     96.4573        164.6540  76.000
+      yasa    HMC  WASO      0.75        ba_loa    0.9364    105.6998        173.2429 113.000
+      yasa    HMC  WASO      0.75        ba_reg    0.8642     93.4180        133.8711 113.000
+      yasa    HMC  WASO      0.75 norm_reg_ffbs    0.9058     75.3380        145.6114 113.000
+      yasa    HMC  WASO      0.75    scp_abs_bc    0.9051     86.5724        176.5190 113.000
+      yasa    HMC  WASO      0.75    scp_signed    0.9112     89.2723        169.2802 113.000
+      yasa     SC   N1%      0.25        ba_loa    0.9191     29.6330         43.3578  39.265
+      yasa     SC   N1%      0.25        ba_reg    0.8844     27.2586         46.2324  39.265
+      yasa     SC   N1%      0.25 norm_reg_ffbs    0.9001     26.7745         40.6806  39.265
+      yasa     SC   N1%      0.25    scp_abs_bc    0.8903     26.6891         43.7659  39.265
+      yasa     SC   N1%      0.25    scp_signed    0.9015     32.0960         43.2123  39.265
+      yasa     SC   N1%      0.50        ba_loa    0.9221     29.6125         43.2476  76.505
+      yasa     SC   N1%      0.50        ba_reg    0.9036     27.8244         44.7734  76.505
+      yasa     SC   N1%      0.50 norm_reg_ffbs    0.9034     26.8078         40.2668  76.505
+      yasa     SC   N1%      0.50    scp_abs_bc    0.8972     26.8062         43.9067  76.505
+      yasa     SC   N1%      0.50    scp_signed    0.9135     32.8530         42.7266  76.505
+      yasa     SC   N1%      0.75        ba_loa    0.9238     29.7471         43.5055 113.765
+      yasa     SC   N1%      0.75        ba_reg    0.9100     28.2045         44.4271 113.765
+      yasa     SC   N1%      0.75 norm_reg_ffbs    0.8974     26.3947         40.7692 113.765
+      yasa     SC   N1%      0.75    scp_abs_bc    0.8953     25.6442         43.7889 113.765
+      yasa     SC   N1%      0.75    scp_signed    0.9094     30.4012         41.4093 113.765
+      yasa     SC   N2%      0.25        ba_loa    0.9075     40.0987         56.6520  39.265
+      yasa     SC   N2%      0.25        ba_reg    0.8700     31.3066         47.9806  39.265
+      yasa     SC   N2%      0.25 norm_reg_ffbs    0.8977     32.8168         43.6514  39.265
+      yasa     SC   N2%      0.25    scp_abs_bc    0.8959     38.9034         57.6527  39.265
+      yasa     SC   N2%      0.25    scp_signed    0.9024     42.7031         58.0739  39.265
+      yasa     SC   N2%      0.50        ba_loa    0.9064     39.4285         56.4324  76.505
+      yasa     SC   N2%      0.50        ba_reg    0.8768     31.3579         47.1085  76.505
+      yasa     SC   N2%      0.50 norm_reg_ffbs    0.9048     33.1299         43.0077  76.505
+      yasa     SC   N2%      0.50    scp_abs_bc    0.9011     38.9216         57.3469  76.505
+      yasa     SC   N2%      0.50    scp_signed    0.9168     42.8047         56.2383  76.505
+      yasa     SC   N2%      0.75        ba_loa    0.9093     39.6277         56.0332 113.765
+      yasa     SC   N2%      0.75        ba_reg    0.8824     31.6133         46.3020 113.765
+      yasa     SC   N2%      0.75 norm_reg_ffbs    0.8990     32.6641         43.1201 113.765
+      yasa     SC   N2%      0.75    scp_abs_bc    0.9000     37.5660         56.9122 113.765
+      yasa     SC   N2%      0.75    scp_signed    0.9083     39.4419         53.7348 113.765
+      yasa     SC   N3%      0.25        ba_loa    0.9013     16.0345         26.4391  39.265
+      yasa     SC   N3%      0.25        ba_reg    0.8605     15.3941         24.6352  39.265
+      yasa     SC   N3%      0.25 norm_reg_ffbs    0.9009     16.2732         23.4530  39.265
+      yasa     SC   N3%      0.25    scp_abs_bc    0.8960     15.9675         26.8235  39.265
+      yasa     SC   N3%      0.25    scp_signed    0.9019     16.5511         26.0279  39.265
+      yasa     SC   N3%      0.50        ba_loa    0.9213     16.3593         25.2778  76.505
+      yasa     SC   N3%      0.50        ba_reg    0.8909     16.1183         22.9883  76.505
+      yasa     SC   N3%      0.50 norm_reg_ffbs    0.9131     16.5633         22.7374  76.505
+      yasa     SC   N3%      0.50    scp_abs_bc    0.9100     15.8084         25.5112  76.505
+      yasa     SC   N3%      0.50    scp_signed    0.9238     17.0663         24.9353  76.505
+      yasa     SC   N3%      0.75        ba_loa    0.9225     16.3029         25.0211 113.765
+      yasa     SC   N3%      0.75        ba_reg    0.8969     16.2055         22.9348 113.765
+      yasa     SC   N3%      0.75 norm_reg_ffbs    0.9013     15.9182         22.9132 113.765
+      yasa     SC   N3%      0.75    scp_abs_bc    0.9004     14.9275         25.1089 113.765
+      yasa     SC   N3%      0.75    scp_signed    0.9121     16.0651         25.0982 113.765
+      yasa     SC  REM%      0.25        ba_loa    0.9167     22.2286         35.1277  39.265
+      yasa     SC  REM%      0.25        ba_reg    0.8406     16.4889         33.0000  39.265
+      yasa     SC  REM%      0.25 norm_reg_ffbs    0.9022     25.6700         34.7902  39.265
+      yasa     SC  REM%      0.25    scp_abs_bc    0.8886     18.2856         33.4047  39.265
+      yasa     SC  REM%      0.25    scp_signed    0.8950     22.4826         36.6724  39.265
+      yasa     SC  REM%      0.50        ba_loa    0.9322     22.4254         34.1460  76.505
+      yasa     SC  REM%      0.50        ba_reg    0.8647     16.7069         30.7916  76.505
+      yasa     SC  REM%      0.50 norm_reg_ffbs    0.9078     25.0385         34.2502  76.505
+      yasa     SC  REM%      0.50    scp_abs_bc    0.9032     18.7071         32.6997  76.505
+      yasa     SC  REM%      0.50    scp_signed    0.9172     21.0173         34.1627  76.505
+      yasa     SC  REM%      0.75        ba_loa    0.9411     22.7382         33.2177 113.765
+      yasa     SC  REM%      0.75        ba_reg    0.8842     17.0555         29.2366 113.765
+      yasa     SC  REM%      0.75 norm_reg_ffbs    0.9047     23.9816         33.4738 113.765
+      yasa     SC  REM%      0.75    scp_abs_bc    0.9046     18.3243         31.6216 113.765
+      yasa     SC  REM%      0.75    scp_signed    0.9175     18.8228         31.8354 113.765
+      yasa     SC  REML      0.25        ba_loa    0.8878    130.2911        238.8249  39.265
+      yasa     SC  REML      0.25        ba_reg    0.8411     96.0418        225.8452  39.265
+      yasa     SC  REML      0.25 norm_reg_ffbs    0.9041     96.0780        158.0877  39.265
+      yasa     SC  REML      0.25    scp_abs_bc    0.8933    136.6805        236.9498  39.265
+      yasa     SC  REML      0.25    scp_signed    0.9048    151.9988        249.9417  39.265
+      yasa     SC  REML      0.50        ba_loa    0.8821    131.9431        237.4845  76.505
+      yasa     SC  REML      0.50        ba_reg    0.8598     97.5658        218.4614  76.505
+      yasa     SC  REML      0.50 norm_reg_ffbs    0.9087     94.3668        157.1224  76.505
+      yasa     SC  REML      0.50    scp_abs_bc    0.9009    143.2513        231.6076  76.505
+      yasa     SC  REML      0.50    scp_signed    0.9179    152.8173        234.6849  76.505
+      yasa     SC  REML      0.75        ba_loa    0.8793    133.9609        237.3161 113.765
+      yasa     SC  REML      0.75        ba_reg    0.8770     99.6246        213.3486 113.765
+      yasa     SC  REML      0.75 norm_reg_ffbs    0.9002     91.4447        158.1285 113.765
+      yasa     SC  REML      0.75    scp_abs_bc    0.8976    142.1103        231.3219 113.765
+      yasa     SC  REML      0.75    scp_signed    0.9107    147.3143        233.3764 113.765
+      yasa     SC   SOL      0.25        ba_loa    0.9263     33.3727         68.1438  39.265
+      yasa     SC   SOL      0.25        ba_reg    0.8680     26.2141         60.5669  39.265
+      yasa     SC   SOL      0.25 norm_reg_ffbs    0.9035     26.8011         57.1996  39.265
+      yasa     SC   SOL      0.25    scp_abs_bc    0.9079     27.7889         68.2274  39.265
+      yasa     SC   SOL      0.25    scp_signed    0.9146     32.1236         70.2450  39.265
+      yasa     SC   SOL      0.50        ba_loa    0.9370     34.5107         67.8948  76.505
+      yasa     SC   SOL      0.50        ba_reg    0.8815     26.9886         56.7575  76.505
+      yasa     SC   SOL      0.50 norm_reg_ffbs    0.9123     27.0576         55.9741  76.505
+      yasa     SC   SOL      0.50    scp_abs_bc    0.9081     26.4701         68.3586  76.505
+      yasa     SC   SOL      0.50    scp_signed    0.9236     28.6738         67.1652  76.505
+      yasa     SC   SOL      0.75        ba_loa    0.9408     35.1507         67.8508 113.765
+      yasa     SC   SOL      0.75        ba_reg    0.8950     27.5691         55.8979 113.765
+      yasa     SC   SOL      0.75 norm_reg_ffbs    0.9003     26.3330         57.4790 113.765
+      yasa     SC   SOL      0.75    scp_abs_bc    0.8998     24.8084         68.7018 113.765
+      yasa     SC   SOL      0.75    scp_signed    0.9131     23.8625         66.7593 113.765
+      yasa     SC   TST      0.25        ba_loa    0.9009    110.2579        174.9994  39.265
+      yasa     SC   TST      0.25        ba_reg    0.8399     87.2208        175.1968  39.265
+      yasa     SC   TST      0.25 norm_reg_ffbs    0.8994     85.9268        149.0256  39.265
+      yasa     SC   TST      0.25    scp_abs_bc    0.8926    105.6048        174.6679  39.265
+      yasa     SC   TST      0.25    scp_signed    0.9010    120.4075        183.9025  39.265
+      yasa     SC   TST      0.50        ba_loa    0.9073    110.9393        172.8862  76.505
+      yasa     SC   TST      0.50        ba_reg    0.8527     87.8485        168.9412  76.505
+      yasa     SC   TST      0.50 norm_reg_ffbs    0.9035     85.5109        148.9715  76.505
+      yasa     SC   TST      0.50    scp_abs_bc    0.8987    105.9586        172.9055  76.505
+      yasa     SC   TST      0.50    scp_signed    0.9149    120.5350        176.2640  76.505
+      yasa     SC   TST      0.75        ba_loa    0.9104    111.1749        174.4324 113.765
+      yasa     SC   TST      0.75        ba_reg    0.8549     87.9939        170.9629 113.765
+      yasa     SC   TST      0.75 norm_reg_ffbs    0.8956     80.4902        151.4882 113.765
+      yasa     SC   TST      0.75    scp_abs_bc    0.8955    101.2855        174.0676 113.765
+      yasa     SC   TST      0.75    scp_signed    0.9043    111.4125        174.2987 113.765
+      yasa     SC  WASO      0.25        ba_loa    0.9162    117.1083        210.1253  39.265
+      yasa     SC  WASO      0.25        ba_reg    0.8549     97.3627        147.0948  39.265
+      yasa     SC  WASO      0.25 norm_reg_ffbs    0.9046    231.4158        310.6808  39.265
+      yasa     SC  WASO      0.25    scp_abs_bc    0.8998    108.8447        215.2141  39.265
+      yasa     SC  WASO      0.25    scp_signed    0.9008    100.8548        181.7641  39.265
+      yasa     SC  WASO      0.50        ba_loa    0.9201    117.4444        207.9458  76.505
+      yasa     SC  WASO      0.50        ba_reg    0.8781    102.3712        135.6772  76.505
+      yasa     SC  WASO      0.50 norm_reg_ffbs    0.9039    229.3546        311.5684  76.505
+      yasa     SC  WASO      0.50    scp_abs_bc    0.9027    108.5558        211.8104  76.505
+      yasa     SC  WASO      0.50    scp_signed    0.9190    104.9613        173.4021  76.505
+      yasa     SC  WASO      0.75        ba_loa    0.9208    117.7695        210.5948 113.765
+      yasa     SC  WASO      0.75        ba_reg    0.8864    104.8197        131.5340 113.765
+      yasa     SC  WASO      0.75 norm_reg_ffbs    0.8969    223.4022        315.5644 113.765
+      yasa     SC  WASO      0.75    scp_abs_bc    0.8973    107.7332        215.4770 113.765
+      yasa     SC  WASO      0.75    scp_signed    0.9132     98.5820        178.4543 113.765
+      yasa     ST   N1%      0.25        ba_loa    0.8728     16.0022         21.9272  12.000
+      yasa     ST   N1%      0.25        ba_reg    0.7817     13.0548         27.0484  12.000
+      yasa     ST   N1%      0.25 norm_reg_ffbs    0.9025     17.4605         24.5649  12.000
+      yasa     ST   N1%      0.25    scp_abs_bc    0.9012     16.7920         21.1562  12.000
+      yasa     ST   N1%      0.25    scp_signed    1.0000    100.0000        100.0000  12.000
+      yasa     ST   N1%      0.50        ba_loa    0.8686     15.4959         20.8647  22.000
+      yasa     ST   N1%      0.50        ba_reg    0.8280     13.6740         23.0322  22.000
+      yasa     ST   N1%      0.50 norm_reg_ffbs    0.9111     16.7771         24.1033  22.000
+      yasa     ST   N1%      0.50    scp_abs_bc    0.8877     16.0150         20.3734  22.000
+      yasa     ST   N1%      0.50    scp_signed    0.9057     17.0255         21.0663  22.000
+      yasa     ST   N1%      0.75        ba_loa    0.8838     15.3689         19.9221  32.000
+      yasa     ST   N1%      0.75        ba_reg    0.8442     13.9324         21.3877  32.000
+      yasa     ST   N1%      0.75 norm_reg_ffbs    0.9125     16.5876         23.2935  32.000
+      yasa     ST   N1%      0.75    scp_abs_bc    0.8983     15.8273         19.5575  32.000
+      yasa     ST   N1%      0.75    scp_signed    0.9421     18.4828         20.4776  32.000
+      yasa     ST   N2%      0.25        ba_loa    0.8492     33.7890         46.4930  12.000
+      yasa     ST   N2%      0.25        ba_reg    0.7425     28.2911         56.4236  12.000
+      yasa     ST   N2%      0.25 norm_reg_ffbs    0.8961     35.4658         42.6645  12.000
+      yasa     ST   N2%      0.25    scp_abs_bc    0.8417     33.6260         47.5827  12.000
+      yasa     ST   N2%      0.25    scp_signed    1.0000    100.0000        100.0000  12.000
+      yasa     ST   N2%      0.50        ba_loa    0.8586     32.8580         44.1327  22.000
+      yasa     ST   N2%      0.50        ba_reg    0.8123     30.3063         46.7689  22.000
+      yasa     ST   N2%      0.50 norm_reg_ffbs    0.8902     33.4708         40.3805  22.000
+      yasa     ST   N2%      0.50    scp_abs_bc    0.8539     32.7068         45.0601  22.000
+      yasa     ST   N2%      0.50    scp_signed    0.8684     35.5598         46.8228  22.000
+      yasa     ST   N2%      0.75        ba_loa    0.8800     32.9082         43.1848  32.000
+      yasa     ST   N2%      0.75        ba_reg    0.8521     31.5932         43.6061  32.000
+      yasa     ST   N2%      0.75 norm_reg_ffbs    0.8879     32.9469         39.4168  32.000
+      yasa     ST   N2%      0.75    scp_abs_bc    0.8800     33.3308         44.3559  32.000
+      yasa     ST   N2%      0.75    scp_signed    0.9079     39.3708         46.1508  32.000
+      yasa     ST   N3%      0.25        ba_loa    0.8717     25.8023         34.9363  12.000
+      yasa     ST   N3%      0.25        ba_reg    0.7430     21.9021         48.2201  12.000
+      yasa     ST   N3%      0.25 norm_reg_ffbs    0.9297     26.9471         29.5238  12.000
+      yasa     ST   N3%      0.25    scp_abs_bc    0.8820     26.8112         35.5429  12.000
+      yasa     ST   N3%      0.25    scp_signed    1.0000    100.0000        100.0000  12.000
+      yasa     ST   N3%      0.50        ba_loa    0.8627     25.2168         34.2796  22.000
+      yasa     ST   N3%      0.50        ba_reg    0.7902     23.5684         39.4284  22.000
+      yasa     ST   N3%      0.50 norm_reg_ffbs    0.9105     26.0566         29.1054  22.000
+      yasa     ST   N3%      0.50    scp_abs_bc    0.8757     26.2851         34.0301  22.000
+      yasa     ST   N3%      0.50    scp_signed    0.8984     27.3380         34.4953  22.000
+      yasa     ST   N3%      0.75        ba_loa    0.8750     25.2267         33.0084  32.000
+      yasa     ST   N3%      0.75        ba_reg    0.8258     24.5749         34.2517  32.000
+      yasa     ST   N3%      0.75 norm_reg_ffbs    0.9117     26.1405         28.6795  32.000
+      yasa     ST   N3%      0.75    scp_abs_bc    0.8896     26.8864         32.9417  32.000
+      yasa     ST   N3%      0.75    scp_signed    0.9404     29.4623         32.5735  32.000
+      yasa     ST  REM%      0.25        ba_loa    0.8678     18.8212         28.8435  12.000
+      yasa     ST  REM%      0.25        ba_reg    0.7802     14.6405         31.3297  12.000
+      yasa     ST  REM%      0.25 norm_reg_ffbs    0.9133     26.5491         30.9600  12.000
+      yasa     ST  REM%      0.25    scp_abs_bc    0.8908     20.7788         29.7953  12.000
+      yasa     ST  REM%      0.25    scp_signed    1.0000    100.0000        100.0000  12.000
+      yasa     ST  REM%      0.50        ba_loa    0.8841     18.5190         27.5571  22.000
+      yasa     ST  REM%      0.50        ba_reg    0.8664     15.4365         26.6913  22.000
+      yasa     ST  REM%      0.50 norm_reg_ffbs    0.9002     24.1164         28.6905  22.000
+      yasa     ST  REM%      0.50    scp_abs_bc    0.8943     19.9358         28.2786  22.000
+      yasa     ST  REM%      0.50    scp_signed    0.9077     21.7704         28.3896  22.000
+      yasa     ST  REM%      0.75        ba_loa    0.8862     18.3623         27.3327  32.000
+      yasa     ST  REM%      0.75        ba_reg    0.8862     15.5534         26.3282  32.000
+      yasa     ST  REM%      0.75 norm_reg_ffbs    0.8929     23.6922         28.2910  32.000
+      yasa     ST  REM%      0.75    scp_abs_bc    0.8896     19.9125         27.7339  32.000
+      yasa     ST  REM%      0.75    scp_signed    0.9379     24.2056         27.6502  32.000
+      yasa     ST  REML      0.25        ba_loa    0.8567    128.3860        238.5240  12.000
+      yasa     ST  REML      0.25        ba_reg    0.7595     80.0744        254.2456  12.000
+      yasa     ST  REML      0.25 norm_reg_ffbs    0.9003    154.4644        207.5396  12.000
+      yasa     ST  REML      0.25    scp_abs_bc    0.8867    154.3304        218.8530  12.000
+      yasa     ST  REML      0.25    scp_signed    1.0000         inf             NaN  12.000
+      yasa     ST  REML      0.50        ba_loa    0.8559    130.6942        228.9206  22.000
+      yasa     ST  REML      0.50        ba_reg    0.8341     89.5023        204.7778  22.000
+      yasa     ST  REML      0.50 norm_reg_ffbs    0.9259    151.0975        197.2085  22.000
+      yasa     ST  REML      0.50    scp_abs_bc    0.9009    158.4744        209.9533  22.000
+      yasa     ST  REML      0.50    scp_signed    0.8993    159.4512        221.3217  22.000
+      yasa     ST  REML      0.75        ba_loa    0.8558    130.3437        227.5519  32.000
+      yasa     ST  REML      0.75        ba_reg    0.8412     91.1797        190.4302  32.000
+      yasa     ST  REML      0.75 norm_reg_ffbs    0.9112    133.3040        185.2612  32.000
+      yasa     ST  REML      0.75    scp_abs_bc    0.9092    164.7899        202.6045  32.000
+      yasa     ST  REML      0.75    scp_signed    0.9188    181.5148        216.3273  32.000
+      yasa     ST   SOL      0.25        ba_loa    0.8869     12.3686         19.2757  12.000
+      yasa     ST   SOL      0.25        ba_reg    0.7609      9.6586         22.0070  12.000
+      yasa     ST   SOL      0.25 norm_reg_ffbs    0.8997     25.2023         44.0075  12.000
+      yasa     ST   SOL      0.25    scp_abs_bc    0.9073     13.8660         20.1598  12.000
+      yasa     ST   SOL      0.25    scp_signed    1.0000         inf             NaN  12.000
+      yasa     ST   SOL      0.50        ba_loa    0.9093     12.2863         18.2394  22.000
+      yasa     ST   SOL      0.50        ba_reg    0.8407     10.4199         17.7647  22.000
+      yasa     ST   SOL      0.50 norm_reg_ffbs    0.8952     20.2540         38.9359  22.000
+      yasa     ST   SOL      0.50    scp_abs_bc    0.9036     12.8419         19.5198  22.000
+      yasa     ST   SOL      0.50    scp_signed    0.9080     13.2810         17.9833  22.000
+      yasa     ST   SOL      0.75        ba_loa    0.9108     12.1301         18.4037  32.000
+      yasa     ST   SOL      0.75        ba_reg    0.8438     10.6153         17.1210  32.000
+      yasa     ST   SOL      0.75 norm_reg_ffbs    0.9108     20.5493         37.7096  32.000
+      yasa     ST   SOL      0.75    scp_abs_bc    0.9046     11.5086         18.7190  32.000
+      yasa     ST   SOL      0.75    scp_signed    0.9425     14.6083         17.2750  32.000
+      yasa     ST   TST      0.25        ba_loa    0.8994     62.0220        101.8342  12.000
+      yasa     ST   TST      0.25        ba_reg    0.7769     45.9037        111.8758  12.000
+      yasa     ST   TST      0.25 norm_reg_ffbs    0.9283     48.3729         63.3404  12.000
+      yasa     ST   TST      0.25    scp_abs_bc    0.9150     77.0833        108.8711  12.000
+      yasa     ST   TST      0.25    scp_signed    1.0000         inf             NaN  12.000
+      yasa     ST   TST      0.50        ba_loa    0.8989     59.1525         98.7115  22.000
+      yasa     ST   TST      0.50        ba_reg    0.8448     49.5513         91.9641  22.000
+      yasa     ST   TST      0.50 norm_reg_ffbs    0.9120     40.2348         58.5015  22.000
+      yasa     ST   TST      0.50    scp_abs_bc    0.9014     62.8841        100.1932  22.000
+      yasa     ST   TST      0.50    scp_signed    0.8955     66.7975         89.7725  22.000
+      yasa     ST   TST      0.75        ba_loa    0.9100     59.1587         97.6213  32.000
+      yasa     ST   TST      0.75        ba_reg    0.8708     51.4511         85.4690  32.000
+      yasa     ST   TST      0.75 norm_reg_ffbs    0.8954     38.1414         59.1556  32.000
+      yasa     ST   TST      0.75    scp_abs_bc    0.9096     61.4936         98.9996  32.000
+      yasa     ST   TST      0.75    scp_signed    0.9254     75.3375         91.8958  32.000
+      yasa     ST  WASO      0.25        ba_loa    0.8997     40.8490         74.8084  12.000
+      yasa     ST  WASO      0.25        ba_reg    0.7555     28.1755         70.2647  12.000
+      yasa     ST  WASO      0.25 norm_reg_ffbs    0.9334     64.2839         83.1495  12.000
+      yasa     ST  WASO      0.25    scp_abs_bc    0.9102     49.7212         79.6973  12.000
+      yasa     ST  WASO      0.25    scp_signed    1.0000         inf             NaN  12.000
+      yasa     ST  WASO      0.50        ba_loa    0.9089     39.8545         73.2701  22.000
+      yasa     ST  WASO      0.50        ba_reg    0.7852     31.0181         57.1476  22.000
+      yasa     ST  WASO      0.50 norm_reg_ffbs    0.9061     57.0847         84.7575  22.000
+      yasa     ST  WASO      0.50    scp_abs_bc    0.8982     35.8286         71.0766  22.000
+      yasa     ST  WASO      0.50    scp_signed    0.8752     34.6317         61.2567  22.000
+      yasa     ST  WASO      0.75        ba_loa    0.9146     40.5097         73.5422  32.000
+      yasa     ST  WASO      0.75        ba_reg    0.7938     32.7683         51.6322  32.000
+      yasa     ST  WASO      0.75 norm_reg_ffbs    0.9046     54.6399         83.9400  32.000
+      yasa     ST  WASO      0.75    scp_abs_bc    0.9067     31.6116         67.2608  32.000
+      yasa     ST  WASO      0.75    scp_signed    0.9212     38.3960         58.8502  32.000

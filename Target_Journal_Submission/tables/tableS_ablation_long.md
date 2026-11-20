@@ -1,530 +1,529 @@
-| cohort   | param   |   ratio_to_proposed | variant          | stager     |
-|:---------|:--------|--------------------:|:-----------------|:-----------|
-| HMC      | N1%     |               0.946 | norm_reg_ind     | yasa       |
-| HMC      | N2%     |               0.960 | norm_reg_ind     | yasa       |
-| HMC      | N3%     |               0.925 | norm_reg_ind     | yasa       |
-| HMC      | REM%    |               0.835 | norm_reg_ind     | yasa       |
-| HMC      | REML    |               1.347 | norm_reg_ind     | yasa       |
-| HMC      | SOL     |               1.092 | norm_reg_ind     | yasa       |
-| HMC      | TST     |               1.134 | norm_reg_ind     | yasa       |
-| HMC      | WASO    |               1.062 | norm_reg_ind     | yasa       |
-| SC       | N1%     |               0.928 | norm_reg_ind     | yasa       |
-| SC       | N2%     |               1.045 | norm_reg_ind     | yasa       |
-| SC       | N3%     |               1.041 | norm_reg_ind     | yasa       |
-| SC       | REM%    |               0.830 | norm_reg_ind     | yasa       |
-| SC       | REML    |               1.484 | norm_reg_ind     | yasa       |
-| SC       | SOL     |               1.704 | norm_reg_ind     | yasa       |
-| SC       | TST     |               1.145 | norm_reg_ind     | yasa       |
-| SC       | WASO    |               1.438 | norm_reg_ind     | yasa       |
-| ST       | N1%     |               0.720 | norm_reg_ind     | yasa       |
-| ST       | N2%     |               1.026 | norm_reg_ind     | yasa       |
-| ST       | N3%     |               0.964 | norm_reg_ind     | yasa       |
-| ST       | REM%    |               1.092 | norm_reg_ind     | yasa       |
-| ST       | REML    |               1.212 | norm_reg_ind     | yasa       |
-| ST       | SOL     |               1.372 | norm_reg_ind     | yasa       |
-| ST       | TST     |               0.869 | norm_reg_ind     | yasa       |
-| ST       | WASO    |               0.785 | norm_reg_ind     | yasa       |
-| HMC      | N1%     |               0.997 | norm_reg_ffbs1   | yasa       |
-| HMC      | N2%     |               1.078 | norm_reg_ffbs1   | yasa       |
-| HMC      | N3%     |               0.979 | norm_reg_ffbs1   | yasa       |
-| HMC      | REM%    |               1.014 | norm_reg_ffbs1   | yasa       |
-| HMC      | REML    |               0.901 | norm_reg_ffbs1   | yasa       |
-| HMC      | SOL     |               0.454 | norm_reg_ffbs1   | yasa       |
-| HMC      | TST     |               1.002 | norm_reg_ffbs1   | yasa       |
-| HMC      | WASO    |               0.887 | norm_reg_ffbs1   | yasa       |
-| SC       | N1%     |               1.094 | norm_reg_ffbs1   | yasa       |
-| SC       | N2%     |               1.237 | norm_reg_ffbs1   | yasa       |
-| SC       | N3%     |               1.326 | norm_reg_ffbs1   | yasa       |
-| SC       | REM%    |               0.795 | norm_reg_ffbs1   | yasa       |
-| SC       | REML    |               1.096 | norm_reg_ffbs1   | yasa       |
-| SC       | SOL     |               0.768 | norm_reg_ffbs1   | yasa       |
-| SC       | TST     |               1.171 | norm_reg_ffbs1   | yasa       |
-| SC       | WASO    |               0.545 | norm_reg_ffbs1   | yasa       |
-| ST       | N1%     |               1.029 | norm_reg_ffbs1   | yasa       |
-| ST       | N2%     |               1.330 | norm_reg_ffbs1   | yasa       |
-| ST       | N3%     |               1.246 | norm_reg_ffbs1   | yasa       |
-| ST       | REM%    |               0.973 | norm_reg_ffbs1   | yasa       |
-| ST       | REML    |               1.105 | norm_reg_ffbs1   | yasa       |
-| ST       | SOL     |               0.464 | norm_reg_ffbs1   | yasa       |
-| ST       | TST     |               0.889 | norm_reg_ffbs1   | yasa       |
-| ST       | WASO    |               0.625 | norm_reg_ffbs1   | yasa       |
-| HMC      | N1%     |               1.001 | norm_ffbs        | yasa       |
-| HMC      | N2%     |               0.996 | norm_ffbs        | yasa       |
-| HMC      | N3%     |               1.006 | norm_ffbs        | yasa       |
-| HMC      | REM%    |               1.033 | norm_ffbs        | yasa       |
-| HMC      | REML    |               0.950 | norm_ffbs        | yasa       |
-| HMC      | SOL     |               0.912 | norm_ffbs        | yasa       |
-| HMC      | TST     |               0.897 | norm_ffbs        | yasa       |
-| HMC      | WASO    |               0.929 | norm_ffbs        | yasa       |
-| SC       | N1%     |               0.961 | norm_ffbs        | yasa       |
-| SC       | N2%     |               0.983 | norm_ffbs        | yasa       |
-| SC       | N3%     |               0.945 | norm_ffbs        | yasa       |
-| SC       | REM%    |               0.934 | norm_ffbs        | yasa       |
-| SC       | REML    |               0.914 | norm_ffbs        | yasa       |
-| SC       | SOL     |               0.767 | norm_ffbs        | yasa       |
-| SC       | TST     |               0.945 | norm_ffbs        | yasa       |
-| SC       | WASO    |               0.972 | norm_ffbs        | yasa       |
-| ST       | N1%     |               0.954 | norm_ffbs        | yasa       |
-| ST       | N2%     |               1.017 | norm_ffbs        | yasa       |
-| ST       | N3%     |               1.016 | norm_ffbs        | yasa       |
-| ST       | REM%    |               1.049 | norm_ffbs        | yasa       |
-| ST       | REML    |               1.006 | norm_ffbs        | yasa       |
-| ST       | SOL     |               0.908 | norm_ffbs        | yasa       |
-| ST       | TST     |               0.930 | norm_ffbs        | yasa       |
-| ST       | WASO    |               0.893 | norm_ffbs        | yasa       |
-| HMC      | N1%     |               0.978 | norm_entropy_reg | yasa       |
-| HMC      | N2%     |               0.986 | norm_entropy_reg | yasa       |
-| HMC      | N3%     |               1.017 | norm_entropy_reg | yasa       |
-| HMC      | REM%    |               1.004 | norm_entropy_reg | yasa       |
-| HMC      | REML    |               1.090 | norm_entropy_reg | yasa       |
-| HMC      | SOL     |               1.113 | norm_entropy_reg | yasa       |
-| HMC      | TST     |               1.079 | norm_entropy_reg | yasa       |
-| HMC      | WASO    |               1.033 | norm_entropy_reg | yasa       |
-| SC       | N1%     |               1.023 | norm_entropy_reg | yasa       |
-| SC       | N2%     |               0.992 | norm_entropy_reg | yasa       |
-| SC       | N3%     |               1.075 | norm_entropy_reg | yasa       |
-| SC       | REM%    |               1.029 | norm_entropy_reg | yasa       |
-| SC       | REML    |               1.214 | norm_entropy_reg | yasa       |
-| SC       | SOL     |               1.470 | norm_entropy_reg | yasa       |
-| SC       | TST     |               1.036 | norm_entropy_reg | yasa       |
-| SC       | WASO    |               1.090 | norm_entropy_reg | yasa       |
-| ST       | N1%     |               1.010 | norm_entropy_reg | yasa       |
-| ST       | N2%     |               0.970 | norm_entropy_reg | yasa       |
-| ST       | N3%     |               1.011 | norm_entropy_reg | yasa       |
-| ST       | REM%    |               1.038 | norm_entropy_reg | yasa       |
-| ST       | REML    |               1.082 | norm_entropy_reg | yasa       |
-| ST       | SOL     |               1.155 | norm_entropy_reg | yasa       |
-| ST       | TST     |               1.013 | norm_entropy_reg | yasa       |
-| ST       | WASO    |               1.183 | norm_entropy_reg | yasa       |
-| HMC      | N1%     |               1.008 | cqr_ffbs         | yasa       |
-| HMC      | N2%     |               0.997 | cqr_ffbs         | yasa       |
-| HMC      | N3%     |               1.006 | cqr_ffbs         | yasa       |
-| HMC      | REM%    |               1.009 | cqr_ffbs         | yasa       |
-| HMC      | REML    |               0.928 | cqr_ffbs         | yasa       |
-| HMC      | SOL     |               0.819 | cqr_ffbs         | yasa       |
-| HMC      | TST     |               1.062 | cqr_ffbs         | yasa       |
-| HMC      | WASO    |               1.003 | cqr_ffbs         | yasa       |
-| SC       | N1%     |               1.025 | cqr_ffbs         | yasa       |
-| SC       | N2%     |               1.017 | cqr_ffbs         | yasa       |
-| SC       | N3%     |               1.020 | cqr_ffbs         | yasa       |
-| SC       | REM%    |               1.028 | cqr_ffbs         | yasa       |
-| SC       | REML    |               0.887 | cqr_ffbs         | yasa       |
-| SC       | SOL     |               0.587 | cqr_ffbs         | yasa       |
-| SC       | TST     |               1.029 | cqr_ffbs         | yasa       |
-| SC       | WASO    |               0.872 | cqr_ffbs         | yasa       |
-| ST       | N1%     |               1.024 | cqr_ffbs         | yasa       |
-| ST       | N2%     |               0.998 | cqr_ffbs         | yasa       |
-| ST       | N3%     |               1.028 | cqr_ffbs         | yasa       |
-| ST       | REM%    |               0.992 | cqr_ffbs         | yasa       |
-| ST       | REML    |               0.677 | cqr_ffbs         | yasa       |
-| ST       | SOL     |               0.718 | cqr_ffbs         | yasa       |
-| ST       | TST     |               0.983 | cqr_ffbs         | yasa       |
-| ST       | WASO    |               0.953 | cqr_ffbs         | yasa       |
-| HMC      | N1%     |               1.029 | scp_abs_mu       | yasa       |
-| HMC      | N2%     |               1.018 | scp_abs_mu       | yasa       |
-| HMC      | N3%     |               1.061 | scp_abs_mu       | yasa       |
-| HMC      | REM%    |               1.055 | scp_abs_mu       | yasa       |
-| HMC      | REML    |               1.140 | scp_abs_mu       | yasa       |
-| HMC      | SOL     |               1.121 | scp_abs_mu       | yasa       |
-| HMC      | TST     |               1.179 | scp_abs_mu       | yasa       |
-| HMC      | WASO    |               1.081 | scp_abs_mu       | yasa       |
-| SC       | N1%     |               1.051 | scp_abs_mu       | yasa       |
-| SC       | N2%     |               1.077 | scp_abs_mu       | yasa       |
-| SC       | N3%     |               1.087 | scp_abs_mu       | yasa       |
-| SC       | REM%    |               1.086 | scp_abs_mu       | yasa       |
-| SC       | REML    |               1.203 | scp_abs_mu       | yasa       |
-| SC       | SOL     |               1.465 | scp_abs_mu       | yasa       |
-| SC       | TST     |               1.107 | scp_abs_mu       | yasa       |
-| SC       | WASO    |               1.062 | scp_abs_mu       | yasa       |
-| ST       | N1%     |               1.044 | scp_abs_mu       | yasa       |
-| ST       | N2%     |               1.009 | scp_abs_mu       | yasa       |
-| ST       | N3%     |               1.075 | scp_abs_mu       | yasa       |
-| ST       | REM%    |               0.973 | scp_abs_mu       | yasa       |
-| ST       | REML    |               0.987 | scp_abs_mu       | yasa       |
-| ST       | SOL     |               1.174 | scp_abs_mu       | yasa       |
-| ST       | TST     |               1.079 | scp_abs_mu       | yasa       |
-| ST       | WASO    |               1.210 | scp_abs_mu       | yasa       |
-| HMC      | N1%     |               1.185 | scp_abs_cal      | yasa       |
-| HMC      | N2%     |               1.543 | scp_abs_cal      | yasa       |
-| HMC      | N3%     |               0.972 | scp_abs_cal      | yasa       |
-| HMC      | REM%    |               0.881 | scp_abs_cal      | yasa       |
-| HMC      | REML    |               1.178 | scp_abs_cal      | yasa       |
-| HMC      | SOL     |               0.806 | scp_abs_cal      | yasa       |
-| HMC      | TST     |               1.184 | scp_abs_cal      | yasa       |
-| HMC      | WASO    |               1.018 | scp_abs_cal      | yasa       |
-| SC       | N1%     |               1.125 | scp_abs_cal      | yasa       |
-| SC       | N2%     |               1.444 | scp_abs_cal      | yasa       |
-| SC       | N3%     |               1.142 | scp_abs_cal      | yasa       |
-| SC       | REM%    |               0.907 | scp_abs_cal      | yasa       |
-| SC       | REML    |               1.430 | scp_abs_cal      | yasa       |
-| SC       | SOL     |               1.272 | scp_abs_cal      | yasa       |
-| SC       | TST     |               1.156 | scp_abs_cal      | yasa       |
-| SC       | WASO    |               0.850 | scp_abs_cal      | yasa       |
-| ST       | N1%     |               0.875 | scp_abs_cal      | yasa       |
-| ST       | N2%     |               1.089 | scp_abs_cal      | yasa       |
-| ST       | N3%     |               0.988 | scp_abs_cal      | yasa       |
-| ST       | REM%    |               1.018 | scp_abs_cal      | yasa       |
-| ST       | REML    |               1.086 | scp_abs_cal      | yasa       |
-| ST       | SOL     |               0.951 | scp_abs_cal      | yasa       |
-| ST       | TST     |               0.731 | scp_abs_cal      | yasa       |
-| ST       | WASO    |               0.595 | scp_abs_cal      | yasa       |
-| HMC      | N1%     |               1.111 | scp_abs_bc       | yasa       |
-| HMC      | N2%     |               1.323 | scp_abs_bc       | yasa       |
-| HMC      | N3%     |               0.946 | scp_abs_bc       | yasa       |
-| HMC      | REM%    |               0.943 | scp_abs_bc       | yasa       |
-| HMC      | REML    |               1.013 | scp_abs_bc       | yasa       |
-| HMC      | SOL     |               0.748 | scp_abs_bc       | yasa       |
-| HMC      | TST     |               1.414 | scp_abs_bc       | yasa       |
-| HMC      | WASO    |               1.201 | scp_abs_bc       | yasa       |
-| SC       | N1%     |               1.085 | scp_abs_bc       | yasa       |
-| SC       | N2%     |               1.340 | scp_abs_bc       | yasa       |
-| SC       | N3%     |               1.129 | scp_abs_bc       | yasa       |
-| SC       | REM%    |               0.965 | scp_abs_bc       | yasa       |
-| SC       | REML    |               1.472 | scp_abs_bc       | yasa       |
-| SC       | SOL     |               1.182 | scp_abs_bc       | yasa       |
-| SC       | TST     |               1.168 | scp_abs_bc       | yasa       |
-| SC       | WASO    |               0.684 | scp_abs_bc       | yasa       |
-| ST       | N1%     |               0.854 | scp_abs_bc       | yasa       |
-| ST       | N2%     |               1.121 | scp_abs_bc       | yasa       |
-| ST       | N3%     |               1.163 | scp_abs_bc       | yasa       |
-| ST       | REM%    |               0.995 | scp_abs_bc       | yasa       |
-| ST       | REML    |               1.074 | scp_abs_bc       | yasa       |
-| ST       | SOL     |               0.504 | scp_abs_bc       | yasa       |
-| ST       | TST     |               1.701 | scp_abs_bc       | yasa       |
-| ST       | WASO    |               0.827 | scp_abs_bc       | yasa       |
-| HMC      | N1%     |               1.109 | norm_reg_plug    | yasa       |
-| HMC      | N2%     |               1.690 | norm_reg_plug    | yasa       |
-| HMC      | N3%     |               1.125 | norm_reg_plug    | yasa       |
-| HMC      | REM%    |               0.877 | norm_reg_plug    | yasa       |
-| HMC      | REML    |               0.923 | norm_reg_plug    | yasa       |
-| HMC      | SOL     |               0.753 | norm_reg_plug    | yasa       |
-| HMC      | TST     |               1.577 | norm_reg_plug    | yasa       |
-| HMC      | WASO    |               1.431 | norm_reg_plug    | yasa       |
-| SC       | N1%     |               1.099 | norm_reg_plug    | yasa       |
-| SC       | N2%     |               1.353 | norm_reg_plug    | yasa       |
-| SC       | N3%     |               1.436 | norm_reg_plug    | yasa       |
-| SC       | REM%    |               0.893 | norm_reg_plug    | yasa       |
-| SC       | REML    |               1.280 | norm_reg_plug    | yasa       |
-| SC       | SOL     |               0.931 | norm_reg_plug    | yasa       |
-| SC       | TST     |               1.183 | norm_reg_plug    | yasa       |
-| SC       | WASO    |               0.864 | norm_reg_plug    | yasa       |
-| ST       | N1%     |               0.891 | norm_reg_plug    | yasa       |
-| ST       | N2%     |               1.057 | norm_reg_plug    | yasa       |
-| ST       | N3%     |               1.256 | norm_reg_plug    | yasa       |
-| ST       | REM%    |               1.028 | norm_reg_plug    | yasa       |
-| ST       | REML    |               1.051 | norm_reg_plug    | yasa       |
-| ST       | SOL     |               0.549 | norm_reg_plug    | yasa       |
-| ST       | TST     |               1.972 | norm_reg_plug    | yasa       |
-| ST       | WASO    |               1.135 | norm_reg_plug    | yasa       |
-| HMC      | N1%     |               1.119 | norm_reg_plugc   | yasa       |
-| HMC      | N2%     |               1.462 | norm_reg_plugc   | yasa       |
-| HMC      | N3%     |               0.993 | norm_reg_plugc   | yasa       |
-| HMC      | REM%    |               0.838 | norm_reg_plugc   | yasa       |
-| HMC      | REML    |               1.003 | norm_reg_plugc   | yasa       |
-| HMC      | SOL     |               0.732 | norm_reg_plugc   | yasa       |
-| HMC      | TST     |               0.999 | norm_reg_plugc   | yasa       |
-| HMC      | WASO    |               0.923 | norm_reg_plugc   | yasa       |
-| SC       | N1%     |               1.096 | norm_reg_plugc   | yasa       |
-| SC       | N2%     |               1.371 | norm_reg_plugc   | yasa       |
-| SC       | N3%     |               1.066 | norm_reg_plugc   | yasa       |
-| SC       | REM%    |               0.855 | norm_reg_plugc   | yasa       |
-| SC       | REML    |               1.245 | norm_reg_plugc   | yasa       |
-| SC       | SOL     |               0.951 | norm_reg_plugc   | yasa       |
-| SC       | TST     |               1.040 | norm_reg_plugc   | yasa       |
-| SC       | WASO    |               0.821 | norm_reg_plugc   | yasa       |
-| ST       | N1%     |               0.875 | norm_reg_plugc   | yasa       |
-| ST       | N2%     |               1.126 | norm_reg_plugc   | yasa       |
-| ST       | N3%     |               1.014 | norm_reg_plugc   | yasa       |
-| ST       | REM%    |               1.063 | norm_reg_plugc   | yasa       |
-| ST       | REML    |               1.041 | norm_reg_plugc   | yasa       |
-| ST       | SOL     |               0.907 | norm_reg_plugc   | yasa       |
-| ST       | TST     |               0.702 | norm_reg_plugc   | yasa       |
-| ST       | WASO    |               0.565 | norm_reg_plugc   | yasa       |
-| HMC      | N1%     |               1.189 | scp_abs          | yasa       |
-| HMC      | N2%     |               1.834 | scp_abs          | yasa       |
-| HMC      | N3%     |               1.108 | scp_abs          | yasa       |
-| HMC      | REM%    |               0.938 | scp_abs          | yasa       |
-| HMC      | REML    |               0.999 | scp_abs          | yasa       |
-| HMC      | SOL     |               0.873 | scp_abs          | yasa       |
-| HMC      | TST     |               1.813 | scp_abs          | yasa       |
-| HMC      | WASO    |               1.526 | scp_abs          | yasa       |
-| SC       | N1%     |               1.149 | scp_abs          | yasa       |
-| SC       | N2%     |               1.426 | scp_abs          | yasa       |
-| SC       | N3%     |               1.547 | scp_abs          | yasa       |
-| SC       | REM%    |               0.964 | scp_abs          | yasa       |
-| SC       | REML    |               1.450 | scp_abs          | yasa       |
-| SC       | SOL     |               1.251 | scp_abs          | yasa       |
-| SC       | TST     |               1.337 | scp_abs          | yasa       |
-| SC       | WASO    |               0.878 | scp_abs          | yasa       |
-| ST       | N1%     |               0.928 | scp_abs          | yasa       |
-| ST       | N2%     |               1.055 | scp_abs          | yasa       |
-| ST       | N3%     |               1.339 | scp_abs          | yasa       |
-| ST       | REM%    |               0.991 | scp_abs          | yasa       |
-| ST       | REML    |               1.086 | scp_abs          | yasa       |
-| ST       | SOL     |               0.690 | scp_abs          | yasa       |
-| ST       | TST     |               2.480 | scp_abs          | yasa       |
-| ST       | WASO    |               1.243 | scp_abs          | yasa       |
-| HMC      | N1%     |               0.934 | norm_reg_ind     | lgbm_sc_s0 |
-| HMC      | N2%     |               0.837 | norm_reg_ind     | lgbm_sc_s0 |
-| HMC      | N3%     |               0.845 | norm_reg_ind     | lgbm_sc_s0 |
-| HMC      | REM%    |               0.837 | norm_reg_ind     | lgbm_sc_s0 |
-| HMC      | REML    |               1.092 | norm_reg_ind     | lgbm_sc_s0 |
-| HMC      | SOL     |               1.102 | norm_reg_ind     | lgbm_sc_s0 |
-| HMC      | TST     |               1.306 | norm_reg_ind     | lgbm_sc_s0 |
-| HMC      | WASO    |               1.195 | norm_reg_ind     | lgbm_sc_s0 |
-| SC       | N1%     |               0.903 | norm_reg_ind     | lgbm_sc_s0 |
-| SC       | N2%     |               0.973 | norm_reg_ind     | lgbm_sc_s0 |
-| SC       | N3%     |               0.978 | norm_reg_ind     | lgbm_sc_s0 |
-| SC       | REM%    |               0.898 | norm_reg_ind     | lgbm_sc_s0 |
-| SC       | REML    |               1.781 | norm_reg_ind     | lgbm_sc_s0 |
-| SC       | SOL     |               1.439 | norm_reg_ind     | lgbm_sc_s0 |
-| SC       | TST     |               1.031 | norm_reg_ind     | lgbm_sc_s0 |
-| SC       | WASO    |               1.201 | norm_reg_ind     | lgbm_sc_s0 |
-| ST       | N1%     |               0.759 | norm_reg_ind     | lgbm_sc_s0 |
-| ST       | N2%     |               1.044 | norm_reg_ind     | lgbm_sc_s0 |
-| ST       | N3%     |               0.974 | norm_reg_ind     | lgbm_sc_s0 |
-| ST       | REM%    |               1.191 | norm_reg_ind     | lgbm_sc_s0 |
-| ST       | REML    |               2.126 | norm_reg_ind     | lgbm_sc_s0 |
-| ST       | SOL     |               1.296 | norm_reg_ind     | lgbm_sc_s0 |
-| ST       | TST     |               0.880 | norm_reg_ind     | lgbm_sc_s0 |
-| ST       | WASO    |               1.000 | norm_reg_ind     | lgbm_sc_s0 |
-| HMC      | N1%     |               1.038 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| HMC      | N2%     |               1.210 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| HMC      | N3%     |               1.092 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| HMC      | REM%    |               1.047 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| HMC      | REML    |               0.894 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| HMC      | SOL     |               0.728 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| HMC      | TST     |               1.046 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| HMC      | WASO    |               1.112 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| SC       | N1%     |               1.094 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| SC       | N2%     |               1.187 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| SC       | N3%     |               1.203 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| SC       | REM%    |               0.890 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| SC       | REML    |               1.040 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| SC       | SOL     |               0.834 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| SC       | TST     |               1.136 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| SC       | WASO    |               0.507 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| ST       | N1%     |               1.099 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| ST       | N2%     |               1.280 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| ST       | N3%     |               1.143 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| ST       | REM%    |               0.919 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| ST       | REML    |               1.111 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| ST       | SOL     |               0.748 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| ST       | TST     |               1.010 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| ST       | WASO    |               0.808 | norm_reg_ffbs1   | lgbm_sc_s0 |
-| HMC      | N1%     |               1.015 | norm_ffbs        | lgbm_sc_s0 |
-| HMC      | N2%     |               1.035 | norm_ffbs        | lgbm_sc_s0 |
-| HMC      | N3%     |               0.982 | norm_ffbs        | lgbm_sc_s0 |
-| HMC      | REM%    |               0.979 | norm_ffbs        | lgbm_sc_s0 |
-| HMC      | REML    |               0.948 | norm_ffbs        | lgbm_sc_s0 |
-| HMC      | SOL     |               0.944 | norm_ffbs        | lgbm_sc_s0 |
-| HMC      | TST     |               0.894 | norm_ffbs        | lgbm_sc_s0 |
-| HMC      | WASO    |               0.929 | norm_ffbs        | lgbm_sc_s0 |
-| SC       | N1%     |               0.963 | norm_ffbs        | lgbm_sc_s0 |
-| SC       | N2%     |               0.956 | norm_ffbs        | lgbm_sc_s0 |
-| SC       | N3%     |               0.953 | norm_ffbs        | lgbm_sc_s0 |
-| SC       | REM%    |               0.946 | norm_ffbs        | lgbm_sc_s0 |
-| SC       | REML    |               0.910 | norm_ffbs        | lgbm_sc_s0 |
-| SC       | SOL     |               0.767 | norm_ffbs        | lgbm_sc_s0 |
-| SC       | TST     |               0.958 | norm_ffbs        | lgbm_sc_s0 |
-| SC       | WASO    |               0.960 | norm_ffbs        | lgbm_sc_s0 |
-| ST       | N1%     |               0.968 | norm_ffbs        | lgbm_sc_s0 |
-| ST       | N2%     |               1.039 | norm_ffbs        | lgbm_sc_s0 |
-| ST       | N3%     |               0.961 | norm_ffbs        | lgbm_sc_s0 |
-| ST       | REM%    |               1.048 | norm_ffbs        | lgbm_sc_s0 |
-| ST       | REML    |               0.915 | norm_ffbs        | lgbm_sc_s0 |
-| ST       | SOL     |               0.968 | norm_ffbs        | lgbm_sc_s0 |
-| ST       | TST     |               0.915 | norm_ffbs        | lgbm_sc_s0 |
-| ST       | WASO    |               0.946 | norm_ffbs        | lgbm_sc_s0 |
-| HMC      | N1%     |               0.968 | norm_entropy_reg | lgbm_sc_s0 |
-| HMC      | N2%     |               0.951 | norm_entropy_reg | lgbm_sc_s0 |
-| HMC      | N3%     |               1.009 | norm_entropy_reg | lgbm_sc_s0 |
-| HMC      | REM%    |               1.010 | norm_entropy_reg | lgbm_sc_s0 |
-| HMC      | REML    |               0.984 | norm_entropy_reg | lgbm_sc_s0 |
-| HMC      | SOL     |               1.083 | norm_entropy_reg | lgbm_sc_s0 |
-| HMC      | TST     |               1.113 | norm_entropy_reg | lgbm_sc_s0 |
-| HMC      | WASO    |               1.055 | norm_entropy_reg | lgbm_sc_s0 |
-| SC       | N1%     |               1.012 | norm_entropy_reg | lgbm_sc_s0 |
-| SC       | N2%     |               0.992 | norm_entropy_reg | lgbm_sc_s0 |
-| SC       | N3%     |               1.043 | norm_entropy_reg | lgbm_sc_s0 |
-| SC       | REM%    |               1.027 | norm_entropy_reg | lgbm_sc_s0 |
-| SC       | REML    |               1.304 | norm_entropy_reg | lgbm_sc_s0 |
-| SC       | SOL     |               1.445 | norm_entropy_reg | lgbm_sc_s0 |
-| SC       | TST     |               1.014 | norm_entropy_reg | lgbm_sc_s0 |
-| SC       | WASO    |               1.248 | norm_entropy_reg | lgbm_sc_s0 |
-| ST       | N1%     |               0.995 | norm_entropy_reg | lgbm_sc_s0 |
-| ST       | N2%     |               0.999 | norm_entropy_reg | lgbm_sc_s0 |
-| ST       | N3%     |               1.068 | norm_entropy_reg | lgbm_sc_s0 |
-| ST       | REM%    |               1.014 | norm_entropy_reg | lgbm_sc_s0 |
-| ST       | REML    |               1.195 | norm_entropy_reg | lgbm_sc_s0 |
-| ST       | SOL     |               1.127 | norm_entropy_reg | lgbm_sc_s0 |
-| ST       | TST     |               0.967 | norm_entropy_reg | lgbm_sc_s0 |
-| ST       | WASO    |               1.030 | norm_entropy_reg | lgbm_sc_s0 |
-| HMC      | N1%     |               0.997 | cqr_ffbs         | lgbm_sc_s0 |
-| HMC      | N2%     |               0.986 | cqr_ffbs         | lgbm_sc_s0 |
-| HMC      | N3%     |               1.004 | cqr_ffbs         | lgbm_sc_s0 |
-| HMC      | REM%    |               1.010 | cqr_ffbs         | lgbm_sc_s0 |
-| HMC      | REML    |               1.020 | cqr_ffbs         | lgbm_sc_s0 |
-| HMC      | SOL     |               0.967 | cqr_ffbs         | lgbm_sc_s0 |
-| HMC      | TST     |               1.066 | cqr_ffbs         | lgbm_sc_s0 |
-| HMC      | WASO    |               1.023 | cqr_ffbs         | lgbm_sc_s0 |
-| SC       | N1%     |               1.023 | cqr_ffbs         | lgbm_sc_s0 |
-| SC       | N2%     |               1.010 | cqr_ffbs         | lgbm_sc_s0 |
-| SC       | N3%     |               1.018 | cqr_ffbs         | lgbm_sc_s0 |
-| SC       | REM%    |               1.027 | cqr_ffbs         | lgbm_sc_s0 |
-| SC       | REML    |               0.929 | cqr_ffbs         | lgbm_sc_s0 |
-| SC       | SOL     |               0.614 | cqr_ffbs         | lgbm_sc_s0 |
-| SC       | TST     |               1.011 | cqr_ffbs         | lgbm_sc_s0 |
-| SC       | WASO    |               0.849 | cqr_ffbs         | lgbm_sc_s0 |
-| ST       | N1%     |               1.017 | cqr_ffbs         | lgbm_sc_s0 |
-| ST       | N2%     |               1.000 | cqr_ffbs         | lgbm_sc_s0 |
-| ST       | N3%     |               1.062 | cqr_ffbs         | lgbm_sc_s0 |
-| ST       | REM%    |               0.999 | cqr_ffbs         | lgbm_sc_s0 |
-| ST       | REML    |               0.894 | cqr_ffbs         | lgbm_sc_s0 |
-| ST       | SOL     |               0.853 | cqr_ffbs         | lgbm_sc_s0 |
-| ST       | TST     |               1.013 | cqr_ffbs         | lgbm_sc_s0 |
-| ST       | WASO    |               0.966 | cqr_ffbs         | lgbm_sc_s0 |
-| HMC      | N1%     |               0.999 | scp_abs_mu       | lgbm_sc_s0 |
-| HMC      | N2%     |               0.971 | scp_abs_mu       | lgbm_sc_s0 |
-| HMC      | N3%     |               1.017 | scp_abs_mu       | lgbm_sc_s0 |
-| HMC      | REM%    |               1.076 | scp_abs_mu       | lgbm_sc_s0 |
-| HMC      | REML    |               1.015 | scp_abs_mu       | lgbm_sc_s0 |
-| HMC      | SOL     |               1.098 | scp_abs_mu       | lgbm_sc_s0 |
-| HMC      | TST     |               1.170 | scp_abs_mu       | lgbm_sc_s0 |
-| HMC      | WASO    |               1.106 | scp_abs_mu       | lgbm_sc_s0 |
-| SC       | N1%     |               1.053 | scp_abs_mu       | lgbm_sc_s0 |
-| SC       | N2%     |               1.047 | scp_abs_mu       | lgbm_sc_s0 |
-| SC       | N3%     |               1.061 | scp_abs_mu       | lgbm_sc_s0 |
-| SC       | REM%    |               1.094 | scp_abs_mu       | lgbm_sc_s0 |
-| SC       | REML    |               1.317 | scp_abs_mu       | lgbm_sc_s0 |
-| SC       | SOL     |               1.447 | scp_abs_mu       | lgbm_sc_s0 |
-| SC       | TST     |               1.075 | scp_abs_mu       | lgbm_sc_s0 |
-| SC       | WASO    |               1.152 | scp_abs_mu       | lgbm_sc_s0 |
-| ST       | N1%     |               1.036 | scp_abs_mu       | lgbm_sc_s0 |
-| ST       | N2%     |               1.003 | scp_abs_mu       | lgbm_sc_s0 |
-| ST       | N3%     |               1.107 | scp_abs_mu       | lgbm_sc_s0 |
-| ST       | REM%    |               1.016 | scp_abs_mu       | lgbm_sc_s0 |
-| ST       | REML    |               1.149 | scp_abs_mu       | lgbm_sc_s0 |
-| ST       | SOL     |               1.171 | scp_abs_mu       | lgbm_sc_s0 |
-| ST       | TST     |               1.100 | scp_abs_mu       | lgbm_sc_s0 |
-| ST       | WASO    |               1.058 | scp_abs_mu       | lgbm_sc_s0 |
-| HMC      | N1%     |               1.045 | scp_abs_cal      | lgbm_sc_s0 |
-| HMC      | N2%     |               1.007 | scp_abs_cal      | lgbm_sc_s0 |
-| HMC      | N3%     |               0.999 | scp_abs_cal      | lgbm_sc_s0 |
-| HMC      | REM%    |               0.874 | scp_abs_cal      | lgbm_sc_s0 |
-| HMC      | REML    |               0.987 | scp_abs_cal      | lgbm_sc_s0 |
-| HMC      | SOL     |               0.715 | scp_abs_cal      | lgbm_sc_s0 |
-| HMC      | TST     |               1.296 | scp_abs_cal      | lgbm_sc_s0 |
-| HMC      | WASO    |               1.177 | scp_abs_cal      | lgbm_sc_s0 |
-| SC       | N1%     |               1.104 | scp_abs_cal      | lgbm_sc_s0 |
-| SC       | N2%     |               1.279 | scp_abs_cal      | lgbm_sc_s0 |
-| SC       | N3%     |               1.037 | scp_abs_cal      | lgbm_sc_s0 |
-| SC       | REM%    |               0.944 | scp_abs_cal      | lgbm_sc_s0 |
-| SC       | REML    |               1.706 | scp_abs_cal      | lgbm_sc_s0 |
-| SC       | SOL     |               1.059 | scp_abs_cal      | lgbm_sc_s0 |
-| SC       | TST     |               1.248 | scp_abs_cal      | lgbm_sc_s0 |
-| SC       | WASO    |               0.767 | scp_abs_cal      | lgbm_sc_s0 |
-| ST       | N1%     |               0.988 | scp_abs_cal      | lgbm_sc_s0 |
-| ST       | N2%     |               1.126 | scp_abs_cal      | lgbm_sc_s0 |
-| ST       | N3%     |               1.079 | scp_abs_cal      | lgbm_sc_s0 |
-| ST       | REM%    |               1.151 | scp_abs_cal      | lgbm_sc_s0 |
-| ST       | REML    |               1.550 | scp_abs_cal      | lgbm_sc_s0 |
-| ST       | SOL     |               1.026 | scp_abs_cal      | lgbm_sc_s0 |
-| ST       | TST     |               1.067 | scp_abs_cal      | lgbm_sc_s0 |
-| ST       | WASO    |               0.984 | scp_abs_cal      | lgbm_sc_s0 |
-| HMC      | N1%     |               1.093 | scp_abs_bc       | lgbm_sc_s0 |
-| HMC      | N2%     |               1.102 | scp_abs_bc       | lgbm_sc_s0 |
-| HMC      | N3%     |               0.821 | scp_abs_bc       | lgbm_sc_s0 |
-| HMC      | REM%    |               0.951 | scp_abs_bc       | lgbm_sc_s0 |
-| HMC      | REML    |               0.798 | scp_abs_bc       | lgbm_sc_s0 |
-| HMC      | SOL     |               0.839 | scp_abs_bc       | lgbm_sc_s0 |
-| HMC      | TST     |               1.493 | scp_abs_bc       | lgbm_sc_s0 |
-| HMC      | WASO    |               1.333 | scp_abs_bc       | lgbm_sc_s0 |
-| SC       | N1%     |               1.063 | scp_abs_bc       | lgbm_sc_s0 |
-| SC       | N2%     |               1.093 | scp_abs_bc       | lgbm_sc_s0 |
-| SC       | N3%     |               1.098 | scp_abs_bc       | lgbm_sc_s0 |
-| SC       | REM%    |               0.926 | scp_abs_bc       | lgbm_sc_s0 |
-| SC       | REML    |               1.361 | scp_abs_bc       | lgbm_sc_s0 |
-| SC       | SOL     |               1.106 | scp_abs_bc       | lgbm_sc_s0 |
-| SC       | TST     |               1.230 | scp_abs_bc       | lgbm_sc_s0 |
-| SC       | WASO    |               0.738 | scp_abs_bc       | lgbm_sc_s0 |
-| ST       | N1%     |               0.930 | scp_abs_bc       | lgbm_sc_s0 |
-| ST       | N2%     |               1.175 | scp_abs_bc       | lgbm_sc_s0 |
-| ST       | N3%     |               1.176 | scp_abs_bc       | lgbm_sc_s0 |
-| ST       | REM%    |               1.071 | scp_abs_bc       | lgbm_sc_s0 |
-| ST       | REML    |               1.540 | scp_abs_bc       | lgbm_sc_s0 |
-| ST       | SOL     |               0.979 | scp_abs_bc       | lgbm_sc_s0 |
-| ST       | TST     |               1.337 | scp_abs_bc       | lgbm_sc_s0 |
-| ST       | WASO    |               0.781 | scp_abs_bc       | lgbm_sc_s0 |
-| HMC      | N1%     |               1.270 | norm_reg_plug    | lgbm_sc_s0 |
-| HMC      | N2%     |               1.103 | norm_reg_plug    | lgbm_sc_s0 |
-| HMC      | N3%     |               0.810 | norm_reg_plug    | lgbm_sc_s0 |
-| HMC      | REM%    |               0.983 | norm_reg_plug    | lgbm_sc_s0 |
-| HMC      | REML    |               0.758 | norm_reg_plug    | lgbm_sc_s0 |
-| HMC      | SOL     |               0.813 | norm_reg_plug    | lgbm_sc_s0 |
-| HMC      | TST     |               1.471 | norm_reg_plug    | lgbm_sc_s0 |
-| HMC      | WASO    |               1.560 | norm_reg_plug    | lgbm_sc_s0 |
-| SC       | N1%     |               1.077 | norm_reg_plug    | lgbm_sc_s0 |
-| SC       | N2%     |               1.019 | norm_reg_plug    | lgbm_sc_s0 |
-| SC       | N3%     |               1.028 | norm_reg_plug    | lgbm_sc_s0 |
-| SC       | REM%    |               0.859 | norm_reg_plug    | lgbm_sc_s0 |
-| SC       | REML    |               1.207 | norm_reg_plug    | lgbm_sc_s0 |
-| SC       | SOL     |               0.946 | norm_reg_plug    | lgbm_sc_s0 |
-| SC       | TST     |               1.120 | norm_reg_plug    | lgbm_sc_s0 |
-| SC       | WASO    |               0.753 | norm_reg_plug    | lgbm_sc_s0 |
-| ST       | N1%     |               1.102 | norm_reg_plug    | lgbm_sc_s0 |
-| ST       | N2%     |               1.051 | norm_reg_plug    | lgbm_sc_s0 |
-| ST       | N3%     |               1.137 | norm_reg_plug    | lgbm_sc_s0 |
-| ST       | REM%    |               1.236 | norm_reg_plug    | lgbm_sc_s0 |
-| ST       | REML    |               1.327 | norm_reg_plug    | lgbm_sc_s0 |
-| ST       | SOL     |               1.037 | norm_reg_plug    | lgbm_sc_s0 |
-| ST       | TST     |               1.251 | norm_reg_plug    | lgbm_sc_s0 |
-| ST       | WASO    |               0.968 | norm_reg_plug    | lgbm_sc_s0 |
-| HMC      | N1%     |               1.067 | norm_reg_plugc   | lgbm_sc_s0 |
-| HMC      | N2%     |               1.013 | norm_reg_plugc   | lgbm_sc_s0 |
-| HMC      | N3%     |               0.968 | norm_reg_plugc   | lgbm_sc_s0 |
-| HMC      | REM%    |               0.859 | norm_reg_plugc   | lgbm_sc_s0 |
-| HMC      | REML    |               0.964 | norm_reg_plugc   | lgbm_sc_s0 |
-| HMC      | SOL     |               0.698 | norm_reg_plugc   | lgbm_sc_s0 |
-| HMC      | TST     |               1.099 | norm_reg_plugc   | lgbm_sc_s0 |
-| HMC      | WASO    |               1.062 | norm_reg_plugc   | lgbm_sc_s0 |
-| SC       | N1%     |               1.055 | norm_reg_plugc   | lgbm_sc_s0 |
-| SC       | N2%     |               1.237 | norm_reg_plugc   | lgbm_sc_s0 |
-| SC       | N3%     |               0.971 | norm_reg_plugc   | lgbm_sc_s0 |
-| SC       | REM%    |               0.881 | norm_reg_plugc   | lgbm_sc_s0 |
-| SC       | REML    |               1.296 | norm_reg_plugc   | lgbm_sc_s0 |
-| SC       | SOL     |               0.883 | norm_reg_plugc   | lgbm_sc_s0 |
-| SC       | TST     |               1.133 | norm_reg_plugc   | lgbm_sc_s0 |
-| SC       | WASO    |               0.772 | norm_reg_plugc   | lgbm_sc_s0 |
-| ST       | N1%     |               0.990 | norm_reg_plugc   | lgbm_sc_s0 |
-| ST       | N2%     |               1.153 | norm_reg_plugc   | lgbm_sc_s0 |
-| ST       | N3%     |               0.990 | norm_reg_plugc   | lgbm_sc_s0 |
-| ST       | REM%    |               1.146 | norm_reg_plugc   | lgbm_sc_s0 |
-| ST       | REML    |               1.401 | norm_reg_plugc   | lgbm_sc_s0 |
-| ST       | SOL     |               1.045 | norm_reg_plugc   | lgbm_sc_s0 |
-| ST       | TST     |               0.973 | norm_reg_plugc   | lgbm_sc_s0 |
-| ST       | WASO    |               0.948 | norm_reg_plugc   | lgbm_sc_s0 |
-| HMC      | N1%     |               1.349 | scp_abs          | lgbm_sc_s0 |
-| HMC      | N2%     |               1.094 | scp_abs          | lgbm_sc_s0 |
-| HMC      | N3%     |               0.843 | scp_abs          | lgbm_sc_s0 |
-| HMC      | REM%    |               1.015 | scp_abs          | lgbm_sc_s0 |
-| HMC      | REML    |               0.803 | scp_abs          | lgbm_sc_s0 |
-| HMC      | SOL     |               0.859 | scp_abs          | lgbm_sc_s0 |
-| HMC      | TST     |               1.632 | scp_abs          | lgbm_sc_s0 |
-| HMC      | WASO    |               1.637 | scp_abs          | lgbm_sc_s0 |
-| SC       | N1%     |               1.147 | scp_abs          | lgbm_sc_s0 |
-| SC       | N2%     |               1.085 | scp_abs          | lgbm_sc_s0 |
-| SC       | N3%     |               1.098 | scp_abs          | lgbm_sc_s0 |
-| SC       | REM%    |               0.921 | scp_abs          | lgbm_sc_s0 |
-| SC       | REML    |               1.445 | scp_abs          | lgbm_sc_s0 |
-| SC       | SOL     |               1.111 | scp_abs          | lgbm_sc_s0 |
-| SC       | TST     |               1.289 | scp_abs          | lgbm_sc_s0 |
-| SC       | WASO    |               0.747 | scp_abs          | lgbm_sc_s0 |
-| ST       | N1%     |               1.188 | scp_abs          | lgbm_sc_s0 |
-| ST       | N2%     |               1.079 | scp_abs          | lgbm_sc_s0 |
-| ST       | N3%     |               1.274 | scp_abs          | lgbm_sc_s0 |
-| ST       | REM%    |               1.266 | scp_abs          | lgbm_sc_s0 |
-| ST       | REML    |               1.593 | scp_abs          | lgbm_sc_s0 |
-| ST       | SOL     |               1.021 | scp_abs          | lgbm_sc_s0 |
-| ST       | TST     |               1.378 | scp_abs          | lgbm_sc_s0 |
-| ST       | WASO    |               0.965 | scp_abs          | lgbm_sc_s0 |
+cohort param  ratio_to_proposed          variant     stager
+   HMC   N1%           0.946250     norm_reg_ind       yasa
+   HMC   N2%           0.959659     norm_reg_ind       yasa
+   HMC   N3%           0.925167     norm_reg_ind       yasa
+   HMC  REM%           0.835099     norm_reg_ind       yasa
+   HMC  REML           1.346693     norm_reg_ind       yasa
+   HMC   SOL           1.092498     norm_reg_ind       yasa
+   HMC   TST           1.133510     norm_reg_ind       yasa
+   HMC  WASO           1.061547     norm_reg_ind       yasa
+    SC   N1%           0.928188     norm_reg_ind       yasa
+    SC   N2%           1.044809     norm_reg_ind       yasa
+    SC   N3%           1.041483     norm_reg_ind       yasa
+    SC  REM%           0.830085     norm_reg_ind       yasa
+    SC  REML           1.483523     norm_reg_ind       yasa
+    SC   SOL           1.703598     norm_reg_ind       yasa
+    SC   TST           1.145422     norm_reg_ind       yasa
+    SC  WASO           1.438149     norm_reg_ind       yasa
+    ST   N1%           0.719999     norm_reg_ind       yasa
+    ST   N2%           1.026448     norm_reg_ind       yasa
+    ST   N3%           0.964365     norm_reg_ind       yasa
+    ST  REM%           1.092319     norm_reg_ind       yasa
+    ST  REML           1.212378     norm_reg_ind       yasa
+    ST   SOL           1.372478     norm_reg_ind       yasa
+    ST   TST           0.869407     norm_reg_ind       yasa
+    ST  WASO           0.785280     norm_reg_ind       yasa
+   HMC   N1%           0.996791   norm_reg_ffbs1       yasa
+   HMC   N2%           1.078084   norm_reg_ffbs1       yasa
+   HMC   N3%           0.978920   norm_reg_ffbs1       yasa
+   HMC  REM%           1.013583   norm_reg_ffbs1       yasa
+   HMC  REML           0.901424   norm_reg_ffbs1       yasa
+   HMC   SOL           0.453611   norm_reg_ffbs1       yasa
+   HMC   TST           1.002464   norm_reg_ffbs1       yasa
+   HMC  WASO           0.886540   norm_reg_ffbs1       yasa
+    SC   N1%           1.094487   norm_reg_ffbs1       yasa
+    SC   N2%           1.236807   norm_reg_ffbs1       yasa
+    SC   N3%           1.326085   norm_reg_ffbs1       yasa
+    SC  REM%           0.795407   norm_reg_ffbs1       yasa
+    SC  REML           1.096182   norm_reg_ffbs1       yasa
+    SC   SOL           0.768444   norm_reg_ffbs1       yasa
+    SC   TST           1.170832   norm_reg_ffbs1       yasa
+    SC  WASO           0.545036   norm_reg_ffbs1       yasa
+    ST   N1%           1.029393   norm_reg_ffbs1       yasa
+    ST   N2%           1.330129   norm_reg_ffbs1       yasa
+    ST   N3%           1.245808   norm_reg_ffbs1       yasa
+    ST  REM%           0.972827   norm_reg_ffbs1       yasa
+    ST  REML           1.104557   norm_reg_ffbs1       yasa
+    ST   SOL           0.463740   norm_reg_ffbs1       yasa
+    ST   TST           0.888743   norm_reg_ffbs1       yasa
+    ST  WASO           0.625046   norm_reg_ffbs1       yasa
+   HMC   N1%           1.001228        norm_ffbs       yasa
+   HMC   N2%           0.995797        norm_ffbs       yasa
+   HMC   N3%           1.006384        norm_ffbs       yasa
+   HMC  REM%           1.032584        norm_ffbs       yasa
+   HMC  REML           0.950439        norm_ffbs       yasa
+   HMC   SOL           0.911937        norm_ffbs       yasa
+   HMC   TST           0.896879        norm_ffbs       yasa
+   HMC  WASO           0.928803        norm_ffbs       yasa
+    SC   N1%           0.961475        norm_ffbs       yasa
+    SC   N2%           0.983098        norm_ffbs       yasa
+    SC   N3%           0.944911        norm_ffbs       yasa
+    SC  REM%           0.934362        norm_ffbs       yasa
+    SC  REML           0.913711        norm_ffbs       yasa
+    SC   SOL           0.767348        norm_ffbs       yasa
+    SC   TST           0.945435        norm_ffbs       yasa
+    SC  WASO           0.972446        norm_ffbs       yasa
+    ST   N1%           0.953726        norm_ffbs       yasa
+    ST   N2%           1.016710        norm_ffbs       yasa
+    ST   N3%           1.016175        norm_ffbs       yasa
+    ST  REM%           1.048583        norm_ffbs       yasa
+    ST  REML           1.006010        norm_ffbs       yasa
+    ST   SOL           0.907985        norm_ffbs       yasa
+    ST   TST           0.929884        norm_ffbs       yasa
+    ST  WASO           0.893343        norm_ffbs       yasa
+   HMC   N1%           0.977689 norm_entropy_reg       yasa
+   HMC   N2%           0.986054 norm_entropy_reg       yasa
+   HMC   N3%           1.017221 norm_entropy_reg       yasa
+   HMC  REM%           1.004157 norm_entropy_reg       yasa
+   HMC  REML           1.090034 norm_entropy_reg       yasa
+   HMC   SOL           1.113132 norm_entropy_reg       yasa
+   HMC   TST           1.078798 norm_entropy_reg       yasa
+   HMC  WASO           1.032664 norm_entropy_reg       yasa
+    SC   N1%           1.022610 norm_entropy_reg       yasa
+    SC   N2%           0.992211 norm_entropy_reg       yasa
+    SC   N3%           1.075257 norm_entropy_reg       yasa
+    SC  REM%           1.028837 norm_entropy_reg       yasa
+    SC  REML           1.213648 norm_entropy_reg       yasa
+    SC   SOL           1.469654 norm_entropy_reg       yasa
+    SC   TST           1.035847 norm_entropy_reg       yasa
+    SC  WASO           1.090151 norm_entropy_reg       yasa
+    ST   N1%           1.009836 norm_entropy_reg       yasa
+    ST   N2%           0.969690 norm_entropy_reg       yasa
+    ST   N3%           1.011237 norm_entropy_reg       yasa
+    ST  REM%           1.037819 norm_entropy_reg       yasa
+    ST  REML           1.082413 norm_entropy_reg       yasa
+    ST   SOL           1.155016 norm_entropy_reg       yasa
+    ST   TST           1.012753 norm_entropy_reg       yasa
+    ST  WASO           1.183157 norm_entropy_reg       yasa
+   HMC   N1%           1.008027         cqr_ffbs       yasa
+   HMC   N2%           0.997364         cqr_ffbs       yasa
+   HMC   N3%           1.006168         cqr_ffbs       yasa
+   HMC  REM%           1.009427         cqr_ffbs       yasa
+   HMC  REML           0.928076         cqr_ffbs       yasa
+   HMC   SOL           0.818624         cqr_ffbs       yasa
+   HMC   TST           1.062020         cqr_ffbs       yasa
+   HMC  WASO           1.003097         cqr_ffbs       yasa
+    SC   N1%           1.025472         cqr_ffbs       yasa
+    SC   N2%           1.016646         cqr_ffbs       yasa
+    SC   N3%           1.020374         cqr_ffbs       yasa
+    SC  REM%           1.027995         cqr_ffbs       yasa
+    SC  REML           0.887209         cqr_ffbs       yasa
+    SC   SOL           0.587109         cqr_ffbs       yasa
+    SC   TST           1.028521         cqr_ffbs       yasa
+    SC  WASO           0.872177         cqr_ffbs       yasa
+    ST   N1%           1.024085         cqr_ffbs       yasa
+    ST   N2%           0.997632         cqr_ffbs       yasa
+    ST   N3%           1.027762         cqr_ffbs       yasa
+    ST  REM%           0.991947         cqr_ffbs       yasa
+    ST  REML           0.676807         cqr_ffbs       yasa
+    ST   SOL           0.717673         cqr_ffbs       yasa
+    ST   TST           0.983346         cqr_ffbs       yasa
+    ST  WASO           0.952640         cqr_ffbs       yasa
+   HMC   N1%           1.028858       scp_abs_mu       yasa
+   HMC   N2%           1.017948       scp_abs_mu       yasa
+   HMC   N3%           1.061148       scp_abs_mu       yasa
+   HMC  REM%           1.055205       scp_abs_mu       yasa
+   HMC  REML           1.140082       scp_abs_mu       yasa
+   HMC   SOL           1.120700       scp_abs_mu       yasa
+   HMC   TST           1.178802       scp_abs_mu       yasa
+   HMC  WASO           1.081307       scp_abs_mu       yasa
+    SC   N1%           1.051043       scp_abs_mu       yasa
+    SC   N2%           1.077216       scp_abs_mu       yasa
+    SC   N3%           1.087189       scp_abs_mu       yasa
+    SC  REM%           1.086328       scp_abs_mu       yasa
+    SC  REML           1.203253       scp_abs_mu       yasa
+    SC   SOL           1.465228       scp_abs_mu       yasa
+    SC   TST           1.106524       scp_abs_mu       yasa
+    SC  WASO           1.062161       scp_abs_mu       yasa
+    ST   N1%           1.043712       scp_abs_mu       yasa
+    ST   N2%           1.009256       scp_abs_mu       yasa
+    ST   N3%           1.074767       scp_abs_mu       yasa
+    ST  REM%           0.973196       scp_abs_mu       yasa
+    ST  REML           0.987403       scp_abs_mu       yasa
+    ST   SOL           1.174477       scp_abs_mu       yasa
+    ST   TST           1.078689       scp_abs_mu       yasa
+    ST  WASO           1.209607       scp_abs_mu       yasa
+   HMC   N1%           1.184895      scp_abs_cal       yasa
+   HMC   N2%           1.542987      scp_abs_cal       yasa
+   HMC   N3%           0.971683      scp_abs_cal       yasa
+   HMC  REM%           0.880982      scp_abs_cal       yasa
+   HMC  REML           1.178235      scp_abs_cal       yasa
+   HMC   SOL           0.805862      scp_abs_cal       yasa
+   HMC   TST           1.184056      scp_abs_cal       yasa
+   HMC  WASO           1.018238      scp_abs_cal       yasa
+    SC   N1%           1.124625      scp_abs_cal       yasa
+    SC   N2%           1.443948      scp_abs_cal       yasa
+    SC   N3%           1.141978      scp_abs_cal       yasa
+    SC  REM%           0.906960      scp_abs_cal       yasa
+    SC  REML           1.430245      scp_abs_cal       yasa
+    SC   SOL           1.272130      scp_abs_cal       yasa
+    SC   TST           1.156471      scp_abs_cal       yasa
+    SC  WASO           0.849637      scp_abs_cal       yasa
+    ST   N1%           0.875354      scp_abs_cal       yasa
+    ST   N2%           1.089113      scp_abs_cal       yasa
+    ST   N3%           0.987564      scp_abs_cal       yasa
+    ST  REM%           1.017505      scp_abs_cal       yasa
+    ST  REML           1.086052      scp_abs_cal       yasa
+    ST   SOL           0.950714      scp_abs_cal       yasa
+    ST   TST           0.730960      scp_abs_cal       yasa
+    ST  WASO           0.594814      scp_abs_cal       yasa
+   HMC   N1%           1.111395       scp_abs_bc       yasa
+   HMC   N2%           1.322954       scp_abs_bc       yasa
+   HMC   N3%           0.946132       scp_abs_bc       yasa
+   HMC  REM%           0.942757       scp_abs_bc       yasa
+   HMC  REML           1.013484       scp_abs_bc       yasa
+   HMC   SOL           0.747782       scp_abs_bc       yasa
+   HMC   TST           1.414489       scp_abs_bc       yasa
+   HMC  WASO           1.200657       scp_abs_bc       yasa
+    SC   N1%           1.085487       scp_abs_bc       yasa
+    SC   N2%           1.340487       scp_abs_bc       yasa
+    SC   N3%           1.129426       scp_abs_bc       yasa
+    SC  REM%           0.965328       scp_abs_bc       yasa
+    SC  REML           1.471768       scp_abs_bc       yasa
+    SC   SOL           1.181597       scp_abs_bc       yasa
+    SC   TST           1.167664       scp_abs_bc       yasa
+    SC  WASO           0.684228       scp_abs_bc       yasa
+    ST   N1%           0.854147       scp_abs_bc       yasa
+    ST   N2%           1.120873       scp_abs_bc       yasa
+    ST   N3%           1.162878       scp_abs_bc       yasa
+    ST  REM%           0.995263       scp_abs_bc       yasa
+    ST  REML           1.074174       scp_abs_bc       yasa
+    ST   SOL           0.504436       scp_abs_bc       yasa
+    ST   TST           1.700895       scp_abs_bc       yasa
+    ST  WASO           0.827273       scp_abs_bc       yasa
+   HMC   N1%           1.108982    norm_reg_plug       yasa
+   HMC   N2%           1.690198    norm_reg_plug       yasa
+   HMC   N3%           1.124935    norm_reg_plug       yasa
+   HMC  REM%           0.876523    norm_reg_plug       yasa
+   HMC  REML           0.922809    norm_reg_plug       yasa
+   HMC   SOL           0.753291    norm_reg_plug       yasa
+   HMC   TST           1.576954    norm_reg_plug       yasa
+   HMC  WASO           1.431462    norm_reg_plug       yasa
+    SC   N1%           1.098744    norm_reg_plug       yasa
+    SC   N2%           1.353062    norm_reg_plug       yasa
+    SC   N3%           1.435648    norm_reg_plug       yasa
+    SC  REM%           0.893235    norm_reg_plug       yasa
+    SC  REML           1.279735    norm_reg_plug       yasa
+    SC   SOL           0.930569    norm_reg_plug       yasa
+    SC   TST           1.182834    norm_reg_plug       yasa
+    SC  WASO           0.863510    norm_reg_plug       yasa
+    ST   N1%           0.891300    norm_reg_plug       yasa
+    ST   N2%           1.057456    norm_reg_plug       yasa
+    ST   N3%           1.255730    norm_reg_plug       yasa
+    ST  REM%           1.027973    norm_reg_plug       yasa
+    ST  REML           1.050950    norm_reg_plug       yasa
+    ST   SOL           0.548888    norm_reg_plug       yasa
+    ST   TST           1.972240    norm_reg_plug       yasa
+    ST  WASO           1.134779    norm_reg_plug       yasa
+   HMC   N1%           1.118688   norm_reg_plugc       yasa
+   HMC   N2%           1.461708   norm_reg_plugc       yasa
+   HMC   N3%           0.992943   norm_reg_plugc       yasa
+   HMC  REM%           0.838178   norm_reg_plugc       yasa
+   HMC  REML           1.003183   norm_reg_plugc       yasa
+   HMC   SOL           0.732411   norm_reg_plugc       yasa
+   HMC   TST           0.999488   norm_reg_plugc       yasa
+   HMC  WASO           0.923341   norm_reg_plugc       yasa
+    SC   N1%           1.095893   norm_reg_plugc       yasa
+    SC   N2%           1.370555   norm_reg_plugc       yasa
+    SC   N3%           1.066074   norm_reg_plugc       yasa
+    SC  REM%           0.854763   norm_reg_plugc       yasa
+    SC  REML           1.244776   norm_reg_plugc       yasa
+    SC   SOL           0.950661   norm_reg_plugc       yasa
+    SC   TST           1.040217   norm_reg_plugc       yasa
+    SC  WASO           0.821465   norm_reg_plugc       yasa
+    ST   N1%           0.874663   norm_reg_plugc       yasa
+    ST   N2%           1.125809   norm_reg_plugc       yasa
+    ST   N3%           1.013518   norm_reg_plugc       yasa
+    ST  REM%           1.063463   norm_reg_plugc       yasa
+    ST  REML           1.041007   norm_reg_plugc       yasa
+    ST   SOL           0.906605   norm_reg_plugc       yasa
+    ST   TST           0.701788   norm_reg_plugc       yasa
+    ST  WASO           0.564758   norm_reg_plugc       yasa
+   HMC   N1%           1.189432          scp_abs       yasa
+   HMC   N2%           1.834475          scp_abs       yasa
+   HMC   N3%           1.107889          scp_abs       yasa
+   HMC  REM%           0.938119          scp_abs       yasa
+   HMC  REML           0.998563          scp_abs       yasa
+   HMC   SOL           0.872911          scp_abs       yasa
+   HMC   TST           1.812590          scp_abs       yasa
+   HMC  WASO           1.526090          scp_abs       yasa
+    SC   N1%           1.149040          scp_abs       yasa
+    SC   N2%           1.426049          scp_abs       yasa
+    SC   N3%           1.546674          scp_abs       yasa
+    SC  REM%           0.963856          scp_abs       yasa
+    SC  REML           1.449961          scp_abs       yasa
+    SC   SOL           1.251131          scp_abs       yasa
+    SC   TST           1.336844          scp_abs       yasa
+    SC  WASO           0.878169          scp_abs       yasa
+    ST   N1%           0.927749          scp_abs       yasa
+    ST   N2%           1.055488          scp_abs       yasa
+    ST   N3%           1.338918          scp_abs       yasa
+    ST  REM%           0.990532          scp_abs       yasa
+    ST  REML           1.085806          scp_abs       yasa
+    ST   SOL           0.690009          scp_abs       yasa
+    ST   TST           2.480322          scp_abs       yasa
+    ST  WASO           1.242782          scp_abs       yasa
+   HMC   N1%           0.934340     norm_reg_ind lgbm_sc_s0
+   HMC   N2%           0.837380     norm_reg_ind lgbm_sc_s0
+   HMC   N3%           0.844917     norm_reg_ind lgbm_sc_s0
+   HMC  REM%           0.836899     norm_reg_ind lgbm_sc_s0
+   HMC  REML           1.091760     norm_reg_ind lgbm_sc_s0
+   HMC   SOL           1.102157     norm_reg_ind lgbm_sc_s0
+   HMC   TST           1.306132     norm_reg_ind lgbm_sc_s0
+   HMC  WASO           1.194725     norm_reg_ind lgbm_sc_s0
+    SC   N1%           0.902704     norm_reg_ind lgbm_sc_s0
+    SC   N2%           0.973275     norm_reg_ind lgbm_sc_s0
+    SC   N3%           0.978250     norm_reg_ind lgbm_sc_s0
+    SC  REM%           0.898265     norm_reg_ind lgbm_sc_s0
+    SC  REML           1.781099     norm_reg_ind lgbm_sc_s0
+    SC   SOL           1.438829     norm_reg_ind lgbm_sc_s0
+    SC   TST           1.030584     norm_reg_ind lgbm_sc_s0
+    SC  WASO           1.201417     norm_reg_ind lgbm_sc_s0
+    ST   N1%           0.759424     norm_reg_ind lgbm_sc_s0
+    ST   N2%           1.044053     norm_reg_ind lgbm_sc_s0
+    ST   N3%           0.974043     norm_reg_ind lgbm_sc_s0
+    ST  REM%           1.191422     norm_reg_ind lgbm_sc_s0
+    ST  REML           2.126005     norm_reg_ind lgbm_sc_s0
+    ST   SOL           1.296028     norm_reg_ind lgbm_sc_s0
+    ST   TST           0.879794     norm_reg_ind lgbm_sc_s0
+    ST  WASO           0.999646     norm_reg_ind lgbm_sc_s0
+   HMC   N1%           1.038061   norm_reg_ffbs1 lgbm_sc_s0
+   HMC   N2%           1.209826   norm_reg_ffbs1 lgbm_sc_s0
+   HMC   N3%           1.092236   norm_reg_ffbs1 lgbm_sc_s0
+   HMC  REM%           1.047052   norm_reg_ffbs1 lgbm_sc_s0
+   HMC  REML           0.893892   norm_reg_ffbs1 lgbm_sc_s0
+   HMC   SOL           0.728488   norm_reg_ffbs1 lgbm_sc_s0
+   HMC   TST           1.045693   norm_reg_ffbs1 lgbm_sc_s0
+   HMC  WASO           1.111810   norm_reg_ffbs1 lgbm_sc_s0
+    SC   N1%           1.094214   norm_reg_ffbs1 lgbm_sc_s0
+    SC   N2%           1.187176   norm_reg_ffbs1 lgbm_sc_s0
+    SC   N3%           1.202593   norm_reg_ffbs1 lgbm_sc_s0
+    SC  REM%           0.889721   norm_reg_ffbs1 lgbm_sc_s0
+    SC  REML           1.039676   norm_reg_ffbs1 lgbm_sc_s0
+    SC   SOL           0.834459   norm_reg_ffbs1 lgbm_sc_s0
+    SC   TST           1.136350   norm_reg_ffbs1 lgbm_sc_s0
+    SC  WASO           0.506942   norm_reg_ffbs1 lgbm_sc_s0
+    ST   N1%           1.098747   norm_reg_ffbs1 lgbm_sc_s0
+    ST   N2%           1.280022   norm_reg_ffbs1 lgbm_sc_s0
+    ST   N3%           1.143318   norm_reg_ffbs1 lgbm_sc_s0
+    ST  REM%           0.918910   norm_reg_ffbs1 lgbm_sc_s0
+    ST  REML           1.111354   norm_reg_ffbs1 lgbm_sc_s0
+    ST   SOL           0.747741   norm_reg_ffbs1 lgbm_sc_s0
+    ST   TST           1.009771   norm_reg_ffbs1 lgbm_sc_s0
+    ST  WASO           0.808226   norm_reg_ffbs1 lgbm_sc_s0
+   HMC   N1%           1.014890        norm_ffbs lgbm_sc_s0
+   HMC   N2%           1.034613        norm_ffbs lgbm_sc_s0
+   HMC   N3%           0.982219        norm_ffbs lgbm_sc_s0
+   HMC  REM%           0.978885        norm_ffbs lgbm_sc_s0
+   HMC  REML           0.947708        norm_ffbs lgbm_sc_s0
+   HMC   SOL           0.943841        norm_ffbs lgbm_sc_s0
+   HMC   TST           0.893760        norm_ffbs lgbm_sc_s0
+   HMC  WASO           0.928855        norm_ffbs lgbm_sc_s0
+    SC   N1%           0.963319        norm_ffbs lgbm_sc_s0
+    SC   N2%           0.955563        norm_ffbs lgbm_sc_s0
+    SC   N3%           0.953331        norm_ffbs lgbm_sc_s0
+    SC  REM%           0.946093        norm_ffbs lgbm_sc_s0
+    SC  REML           0.910497        norm_ffbs lgbm_sc_s0
+    SC   SOL           0.767324        norm_ffbs lgbm_sc_s0
+    SC   TST           0.957674        norm_ffbs lgbm_sc_s0
+    SC  WASO           0.960151        norm_ffbs lgbm_sc_s0
+    ST   N1%           0.968032        norm_ffbs lgbm_sc_s0
+    ST   N2%           1.039203        norm_ffbs lgbm_sc_s0
+    ST   N3%           0.960602        norm_ffbs lgbm_sc_s0
+    ST  REM%           1.047657        norm_ffbs lgbm_sc_s0
+    ST  REML           0.914610        norm_ffbs lgbm_sc_s0
+    ST   SOL           0.967679        norm_ffbs lgbm_sc_s0
+    ST   TST           0.915104        norm_ffbs lgbm_sc_s0
+    ST  WASO           0.946449        norm_ffbs lgbm_sc_s0
+   HMC   N1%           0.968110 norm_entropy_reg lgbm_sc_s0
+   HMC   N2%           0.951208 norm_entropy_reg lgbm_sc_s0
+   HMC   N3%           1.009367 norm_entropy_reg lgbm_sc_s0
+   HMC  REM%           1.009770 norm_entropy_reg lgbm_sc_s0
+   HMC  REML           0.983510 norm_entropy_reg lgbm_sc_s0
+   HMC   SOL           1.083436 norm_entropy_reg lgbm_sc_s0
+   HMC   TST           1.113012 norm_entropy_reg lgbm_sc_s0
+   HMC  WASO           1.055223 norm_entropy_reg lgbm_sc_s0
+    SC   N1%           1.012071 norm_entropy_reg lgbm_sc_s0
+    SC   N2%           0.991548 norm_entropy_reg lgbm_sc_s0
+    SC   N3%           1.042637 norm_entropy_reg lgbm_sc_s0
+    SC  REM%           1.026553 norm_entropy_reg lgbm_sc_s0
+    SC  REML           1.304036 norm_entropy_reg lgbm_sc_s0
+    SC   SOL           1.444646 norm_entropy_reg lgbm_sc_s0
+    SC   TST           1.013861 norm_entropy_reg lgbm_sc_s0
+    SC  WASO           1.248421 norm_entropy_reg lgbm_sc_s0
+    ST   N1%           0.995244 norm_entropy_reg lgbm_sc_s0
+    ST   N2%           0.998704 norm_entropy_reg lgbm_sc_s0
+    ST   N3%           1.068059 norm_entropy_reg lgbm_sc_s0
+    ST  REM%           1.014384 norm_entropy_reg lgbm_sc_s0
+    ST  REML           1.195091 norm_entropy_reg lgbm_sc_s0
+    ST   SOL           1.127154 norm_entropy_reg lgbm_sc_s0
+    ST   TST           0.966813 norm_entropy_reg lgbm_sc_s0
+    ST  WASO           1.029874 norm_entropy_reg lgbm_sc_s0
+   HMC   N1%           0.997240         cqr_ffbs lgbm_sc_s0
+   HMC   N2%           0.986114         cqr_ffbs lgbm_sc_s0
+   HMC   N3%           1.004411         cqr_ffbs lgbm_sc_s0
+   HMC  REM%           1.010146         cqr_ffbs lgbm_sc_s0
+   HMC  REML           1.019893         cqr_ffbs lgbm_sc_s0
+   HMC   SOL           0.966908         cqr_ffbs lgbm_sc_s0
+   HMC   TST           1.065627         cqr_ffbs lgbm_sc_s0
+   HMC  WASO           1.023083         cqr_ffbs lgbm_sc_s0
+    SC   N1%           1.023472         cqr_ffbs lgbm_sc_s0
+    SC   N2%           1.010437         cqr_ffbs lgbm_sc_s0
+    SC   N3%           1.018227         cqr_ffbs lgbm_sc_s0
+    SC  REM%           1.026624         cqr_ffbs lgbm_sc_s0
+    SC  REML           0.929432         cqr_ffbs lgbm_sc_s0
+    SC   SOL           0.614003         cqr_ffbs lgbm_sc_s0
+    SC   TST           1.010674         cqr_ffbs lgbm_sc_s0
+    SC  WASO           0.849022         cqr_ffbs lgbm_sc_s0
+    ST   N1%           1.017105         cqr_ffbs lgbm_sc_s0
+    ST   N2%           0.999701         cqr_ffbs lgbm_sc_s0
+    ST   N3%           1.061704         cqr_ffbs lgbm_sc_s0
+    ST  REM%           0.999274         cqr_ffbs lgbm_sc_s0
+    ST  REML           0.894381         cqr_ffbs lgbm_sc_s0
+    ST   SOL           0.852608         cqr_ffbs lgbm_sc_s0
+    ST   TST           1.012611         cqr_ffbs lgbm_sc_s0
+    ST  WASO           0.965515         cqr_ffbs lgbm_sc_s0
+   HMC   N1%           0.999163       scp_abs_mu lgbm_sc_s0
+   HMC   N2%           0.971228       scp_abs_mu lgbm_sc_s0
+   HMC   N3%           1.017031       scp_abs_mu lgbm_sc_s0
+   HMC  REM%           1.076339       scp_abs_mu lgbm_sc_s0
+   HMC  REML           1.015454       scp_abs_mu lgbm_sc_s0
+   HMC   SOL           1.097557       scp_abs_mu lgbm_sc_s0
+   HMC   TST           1.170411       scp_abs_mu lgbm_sc_s0
+   HMC  WASO           1.106458       scp_abs_mu lgbm_sc_s0
+    SC   N1%           1.052872       scp_abs_mu lgbm_sc_s0
+    SC   N2%           1.047471       scp_abs_mu lgbm_sc_s0
+    SC   N3%           1.061012       scp_abs_mu lgbm_sc_s0
+    SC  REM%           1.094098       scp_abs_mu lgbm_sc_s0
+    SC  REML           1.317076       scp_abs_mu lgbm_sc_s0
+    SC   SOL           1.446909       scp_abs_mu lgbm_sc_s0
+    SC   TST           1.075275       scp_abs_mu lgbm_sc_s0
+    SC  WASO           1.151562       scp_abs_mu lgbm_sc_s0
+    ST   N1%           1.036067       scp_abs_mu lgbm_sc_s0
+    ST   N2%           1.003276       scp_abs_mu lgbm_sc_s0
+    ST   N3%           1.106629       scp_abs_mu lgbm_sc_s0
+    ST  REM%           1.015957       scp_abs_mu lgbm_sc_s0
+    ST  REML           1.148631       scp_abs_mu lgbm_sc_s0
+    ST   SOL           1.171384       scp_abs_mu lgbm_sc_s0
+    ST   TST           1.099981       scp_abs_mu lgbm_sc_s0
+    ST  WASO           1.057798       scp_abs_mu lgbm_sc_s0
+   HMC   N1%           1.045362      scp_abs_cal lgbm_sc_s0
+   HMC   N2%           1.006558      scp_abs_cal lgbm_sc_s0
+   HMC   N3%           0.999244      scp_abs_cal lgbm_sc_s0
+   HMC  REM%           0.873907      scp_abs_cal lgbm_sc_s0
+   HMC  REML           0.986589      scp_abs_cal lgbm_sc_s0
+   HMC   SOL           0.714868      scp_abs_cal lgbm_sc_s0
+   HMC   TST           1.296302      scp_abs_cal lgbm_sc_s0
+   HMC  WASO           1.176950      scp_abs_cal lgbm_sc_s0
+    SC   N1%           1.103521      scp_abs_cal lgbm_sc_s0
+    SC   N2%           1.279235      scp_abs_cal lgbm_sc_s0
+    SC   N3%           1.037250      scp_abs_cal lgbm_sc_s0
+    SC  REM%           0.944077      scp_abs_cal lgbm_sc_s0
+    SC  REML           1.706413      scp_abs_cal lgbm_sc_s0
+    SC   SOL           1.059478      scp_abs_cal lgbm_sc_s0
+    SC   TST           1.248222      scp_abs_cal lgbm_sc_s0
+    SC  WASO           0.766754      scp_abs_cal lgbm_sc_s0
+    ST   N1%           0.987679      scp_abs_cal lgbm_sc_s0
+    ST   N2%           1.126153      scp_abs_cal lgbm_sc_s0
+    ST   N3%           1.078649      scp_abs_cal lgbm_sc_s0
+    ST  REM%           1.151249      scp_abs_cal lgbm_sc_s0
+    ST  REML           1.549722      scp_abs_cal lgbm_sc_s0
+    ST   SOL           1.026290      scp_abs_cal lgbm_sc_s0
+    ST   TST           1.067273      scp_abs_cal lgbm_sc_s0
+    ST  WASO           0.984291      scp_abs_cal lgbm_sc_s0
+   HMC   N1%           1.092602       scp_abs_bc lgbm_sc_s0
+   HMC   N2%           1.102319       scp_abs_bc lgbm_sc_s0
+   HMC   N3%           0.820782       scp_abs_bc lgbm_sc_s0
+   HMC  REM%           0.950579       scp_abs_bc lgbm_sc_s0
+   HMC  REML           0.797616       scp_abs_bc lgbm_sc_s0
+   HMC   SOL           0.838776       scp_abs_bc lgbm_sc_s0
+   HMC   TST           1.492710       scp_abs_bc lgbm_sc_s0
+   HMC  WASO           1.332622       scp_abs_bc lgbm_sc_s0
+    SC   N1%           1.063169       scp_abs_bc lgbm_sc_s0
+    SC   N2%           1.092722       scp_abs_bc lgbm_sc_s0
+    SC   N3%           1.097526       scp_abs_bc lgbm_sc_s0
+    SC  REM%           0.925830       scp_abs_bc lgbm_sc_s0
+    SC  REML           1.360899       scp_abs_bc lgbm_sc_s0
+    SC   SOL           1.106352       scp_abs_bc lgbm_sc_s0
+    SC   TST           1.229652       scp_abs_bc lgbm_sc_s0
+    SC  WASO           0.737519       scp_abs_bc lgbm_sc_s0
+    ST   N1%           0.929808       scp_abs_bc lgbm_sc_s0
+    ST   N2%           1.175034       scp_abs_bc lgbm_sc_s0
+    ST   N3%           1.175785       scp_abs_bc lgbm_sc_s0
+    ST  REM%           1.071281       scp_abs_bc lgbm_sc_s0
+    ST  REML           1.540431       scp_abs_bc lgbm_sc_s0
+    ST   SOL           0.979315       scp_abs_bc lgbm_sc_s0
+    ST   TST           1.336758       scp_abs_bc lgbm_sc_s0
+    ST  WASO           0.781026       scp_abs_bc lgbm_sc_s0
+   HMC   N1%           1.269951    norm_reg_plug lgbm_sc_s0
+   HMC   N2%           1.103246    norm_reg_plug lgbm_sc_s0
+   HMC   N3%           0.809751    norm_reg_plug lgbm_sc_s0
+   HMC  REM%           0.982656    norm_reg_plug lgbm_sc_s0
+   HMC  REML           0.758142    norm_reg_plug lgbm_sc_s0
+   HMC   SOL           0.813270    norm_reg_plug lgbm_sc_s0
+   HMC   TST           1.470701    norm_reg_plug lgbm_sc_s0
+   HMC  WASO           1.560384    norm_reg_plug lgbm_sc_s0
+    SC   N1%           1.077115    norm_reg_plug lgbm_sc_s0
+    SC   N2%           1.019134    norm_reg_plug lgbm_sc_s0
+    SC   N3%           1.027660    norm_reg_plug lgbm_sc_s0
+    SC  REM%           0.858788    norm_reg_plug lgbm_sc_s0
+    SC  REML           1.206845    norm_reg_plug lgbm_sc_s0
+    SC   SOL           0.946474    norm_reg_plug lgbm_sc_s0
+    SC   TST           1.119700    norm_reg_plug lgbm_sc_s0
+    SC  WASO           0.753128    norm_reg_plug lgbm_sc_s0
+    ST   N1%           1.101634    norm_reg_plug lgbm_sc_s0
+    ST   N2%           1.050701    norm_reg_plug lgbm_sc_s0
+    ST   N3%           1.136623    norm_reg_plug lgbm_sc_s0
+    ST  REM%           1.236246    norm_reg_plug lgbm_sc_s0
+    ST  REML           1.327491    norm_reg_plug lgbm_sc_s0
+    ST   SOL           1.037395    norm_reg_plug lgbm_sc_s0
+    ST   TST           1.251027    norm_reg_plug lgbm_sc_s0
+    ST  WASO           0.968125    norm_reg_plug lgbm_sc_s0
+   HMC   N1%           1.066557   norm_reg_plugc lgbm_sc_s0
+   HMC   N2%           1.012503   norm_reg_plugc lgbm_sc_s0
+   HMC   N3%           0.967809   norm_reg_plugc lgbm_sc_s0
+   HMC  REM%           0.859476   norm_reg_plugc lgbm_sc_s0
+   HMC  REML           0.963943   norm_reg_plugc lgbm_sc_s0
+   HMC   SOL           0.697858   norm_reg_plugc lgbm_sc_s0
+   HMC   TST           1.099251   norm_reg_plugc lgbm_sc_s0
+   HMC  WASO           1.061744   norm_reg_plugc lgbm_sc_s0
+    SC   N1%           1.054522   norm_reg_plugc lgbm_sc_s0
+    SC   N2%           1.237387   norm_reg_plugc lgbm_sc_s0
+    SC   N3%           0.970650   norm_reg_plugc lgbm_sc_s0
+    SC  REM%           0.880616   norm_reg_plugc lgbm_sc_s0
+    SC  REML           1.295882   norm_reg_plugc lgbm_sc_s0
+    SC   SOL           0.882965   norm_reg_plugc lgbm_sc_s0
+    SC   TST           1.132600   norm_reg_plugc lgbm_sc_s0
+    SC  WASO           0.771774   norm_reg_plugc lgbm_sc_s0
+    ST   N1%           0.990493   norm_reg_plugc lgbm_sc_s0
+    ST   N2%           1.152964   norm_reg_plugc lgbm_sc_s0
+    ST   N3%           0.989514   norm_reg_plugc lgbm_sc_s0
+    ST  REM%           1.146391   norm_reg_plugc lgbm_sc_s0
+    ST  REML           1.401345   norm_reg_plugc lgbm_sc_s0
+    ST   SOL           1.044731   norm_reg_plugc lgbm_sc_s0
+    ST   TST           0.972878   norm_reg_plugc lgbm_sc_s0
+    ST  WASO           0.948302   norm_reg_plugc lgbm_sc_s0
+   HMC   N1%           1.349211          scp_abs lgbm_sc_s0
+   HMC   N2%           1.093768          scp_abs lgbm_sc_s0
+   HMC   N3%           0.842772          scp_abs lgbm_sc_s0
+   HMC  REM%           1.015270          scp_abs lgbm_sc_s0
+   HMC  REML           0.802733          scp_abs lgbm_sc_s0
+   HMC   SOL           0.859194          scp_abs lgbm_sc_s0
+   HMC   TST           1.631503          scp_abs lgbm_sc_s0
+   HMC  WASO           1.636778          scp_abs lgbm_sc_s0
+    SC   N1%           1.146931          scp_abs lgbm_sc_s0
+    SC   N2%           1.085235          scp_abs lgbm_sc_s0
+    SC   N3%           1.098294          scp_abs lgbm_sc_s0
+    SC  REM%           0.921023          scp_abs lgbm_sc_s0
+    SC  REML           1.444981          scp_abs lgbm_sc_s0
+    SC   SOL           1.111020          scp_abs lgbm_sc_s0
+    SC   TST           1.289061          scp_abs lgbm_sc_s0
+    SC  WASO           0.746767          scp_abs lgbm_sc_s0
+    ST   N1%           1.187846          scp_abs lgbm_sc_s0
+    ST   N2%           1.079146          scp_abs lgbm_sc_s0
+    ST   N3%           1.274387          scp_abs lgbm_sc_s0
+    ST  REM%           1.265717          scp_abs lgbm_sc_s0
+    ST  REML           1.593390          scp_abs lgbm_sc_s0
+    ST   SOL           1.021191          scp_abs lgbm_sc_s0
+    ST   TST           1.377918          scp_abs lgbm_sc_s0
+    ST  WASO           0.964630          scp_abs lgbm_sc_s0

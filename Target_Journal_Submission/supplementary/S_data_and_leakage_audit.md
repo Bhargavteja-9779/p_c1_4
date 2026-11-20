@@ -20,7 +20,7 @@
 | Leakage through HMM parameters | Transition matrix, prior, calibration and tau use labels | Fitted only on labelled nights that exclude the evaluated night: within-cohort 5-fold cross-fitting by subject; cross-cohort uses SC only. |
 | Leakage into the base stagers | S2 trained on SC | SC predictions are out-of-fold (subject-grouped 5-fold); S1 (YASA) never saw any of the three cohorts. |
 | Pre-processing leakage | YASA features normalise within each night | Per-night normalisation uses only that night's signal (unsupervised, test-time permissible); no cross-night statistics. |
-| Test contamination via hyper-parameter tuning | Possible if tuned on evaluation nights | Stager hyper-parameters fixed a priori; the only fitted HMM quantity (tau) is fitted on source/training-fold nights; conformal methods and all thresholds pre-specified (PREREGISTERED_PROTOCOL.md). |
+| Test contamination via hyper-parameter tuning | Possible if tuned on evaluation nights | Stager hyper-parameters fixed a priori; the only fitted HMM quantity (tau) is fitted on source/training-fold nights; conformal methods and all thresholds pre-specified (PROTOCOL.md). |
 | Duplicate / near-duplicate nights | None expected; each PSG file is a distinct night | File-level uniqueness checked via PhysioNet SHA256 manifests. |
 | Label leakage via unscored epochs | "?"/movement epochs | Marked −1 and excluded identically from reference and automatic parameters. |
 | Temporal leakage | Not applicable (no longitudinal prediction) | – |

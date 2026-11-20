@@ -74,7 +74,7 @@ def main():
         (8, py + ["experiments/e08_error_analysis.py"]),
         (9, py + ["experiments/e11_conditional_coverage.py"]),
         (10, py + ["experiments/e12_honest_protocol.py"] + (["--R", "2", "--nt", "10"] if q else [])),
-        (11, py + ["experiments/e13_preregistered_sensitivity.py"]),
+        (11, py + ["experiments/e13_prespecified_sensitivity.py"]),
         (12, None if q else py + ["experiments/e14_montage_sensitivity.py"]),
         (13, py + ["experiments/e15_honest_stats.py"]),
         (14, py + ["experiments/e10_efficiency.py"]),

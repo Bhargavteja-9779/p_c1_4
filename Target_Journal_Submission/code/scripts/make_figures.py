@@ -59,7 +59,7 @@ def fig1_example(night="SN050", cohort="HMC", stager="yasa"):
     Pc = sm.cal.transform(np.log(np.clip(P, 1e-12, 1)))
     S = hmm.ffbs_sample(Pc, sm.pi_s, sm.A, sm.p0, sm.tau, 1000, np.random.default_rng(night_seed(night, f"{stager}|xfit")))
     mask = y >= 0
-    par = compute_params(S, mask)
+    par = compute_params(S)   # automatic hypnograms use all analysis-window epochs (no reference mask)
     loso = pd.read_csv(RESULTS_DIR / "raw" / f"e04_loso_{stager}.csv")
     L = loso[(loso.night == night) & (loso.method == PROPOSED)].set_index("param")
     Lb = loso[(loso.night == night) & (loso.method == "ba_loa")].set_index("param")
@@ -141,7 +141,7 @@ def fig2_within(stagers=("yasa", "lgbm_sc_s0")):
 
 
 def fig5_adaptivity(stager="yasa"):
-    """(a-c) interval width vs absolute plug-in error (LOSO, pre-registered summaries); (d) flagging AUROC;
+    """(a-c) interval width vs absolute plug-in error (LOSO, pre-specified summaries); (d) flagging AUROC;
     (e-h) decisions at clinical thresholds (honest protocol): fraction of nights with a confident decision
     (interval entirely on one side of the threshold) and accuracy of those decisions, pooled over cohorts."""
     loso = pd.read_csv(RESULTS_DIR / "raw" / f"e04_loso_{stager}.csv")
@@ -170,7 +170,7 @@ def fig5_adaptivity(stager="yasa"):
     for (c, p), g in f.groupby(["cohort", "param"], sort=False):
         for s_i, sg in enumerate(sig):
             r = g[g.signal == sg]
-            if len(r) and pd.notna(r.iloc[0].auroc):
+            if len(r) and pd.notna(r.iloc[0].auroc) and r.iloc[0].n_events >= 10:   # < 10 events: not interpretable (as in S14)
                 r = r.iloc[0]
                 ax.errorbar(r.auroc, yy, xerr=[[r.auroc - r.lo95], [r.hi95 - r.auroc]], fmt="o", ms=3,
                             color=["#0072B2", "#CC79A7", "#999999"][s_i], label=None if sg in seen else sl[sg])

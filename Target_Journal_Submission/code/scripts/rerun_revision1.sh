@@ -12,7 +12,7 @@ python3 -W ignore experiments/e08_error_analysis.py > $L/e08.log 2>&1; s "E08 do
 python3 -W ignore experiments/e09_robustness.py --skip-predict --workers 4 > $L/e09.log 2>&1; s "E09 done"
 python3 -W ignore experiments/e11_conditional_coverage.py > $L/e11.log 2>&1; s "E11 done"
 python3 -W ignore experiments/e12_honest_protocol.py --R 50 > $L/e12.log 2>&1; s "E12 done"
-python3 -W ignore experiments/e13_preregistered_sensitivity.py > $L/e13.log 2>&1; s "E13 done"
+python3 -W ignore experiments/e13_prespecified_sensitivity.py > $L/e13.log 2>&1; s "E13 done"
 python3 -W ignore experiments/e14_montage_sensitivity.py > $L/e14.log 2>&1; s "E14 done"
 python3 -W ignore experiments/e04_within_cohort.py --stagers lgbm_sc_s1 lgbm_sc_s2 --no-loso --workers 4 > $L/e04_seeds.log 2>&1; s "E04 seeds done"
 python3 -W ignore experiments/e10_efficiency.py > $L/e10.log 2>&1; s "E10 done"

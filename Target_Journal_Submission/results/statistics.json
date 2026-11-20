@@ -18412,7 +18412,7 @@
    "baseline": "norm_entropy_reg",
    "n_subjects": 78,
    "mean_is_proposed": 141.6107084907,
-   "mean_is_baseline": 183.5142386062,
+   "mean_is_baseline": 183.5142386061,
    "ratio": 0.7716606056,
    "ratio_lo95": 0.6766162254,
    "ratio_hi95": 0.8593372221,
