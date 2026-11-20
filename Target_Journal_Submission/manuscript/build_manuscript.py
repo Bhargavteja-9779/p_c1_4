@@ -167,10 +167,11 @@ def word_count(md_text):
             body = body.split(cut)[0]
     m = re.search(r"## 1\. Introduction", body)
     body = body[m.start():] if m else body
-    body = re.sub(r"\$\$.*?\$\$", " ", body, flags=re.S)
-    body = re.sub(r"\$.*?\$", " x ", body)
-    body = re.sub(r"[#*_>|\[\]()]", " ", body)
-    return len(re.findall(r"\b\w[\w'’.-]*\b", body))
+    body = re.sub(r"\$\$.*?\$\$", " ", body, flags=re.S)          # display equations are not counted
+    body = re.sub(r"\$.*?\$", " ", body)                            # inline equations are not counted either
+    body = re.sub(r"\[@[^\]]*\]", " [1] ", body)                     # a citation group is one token, as in the DOCX
+    body = re.sub(r"[#*_>|]", " ", body)
+    return len(body.split())                                         # whitespace tokens, headings included (as Word counts)
 
 
 def main():
@@ -196,11 +197,11 @@ def main():
     (build / "manuscript_rendered.md").write_text(md)
     abstract = re.search(r"\*\*Abstract\*\*(.*?)\*\*Keywords", md, re.S)
     if abstract:  # do not count the section labels themselves
-        abstract_txt = re.sub(r"\*(Objective|Methods|Results|Conclusions):\*", " ", abstract.group(1))
+        abstract_txt = re.sub(r"[*_]", "", abstract.group(1))     # section labels are counted
     else:
         abstract_txt = ""
     stats = {"main_text_words": word_count(md),
-             "abstract_words": len(re.findall(r"\b[\w'’.%-]+\b", abstract_txt))}
+             "abstract_words": len(abstract_txt.split())}
     (build / "word_counts.json").write_text(json.dumps(stats, indent=2))
     md = md.replace("<<WORDCOUNT>>", f"{stats['main_text_words']:,}").replace("<<ABSTRACTCOUNT>>", str(stats["abstract_words"]))
     (build / "manuscript_rendered.md").write_text(md)

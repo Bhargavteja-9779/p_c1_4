@@ -1,7 +1,7 @@
 # Pre-specified study protocol (written 2026-11-15, BEFORE any interval/coverage result was computed)
 
 Only base-stager accuracies (E01, E02) had been inspected when this protocol was fixed. Any later
-deviation is logged in CHANGELOG.md with its reason.
+deviation is listed, with its reason, in the deviations section that follows (Supplementary S1).
 
 ## Working title
 Distribution-free per-night prediction intervals for automatically scored polysomnography parameters:

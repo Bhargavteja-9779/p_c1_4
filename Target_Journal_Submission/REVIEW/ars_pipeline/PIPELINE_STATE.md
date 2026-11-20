@@ -49,11 +49,16 @@ Repo commit at entry: `af6aab7`.
 - Wording change not in the report: "pre-registered" -> "pre-specified" (protocol is in the repo, never registered externally); supplement S1 now uses a clean `supplementary/DEVIATIONS.md`.
 - Word counts after fixes and trimming: main text 4,954 (whitespace tokens, headings and citations included; limit 5,000), abstract 292 (limit 300).
 
+## Stage 2.5 re-verification (independent agent) and FAIL-loop round 2
+- Re-verification round 1 (`stage2_5_integrity/reverification_round1.md`): 0 SERIOUS, 1 MEDIUM (like-for-like decision accuracy only in the abstract), 18 MINOR; Mode 1 failure-mode block LIFTED (stale seed runs regenerated, bit-exact); Mode 7 still INSUFFICIENT EVIDENCE (needs the author's answer).
+- Round 2 fixes applied by the orchestrator: §3.7 + S8 columns + Fig. 5 caption; thresholds called illustrative; K-fold-analogue wording of the Barber et al. point; joint-criterion provenance; restored three dropped qualifiers (N1 %, SOL/CQR, test-half labels); patent entry; DEVIATIONS additions (git cannot date the protocol; local deployment 500 -> 50; CQR features); "pre-registered" removed from code, supplement and docs; empty seed log deleted; word counter now Word-like (whitespace tokens, equations excluded): main text 4,964, abstract 293.
+- These round-2 corrections were checked by the orchestrator (rebuild + grep) but NOT by a second independent agent; Stage 4.5 re-runs the full gate from scratch.
+
 ## Stage log
 
 | Stage | Status | Started | Finished | Deliverables | Decision |
 |---|---|---|---|---|---|
-| 2.5 INTEGRITY (Mode 1) | FAIL round 1 → fixes applied, re-verification pending | 2026-11-20 | 2026-11-20 | `stage2_5_integrity/INTEGRITY_REPORT_stage2_5.md` (+ 2 sub-reports) | pending: intake answer; FAIL-loop fixes; Mode 1 block acknowledgement; Mode 7 question |
+| 2.5 INTEGRITY (Mode 1) | re-verification: 0 SERIOUS / 1 MEDIUM / 18 MINOR → round-2 fixes applied; formal PASS awaits the author's intake answer | 2026-11-20 | 2026-11-20 | `stage2_5_integrity/INTEGRITY_REPORT_stage2_5.md` (+ 2 sub-reports) | pending: intake answer; FAIL-loop fixes; Mode 1 block acknowledgement; Mode 7 question |
 | 3 REVIEW | Phase 0 done (prepared early, read-only) — cards await author approval | 2026-11-20 | | `stage3_review/phase0_field_analysis.md` | |
 | 4 REVISE | pending | | | | |
 | 3' RE-REVIEW | pending | | | | |

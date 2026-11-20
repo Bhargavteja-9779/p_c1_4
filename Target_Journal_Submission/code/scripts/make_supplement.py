@@ -1,7 +1,7 @@
 """Assemble the Supplementary Material (Markdown -> DOCX) from machine-generated tables.
 
 Numbering (referenced in the manuscript; revision 1):
-  S1  Pre-specified protocol and all deviations (CHANGELOG)
+  S1  Pre-specified protocol and all deviations
   S2  Honest end-to-end protocol: all methods (coverage, width, interval score; 50 splits)
   S3  Honest protocol: paired comparisons (permutation test of mean difference; Holm) incl. scale-at-fixed-centre
   S4  In-domain LightGBM stager: within-cohort table (as Table 2) and point estimates (as Table 3)
@@ -98,10 +98,11 @@ def main():
     parts.append(tbl("tableS_montage"))
     parts.append("\n# S8. Clinical decision thresholds\n\n**A night's decision is 'confident' when its 90% interval lies "
                  "entirely on one side of the threshold; accuracy of confident decisions against the manual reference; "
-                 "plug-in accuracy = agreement of the uncorrected automatic value with the reference (honest protocol)**\n\n")
+                 "plug-in accuracy = agreement of the uncorrected automatic value with the reference, over all nights; plug_acc_confident / plug_acc_unconfident = the same on the nights the method decided / left undecided (honest protocol)**\n\n")
     parts.append(tbl("tableS_decisions", "method in ['ba_loa','ba_reg','scp_signed','cqr_qr','norm_ffbs','norm_reg_ffbs']",
-                     ["stager", "cohort", "threshold", "method", "n", "prevalence", "plugin_accuracy", "frac_confident", "acc_confident"]))
-    parts.append("\n# S9. Pre-specified cross-fitted analysis\n\nHMM and BCTS cross-fitted within each cohort (5 subject folds), "
+                     ["stager", "cohort", "threshold", "method", "n", "prevalence", "plugin_accuracy", "frac_confident", "acc_confident",
+                      "plug_acc_confident", "plug_acc_unconfident"]))
+    parts.append("\n# S9. Pre-specified design: cross-fitted analysis\n\nHMM and BCTS cross-fitted within each cohort (5 subject folds), "
                  "conformal calibration on subject-grouped 50/50 splits (500 repetitions) and leave-one-subject-out. Unlike the "
                  "primary analysis, the HMM/BCTS of a test night used labels of other test-half subjects (see S1).\n\n"
                  "**All methods (α = 0.10; mean ± SD over 500 splits)**\n\n")
@@ -131,7 +132,7 @@ def main():
     parts.append(tbl("tableS_all_methods_within", "alpha != 0.1 and method in ['ba_loa','scp_signed','cqr_ffbs','norm_reg_ffbs']",
                      ["stager", "alpha", "cohort", "param", "method", "coverage_mean", "mean_width_mean", "interval_score_mean"]))
     parts.append("\n**Seed variability of the in-domain stager (seeds 0, 1, 2)**\n\n" + tbl("tableS_seed_variability", round_=4))
-    parts.append("\n# S11. Coverage by subgroup (pre-specified analysis, LOSO; subgroups with ≥ 20 nights)\n")
+    parts.append("\n# S11. Coverage by subgroup (pre-specified design, LOSO; subgroups with ≥ 20 nights)\n")
     parts.append(tbl("tableS_subgroup_coverage", "n_nights >= 20"))
     parts.append("\n# S12. Error analysis\n")
     for st in ["yasa", "lgbm_sc_s0"]:
@@ -145,7 +146,7 @@ def main():
     parts.append(tbl("tableS_robustness", "method in ['ba_loa','scp_signed','scp_abs_cal','cqr_ffbs','norm_reg_ffbs']"))
     parts.append("\n# S14. Flagging nights with clinically relevant errors (AUROC, 95% cluster-bootstrap CI; suppressed when <10 events)\n")
     parts.append(tbl("tableS_flagging", None, ["stager", "cohort", "param", "threshold", "signal", "n", "n_events", "auroc", "lo95", "hi95"]))
-    parts.append("\n# S15. Computational cost (median per night, one CPU core) and one-off costs\n")
+    parts.append("\n# S15. Computational cost (median per night, one CPU core) and one-off costs\n\nPer-night timings: 20 nights per cohort, original timing run. One-off costs were measured in a separate run from the stored SC probabilities (`code/experiments/e10_oneoff.py`); the \"7 × 24 h recording\" is synthetic (one night's probabilities repeated to 20,160 epochs) and memory is the peak traced by `tracemalloc`.\n")
     parts.append(tbl("tableS_efficiency", round_=4))
     parts.append("\n" + tbl("tableS_efficiency_oneoff", round_=3))
     parts.append("\n# S16. Datasets and data-leakage audit\n")

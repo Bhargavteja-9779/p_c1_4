@@ -1,4 +1,4 @@
-"""E13 (review cycle 1): pre-registered sensitivity analyses that were not reported in the first draft.
+"""E13 (added after internal review): pre-specified sensitivity analyses that were not reported in the first draft.
 
 (a) Number of posterior samples M in {100, 300, 1000}: the proposed interval recomputed with FFBS mean/SD
     estimated from the first 100 / 300 / all 1000 draws (stored in the E03 summaries).

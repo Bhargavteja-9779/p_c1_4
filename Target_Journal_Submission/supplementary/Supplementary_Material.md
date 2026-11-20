@@ -11,7 +11,7 @@ All tables were generated automatically from the result files of the analysis co
 ## Pre-specified study protocol (written 2026-11-15, BEFORE any interval/coverage result was computed)
 
 Only base-stager accuracies (E01, E02) had been inspected when this protocol was fixed. Any later
-deviation is logged in CHANGELOG.md with its reason.
+deviation is listed, with its reason, in the deviations section that follows (Supplementary S1).
 
 ## Working title
 Distribution-free per-night prediction intervals for automatically scored polysomnography parameters:
@@ -82,7 +82,7 @@ absolute residual), for any base stager.
 
 ## Deviations from the protocol and additions
 
-The study protocol (above) is held in the study repository together with its version history; it was not registered in an external registry. Changes to the analysis after the protocol was fixed are listed here in the order in which they were made, with the reason for each. Unless stated otherwise the proposed method itself was not changed.
+The study protocol (above) is held in the study repository together with its version history; it was not registered in an external registry. The repository history cannot date it independently: its first commit also contains the first interval outputs, so the statement that it preceded them rests on the authors' records. Changes to the analysis after the protocol was fixed are listed here in the order in which they were made, with the reason for each. Unless stated otherwise the proposed method itself was not changed.
 
 **Before any interval result**
 
@@ -98,11 +98,11 @@ The study protocol (above) is held in the study repository together with its ver
 
 **Primary analysis changed after an internal critical review of the first manuscript draft**
 
-7. *End-to-end protocol as the primary within-cohort analysis (deviation from the protocol).* In the pre-specified design the HMM and recalibration components were cross-fitted over about 80 % of each cohort, including labels of subjects in the test half, whereas the comparators used only the 50 % calibration half (unequal use of labelled data). In the end-to-end protocol every label-dependent component (recalibration, prior, transitions, τ, conformal quantile) is fitted on the calibration half of 50 subject-grouped 50/50 splits only, with calibration scores cross-fitted inside the calibration half. The pre-specified analysis is retained in Supplementary S9 and leads to the same qualitative conclusions.
-8. *Validity guarantee.* Because calibration scores are cross-fitted while test nights use the model fitted on all calibration nights, the design corresponds to the cross-validation variant of Barber et al. (2021), for which no distribution-free guarantee is available. Validity is therefore assessed empirically (coverage over 50 splits), not claimed as a finite-sample guarantee.
+7. *End-to-end protocol as the primary within-cohort analysis (deviation from the protocol).* In the pre-specified design the HMM and recalibration components were cross-fitted over about 80 % of each cohort, including labels of subjects in the test half, whereas the comparators used only the 50 % calibration half (unequal use of labelled data). In the end-to-end protocol every label-dependent component (recalibration, prior, transitions, τ, conformal quantile) is fitted on the calibration half of 50 subject-grouped 50/50 splits only, with calibration scores cross-fitted inside the calibration half. The local-deployment analysis was reduced from 500 to 50 repetitions and n_t = 50 was dropped. The pre-specified analysis is retained in Supplementary S9 and leads to the same qualitative conclusions.
+8. *Validity guarantee.* Because calibration scores are cross-fitted while test nights use the model fitted on all calibration nights, the design is the K-fold analogue of the jackknife of Barber et al. (2021), for which that paper gives no distribution-free guarantee (CV+ applies the fold models to test nights and guarantees coverage of at least 1 − 2α minus a small finite-sample term). Validity is therefore assessed empirically (coverage over 50 splits), not claimed as a finite-sample guarantee.
 9. *Leakage fix.* Automatic hypnograms are evaluated on all epochs of the analysis window; the reference "unscored" mask is no longer applied to them because it is label information. Unscored reference epochs are treated as wake. All night summaries and downstream evaluations were re-run.
-10. *Comparators added.* Regression-based limits of agreement (after Bland and Altman 1999, with the automatic value as regressor) and exactly valid distribution-free limits from signed residuals; parametric limits became a t-based prediction interval (previously z-based); the CQR features were extended; scale-only ablations at a fixed centre were added (earlier ablations changed centre and scale together).
-11. *Statistics.* Paired comparisons changed from the Wilcoxon signed-rank test (a test of the pseudo-median) to a two-sided sign-flip permutation test of the mean per-subject difference, so that the reported ratio of means, its subject-bootstrap interval and the p-value come from the same analysis; Holm adjustment within stager × cohort. The comparisons of scaled with constant-width intervals at fixed centres were added after the first results and form a separate Holm family. The AUROC bootstrap used 1000 instead of 2000 resamples.
+10. *Comparators added.* Regression-based limits of agreement (after Bland and Altman 1999, with the automatic value as regressor) and exactly valid distribution-free limits from signed residuals; parametric limits became a t-based prediction interval (previously z-based); the CQR features were extended (plug-in and calibrated plug-in values, posterior mean and SD, mean epoch entropy and maximum probability; linear quantile regression fitted on half of the calibration subjects, with a quantile-crossing guard); scale-only ablations at a fixed centre were added (earlier ablations changed centre and scale together).
+11. *Statistics.* Paired comparisons changed from the Wilcoxon signed-rank test (a test of the pseudo-median) to a two-sided sign-flip permutation test of the mean per-subject difference, so that the reported ratio of means, its subject-bootstrap interval and the p-value come from the same analysis; Holm adjustment within stager × cohort; the Wilcoxon p-values are kept as a secondary column and leave-one-subject-out coverage intervals are not used for claims. The comparisons of scaled with constant-width intervals at fixed centres were added after the first results and form a separate Holm family. The AUROC bootstrap used 1000 instead of 2000 resamples.
 12. *Success criteria.* The protocol's criterion for adaptivity was joint: the proposed method counts as better than constant-width intervals (Bland–Altman and split-conformal absolute-residual limits) only if its interval score is lower (Holm-adjusted p < 0.05) and its width–error Spearman correlation is positive with a confidence interval excluding zero. The manuscript reports the two conditions separately and jointly, including the fixed-centre comparators added after the first results.
 13. *Items of the protocol run late.* The Spearman criterion, the number of posterior samples M and the calibration-set size (E13) were run after the first draft. The 50 Hz line-noise corruption was not run, because YASA's band-pass filtering removes it before feature extraction, so the test would not exercise the method.
 14. *New sensitivity analyses.* Montage sensitivity (YASA with F4-M1 on HMC; source-only SC→HMC); clinical decision thresholds (TST < 360 min, SOL > 30 min, WASO > 30 min, REM latency ≤ 15 min; fixed before the analysis was run) and an easier/harder-night stratification; a label-free flag based on the difference between raw and recalibrated plug-in estimates; one-off computational costs and peak memory for a 7 × 24 h recording (measured from the stored predictions by a separate script; the per-night timings come from the original timing run); subgroups require at least 20 distinct nights; non-finite conformal scores are treated as +∞.
@@ -4777,158 +4777,158 @@ Per-subject mean interval score (averaged over the splits in which the subject w
 
 # S8. Clinical decision thresholds
 
-**A night's decision is 'confident' when its 90% interval lies entirely on one side of the threshold; accuracy of confident decisions against the manual reference; plug-in accuracy = agreement of the uncorrected automatic value with the reference (honest protocol)**
+**A night's decision is 'confident' when its 90% interval lies entirely on one side of the threshold; accuracy of confident decisions against the manual reference; plug-in accuracy = agreement of the uncorrected automatic value with the reference, over all nights; plug_acc_confident / plug_acc_unconfident = the same on the nights the method decided / left undecided (honest protocol)**
 
 
-| stager     | cohort   | threshold   | method        |    n |   prevalence |   plugin_accuracy |   frac_confident |   acc_confident |
-|:-----------|:---------|:------------|:--------------|-----:|-------------:|------------------:|-----------------:|----------------:|
-| yasa       | HMC      | TST < 360   | ba_loa        | 3750 |        0.406 |             0.848 |            0.446 |           0.974 |
-| yasa       | HMC      | TST < 360   | ba_reg        | 3750 |        0.406 |             0.848 |            0.523 |           0.979 |
-| yasa       | HMC      | TST < 360   | cqr_qr        | 3750 |        0.406 |             0.848 |            0.554 |           0.993 |
-| yasa       | HMC      | TST < 360   | norm_ffbs     | 3750 |        0.406 |             0.848 |            0.643 |           0.99  |
-| yasa       | HMC      | TST < 360   | norm_reg_ffbs | 3750 |        0.406 |             0.848 |            0.592 |           0.989 |
-| yasa       | HMC      | TST < 360   | scp_signed    | 3750 |        0.406 |             0.848 |            0.569 |           0.983 |
-| yasa       | SC       | TST < 360   | ba_loa        | 3822 |        0.186 |             0.821 |            0.542 |           0.97  |
-| yasa       | SC       | TST < 360   | ba_reg        | 3822 |        0.186 |             0.821 |            0.615 |           0.975 |
-| yasa       | SC       | TST < 360   | cqr_qr        | 3822 |        0.186 |             0.821 |            0.468 |           0.975 |
-| yasa       | SC       | TST < 360   | norm_ffbs     | 3822 |        0.186 |             0.821 |            0.628 |           0.98  |
-| yasa       | SC       | TST < 360   | norm_reg_ffbs | 3822 |        0.186 |             0.821 |            0.604 |           0.979 |
-| yasa       | SC       | TST < 360   | scp_signed    | 3822 |        0.186 |             0.821 |            0.55  |           0.975 |
-| yasa       | ST       | TST < 360   | ba_loa        | 1100 |        0.049 |             0.895 |            0.84  |           1     |
-| yasa       | ST       | TST < 360   | ba_reg        | 1100 |        0.049 |             0.895 |            0.842 |           1     |
-| yasa       | ST       | TST < 360   | cqr_qr        | 1100 |        0.049 |             0.895 |            0.845 |           1     |
-| yasa       | ST       | TST < 360   | norm_ffbs     | 1100 |        0.049 |             0.895 |            0.919 |           1     |
-| yasa       | ST       | TST < 360   | norm_reg_ffbs | 1100 |        0.049 |             0.895 |            0.926 |           1     |
-| yasa       | ST       | TST < 360   | scp_signed    | 1100 |        0.049 |             0.895 |            0.914 |           1     |
-| yasa       | HMC      | SOL > 30    | ba_loa        | 3750 |        0.086 |             0.874 |            0.681 |           0.973 |
-| yasa       | HMC      | SOL > 30    | ba_reg        | 3750 |        0.086 |             0.874 |            0.798 |           0.982 |
-| yasa       | HMC      | SOL > 30    | cqr_qr        | 3750 |        0.086 |             0.874 |            0.68  |           0.975 |
-| yasa       | HMC      | SOL > 30    | norm_ffbs     | 3750 |        0.086 |             0.874 |            0.786 |           0.972 |
-| yasa       | HMC      | SOL > 30    | norm_reg_ffbs | 3750 |        0.086 |             0.874 |            0.773 |           0.968 |
-| yasa       | HMC      | SOL > 30    | scp_signed    | 3750 |        0.086 |             0.874 |            0.815 |           0.973 |
-| yasa       | SC       | SOL > 30    | ba_loa        | 3822 |        0.154 |             0.893 |            0.454 |           0.947 |
-| yasa       | SC       | SOL > 30    | ba_reg        | 3822 |        0.154 |             0.893 |            0.66  |           0.968 |
-| yasa       | SC       | SOL > 30    | cqr_qr        | 3822 |        0.154 |             0.893 |            0.499 |           0.965 |
-| yasa       | SC       | SOL > 30    | norm_ffbs     | 3822 |        0.154 |             0.893 |            0.618 |           1     |
-| yasa       | SC       | SOL > 30    | norm_reg_ffbs | 3822 |        0.154 |             0.893 |            0.627 |           0.997 |
-| yasa       | SC       | SOL > 30    | scp_signed    | 3822 |        0.154 |             0.893 |            0.604 |           0.949 |
-| yasa       | ST       | SOL > 30    | ba_loa        | 1100 |        0.067 |             0.975 |            0.953 |           1     |
-| yasa       | ST       | SOL > 30    | ba_reg        | 1100 |        0.067 |             0.975 |            0.956 |           1     |
-| yasa       | ST       | SOL > 30    | cqr_qr        | 1100 |        0.067 |             0.975 |            0.695 |           0.993 |
-| yasa       | ST       | SOL > 30    | norm_ffbs     | 1100 |        0.067 |             0.975 |            0.887 |           0.983 |
-| yasa       | ST       | SOL > 30    | norm_reg_ffbs | 1100 |        0.067 |             0.975 |            0.908 |           0.972 |
-| yasa       | ST       | SOL > 30    | scp_signed    | 1100 |        0.067 |             0.975 |            0.958 |           1     |
-| yasa       | HMC      | WASO > 30   | ba_loa        | 3750 |        0.623 |             0.686 |            0.201 |           0.975 |
-| yasa       | HMC      | WASO > 30   | ba_reg        | 3750 |        0.623 |             0.686 |            0.15  |           0.972 |
-| yasa       | HMC      | WASO > 30   | cqr_qr        | 3750 |        0.623 |             0.686 |            0.184 |           0.971 |
-| yasa       | HMC      | WASO > 30   | norm_ffbs     | 3750 |        0.623 |             0.686 |            0.388 |           0.971 |
-| yasa       | HMC      | WASO > 30   | norm_reg_ffbs | 3750 |        0.623 |             0.686 |            0.346 |           0.971 |
-| yasa       | HMC      | WASO > 30   | scp_signed    | 3750 |        0.623 |             0.686 |            0.169 |           0.976 |
-| yasa       | SC       | WASO > 30   | ba_loa        | 3822 |        0.638 |             0.708 |            0.204 |           0.892 |
-| yasa       | SC       | WASO > 30   | ba_reg        | 3822 |        0.638 |             0.708 |            0.066 |           0.854 |
-| yasa       | SC       | WASO > 30   | cqr_qr        | 3822 |        0.638 |             0.708 |            0.148 |           0.869 |
-| yasa       | SC       | WASO > 30   | norm_ffbs     | 3822 |        0.638 |             0.708 |            0.254 |           0.916 |
-| yasa       | SC       | WASO > 30   | norm_reg_ffbs | 3822 |        0.638 |             0.708 |            0.242 |           0.871 |
-| yasa       | SC       | WASO > 30   | scp_signed    | 3822 |        0.638 |             0.708 |            0.125 |           0.878 |
-| yasa       | ST       | WASO > 30   | ba_loa        | 1100 |        0.385 |             0.791 |            0.405 |           0.991 |
-| yasa       | ST       | WASO > 30   | ba_reg        | 1100 |        0.385 |             0.791 |            0.531 |           0.998 |
-| yasa       | ST       | WASO > 30   | cqr_qr        | 1100 |        0.385 |             0.791 |            0.166 |           0.956 |
-| yasa       | ST       | WASO > 30   | norm_ffbs     | 1100 |        0.385 |             0.791 |            0.309 |           0.941 |
-| yasa       | ST       | WASO > 30   | norm_reg_ffbs | 1100 |        0.385 |             0.791 |            0.268 |           0.912 |
-| yasa       | ST       | WASO > 30   | scp_signed    | 1100 |        0.385 |             0.791 |            0.548 |           1     |
-| yasa       | HMC      | REML <= 15  | ba_loa        | 3725 |        0.035 |             0.959 |            0.332 |           0.979 |
-| yasa       | HMC      | REML <= 15  | ba_reg        | 3725 |        0.035 |             0.959 |            0.61  |           0.987 |
-| yasa       | HMC      | REML <= 15  | cqr_qr        | 3725 |        0.035 |             0.959 |            0.318 |           0.987 |
-| yasa       | HMC      | REML <= 15  | norm_ffbs     | 3725 |        0.035 |             0.959 |            0.286 |           1     |
-| yasa       | HMC      | REML <= 15  | norm_reg_ffbs | 3725 |        0.035 |             0.959 |            0.147 |           1     |
-| yasa       | HMC      | REML <= 15  | scp_signed    | 3725 |        0.035 |             0.959 |            0.343 |           0.981 |
-| yasa       | SC       | REML <= 15  | ba_loa        | 3822 |        0.022 |             0.961 |            0.4   |           1     |
-| yasa       | SC       | REML <= 15  | ba_reg        | 3822 |        0.022 |             0.961 |            0.936 |           0.992 |
-| yasa       | SC       | REML <= 15  | cqr_qr        | 3822 |        0.022 |             0.961 |            0.491 |           0.991 |
-| yasa       | SC       | REML <= 15  | norm_ffbs     | 3822 |        0.022 |             0.961 |            0.905 |           0.995 |
-| yasa       | SC       | REML <= 15  | norm_reg_ffbs | 3822 |        0.022 |             0.961 |            0.848 |           0.993 |
-| yasa       | SC       | REML <= 15  | scp_signed    | 3822 |        0.022 |             0.961 |            0.305 |           1     |
-| yasa       | ST       | REML <= 15  | ba_loa        | 1100 |        0     |             1     |            0.562 |           1     |
-| yasa       | ST       | REML <= 15  | ba_reg        | 1100 |        0     |             1     |            0.995 |           1     |
-| yasa       | ST       | REML <= 15  | cqr_qr        | 1100 |        0     |             1     |            0.301 |           1     |
-| yasa       | ST       | REML <= 15  | norm_ffbs     | 1100 |        0     |             1     |            0.729 |           1     |
-| yasa       | ST       | REML <= 15  | norm_reg_ffbs | 1100 |        0     |             1     |            0.735 |           1     |
-| yasa       | ST       | REML <= 15  | scp_signed    | 1100 |        0     |             1     |            0.375 |           1     |
-| lgbm_sc_s0 | HMC      | TST < 360   | ba_loa        | 3750 |        0.406 |             0.794 |            0.288 |           0.99  |
-| lgbm_sc_s0 | HMC      | TST < 360   | ba_reg        | 3750 |        0.406 |             0.794 |            0.352 |           0.993 |
-| lgbm_sc_s0 | HMC      | TST < 360   | cqr_qr        | 3750 |        0.406 |             0.794 |            0.447 |           0.992 |
-| lgbm_sc_s0 | HMC      | TST < 360   | norm_ffbs     | 3750 |        0.406 |             0.794 |            0.461 |           0.998 |
-| lgbm_sc_s0 | HMC      | TST < 360   | norm_reg_ffbs | 3750 |        0.406 |             0.794 |            0.419 |           0.999 |
-| lgbm_sc_s0 | HMC      | TST < 360   | scp_signed    | 3750 |        0.406 |             0.794 |            0.214 |           0.99  |
-| lgbm_sc_s0 | SC       | TST < 360   | ba_loa        | 3822 |        0.186 |             0.91  |            0.597 |           0.98  |
-| lgbm_sc_s0 | SC       | TST < 360   | ba_reg        | 3822 |        0.186 |             0.91  |            0.668 |           0.973 |
-| lgbm_sc_s0 | SC       | TST < 360   | cqr_qr        | 3822 |        0.186 |             0.91  |            0.514 |           0.984 |
-| lgbm_sc_s0 | SC       | TST < 360   | norm_ffbs     | 3822 |        0.186 |             0.91  |            0.683 |           0.992 |
-| lgbm_sc_s0 | SC       | TST < 360   | norm_reg_ffbs | 3822 |        0.186 |             0.91  |            0.672 |           0.986 |
-| lgbm_sc_s0 | SC       | TST < 360   | scp_signed    | 3822 |        0.186 |             0.91  |            0.471 |           0.984 |
-| lgbm_sc_s0 | ST       | TST < 360   | ba_loa        | 1100 |        0.049 |             0.983 |            0.915 |           1     |
-| lgbm_sc_s0 | ST       | TST < 360   | ba_reg        | 1100 |        0.049 |             0.983 |            0.903 |           1     |
-| lgbm_sc_s0 | ST       | TST < 360   | cqr_qr        | 1100 |        0.049 |             0.983 |            0.778 |           0.994 |
-| lgbm_sc_s0 | ST       | TST < 360   | norm_ffbs     | 1100 |        0.049 |             0.983 |            0.913 |           1     |
-| lgbm_sc_s0 | ST       | TST < 360   | norm_reg_ffbs | 1100 |        0.049 |             0.983 |            0.914 |           1     |
-| lgbm_sc_s0 | ST       | TST < 360   | scp_signed    | 1100 |        0.049 |             0.983 |            0.901 |           1     |
-| lgbm_sc_s0 | HMC      | SOL > 30    | ba_loa        | 3750 |        0.086 |             0.918 |            0.452 |           0.952 |
-| lgbm_sc_s0 | HMC      | SOL > 30    | ba_reg        | 3750 |        0.086 |             0.918 |            0.758 |           0.972 |
-| lgbm_sc_s0 | HMC      | SOL > 30    | cqr_qr        | 3750 |        0.086 |             0.918 |            0.406 |           0.955 |
-| lgbm_sc_s0 | HMC      | SOL > 30    | norm_ffbs     | 3750 |        0.086 |             0.918 |            0.742 |           0.964 |
-| lgbm_sc_s0 | HMC      | SOL > 30    | norm_reg_ffbs | 3750 |        0.086 |             0.918 |            0.65  |           0.962 |
-| lgbm_sc_s0 | HMC      | SOL > 30    | scp_signed    | 3750 |        0.086 |             0.918 |            0.608 |           0.946 |
-| lgbm_sc_s0 | SC       | SOL > 30    | ba_loa        | 3822 |        0.154 |             0.9   |            0.345 |           0.972 |
-| lgbm_sc_s0 | SC       | SOL > 30    | ba_reg        | 3822 |        0.154 |             0.9   |            0.683 |           0.956 |
-| lgbm_sc_s0 | SC       | SOL > 30    | cqr_qr        | 3822 |        0.154 |             0.9   |            0.622 |           0.988 |
-| lgbm_sc_s0 | SC       | SOL > 30    | norm_ffbs     | 3822 |        0.154 |             0.9   |            0.68  |           0.99  |
-| lgbm_sc_s0 | SC       | SOL > 30    | norm_reg_ffbs | 3822 |        0.154 |             0.9   |            0.693 |           0.989 |
-| lgbm_sc_s0 | SC       | SOL > 30    | scp_signed    | 3822 |        0.154 |             0.9   |            0.391 |           0.955 |
-| lgbm_sc_s0 | ST       | SOL > 30    | ba_loa        | 1100 |        0.067 |             0.976 |            0.655 |           0.964 |
-| lgbm_sc_s0 | ST       | SOL > 30    | ba_reg        | 1100 |        0.067 |             0.976 |            0.918 |           0.963 |
-| lgbm_sc_s0 | ST       | SOL > 30    | cqr_qr        | 1100 |        0.067 |             0.976 |            0.464 |           0.969 |
-| lgbm_sc_s0 | ST       | SOL > 30    | norm_ffbs     | 1100 |        0.067 |             0.976 |            0.826 |           0.971 |
-| lgbm_sc_s0 | ST       | SOL > 30    | norm_reg_ffbs | 1100 |        0.067 |             0.976 |            0.827 |           0.969 |
-| lgbm_sc_s0 | ST       | SOL > 30    | scp_signed    | 1100 |        0.067 |             0.976 |            0.493 |           0.952 |
-| lgbm_sc_s0 | HMC      | WASO > 30   | ba_loa        | 3750 |        0.623 |             0.658 |            0.165 |           0.971 |
-| lgbm_sc_s0 | HMC      | WASO > 30   | ba_reg        | 3750 |        0.623 |             0.658 |            0.081 |           0.987 |
-| lgbm_sc_s0 | HMC      | WASO > 30   | cqr_qr        | 3750 |        0.623 |             0.658 |            0.255 |           0.978 |
-| lgbm_sc_s0 | HMC      | WASO > 30   | norm_ffbs     | 3750 |        0.623 |             0.658 |            0.376 |           0.986 |
-| lgbm_sc_s0 | HMC      | WASO > 30   | norm_reg_ffbs | 3750 |        0.623 |             0.658 |            0.311 |           0.994 |
-| lgbm_sc_s0 | HMC      | WASO > 30   | scp_signed    | 3750 |        0.623 |             0.658 |            0.155 |           0.971 |
-| lgbm_sc_s0 | SC       | WASO > 30   | ba_loa        | 3822 |        0.638 |             0.845 |            0.22  |           0.926 |
-| lgbm_sc_s0 | SC       | WASO > 30   | ba_reg        | 3822 |        0.638 |             0.845 |            0.115 |           0.898 |
-| lgbm_sc_s0 | SC       | WASO > 30   | cqr_qr        | 3822 |        0.638 |             0.845 |            0.241 |           0.924 |
-| lgbm_sc_s0 | SC       | WASO > 30   | norm_ffbs     | 3822 |        0.638 |             0.845 |            0.344 |           0.951 |
-| lgbm_sc_s0 | SC       | WASO > 30   | norm_reg_ffbs | 3822 |        0.638 |             0.845 |            0.325 |           0.924 |
-| lgbm_sc_s0 | SC       | WASO > 30   | scp_signed    | 3822 |        0.638 |             0.845 |            0.185 |           0.933 |
-| lgbm_sc_s0 | ST       | WASO > 30   | ba_loa        | 1100 |        0.385 |             0.755 |            0.168 |           0.903 |
-| lgbm_sc_s0 | ST       | WASO > 30   | ba_reg        | 1100 |        0.385 |             0.755 |            0.226 |           0.9   |
-| lgbm_sc_s0 | ST       | WASO > 30   | cqr_qr        | 1100 |        0.385 |             0.755 |            0.139 |           0.908 |
-| lgbm_sc_s0 | ST       | WASO > 30   | norm_ffbs     | 1100 |        0.385 |             0.755 |            0.276 |           0.944 |
-| lgbm_sc_s0 | ST       | WASO > 30   | norm_reg_ffbs | 1100 |        0.385 |             0.755 |            0.217 |           0.9   |
-| lgbm_sc_s0 | ST       | WASO > 30   | scp_signed    | 1100 |        0.385 |             0.755 |            0.142 |           0.955 |
-| lgbm_sc_s0 | HMC      | REML <= 15  | ba_loa        | 3725 |        0.035 |             0.915 |            0.345 |           1     |
-| lgbm_sc_s0 | HMC      | REML <= 15  | ba_reg        | 3725 |        0.035 |             0.915 |            0.521 |           1     |
-| lgbm_sc_s0 | HMC      | REML <= 15  | cqr_qr        | 3725 |        0.035 |             0.915 |            0.374 |           0.989 |
-| lgbm_sc_s0 | HMC      | REML <= 15  | norm_ffbs     | 3725 |        0.035 |             0.915 |            0.003 |           1     |
-| lgbm_sc_s0 | HMC      | REML <= 15  | norm_reg_ffbs | 3725 |        0.035 |             0.915 |            0.002 |           1     |
-| lgbm_sc_s0 | HMC      | REML <= 15  | scp_signed    | 3725 |        0.035 |             0.915 |            0.343 |           1     |
-| lgbm_sc_s0 | SC       | REML <= 15  | ba_loa        | 3822 |        0.022 |             0.948 |            0.558 |           1     |
-| lgbm_sc_s0 | SC       | REML <= 15  | ba_reg        | 3822 |        0.022 |             0.948 |            0.774 |           1     |
-| lgbm_sc_s0 | SC       | REML <= 15  | cqr_qr        | 3822 |        0.022 |             0.948 |            0.64  |           0.993 |
-| lgbm_sc_s0 | SC       | REML <= 15  | norm_ffbs     | 3822 |        0.022 |             0.948 |            0.925 |           1     |
-| lgbm_sc_s0 | SC       | REML <= 15  | norm_reg_ffbs | 3822 |        0.022 |             0.948 |            0.864 |           1     |
-| lgbm_sc_s0 | SC       | REML <= 15  | scp_signed    | 3822 |        0.022 |             0.948 |            0.825 |           1     |
-| lgbm_sc_s0 | ST       | REML <= 15  | ba_loa        | 1100 |        0     |             0.981 |            0.44  |           1     |
-| lgbm_sc_s0 | ST       | REML <= 15  | ba_reg        | 1100 |        0     |             0.981 |            0.999 |           1     |
-| lgbm_sc_s0 | ST       | REML <= 15  | cqr_qr        | 1100 |        0     |             0.981 |            0.403 |           1     |
-| lgbm_sc_s0 | ST       | REML <= 15  | norm_ffbs     | 1100 |        0     |             0.981 |            0.85  |           1     |
-| lgbm_sc_s0 | ST       | REML <= 15  | norm_reg_ffbs | 1100 |        0     |             0.981 |            0.819 |           1     |
-| lgbm_sc_s0 | ST       | REML <= 15  | scp_signed    | 1100 |        0     |             0.981 |            0.326 |           1     |
+| stager     | cohort   | threshold   | method        |    n |   prevalence |   plugin_accuracy |   frac_confident |   acc_confident |   plug_acc_confident |   plug_acc_unconfident |
+|:-----------|:---------|:------------|:--------------|-----:|-------------:|------------------:|-----------------:|----------------:|---------------------:|-----------------------:|
+| yasa       | HMC      | TST < 360   | ba_loa        | 3750 |        0.406 |             0.848 |            0.446 |           0.974 |                0.974 |                  0.747 |
+| yasa       | HMC      | TST < 360   | ba_reg        | 3750 |        0.406 |             0.848 |            0.523 |           0.979 |                0.979 |                  0.704 |
+| yasa       | HMC      | TST < 360   | cqr_qr        | 3750 |        0.406 |             0.848 |            0.554 |           0.993 |                0.983 |                  0.681 |
+| yasa       | HMC      | TST < 360   | norm_ffbs     | 3750 |        0.406 |             0.848 |            0.643 |           0.99  |                0.981 |                  0.608 |
+| yasa       | HMC      | TST < 360   | norm_reg_ffbs | 3750 |        0.406 |             0.848 |            0.592 |           0.989 |                0.983 |                  0.652 |
+| yasa       | HMC      | TST < 360   | scp_signed    | 3750 |        0.406 |             0.848 |            0.569 |           0.983 |                0.972 |                  0.685 |
+| yasa       | SC       | TST < 360   | ba_loa        | 3822 |        0.186 |             0.821 |            0.542 |           0.97  |                0.97  |                  0.644 |
+| yasa       | SC       | TST < 360   | ba_reg        | 3822 |        0.186 |             0.821 |            0.615 |           0.975 |                0.975 |                  0.575 |
+| yasa       | SC       | TST < 360   | cqr_qr        | 3822 |        0.186 |             0.821 |            0.468 |           0.975 |                0.963 |                  0.696 |
+| yasa       | SC       | TST < 360   | norm_ffbs     | 3822 |        0.186 |             0.821 |            0.628 |           0.98  |                0.976 |                  0.56  |
+| yasa       | SC       | TST < 360   | norm_reg_ffbs | 3822 |        0.186 |             0.821 |            0.604 |           0.979 |                0.977 |                  0.584 |
+| yasa       | SC       | TST < 360   | scp_signed    | 3822 |        0.186 |             0.821 |            0.55  |           0.975 |                0.975 |                  0.633 |
+| yasa       | ST       | TST < 360   | ba_loa        | 1100 |        0.049 |             0.895 |            0.84  |           1     |                1     |                  0.341 |
+| yasa       | ST       | TST < 360   | ba_reg        | 1100 |        0.049 |             0.895 |            0.842 |           1     |                0.982 |                  0.431 |
+| yasa       | ST       | TST < 360   | cqr_qr        | 1100 |        0.049 |             0.895 |            0.845 |           1     |                0.949 |                  0.594 |
+| yasa       | ST       | TST < 360   | norm_ffbs     | 1100 |        0.049 |             0.895 |            0.919 |           1     |                0.947 |                  0.303 |
+| yasa       | ST       | TST < 360   | norm_reg_ffbs | 1100 |        0.049 |             0.895 |            0.926 |           1     |                0.939 |                  0.333 |
+| yasa       | ST       | TST < 360   | scp_signed    | 1100 |        0.049 |             0.895 |            0.914 |           1     |                0.952 |                  0.284 |
+| yasa       | HMC      | SOL > 30    | ba_loa        | 3750 |        0.086 |             0.874 |            0.681 |           0.973 |                0.973 |                  0.662 |
+| yasa       | HMC      | SOL > 30    | ba_reg        | 3750 |        0.086 |             0.874 |            0.798 |           0.982 |                0.982 |                  0.449 |
+| yasa       | HMC      | SOL > 30    | cqr_qr        | 3750 |        0.086 |             0.874 |            0.68  |           0.975 |                0.957 |                  0.699 |
+| yasa       | HMC      | SOL > 30    | norm_ffbs     | 3750 |        0.086 |             0.874 |            0.786 |           0.972 |                0.946 |                  0.609 |
+| yasa       | HMC      | SOL > 30    | norm_reg_ffbs | 3750 |        0.086 |             0.874 |            0.773 |           0.968 |                0.945 |                  0.634 |
+| yasa       | HMC      | SOL > 30    | scp_signed    | 3750 |        0.086 |             0.874 |            0.815 |           0.973 |                0.973 |                  0.439 |
+| yasa       | SC       | SOL > 30    | ba_loa        | 3822 |        0.154 |             0.893 |            0.454 |           0.947 |                0.947 |                  0.848 |
+| yasa       | SC       | SOL > 30    | ba_reg        | 3822 |        0.154 |             0.893 |            0.66  |           0.968 |                0.968 |                  0.747 |
+| yasa       | SC       | SOL > 30    | cqr_qr        | 3822 |        0.154 |             0.893 |            0.499 |           0.965 |                0.972 |                  0.814 |
+| yasa       | SC       | SOL > 30    | norm_ffbs     | 3822 |        0.154 |             0.893 |            0.618 |           1     |                1     |                  0.72  |
+| yasa       | SC       | SOL > 30    | norm_reg_ffbs | 3822 |        0.154 |             0.893 |            0.627 |           0.997 |                0.997 |                  0.718 |
+| yasa       | SC       | SOL > 30    | scp_signed    | 3822 |        0.154 |             0.893 |            0.604 |           0.949 |                0.949 |                  0.807 |
+| yasa       | ST       | SOL > 30    | ba_loa        | 1100 |        0.067 |             0.975 |            0.953 |           1     |                1     |                  0.481 |
+| yasa       | ST       | SOL > 30    | ba_reg        | 1100 |        0.067 |             0.975 |            0.956 |           1     |                1     |                  0.438 |
+| yasa       | ST       | SOL > 30    | cqr_qr        | 1100 |        0.067 |             0.975 |            0.695 |           0.993 |                0.999 |                  0.923 |
+| yasa       | ST       | SOL > 30    | norm_ffbs     | 1100 |        0.067 |             0.975 |            0.887 |           0.983 |                0.995 |                  0.823 |
+| yasa       | ST       | SOL > 30    | norm_reg_ffbs | 1100 |        0.067 |             0.975 |            0.908 |           0.972 |                0.989 |                  0.842 |
+| yasa       | ST       | SOL > 30    | scp_signed    | 1100 |        0.067 |             0.975 |            0.958 |           1     |                1     |                  0.413 |
+| yasa       | HMC      | WASO > 30   | ba_loa        | 3750 |        0.623 |             0.686 |            0.201 |           0.975 |                0.975 |                  0.613 |
+| yasa       | HMC      | WASO > 30   | ba_reg        | 3750 |        0.623 |             0.686 |            0.15  |           0.972 |                0.957 |                  0.638 |
+| yasa       | HMC      | WASO > 30   | cqr_qr        | 3750 |        0.623 |             0.686 |            0.184 |           0.971 |                0.943 |                  0.628 |
+| yasa       | HMC      | WASO > 30   | norm_ffbs     | 3750 |        0.623 |             0.686 |            0.388 |           0.971 |                0.949 |                  0.519 |
+| yasa       | HMC      | WASO > 30   | norm_reg_ffbs | 3750 |        0.623 |             0.686 |            0.346 |           0.971 |                0.97  |                  0.535 |
+| yasa       | HMC      | WASO > 30   | scp_signed    | 3750 |        0.623 |             0.686 |            0.169 |           0.976 |                0.976 |                  0.627 |
+| yasa       | SC       | WASO > 30   | ba_loa        | 3822 |        0.638 |             0.708 |            0.204 |           0.892 |                0.892 |                  0.661 |
+| yasa       | SC       | WASO > 30   | ba_reg        | 3822 |        0.638 |             0.708 |            0.066 |           0.854 |                0.854 |                  0.698 |
+| yasa       | SC       | WASO > 30   | cqr_qr        | 3822 |        0.638 |             0.708 |            0.148 |           0.869 |                0.874 |                  0.679 |
+| yasa       | SC       | WASO > 30   | norm_ffbs     | 3822 |        0.638 |             0.708 |            0.254 |           0.916 |                0.922 |                  0.636 |
+| yasa       | SC       | WASO > 30   | norm_reg_ffbs | 3822 |        0.638 |             0.708 |            0.242 |           0.871 |                0.888 |                  0.651 |
+| yasa       | SC       | WASO > 30   | scp_signed    | 3822 |        0.638 |             0.708 |            0.125 |           0.878 |                0.878 |                  0.684 |
+| yasa       | ST       | WASO > 30   | ba_loa        | 1100 |        0.385 |             0.791 |            0.405 |           0.991 |                0.991 |                  0.655 |
+| yasa       | ST       | WASO > 30   | ba_reg        | 1100 |        0.385 |             0.791 |            0.531 |           0.998 |                0.942 |                  0.62  |
+| yasa       | ST       | WASO > 30   | cqr_qr        | 1100 |        0.385 |             0.791 |            0.166 |           0.956 |                0.962 |                  0.757 |
+| yasa       | ST       | WASO > 30   | norm_ffbs     | 1100 |        0.385 |             0.791 |            0.309 |           0.941 |                0.997 |                  0.699 |
+| yasa       | ST       | WASO > 30   | norm_reg_ffbs | 1100 |        0.385 |             0.791 |            0.268 |           0.912 |                1     |                  0.714 |
+| yasa       | ST       | WASO > 30   | scp_signed    | 1100 |        0.385 |             0.791 |            0.548 |           1     |                0.927 |                  0.626 |
+| yasa       | HMC      | REML <= 15  | ba_loa        | 3725 |        0.035 |             0.959 |            0.332 |           0.979 |                0.979 |                  0.949 |
+| yasa       | HMC      | REML <= 15  | ba_reg        | 3725 |        0.035 |             0.959 |            0.61  |           0.987 |                0.987 |                  0.915 |
+| yasa       | HMC      | REML <= 15  | cqr_qr        | 3725 |        0.035 |             0.959 |            0.318 |           0.987 |                0.982 |                  0.948 |
+| yasa       | HMC      | REML <= 15  | norm_ffbs     | 3725 |        0.035 |             0.959 |            0.286 |           1     |                0.999 |                  0.942 |
+| yasa       | HMC      | REML <= 15  | norm_reg_ffbs | 3725 |        0.035 |             0.959 |            0.147 |           1     |                1     |                  0.952 |
+| yasa       | HMC      | REML <= 15  | scp_signed    | 3725 |        0.035 |             0.959 |            0.343 |           0.981 |                0.981 |                  0.947 |
+| yasa       | SC       | REML <= 15  | ba_loa        | 3822 |        0.022 |             0.961 |            0.4   |           1     |                1     |                  0.935 |
+| yasa       | SC       | REML <= 15  | ba_reg        | 3822 |        0.022 |             0.961 |            0.936 |           0.992 |                0.984 |                  0.622 |
+| yasa       | SC       | REML <= 15  | cqr_qr        | 3822 |        0.022 |             0.961 |            0.491 |           0.991 |                0.981 |                  0.941 |
+| yasa       | SC       | REML <= 15  | norm_ffbs     | 3822 |        0.022 |             0.961 |            0.905 |           0.995 |                0.97  |                  0.871 |
+| yasa       | SC       | REML <= 15  | norm_reg_ffbs | 3822 |        0.022 |             0.961 |            0.848 |           0.993 |                0.972 |                  0.9   |
+| yasa       | SC       | REML <= 15  | scp_signed    | 3822 |        0.022 |             0.961 |            0.305 |           1     |                1     |                  0.944 |
+| yasa       | ST       | REML <= 15  | ba_loa        | 1100 |        0     |             1     |            0.562 |           1     |                1     |                  1     |
+| yasa       | ST       | REML <= 15  | ba_reg        | 1100 |        0     |             1     |            0.995 |           1     |                1     |                  1     |
+| yasa       | ST       | REML <= 15  | cqr_qr        | 1100 |        0     |             1     |            0.301 |           1     |                1     |                  1     |
+| yasa       | ST       | REML <= 15  | norm_ffbs     | 1100 |        0     |             1     |            0.729 |           1     |                1     |                  1     |
+| yasa       | ST       | REML <= 15  | norm_reg_ffbs | 1100 |        0     |             1     |            0.735 |           1     |                1     |                  1     |
+| yasa       | ST       | REML <= 15  | scp_signed    | 1100 |        0     |             1     |            0.375 |           1     |                1     |                  1     |
+| lgbm_sc_s0 | HMC      | TST < 360   | ba_loa        | 3750 |        0.406 |             0.794 |            0.288 |           0.99  |                0.99  |                  0.715 |
+| lgbm_sc_s0 | HMC      | TST < 360   | ba_reg        | 3750 |        0.406 |             0.794 |            0.352 |           0.993 |                0.993 |                  0.687 |
+| lgbm_sc_s0 | HMC      | TST < 360   | cqr_qr        | 3750 |        0.406 |             0.794 |            0.447 |           0.992 |                0.958 |                  0.663 |
+| lgbm_sc_s0 | HMC      | TST < 360   | norm_ffbs     | 3750 |        0.406 |             0.794 |            0.461 |           0.998 |                0.962 |                  0.651 |
+| lgbm_sc_s0 | HMC      | TST < 360   | norm_reg_ffbs | 3750 |        0.406 |             0.794 |            0.419 |           0.999 |                0.971 |                  0.667 |
+| lgbm_sc_s0 | HMC      | TST < 360   | scp_signed    | 3750 |        0.406 |             0.794 |            0.214 |           0.99  |                0.99  |                  0.741 |
+| lgbm_sc_s0 | SC       | TST < 360   | ba_loa        | 3822 |        0.186 |             0.91  |            0.597 |           0.98  |                0.98  |                  0.805 |
+| lgbm_sc_s0 | SC       | TST < 360   | ba_reg        | 3822 |        0.186 |             0.91  |            0.668 |           0.973 |                0.973 |                  0.783 |
+| lgbm_sc_s0 | SC       | TST < 360   | cqr_qr        | 3822 |        0.186 |             0.91  |            0.514 |           0.984 |                0.983 |                  0.833 |
+| lgbm_sc_s0 | SC       | TST < 360   | norm_ffbs     | 3822 |        0.186 |             0.91  |            0.683 |           0.992 |                0.99  |                  0.736 |
+| lgbm_sc_s0 | SC       | TST < 360   | norm_reg_ffbs | 3822 |        0.186 |             0.91  |            0.672 |           0.986 |                0.983 |                  0.76  |
+| lgbm_sc_s0 | SC       | TST < 360   | scp_signed    | 3822 |        0.186 |             0.91  |            0.471 |           0.984 |                0.984 |                  0.843 |
+| lgbm_sc_s0 | ST       | TST < 360   | ba_loa        | 1100 |        0.049 |             0.983 |            0.915 |           1     |                1     |                  0.796 |
+| lgbm_sc_s0 | ST       | TST < 360   | ba_reg        | 1100 |        0.049 |             0.983 |            0.903 |           1     |                1     |                  0.822 |
+| lgbm_sc_s0 | ST       | TST < 360   | cqr_qr        | 1100 |        0.049 |             0.983 |            0.778 |           0.994 |                0.995 |                  0.939 |
+| lgbm_sc_s0 | ST       | TST < 360   | norm_ffbs     | 1100 |        0.049 |             0.983 |            0.913 |           1     |                0.998 |                  0.823 |
+| lgbm_sc_s0 | ST       | TST < 360   | norm_reg_ffbs | 1100 |        0.049 |             0.983 |            0.914 |           1     |                0.998 |                  0.821 |
+| lgbm_sc_s0 | ST       | TST < 360   | scp_signed    | 1100 |        0.049 |             0.983 |            0.901 |           1     |                1     |                  0.826 |
+| lgbm_sc_s0 | HMC      | SOL > 30    | ba_loa        | 3750 |        0.086 |             0.918 |            0.452 |           0.952 |                0.952 |                  0.89  |
+| lgbm_sc_s0 | HMC      | SOL > 30    | ba_reg        | 3750 |        0.086 |             0.918 |            0.758 |           0.972 |                0.972 |                  0.751 |
+| lgbm_sc_s0 | HMC      | SOL > 30    | cqr_qr        | 3750 |        0.086 |             0.918 |            0.406 |           0.955 |                0.936 |                  0.906 |
+| lgbm_sc_s0 | HMC      | SOL > 30    | norm_ffbs     | 3750 |        0.086 |             0.918 |            0.742 |           0.964 |                0.964 |                  0.787 |
+| lgbm_sc_s0 | HMC      | SOL > 30    | norm_reg_ffbs | 3750 |        0.086 |             0.918 |            0.65  |           0.962 |                0.96  |                  0.84  |
+| lgbm_sc_s0 | HMC      | SOL > 30    | scp_signed    | 3750 |        0.086 |             0.918 |            0.608 |           0.946 |                0.946 |                  0.874 |
+| lgbm_sc_s0 | SC       | SOL > 30    | ba_loa        | 3822 |        0.154 |             0.9   |            0.345 |           0.972 |                0.972 |                  0.862 |
+| lgbm_sc_s0 | SC       | SOL > 30    | ba_reg        | 3822 |        0.154 |             0.9   |            0.683 |           0.956 |                0.956 |                  0.78  |
+| lgbm_sc_s0 | SC       | SOL > 30    | cqr_qr        | 3822 |        0.154 |             0.9   |            0.622 |           0.988 |                0.982 |                  0.765 |
+| lgbm_sc_s0 | SC       | SOL > 30    | norm_ffbs     | 3822 |        0.154 |             0.9   |            0.68  |           0.99  |                0.99  |                  0.71  |
+| lgbm_sc_s0 | SC       | SOL > 30    | norm_reg_ffbs | 3822 |        0.154 |             0.9   |            0.693 |           0.989 |                0.989 |                  0.699 |
+| lgbm_sc_s0 | SC       | SOL > 30    | scp_signed    | 3822 |        0.154 |             0.9   |            0.391 |           0.955 |                0.955 |                  0.865 |
+| lgbm_sc_s0 | ST       | SOL > 30    | ba_loa        | 1100 |        0.067 |             0.976 |            0.655 |           0.964 |                0.964 |                  1     |
+| lgbm_sc_s0 | ST       | SOL > 30    | ba_reg        | 1100 |        0.067 |             0.976 |            0.918 |           0.963 |                0.974 |                  1     |
+| lgbm_sc_s0 | ST       | SOL > 30    | cqr_qr        | 1100 |        0.067 |             0.976 |            0.464 |           0.969 |                0.975 |                  0.978 |
+| lgbm_sc_s0 | ST       | SOL > 30    | norm_ffbs     | 1100 |        0.067 |             0.976 |            0.826 |           0.971 |                0.981 |                  0.953 |
+| lgbm_sc_s0 | ST       | SOL > 30    | norm_reg_ffbs | 1100 |        0.067 |             0.976 |            0.827 |           0.969 |                0.982 |                  0.947 |
+| lgbm_sc_s0 | ST       | SOL > 30    | scp_signed    | 1100 |        0.067 |             0.976 |            0.493 |           0.952 |                0.952 |                  1     |
+| lgbm_sc_s0 | HMC      | WASO > 30   | ba_loa        | 3750 |        0.623 |             0.658 |            0.165 |           0.971 |                0.971 |                  0.597 |
+| lgbm_sc_s0 | HMC      | WASO > 30   | ba_reg        | 3750 |        0.623 |             0.658 |            0.081 |           0.987 |                0.823 |                  0.644 |
+| lgbm_sc_s0 | HMC      | WASO > 30   | cqr_qr        | 3750 |        0.623 |             0.658 |            0.255 |           0.978 |                0.918 |                  0.57  |
+| lgbm_sc_s0 | HMC      | WASO > 30   | norm_ffbs     | 3750 |        0.623 |             0.658 |            0.376 |           0.986 |                0.967 |                  0.472 |
+| lgbm_sc_s0 | HMC      | WASO > 30   | norm_reg_ffbs | 3750 |        0.623 |             0.658 |            0.311 |           0.994 |                0.994 |                  0.507 |
+| lgbm_sc_s0 | HMC      | WASO > 30   | scp_signed    | 3750 |        0.623 |             0.658 |            0.155 |           0.971 |                0.971 |                  0.601 |
+| lgbm_sc_s0 | SC       | WASO > 30   | ba_loa        | 3822 |        0.638 |             0.845 |            0.22  |           0.926 |                0.926 |                  0.822 |
+| lgbm_sc_s0 | SC       | WASO > 30   | ba_reg        | 3822 |        0.638 |             0.845 |            0.115 |           0.898 |                0.898 |                  0.838 |
+| lgbm_sc_s0 | SC       | WASO > 30   | cqr_qr        | 3822 |        0.638 |             0.845 |            0.241 |           0.924 |                0.932 |                  0.817 |
+| lgbm_sc_s0 | SC       | WASO > 30   | norm_ffbs     | 3822 |        0.638 |             0.845 |            0.344 |           0.951 |                0.957 |                  0.786 |
+| lgbm_sc_s0 | SC       | WASO > 30   | norm_reg_ffbs | 3822 |        0.638 |             0.845 |            0.325 |           0.924 |                0.94  |                  0.798 |
+| lgbm_sc_s0 | SC       | WASO > 30   | scp_signed    | 3822 |        0.638 |             0.845 |            0.185 |           0.933 |                0.933 |                  0.824 |
+| lgbm_sc_s0 | ST       | WASO > 30   | ba_loa        | 1100 |        0.385 |             0.755 |            0.168 |           0.903 |                0.903 |                  0.725 |
+| lgbm_sc_s0 | ST       | WASO > 30   | ba_reg        | 1100 |        0.385 |             0.755 |            0.226 |           0.9   |                0.904 |                  0.711 |
+| lgbm_sc_s0 | ST       | WASO > 30   | cqr_qr        | 1100 |        0.385 |             0.755 |            0.139 |           0.908 |                0.856 |                  0.738 |
+| lgbm_sc_s0 | ST       | WASO > 30   | norm_ffbs     | 1100 |        0.385 |             0.755 |            0.276 |           0.944 |                0.997 |                  0.662 |
+| lgbm_sc_s0 | ST       | WASO > 30   | norm_reg_ffbs | 1100 |        0.385 |             0.755 |            0.217 |           0.9   |                1     |                  0.686 |
+| lgbm_sc_s0 | ST       | WASO > 30   | scp_signed    | 1100 |        0.385 |             0.755 |            0.142 |           0.955 |                0.955 |                  0.721 |
+| lgbm_sc_s0 | HMC      | REML <= 15  | ba_loa        | 3725 |        0.035 |             0.915 |            0.345 |           1     |                1     |                  0.87  |
+| lgbm_sc_s0 | HMC      | REML <= 15  | ba_reg        | 3725 |        0.035 |             0.915 |            0.521 |           1     |                1     |                  0.822 |
+| lgbm_sc_s0 | HMC      | REML <= 15  | cqr_qr        | 3725 |        0.035 |             0.915 |            0.374 |           0.989 |                0.977 |                  0.878 |
+| lgbm_sc_s0 | HMC      | REML <= 15  | norm_ffbs     | 3725 |        0.035 |             0.915 |            0.003 |           1     |                1     |                  0.915 |
+| lgbm_sc_s0 | HMC      | REML <= 15  | norm_reg_ffbs | 3725 |        0.035 |             0.915 |            0.002 |           1     |                1     |                  0.915 |
+| lgbm_sc_s0 | HMC      | REML <= 15  | scp_signed    | 3725 |        0.035 |             0.915 |            0.343 |           1     |                1     |                  0.871 |
+| lgbm_sc_s0 | SC       | REML <= 15  | ba_loa        | 3822 |        0.022 |             0.948 |            0.558 |           1     |                1     |                  0.883 |
+| lgbm_sc_s0 | SC       | REML <= 15  | ba_reg        | 3822 |        0.022 |             0.948 |            0.774 |           1     |                1     |                  0.771 |
+| lgbm_sc_s0 | SC       | REML <= 15  | cqr_qr        | 3822 |        0.022 |             0.948 |            0.64  |           0.993 |                0.985 |                  0.883 |
+| lgbm_sc_s0 | SC       | REML <= 15  | norm_ffbs     | 3822 |        0.022 |             0.948 |            0.925 |           1     |                0.958 |                  0.832 |
+| lgbm_sc_s0 | SC       | REML <= 15  | norm_reg_ffbs | 3822 |        0.022 |             0.948 |            0.864 |           1     |                0.96  |                  0.873 |
+| lgbm_sc_s0 | SC       | REML <= 15  | scp_signed    | 3822 |        0.022 |             0.948 |            0.825 |           1     |                1     |                  0.703 |
+| lgbm_sc_s0 | ST       | REML <= 15  | ba_loa        | 1100 |        0     |             0.981 |            0.44  |           1     |                1     |                  0.966 |
+| lgbm_sc_s0 | ST       | REML <= 15  | ba_reg        | 1100 |        0     |             0.981 |            0.999 |           1     |                0.981 |                  1     |
+| lgbm_sc_s0 | ST       | REML <= 15  | cqr_qr        | 1100 |        0     |             0.981 |            0.403 |           1     |                0.998 |                  0.97  |
+| lgbm_sc_s0 | ST       | REML <= 15  | norm_ffbs     | 1100 |        0     |             0.981 |            0.85  |           1     |                0.996 |                  0.897 |
+| lgbm_sc_s0 | ST       | REML <= 15  | norm_reg_ffbs | 1100 |        0     |             0.981 |            0.819 |           1     |                0.988 |                  0.95  |
+| lgbm_sc_s0 | ST       | REML <= 15  | scp_signed    | 1100 |        0     |             0.981 |            0.326 |           1     |                1     |                  0.972 |
 
 
-# S9. Pre-specified cross-fitted analysis
+# S9. Pre-specified design: cross-fitted analysis
 
 HMM and BCTS cross-fitted within each cohort (5 subject folds), conformal calibration on subject-grouped 50/50 splits (500 repetitions) and leave-one-subject-out. Unlike the primary analysis, the HMM/BCTS of a test night used labels of other test-half subjects (see S1).
 
@@ -8439,7 +8439,7 @@ HMM and BCTS cross-fitted within each cohort (5 subject folds), conformal calibr
 | ST       | WASO    | scp_abs_bc    |     0.8966 |      0.0133 |      50.1736 |     0.0195 |
 
 
-# S11. Coverage by subgroup (pre-specified analysis, LOSO; subgroups with ≥ 20 nights)
+# S11. Coverage by subgroup (pre-specified design, LOSO; subgroups with ≥ 20 nights)
 
 | stager     | cohort   | method        | level      |   coverage |   count |   n_nights | factor       | param   |
 |:-----------|:---------|:--------------|:-----------|-----------:|--------:|-----------:|:-------------|:--------|
@@ -10788,6 +10788,8 @@ HMM and BCTS cross-fitted within each cohort (5 subject folds), conformal calibr
 
 # S15. Computational cost (median per night, one CPU core) and one-off costs
 
+Per-night timings: 20 nights per cohort, original timing run. One-off costs were measured in a separate run from the stored SC probabilities (`code/experiments/e10_oneoff.py`); the "7 × 24 h recording" is synthetic (one night's probabilities repeated to 20,160 epochs) and memory is the peak traced by `tracemalloc`.
+
 |    M |   n_epochs |   t_stager_s |   t_ffbs_s |   t_params_s |   samples_MB |
 |-----:|-----------:|-------------:|-----------:|-------------:|-------------:|
 |  100 |     1028.5 |       1.4222 |     0.0019 |       0.001  |       0.1028 |
@@ -10829,7 +10831,7 @@ HMM and BCTS cross-fitted within each cohort (5 subject folds), conformal calibr
 | Leakage through HMM parameters | Transition matrix, prior, calibration and tau use labels | Fitted only on labelled nights that exclude the evaluated night: within-cohort 5-fold cross-fitting by subject; cross-cohort uses SC only. |
 | Leakage into the base stagers | S2 trained on SC | SC predictions are out-of-fold (subject-grouped 5-fold); S1 (YASA) never saw any of the three cohorts. |
 | Pre-processing leakage | YASA features normalise within each night | Per-night normalisation uses only that night's signal (unsupervised, test-time permissible); no cross-night statistics. |
-| Test contamination via hyper-parameter tuning | Possible if tuned on evaluation nights | Stager hyper-parameters fixed a priori; the only fitted HMM quantity (tau) is fitted on source/training-fold nights; conformal methods and all thresholds pre-specified (PROTOCOL.md). |
+| Test contamination via hyper-parameter tuning | Possible if tuned on evaluation nights | Stager hyper-parameters fixed a priori; the only fitted HMM quantity (tau) is fitted on source/training-fold nights; the primary method, α and the error thresholds of the protocol were pre-specified (PROTOCOL.md); comparators and decision thresholds were added later (Supplementary S1). |
 | Duplicate / near-duplicate nights | None expected; each PSG file is a distinct night | File-level uniqueness checked via PhysioNet SHA256 manifests. |
 | Label leakage via unscored epochs | "?"/movement epochs | Marked −1 and excluded identically from reference and automatic parameters. |
 | Temporal leakage | Not applicable (no longitudinal prediction) | – |

@@ -24,7 +24,7 @@ The datasets analysed are publicly available from PhysioNet: Sleep-EDF Expanded 
 
 ## Code availability
 
-All code needed to reproduce every result, table and figure (data download with checksum verification, preprocessing, both stagers, posterior sampling, conformal calibration, statistics and figure generation, with unit tests and a one-command pipeline) is provided as supplementary material and will be deposited in a public repository with a persistent identifier upon acceptance.
+All code needed to regenerate the results, tables and figures (data download with checksum verification, preprocessing, both stagers, posterior sampling, conformal calibration, statistics and figure generation, with unit tests and stepwise scripts) is provided as supplementary material and will be deposited in a public repository with a persistent identifier upon acceptance.
 
 ## Acknowledgements
 

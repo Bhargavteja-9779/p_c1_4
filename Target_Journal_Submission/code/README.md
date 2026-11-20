@@ -72,8 +72,8 @@ python -m pytest -q tests
 
 ## Design safeguards
 Subject-grouped splitting everywhere; label-free analysis windows; HMM parameters never fitted on the
-evaluated night; pre-specified protocol (`../supplementary/PROTOCOL.md`) and change log
-(`../../CHANGELOG.md`).
+evaluated night; pre-specified protocol (`../supplementary/PROTOCOL.md`) and list of deviations
+(`../supplementary/DEVIATIONS.md`).
 
 ## Licence
 Code: MIT. YASA pretrained classifiers are distributed with the `yasa` package (BSD-3-Clause).

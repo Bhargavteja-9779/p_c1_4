@@ -1,7 +1,7 @@
 """Reproduce the complete study.
 
   python run_all.py --mode quick   # pipeline check: few nights, few splits (~10 min on 4 CPUs)
-  python run_all.py --mode full    # complete pre-registered analysis (~6-8 h on 4 CPUs, no GPU needed)
+  python run_all.py --mode full    # complete pre-specified analysis (~6-8 h on 4 CPUs, no GPU needed)
 
 Steps (each is an independent script in experiments/ and can be re-run on its own):
   0  data cache   scripts/build_sleep_cache.py   (requires raw data; scripts/download_data.sh)
@@ -16,7 +16,7 @@ Steps (each is an independent script in experiments/ and can be re-run on its ow
   9  E11          conditional coverage by difficulty; exploratory Mondrian calibration
   10 E12          honest end-to-end protocol (PRIMARY analysis after review: all components fitted on
                   calibration nights only; within-cohort splits and few-night local deployment)
-  11 E13          pre-registered sensitivity analyses (Spearman criterion, M, calibration size)
+  11 E13          pre-specified sensitivity analyses (Spearman criterion, M, calibration size)
   12 E14          montage sensitivity (YASA re-run on HMC with F4-M1; full mode only)
   13 E15          statistics of the honest protocol (paired tests, difficulty, decision thresholds)
   14 E10          computational cost (run on an otherwise idle machine)
