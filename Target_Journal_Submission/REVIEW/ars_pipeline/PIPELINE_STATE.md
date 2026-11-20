@@ -36,8 +36,8 @@ Repo commit at entry: `af6aab7`.
 
 | Stage | Status | Started | Finished | Deliverables | Decision |
 |---|---|---|---|---|---|
-| 2.5 INTEGRITY (Mode 1) | running | 2026-11-20 | | `stage2_5_integrity/` | |
-| 3 REVIEW | pending | | | | |
+| 2.5 INTEGRITY (Mode 1) | FAIL — awaiting author at MANDATORY checkpoint | 2026-11-20 | 2026-11-20 | `stage2_5_integrity/INTEGRITY_REPORT_stage2_5.md` (+ 2 sub-reports) | pending: intake answer; FAIL-loop fixes; Mode 1 block acknowledgement; Mode 7 question |
+| 3 REVIEW | Phase 0 done (prepared early, read-only) — cards await author approval | 2026-11-20 | | `stage3_review/phase0_field_analysis.md` | |
 | 4 REVISE | pending | | | | |
 | 3' RE-REVIEW | pending | | | | |
 | 4' RE-REVISE | pending | | | | |
