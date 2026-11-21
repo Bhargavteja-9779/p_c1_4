@@ -182,7 +182,7 @@ def _star(p):
 
 
 def honest_tables():
-    """Primary analysis after review cycle 1: every label-dependent component fitted on the calibration half only
+    """Primary analysis (added after internal review): every label-dependent component fitted on the calibration half only
     (E12, 50 subject-grouped 50/50 splits; statistics from E15)."""
     S = RESULTS_DIR / "statistics"
     summ = pd.read_csv(S / "e15_summary.csv")
@@ -711,7 +711,7 @@ def export_manifest_files():
 
 
 def revision_tables():
-    """Numbers and supplement tables from e16_revision_stats.py (reviewer-requested analyses)."""
+    """Numbers and supplement tables from e16_revision_stats.py (analyses added after internal review)."""
     S = RESULTS_DIR / "statistics"
     f = S / "e16_decisions_calibrated.csv"
     if f.exists():

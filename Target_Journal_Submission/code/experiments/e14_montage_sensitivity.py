@@ -1,4 +1,4 @@
-"""E14 (review cycle 1): is the SC->HMC transport failure (N3 %) driven by the EEG montage?
+"""E14 (added after internal review): is the SC->HMC transport failure (N3 %) driven by the EEG montage?
 
 YASA is re-run on HMC with the frontal derivation F4-M1 (closer to Sleep-EDF's Fpz-Cz) instead of the central
 C4-M1 used in the main analysis (EOG E1-M2 in both). For both montages: plug-in bias per parameter on HMC, and

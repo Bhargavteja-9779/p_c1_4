@@ -1,4 +1,4 @@
-"""E16 (revision 2, reviewer M-3): plain-split sensitivity analysis of the primary (E12 'within') design.
+"""E16 (added after internal review): plain-split sensitivity analysis of the primary (E12 'within') design.
 
 The primary design cross-fits the label-dependent components (BCTS, prior, transitions, tau) WITHIN the calibration
 half to obtain out-of-sample calibration scores, but summarises test nights with the model fitted on the whole

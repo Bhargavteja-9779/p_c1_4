@@ -1,4 +1,4 @@
-"""E12 (added in review cycle 1): honest end-to-end protocol in which EVERY label-dependent component —
+"""E12 (added after internal review): honest end-to-end protocol in which EVERY label-dependent component —
 probability recalibration (BCTS), source prior, transition matrix, emission temperature tau and the
 conformal quantile — is fitted only on the labelled calibration nights, exactly as a laboratory would
 deploy the method.  Calibration-night scores are obtained by K-fold cross-fitting WITHIN the calibration
