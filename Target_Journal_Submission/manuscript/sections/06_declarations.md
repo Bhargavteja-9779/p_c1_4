@@ -16,11 +16,11 @@ This research did not receive any specific grant from funding agencies in the pu
 
 ## Ethics statement
 
-This secondary analysis used only de-identified, openly available PSG recordings distributed through PhysioNet [@goldberger2000; @pollard2026]: Sleep-EDF Expanded (Open Data Commons Attribution Licence v1.0) the HMC Sleep Staging Database (CC BY 4.0) and the Dreem Open Datasets (MIT licence). For the HMC database, the data descriptor and PhysioNet record state that the recordings were acquired in routine clinical care, fully anonymised, and that their reuse was approved by the institutional review board of Zuid-West Holland (METC-19-065) [@alvarez2021; @hmc_data]. The Sleep-EDF Expanded record [@sleepedf_data] does not document the approvals obtained by the original studies [@kemp2000]. The Dreem data descriptor reports approval by the French Committees for the Protection of Persons and written informed consent for DOD-H, and written informed consent at the Stanford Sleep Medicine Center for DOD-O (NCT03657329) [@guillot2020]. No new data were collected and no participants were contacted.
+This secondary analysis used only de-identified, openly available PSG recordings distributed through PhysioNet [@goldberger2000; @pollard2026]: Sleep-EDF Expanded (Open Data Commons Attribution Licence v1.0), the HMC Sleep Staging Database (CC BY 4.0) and the Dreem Open Datasets (MIT licence). For the HMC database, the data descriptor and PhysioNet record state that the recordings were acquired in routine clinical care, fully anonymised, and that their reuse was approved by the institutional review board of Zuid-West Holland (METC-19-065) [@alvarez2021; @hmc_data]. The Sleep-EDF Expanded record [@sleepedf_data] does not document the approvals obtained by the original studies [@kemp2000]. The Dreem data descriptor reports approval by the French Committees for the Protection of Persons and written informed consent for DOD-H, and written informed consent at the Stanford Sleep Medicine Center for DOD-O (NCT03657329) [@guillot2020]. No new data were collected and no participants were contacted.
 
 ## Data availability
 
-The datasets analysed are publicly available from PhysioNet: Sleep-EDF Expanded [@sleepedf_data] the HMC Sleep Staging Database [@hmc_data] and the Dreem Open Datasets [@guillot2020] (Zenodo, doi:10.5281/zenodo.15900394).
+The datasets analysed are publicly available: Sleep-EDF Expanded [@sleepedf_data] and the HMC Sleep Staging Database [@hmc_data] from PhysioNet, and the Dreem Open Datasets [@guillot2020] from Zenodo (doi:10.5281/zenodo.15900394).
 
 ## Code availability
 

@@ -79,3 +79,8 @@ Repo commit at entry: `af6aab7`.
 | 6 PROCESS SUMMARY | pending | | | | |
 
 Round-trip count (document revisions): 0
+
+
+## Final round (user-directed, without ARS gates)
+- New data fetched and analysed: Dreem Open Datasets DOD-H/DOD-O (80 nights, five scorers; Zenodo 15900394; streamed per recording), YASA unchanged; E17 (validation, scorer dependence, transport, local), E18 (review workload and triage). Fig. 5 rebuilt, Table 3 replaced by a laboratory procedure, title/abstract/introduction/discussion reframed, cover letter rewritten.
+- Final counts: main text 4,973 (build counter), abstract 289. Package scan: AI-related wording only in the usage declaration and the term 'generative model' (prior work).
