@@ -2,7 +2,7 @@
 title: "Supplementary Material"
 ---
 
-Supplementary material for: *Per-night prediction intervals for automatically scored sleep parameters: conformal calibration of posterior hypnogram samples compared with limits of agreement*.
+Supplementary material for: *Per-night prediction intervals for automatically scored sleep parameters: conformal calibration versus limits of agreement*.
 
 All tables were generated automatically from the result files of the analysis code (`code/run_all.py`).
 
@@ -107,6 +107,8 @@ The study protocol (above) is held in the study repository together with its ver
 13. *Items of the protocol run late.* The Spearman criterion, the number of posterior samples M and the calibration-set size (E13) were run after the first draft. The 50 Hz line-noise corruption was not run, because YASA's band-pass filtering removes it before feature extraction, so the test would not exercise the method.
 14. *New sensitivity analyses.* Montage sensitivity (YASA with F4-M1 on HMC; source-only SC→HMC); clinical decision thresholds (TST < 360 min, SOL > 30 min, WASO > 30 min, REM latency ≤ 15 min; fixed before the analysis was run) and an easier/harder-night stratification; a label-free flag based on the difference between raw and recalibrated plug-in estimates; one-off computational costs and peak memory for a 7 × 24 h recording (measured from the stored predictions by a separate script; the per-night timings come from the original timing run); subgroups require at least 20 distinct nights; non-finite conformal scores are treated as +∞.
 15. *Reporting and framing.* The title and the claims were narrowed: the advantage over limits of agreement is specific to TST; the recommendation changed from about ten to at least 20 locally scored nights.
+16. *Analyses added after a second internal review (the primary analysis is unchanged).* A plain split-conformal sensitivity analysis (calibration subjects halved; all components fitted on one half, scores computed on the other; Supplementary S17), decision analyses against the recalibrated plug-in and constant-width intervals around it (Supplementary S8), a comparison of the site-level coverage risk with finite-sample theory (Supplementary S17), median TST half-widths, coverage by interval-width tercile and the number of positive nights per threshold and cohort.
+17. *Framing.* The abstract and conclusions now report the protocol's joint adaptivity criterion rather than the fixed-centre scale comparison, state that much of the TST gain over limits of agreement reflects recalibration, qualify "valid" as marginal coverage relative to one scorer, and describe the decision thresholds as illustrative.
 
 
 # S2. Honest end-to-end protocol: all interval methods (α = 0.10; 50 subject-grouped 50/50 splits; all label-dependent components fitted on the calibration half)

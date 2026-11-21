@@ -3,7 +3,7 @@
 To the Editor-in-Chief
 *Sleep Medicine*
 
-**Submission of an Original Article: "Per-night prediction intervals for automatically scored sleep parameters: conformal calibration of posterior hypnogram samples compared with limits of agreement"**
+**Submission of an Original Article: "Per-night prediction intervals for automatically scored sleep parameters: conformal calibration versus limits of agreement"**
 
 Dear Editor,
 
@@ -14,8 +14,8 @@ Automatic sleep staging is increasingly used in clinical and research laboratori
 Using a published pretrained stager (YASA) and an in-domain stager on three open cohorts ({{nights_total}} nights; healthy community-dwelling adults, insomnia-complaint/temazepam nights and a clinical sleep-centre cohort), with every component fitted on calibration nights only, we show that:
 
 - the per-night 90 % intervals reach their nominal coverage within cohorts, whereas regression-based limits of agreement under-cover;
-- for total sleep time the intervals have lower interval scores than parametric, regression-based and distribution-free limits of agreement in every cohort (significantly so against distribution-free limits), and allow more nights to be classified confidently at a 6-h threshold;
-- for the other parameters there is no consistent advantage, and wake after sleep onset intervals are worse in long ambulatory recordings — we report these negative results and their mechanism explicitly;
+- for total sleep time the intervals have lower interval scores than parametric, regression-based and distribution-free limits of agreement in every cohort, although much of this gain reflects recalibration of the stager's probabilities, and they allow more nights to be classified confidently at a 6-h threshold;
+- for the other parameters there is no consistent advantage, and wake after sleep onset intervals are worse in the 10-h Sleep-EDF windows — we report these negative results and their mechanism explicitly;
 - neither the intervals nor limits of agreement transfer reliably between cohorts; ten locally scored nights restore average coverage, but not reliably at every site, which leads us to recommend at least 20 local nights.
 
 We believe the work fits the scope of *Sleep Medicine*, which covers new diagnostic technologies and their clinical evaluation, and complements recent articles in the journal on the validation and age-related bias of automatic staging. The findings translate into practical recommendations for laboratories deploying automatic scoring: calibrate on locally scored nights, report total sleep time with a per-night interval and review nights whose interval straddles a decision threshold.

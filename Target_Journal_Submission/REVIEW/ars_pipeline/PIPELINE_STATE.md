@@ -54,13 +54,19 @@ Repo commit at entry: `af6aab7`.
 - Round 2 fixes applied by the orchestrator: §3.7 + S8 columns + Fig. 5 caption; thresholds called illustrative; K-fold-analogue wording of the Barber et al. point; joint-criterion provenance; restored three dropped qualifiers (N1 %, SOL/CQR, test-half labels); patent entry; DEVIATIONS additions (git cannot date the protocol; local deployment 500 -> 50; CQR features); "pre-registered" removed from code, supplement and docs; empty seed log deleted; word counter now Word-like (whitespace tokens, equations excluded): main text 4,964, abstract 293.
 - These round-2 corrections were checked by the orchestrator (rebuild + grep) but NOT by a second independent agent; Stage 4.5 re-runs the full gate from scratch.
 
+## Stage 3 (review) and Stage 4 (revision) — summary
+- Phase 1: five role-separated seats reviewed the round-2 manuscript with the cards the author accepted (reports in `stage3_review/`): all five recommend MAJOR REVISION; no seat rated the work unpublishable. Sprint-contract two-call gate and its checkers were NOT run (cost); seats ran single-call.
+- Phase 2: the editorial-synthesizer agent was cut off twice by usage limits; to save usage the orchestrator consolidated the five reports itself. Consensus themes: (1) much of the TST gain over LoA is recalibration (J-2, M-1, DA-1, P-2, M-6); (2) "valid" is empirical, marginal, one scorer (J-3, DA-2, D-3, P-6); (3) the "at least 20 nights" advice is not supported beyond finite-sample theory (J-4, M-5, P-3, DA-7); (4) no cross-fitting sensitivity (M-3); (5) evidence base narrow, "any stager" over-reaches (J-5, DA-6, P-7); (6) workflow/monitoring/interpretation of a 90 % interval (P-1, P-4, P-5); (7) WASO definition, transport explanation, thresholds, van Gorp wording (D-2, D-4, D-5, D-6).
+- Stage 4 revision applied: new analyses E16 (calibrated-baseline decisions, site-risk theory, plain-split sensitivity, descriptives; `code/experiments/e16_*.py`), abstract/highlights/conclusions reframed, TST claim qualified, thresholds called illustrative, WASO definition stated, transport explanation corrected, workflow and monitoring added, title shortened, deviations list extended (items 16–17).
+- NOT done (needs new data/raw recordings): multi-scorer test (DOD/ISRUC), deep-learning stager (U-Sleep), F4-C4 montage check, real-artefact robustness; stated as limitations. Paired-test correction for calibration-set variability (M-4) was not implemented; the text states that p-values are conditional on the calibration sets.
+
 ## Stage log
 
 | Stage | Status | Started | Finished | Deliverables | Decision |
 |---|---|---|---|---|---|
 | 2.5 INTEGRITY (Mode 1) | re-verification: 0 SERIOUS / 1 MEDIUM / 18 MINOR → round-2 fixes applied; formal PASS awaits the author's intake answer | 2026-11-20 | 2026-11-20 | `stage2_5_integrity/INTEGRITY_REPORT_stage2_5.md` (+ 2 sub-reports) | pending: intake answer; FAIL-loop fixes; Mode 1 block acknowledgement; Mode 7 question |
-| 3 REVIEW | Phase 0 done (prepared early, read-only) — cards await author approval | 2026-11-20 | | `stage3_review/phase0_field_analysis.md` | |
-| 4 REVISE | pending | | | | |
+| 3 REVIEW | Phases 0–2 done (Phase 2 by orchestrator) — decision: Major revision | 2026-11-20 | | `stage3_review/phase0_field_analysis.md` | |
+| 4 REVISE | done (orchestrator) | 2026-11-21 | 2026-11-21 | revised sections, E16 analyses | |
 | 3' RE-REVIEW | pending | | | | |
 | 4' RE-REVISE | pending | | | | |
 | 4.5 FINAL INTEGRITY | pending | | | | |

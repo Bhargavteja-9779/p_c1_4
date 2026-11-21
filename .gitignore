@@ -5,3 +5,4 @@ Target_Journal_Submission/code/data/
 .ipynb_checkpoints/
 results_quick/
 Target_Journal_Submission/results/raw/e12_nights_*.csv.gz
+Target_Journal_Submission/results/raw/e16_nights_*.csv.gz

@@ -56,7 +56,7 @@ def csv_tbl(path, round_=3):
 def main():
     parts = ["---\ntitle: \"Supplementary Material\"\n---\n",
              "Supplementary material for: *Per-night prediction intervals for automatically scored sleep parameters: "
-             "conformal calibration of posterior hypnogram samples compared with limits of agreement*.\n",
+             "conformal calibration versus limits of agreement*.\n",
              "All tables were generated automatically from the result files of the analysis code "
              "(`code/run_all.py`).\n"]
     parts.append("# S1. Pre-specified protocol and deviations\n")
