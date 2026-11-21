@@ -1,7 +1,7 @@
 """Night-level clinical sleep parameters computed from (possibly many sampled) hypnograms.
 
 Definitions (AASM-style, applied identically to reference, plug-in and sampled hypnograms within the
-pre-specified analysis window; epochs with an unscored reference label are excluded everywhere):
+pre-specified analysis window; epochs with an unscored reference label are counted as wake in the reference hypnogram; automatic hypnograms use all epochs):
   TST   total sleep time (min) = #sleep epochs x 0.5
   SOL   sleep onset latency (min) = time from window start to the first sleep epoch
         (window length if no sleep)

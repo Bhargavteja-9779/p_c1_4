@@ -1,6 +1,6 @@
 ## Declaration of generative AI and AI-assisted technologies in the research and writing process
 
-During the preparation of this work the authors used Claude (Anthropic) in order to search and screen the literature, write and run the analysis code, and draft the manuscript text. After using this tool, the authors reviewed and edited the content as needed and take full responsibility for the content of the publication.
+During the preparation of this work the authors used Claude (Anthropic) in order to search and screen the literature, write and run the analysis code, draft the manuscript text and run simulated peer-review rounds whose reports guided revisions. After using this tool, the authors reviewed and edited the content as needed and take full responsibility for the content of the publication.
 
 ## CRediT authorship contribution statement
 

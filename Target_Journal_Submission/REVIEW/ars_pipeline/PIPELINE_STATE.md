@@ -60,6 +60,11 @@ Repo commit at entry: `af6aab7`.
 - Stage 4 revision applied: new analyses E16 (calibrated-baseline decisions, site-risk theory, plain-split sensitivity, descriptives; `code/experiments/e16_*.py`), abstract/highlights/conclusions reframed, TST claim qualified, thresholds called illustrative, WASO definition stated, transport explanation corrected, workflow and monitoring added, title shortened, deviations list extended (items 16–17).
 - NOT done (needs new data/raw recordings): multi-scorer test (DOD/ISRUC), deep-learning stager (U-Sleep), F4-C4 montage check, real-artefact robustness; stated as limitations. Paired-test correction for calibration-set variability (M-4) was not implemented; the text states that p-values are conditional on the calibration sets.
 
+## Stage 3' / 4.5 final verification (sonnet agent) and closure
+- `stage4_revision/final_verification.md`: 0 SERIOUS, 4 MEDIUM, 15 MINOR; 12 RESOLVED / 19 PARTLY / 2 DECLINED of 33 major reviewer items; all new numbers matched the data. All four MEDIUM and the MINOR items were then fixed by the orchestrator (conclusion rewritten; "partly through recalibration"; width cost of ten-night calibration restored; ST theory wording; plain-split in Methods; "any stager" qualified; cover-letter wording; declaration now names simulated review rounds). Final counts: main text 4,977 (build counter) / 4,953 (DOCX tokens), abstract 293.
+- Not independently re-verified after these last fixes (cost): the orchestrator re-checked placeholders, counts and phrases mechanically.
+- Open for the author: experiment-intake answer (Mode 7 frame-lock question) — still unanswered; second author, affiliations, corresponding address, co-author approval, AI-declaration accuracy, ethics determination.
+
 ## Stage log
 
 | Stage | Status | Started | Finished | Deliverables | Decision |
@@ -67,10 +72,10 @@ Repo commit at entry: `af6aab7`.
 | 2.5 INTEGRITY (Mode 1) | re-verification: 0 SERIOUS / 1 MEDIUM / 18 MINOR → round-2 fixes applied; formal PASS awaits the author's intake answer | 2026-11-20 | 2026-11-20 | `stage2_5_integrity/INTEGRITY_REPORT_stage2_5.md` (+ 2 sub-reports) | pending: intake answer; FAIL-loop fixes; Mode 1 block acknowledgement; Mode 7 question |
 | 3 REVIEW | Phases 0–2 done (Phase 2 by orchestrator) — decision: Major revision | 2026-11-20 | | `stage3_review/phase0_field_analysis.md` | |
 | 4 REVISE | done (orchestrator) | 2026-11-21 | 2026-11-21 | revised sections, E16 analyses | |
-| 3' RE-REVIEW | pending | | | | |
+| 3' RE-REVIEW | done (single verification agent, not a full panel) | 2026-11-21 | 2026-11-21 | `stage4_revision/final_verification.md` | |
 | 4' RE-REVISE | pending | | | | |
-| 4.5 FINAL INTEGRITY | pending | | | | |
-| 5 FINALIZE | pending | | | | |
+| 4.5 FINAL INTEGRITY | delta check: 0 SERIOUS; medium issues fixed; not re-verified by a second agent | 2026-11-21 | 2026-11-21 | same file | |
+| 5 FINALIZE | zip built | 2026-11-21 | 2026-11-21 | see package | |
 | 6 PROCESS SUMMARY | pending | | | | |
 
 Round-trip count (document revisions): 0
