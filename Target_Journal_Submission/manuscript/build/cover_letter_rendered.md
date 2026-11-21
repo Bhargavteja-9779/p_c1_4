@@ -3,7 +3,7 @@
 To the Editor-in-Chief
 *Sleep Medicine*
 
-**Submission of an Original Article: "Per-night prediction intervals for automatically scored sleep parameters: conformal calibration versus limits of agreement"**
+**Submission of an Original Article: "Per-night prediction intervals for automatic sleep scoring: local calibration, review triage and comparison with limits of agreement"**
 
 Dear Editor,
 

@@ -4753,5 +4753,42 @@
     ]
    ]
   }
+ },
+ {
+  "id": "guillot2020",
+  "type": "article-journal",
+  "title": "Dreem Open Datasets: multi-scored sleep datasets to compare human and automated sleep staging",
+  "author": [
+   {
+    "family": "Guillot",
+    "given": "Antoine"
+   },
+   {
+    "family": "Sauvet",
+    "given": "Fabien"
+   },
+   {
+    "family": "During",
+    "given": "Emmanuel H"
+   },
+   {
+    "family": "Thorey",
+    "given": "Valentin"
+   }
+  ],
+  "container-title": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
+  "container-title-short": "IEEE Trans Neural Syst Rehabil Eng",
+  "volume": "28",
+  "issue": "9",
+  "page": "1955-1965",
+  "issued": {
+   "date-parts": [
+    [
+     2020,
+     9
+    ]
+   ]
+  },
+  "DOI": "10.1109/TNSRE.2020.3011181"
  }
 ]

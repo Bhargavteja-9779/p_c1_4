@@ -3,7 +3,7 @@
 To the Editor-in-Chief
 *Sleep Medicine*
 
-**Submission of an Original Article: "Per-night prediction intervals for automatically scored sleep parameters: conformal calibration versus limits of agreement"**
+**Submission of an Original Article: "Per-night prediction intervals for automatic sleep scoring: local calibration, review triage and comparison with limits of agreement"**
 
 Dear Editor,
 
@@ -22,7 +22,7 @@ We believe the work fits the scope of *Sleep Medicine*, which covers new diagnos
 
 The primary method, the initial comparators and the success criteria were fixed in a protocol before any interval was computed, according to the authors' records; the end-to-end evaluation protocol, the additional comparators and the decision thresholds were added after the first results and made our conclusions more conservative. All deviations are documented, and the pre-specified analysis is reported in full in the supplement. All data are public, and the complete code regenerates the numbers, tables and figures.
 
-We confirm that this manuscript is original, has not been published previously, and is not under consideration for publication elsewhere. All authors have approved the submission. The study is a secondary analysis of de-identified, openly licensed datasets; the ethics statement in the manuscript describes the approvals documented for the source data. Generative AI (Claude, Anthropic) was used extensively in literature screening, code development, analysis and drafting; this is disclosed in the manuscript's declaration, and the authors have verified all content and take full responsibility for it. The authors declare no competing interests.
+We confirm that this manuscript is original, has not been published previously, and is not under consideration for publication elsewhere. All authors have approved the submission. The study is a secondary analysis of de-identified, openly licensed datasets; the ethics statement in the manuscript describes the approvals documented for the source data. The authors declare no competing interests.
 
 Thank you for considering our manuscript.
 

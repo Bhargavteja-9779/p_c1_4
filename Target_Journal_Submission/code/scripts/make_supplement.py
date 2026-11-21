@@ -1,4 +1,4 @@
-"""Assemble the Supplementary Material (Markdown -> DOCX) from machine-generated tables.
+"""Assemble the Supplementary Material (Markdown -> DOCX) from tables written by the analysis scripts.
 
 Numbering (referenced in the manuscript; revision 1):
   S1  Pre-specified protocol and all deviations
@@ -58,7 +58,7 @@ def csv_tbl(path, round_=3):
 def main():
     parts = ["---\ntitle: \"Supplementary Material\"\n---\n",
              "Supplementary material for: *Per-night prediction intervals for automatically scored sleep parameters: "
-             "conformal calibration versus limits of agreement*.\n",
+             "local calibration, review triage and comparison with limits of agreement*.\n",
              "All tables were generated automatically from the result files of the analysis code "
              "(`code/run_all.py`).\n"]
     parts.append("# S1. Pre-specified protocol and deviations\n")
@@ -76,7 +76,9 @@ def main():
                  "scale-at-fixed-centre family 'SCALE@…', which compares FFBS-SD scaling with a constant width around the same centre).\n\n")
     parts.append(tbl("tableS_honest_paired", None, ["stager", "cohort", "param", "comparator", "n_subjects", "ratio",
                                                     "ratio_lo95", "ratio_hi95", "p", "p_holm"]))
-    parts.append("\n# S4. In-domain LightGBM stager\n\n**Within-cohort validity and efficiency (honest protocol; as Table 2)**\n\n")
+    parts.append("\n# S4. Point estimates (YASA) and in-domain LightGBM stager\n\n**Bias and mean absolute error of night-level point estimates, YASA stager** (test nights; plug-in: parameter of the stager's own hypnogram; calibrated plug-in: hypnogram of the recalibrated probabilities; posterior mean: mean over 1000 sampled hypnograms; ten local nights: all components fitted on ten manually scored nights of the same cohort, 50 repetitions, ST and HMC only)\n\n")
+    parts.append(tbl("table3_display"))
+    parts.append("\n**LightGBM stager: within-cohort validity and efficiency (honest protocol; as Table 2)**\n\n")
     parts.append(tbl("tableS_within_cohort_lgbm"))
     parts.append("\n**Point estimates: bias (MAE) on test nights (as Table 3)**\n\n" + tbl("tableS_point_estimates_lgbm"))
     parts.append("\n# S5. Difficulty of nights\n\n**Interval-score ratios on easier and harder nights (median split of plug-in "

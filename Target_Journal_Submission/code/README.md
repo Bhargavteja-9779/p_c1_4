@@ -39,7 +39,7 @@ Set `LSA_DATA_ROOT` / `LSA_CACHE_ROOT` to use other locations. Raw EDFs may be d
 python run_all.py --mode quick --skip-cache   # ~10 min pipeline check -> ../results_quick/
 python run_all.py --mode full  --skip-cache   # full study -> ../results/, ../tables/, ../figures/
 ```
-Every number in the manuscript is read from machine-generated files in `../results`, `../tables`
+Every number in the manuscript is read from files written by the analysis scripts in `../results`, `../tables`
 (`manuscript_numbers.json`) — nothing is typed by hand.
 
 | step | script | output |

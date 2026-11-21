@@ -1,5 +1,5 @@
 ---
-title: "Per-night prediction intervals for automatically scored sleep parameters: conformal calibration versus limits of agreement"
+title: "Per-night prediction intervals for automatic sleep scoring: local calibration, review triage and comparison with limits of agreement"
 ---
 
 **Running title:** Per-night intervals for automatic sleep scoring
