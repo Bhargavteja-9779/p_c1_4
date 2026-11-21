@@ -17,6 +17,7 @@ Numbering (referenced in the manuscript; revision 1):
   S14 Flagging nights with clinically relevant errors
   S15 Computational cost
   S16 Datasets and data-leakage audit
+  S17 Sensitivity: plain split-conformal design; site-level coverage risk vs finite-sample theory
 """
 import subprocess
 import sys
@@ -102,6 +103,10 @@ def main():
     parts.append(tbl("tableS_decisions", "method in ['ba_loa','ba_reg','scp_signed','cqr_qr','norm_ffbs','norm_reg_ffbs']",
                      ["stager", "cohort", "threshold", "method", "n", "prevalence", "plugin_accuracy", "frac_confident", "acc_confident",
                       "plug_acc_confident", "plug_acc_unconfident"]))
+    parts.append("\n**Decisions compared with the recalibrated plug-in and constant-width intervals around it** "
+                 "(pooled and per cohort; plug-in accuracy columns give the accuracy of the raw and the recalibrated automatic value "
+                 "on all nights, on the nights this method decided and on those it left undecided)\n\n")
+    parts.append(tbl("tableS_decisions_calibrated", "param == 'TST'"))
     parts.append("\n# S9. Pre-specified design: cross-fitted analysis\n\nHMM and BCTS cross-fitted within each cohort (5 subject folds), "
                  "conformal calibration on subject-grouped 50/50 splits (500 repetitions) and leave-one-subject-out. Unlike the "
                  "primary analysis, the HMM/BCTS of a test night used labels of other test-half subjects (see S1).\n\n"
@@ -151,6 +156,17 @@ def main():
     parts.append("\n" + tbl("tableS_efficiency_oneoff", round_=3))
     parts.append("\n# S16. Datasets and data-leakage audit\n")
     parts.append((ROOT_DIR / "supplementary" / "S_data_and_leakage_audit.md").read_text().replace("# ", "## ", 1))
+    parts.append("\n# S17. Sensitivity: plain split-conformal design and site-level coverage risk\n\n"
+                 "**Plain-split design.** Calibration subjects of each of the 50 splits were halved (A, B); all label-dependent "
+                 "components were fitted on A, scores computed on B with A's model, and test nights summarised with A's model "
+                 "(exact split-conformal construction; calibration set about half the size of the primary design).\n\n")
+    parts.append(tbl("tableS_plainsplit", "method in ['norm_reg_ffbs','scp_signed']",
+                     ["stager", "cohort", "param", "method", "cov_plain", "cov_primary", "width_plain", "width_primary", "width_ratio",
+                      "n_cal_plain", "n_cal_primary"]))
+    parts.append("\n**Probability that a site's realised coverage falls below 0.80.** Theory: exchangeable split-conformal "
+                 "interval, coverage given the calibration set ~ Beta(n+1-l, l) with l = floor(0.1 (n+1)), test nights binomial; "
+                 "observed: 50 repetitions (median over parameters).\n\n")
+    parts.append(tbl("tableS_local_risk_theory"))
     md = "\n".join(parts)
     OUT.mkdir(exist_ok=True)
     (OUT / "Supplementary_Material.md").write_text(md)

@@ -710,6 +710,57 @@ def export_manifest_files():
     (RESULTS_DIR / "statistics.json").write_text(json.dumps(stats, indent=1))
 
 
+def revision_tables():
+    """Numbers and supplement tables from e16_revision_stats.py (reviewer-requested analyses)."""
+    S = RESULTS_DIR / "statistics"
+    f = S / "e16_decisions_calibrated.csv"
+    if f.exists():
+        d = pd.read_csv(f)
+        md(d.round(3), TABLES_DIR / "tableS_decisions_calibrated")
+        for _, r in d.iterrows():
+            b = f"r_dec_{r.stager}_{r.cohort}_{r.param}_{r.method}"
+            for fld in ["n", "prevalence", "frac_decided", "acc_decided", "raw_plugin_acc_all", "cal_plugin_acc_all",
+                        "cal_plugin_acc_decided", "cal_plugin_acc_undecided"]:
+                if pd.notna(r[fld]):
+                    NUM[f"{b}_{fld}"] = float(r[fld])
+    f = S / "e16_local_risk_theory.csv"
+    if f.exists():
+        d = pd.read_csv(f)
+        md(d.round(3), TABLES_DIR / "tableS_local_risk_theory")
+        for _, r in d.iterrows():
+            b = f"r_risk_{r.stager}_{r.cohort}_{int(r.n_cal)}"
+            NUM[f"{b}_theory"] = float(r.theory_p_lt80)
+            NUM[f"{b}_ntest"] = int(r.n_test_median)
+            for m in ["norm_reg_ffbs", "scp_abs_cal", "scp_abs_bc", "ba_loa"]:
+                if pd.notna(r[f"obs_{m}"]):
+                    NUM[f"{b}_obs_{m}"] = float(r[f"obs_{m}"])
+    f = S / "e16_plainsplit_vs_primary.csv"
+    if f.exists():
+        d = pd.read_csv(f)
+        md(d.round(3), TABLES_DIR / "tableS_plainsplit")
+        q = d[d.method == "norm_reg_ffbs"]
+        for st, g in q.groupby("stager"):
+            NUM[f"r_plain_covmin_{st}"], NUM[f"r_plain_covmax_{st}"] = float(g.cov_plain.min()), float(g.cov_plain.max())
+            NUM[f"r_plain_n3pp_{st}"] = int((abs(g.cov_plain - 0.9) <= 0.03).sum())
+            NUM[f"r_plain_n_{st}"] = int(len(g))
+            NUM[f"r_plain_wr_med_{st}"] = float(g.width_ratio.median())
+            NUM[f"r_plain_ncal_{st}"] = float(g.n_cal_plain.median())
+            NUM[f"r_plain_ncal_primary_{st}"] = float(g.n_cal_primary.median())
+    f = S / "e16_descriptives.csv"
+    if f.exists():
+        d = pd.read_csv(f)
+        for _, r in d.iterrows():
+            if r.kind == "tst_halfwidth_median":
+                NUM[f"r_hw_{r.stager}_{r.cohort}_{r.method}"] = float(r.value)
+            elif r.kind == "tst_coverage_by_width_tercile":
+                NUM[f"r_terc_{r.stager}_{r.cohort}_{r.tercile}"] = float(r.value)
+            elif r.kind == "n_positive_nights":
+                NUM[f"r_npos_{r.stager}_{r.cohort}_{r.param}"] = int(r.value)
+                NUM[f"r_nnights_{r.stager}_{r.cohort}_{r.param}"] = int(r.n)
+            elif r.kind.startswith("waso"):
+                NUM[f"r_{r.kind}_{r.cohort}"] = float(r.value)
+
+
 if __name__ == "__main__":
     try:
         table1()
@@ -720,7 +771,7 @@ if __name__ == "__main__":
         _old = TABLES_DIR / "manuscript_numbers.json"
         if _old.exists():
             NUM.update(json.loads(_old.read_text()))
-    for fn in (table2, table3, honest_tables, sensitivity_tables, supp_tables, export_manifest_files):
+    for fn in (table2, table3, honest_tables, sensitivity_tables, revision_tables, supp_tables, export_manifest_files):
         try:
             fn()
         except FileNotFoundError as e:

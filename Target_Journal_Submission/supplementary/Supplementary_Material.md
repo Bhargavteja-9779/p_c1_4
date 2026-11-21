@@ -4928,6 +4928,53 @@ Per-subject mean interval score (averaged over the splits in which the subject w
 | lgbm_sc_s0 | ST       | REML <= 15  | scp_signed    | 1100 |        0     |             0.981 |            0.326 |           1     |                1     |                  0.972 |
 
 
+**Decisions compared with the recalibrated plug-in and constant-width intervals around it** (pooled and per cohort; plug-in accuracy columns give the accuracy of the raw and the recalibrated automatic value on all nights, on the nights this method decided and on those it left undecided)
+
+
+| stager     | cohort   | param   | method        |    n |   prevalence |   frac_decided |   acc_decided |   raw_plugin_acc_all |   cal_plugin_acc_all |   raw_plugin_acc_decided |   cal_plugin_acc_decided |   cal_plugin_acc_undecided |
+|:-----------|:---------|:--------|:--------------|-----:|-------------:|---------------:|--------------:|---------------------:|---------------------:|-------------------------:|-------------------------:|---------------------------:|
+| yasa       | pooled   | TST     | ba_loa        | 8672 |        0.264 |          0.539 |         0.977 |                0.842 |                0.913 |                    0.977 |                    0.98  |                      0.835 |
+| yasa       | pooled   | TST     | norm_reg_ffbs | 8672 |        0.264 |          0.639 |         0.987 |                0.842 |                0.913 |                    0.972 |                    0.987 |                      0.782 |
+| yasa       | pooled   | TST     | scp_abs_bc    | 8672 |        0.264 |          0.601 |         0.974 |                0.842 |                0.913 |                    0.973 |                    0.977 |                      0.817 |
+| yasa       | pooled   | TST     | scp_abs_cal   | 8672 |        0.264 |          0.548 |         0.985 |                0.842 |                0.913 |                    0.965 |                    0.985 |                      0.826 |
+| yasa       | pooled   | TST     | scp_signed    | 8672 |        0.264 |          0.604 |         0.983 |                0.842 |                0.913 |                    0.969 |                    0.986 |                      0.802 |
+| yasa       | HMC      | TST     | ba_loa        | 3750 |        0.406 |          0.446 |         0.974 |                0.848 |                0.907 |                    0.974 |                    0.982 |                      0.847 |
+| yasa       | HMC      | TST     | norm_reg_ffbs | 3750 |        0.406 |          0.592 |         0.989 |                0.848 |                0.907 |                    0.983 |                    0.989 |                      0.788 |
+| yasa       | HMC      | TST     | scp_abs_bc    | 3750 |        0.406 |          0.567 |         0.967 |                0.848 |                0.907 |                    0.967 |                    0.973 |                      0.821 |
+| yasa       | HMC      | TST     | scp_abs_cal   | 3750 |        0.406 |          0.504 |         0.991 |                0.848 |                0.907 |                    0.981 |                    0.991 |                      0.822 |
+| yasa       | HMC      | TST     | scp_signed    | 3750 |        0.406 |          0.569 |         0.983 |                0.848 |                0.907 |                    0.972 |                    0.99  |                      0.799 |
+| yasa       | SC       | TST     | ba_loa        | 3822 |        0.186 |          0.542 |         0.97  |                0.821 |                0.894 |                    0.97  |                    0.97  |                      0.804 |
+| yasa       | SC       | TST     | norm_reg_ffbs | 3822 |        0.186 |          0.604 |         0.979 |                0.821 |                0.894 |                    0.977 |                    0.979 |                      0.764 |
+| yasa       | SC       | TST     | scp_abs_bc    | 3822 |        0.186 |          0.565 |         0.97  |                0.821 |                0.894 |                    0.97  |                    0.97  |                      0.795 |
+| yasa       | SC       | TST     | scp_abs_cal   | 3822 |        0.186 |          0.477 |         0.97  |                0.821 |                0.894 |                    0.97  |                    0.97  |                      0.825 |
+| yasa       | SC       | TST     | scp_signed    | 3822 |        0.186 |          0.55  |         0.975 |                0.821 |                0.894 |                    0.975 |                    0.975 |                      0.795 |
+| yasa       | ST       | TST     | ba_loa        | 1100 |        0.049 |          0.84  |         1     |                0.895 |                1     |                    1     |                    1     |                      1     |
+| yasa       | ST       | TST     | norm_reg_ffbs | 1100 |        0.049 |          0.926 |         1     |                0.895 |                1     |                    0.939 |                    1     |                      1     |
+| yasa       | ST       | TST     | scp_abs_bc    | 1100 |        0.049 |          0.841 |         1     |                0.895 |                1     |                    0.996 |                    1     |                      1     |
+| yasa       | ST       | TST     | scp_abs_cal   | 1100 |        0.049 |          0.94  |         1     |                0.895 |                1     |                    0.925 |                    1     |                      1     |
+| yasa       | ST       | TST     | scp_signed    | 1100 |        0.049 |          0.914 |         1     |                0.895 |                1     |                    0.952 |                    1     |                      1     |
+| lgbm_sc_s0 | pooled   | TST     | ba_loa        | 8672 |        0.264 |          0.504 |         0.987 |                0.869 |                0.907 |                    0.987 |                    0.988 |                      0.825 |
+| lgbm_sc_s0 | pooled   | TST     | norm_reg_ffbs | 8672 |        0.264 |          0.594 |         0.993 |                0.869 |                0.907 |                    0.982 |                    0.993 |                      0.782 |
+| lgbm_sc_s0 | pooled   | TST     | scp_abs_bc    | 8672 |        0.264 |          0.486 |         0.988 |                0.869 |                0.907 |                    0.988 |                    0.989 |                      0.83  |
+| lgbm_sc_s0 | pooled   | TST     | scp_abs_cal   | 8672 |        0.264 |          0.513 |         0.989 |                0.869 |                0.907 |                    0.982 |                    0.989 |                      0.821 |
+| lgbm_sc_s0 | pooled   | TST     | scp_signed    | 8672 |        0.264 |          0.414 |         0.99  |                0.869 |                0.907 |                    0.99  |                    0.991 |                      0.848 |
+| lgbm_sc_s0 | HMC      | TST     | ba_loa        | 3750 |        0.406 |          0.288 |         0.99  |                0.794 |                0.874 |                    0.99  |                    0.994 |                      0.826 |
+| lgbm_sc_s0 | HMC      | TST     | norm_reg_ffbs | 3750 |        0.406 |          0.419 |         0.999 |                0.794 |                0.874 |                    0.971 |                    0.999 |                      0.784 |
+| lgbm_sc_s0 | HMC      | TST     | scp_abs_bc    | 3750 |        0.406 |          0.273 |         0.99  |                0.794 |                0.874 |                    0.99  |                    0.992 |                      0.83  |
+| lgbm_sc_s0 | HMC      | TST     | scp_abs_cal   | 3750 |        0.406 |          0.32  |         0.998 |                0.794 |                0.874 |                    0.982 |                    0.998 |                      0.816 |
+| lgbm_sc_s0 | HMC      | TST     | scp_signed    | 3750 |        0.406 |          0.214 |         0.99  |                0.794 |                0.874 |                    0.99  |                    0.993 |                      0.842 |
+| lgbm_sc_s0 | SC       | TST     | ba_loa        | 3822 |        0.186 |          0.597 |         0.98  |                0.91  |                0.913 |                    0.98  |                    0.98  |                      0.812 |
+| lgbm_sc_s0 | SC       | TST     | norm_reg_ffbs | 3822 |        0.186 |          0.672 |         0.986 |                0.91  |                0.913 |                    0.983 |                    0.986 |                      0.761 |
+| lgbm_sc_s0 | SC       | TST     | scp_abs_bc    | 3822 |        0.186 |          0.574 |         0.982 |                0.91  |                0.913 |                    0.982 |                    0.982 |                      0.82  |
+| lgbm_sc_s0 | SC       | TST     | scp_abs_cal   | 3822 |        0.186 |          0.586 |         0.98  |                0.91  |                0.913 |                    0.98  |                    0.98  |                      0.817 |
+| lgbm_sc_s0 | SC       | TST     | scp_signed    | 3822 |        0.186 |          0.471 |         0.984 |                0.91  |                0.913 |                    0.984 |                    0.984 |                      0.849 |
+| lgbm_sc_s0 | ST       | TST     | ba_loa        | 1100 |        0.049 |          0.915 |         1     |                0.983 |                1     |                    1     |                    1     |                      1     |
+| lgbm_sc_s0 | ST       | TST     | norm_reg_ffbs | 1100 |        0.049 |          0.914 |         1     |                0.983 |                1     |                    0.998 |                    1     |                      1     |
+| lgbm_sc_s0 | ST       | TST     | scp_abs_bc    | 1100 |        0.049 |          0.909 |         1     |                0.983 |                1     |                    1     |                    1     |                      1     |
+| lgbm_sc_s0 | ST       | TST     | scp_abs_cal   | 1100 |        0.049 |          0.919 |         1     |                0.983 |                1     |                    0.987 |                    1     |                      1     |
+| lgbm_sc_s0 | ST       | TST     | scp_signed    | 1100 |        0.049 |          0.901 |         1     |                0.983 |                1     |                    1     |                    1     |                      1     |
+
+
 # S9. Pre-specified design: cross-fitted analysis
 
 HMM and BCTS cross-fitted within each cohort (5 subject folds), conformal calibration on subject-grouped 50/50 splits (500 repetitions) and leave-one-subject-out. Unlike the primary analysis, the HMM/BCTS of a test night used labels of other test-half subjects (see S1).
@@ -10836,3 +10883,127 @@ Per-night timings: 20 nights per cohort, original timing run. One-off costs were
 | Label leakage via unscored epochs | "?"/movement epochs | Marked −1 and excluded identically from reference and automatic parameters. |
 | Temporal leakage | Not applicable (no longitudinal prediction) | – |
 | Few-night recalibration | Target calibration nights could share subjects with test nights | Target calibration nights are whole subjects disjoint from test subjects. |
+
+
+# S17. Sensitivity: plain split-conformal design and site-level coverage risk
+
+**Plain-split design.** Calibration subjects of each of the 50 splits were halved (A, B); all label-dependent components were fitted on A, scores computed on B with A's model, and test nights summarised with A's model (exact split-conformal construction; calibration set about half the size of the primary design).
+
+
+| stager     | cohort   | param   | method        |   cov_plain |   cov_primary |   width_plain |   width_primary |   width_ratio |   n_cal_plain |   n_cal_primary |
+|:-----------|:---------|:--------|:--------------|------------:|--------------:|--------------:|----------------:|--------------:|--------------:|----------------:|
+| yasa       | HMC      | N1%     | norm_reg_ffbs |       0.931 |         0.912 |        24.137 |          21.866 |         1.104 |            38 |            76   |
+| yasa       | HMC      | N2%     | norm_reg_ffbs |       0.928 |         0.914 |        30.016 |          28.047 |         1.07  |            38 |            76   |
+| yasa       | HMC      | N3%     | norm_reg_ffbs |       0.929 |         0.915 |        31.321 |          30.038 |         1.043 |            38 |            76   |
+| yasa       | HMC      | REM%    | norm_reg_ffbs |       0.922 |         0.919 |        22.416 |          21.947 |         1.021 |            38 |            76   |
+| yasa       | HMC      | REML    | norm_reg_ffbs |       0.919 |         0.905 |       190.868 |         178.312 |         1.07  |            38 |            75.5 |
+| yasa       | HMC      | SOL     | norm_reg_ffbs |       0.927 |         0.92  |        24.884 |          22.09  |         1.126 |            38 |            76   |
+| yasa       | HMC      | TST     | norm_reg_ffbs |       0.923 |         0.913 |       100.462 |          91.38  |         1.099 |            38 |            76   |
+| yasa       | HMC      | WASO    | norm_reg_ffbs |       0.93  |         0.918 |        98.188 |          84.917 |         1.156 |            38 |            76   |
+| yasa       | SC       | N1%     | norm_reg_ffbs |       0.914 |         0.914 |        27.69  |          27.201 |         1.018 |            37 |            77   |
+| yasa       | SC       | N2%     | norm_reg_ffbs |       0.902 |         0.905 |        34.682 |          33.276 |         1.042 |            37 |            77   |
+| yasa       | SC       | N3%     | norm_reg_ffbs |       0.92  |         0.919 |        18.162 |          17.133 |         1.06  |            37 |            77   |
+| yasa       | SC       | REM%    | norm_reg_ffbs |       0.918 |         0.915 |        27.354 |          25.653 |         1.066 |            37 |            77   |
+| yasa       | SC       | REML    | norm_reg_ffbs |       0.918 |         0.902 |       106.307 |          94.345 |         1.127 |            37 |            77   |
+| yasa       | SC       | SOL     | norm_reg_ffbs |       0.912 |         0.905 |        29.299 |          27.025 |         1.084 |            37 |            77   |
+| yasa       | SC       | TST     | norm_reg_ffbs |       0.905 |         0.907 |        96.404 |          90.166 |         1.069 |            37 |            77   |
+| yasa       | SC       | WASO    | norm_reg_ffbs |       0.915 |         0.916 |       238.87  |         236.87  |         1.008 |            37 |            77   |
+| yasa       | ST       | N1%     | norm_reg_ffbs |       0.893 |         0.909 |        15.877 |          16.723 |         0.949 |            10 |            22   |
+| yasa       | ST       | N2%     | norm_reg_ffbs |       0.887 |         0.903 |        38.436 |          37.221 |         1.033 |            10 |            22   |
+| yasa       | ST       | N3%     | norm_reg_ffbs |       0.874 |         0.911 |        27.218 |          27.635 |         0.985 |            10 |            22   |
+| yasa       | ST       | REM%    | norm_reg_ffbs |       0.909 |         0.923 |        26.367 |          26.05  |         1.012 |            10 |            22   |
+| yasa       | ST       | REML    | norm_reg_ffbs |       0.896 |         0.925 |       147.661 |         165.823 |         0.89  |            10 |            22   |
+| yasa       | ST       | SOL     | norm_reg_ffbs |       0.899 |         0.92  |        22.818 |          20.46  |         1.115 |            10 |            22   |
+| yasa       | ST       | TST     | norm_reg_ffbs |       0.89  |         0.915 |        42.591 |          39.163 |         1.088 |            10 |            22   |
+| yasa       | ST       | WASO    | norm_reg_ffbs |       0.893 |         0.905 |        53.545 |          55.148 |         0.971 |            10 |            22   |
+| yasa       | HMC      | N1%     | scp_signed    |       0.953 |         0.924 |        43.883 |          29.704 |         1.477 |            38 |            76   |
+| yasa       | HMC      | N2%     | scp_signed    |       0.957 |         0.922 |        49.602 |          35.366 |         1.403 |            38 |            76   |
+| yasa       | HMC      | N3%     | scp_signed    |       0.946 |         0.918 |        33.597 |          27.222 |         1.234 |            38 |            76   |
+| yasa       | HMC      | REM%    | scp_signed    |       0.945 |         0.915 |        25.33  |          19.025 |         1.331 |            38 |            76   |
+| yasa       | HMC      | REML    | scp_signed    |       0.942 |         0.926 |       311.299 |         247.015 |         1.26  |            38 |            75.5 |
+| yasa       | HMC      | SOL     | scp_signed    |       0.955 |         0.928 |        34.971 |          18.362 |         1.905 |            38 |            76   |
+| yasa       | HMC      | TST     | scp_signed    |       0.943 |         0.926 |       229.73  |         126.11  |         1.822 |            38 |            76   |
+| yasa       | HMC      | WASO    | scp_signed    |       0.951 |         0.925 |       118.898 |          96.756 |         1.229 |            38 |            76   |
+| yasa       | SC       | N1%     | scp_signed    |       0.942 |         0.914 |        41.03  |          33.139 |         1.238 |            37 |            77   |
+| yasa       | SC       | N2%     | scp_signed    |       0.943 |         0.919 |        53.635 |          43.315 |         1.238 |            37 |            77   |
+| yasa       | SC       | N3%     | scp_signed    |       0.937 |         0.926 |        19.361 |          17.094 |         1.133 |            37 |            77   |
+| yasa       | SC       | REM%    | scp_signed    |       0.931 |         0.917 |        34.819 |          20.832 |         1.671 |            37 |            77   |
+| yasa       | SC       | REML    | scp_signed    |       0.938 |         0.914 |       208.627 |         152.729 |         1.366 |            37 |            77   |
+| yasa       | SC       | SOL     | scp_signed    |       0.952 |         0.925 |        61.331 |          28.785 |         2.131 |            37 |            77   |
+| yasa       | SC       | TST     | scp_signed    |       0.942 |         0.919 |       179.56  |         120.92  |         1.485 |            37 |            77   |
+| yasa       | SC       | WASO    | scp_signed    |       0.925 |         0.915 |       116.855 |         103.896 |         1.125 |            37 |            77   |
+| yasa       | ST       | N1%     | scp_signed    |       1     |         0.902 |       100     |          17.06  |         5.862 |            10 |            22   |
+| yasa       | ST       | N2%     | scp_signed    |       1     |         0.88  |       100     |          36.166 |         2.765 |            10 |            22   |
+| yasa       | ST       | N3%     | scp_signed    |       1     |         0.887 |       100     |          27.039 |         3.698 |            10 |            22   |
+| yasa       | ST       | REM%    | scp_signed    |       1     |         0.921 |       100     |          22.231 |         4.498 |            10 |            22   |
+| yasa       | ST       | REML    | scp_signed    |       1     |         0.905 |       inf     |         161.91  |       inf     |            10 |            22   |
+| yasa       | ST       | SOL     | scp_signed    |       1     |         0.899 |       inf     |          12.941 |       inf     |            10 |            22   |
+| yasa       | ST       | TST     | scp_signed    |       1     |         0.897 |       inf     |          67.29  |       inf     |            10 |            22   |
+| yasa       | ST       | WASO    | scp_signed    |       1     |         0.871 |       inf     |          34.992 |       inf     |            10 |            22   |
+| lgbm_sc_s0 | HMC      | N1%     | norm_reg_ffbs |       0.929 |         0.911 |        25.01  |          22.846 |         1.095 |            38 |            76   |
+| lgbm_sc_s0 | HMC      | N2%     | norm_reg_ffbs |       0.92  |         0.904 |        40.414 |          36.546 |         1.106 |            38 |            76   |
+| lgbm_sc_s0 | HMC      | N3%     | norm_reg_ffbs |       0.928 |         0.91  |        43.898 |          37.636 |         1.166 |            38 |            76   |
+| lgbm_sc_s0 | HMC      | REM%    | norm_reg_ffbs |       0.926 |         0.909 |        23.315 |          21.807 |         1.069 |            38 |            76   |
+| lgbm_sc_s0 | HMC      | REML    | norm_reg_ffbs |       0.921 |         0.912 |       242.116 |         226.239 |         1.07  |            38 |            75.5 |
+| lgbm_sc_s0 | HMC      | SOL     | norm_reg_ffbs |       0.929 |         0.918 |        30.302 |          26.338 |         1.15  |            38 |            76   |
+| lgbm_sc_s0 | HMC      | TST     | norm_reg_ffbs |       0.931 |         0.915 |       132.505 |         119.881 |         1.105 |            38 |            76   |
+| lgbm_sc_s0 | HMC      | WASO    | norm_reg_ffbs |       0.923 |         0.91  |       106.417 |          96.934 |         1.098 |            38 |            76   |
+| lgbm_sc_s0 | SC       | N1%     | norm_reg_ffbs |       0.915 |         0.913 |        27.548 |          26.583 |         1.036 |            37 |            77   |
+| lgbm_sc_s0 | SC       | N2%     | norm_reg_ffbs |       0.909 |         0.907 |        31.99  |          31.003 |         1.032 |            37 |            77   |
+| lgbm_sc_s0 | SC       | N3%     | norm_reg_ffbs |       0.928 |         0.924 |        13.85  |          13.028 |         1.063 |            37 |            77   |
+| lgbm_sc_s0 | SC       | REM%    | norm_reg_ffbs |       0.917 |         0.912 |        23.612 |          22.869 |         1.032 |            37 |            77   |
+| lgbm_sc_s0 | SC       | REML    | norm_reg_ffbs |       0.913 |         0.89  |        96.028 |          78.733 |         1.22  |            37 |            77   |
+| lgbm_sc_s0 | SC       | SOL     | norm_reg_ffbs |       0.906 |         0.904 |        25.481 |          23.121 |         1.102 |            37 |            77   |
+| lgbm_sc_s0 | SC       | TST     | norm_reg_ffbs |       0.913 |         0.908 |        79.599 |          71.589 |         1.112 |            37 |            77   |
+| lgbm_sc_s0 | SC       | WASO    | norm_reg_ffbs |       0.907 |         0.916 |       176.77  |         179.572 |         0.984 |            37 |            77   |
+| lgbm_sc_s0 | ST       | N1%     | norm_reg_ffbs |       0.886 |         0.915 |        15.503 |          17.722 |         0.875 |            10 |            22   |
+| lgbm_sc_s0 | ST       | N2%     | norm_reg_ffbs |       0.895 |         0.916 |        37.045 |          35.985 |         1.029 |            10 |            22   |
+| lgbm_sc_s0 | ST       | N3%     | norm_reg_ffbs |       0.872 |         0.903 |        26.646 |          26.695 |         0.998 |            10 |            22   |
+| lgbm_sc_s0 | ST       | REM%    | norm_reg_ffbs |       0.899 |         0.921 |        24.51  |          24.656 |         0.994 |            10 |            22   |
+| lgbm_sc_s0 | ST       | REML    | norm_reg_ffbs |       0.906 |         0.928 |       134.501 |         138.21  |         0.973 |            10 |            22   |
+| lgbm_sc_s0 | ST       | SOL     | norm_reg_ffbs |       0.907 |         0.92  |        26.706 |          23.827 |         1.121 |            10 |            22   |
+| lgbm_sc_s0 | ST       | TST     | norm_reg_ffbs |       0.879 |         0.925 |        49.046 |          47.019 |         1.043 |            10 |            22   |
+| lgbm_sc_s0 | ST       | WASO    | norm_reg_ffbs |       0.874 |         0.901 |        56.787 |          60.875 |         0.933 |            10 |            22   |
+| lgbm_sc_s0 | HMC      | N1%     | scp_signed    |       0.958 |         0.932 |        43.561 |          28.659 |         1.52  |            38 |            76   |
+| lgbm_sc_s0 | HMC      | N2%     | scp_signed    |       0.951 |         0.918 |        53.932 |          43.58  |         1.238 |            38 |            76   |
+| lgbm_sc_s0 | HMC      | N3%     | scp_signed    |       0.95  |         0.923 |        42.558 |          38.131 |         1.116 |            38 |            76   |
+| lgbm_sc_s0 | HMC      | REM%    | scp_signed    |       0.949 |         0.927 |        25.963 |          19.504 |         1.331 |            38 |            76   |
+| lgbm_sc_s0 | HMC      | REML    | scp_signed    |       0.95  |         0.935 |       302.892 |         256.725 |         1.18  |            38 |            75.5 |
+| lgbm_sc_s0 | HMC      | SOL     | scp_signed    |       0.949 |         0.926 |        61.784 |          27.748 |         2.227 |            38 |            76   |
+| lgbm_sc_s0 | HMC      | TST     | scp_signed    |       0.966 |         0.933 |       278.13  |         194.19  |         1.432 |            38 |            76   |
+| lgbm_sc_s0 | HMC      | WASO    | scp_signed    |       0.959 |         0.923 |       158.363 |         123.92  |         1.278 |            38 |            76   |
+| lgbm_sc_s0 | SC       | N1%     | scp_signed    |       0.946 |         0.917 |        37.677 |          31.469 |         1.197 |            37 |            77   |
+| lgbm_sc_s0 | SC       | N2%     | scp_signed    |       0.942 |         0.91  |        45.135 |          36.366 |         1.241 |            37 |            77   |
+| lgbm_sc_s0 | SC       | N3%     | scp_signed    |       0.936 |         0.932 |        16.34  |          14.643 |         1.116 |            37 |            77   |
+| lgbm_sc_s0 | SC       | REM%    | scp_signed    |       0.934 |         0.919 |        29.6   |          18.702 |         1.583 |            37 |            77   |
+| lgbm_sc_s0 | SC       | REML    | scp_signed    |       0.937 |         0.905 |       183.566 |         130.582 |         1.406 |            37 |            77   |
+| lgbm_sc_s0 | SC       | SOL     | scp_signed    |       0.944 |         0.92  |        70.954 |          36.903 |         1.923 |            37 |            77   |
+| lgbm_sc_s0 | SC       | TST     | scp_signed    |       0.949 |         0.924 |       149.61  |         109.54  |         1.366 |            37 |            77   |
+| lgbm_sc_s0 | SC       | WASO    | scp_signed    |       0.947 |         0.928 |       111.989 |          86.871 |         1.289 |            37 |            77   |
+| lgbm_sc_s0 | ST       | N1%     | scp_signed    |       1     |         0.899 |       100     |          15.146 |         6.602 |            10 |            22   |
+| lgbm_sc_s0 | ST       | N2%     | scp_signed    |       1     |         0.892 |       100     |          36.156 |         2.766 |            10 |            22   |
+| lgbm_sc_s0 | ST       | N3%     | scp_signed    |       1     |         0.892 |       100     |          26.438 |         3.782 |            10 |            22   |
+| lgbm_sc_s0 | ST       | REM%    | scp_signed    |       1     |         0.886 |       100     |          20.92  |         4.78  |            10 |            22   |
+| lgbm_sc_s0 | ST       | REML    | scp_signed    |       1     |         0.911 |       inf     |         179.85  |       inf     |            10 |            22   |
+| lgbm_sc_s0 | ST       | SOL     | scp_signed    |       1     |         0.883 |       inf     |          30.562 |       inf     |            10 |            22   |
+| lgbm_sc_s0 | ST       | TST     | scp_signed    |       1     |         0.905 |       inf     |          77.07  |       inf     |            10 |            22   |
+| lgbm_sc_s0 | ST       | WASO    | scp_signed    |       1     |         0.903 |       inf     |          52.89  |       inf     |            10 |            22   |
+
+
+**Probability that a site's realised coverage falls below 0.80.** Theory: exchangeable split-conformal interval, coverage given the calibration set ~ Beta(n+1-l, l) with l = floor(0.1 (n+1)), test nights binomial; observed: 50 repetitions (median over parameters).
+
+
+| stager     | cohort   |   n_cal |   n_test_median |   theory_p_lt80 |   obs_norm_reg_ffbs |   obs_scp_abs_cal |   obs_scp_abs_bc |   obs_ba_loa |
+|:-----------|:---------|--------:|----------------:|----------------:|--------------------:|------------------:|-----------------:|-------------:|
+| yasa       | HMC      |      10 |             141 |           0.11  |                0.09 |              0.1  |             0.12 |         0.1  |
+| yasa       | HMC      |      20 |             131 |           0.077 |                0.07 |              0.08 |             0.14 |         0.08 |
+| yasa       | HMC      |      30 |             121 |           0.056 |                0.07 |              0.04 |             0.06 |         0.03 |
+| yasa       | ST       |      10 |              34 |           0.14  |                0.17 |              0.2  |             0.27 |         0.28 |
+| yasa       | ST       |      20 |              24 |           0.139 |                0.15 |              0.17 |             0.19 |         0.21 |
+| yasa       | ST       |      30 |              14 |           0.175 |                0.15 |              0.22 |             0.2  |         0.23 |
+| lgbm_sc_s0 | HMC      |      10 |             141 |           0.11  |                0.1  |              0.12 |             0.12 |         0.11 |
+| lgbm_sc_s0 | HMC      |      20 |             131 |           0.077 |                0.05 |              0.06 |             0.09 |         0.05 |
+| lgbm_sc_s0 | HMC      |      30 |             121 |           0.056 |                0.04 |              0.02 |             0.05 |         0.04 |
+| lgbm_sc_s0 | ST       |      10 |              34 |           0.14  |                0.2  |              0.21 |             0.32 |         0.27 |
+| lgbm_sc_s0 | ST       |      20 |              24 |           0.139 |                0.15 |              0.17 |             0.17 |         0.19 |
+| lgbm_sc_s0 | ST       |      30 |              14 |           0.175 |                0.19 |              0.23 |             0.23 |         0.23 |
