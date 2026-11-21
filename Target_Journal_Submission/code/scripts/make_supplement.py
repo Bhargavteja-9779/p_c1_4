@@ -19,6 +19,7 @@ Numbering (referenced in the manuscript; revision 1):
   S16 Datasets and data-leakage audit
   S17 Sensitivity: plain split-conformal design; site-level coverage risk vs finite-sample theory
   S18 Independent validation on two multi-scorer cohorts (DOD-H, DOD-O)
+  S19 Review workload and triage
 """
 import subprocess
 import sys
@@ -168,6 +169,13 @@ def main():
                  "interval, coverage given the calibration set ~ Beta(n+1-l, l) with l = floor(0.1 (n+1)), test nights binomial; "
                  "observed: 50 repetitions (median over parameters).\n\n")
     parts.append(tbl("tableS_local_risk_theory"))
+    parts.append("\n# S19. Review workload and triage\n\n**Nights an interval leaves undecided are the nights to review.** For each threshold: share of nights "
+                 "left undecided (`frac_review`), misclassification rate of the recalibrated point estimate (`misclass_total`), share of those "
+                 "misclassifications that fall on undecided nights (`share_caught`) and the residual misclassification rate on decided nights.\n\n")
+    parts.append(tbl("tableS_workload"))
+    parts.append("\n**Triage curves for TST** (share of nights with an absolute error of the recalibrated TST > 30 min that remains after "
+                 "reviewing the stated share of nights, ranked by the stated signal).\n\n")
+    parts.append(tbl("tableS_triage"))
     parts.append("\n# S18. Independent validation on two multi-scorer cohorts (Dreem Open Datasets)\n\n"
                  "DOD-H (25 healthy volunteers) and DOD-O (55 patients with suspected sleep apnoea), one night each, five scorers per night, "
                  "AASM scoring. Stager: YASA, unchanged (C3-M2 and EOG1-EOG2). Reference: the consensus hypnogram of the dataset unless stated. "

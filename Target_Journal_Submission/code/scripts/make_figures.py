@@ -141,25 +141,43 @@ def fig2_within(stagers=("yasa", "lgbm_sc_s0")):
 
 
 def fig5_adaptivity(stager="yasa"):
-    """(a-c) interval width vs absolute plug-in error (LOSO, pre-specified summaries); (d) flagging AUROC;
-    (e-h) decisions at clinical thresholds (honest protocol): fraction of nights with a confident decision
-    (interval entirely on one side of the threshold) and accuracy of those decisions, pooled over cohorts."""
-    loso = pd.read_csv(RESULTS_DIR / "raw" / f"e04_loso_{stager}.csv")
+    """(a, b) review triage: share of nights with an absolute TST error > 30 min (recalibrated plug-in) that remains after a given share
+    of nights is sent to manual review, ranked by interval width, by the label-free |raw - recalibrated| difference, at random or by the
+    true error; (c) share of nights to review for the nights an interval leaves undecided at 6 h to catch the misclassifications of the
+    recalibrated TST; (d) flagging AUROC; (e-h) decisions at illustrative thresholds (honest protocol): fraction of nights with a confident
+    decision and accuracy of those decisions, pooled over cohorts."""
     fl = pd.read_csv(RESULTS_DIR / "statistics" / f"e07_flagging_{stager}.csv")
     dec = pd.read_csv(RESULTS_DIR / "statistics" / "e15_decisions.csv")
+    tri = pd.read_csv(RESULTS_DIR / "statistics" / "e18_triage_curve.csv")
+    wl = pd.read_csv(RESULTS_DIR / "statistics" / "e18_workload_decisions.csv")
+    cal = pd.read_csv(RESULTS_DIR / "statistics" / "e16_decisions_calibrated.csv")
     fig = plt.figure(figsize=(7.2, 5.2))
     gs = fig.add_gridspec(2, 4, width_ratios=[1, 1, 1, 1.25], hspace=0.95, wspace=0.62)
-    for i, p in enumerate(["TST", "REML", "N3%"]):
+    pol = [("random", "Random", "#999999", ":"), ("raw_minus_cal", "|raw − recal.|", "#CC79A7", "-"),
+           ("width", "Width (proposed)", "#0072B2", "-"), ("oracle", "Oracle", "k", "--")]
+    for i, (coh, ttl) in enumerate([("pooled", "All cohorts"), ("HMC", "HMC")]):
         ax = fig.add_subplot(gs[0, i])
-        d = loso[(loso.param == p) & (loso.method == PROPOSED)]
-        for c, mk in zip(["SC", "ST", "HMC"], ["o", "s", "^"]):
-            dd = d[d.cohort == c]
-            ax.scatter(dd.hi - dd.lo, np.abs(dd.y - dd.plug), s=5, alpha=0.6, marker=mk, label=c, lw=0)
-        u = "pp" if p.endswith("%") else "min"
-        ax.set_xlabel(f"Interval width ({u})"); ax.set_ylabel(f"|Plug-in error| ({u})")
-        ax.set_title(f"{'abc'[i]}  {p}", loc="left")
+        d = tri[(tri.stager == stager) & (tri.cohort == coh)]
+        for key, lab, col, ls in pol:
+            g = d[d.policy == key].sort_values("review_frac")
+            ax.plot(g.review_frac, g.resid_share_gt30, color=col, ls=ls, lw=1.3 if key == "width" else 0.9, label=lab)
+        ax.set_xlim(0, 1); ax.set_ylim(0, 1.02)
+        ax.set_xlabel("Share of nights reviewed"); ax.set_ylabel("TST errors > 30 min left" if i == 0 else "")
+        ax.set_title(f"{'ab'[i]}  {ttl}", loc="left")
         if i == 0:
-            ax.legend(frameon=False, markerscale=2, fontsize=6)
+            ax.legend(frameon=False, fontsize=5, loc="upper right", bbox_to_anchor=(1.05, 1.02), handlelength=1.4)
+    ax = fig.add_subplot(gs[0, 2])
+    meths_w = ["ba_loa", "scp_abs_bc", "scp_abs_cal", "scp_signed", PROPOSED]
+    w = wl[(wl.stager == stager) & (wl.cohort == "pooled") & (wl.param == "TST")].set_index("method")
+    labs = {"ba_loa": "Bland–Altman", "scp_abs_bc": "Const. width, bias-corr.", "scp_abs_cal": "Const. width, recalibrated",
+            "scp_signed": "Distribution-free LoA", PROPOSED: "Proposed"}
+    ys = np.arange(len(meths_w))
+    ax.barh(ys, [w.loc[m, "frac_review"] for m in meths_w], color=[C.get(m, "#888888") if m != PROPOSED else "#0072B2" for m in meths_w], height=0.6)
+    for y_, m in zip(ys, meths_w):
+        ax.text(w.loc[m, "frac_review"] + 0.01, y_, f"{w.loc[m, 'share_caught'] * 100:.0f}%", va="center", fontsize=5.5)
+    ax.set_yticks(ys); ax.set_yticklabels([labs[m] for m in meths_w], fontsize=5.5)
+    ax.set_xlim(0, 0.75); ax.set_xlabel("Share of nights to review", fontsize=6.5)
+    ax.set_title("c  Review at 6 h", loc="left")
     ax = fig.add_subplot(gs[0, 3])
     sig = ["proposed_width", "mean_entropy", "abs_raw_minus_calibrated"]
     sl = {"proposed_width": "Interval width (proposed)", "mean_entropy": "Mean epoch entropy",
@@ -202,6 +220,9 @@ def fig5_adaptivity(stager="yasa"):
             ax.scatter(frac, acc, s=22 if m == PROPOSED else 14, color=C[m], marker="D" if m == PROPOSED else "o",
                        label=LAB[m], zorder=3)
         ax.axhline(plug, color="k", lw=0.6, ls=":")
+        cp = cal[(cal.stager == stager) & (cal.cohort == "pooled") & (cal.param == p) & (cal.method == PROPOSED)]
+        if len(cp):
+            ax.axhline(float(cp.cal_plugin_acc_all.iloc[0]), color="k", lw=0.6, ls="--")
         ax.set_xlim(0, 1); ax.set_ylim(YMIN, 1.01)
         ax.set_xlabel("Fraction of nights decided"); ax.set_ylabel("Accuracy of decisions" if j == 0 else "")
         ax.set_title(f"{'efgh'[j]}  {thr.replace('<=', '≤')} min", loc="left")

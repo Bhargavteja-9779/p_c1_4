@@ -832,6 +832,27 @@ def dod_tables():
                 NUM[f"d_tr_{tg}_{r.param}_{m}"] = float(r.coverage)
 
 
+def workload_tables():
+    """Review workload and triage (E18)."""
+    S = RESULTS_DIR / "statistics"
+    f = S / "e18_workload_decisions.csv"
+    if f.exists():
+        d = pd.read_csv(f)
+        md(d[d.cohort.isin(["pooled", "HMC"])].round(3), TABLES_DIR / "tableS_workload")
+        for _, r in d.iterrows():
+            b = f"w_{r.stager}_{r.cohort}_{r.param}_{r.method}"
+            NUM[f"{b}_review"] = float(r.frac_review)
+            NUM[f"{b}_caught"] = float(r.share_caught)
+            NUM[f"{b}_misclass"] = float(r.misclass_total)
+    f = S / "e18_triage_curve.csv"
+    if f.exists():
+        d = pd.read_csv(f)
+        md(d[(d.review_frac.isin([0.1, 0.2, 0.3, 0.5]))].round(3), TABLES_DIR / "tableS_triage")
+        for _, r in d.iterrows():
+            if r.review_frac in (0.1, 0.2, 0.3, 0.5):
+                NUM[f"tri_{r.stager}_{r.cohort}_{r.policy}_{int(round(r.review_frac * 100))}"] = float(r.resid_share_gt30)
+
+
 if __name__ == "__main__":
     try:
         table1()
@@ -842,7 +863,7 @@ if __name__ == "__main__":
         _old = TABLES_DIR / "manuscript_numbers.json"
         if _old.exists():
             NUM.update(json.loads(_old.read_text()))
-    for fn in (table2, table3, honest_tables, sensitivity_tables, revision_tables, dod_tables, supp_tables, export_manifest_files):
+    for fn in (table2, table3, honest_tables, sensitivity_tables, revision_tables, workload_tables, dod_tables, supp_tables, export_manifest_files):
         try:
             fn()
         except FileNotFoundError as e:
