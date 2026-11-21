@@ -174,6 +174,22 @@ def word_count(md_text):
     return len(body.split())                                         # whitespace tokens, headings included (as Word counts)
 
 
+def widen_columns(table_md, first=(0.13, 0.08)):
+    """Give the first columns a readable minimum share of the page width (pandoc takes relative widths from the separator row)."""
+    lines = table_md.rstrip("\n").split("\n")
+    for k, ln in enumerate(lines[:3]):
+        if re.fullmatch(r"\|[:\- |]+\|", ln.strip()) and "-" in ln:
+            cells = ln.strip().strip("|").split("|")
+            w = [max(len(c.strip()), 3) for c in cells]
+            tot = sum(w)
+            if len(cells) >= 4:
+                for j, share in enumerate(first):
+                    w[j] = max(w[j], int(share * tot))
+                lines[k] = "|" + "|".join((":" if c.strip().startswith(":") else "") + "-" * (wj - (1 if c.strip().startswith(":") else 0)) for c, wj in zip(cells, w)) + "|"
+            break
+    return "\n".join(lines) + "\n"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--no-pdf", action="store_true")
@@ -185,12 +201,13 @@ def main():
         if f.exists():
             parts.append(render(f.read_text(), ns))
     md = "\n\n".join(parts)
+    md = md.replace("|:-------------|:------------------------------------|:------------------------------------------------------|", "|:-----------|:----------------------------|:---------------------------------------|")
 
     def inject(m):  # generated tables are injected verbatim from ../tables/<name>.md
         f = ROOT / "tables" / f"{m.group(1)}.md"
         if not f.exists():
             sys.exit(f"MISSING TABLE {f}")
-        return f.read_text()
+        return widen_columns(f.read_text())
     md = re.sub(r"<<TABLE:([\w-]+)>>", inject, md)
     build = HERE / "build"
     build.mkdir(exist_ok=True)

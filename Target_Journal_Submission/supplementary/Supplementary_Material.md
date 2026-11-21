@@ -2,7 +2,7 @@
 title: "Supplementary Material"
 ---
 
-Supplementary material for: *Per-night prediction intervals for automatically scored sleep parameters: conformal calibration versus limits of agreement*.
+Supplementary material for: *Per-night prediction intervals for automatically scored sleep parameters: local calibration, review triage and comparison with limits of agreement*.
 
 All tables were generated automatically from the result files of the analysis code (`code/run_all.py`).
 
@@ -109,6 +109,8 @@ The study protocol (above) is held in the study repository together with its ver
 15. *Reporting and framing.* The title and the claims were narrowed: the advantage over limits of agreement is specific to TST; the recommendation changed from about ten to at least 20 locally scored nights.
 16. *Analyses added after a second internal review (the primary analysis is unchanged).* A plain split-conformal sensitivity analysis (calibration subjects halved; all components fitted on one half, scores computed on the other; Supplementary S17), decision analyses against the recalibrated plug-in and constant-width intervals around it (Supplementary S8), a comparison of the site-level coverage risk with finite-sample theory (Supplementary S17), median TST half-widths, coverage by interval-width tercile and the number of positive nights per threshold and cohort.
 17. *Framing.* The abstract and conclusions now report the protocol's joint adaptivity criterion rather than the fixed-centre scale comparison, state that much of the TST gain over limits of agreement reflects recalibration, qualify "valid" as marginal coverage relative to one scorer, and describe the decision thresholds as illustrative.
+18. *Analyses added after a third internal review (the primary analysis is unchanged).* Review-workload and triage analyses (Supplementary S19) and an independent validation on the Dreem Open Datasets, DOD-H and DOD-O, with five scorers per night (Supplementary S18): YASA applied unchanged (C3-M2 and EOG1-EOG2), the primary protocol repeated on the consensus labels, intervals calibrated on the consensus or on one technologist and tested against every technologist, SC-calibrated intervals applied unchanged, and local calibration on DOD-O. The 56th DOD-O record, which has no consensus, was excluded as in the original cohort of 55 patients.
+19. *Framing.* The title, abstract, introduction and discussion were reframed around the practical questions of a laboratory (calibration size, review triage, choice of reference scoring); Table 3 gives the resulting procedure, and the former Table 3 (point estimates) moved to Supplementary S4.
 
 
 # S2. Honest end-to-end protocol: all interval methods (α = 0.10; 50 subject-grouped 50/50 splits; all label-dependent components fitted on the calibration half)
@@ -1278,9 +1280,40 @@ Per-subject mean interval score (averaged over the splits in which the subject w
 | lgbm_sc_s0 | ST       | WASO    | SCALE@FFBS mean          |           22 |   0.943 |        0.852 |        1.056 | 0.416 |    1     |
 
 
-# S4. In-domain LightGBM stager
+# S4. Point estimates (YASA) and in-domain LightGBM stager
 
-**Within-cohort validity and efficiency (honest protocol; as Table 2)**
+**Bias and mean absolute error of night-level point estimates, YASA stager** (test nights; plug-in: parameter of the stager's own hypnogram; calibrated plug-in: hypnogram of the recalibrated probabilities; posterior mean: mean over 1000 sampled hypnograms; ten local nights: all components fitted on ten manually scored nights of the same cohort, 50 repetitions, ST and HMC only)
+
+
+| Parameter   | Cohort   | Plug-in      | Calibrated plug-in   | Posterior mean   | Calibrated plug-in, 10 local nights   | Posterior mean, 10 local nights   |
+|:------------|:---------|:-------------|:---------------------|:-----------------|:--------------------------------------|:----------------------------------|
+| TST (min)   | SC       | −21.4 (29.7) | −5.3 (23.4)          | +0.1 (20.4)      | –                                     | –                                 |
+| TST (min)   | ST       | −22.6 (22.6) | −0.2 (7.5)           | −0.6 (8.1)       | −0.3 (7.9)                            | −1.0 (8.4)                        |
+| TST (min)   | HMC      | −38.3 (40.1) | −5.2 (19.6)          | −4.9 (19.4)      | −3.8 (20.7)                           | −3.2 (20.4)                       |
+| SOL (min)   | SC       | +4.4 (7.9)   | +1.0 (7.5)           | −1.8 (7.9)       | –                                     | –                                 |
+| SOL (min)   | ST       | +3.8 (4.0)   | +0.2 (2.3)           | −4.2 (5.0)       | +0.2 (2.5)                            | −3.4 (4.7)                        |
+| SOL (min)   | HMC      | +5.7 (7.0)   | +0.3 (5.0)           | −3.3 (7.0)       | −0.2 (5.4)                            | −3.6 (7.3)                        |
+| WASO (min)  | SC       | +29.7 (35.9) | +25.4 (33.6)         | +68.5 (72.5)     | –                                     | –                                 |
+| WASO (min)  | ST       | +17.4 (17.4) | +0.6 (7.3)           | +10.8 (13.8)     | +0.8 (7.6)                            | +9.4 (12.8)                       |
+| WASO (min)  | HMC      | +31.1 (34.5) | +5.5 (17.1)          | +9.9 (19.1)      | +5.2 (18.1)                           | +8.9 (19.8)                       |
+| REML (min)  | SC       | −6.3 (22.4)  | −6.0 (21.9)          | +4.0 (24.8)      | –                                     | –                                 |
+| REML (min)  | ST       | +5.1 (19.5)  | +0.5 (22.5)          | +17.9 (31.2)     | −1.0 (26.3)                           | +16.6 (31.0)                      |
+| REML (min)  | HMC      | −23.0 (36.2) | −29.1 (40.0)         | −28.2 (44.3)     | −27.8 (40.4)                          | −29.1 (45.8)                      |
+| N1% (pp)    | SC       | −9.1 (9.6)   | −5.1 (7.3)           | −5.7 (7.1)       | –                                     | –                                 |
+| N1% (pp)    | ST       | −4.5 (4.9)   | −3.0 (4.0)           | −3.2 (3.9)       | −2.8 (4.0)                            | −3.2 (4.0)                        |
+| N1% (pp)    | HMC      | −5.5 (7.0)   | −4.8 (6.4)           | −4.1 (5.3)       | −4.8 (6.6)                            | −4.1 (5.5)                        |
+| N2% (pp)    | SC       | +3.8 (9.0)   | +5.9 (9.3)           | +0.1 (7.6)       | –                                     | –                                 |
+| N2% (pp)    | ST       | +1.1 (7.8)   | +3.1 (8.9)           | −0.8 (8.5)       | +2.3 (8.8)                            | −1.6 (8.8)                        |
+| N2% (pp)    | HMC      | +10.4 (11.0) | +6.0 (7.9)           | −3.0 (6.7)       | +5.6 (8.1)                            | −3.3 (7.1)                        |
+| N3% (pp)    | SC       | +5.9 (6.6)   | −0.8 (3.8)           | +0.9 (4.4)       | –                                     | –                                 |
+| N3% (pp)    | ST       | +3.7 (6.3)   | −0.5 (6.4)           | +0.9 (6.5)       | −0.0 (6.6)                            | +1.8 (6.7)                        |
+| N3% (pp)    | HMC      | −4.8 (6.6)   | −1.3 (5.8)           | +3.2 (6.9)       | −1.1 (6.0)                            | +3.6 (7.3)                        |
+| REM% (pp)   | SC       | −0.5 (4.2)   | −0.1 (4.1)           | +4.6 (6.3)       | –                                     | –                                 |
+| REM% (pp)   | ST       | −0.2 (3.9)   | +0.5 (4.1)           | +3.1 (5.7)       | +0.5 (4.5)                            | +3.0 (5.8)                        |
+| REM% (pp)   | HMC      | −0.1 (4.2)   | +0.2 (4.0)           | +3.9 (5.4)       | +0.2 (4.3)                            | +3.8 (5.6)                        |
+
+
+**LightGBM stager: within-cohort validity and efficiency (honest protocol; as Table 2)**
 
 
 | Parameter   | Cohort   | Coverage (2.5–97.5 % over splits)   |   Mean width | IS ratio vs Distribution-free LoA (95% CI)   | IS ratio vs Regression-based LoA (95% CI)   | IS ratio vs Bland–Altman LoA (95% CI)   |
@@ -11009,3 +11042,642 @@ Per-night timings: 20 nights per cohort, original timing run. One-off costs were
 | lgbm_sc_s0 | ST       |      10 |              34 |           0.14  |                0.2  |              0.21 |             0.32 |         0.27 |
 | lgbm_sc_s0 | ST       |      20 |              24 |           0.139 |                0.15 |              0.17 |             0.17 |         0.19 |
 | lgbm_sc_s0 | ST       |      30 |              14 |           0.175 |                0.19 |              0.23 |             0.23 |         0.23 |
+
+
+# S19. Review workload and triage
+
+**Nights an interval leaves undecided are the nights to review.** For each threshold: share of nights left undecided (`frac_review`), misclassification rate of the recalibrated point estimate (`misclass_total`), share of those misclassifications that fall on undecided nights (`share_caught`) and the residual misclassification rate on decided nights.
+
+
+| stager     | cohort   | param   | method        |    n |   frac_review |   misclass_total |   share_caught |   misclass_resid_decided |
+|:-----------|:---------|:--------|:--------------|-----:|--------------:|-----------------:|---------------:|-------------------------:|
+| yasa       | pooled   | TST     | ba_loa        | 8672 |         0.461 |            0.087 |          0.878 |                    0.02  |
+| yasa       | pooled   | TST     | norm_reg_ffbs | 8672 |         0.361 |            0.087 |          0.904 |                    0.013 |
+| yasa       | pooled   | TST     | scp_abs_bc    | 8672 |         0.399 |            0.087 |          0.839 |                    0.023 |
+| yasa       | pooled   | TST     | scp_abs_cal   | 8672 |         0.452 |            0.087 |          0.904 |                    0.015 |
+| yasa       | pooled   | TST     | scp_signed    | 8672 |         0.396 |            0.087 |          0.9   |                    0.014 |
+| yasa       | HMC      | TST     | ba_loa        | 3750 |         0.554 |            0.093 |          0.914 |                    0.018 |
+| yasa       | HMC      | TST     | norm_reg_ffbs | 3750 |         0.408 |            0.093 |          0.931 |                    0.011 |
+| yasa       | HMC      | TST     | scp_abs_bc    | 3750 |         0.433 |            0.093 |          0.836 |                    0.027 |
+| yasa       | HMC      | TST     | scp_abs_cal   | 3750 |         0.496 |            0.093 |          0.951 |                    0.009 |
+| yasa       | HMC      | TST     | scp_signed    | 3750 |         0.431 |            0.093 |          0.937 |                    0.01  |
+| yasa       | pooled   | SOL     | ba_loa        | 8672 |         0.384 |            0.08  |          0.754 |                    0.032 |
+| yasa       | pooled   | SOL     | norm_reg_ffbs | 8672 |         0.274 |            0.08  |          0.852 |                    0.016 |
+| yasa       | pooled   | SOL     | scp_abs_bc    | 8672 |         0.281 |            0.08  |          0.656 |                    0.038 |
+| yasa       | pooled   | SOL     | scp_abs_cal   | 8672 |         0.318 |            0.08  |          0.592 |                    0.048 |
+| yasa       | pooled   | SOL     | scp_signed    | 8672 |         0.26  |            0.08  |          0.702 |                    0.032 |
+| yasa       | HMC      | SOL     | ba_loa        | 3750 |         0.319 |            0.075 |          0.684 |                    0.035 |
+| yasa       | HMC      | SOL     | norm_reg_ffbs | 3750 |         0.227 |            0.075 |          0.688 |                    0.03  |
+| yasa       | HMC      | SOL     | scp_abs_bc    | 3750 |         0.261 |            0.075 |          0.624 |                    0.038 |
+| yasa       | HMC      | SOL     | scp_abs_cal   | 3750 |         0.191 |            0.075 |          0.482 |                    0.048 |
+| yasa       | HMC      | SOL     | scp_signed    | 3750 |         0.185 |            0.075 |          0.645 |                    0.033 |
+| yasa       | pooled   | WASO    | ba_loa        | 8672 |         0.772 |            0.179 |          0.93  |                    0.055 |
+| yasa       | pooled   | WASO    | norm_reg_ffbs | 8672 |         0.709 |            0.179 |          0.932 |                    0.042 |
+| yasa       | pooled   | WASO    | scp_abs_bc    | 8672 |         0.739 |            0.179 |          0.917 |                    0.057 |
+| yasa       | pooled   | WASO    | scp_abs_cal   | 8672 |         0.737 |            0.179 |          0.921 |                    0.054 |
+| yasa       | pooled   | WASO    | scp_signed    | 8672 |         0.803 |            0.179 |          0.948 |                    0.047 |
+| yasa       | HMC      | WASO    | ba_loa        | 3750 |         0.799 |            0.144 |          0.965 |                    0.025 |
+| yasa       | HMC      | WASO    | norm_reg_ffbs | 3750 |         0.654 |            0.144 |          0.937 |                    0.026 |
+| yasa       | HMC      | WASO    | scp_abs_bc    | 3750 |         0.765 |            0.144 |          0.932 |                    0.042 |
+| yasa       | HMC      | WASO    | scp_abs_cal   | 3750 |         0.726 |            0.144 |          0.963 |                    0.019 |
+| yasa       | HMC      | WASO    | scp_signed    | 3750 |         0.831 |            0.144 |          0.972 |                    0.024 |
+| lgbm_sc_s0 | pooled   | TST     | ba_loa        | 8672 |         0.496 |            0.093 |          0.935 |                    0.012 |
+| lgbm_sc_s0 | pooled   | TST     | norm_reg_ffbs | 8672 |         0.406 |            0.093 |          0.955 |                    0.007 |
+| lgbm_sc_s0 | pooled   | TST     | scp_abs_bc    | 8672 |         0.514 |            0.093 |          0.94  |                    0.011 |
+| lgbm_sc_s0 | pooled   | TST     | scp_abs_cal   | 8672 |         0.487 |            0.093 |          0.942 |                    0.011 |
+| lgbm_sc_s0 | pooled   | TST     | scp_signed    | 8672 |         0.586 |            0.093 |          0.958 |                    0.009 |
+| lgbm_sc_s0 | HMC      | TST     | ba_loa        | 3750 |         0.712 |            0.126 |          0.985 |                    0.006 |
+| lgbm_sc_s0 | HMC      | TST     | norm_reg_ffbs | 3750 |         0.581 |            0.126 |          0.998 |                    0.001 |
+| lgbm_sc_s0 | HMC      | TST     | scp_abs_bc    | 3750 |         0.727 |            0.126 |          0.983 |                    0.008 |
+| lgbm_sc_s0 | HMC      | TST     | scp_abs_cal   | 3750 |         0.68  |            0.126 |          0.994 |                    0.002 |
+| lgbm_sc_s0 | HMC      | TST     | scp_signed    | 3750 |         0.786 |            0.126 |          0.987 |                    0.007 |
+| lgbm_sc_s0 | pooled   | SOL     | ba_loa        | 8672 |         0.569 |            0.065 |          0.794 |                    0.031 |
+| lgbm_sc_s0 | pooled   | SOL     | norm_reg_ffbs | 8672 |         0.308 |            0.065 |          0.773 |                    0.021 |
+| lgbm_sc_s0 | pooled   | SOL     | scp_abs_bc    | 8672 |         0.286 |            0.065 |          0.579 |                    0.038 |
+| lgbm_sc_s0 | pooled   | SOL     | scp_abs_cal   | 8672 |         0.226 |            0.065 |          0.542 |                    0.038 |
+| lgbm_sc_s0 | pooled   | SOL     | scp_signed    | 8672 |         0.502 |            0.065 |          0.664 |                    0.044 |
+| lgbm_sc_s0 | HMC      | SOL     | ba_loa        | 3750 |         0.548 |            0.05  |          0.679 |                    0.035 |
+| lgbm_sc_s0 | HMC      | SOL     | norm_reg_ffbs | 3750 |         0.35  |            0.05  |          0.561 |                    0.034 |
+| lgbm_sc_s0 | HMC      | SOL     | scp_abs_bc    | 3750 |         0.251 |            0.05  |          0.348 |                    0.043 |
+| lgbm_sc_s0 | HMC      | SOL     | scp_abs_cal   | 3750 |         0.177 |            0.05  |          0.401 |                    0.036 |
+| lgbm_sc_s0 | HMC      | SOL     | scp_signed    | 3750 |         0.392 |            0.05  |          0.428 |                    0.047 |
+| lgbm_sc_s0 | pooled   | WASO    | ba_loa        | 8672 |         0.81  |            0.222 |          0.952 |                    0.057 |
+| lgbm_sc_s0 | pooled   | WASO    | norm_reg_ffbs | 8672 |         0.695 |            0.222 |          0.932 |                    0.049 |
+| lgbm_sc_s0 | pooled   | WASO    | scp_abs_bc    | 8672 |         0.787 |            0.222 |          0.947 |                    0.055 |
+| lgbm_sc_s0 | pooled   | WASO    | scp_abs_cal   | 8672 |         0.732 |            0.222 |          0.941 |                    0.049 |
+| lgbm_sc_s0 | pooled   | WASO    | scp_signed    | 8672 |         0.834 |            0.222 |          0.964 |                    0.048 |
+| lgbm_sc_s0 | HMC      | WASO    | ba_loa        | 3750 |         0.835 |            0.31  |          0.987 |                    0.024 |
+| lgbm_sc_s0 | HMC      | WASO    | norm_reg_ffbs | 3750 |         0.689 |            0.31  |          0.985 |                    0.015 |
+| lgbm_sc_s0 | HMC      | WASO    | scp_abs_bc    | 3750 |         0.83  |            0.31  |          0.985 |                    0.028 |
+| lgbm_sc_s0 | HMC      | WASO    | scp_abs_cal   | 3750 |         0.754 |            0.31  |          1     |                    0     |
+| lgbm_sc_s0 | HMC      | WASO    | scp_signed    | 3750 |         0.845 |            0.31  |          0.988 |                    0.024 |
+
+
+**Triage curves for TST** (share of nights with an absolute error of the recalibrated TST > 30 min that remains after reviewing the stated share of nights, ranked by the stated signal).
+
+
+| stager     | cohort   | policy        |   review_frac |   resid_share_gt30 |
+|:-----------|:---------|:--------------|--------------:|-------------------:|
+| yasa       | HMC      | oracle        |           0.1 |              0.408 |
+| yasa       | HMC      | oracle        |           0.2 |              0.031 |
+| yasa       | HMC      | oracle        |           0.3 |              0     |
+| yasa       | HMC      | oracle        |           0.5 |              0     |
+| yasa       | HMC      | random        |           0.1 |              0.9   |
+| yasa       | HMC      | random        |           0.2 |              0.8   |
+| yasa       | HMC      | random        |           0.3 |              0.7   |
+| yasa       | HMC      | random        |           0.5 |              0.5   |
+| yasa       | HMC      | raw_minus_cal |           0.1 |              0.613 |
+| yasa       | HMC      | raw_minus_cal |           0.2 |              0.425 |
+| yasa       | HMC      | raw_minus_cal |           0.3 |              0.265 |
+| yasa       | HMC      | raw_minus_cal |           0.5 |              0.128 |
+| yasa       | HMC      | width         |           0.1 |              0.567 |
+| yasa       | HMC      | width         |           0.2 |              0.317 |
+| yasa       | HMC      | width         |           0.3 |              0.237 |
+| yasa       | HMC      | width         |           0.5 |              0.099 |
+| yasa       | SC       | oracle        |           0.1 |              0.545 |
+| yasa       | SC       | oracle        |           0.2 |              0.161 |
+| yasa       | SC       | oracle        |           0.3 |              0.007 |
+| yasa       | SC       | oracle        |           0.5 |              0     |
+| yasa       | SC       | random        |           0.1 |              0.9   |
+| yasa       | SC       | random        |           0.2 |              0.8   |
+| yasa       | SC       | random        |           0.3 |              0.7   |
+| yasa       | SC       | random        |           0.5 |              0.5   |
+| yasa       | SC       | raw_minus_cal |           0.1 |              0.788 |
+| yasa       | SC       | raw_minus_cal |           0.2 |              0.613 |
+| yasa       | SC       | raw_minus_cal |           0.3 |              0.47  |
+| yasa       | SC       | raw_minus_cal |           0.5 |              0.255 |
+| yasa       | SC       | width         |           0.1 |              0.767 |
+| yasa       | SC       | width         |           0.2 |              0.59  |
+| yasa       | SC       | width         |           0.3 |              0.455 |
+| yasa       | SC       | width         |           0.5 |              0.205 |
+| yasa       | ST       | oracle        |           0.1 |              0     |
+| yasa       | ST       | oracle        |           0.2 |              0     |
+| yasa       | ST       | oracle        |           0.3 |              0     |
+| yasa       | ST       | oracle        |           0.5 |              0     |
+| yasa       | ST       | random        |           0.1 |              0.9   |
+| yasa       | ST       | random        |           0.2 |              0.8   |
+| yasa       | ST       | random        |           0.3 |              0.7   |
+| yasa       | ST       | random        |           0.5 |              0.5   |
+| yasa       | ST       | raw_minus_cal |           0.1 |              0     |
+| yasa       | ST       | raw_minus_cal |           0.2 |              0     |
+| yasa       | ST       | raw_minus_cal |           0.3 |              0     |
+| yasa       | ST       | raw_minus_cal |           0.5 |              0     |
+| yasa       | ST       | width         |           0.1 |              0.125 |
+| yasa       | ST       | width         |           0.2 |              0     |
+| yasa       | ST       | width         |           0.3 |              0     |
+| yasa       | ST       | width         |           0.5 |              0     |
+| yasa       | pooled   | oracle        |           0.1 |              0.461 |
+| yasa       | pooled   | oracle        |           0.2 |              0.014 |
+| yasa       | pooled   | oracle        |           0.3 |              0     |
+| yasa       | pooled   | oracle        |           0.5 |              0     |
+| yasa       | pooled   | random        |           0.1 |              0.9   |
+| yasa       | pooled   | random        |           0.2 |              0.8   |
+| yasa       | pooled   | random        |           0.3 |              0.7   |
+| yasa       | pooled   | random        |           0.5 |              0.5   |
+| yasa       | pooled   | raw_minus_cal |           0.1 |              0.729 |
+| yasa       | pooled   | raw_minus_cal |           0.2 |              0.568 |
+| yasa       | pooled   | raw_minus_cal |           0.3 |              0.478 |
+| yasa       | pooled   | raw_minus_cal |           0.5 |              0.295 |
+| yasa       | pooled   | width         |           0.1 |              0.698 |
+| yasa       | pooled   | width         |           0.2 |              0.508 |
+| yasa       | pooled   | width         |           0.3 |              0.37  |
+| yasa       | pooled   | width         |           0.5 |              0.189 |
+| lgbm_sc_s0 | HMC      | oracle        |           0.1 |              0.666 |
+| lgbm_sc_s0 | HMC      | oracle        |           0.2 |              0.373 |
+| lgbm_sc_s0 | HMC      | oracle        |           0.3 |              0.122 |
+| lgbm_sc_s0 | HMC      | oracle        |           0.5 |              0     |
+| lgbm_sc_s0 | HMC      | random        |           0.1 |              0.9   |
+| lgbm_sc_s0 | HMC      | random        |           0.2 |              0.8   |
+| lgbm_sc_s0 | HMC      | random        |           0.3 |              0.7   |
+| lgbm_sc_s0 | HMC      | random        |           0.5 |              0.5   |
+| lgbm_sc_s0 | HMC      | raw_minus_cal |           0.1 |              0.763 |
+| lgbm_sc_s0 | HMC      | raw_minus_cal |           0.2 |              0.575 |
+| lgbm_sc_s0 | HMC      | raw_minus_cal |           0.3 |              0.405 |
+| lgbm_sc_s0 | HMC      | raw_minus_cal |           0.5 |              0.202 |
+| lgbm_sc_s0 | HMC      | width         |           0.1 |              0.682 |
+| lgbm_sc_s0 | HMC      | width         |           0.2 |              0.488 |
+| lgbm_sc_s0 | HMC      | width         |           0.3 |              0.367 |
+| lgbm_sc_s0 | HMC      | width         |           0.5 |              0.176 |
+| lgbm_sc_s0 | SC       | oracle        |           0.1 |              0.244 |
+| lgbm_sc_s0 | SC       | oracle        |           0.2 |              0     |
+| lgbm_sc_s0 | SC       | oracle        |           0.3 |              0     |
+| lgbm_sc_s0 | SC       | oracle        |           0.5 |              0     |
+| lgbm_sc_s0 | SC       | random        |           0.1 |              0.9   |
+| lgbm_sc_s0 | SC       | random        |           0.2 |              0.8   |
+| lgbm_sc_s0 | SC       | random        |           0.3 |              0.7   |
+| lgbm_sc_s0 | SC       | random        |           0.5 |              0.5   |
+| lgbm_sc_s0 | SC       | raw_minus_cal |           0.1 |              0.667 |
+| lgbm_sc_s0 | SC       | raw_minus_cal |           0.2 |              0.507 |
+| lgbm_sc_s0 | SC       | raw_minus_cal |           0.3 |              0.364 |
+| lgbm_sc_s0 | SC       | raw_minus_cal |           0.5 |              0.135 |
+| lgbm_sc_s0 | SC       | width         |           0.1 |              0.673 |
+| lgbm_sc_s0 | SC       | width         |           0.2 |              0.516 |
+| lgbm_sc_s0 | SC       | width         |           0.3 |              0.316 |
+| lgbm_sc_s0 | SC       | width         |           0.5 |              0.097 |
+| lgbm_sc_s0 | ST       | oracle        |           0.1 |              0.123 |
+| lgbm_sc_s0 | ST       | oracle        |           0.2 |              0.027 |
+| lgbm_sc_s0 | ST       | oracle        |           0.3 |              0     |
+| lgbm_sc_s0 | ST       | oracle        |           0.5 |              0     |
+| lgbm_sc_s0 | ST       | random        |           0.1 |              0.9   |
+| lgbm_sc_s0 | ST       | random        |           0.2 |              0.8   |
+| lgbm_sc_s0 | ST       | random        |           0.3 |              0.7   |
+| lgbm_sc_s0 | ST       | random        |           0.5 |              0.5   |
+| lgbm_sc_s0 | ST       | raw_minus_cal |           0.1 |              0.594 |
+| lgbm_sc_s0 | ST       | raw_minus_cal |           0.2 |              0.492 |
+| lgbm_sc_s0 | ST       | raw_minus_cal |           0.3 |              0.414 |
+| lgbm_sc_s0 | ST       | raw_minus_cal |           0.5 |              0.329 |
+| lgbm_sc_s0 | ST       | width         |           0.1 |              0.528 |
+| lgbm_sc_s0 | ST       | width         |           0.2 |              0.381 |
+| lgbm_sc_s0 | ST       | width         |           0.3 |              0.23  |
+| lgbm_sc_s0 | ST       | width         |           0.5 |              0.073 |
+| lgbm_sc_s0 | pooled   | oracle        |           0.1 |              0.538 |
+| lgbm_sc_s0 | pooled   | oracle        |           0.2 |              0.085 |
+| lgbm_sc_s0 | pooled   | oracle        |           0.3 |              0     |
+| lgbm_sc_s0 | pooled   | oracle        |           0.5 |              0     |
+| lgbm_sc_s0 | pooled   | random        |           0.1 |              0.9   |
+| lgbm_sc_s0 | pooled   | random        |           0.2 |              0.8   |
+| lgbm_sc_s0 | pooled   | random        |           0.3 |              0.7   |
+| lgbm_sc_s0 | pooled   | random        |           0.5 |              0.5   |
+| lgbm_sc_s0 | pooled   | raw_minus_cal |           0.1 |              0.701 |
+| lgbm_sc_s0 | pooled   | raw_minus_cal |           0.2 |              0.471 |
+| lgbm_sc_s0 | pooled   | raw_minus_cal |           0.3 |              0.343 |
+| lgbm_sc_s0 | pooled   | raw_minus_cal |           0.5 |              0.158 |
+| lgbm_sc_s0 | pooled   | width         |           0.1 |              0.643 |
+| lgbm_sc_s0 | pooled   | width         |           0.2 |              0.476 |
+| lgbm_sc_s0 | pooled   | width         |           0.3 |              0.385 |
+| lgbm_sc_s0 | pooled   | width         |           0.5 |              0.215 |
+
+
+# S18. Independent validation on two multi-scorer cohorts (Dreem Open Datasets)
+
+DOD-H (25 healthy volunteers) and DOD-O (55 patients with suspected sleep apnoea), one night each, five scorers per night, AASM scoring. Stager: YASA, unchanged (C3-M2 and EOG1-EOG2). Reference: the consensus hypnogram of the dataset unless stated. Protocol as in the primary analysis (50 subject-grouped 50/50 splits; every label-dependent component fitted on the calibration nights only). `DOD` pools both datasets.
+
+**Within-cohort validity and efficiency**
+
+
+| cohort   | param   | method        |   coverage |   cov_p025 |   cov_p975 |   mean_width |   interval_score |   n_cal |   n_test |   inf_width |
+|:---------|:--------|:--------------|-----------:|-----------:|-----------:|-------------:|-----------------:|--------:|---------:|------------:|
+| DOD      | N1%     | ba_loa        |      0.936 |      0.781 |      1     |       14.623 |           21.548 |      40 |       40 |           0 |
+| DOD      | N1%     | norm_reg_ffbs |      0.924 |      0.825 |      1     |       12.398 |           18.409 |      40 |       40 |           0 |
+| DOD      | N1%     | scp_abs_cal   |      0.9   |      0.736 |      0.994 |       12.692 |           24.282 |      40 |       40 |           0 |
+| DOD      | N1%     | scp_signed    |      0.9   |      0.756 |      1     |       15.931 |           24.43  |      40 |       40 |           0 |
+| DOD      | N2%     | ba_loa        |      0.918 |      0.811 |      1     |       26.264 |           36.029 |      40 |       40 |           0 |
+| DOD      | N2%     | norm_reg_ffbs |      0.928 |      0.825 |      1     |       26.271 |           33.051 |      40 |       40 |           0 |
+| DOD      | N2%     | scp_abs_cal   |      0.916 |      0.775 |      1     |       26.576 |           35.402 |      40 |       40 |           0 |
+| DOD      | N2%     | scp_signed    |      0.918 |      0.825 |      1     |       29.069 |           39.052 |      40 |       40 |           0 |
+| DOD      | N3%     | ba_loa        |      0.896 |      0.8   |      0.975 |       18.302 |           28.396 |      40 |       40 |           0 |
+| DOD      | N3%     | norm_reg_ffbs |      0.908 |      0.761 |      0.975 |       21.185 |           28.18  |      40 |       40 |           0 |
+| DOD      | N3%     | scp_abs_cal   |      0.912 |      0.756 |      1     |       18.774 |           25.826 |      40 |       40 |           0 |
+| DOD      | N3%     | scp_signed    |      0.914 |      0.767 |      1     |       19.607 |           29.06  |      40 |       40 |           0 |
+| DOD      | REM%    | ba_loa        |      0.914 |      0.831 |      0.975 |       11.408 |           14.944 |      40 |       40 |           0 |
+| DOD      | REM%    | norm_reg_ffbs |      0.916 |      0.8   |      1     |       13.571 |           18.813 |      40 |       40 |           0 |
+| DOD      | REM%    | scp_abs_cal   |      0.92  |      0.8   |      1     |       12.674 |           16.305 |      40 |       40 |           0 |
+| DOD      | REM%    | scp_signed    |      0.92  |      0.761 |      1     |       12.092 |           15.052 |      40 |       40 |           0 |
+| DOD      | REML    | ba_loa        |      0.893 |      0.795 |      0.994 |      285.616 |          386.313 |      39 |       39 |           0 |
+| DOD      | REML    | norm_reg_ffbs |      0.915 |      0.796 |      0.994 |      213.997 |          345.575 |      39 |       39 |           0 |
+| DOD      | REML    | scp_abs_cal   |      0.913 |      0.774 |      1     |      311.582 |          389.002 |      39 |       39 |           0 |
+| DOD      | REML    | scp_signed    |      0.928 |      0.842 |      1     |      305.164 |          372.314 |      39 |       39 |           0 |
+| DOD      | SOL     | ba_loa        |      0.958 |      0.85  |      1     |       26.204 |           45.797 |      40 |       40 |           0 |
+| DOD      | SOL     | norm_reg_ffbs |      0.914 |      0.75  |      0.994 |       28.409 |           53.805 |      40 |       40 |           0 |
+| DOD      | SOL     | scp_abs_cal   |      0.914 |      0.781 |      1     |       13.792 |           38.527 |      40 |       40 |           0 |
+| DOD      | SOL     | scp_signed    |      0.902 |      0.756 |      0.994 |       24.959 |           47.864 |      40 |       40 |           0 |
+| DOD      | TST     | ba_loa        |      0.934 |      0.856 |      1     |       85.119 |          125.438 |      40 |       40 |           0 |
+| DOD      | TST     | norm_reg_ffbs |      0.928 |      0.831 |      1     |       64.493 |           97.025 |      40 |       40 |           0 |
+| DOD      | TST     | scp_abs_cal   |      0.924 |      0.825 |      1     |       75.54  |          120.64  |      40 |       40 |           0 |
+| DOD      | TST     | scp_signed    |      0.922 |      0.825 |      1     |       87.75  |          132.88  |      40 |       40 |           0 |
+| DOD      | WASO    | ba_loa        |      0.914 |      0.856 |      0.994 |       79.238 |          126.903 |      40 |       40 |           0 |
+| DOD      | WASO    | norm_reg_ffbs |      0.92  |      0.806 |      1     |       90.404 |          139.865 |      40 |       40 |           0 |
+| DOD      | WASO    | scp_abs_cal   |      0.914 |      0.806 |      0.994 |       76.88  |          129.044 |      40 |       40 |           0 |
+| DOD      | WASO    | scp_signed    |      0.92  |      0.825 |      0.994 |       74.74  |          120.916 |      40 |       40 |           0 |
+| DODH     | N1%     | ba_loa        |      0.875 |      0.692 |      1     |        9.515 |           12.816 |      12 |       13 |           0 |
+| DODH     | N1%     | norm_reg_ffbs |      0.948 |      0.787 |      1     |       12.386 |           13.807 |      12 |       13 |           0 |
+| DODH     | N1%     | scp_abs_cal   |      0.949 |      0.769 |      1     |       13.468 |           15.748 |      12 |       13 |           0 |
+| DODH     | N1%     | scp_signed    |      1     |      1     |      1     |      100     |          100     |      12 |       13 |           0 |
+| DODH     | N2%     | ba_loa        |      0.878 |      0.556 |      1     |       16.945 |           25.629 |      12 |       13 |           0 |
+| DODH     | N2%     | norm_reg_ffbs |      0.915 |      0.71  |      1     |       25.504 |           30.918 |      12 |       13 |           0 |
+| DODH     | N2%     | scp_abs_cal   |      0.903 |      0.615 |      1     |       19.443 |           23.777 |      12 |       13 |           0 |
+| DODH     | N2%     | scp_signed    |      1     |      1     |      1     |      100     |          100     |      12 |       13 |           0 |
+| DODH     | N3%     | ba_loa        |      0.897 |      0.65  |      1     |       17.34  |           30.56  |      12 |       13 |           0 |
+| DODH     | N3%     | norm_reg_ffbs |      0.92  |      0.769 |      1     |       29.437 |           41.009 |      12 |       13 |           0 |
+| DODH     | N3%     | scp_abs_cal   |      0.923 |      0.71  |      1     |       22.799 |           32.694 |      12 |       13 |           0 |
+| DODH     | N3%     | scp_signed    |      1     |      1     |      1     |      100     |          100     |      12 |       13 |           0 |
+| DODH     | REM%    | ba_loa        |      0.937 |      0.769 |      1     |        7.868 |            8.597 |      12 |       13 |           0 |
+| DODH     | REM%    | norm_reg_ffbs |      0.931 |      0.769 |      1     |       15.684 |           17.457 |      12 |       13 |           0 |
+| DODH     | REM%    | scp_abs_cal   |      0.937 |      0.769 |      1     |       11.097 |           12.756 |      12 |       13 |           0 |
+| DODH     | REM%    | scp_signed    |      1     |      1     |      1     |      100     |          100     |      12 |       13 |           0 |
+| DODH     | REML    | ba_loa        |      0.886 |      0.692 |      1     |      183.241 |          331.13  |      12 |       13 |           0 |
+| DODH     | REML    | norm_reg_ffbs |      0.923 |      0.633 |      1     |      134.898 |          172.529 |      12 |       13 |           0 |
+| DODH     | REML    | scp_abs_cal   |      0.94  |      0.769 |      1     |      245.635 |          297.251 |      12 |       13 |           0 |
+| DODH     | REML    | scp_signed    |      1     |      1     |      1     |      inf     |          nan     |      12 |       13 |           1 |
+| DODH     | SOL     | ba_loa        |      0.894 |      0.633 |      1     |       29.744 |           92.549 |      12 |       13 |           0 |
+| DODH     | SOL     | norm_reg_ffbs |      0.931 |      0.769 |      1     |       49.41  |          102.664 |      12 |       13 |           0 |
+| DODH     | SOL     | scp_abs_cal   |      0.905 |      0.633 |      1     |       41.422 |          101.945 |      12 |       13 |           0 |
+| DODH     | SOL     | scp_signed    |      1     |      1     |      1     |      inf     |          nan     |      12 |       13 |           1 |
+| DODH     | TST     | ba_loa        |      0.898 |      0.633 |      1     |       36.206 |           44.006 |      12 |       13 |           0 |
+| DODH     | TST     | norm_reg_ffbs |      0.92  |      0.573 |      1     |       42.725 |           47.905 |      12 |       13 |           0 |
+| DODH     | TST     | scp_abs_cal   |      0.909 |      0.615 |      1     |       38.88  |           49.203 |      12 |       13 |           0 |
+| DODH     | TST     | scp_signed    |      1     |      1     |      1     |      inf     |          nan     |      12 |       13 |           1 |
+| DODH     | WASO    | ba_loa        |      0.872 |      0.556 |      1     |       42.106 |           89.804 |      12 |       13 |           0 |
+| DODH     | WASO    | norm_reg_ffbs |      0.914 |      0.633 |      1     |       71.457 |          103.33  |      12 |       13 |           0 |
+| DODH     | WASO    | scp_abs_cal   |      0.9   |      0.692 |      1     |       53.062 |           90.278 |      12 |       13 |           0 |
+| DODH     | WASO    | scp_signed    |      1     |      1     |      1     |      inf     |          nan     |      12 |       13 |           1 |
+| DODO     | N1%     | ba_loa        |      0.942 |      0.823 |      1     |       16.011 |           24.82  |      28 |       27 |           0 |
+| DODO     | N1%     | norm_reg_ffbs |      0.943 |      0.786 |      1     |       14.493 |           21.136 |      28 |       27 |           0 |
+| DODO     | N1%     | scp_abs_cal   |      0.943 |      0.852 |      1     |       18.773 |           28.561 |      28 |       27 |           0 |
+| DODO     | N1%     | scp_signed    |      0.947 |      0.823 |      1     |       25.069 |           29.384 |      28 |       27 |           0 |
+| DODO     | N2%     | ba_loa        |      0.9   |      0.778 |      1     |       29.818 |           40.451 |      28 |       27 |           0 |
+| DODO     | N2%     | norm_reg_ffbs |      0.94  |      0.778 |      1     |       34.266 |           39.106 |      28 |       27 |           0 |
+| DODO     | N2%     | scp_abs_cal   |      0.939 |      0.815 |      1     |       37.664 |           46.516 |      28 |       27 |           0 |
+| DODO     | N2%     | scp_signed    |      0.947 |      0.815 |      1     |       40.33  |           45.655 |      28 |       27 |           0 |
+| DODO     | N3%     | ba_loa        |      0.897 |      0.778 |      1     |       18.922 |           28.8   |      28 |       27 |           0 |
+| DODO     | N3%     | norm_reg_ffbs |      0.944 |      0.823 |      1     |       23.127 |           26.11  |      28 |       27 |           0 |
+| DODO     | N3%     | scp_abs_cal   |      0.93  |      0.786 |      1     |       19.801 |           24.738 |      28 |       27 |           0 |
+| DODO     | N3%     | scp_signed    |      0.936 |      0.794 |      1     |       25.734 |           32.728 |      28 |       27 |           0 |
+| DODO     | REM%    | ba_loa        |      0.879 |      0.72  |      0.963 |       12.233 |           16.448 |      28 |       27 |           0 |
+| DODO     | REM%    | norm_reg_ffbs |      0.92  |      0.741 |      1     |       17.516 |           22.768 |      28 |       27 |           0 |
+| DODO     | REM%    | scp_abs_cal   |      0.933 |      0.749 |      1     |       15.876 |           18.93  |      28 |       27 |           0 |
+| DODO     | REM%    | scp_signed    |      0.938 |      0.749 |      1     |       15.335 |           17.546 |      28 |       27 |           0 |
+| DODO     | REML    | ba_loa        |      0.925 |      0.802 |      1     |      310.039 |          367.04  |      27 |       26 |           0 |
+| DODO     | REML    | norm_reg_ffbs |      0.93  |      0.756 |      1     |      314.49  |          441.734 |      27 |       26 |           0 |
+| DODO     | REML    | scp_abs_cal   |      0.936 |      0.802 |      1     |      345.089 |          393.615 |      27 |       26 |           0 |
+| DODO     | REML    | scp_signed    |      0.913 |      0.739 |      1     |      310.976 |          366.717 |      27 |       26 |           0 |
+| DODO     | SOL     | ba_loa        |      0.941 |      0.741 |      1     |       17.827 |           31.211 |      28 |       27 |           0 |
+| DODO     | SOL     | norm_reg_ffbs |      0.929 |      0.815 |      1     |       30.89  |           43.472 |      28 |       27 |           0 |
+| DODO     | SOL     | scp_abs_cal   |      0.932 |      0.815 |      1     |       16.363 |           30.133 |      28 |       27 |           0 |
+| DODO     | SOL     | scp_signed    |      0.939 |      0.778 |      1     |       31.276 |           44.143 |      28 |       27 |           0 |
+| DODO     | TST     | ba_loa        |      0.911 |      0.778 |      1     |       99.326 |          155.77  |      28 |       27 |           0 |
+| DODO     | TST     | norm_reg_ffbs |      0.937 |      0.778 |      1     |       90.652 |          130.453 |      28 |       27 |           0 |
+| DODO     | TST     | scp_abs_cal   |      0.944 |      0.778 |      1     |      132.36  |          178.841 |      28 |       27 |           0 |
+| DODO     | TST     | scp_signed    |      0.933 |      0.749 |      1     |      155.28  |          198.932 |      28 |       27 |           0 |
+| DODO     | WASO    | ba_loa        |      0.913 |      0.749 |      1     |       92.16  |          154.917 |      28 |       27 |           0 |
+| DODO     | WASO    | norm_reg_ffbs |      0.939 |      0.815 |      1     |      125.085 |          170.024 |      28 |       27 |           0 |
+| DODO     | WASO    | scp_abs_cal   |      0.94  |      0.778 |      1     |      115.052 |          164.356 |      28 |       27 |           0 |
+| DODO     | WASO    | scp_signed    |      0.941 |      0.757 |      1     |      133.896 |          181.325 |      28 |       27 |           0 |
+
+
+**Few-night local calibration**
+
+
+| cohort   |   n_target | param   | method        |   coverage |   p_cov_lt80 |   mean_width |   n_test |
+|:---------|-----------:|:--------|:--------------|-----------:|-------------:|-------------:|---------:|
+| DODH     |         10 | N1%     | ba_loa        |      0.881 |         0.1  |        9.792 |       15 |
+| DODH     |         10 | N1%     | norm_reg_ffbs |      0.941 |         0.02 |       12.04  |       15 |
+| DODH     |         10 | N1%     | scp_abs_cal   |      0.943 |         0.06 |       13.258 |       15 |
+| DODH     |         10 | N2%     | ba_loa        |      0.872 |         0.16 |       16.883 |       15 |
+| DODH     |         10 | N2%     | norm_reg_ffbs |      0.904 |         0.08 |       24.348 |       15 |
+| DODH     |         10 | N2%     | scp_abs_cal   |      0.883 |         0.18 |       18.203 |       15 |
+| DODH     |         10 | N3%     | ba_loa        |      0.881 |         0.1  |       16.706 |       15 |
+| DODH     |         10 | N3%     | norm_reg_ffbs |      0.903 |         0.06 |       26.104 |       15 |
+| DODH     |         10 | N3%     | scp_abs_cal   |      0.897 |         0.14 |       19.439 |       15 |
+| DODH     |         10 | REM%    | ba_loa        |      0.947 |         0.02 |        8.106 |       15 |
+| DODH     |         10 | REM%    | norm_reg_ffbs |      0.931 |         0.04 |       15.584 |       15 |
+| DODH     |         10 | REM%    | scp_abs_cal   |      0.924 |         0.06 |       10.422 |       15 |
+| DODH     |         10 | REML    | ba_loa        |      0.887 |         0.12 |      188.85  |       15 |
+| DODH     |         10 | REML    | norm_reg_ffbs |      0.897 |         0.14 |      121.478 |       15 |
+| DODH     |         10 | REML    | scp_abs_cal   |      0.928 |         0.06 |      235.192 |       15 |
+| DODH     |         10 | SOL     | ba_loa        |      0.889 |         0.14 |       29.16  |       15 |
+| DODH     |         10 | SOL     | norm_reg_ffbs |      0.909 |         0.08 |       42.217 |       15 |
+| DODH     |         10 | SOL     | scp_abs_cal   |      0.899 |         0.12 |       36.992 |       15 |
+| DODH     |         10 | TST     | ba_loa        |      0.895 |         0.14 |       37.669 |       15 |
+| DODH     |         10 | TST     | norm_reg_ffbs |      0.901 |         0.12 |       40.902 |       15 |
+| DODH     |         10 | TST     | scp_abs_cal   |      0.896 |         0.1  |       36.86  |       15 |
+| DODH     |         10 | WASO    | ba_loa        |      0.868 |         0.22 |       42.257 |       15 |
+| DODH     |         10 | WASO    | norm_reg_ffbs |      0.905 |         0.1  |       67.982 |       15 |
+| DODH     |         10 | WASO    | scp_abs_cal   |      0.884 |         0.16 |       48.923 |       15 |
+| DODO     |         10 | N1%     | ba_loa        |      0.903 |         0.1  |       16.691 |       45 |
+| DODO     |         10 | N1%     | norm_reg_ffbs |      0.93  |         0.04 |       17.682 |       45 |
+| DODO     |         10 | N1%     | scp_abs_cal   |      0.924 |         0.08 |       19.708 |       45 |
+| DODO     |         10 | N2%     | ba_loa        |      0.885 |         0.16 |       31.785 |       45 |
+| DODO     |         10 | N2%     | norm_reg_ffbs |      0.913 |         0.14 |       35.393 |       45 |
+| DODO     |         10 | N2%     | scp_abs_cal   |      0.914 |         0.08 |       40.558 |       45 |
+| DODO     |         10 | N3%     | ba_loa        |      0.874 |         0.18 |       19.201 |       45 |
+| DODO     |         10 | N3%     | norm_reg_ffbs |      0.92  |         0.08 |       24.071 |       45 |
+| DODO     |         10 | N3%     | scp_abs_cal   |      0.899 |         0.14 |       20.071 |       45 |
+| DODO     |         10 | REM%    | ba_loa        |      0.898 |         0.12 |       13.969 |       45 |
+| DODO     |         10 | REM%    | norm_reg_ffbs |      0.931 |         0.06 |       19.134 |       45 |
+| DODO     |         10 | REM%    | scp_abs_cal   |      0.92  |         0.08 |       17.135 |       45 |
+| DODO     |         10 | REML    | ba_loa        |      0.908 |         0.12 |      324.804 |       43 |
+| DODO     |         10 | REML    | norm_reg_ffbs |      0.913 |         0.18 |      inf     |       43 |
+| DODO     |         10 | REML    | scp_abs_cal   |      0.925 |         0.1  |      inf     |       43 |
+| DODO     |         10 | SOL     | ba_loa        |      0.902 |         0.08 |       17.078 |       45 |
+| DODO     |         10 | SOL     | norm_reg_ffbs |      0.918 |         0.08 |       30.897 |       45 |
+| DODO     |         10 | SOL     | scp_abs_cal   |      0.936 |         0.04 |       24.881 |       45 |
+| DODO     |         10 | TST     | ba_loa        |      0.893 |         0.08 |      104.866 |       45 |
+| DODO     |         10 | TST     | norm_reg_ffbs |      0.911 |         0.12 |      113.375 |       45 |
+| DODO     |         10 | TST     | scp_abs_cal   |      0.912 |         0.1  |      133.9   |       45 |
+| DODO     |         10 | WASO    | ba_loa        |      0.898 |         0.04 |       97.544 |       45 |
+| DODO     |         10 | WASO    | norm_reg_ffbs |      0.924 |         0.04 |      124.629 |       45 |
+| DODO     |         10 | WASO    | scp_abs_cal   |      0.907 |         0.08 |      111.586 |       45 |
+| DODO     |         20 | N1%     | ba_loa        |      0.929 |         0.02 |       16.238 |       35 |
+| DODO     |         20 | N1%     | norm_reg_ffbs |      0.928 |         0.04 |       13.525 |       35 |
+| DODO     |         20 | N1%     | scp_abs_cal   |      0.925 |         0.02 |       16.803 |       35 |
+| DODO     |         20 | N2%     | ba_loa        |      0.902 |         0.06 |       30.743 |       35 |
+| DODO     |         20 | N2%     | norm_reg_ffbs |      0.92  |         0.1  |       31.854 |       35 |
+| DODO     |         20 | N2%     | scp_abs_cal   |      0.925 |         0.08 |       35.343 |       35 |
+| DODO     |         20 | N3%     | ba_loa        |      0.905 |         0    |       19.926 |       35 |
+| DODO     |         20 | N3%     | norm_reg_ffbs |      0.925 |         0.08 |       22.523 |       35 |
+| DODO     |         20 | N3%     | scp_abs_cal   |      0.923 |         0.04 |       19.524 |       35 |
+| DODO     |         20 | REM%    | ba_loa        |      0.901 |         0.08 |       12.858 |       35 |
+| DODO     |         20 | REM%    | norm_reg_ffbs |      0.905 |         0.1  |       15.142 |       35 |
+| DODO     |         20 | REM%    | scp_abs_cal   |      0.923 |         0.02 |       15.103 |       35 |
+| DODO     |         20 | REML    | ba_loa        |      0.907 |         0.1  |      309.767 |       34 |
+| DODO     |         20 | REML    | norm_reg_ffbs |      0.915 |         0.08 |      287.967 |       34 |
+| DODO     |         20 | REML    | scp_abs_cal   |      0.913 |         0.06 |      333.572 |       34 |
+| DODO     |         20 | SOL     | ba_loa        |      0.927 |         0.04 |       16.762 |       35 |
+| DODO     |         20 | SOL     | norm_reg_ffbs |      0.911 |         0.06 |       29.029 |       35 |
+| DODO     |         20 | SOL     | scp_abs_cal   |      0.912 |         0.06 |       14.158 |       35 |
+| DODO     |         20 | TST     | ba_loa        |      0.906 |         0.04 |      101.014 |       35 |
+| DODO     |         20 | TST     | norm_reg_ffbs |      0.914 |         0.06 |       83.284 |       35 |
+| DODO     |         20 | TST     | scp_abs_cal   |      0.909 |         0.06 |      106.7   |       35 |
+| DODO     |         20 | WASO    | ba_loa        |      0.907 |         0.06 |       94.412 |       35 |
+| DODO     |         20 | WASO    | norm_reg_ffbs |      0.916 |         0.04 |      111.891 |       35 |
+| DODO     |         20 | WASO    | scp_abs_cal   |      0.91  |         0.02 |       97.707 |       35 |
+| DODO     |         30 | N1%     | ba_loa        |      0.938 |         0    |       15.953 |       25 |
+| DODO     |         30 | N1%     | norm_reg_ffbs |      0.912 |         0.04 |       12.576 |       25 |
+| DODO     |         30 | N1%     | scp_abs_cal   |      0.92  |         0.02 |       14.605 |       25 |
+| DODO     |         30 | N2%     | ba_loa        |      0.896 |         0.04 |       29.716 |       25 |
+| DODO     |         30 | N2%     | norm_reg_ffbs |      0.912 |         0.1  |       29.458 |       25 |
+| DODO     |         30 | N2%     | scp_abs_cal   |      0.928 |         0.06 |       32.702 |       25 |
+| DODO     |         30 | N3%     | ba_loa        |      0.898 |         0.04 |       19.015 |       25 |
+| DODO     |         30 | N3%     | norm_reg_ffbs |      0.915 |         0.02 |       20.956 |       25 |
+| DODO     |         30 | N3%     | scp_abs_cal   |      0.911 |         0.02 |       18.594 |       25 |
+| DODO     |         30 | REM%    | ba_loa        |      0.879 |         0.06 |       12.236 |       25 |
+| DODO     |         30 | REM%    | norm_reg_ffbs |      0.897 |         0.14 |       13.57  |       25 |
+| DODO     |         30 | REM%    | scp_abs_cal   |      0.908 |         0.08 |       14.169 |       25 |
+| DODO     |         30 | REML    | ba_loa        |      0.917 |         0.08 |      307.385 |       24 |
+| DODO     |         30 | REML    | norm_reg_ffbs |      0.915 |         0.08 |      265.504 |       24 |
+| DODO     |         30 | REML    | scp_abs_cal   |      0.915 |         0.1  |      331.924 |       24 |
+| DODO     |         30 | SOL     | ba_loa        |      0.957 |         0.04 |       18.387 |       25 |
+| DODO     |         30 | SOL     | norm_reg_ffbs |      0.913 |         0.04 |       28.353 |       25 |
+| DODO     |         30 | SOL     | scp_abs_cal   |      0.922 |         0.04 |       13.478 |       25 |
+| DODO     |         30 | TST     | ba_loa        |      0.916 |         0.02 |       99.524 |       25 |
+| DODO     |         30 | TST     | norm_reg_ffbs |      0.92  |         0.02 |       76.098 |       25 |
+| DODO     |         30 | TST     | scp_abs_cal   |      0.92  |         0    |       97.04  |       25 |
+| DODO     |         30 | WASO    | ba_loa        |      0.914 |         0.04 |       91.759 |       25 |
+| DODO     |         30 | WASO    | norm_reg_ffbs |      0.911 |         0.06 |      101.902 |       25 |
+| DODO     |         30 | WASO    | scp_abs_cal   |      0.921 |         0.04 |       92.382 |       25 |
+
+
+**Does validity depend on whose scoring is used?** Intervals calibrated on the labels of one reference (`calref`: consensus or scorer 1-5) were tested against the parameter values derived from every reference (`testref`), pooled DOD, 50 (consensus) or 30 splits.
+
+
+| calref   | testref   | param   | method        |   coverage |    n |
+|:---------|:----------|:--------|:--------------|-----------:|-----:|
+| cons     | cons      | N3%     | norm_reg_ffbs |      0.908 | 2000 |
+| cons     | cons      | TST     | norm_reg_ffbs |      0.928 | 2000 |
+| cons     | cons      | WASO    | norm_reg_ffbs |      0.92  | 2000 |
+| s1       | cons      | N3%     | norm_reg_ffbs |      0.989 | 1200 |
+| s1       | cons      | TST     | norm_reg_ffbs |      0.998 | 1200 |
+| s1       | cons      | WASO    | norm_reg_ffbs |      0.892 | 1200 |
+| s2       | cons      | N3%     | norm_reg_ffbs |      0.741 | 1200 |
+| s2       | cons      | TST     | norm_reg_ffbs |      0.98  | 1200 |
+| s2       | cons      | WASO    | norm_reg_ffbs |      0.893 | 1200 |
+| s3       | cons      | N3%     | norm_reg_ffbs |      0.973 | 1200 |
+| s3       | cons      | TST     | norm_reg_ffbs |      0.982 | 1200 |
+| s3       | cons      | WASO    | norm_reg_ffbs |      0.879 | 1200 |
+| s4       | cons      | N3%     | norm_reg_ffbs |      0.936 | 1200 |
+| s4       | cons      | TST     | norm_reg_ffbs |      0.998 | 1200 |
+| s4       | cons      | WASO    | norm_reg_ffbs |      0.908 | 1200 |
+| s5       | cons      | N3%     | norm_reg_ffbs |      0.918 | 1200 |
+| s5       | cons      | TST     | norm_reg_ffbs |      0.981 | 1200 |
+| s5       | cons      | WASO    | norm_reg_ffbs |      0.878 | 1200 |
+| cons     | s1        | N3%     | norm_reg_ffbs |      0.755 | 2000 |
+| cons     | s1        | TST     | norm_reg_ffbs |      0.562 | 2000 |
+| cons     | s1        | WASO    | norm_reg_ffbs |      0.866 | 2000 |
+| s1       | s1        | N3%     | norm_reg_ffbs |      0.896 | 1200 |
+| s1       | s1        | TST     | norm_reg_ffbs |      0.904 | 1200 |
+| s1       | s1        | WASO    | norm_reg_ffbs |      0.908 | 1200 |
+| s2       | s1        | N3%     | norm_reg_ffbs |      0.686 | 1200 |
+| s2       | s1        | TST     | norm_reg_ffbs |      0.862 | 1200 |
+| s2       | s1        | WASO    | norm_reg_ffbs |      0.909 | 1200 |
+| s3       | s1        | N3%     | norm_reg_ffbs |      0.842 | 1200 |
+| s3       | s1        | TST     | norm_reg_ffbs |      0.894 | 1200 |
+| s3       | s1        | WASO    | norm_reg_ffbs |      0.899 | 1200 |
+| s4       | s1        | N3%     | norm_reg_ffbs |      0.839 | 1200 |
+| s4       | s1        | TST     | norm_reg_ffbs |      0.892 | 1200 |
+| s4       | s1        | WASO    | norm_reg_ffbs |      0.912 | 1200 |
+| s5       | s1        | N3%     | norm_reg_ffbs |      0.782 | 1200 |
+| s5       | s1        | TST     | norm_reg_ffbs |      0.866 | 1200 |
+| s5       | s1        | WASO    | norm_reg_ffbs |      0.894 | 1200 |
+| cons     | s2        | N3%     | norm_reg_ffbs |      0.808 | 2000 |
+| cons     | s2        | TST     | norm_reg_ffbs |      0.648 | 2000 |
+| cons     | s2        | WASO    | norm_reg_ffbs |      0.847 | 2000 |
+| s1       | s2        | N3%     | norm_reg_ffbs |      0.942 | 1200 |
+| s1       | s2        | TST     | norm_reg_ffbs |      0.934 | 1200 |
+| s1       | s2        | WASO    | norm_reg_ffbs |      0.859 | 1200 |
+| s2       | s2        | N3%     | norm_reg_ffbs |      0.891 | 1200 |
+| s2       | s2        | TST     | norm_reg_ffbs |      0.898 | 1200 |
+| s2       | s2        | WASO    | norm_reg_ffbs |      0.897 | 1200 |
+| s3       | s2        | N3%     | norm_reg_ffbs |      0.822 | 1200 |
+| s3       | s2        | TST     | norm_reg_ffbs |      0.922 | 1200 |
+| s3       | s2        | WASO    | norm_reg_ffbs |      0.838 | 1200 |
+| s4       | s2        | N3%     | norm_reg_ffbs |      0.922 | 1200 |
+| s4       | s2        | TST     | norm_reg_ffbs |      0.928 | 1200 |
+| s4       | s2        | WASO    | norm_reg_ffbs |      0.916 | 1200 |
+| s5       | s2        | N3%     | norm_reg_ffbs |      0.788 | 1200 |
+| s5       | s2        | TST     | norm_reg_ffbs |      0.906 | 1200 |
+| s5       | s2        | WASO    | norm_reg_ffbs |      0.893 | 1200 |
+| cons     | s3        | N3%     | norm_reg_ffbs |      0.7   | 2000 |
+| cons     | s3        | TST     | norm_reg_ffbs |      0.59  | 2000 |
+| cons     | s3        | WASO    | norm_reg_ffbs |      0.836 | 2000 |
+| s1       | s3        | N3%     | norm_reg_ffbs |      0.925 | 1200 |
+| s1       | s3        | TST     | norm_reg_ffbs |      0.913 | 1200 |
+| s1       | s3        | WASO    | norm_reg_ffbs |      0.902 | 1200 |
+| s2       | s3        | N3%     | norm_reg_ffbs |      0.488 | 1200 |
+| s2       | s3        | TST     | norm_reg_ffbs |      0.862 | 1200 |
+| s2       | s3        | WASO    | norm_reg_ffbs |      0.933 | 1200 |
+| s3       | s3        | N3%     | norm_reg_ffbs |      0.915 | 1200 |
+| s3       | s3        | TST     | norm_reg_ffbs |      0.908 | 1200 |
+| s3       | s3        | WASO    | norm_reg_ffbs |      0.902 | 1200 |
+| s4       | s3        | N3%     | norm_reg_ffbs |      0.766 | 1200 |
+| s4       | s3        | TST     | norm_reg_ffbs |      0.903 | 1200 |
+| s4       | s3        | WASO    | norm_reg_ffbs |      0.933 | 1200 |
+| s5       | s3        | N3%     | norm_reg_ffbs |      0.725 | 1200 |
+| s5       | s3        | TST     | norm_reg_ffbs |      0.872 | 1200 |
+| s5       | s3        | WASO    | norm_reg_ffbs |      0.918 | 1200 |
+| cons     | s4        | N3%     | norm_reg_ffbs |      0.898 | 2000 |
+| cons     | s4        | TST     | norm_reg_ffbs |      0.522 | 2000 |
+| cons     | s4        | WASO    | norm_reg_ffbs |      0.832 | 2000 |
+| s1       | s4        | N3%     | norm_reg_ffbs |      0.968 | 1200 |
+| s1       | s4        | TST     | norm_reg_ffbs |      0.914 | 1200 |
+| s1       | s4        | WASO    | norm_reg_ffbs |      0.852 | 1200 |
+| s2       | s4        | N3%     | norm_reg_ffbs |      0.703 | 1200 |
+| s2       | s4        | TST     | norm_reg_ffbs |      0.874 | 1200 |
+| s2       | s4        | WASO    | norm_reg_ffbs |      0.919 | 1200 |
+| s3       | s4        | N3%     | norm_reg_ffbs |      0.889 | 1200 |
+| s3       | s4        | TST     | norm_reg_ffbs |      0.907 | 1200 |
+| s3       | s4        | WASO    | norm_reg_ffbs |      0.835 | 1200 |
+| s4       | s4        | N3%     | norm_reg_ffbs |      0.913 | 1200 |
+| s4       | s4        | TST     | norm_reg_ffbs |      0.908 | 1200 |
+| s4       | s4        | WASO    | norm_reg_ffbs |      0.909 | 1200 |
+| s5       | s4        | N3%     | norm_reg_ffbs |      0.866 | 1200 |
+| s5       | s4        | TST     | norm_reg_ffbs |      0.883 | 1200 |
+| s5       | s4        | WASO    | norm_reg_ffbs |      0.895 | 1200 |
+| cons     | s5        | N3%     | norm_reg_ffbs |      0.878 | 2000 |
+| cons     | s5        | TST     | norm_reg_ffbs |      0.626 | 2000 |
+| cons     | s5        | WASO    | norm_reg_ffbs |      0.842 | 2000 |
+| s1       | s5        | N3%     | norm_reg_ffbs |      0.977 | 1200 |
+| s1       | s5        | TST     | norm_reg_ffbs |      0.932 | 1200 |
+| s1       | s5        | WASO    | norm_reg_ffbs |      0.874 | 1200 |
+| s2       | s5        | N3%     | norm_reg_ffbs |      0.712 | 1200 |
+| s2       | s5        | TST     | norm_reg_ffbs |      0.888 | 1200 |
+| s2       | s5        | WASO    | norm_reg_ffbs |      0.911 | 1200 |
+| s3       | s5        | N3%     | norm_reg_ffbs |      0.982 | 1200 |
+| s3       | s5        | TST     | norm_reg_ffbs |      0.917 | 1200 |
+| s3       | s5        | WASO    | norm_reg_ffbs |      0.858 | 1200 |
+| s4       | s5        | N3%     | norm_reg_ffbs |      0.908 | 1200 |
+| s4       | s5        | TST     | norm_reg_ffbs |      0.92  | 1200 |
+| s4       | s5        | WASO    | norm_reg_ffbs |      0.923 | 1200 |
+| s5       | s5        | N3%     | norm_reg_ffbs |      0.896 | 1200 |
+| s5       | s5        | TST     | norm_reg_ffbs |      0.896 | 1200 |
+| s5       | s5        | WASO    | norm_reg_ffbs |      0.908 | 1200 |
+
+
+**Inter-scorer spread of the night-level parameters** (median over nights of the SD and range across the five scorers)
+
+
+| cohort   | param   |   n |   median_scorer_sd |   median_scorer_range |   p90_scorer_range |
+|:---------|:--------|----:|-------------------:|----------------------:|-------------------:|
+| DODH     | N1%     |  25 |                1.8 |                   4.5 |               10.9 |
+| DODH     | N2%     |  25 |                4.9 |                  12.1 |               21.1 |
+| DODH     | N3%     |  25 |                4.1 |                  10.2 |               19.6 |
+| DODH     | REM%    |  25 |                3.1 |                   7.9 |               14.7 |
+| DODH     | REML    |  25 |                7.5 |                  18.5 |              200   |
+| DODH     | SOL     |  25 |                2.4 |                   6   |               35.1 |
+| DODH     | TST     |  25 |               18.8 |                  49   |               85.9 |
+| DODH     | WASO    |  25 |                9.7 |                  23.5 |               74.8 |
+| DODO     | N1%     |  55 |                3.6 |                   8.5 |               22.9 |
+| DODO     | N2%     |  55 |                9.3 |                  23.2 |               35.1 |
+| DODO     | N3%     |  55 |                8.2 |                  18.9 |               34.8 |
+| DODO     | REM%    |  55 |                2.1 |                   5.1 |               11.9 |
+| DODO     | REML    |  52 |               19.2 |                  40.8 |              197.8 |
+| DODO     | SOL     |  55 |                5.3 |                  12   |               58.4 |
+| DODO     | TST     |  55 |                7.1 |                  17.5 |               95.4 |
+| DODO     | WASO    |  55 |                6.7 |                  18   |               74.8 |
+| DOD      | N1%     |  80 |                3.3 |                   7.5 |               22.4 |
+| DOD      | N2%     |  80 |                8.1 |                  18.5 |               33.8 |
+| DOD      | N3%     |  80 |                6.5 |                  16   |               33.3 |
+| DOD      | REM%    |  80 |                2.3 |                   5.7 |               13   |
+| DOD      | REML    |  77 |               14.3 |                  35.5 |              206.3 |
+| DOD      | SOL     |  80 |                4   |                   9.2 |               53   |
+| DOD      | TST     |  80 |                9.7 |                  24   |               87.3 |
+| DOD      | WASO    |  80 |                7.5 |                  18.8 |               78.4 |
+
+
+**Transport**: intervals calibrated on all Sleep-EDF SC nights, applied unchanged
+
+
+| target   | param   | method        |   n_cal |   n_test |   coverage |   mean_width |
+|:---------|:--------|:--------------|--------:|---------:|-----------:|-------------:|
+| DODH     | TST     | norm_reg_ffbs |     153 |       25 |      1     |       67.905 |
+| DODH     | TST     | scp_signed    |     153 |       25 |      1     |      108.5   |
+| DODH     | TST     | ba_loa        |     153 |       25 |      1     |      112.444 |
+| DODH     | SOL     | norm_reg_ffbs |     153 |       25 |      0.96  |       23.288 |
+| DODH     | SOL     | scp_signed    |     153 |       25 |      0.92  |       19.54  |
+| DODH     | SOL     | ba_loa        |     153 |       25 |      0.96  |       32.638 |
+| DODH     | WASO    | norm_reg_ffbs |     153 |       25 |      1     |      105.853 |
+| DODH     | WASO    | scp_signed    |     153 |       25 |      1     |       63.32  |
+| DODH     | WASO    | ba_loa        |     153 |       25 |      1     |       91.043 |
+| DODH     | REML    | norm_reg_ffbs |     153 |       25 |      0.92  |      101.789 |
+| DODH     | REML    | scp_signed    |     153 |       25 |      0.88  |      152.58  |
+| DODH     | REML    | ba_loa        |     153 |       25 |      0.88  |      143.147 |
+| DODH     | N1%     | norm_reg_ffbs |     153 |       25 |      1     |       22.061 |
+| DODH     | N1%     | scp_signed    |     153 |       25 |      0.84  |       30.191 |
+| DODH     | N1%     | ba_loa        |     153 |       25 |      1     |       29.854 |
+| DODH     | N2%     | norm_reg_ffbs |     153 |       25 |      1     |       31.11  |
+| DODH     | N2%     | scp_signed    |     153 |       25 |      0.92  |       38.922 |
+| DODH     | N2%     | ba_loa        |     153 |       25 |      1     |       39.618 |
+| DODH     | N3%     | norm_reg_ffbs |     153 |       25 |      0.88  |       16.736 |
+| DODH     | N3%     | scp_signed    |     153 |       25 |      0.92  |       18.764 |
+| DODH     | N3%     | ba_loa        |     153 |       25 |      0.92  |       19.07  |
+| DODH     | REM%    | norm_reg_ffbs |     153 |       25 |      1     |       20.087 |
+| DODH     | REM%    | scp_signed    |     153 |       25 |      1     |       18.55  |
+| DODH     | REM%    | ba_loa        |     153 |       25 |      1     |       22.524 |
+| DODO     | TST     | norm_reg_ffbs |     153 |       55 |      0.873 |       77.379 |
+| DODO     | TST     | scp_signed    |     153 |       55 |      0.891 |      108.5   |
+| DODO     | TST     | ba_loa        |     153 |       55 |      0.927 |      112.444 |
+| DODO     | SOL     | norm_reg_ffbs |     153 |       55 |      1     |       24.425 |
+| DODO     | SOL     | scp_signed    |     153 |       55 |      0.964 |       19.764 |
+| DODO     | SOL     | ba_loa        |     153 |       55 |      0.982 |       32.892 |
+| DODO     | WASO    | norm_reg_ffbs |     153 |       55 |      0.982 |      123.664 |
+| DODO     | WASO    | scp_signed    |     153 |       55 |      0.909 |       88.855 |
+| DODO     | WASO    | ba_loa        |     153 |       55 |      0.964 |      113.341 |
+| DODO     | REML    | norm_reg_ffbs |     153 |       53 |      0.604 |      101.749 |
+| DODO     | REML    | scp_signed    |     153 |       53 |      0.623 |      141.028 |
+| DODO     | REML    | ba_loa        |     153 |       53 |      0.585 |      132.175 |
+| DODO     | N1%     | norm_reg_ffbs |     153 |       55 |      1     |       25.585 |
+| DODO     | N1%     | scp_signed    |     153 |       55 |      0.655 |       30.2   |
+| DODO     | N1%     | ba_loa        |     153 |       55 |      0.909 |       29.631 |
+| DODO     | N2%     | norm_reg_ffbs |     153 |       55 |      0.909 |       33.391 |
+| DODO     | N2%     | scp_signed    |     153 |       55 |      0.836 |       38.922 |
+| DODO     | N2%     | ba_loa        |     153 |       55 |      0.927 |       39.618 |
+| DODO     | N3%     | norm_reg_ffbs |     153 |       55 |      0.909 |       15.502 |
+| DODO     | N3%     | scp_signed    |     153 |       55 |      0.909 |       15.809 |
+| DODO     | N3%     | ba_loa        |     153 |       55 |      0.927 |       16.308 |
+| DODO     | REM%    | norm_reg_ffbs |     153 |       55 |      0.891 |       22.77  |
+| DODO     | REM%    | scp_signed    |     153 |       55 |      0.927 |       18.578 |
+| DODO     | REM%    | ba_loa        |     153 |       55 |      1     |       22.585 |
+| DOD      | TST     | norm_reg_ffbs |     153 |       80 |      0.912 |       74.545 |
+| DOD      | TST     | scp_signed    |     153 |       80 |      0.925 |      108.5   |
+| DOD      | TST     | ba_loa        |     153 |       80 |      0.95  |      112.444 |
+| DOD      | SOL     | norm_reg_ffbs |     153 |       80 |      0.975 |       24.11  |
+| DOD      | SOL     | scp_signed    |     153 |       80 |      0.95  |       19.694 |
+| DOD      | SOL     | ba_loa        |     153 |       80 |      0.975 |       32.812 |
+| DOD      | WASO    | norm_reg_ffbs |     153 |       80 |      0.988 |      112.538 |
+| DOD      | WASO    | scp_signed    |     153 |       80 |      0.938 |       80.875 |
+| DOD      | WASO    | ba_loa        |     153 |       80 |      0.975 |      106.373 |
+| DOD      | REML    | norm_reg_ffbs |     153 |       78 |      0.705 |      102.146 |
+| DOD      | REML    | scp_signed    |     153 |       78 |      0.705 |      144.731 |
+| DOD      | REML    | ba_loa        |     153 |       78 |      0.679 |      135.692 |
+| DOD      | N1%     | norm_reg_ffbs |     153 |       80 |      1     |       24.486 |
+| DOD      | N1%     | scp_signed    |     153 |       80 |      0.712 |       30.197 |
+| DOD      | N1%     | ba_loa        |     153 |       80 |      0.938 |       29.701 |
+| DOD      | N2%     | norm_reg_ffbs |     153 |       80 |      0.938 |       32.686 |
+| DOD      | N2%     | scp_signed    |     153 |       80 |      0.862 |       38.922 |
+| DOD      | N2%     | ba_loa        |     153 |       80 |      0.95  |       39.618 |
+| DOD      | N3%     | norm_reg_ffbs |     153 |       80 |      0.9   |       15.901 |
+| DOD      | N3%     | scp_signed    |     153 |       80 |      0.912 |       16.732 |
+| DOD      | N3%     | ba_loa        |     153 |       80 |      0.925 |       17.172 |
+| DOD      | REM%    | norm_reg_ffbs |     153 |       80 |      0.925 |       21.959 |
+| DOD      | REM%    | scp_signed    |     153 |       80 |      0.95  |       18.569 |
+| DOD      | REM%    | ba_loa        |     153 |       80 |      1     |       22.566 |
