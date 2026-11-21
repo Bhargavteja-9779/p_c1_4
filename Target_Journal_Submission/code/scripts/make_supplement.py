@@ -18,6 +18,7 @@ Numbering (referenced in the manuscript; revision 1):
   S15 Computational cost
   S16 Datasets and data-leakage audit
   S17 Sensitivity: plain split-conformal design; site-level coverage risk vs finite-sample theory
+  S18 Independent validation on two multi-scorer cohorts (DOD-H, DOD-O)
 """
 import subprocess
 import sys
@@ -167,6 +168,21 @@ def main():
                  "interval, coverage given the calibration set ~ Beta(n+1-l, l) with l = floor(0.1 (n+1)), test nights binomial; "
                  "observed: 50 repetitions (median over parameters).\n\n")
     parts.append(tbl("tableS_local_risk_theory"))
+    parts.append("\n# S18. Independent validation on two multi-scorer cohorts (Dreem Open Datasets)\n\n"
+                 "DOD-H (25 healthy volunteers) and DOD-O (55 patients with suspected sleep apnoea), one night each, five scorers per night, "
+                 "AASM scoring. Stager: YASA, unchanged (C3-M2 and EOG1-EOG2). Reference: the consensus hypnogram of the dataset unless stated. "
+                 "Protocol as in the primary analysis (50 subject-grouped 50/50 splits; every label-dependent component fitted on the calibration "
+                 "nights only). `DOD` pools both datasets.\n\n**Within-cohort validity and efficiency**\n\n")
+    parts.append(tbl("tableS_dod_within"))
+    parts.append("\n**Few-night local calibration**\n\n")
+    parts.append(tbl("tableS_dod_local"))
+    parts.append("\n**Does validity depend on whose scoring is used?** Intervals calibrated on the labels of one reference (`calref`: consensus or "
+                 "scorer 1-5) were tested against the parameter values derived from every reference (`testref`), pooled DOD, 50 (consensus) or 30 splits.\n\n")
+    parts.append(tbl("tableS_dod_scorer"))
+    parts.append("\n**Inter-scorer spread of the night-level parameters** (median over nights of the SD and range across the five scorers)\n\n")
+    parts.append(tbl("tableS_dod_agreement", round_=1))
+    parts.append("\n**Transport**: intervals calibrated on all Sleep-EDF SC nights, applied unchanged\n\n")
+    parts.append(tbl("tableS_dod_transport"))
     md = "\n".join(parts)
     OUT.mkdir(exist_ok=True)
     (OUT / "Supplementary_Material.md").write_text(md)

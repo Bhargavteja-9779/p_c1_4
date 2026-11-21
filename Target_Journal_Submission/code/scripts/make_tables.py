@@ -761,6 +761,77 @@ def revision_tables():
                 NUM[f"r_{r.kind}_{r.cohort}"] = float(r.value)
 
 
+def dod_tables():
+    """Independent multi-scorer validation (E17: DOD-H, DOD-O)."""
+    S = RESULTS_DIR / "statistics"
+    f = S / "e17_within.csv"
+    if not f.exists():
+        return
+    w = pd.read_csv(f)
+    md(w[w.method.isin(["norm_reg_ffbs", "scp_signed", "scp_abs_cal", "ba_loa"])].round(3), TABLES_DIR / "tableS_dod_within")
+    for coh, g in w.groupby("cohort"):
+        q = g[g.method == "norm_reg_ffbs"]
+        NUM[f"d_cov_min_{coh}"], NUM[f"d_cov_max_{coh}"] = float(q.coverage.min()), float(q.coverage.max())
+        NUM[f"d_cov_mean_{coh}"] = float(q.coverage.mean())
+        NUM[f"d_n3pp_{coh}"] = int((abs(q.coverage - 0.9) <= 0.03).sum())
+        NUM[f"d_ncal_{coh}"], NUM[f"d_ntest_{coh}"] = float(q.n_cal.median()), float(q.n_test.median())
+        piv = g.pivot_table(index="param", columns="method", values="interval_score")
+        for comp in ["scp_signed", "scp_abs_cal", "ba_loa"]:
+            for p_ in piv.index:
+                NUM[f"d_isr_{coh}_{p_}_{comp}"] = float(piv.loc[p_, "norm_reg_ffbs"] / piv.loc[p_, comp])
+        wd = g.pivot_table(index="param", columns="method", values="mean_width")
+        for m in ["norm_reg_ffbs", "scp_signed", "scp_abs_cal", "ba_loa"]:
+            NUM[f"d_width_{coh}_TST_{m}"] = float(wd.loc["TST", m])
+        NUM[f"d_nlower_{coh}_scp_signed"] = int((piv["norm_reg_ffbs"] < piv["scp_signed"]).sum())
+        NUM[f"d_nlower_{coh}_scp_abs_cal"] = int((piv["norm_reg_ffbs"] < piv["scp_abs_cal"]).sum())
+        for m in ["scp_signed", "ba_loa"]:
+            c = g[g.method == m]
+            NUM[f"d_cov_min_{coh}_{m}"], NUM[f"d_cov_max_{coh}_{m}"] = float(c.coverage.min()), float(c.coverage.max())
+    f = S / "e17_local.csv"
+    if f.exists():
+        l = pd.read_csv(f)
+        md(l[l.method.isin(["norm_reg_ffbs", "scp_abs_cal", "ba_loa"])].round(3), TABLES_DIR / "tableS_dod_local")
+        for (coh, nt, m), g in l.groupby(["cohort", "n_target", "method"]):
+            NUM[f"d_loc_cov_{coh}_{int(nt)}_{m}"] = float(g.coverage.mean())
+            NUM[f"d_loc_p80_{coh}_{int(nt)}_{m}"] = float(g.p_cov_lt80.median())
+            NUM[f"d_loc_ntest_{coh}_{int(nt)}"] = float(g.n_test.median())
+    f = S / "e17_scorer_matrix.csv"
+    if f.exists():
+        sm = pd.read_csv(f)
+        md(sm[(sm.method == "norm_reg_ffbs") & (sm.param.isin(["TST", "WASO", "N3%"]))].round(3), TABLES_DIR / "tableS_dod_scorer")
+        for m in sm.method.unique():
+            a = sm[(sm.method == m)]
+            cons_to_ind = a[(a.calref == "cons") & (a.testref != "cons")]
+            NUM[f"d_sc_cons_to_ind_mean_{m}"] = float(cons_to_ind.groupby("testref").coverage.mean().mean())
+            NUM[f"d_sc_cons_to_ind_min_{m}"] = float(cons_to_ind.groupby("testref").coverage.mean().min())
+            NUM[f"d_sc_cons_to_cons_{m}"] = float(a[(a.calref == "cons") & (a.testref == "cons")].coverage.mean())
+            ind = a[(a.calref != "cons") & (a.testref != "cons")]
+            NUM[f"d_sc_same_{m}"] = float(ind[ind.calref == ind.testref].coverage.mean())
+            NUM[f"d_sc_other_{m}"] = float(ind[ind.calref != ind.testref].coverage.mean())
+            NUM[f"d_sc_other_min_{m}"] = float(ind[ind.calref != ind.testref].groupby(["calref", "testref"]).coverage.mean().min())
+            NUM[f"d_sc_other_max_{m}"] = float(ind[ind.calref != ind.testref].groupby(["calref", "testref"]).coverage.mean().max())
+            for p_ in a.param.unique():
+                x = a[(a.param == p_) & (a.calref == "cons") & (a.testref != "cons")].groupby("testref").coverage.mean()
+                NUM[f"d_sc_cons_to_ind_{p_}_{m}"] = float(x.mean())
+    f = S / "e17_agreement.csv"
+    if f.exists():
+        ag = pd.read_csv(f)
+        md(ag.round(1), TABLES_DIR / "tableS_dod_agreement")
+        for _, r in ag.iterrows():
+            NUM[f"d_agree_{r.cohort}_{r.param}_sd"] = float(r.median_scorer_sd)
+            NUM[f"d_agree_{r.cohort}_{r.param}_range"] = float(r.median_scorer_range)
+    f = S / "e17_transport.csv"
+    if f.exists():
+        tr = pd.read_csv(f)
+        md(tr[tr.method.isin(["norm_reg_ffbs", "scp_signed", "ba_loa"])][["target", "param", "method", "n_cal", "n_test", "coverage", "mean_width"]].round(3), TABLES_DIR / "tableS_dod_transport")
+        for (tg, m), g in tr.groupby(["target", "method"]):
+            NUM[f"d_tr_cov_min_{tg}_{m}"], NUM[f"d_tr_cov_max_{tg}_{m}"] = float(g.coverage.min()), float(g.coverage.max())
+            NUM[f"d_tr_cov_mean_{tg}_{m}"] = float(g.coverage.mean())
+            NUM[f"d_tr_n3pp_{tg}_{m}"] = int((abs(g.coverage - 0.9) <= 0.03).sum())
+            for _, r in g.iterrows():
+                NUM[f"d_tr_{tg}_{r.param}_{m}"] = float(r.coverage)
+
+
 if __name__ == "__main__":
     try:
         table1()
@@ -771,7 +842,7 @@ if __name__ == "__main__":
         _old = TABLES_DIR / "manuscript_numbers.json"
         if _old.exists():
             NUM.update(json.loads(_old.read_text()))
-    for fn in (table2, table3, honest_tables, sensitivity_tables, revision_tables, supp_tables, export_manifest_files):
+    for fn in (table2, table3, honest_tables, sensitivity_tables, revision_tables, dod_tables, supp_tables, export_manifest_files):
         try:
             fn()
         except FileNotFoundError as e:
